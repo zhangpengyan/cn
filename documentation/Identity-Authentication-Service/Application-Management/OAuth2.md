@@ -16,8 +16,8 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 &emsp;2.5 如有必要，[刷新访问令牌](#5)；</br>
 &emsp;2.6 如有必要，[撤销令牌](#6)。</br>
 
-
 <h3 id="0">京东云OAuth2协议</h3>
+![](../../../image/Identity-Authentication-Service/Application-Management/authorization_code.png)
 
 <h3 id="1">放置京东云登录按钮</h3>
 

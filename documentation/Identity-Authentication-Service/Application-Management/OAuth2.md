@@ -7,7 +7,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 ## 二. 接入京东云OAuth2
 京东云OAuth2支持网站或Web应用接入，接入流程如下：</br>
-1. [创建应用](../../../../Create-Application.md)，获取client_id；</br>
+1. [创建应用](../../../documentation/Identity-Authentication-Service/Application-Management/Create-Application.md)，获取client_id；</br>
 2. 根据[京东云OAuth2协议](#0)，开发应用：</br>
 &emsp;2.1 在应用中[放置京东云登录按钮](#1)；</br>
 &emsp;2.2 [获取用户的授权码](#2)；</br>

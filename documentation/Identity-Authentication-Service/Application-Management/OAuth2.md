@@ -17,6 +17,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 &emsp;2.6 如有必要，[撤销令牌](#6)。</br>
 
 <h3 id="0">京东云OAuth2协议</h3>
+
 **名词解释**</br>
 资源所有者（Resource Owner）：终端用户
 客户代理（User-Agent）：浏览器
@@ -25,7 +26,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 ![](../../../image/Identity-Authentication-Service/Application-Management/authorization_code.png)
 
-**授权流程**
+**授权流程**</br>
 
 
 

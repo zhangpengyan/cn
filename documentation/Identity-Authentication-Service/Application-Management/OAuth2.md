@@ -48,6 +48,14 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 <h3 id="2">获取用户的授权码</h3>
 
+HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
+请求方式：GET/POST </br>
+参数：</br>
+|参数名|参数选项|参数值|
+|---|---|---|
+|client_id|必填|创建应用成功返回的客户端ID//////|
+|redirect_uri|必填|创建应用时填写的redirect_uri//////|
+
 
 
 <h3 id="3">获取用户的访问令牌</h3>

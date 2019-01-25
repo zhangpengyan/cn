@@ -60,22 +60,13 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |response_type|必填|String|值必须为'code'，代表需要京东云返回授权码|
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
 |scope|选填|String|空格分隔的字符串，列举应用需要申请的[令牌访问范围](#7)|
-|code_challenge_method|选填，应用未设置密码时必填|String|代码质询方法，值为'plain'或'S256'|
-|code_challenge|选填，应用未设置密码时必填|String|长度为43-128的字符串，用于验证应用的后续请求|
+|code_challenge_method|选填；应用未设置密码时必填|String|代码质询方法，值为'plain'或'S256'|
+|code_challenge|选填；应用未设置密码时必填|String|长度为43-128的字符串，用于验证应用的后续请求|
 
 响应结果：</br>
-HTTP 302重定向到京东云登录授权页面。</br>
+HTTP 302重定向到京东云登录授权页面，然后HTTP 302重定向回到应用回调地址。</br>
 
-请求示例1：</br>
-```
-https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0
-```
-浏览器将重定向到以下地址：</br>
-```
-https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.jdcloud.com%26response_type%3Dcode%26state%3DJ83xoLA0
-```
-
-请求示例2：</br>
+请求示例：</br>
 ```
 https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0&scope=openid%20oss&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
@@ -83,17 +74,41 @@ https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=htt
 ```
 https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.jdcloud.com%26response_type%3Dcode%26state%3DJ83xoLA0%26scope%3Dopenid%20oss%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
+响应示例：</br>
+```
+{
+"access_token":"BDUamliB3gImSTwOLCXBkIr3coa7ZuYB",
+"id_token":"eyJraWQiOiJlOTEzMWUyNy0zMTEzLTRmMzUtOWNiYS1hNWYzYjcyNjU2NTAiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL29hdXRoMi5qZGNsb3VkLmNvbSIsImF1ZCI6IjkxNDU2MTEyMzQ2NTg0MzYiLCJzdWIiOiJzY2xqcyIsImlhdCI6MTUzNzE1MDA5NCwibmJmIjoxNTM3MTUwMDk0LCJleHAiOjE1MzcxNTM2OTQsImp0aSI6Ijg5MTQxZTkyLWYxMmYtNGY3OC1hYzBmLWQwZmMwNWRlNzc1OSIsImF0X2hhc2giOiIxeUFXVzZrXzk5S2VxZS1KIn0.WAk4wrWU23vidOxi0QJBWl2zXDhycVaz-BaC4rU_4ULt3gGQ-rANPM9kolGcywzH4M2E50R_BHl9Pj2Iz-z1WqCIZov1UWhrPxMBZh23hYSlO6-tU-miGz6cvKJrfVBahHmsF1IPbilRUI1bHuu8RVtB0uqZY8AtOZqVCImrfo6dq3VrODZrXg-5MIwbyTe_tB93ArPmN_g2U8a6PMSQz2BtjfaNKnek-lAcLIho4oiRR4ZABH87wNwFmp2M5AcgmK_p3R5ck1LVrgQWsYyxvJMSLky7hPqpwwsjWs65wjbmWQXXvy-HcVy7RD5Yh-5-6mjaLdf0EG-ejiuWHnqkbw",
+"token_type":"Bearer",
+"scope":"openid oss",
+"expires_in":3599
+}
+```
 
 <h3 id="3">获取用户的访问令牌</h3>
 
 **令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 请求方式：GET/POST </br>
-如果在创建应用时，选择“HTTP Basic”为客户端密码验证方式，则需要在**请求头**中包含如下值：</br>
+如果在创建应用时，选择“**HTTP Basic**”为客户端密码验证方式，则必须在**请求头**中包含如下值：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
-
 参数：</br>
+
+|参数名|参数选项|参数格式|参数值|
+|---|---|---|---|
+|client_id|选填；客户端密码验证方式不是“**HTTP Basic**”时必填|String|应用ID|
+|client_secret|选填；客户端密码验证方式为“**通过请求参数验证**”时必填|String|创建应用时填写的客户端密码|
+|grant_type|必填|String|值必须为'authorization_code'|
+|code|必填|String|在授权码端点响应中|
+
+
+
+响应结果：</br>
+
+
+请求示例：</br>
+
 
 <h3 id="4">获取用户的京东云账号</h3>
 

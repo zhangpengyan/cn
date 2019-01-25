@@ -40,30 +40,9 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 京东云提供了几种标准图标供应用开发者下载：</br>
 
-<table><tbody>
-    <tr>
-        <th>图标</th>
-        <th>标示</th>
-    </tr>
-    <tr>
-       <td>16x16 彩色图标</td>
-       <td bgcolor="Hotpink">rgb(240, 248, 255)</td>
-    </tr>
-    <tr>
-        <td>16x16 红色图标</td>
-        <td>![](../../../image/Identity-Authentication-Service/Application-Management/16-red.png)京东云登录</td>
-    </tr>
-    <tr>
-        <td>16x16 白色图标</td>
-        <td bgcolor='#E31D1A'>![](../../../image/Identity-Authentication-Service/Application-Management/16-white.png)京东云登录</td>
-    </tr>
-</table>  
-
-
-
 |图标|标示|
 |---|---|
-|16x16 彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/16-color.png)京东云登录|
+|16x16 彩色图标|<img src="../../../image/Identity-Authentication-Service/Application-Management/16-red.png" width="20" height="20" /> 京东云登录|
 |16x16 红色色图标|![](../../../image/Identity-Authentication-Service/Application-Management/16-red.png)京东云登录|
 |16x16 彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/16-white.png)京东云登录|
 

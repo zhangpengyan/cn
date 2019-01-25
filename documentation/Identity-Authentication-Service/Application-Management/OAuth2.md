@@ -56,7 +56,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |参数名|参数选项|参数格式|参数值|
 |---|---|---|---|
 |client_id|必填|String|应用ID|
-|redirect_uri|必填|URI|必须和创建应用时填写的应用回调地址一样|
+|redirect_uri|必填|String|必须和创建应用时填写的应用回调地址一样|
 |response_type|必填|String|值必须为'code'，代表需要京东云返回授权码|
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
 |scope|选填|String|空格分隔的字符串，列举应用需要申请的[令牌访问范围](#7)|
@@ -66,13 +66,22 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 响应结果：</br>
 HTTP 302重定向到京东云登录授权页面。</br>
 
-请求示例：</br>
+请求示例1：</br>
 ```
-http://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0
 ```
 浏览器将重定向到以下地址：</br>
 ```
-https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.jdcloud.com%26response_type%3Dcode%26state%3DJ83xoLA0%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.jdcloud.com%26response_type%3Dcode%26state%3DJ83xoLA0
+```
+
+请求示例2：</br>
+```
+https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0&scope=openid%20oss&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+```
+浏览器将重定向到以下地址：</br>
+```
+https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.jdcloud.com%26response_type%3Dcode%26state%3DJ83xoLA0%26scope%3Dopenid%20oss%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 
 <h3 id="3">获取用户的访问令牌</h3>
@@ -80,8 +89,8 @@ https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthori
 **令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 请求方式：GET/POST </br>
-
-如果在创建应用时，选择“HTTP Basic”为客户端密码验证方式，则需要在请求头中包含如下值：</br>
+如果在创建应用时，选择“HTTP Basic”为客户端密码验证方式，则需要在**请求头**中包含如下值：</br>
+`Authorization:Basic base64url(client_id:client_secret)`</br>
 
 
 参数：</br>

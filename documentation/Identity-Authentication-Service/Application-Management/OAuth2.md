@@ -42,9 +42,9 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 |图标|标示|
 |---|---|
-|16x16 彩色图标|<img src="../../../image/Identity-Authentication-Service/Application-Management/16-red.png" width="20" height="20" /> 京东云登录|
-|16x16 红色色图标|![](../../../image/Identity-Authentication-Service/Application-Management/16-red.png)京东云登录|
-|16x16 彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/16-white.png)京东云登录|
+|彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/color.png)|
+|红色图标|![](../../../image/Identity-Authentication-Service/Application-Management/red.png)  |
+|彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/white.png)|
 
 
 

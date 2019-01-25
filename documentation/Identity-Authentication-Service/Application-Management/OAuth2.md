@@ -96,7 +96,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |grant_type|必填|String|值必须为'authorization_code'|
 |code|必填|String|在授权码端点响应中获取到的code值|
 |scope|选填|String|空格分隔的字符串，列举应用需要申请的[令牌访问范围](#7)|
-|code_verifier|选填；在授权码端点中传过code_challenge时必须|String|如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>查看[code_verifier S256编码详情](#8)|
+|code_verifier|选填；在授权码端点中传过code_challenge时必须|String|如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码详情](#8)）|
 
 
 
@@ -116,5 +116,5 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 
 <h3 id="7">令牌访问范围</h3>
 
-<h3 id="8">code_verifier S256编码详情</h3>
+<h3 id="8">code_verifier编码详情</h3>
 

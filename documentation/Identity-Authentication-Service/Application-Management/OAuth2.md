@@ -67,8 +67,13 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 HTTP 302重定向到京东云登录授权页面。</br>
 
 请求示例：</br>
-`http://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU`
-
+```
+http://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.jdcloud.com&response_type=code&state=J83xoLA0&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+```
+浏览器将重定向到以下地址：</br>
+```
+https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.jdcloud.com%26response_type%3Dcode%26state%3DJ83xoLA0%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+```
 
 <h3 id="3">获取用户的访问令牌</h3>
 

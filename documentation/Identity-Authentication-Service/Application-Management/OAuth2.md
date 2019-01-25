@@ -38,17 +38,17 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 <h3 id="1">放置京东云登录按钮</h3>
 
-京东云提供了几种标准图标供应用开发者下载：</br>
+京东云提供了几种标准图标供应用开发者[下载](../../../image/Identity-Authentication-Service/Application-Management/download-resource/jdcloud-icon.zip)。放置京东云登录按钮请参考下述标示。</br>
 
 |图标|标示|
 |---|---|
 |彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/color.png)|
-|白色图标|![](../../../image/Identity-Authentication-Service/Application-Management/white-o.png)  |
+|白色图标|![](../../../image/Identity-Authentication-Service/Application-Management/white.png)|
 |红色图标|![](../../../image/Identity-Authentication-Service/Application-Management/red.png)|
 
-
-
 <h3 id="2">获取用户的授权码</h3>
+
+
 
 <h3 id="3">获取用户的访问令牌</h3>
 

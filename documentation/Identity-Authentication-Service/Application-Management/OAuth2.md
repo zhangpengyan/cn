@@ -94,7 +94,10 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |client_id|选填；客户端密码验证方式不是“**HTTP Basic**”时必填|String|应用ID|
 |client_secret|选填；客户端密码验证方式为“**通过请求参数验证**”时必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'authorization_code'|
-|code|必填|String|在授权码端点响应中|
+|code|必填|String|在授权码端点响应中获取到的code值|
+|scope|选填|String|空格分隔的字符串，列举应用需要申请的[令牌访问范围](#7)|
+|code_verifier|选填；在授权码端点中传过code_challenge时必须|String|如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge|
+
 
 
 

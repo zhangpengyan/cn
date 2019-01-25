@@ -55,7 +55,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
     </tr>
     <tr>
         <td>16x16 白色图标</td>
-        <td bgcolor=#E31D1A>![](../../../image/Identity-Authentication-Service/Application-Management/16-white.png)京东云登录</td>
+        <td bgcolor='#E31D1A'>![](../../../image/Identity-Authentication-Service/Application-Management/16-white.png)京东云登录</td>
     </tr>
 </table>  
 

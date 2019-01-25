@@ -59,17 +59,30 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |redirect_uri|必填|URI|必须和创建应用时填写的应用回调地址一样|
 |response_type|必填|String|值必须为'code'，代表需要京东云返回授权码|
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
-|scope|选填|String|空格分隔的字符串，|
-|code_challenge_method|选填|ddd|ddd|
-|code_challenge|选填|ddd|ddd|
+|scope|选填|String|空格分隔的字符串，代表应用需要的[令牌访问范围](#7)|
+|code_challenge_method|应用未设置密码时必须|String|代码质询方法，值为'plain'或'S256'|
+|code_challenge|应用未设置密码时必须|String|长度为43-128的字符串，稍后将用于验证应用请求|
 
-
+响应结果：</br>
+(1) 如果用户未登录，则HTTP 302重定向到京东云登录页面；</br>
+(2) 如果用户已登录，则HTTP 302重定向到应用指定的回调地址。</br>
 
 <h3 id="3">获取用户的访问令牌</h3>
+
+**令牌端点说明**</br>
+HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
+请求方式：GET/POST </br>
+
+如果在创建应用时，选择“HTTP Basic”为客户端密码验证方式，则需要在请求头中包含如下值：</br>
+
+
+参数：</br>
 
 <h3 id="4">获取用户的京东云账号</h3>
 
 <h3 id="5">刷新访问令牌</h3>
 
 <h3 id="6">撤销令牌</h3>
+
+<h3 id="6">令牌访问范围</h3>
 

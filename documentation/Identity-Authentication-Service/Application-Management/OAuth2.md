@@ -51,6 +51,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 请求方式：GET/POST </br>
 参数：</br>
+
 |参数名|参数选项|参数值|
 |---|---|---|
 |client_id|必填|创建应用成功返回的客户端ID//////|

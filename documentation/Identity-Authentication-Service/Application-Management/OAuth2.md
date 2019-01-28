@@ -109,7 +109,7 @@ JSON格式的访问令牌：</br>
 |access_token|必填|String|访问令牌|
 |token_type|必填|String|访问令牌类型，值为"Bearer"|
 |expires_in|必填|String|访问令牌有效期，单位为秒|
-|scope|选填|String|访问令牌的有效访问范围，是授权码端点中请求的scope的子集|
+|scope|选填|String|访问令牌的有效访问范围，如果授权码端点中请求了scope，且用户同意授权，则返回用户同意的scope范围|
 
 
 请求示例：</br>
@@ -118,7 +118,7 @@ http://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=abcd123
 ```
 响应示例：</br>
 ```
-{"access_token":"IqsrfI6DTHNX3H2DCN35HvcBv3gQdhFZ","token_type":"Bearer","expires_in":999}
+{"access_token":"no4zOmHN2A4VT3TnMbnZXZexXbWssFX3","refresh_token":"F2JxdUHwn4YDnJYu","token_type":"Bearer","expires_in":999,"scope":"openid"}
 ```
 
 <h3 id="4">获取用户的京东云账号</h3>

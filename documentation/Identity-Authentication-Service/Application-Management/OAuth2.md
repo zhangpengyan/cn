@@ -43,7 +43,6 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 |图标|标示|
 |---|---|
 |彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/color.png)|
-|白色图标|![](../../../image/Identity-Authentication-Service/Application-Management/white.png)|
 |红色图标|![](../../../image/Identity-Authentication-Service/Application-Management/red.png)|
 
 <h3 id="2">获取用户的授权码</h3>
@@ -64,15 +63,22 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |code_challenge|选填；应用未设置密码时必填|String|长度为43-128的字符串，用于验证应用的后续请求|
 
 响应结果：</br>
-HTTP 302重定向到京东云登录授权页面，然后HTTP 302重定向回到应用回调地址。</br>
+(1) 浏览器HTTP 302重定向到京东云登录授权页面，用户进行登录和授权操作</br>
+(2) 用户登录授权成功，浏览器HTTP 302重定向回到应用回调地址，并返回授权码：响应参数：</br>
+
+|参数名|参数选项|参数格式|参数值|
+|---|---|---|---|
+|code|必填|String|授权码|
+|state|必填|String|和请求参数state一致|
+
 
 请求示例：</br>
 ```
-https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.redirect.com/abc&response_type=code&state=J83xoLA0&scope=openid%20oss&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.redirect.com/abc&response_type=code&state=J83xoLA0&scope=openid&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 浏览器将重定向到京东云登录页：</br>
 ```
-https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.redirect.com%2Fabc%26response_type%3Dcode%26state%3DJ83xoLA0%26scope%3Dopenid%20oss%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.redirect.com%2Fabc%26response_type%3Dcode%26state%3DJ83xoLA0%26scope%3Dopenid%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 用户登录并授权后，浏览器将重定向到应用提供的回调地址：</br>
 ```
@@ -97,8 +103,6 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |code|必填|String|在授权码端点响应中获取到的code值|
 |scope|选填|String|空格分隔的字符串，列举应用需要申请的[令牌访问范围](#7)|
 |code_verifier|选填；在授权码端点中传过code_challenge时必须|String|如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码详情](#8)）|
-
-
 
 
 

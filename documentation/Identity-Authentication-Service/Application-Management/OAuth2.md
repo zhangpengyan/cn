@@ -43,7 +43,6 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 |图标|标示|
 |---|---|
 |彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/color.png)|
-|红色图标|![](../../../image/Identity-Authentication-Service/Application-Management/red.png)|
 
 <h3 id="2">获取用户的授权码</h3>
 

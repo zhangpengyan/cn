@@ -9,12 +9,12 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 京东云OAuth2支持网站或Web应用接入，接入流程如下：</br>
 1. [创建应用](../../../documentation/Identity-Authentication-Service/Application-Management/Create-Application.md)，获取client_id；</br>
 2. 根据[京东云OAuth2协议](#0)，开发应用：</br>
-&emsp;2.1 在应用中[放置京东云登录按钮](#1)；</br>
-&emsp;2.2 [获取用户的授权码](#2)；</br>
-&emsp;2.3 [获取用户的访问令牌](#3)；</br>
-&emsp;2.4 [获取用户的京东云账号](#4)；</br>
-&emsp;2.5 如有必要，[刷新访问令牌](#5)；</br>
-&emsp;2.6 如有必要，[撤销令牌](#6)。</br>
+&emsp;2.1 在应用中[放置京东云登录按钮](#1)</br>
+&emsp;2.2 [获取用户的授权码](#2)</br>
+&emsp;2.3 [获取用户的访问令牌](#3)</br>
+&emsp;2.4 [获取用户的京东云账号](#4)</br>
+&emsp;2.5 如有必要，[刷新访问令牌](#5)</br>
+&emsp;2.6 如有必要，[撤销令牌](#6)</br>
 
 <h3 id="0">京东云OAuth2协议</h3>
 
@@ -31,8 +31,8 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 - (A) 用户通过浏览器访问应用，应用向京东云授权服务器发起登录请求（提供应用ID、应用的回调地址、需要访问用户哪些资源），同时浏览器重定向到京东云登录页面；</br>
 - (B) 用户登录京东云，京东云验证用户身份（通过是否成功登录），并询问用户是否同意授权应用访问自己的资源；</br>
 - (C) 如果用户同意授权，京东云将浏览器重定向回应用指定的回调地址，同时附上一个授权码；</br>
-- (D) 应用收到授权码，用授权码向京东云申请令牌（同时再次提供它的回调地址）;</br>
-- (E) 京东云核对应用信息无误，向应用颁发用户的访问令牌和刷新令牌。</br>
+- (D) 应用收到授权码，用授权码向京东云申请令牌；</br>
+- (E) 京东云核对应用信息无误，向应用颁发用户的访问令牌；如果应用启用了刷新令牌，则京东云会同时返回刷新令牌。</br>
 
 通过上述流程，应用获得了用户的访问令牌。应用是否能凭借访问令牌访问用户的京东云资源，取决于用户在(B)步骤中是否同意授权。</br>
 
@@ -55,10 +55,11 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |---|---|---|---|
 |client_id|必填|String|应用ID|
 |redirect_uri|必填|String|必须和创建应用时填写的应用回调地址一样|
-|response_type|必填|String|值必须为'code'，代表需要京东云返回授权码|
+|response_type|必填|String|值为'code'，代表需要京东云返回授权码|
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
-|code_challenge_method|选填</br>应用未设置密码时必填|String|代码质询方法，值为'plain'或'S256'|
-|code_challenge|选填</br>应用未设置密码时必填|String|长度为43-128的字符串，用于验证应用的后续请求|
+|scope|选填|String|值为'openid'</br>如果scope='openid'，且用户同意授权应用获取其身份信息，则在下一步骤令牌端点中，京东云将返回用户的OpenID信息|
+|code_challenge_method|选填</br>应用如果已设置密码不需要填，应用未设置密码时建议填写|String|代码质询方法，值为'plain'或'S256'|
+|code_challenge|选填</br>应用如果已设置密码不需要填，应用未设置密码时建议填写|String|长度为43-128的字符串，用于验证应用的后续请求</br>如果code_challenge_method='plain'时，在下一步骤令牌端点中，用于验证应用身份的code_verifier=code_challenge；</br>如果如果code_challenge_method='S265'时，在下一步骤令牌端点中，用于验证应用身份的code_verifier值需要满足：BASE64URL(SHA256(ascii(code_verifier)))=code_challenge|
 
 响应结果：</br>
 (1) 浏览器HTTP 302重定向到京东云登录授权页面，用户进行登录和授权操作</br>
@@ -107,6 +108,7 @@ JSON格式的访问令牌：</br>
 |---|---|---|---|
 |access_token|必填|String|访问令牌|
 |refresh_token|选填|String|刷新令牌</br>如果创建应用时启用了刷新令牌则返回该值，否则不返回|
+|id_token|选填|String|在授权端点中请求了scope='openid'，则会返回JWT格式的id_token|
 |token_type|必填|String|访问令牌类型，值为"Bearer"|
 |expires_in|必填|String|访问令牌有效期，单位为秒|
 
@@ -117,10 +119,12 @@ https://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=HXue9u
 响应示例：</br>
 ```
 {
-"access_token":"no4zOmHN2A4VT3TnMbnZXZexXbWssFX3",
-"refresh_token":"F2JxdUHwn4YDnJYu",
+"access_token":"5ECTSzkTOgpHkJWFOA7yhfH3niyH1ZME",
+"refresh_token":"4SixsR5H8WxK8QrB",
+"id_token":"eyJraWQiOiJmNzExOWVmNS1lN2QxLTRkZGUtOWNjNi1jM2NhY2NjMGJlMTMiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwOi8vb2F1dGgyLXN0YWcuamRjbG91ZC5jb20iLCJhdWQiOiI5NTExNTQwMjYwNTg0OTMwIiwic3ViIjoi5Lia5Yqh56CU5Y-RSmRjbG91ZF8wMiIsImlhdCI6MTU0MDUzNDg1NCwibmJmIjoxNTQwNTM0ODU0LCJleHAiOjE1NDA1MzU4NTQsImp0aSI6ImQ2ODNhZDg5LTVhMmYtNDg2My1hNjViLTQzZDZmMWNiOTUxNiIsImF0X2hhc2giOiJxQkp2TTFCUGFpTkNtbHBvIn0.ShJQQK0Ox6RPrQh7vzMAjvDia6tpDCQz-vu865aAtSPISlRxZiib7UebwgQ7sypuYiMm1UQuq6MCLJGkrm8sgN1wrUnMSWfUJK0pKHarvwvTA3xj1Cah6awwzCSXgHI71wSociOELpZmRWafvvM_IE72M9yqRXOeW97jkx4caGBnH2WTZD6H37Xux5gySijw8FVUvo47biOaw_fIA6QSB0HeE4e8Ikg-tCpPXv1RmsWvr_KC_YapRh624ScclXa1xSthVcroFalE5YkjkYItiOLNMpVzbE3vnuFaeZsYVgEwNgL7ICZ8rTHl41xlhPcHyGAH55rA5MmX_B92IPj3Fw",
+"scope":"openid",
 "token_type":"Bearer",
-"expires_in":999,
+"expires_in":999
 }
 ```
 

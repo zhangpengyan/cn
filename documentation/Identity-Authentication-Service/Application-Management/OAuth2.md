@@ -57,7 +57,6 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |redirect_uri|必填|String|必须和创建应用时填写的应用回调地址一样|
 |response_type|必填|String|值必须为'code'，代表需要京东云返回授权码|
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
-|scope|选填|String|空格分隔的字符串，列举应用需要的[令牌访问范围](#7)，必须在创建应用时已注册|
 |code_challenge_method|选填</br>应用未设置密码时必填|String|代码质询方法，值为'plain'或'S256'|
 |code_challenge|选填</br>应用未设置密码时必填|String|长度为43-128的字符串，用于验证应用的后续请求|
 
@@ -72,11 +71,11 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 
 请求示例：</br>
 ```
-https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.redirect.com/abc&response_type=code&state=J83xoLA0&scope=openid&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.redirect.com/abc&response_type=code&state=J83xoLA0&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 浏览器将重定向到京东云登录页：</br>
 ```
-https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.redirect.com%2Fabc%26response_type%3Dcode%26state%3DJ83xoLA0%26scope%3Dopenid%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.redirect.com%2Fabc%26response_type%3Dcode%26state%3DJ83xoLA0%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 用户登录并授权后，浏览器将重定向到应用提供的回调地址：</br>
 ```
@@ -99,7 +98,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |client_secret|选填</br>客户端密码验证方式为“通过请求参数验证”时必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'authorization_code'|
 |code|必填|String|在授权码端点响应中返回的code值|
-|code_verifier|选填</br>在授权码端点中传过code_challenge时必须|String|如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码详情](#8)）|
+|code_verifier|选填</br>在授权码端点中传过code_challenge时必须|String|如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码详情](#7)）|
 
 响应结果：</br>
 JSON格式的访问令牌：</br>
@@ -110,8 +109,6 @@ JSON格式的访问令牌：</br>
 |refresh_token|选填|String|刷新令牌</br>如果创建应用时启用了刷新令牌则返回该值，否则不返回|
 |token_type|必填|String|访问令牌类型，值为"Bearer"|
 |expires_in|必填|String|访问令牌有效期，单位为秒|
-|scope|选填|String|访问令牌的有效访问范围</br>如果授权码端点中请求了scope，且用户同意授权，则返回用户同意的scope范围|
-
 
 请求示例：</br>
 ```
@@ -124,7 +121,6 @@ https://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=HXue9u
 "refresh_token":"F2JxdUHwn4YDnJYu",
 "token_type":"Bearer",
 "expires_in":999,
-"scope":"openid"
 }
 ```
 
@@ -179,7 +175,6 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |client_secret|选填</br>客户端密码验证方式为“通过请求参数验证”时必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'refresh_token'|
 |refresh_token|必填|String|刷新令牌|
-|scope|选填|String|刷新后访问令牌的有效访问范围，必须为原始用户授权scope的子集，需要缩小访问令牌权限时使用|
 
 响应结果：</br>
 JSON格式的访问令牌：</br>
@@ -189,7 +184,6 @@ JSON格式的访问令牌：</br>
 |access_token|必填|String|访问令牌|
 |token_type|必填|String|访问令牌类型，值为"Bearer"|
 |expires_in|必填|String|访问令牌有效期，单位为秒|
-|scope|选填|String|访问令牌的有效访问范围|
 
 请求示例：</br>
 ```
@@ -230,8 +224,5 @@ https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9
 https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9usjI>0&token=EKQtH8pyxxAyvhRX&token_type_hint=refresh_token
 ```
 
-<h3 id="7">令牌访问范围</h3>
-
-
-<h3 id="8">code_verifier编码详情</h3>
+<h3 id="7">code_verifier编码详情</h3>
 

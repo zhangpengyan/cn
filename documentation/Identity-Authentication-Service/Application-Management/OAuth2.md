@@ -123,6 +123,39 @@ http://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=abcd123
 
 <h3 id="4">获取用户的京东云账号</h3>
 
+**用户信息端点说明**</br>
+HTTPS请求地址：https://oauth2.jdcloud.com/userinfo </br>
+请求方式：GET/POST </br>
+在**请求头**中包含访问令牌：</br>
+`Authorization:Bearer access_token`</br>
+
+参数：</br>
+无需请求参数
+
+响应结果：</br>
+JSON格式的用户信息：</br>
+
+|参数名|参数选项|参数格式|参数值|
+|---|---|---|---|
+|account|必填|String|用户在京东云的唯一账号|
+|name|必填|String|用户名或显示名，当type='root'时，用户名=account；当type='sub'时，用户名!=account|
+|type|必填|String|用户类型，'root'为京东云租户的主账号，'sub'为租户下子用户账号|
+
+请求示例：</br>
+```
+http://oauth2.jdcloud.com/userinfo
+(header)
+Authorization:Bearer VFNm5WsCop72A4xIqMctpgJgXjG5JMjm
+```
+响应示例：</br>
+```
+{
+"name": "jdcloud001",
+"account": "jdcloud001",
+"type": "root"
+}
+```
+
 <h3 id="5">刷新访问令牌</h3>
 
 <h3 id="6">撤销令牌</h3>

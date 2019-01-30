@@ -88,18 +88,18 @@ https://www.redirect.com/abc?code=7Y6m65jY&state=mn3N7e85WH
 **令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 请求方式：GET/POST </br>
-如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值：</br>
+令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择客户端密码验证方式为“**HTTP基础验证方式**”，则必须在**请求头**中包含如下值：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>
 
 |参数名|参数选项|参数格式|参数值|
 |---|---|---|---|
-|client_id|选填</br>客户端密码验证方式不是“HTTP Basic”时必填|String|应用ID|
-|client_secret|选填</br>客户端密码验证方式为“通过请求参数验证”时必填|String|创建应用时填写的客户端密码|
+|client_id|选填</br>“HTTP基础验证方式”时不填，其他客户端验证方式时必填|String|应用ID|
+|client_secret|选填</br>“HTTP基础身份认证”或“不验证客户端密码”时不填，“通过请求参数验证”必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'authorization_code'|
 |code|必填|String|在授权码端点响应中返回的code值|
-|code_verifier|选填</br>在授权码端点中传过code_challenge时必须|String|应用验证代码</br>- 如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>- 如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码示例](#7)）|
+|code_verifier|选填</br>在授权码端点中传过code_challenge时必填，未传code_challenge时不填|String|应用验证代码</br>- 如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>- 如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码示例](#7)）|
 
 响应结果：</br>
 JSON格式的访问令牌：</br>
@@ -114,7 +114,7 @@ JSON格式的访问令牌：</br>
 
 请求示例：</br>
 ```
-https://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=HXue9usjI>0&grant_type=authorization_code&code=bX8ThG8l
+https://oauth2.jdcloud.com/token?client_id=9145611234658436&client_secret=HXue9usjI>0&grant_type=authorization_code&code=7Y6m65jY
 ```
 响应示例：</br>
 ```
@@ -144,15 +144,15 @@ JSON格式的用户信息：</br>
 
 |参数名|参数选项|参数格式|参数值|
 |---|---|---|---|
-|account|必填|String|用户在京东云的唯一账号|
-|name|必填|String|用户名或显示名</br>当type='root'时，用户名=account；当type='sub'时，用户名!=account|
+|account|必填|String|用户在京东云的唯一账号标识|
+|name|必填|String|用户名</br>当type='root'时，name与account相同；当type='sub'时，name为子用户名，与account不同|
 |type|必填|String|用户类型</br>'root'为京东云租户的主账号，'sub'为租户下子用户账号|
 
 请求示例：</br>
 ```
 https://oauth2.jdcloud.com/userinfo
 (header)
-Authorization:Bearer VFNm5WsCop72A4xIqMctpgJgXjG5JMjm
+Authorization:Bearer 5ECTSzkTOgpHkJWFOA7yhfH3niyH1ZME
 ```
 响应示例：</br>
 ```
@@ -168,15 +168,15 @@ Authorization:Bearer VFNm5WsCop72A4xIqMctpgJgXjG5JMjm
 **令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 请求方式：GET/POST </br>
-如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值：</br>
+令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择客户端密码验证方式为“**HTTP基础验证方式**”，则必须在**请求头**中包含如下值：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>
 
 |参数名|参数选项|参数格式|参数值|
 |---|---|---|---|
-|client_id|选填</br>客户端密码验证方式不是“HTTP Basic”时必填|String|应用ID|
-|client_secret|选填</br>客户端密码验证方式为“通过请求参数验证”时必填|String|创建应用时填写的客户端密码|
+|client_id|选填</br>“HTTP基础验证方式”时不填，其他客户端验证方式时必填|String|应用ID|
+|client_secret|选填</br>“HTTP基础身份认证”或“不验证客户端密码”时不填，“通过请求参数验证”必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'refresh_token'|
 |refresh_token|必填|String|刷新令牌|
 
@@ -191,7 +191,7 @@ JSON格式的访问令牌：</br>
 
 请求示例：</br>
 ```
-https://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=HXue9usjI>0&grant_type=refresh_token&refresh_token=F2JxdUHwn4YDnJYu	
+https://oauth2.jdcloud.com/token?client_id=9145611234658436&client_secret=HXue9usjI>0&grant_type=refresh_token&refresh_token=4SixsR5H8WxK8QrB	
 ```
 响应示例：</br>
 ```
@@ -207,15 +207,15 @@ https://oauth2.jdcloud.com/token?client_id=9251547552808156&client_secret=HXue9u
 **撤销令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/revoke </br>
 请求方式：GET/POST </br>
-如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值：</br>
+撤销令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>
 
 |参数名|参数选项|参数格式|参数值|
 |---|---|---|---|
-|client_id|选填</br>客户端密码验证方式不是“HTTP Basic”时必填|String|应用ID|
-|client_secret|选填</br>客户端密码验证方式为“通过请求参数验证”时必填|String|创建应用时填写的客户端密码|
+|client_id|选填</br>“HTTP基础验证方式”时不填，其他客户端验证方式时必填|String|应用ID|
+|client_secret|选填</br>“HTTP基础身份认证”或“不验证客户端密码”时不填，“通过请求参数验证”必填|String|创建应用时填写的客户端密码|
 |token_type_hint|选填|String|要撤销的令牌类型，默认值为'access_token'</br>token_type_hint='access_token'撤销访问令牌；</br>token_type_hint='refresh_token'撤销刷新令牌|
 |token|必填|String|令牌的值|
 
@@ -224,9 +224,31 @@ HTTP 200</br>
 
 请求示例：</br>
 ```
-https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9usjI>0&token=Zyph3XFeoDNc6AQUTLftykHjo8KM8fuN
-https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9usjI>0&token=EKQtH8pyxxAyvhRX&token_type_hint=refresh_token
+https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9usjI>0&token=50px73X5683kQrTnQ8TU12GXB0BlBDBV
+https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9usjI>0&token=4SixsR5H8WxK8QrB&token_type_hint=refresh_token
 ```
 
-<h3 id="7">code_verifier编码详情</h3>
+<h3 id="7">code_verifier编码示例 - JAVA</h3>
+```
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+ 
+class A{
+	 
+	 public  static void main(String[] args){
+		String code_verifier = "abcde12345abcde12345abcde12345abcde12345abc";
 
+		try {
+			MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+			messageDigest.update(code_verifier.getBytes());
+
+			String result = new String(Base64.getUrlEncoder().encode(messageDigest.digest()));
+			System.out.println(result);
+		}
+    catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
+  }
+}
+```

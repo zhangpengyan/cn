@@ -59,7 +59,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
 |scope|选填</br>应用已向京东云申请访问范围时，可选填；填写未申请的访问范围会报错|String|值为'openid'</br>如果scope='openid'，且用户同意授权应用获取其身份信息，则在下一步骤令牌端点中，京东云将返回用户的OpenID信息（JWT格式的id_token）|
 |code_challenge_method|选填</br>应用如果已设置密码不需要填，应用未设置密码时建议填写|String|代码质询方法，值为'plain'或'S256'|
-|code_challenge|选填</br>和code_challenge_method参数一起填写|String|长度为43-128的字符串，用于验证应用的后续请求</br>- 如果code_challenge_method='plain'时，在下一步骤令牌端点中，用于验证应用身份的code_verifier=code_challenge；</br>- 如果如果code_challenge_method='S265'时，在下一步骤令牌端点中，用于验证应用身份的code_verifier值需要满足：BASE64URL(SHA256(ascii(code_verifier)))=code_challenge|
+|code_challenge|选填</br>和code_challenge_method参数一起填写|String|长度为43-128的字符串，用于在后续令牌端点的请求中验证应用身份|
 
 响应结果：</br>
 (1) 浏览器HTTP 302重定向到京东云登录授权页面，用户进行登录和授权操作</br>
@@ -72,15 +72,15 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 
 请求示例：</br>
 ```
-https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.redirect.com/abc&response_type=code&state=J83xoLA0&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://oauth2.jdcloud.com/authorize?client_id=9145611234658436&redirect_uri=https://www.redirect.com/abc&response_type=code&state=mn3N7e85WH&code_challenge_method=S256&code_challenge=Vuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 浏览器将重定向到京东云登录页：</br>
 ```
-https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.redirect.com%2Fabc%26response_type%3Dcode%26state%3DJ83xoLA0%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
+https://uc.jdcloud.com/login?returnUrl=http%3A%2F%2Foauth2.jdcloud.com%2Fauthorize%3Fclient_id%3D9145611234658436%26redirect_uri%3Dhttps%3A%2F%2Fwww.redirect.com%2Fabc%26response_type%3Dcode%26state%3Dmn3N7e85WH%26code_challenge_method%3DS256%26code_challenge%3DVuu-tYpwl_4xB8miLyRO2p__zQoADgG1A40LoYCYsgU
 ```
 用户登录并授权后，浏览器将重定向到应用提供的回调地址：</br>
 ```
-https://www.redirect.com/abc?code=7Y6m65jY&state=J83xoLA0
+https://www.redirect.com/abc?code=7Y6m65jY&state=mn3N7e85WH
 ```
 
 <h3 id="3">获取用户的访问令牌</h3>
@@ -99,7 +99,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |client_secret|选填</br>客户端密码验证方式为“通过请求参数验证”时必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'authorization_code'|
 |code|必填|String|在授权码端点响应中返回的code值|
-|code_verifier|选填</br>在授权码端点中传过code_challenge时必须|String|应用验证代码</br>- 如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>- 如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码详情](#7)）|
+|code_verifier|选填</br>在授权码端点中传过code_challenge时必须|String|应用验证代码</br>- 如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>- 如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码示例](#7)）|
 
 响应结果：</br>
 JSON格式的访问令牌：</br>

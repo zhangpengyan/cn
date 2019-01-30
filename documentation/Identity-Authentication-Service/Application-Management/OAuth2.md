@@ -57,7 +57,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/authorize </br>
 |redirect_uri|必填|String|必须和创建应用时填写的应用回调地址一样|
 |response_type|必填|String|值为'code'，代表需要京东云返回授权码|
 |state|必填|String|任意字符串，用于防止跨站请求伪造（[了解更多](https://tools.ietf.org/html/rfc6749#section-10.12)）|
-|scope|选填</br>应用已向京东云申请访问范围时，可选填；填写未申请的访问范围会报错|String|值为'openid'</br>如果scope='openid'，且用户同意授权应用获取其身份信息，则在下一步骤令牌端点中，京东云将返回用户的OpenID信息|
+|scope|选填</br>应用已向京东云申请访问范围时，可选填；填写未申请的访问范围会报错|String|值为'openid'</br>如果scope='openid'，且用户同意授权应用获取其身份信息，则在下一步骤令牌端点中，京东云将返回用户的OpenID信息（JWT格式的id_token）|
 |code_challenge_method|选填</br>应用如果已设置密码不需要填，应用未设置密码时建议填写|String|代码质询方法，值为'plain'或'S256'|
 |code_challenge|选填</br>应用如果已设置密码不需要填，应用未设置密码时建议填写|String|长度为43-128的字符串，用于验证应用的后续请求</br>- 如果code_challenge_method='plain'时，在下一步骤令牌端点中，用于验证应用身份的code_verifier=code_challenge；</br>- 如果如果code_challenge_method='S265'时，在下一步骤令牌端点中，用于验证应用身份的code_verifier值需要满足：BASE64URL(SHA256(ascii(code_verifier)))=code_challenge|
 

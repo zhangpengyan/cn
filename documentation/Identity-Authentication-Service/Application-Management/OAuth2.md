@@ -88,7 +88,7 @@ https://www.redirect.com/abc?code=7Y6m65jY&state=mn3N7e85WH
 **令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 请求方式：GET/POST </br>
-令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择客户端密码验证方式为“**HTTP基础验证方式**”，则必须在**请求头**中包含如下值：</br>
+令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择客户端密码验证方式为“**HTTP基础验证方式**”，则必须在**请求头**中包含如下值（查看[base64编码示例](#7)）：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>
@@ -99,7 +99,7 @@ HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 |client_secret|选填</br>“HTTP基础身份认证”或“不验证客户端密码”时不填，“通过请求参数验证”必填|String|创建应用时填写的客户端密码|
 |grant_type|必填|String|值必须为'authorization_code'|
 |code|必填|String|在授权码端点响应中返回的code值|
-|code_verifier|选填</br>在授权码端点中传过code_challenge时必填，未传code_challenge时不填|String|应用验证代码</br>- 如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>- 如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[code_verifier编码示例](#7)）|
+|code_verifier|选填</br>在授权码端点中传过code_challenge时必填，未传code_challenge时不填|String|应用验证代码</br>- 如果在授权码端点中，code_challenge_method=plain，则code_verifier=code_challenge</br>- 如果在授权码端点中，code_challenge_method=S256，则BASE64URL(SHA256(ascii(code_verifier)))=code_challenge</br>（查看[base64编码示例](#7)）|
 
 响应结果：</br>
 JSON格式的访问令牌：</br>
@@ -168,7 +168,7 @@ Authorization:Bearer 5ECTSzkTOgpHkJWFOA7yhfH3niyH1ZME
 **令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/token </br>
 请求方式：GET/POST </br>
-令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择客户端密码验证方式为“**HTTP基础验证方式**”，则必须在**请求头**中包含如下值：</br>
+令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择客户端密码验证方式为“**HTTP基础验证方式**”，则必须在**请求头**中包含如下值（查看[base64编码示例](#7)）：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>
@@ -207,7 +207,7 @@ https://oauth2.jdcloud.com/token?client_id=9145611234658436&client_secret=HXue9u
 **撤销令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/revoke </br>
 请求方式：GET/POST </br>
-撤销令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值：</br>
+撤销令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值（查看[base64编码示例](#7)）：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>
@@ -228,15 +228,16 @@ https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9
 https://oauth2.jdcloud.com/revoke?client_id=9145611234658436&client_secret=HXue9usjI>0&token=4SixsR5H8WxK8QrB&token_type_hint=refresh_token
 ```
 
-<h3 id="7">code_verifier编码示例 - JAVA</h3>
+<h3 id="7">base64编码示例 - JAVA</h3>
 ```
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
  
-class A{
+ class A{
 	 
 	 public  static void main(String[] args){
+	 	// S256 code_verifier编码
 		String code_verifier = "abcde12345abcde12345abcde12345abcde12345abc";
 
 		try {
@@ -245,10 +246,15 @@ class A{
 
 			String result = new String(Base64.getUrlEncoder().encode(messageDigest.digest()));
 			System.out.println(result);
-		}
-    catch (NoSuchAlgorithmException e) {
+		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
-  }
-}
+		// 应用身份验证header编码
+		 String header = "9731548664628756" + ":" + "12341234";
+		 String base64Header = new String(Base64.getEncoder().encode(header.getBytes()));
+		 System.out.println(base64Header);
+	 }
+ }
+ 
+
 ```

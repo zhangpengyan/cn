@@ -207,7 +207,7 @@ https://oauth2.jdcloud.com/token?client_id=9145611234658436&client_secret=HXue9u
 **撤销令牌端点说明**</br>
 HTTPS请求地址：https://oauth2.jdcloud.com/revoke </br>
 请求方式：GET/POST </br>
-撤销令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择“**HTTP基本验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值（查看[base64编码示例](#7)）：</br>
+撤销令牌端点请求必须对应用身份进行验证。如果在创建应用时，选择“**HTTP基础验证方式**”为客户端密码验证方式，则必须在**请求头**中包含如下值（查看[base64编码示例](#7)）：</br>
 `Authorization:Basic base64url(client_id:client_secret)`</br>
 
 参数：</br>

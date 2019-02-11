@@ -31,3 +31,8 @@
 ## 管理应用
 
 在应用管理列表页，点击应用的“管理”按钮，可查看应用详情、编辑应用信息、申请应用权限、重置应用密码。</br>
+
+![](../../../image/Identity-Authentication-Service/Application-Management/6-mng-app.png)
+![](../../../image/Identity-Authentication-Service/Application-Management/3-review-app.png)
+
+

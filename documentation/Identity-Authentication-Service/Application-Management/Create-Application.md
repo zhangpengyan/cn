@@ -30,28 +30,23 @@
 
 ## 管理应用
 
-在应用管理列表页，点击应用的“管理”按钮，可查看应用详情、编辑应用信息、申请应用权限、重置应用密码。</br>
+在应用管理列表页，点击应用的“管理”按钮，可查看应用详情、编辑应用信息、申请应用权限、重置应用密码、删除应用。</br>
 
 ![](../../../image/Identity-Authentication-Service/Application-Management/6-mng-app.png)
 ![](../../../image/Identity-Authentication-Service/Application-Management/3-review-app.png)
 
-1. 快捷复制按钮，点击复制应用ID</br>
-2. 如果应用通过“HTTP基础身份认证”或“通过请求参数验证”方式验证客户端密码，可以通过页面右上角的操作按钮，重置客户端密码</br>
+1. 快捷复制按钮，点击复制应用ID。</br>
+2. 如果应用通过“HTTP基础身份认证”或“通过请求参数验证”方式验证客户端密码，可以通过页面右上角的操作按钮，重置客户端密码。</br>
 
 ![](../../../image/Identity-Authentication-Service/Application-Management/7-reset-secret.PNG)
 
-3. 点击修改按钮，可以修改应用信息，各字段填写说明请参考创建应用</br>
+3. 点击修改按钮，可以修改应用信息，各字段填写说明请参考创建应用。</br>
 
 ![](../../../image/Identity-Authentication-Service/Application-Management/8-edit-app.png)
 
-4. 如果应用本身也需要作为身份提供商，为其他应用提供联合认证服务，则可能需要京东云用户的OpenID信息。此时，需要在权限范围页面申请权限。</br>
-京东云OAuth2授权码端点中，scope参数的值应在已申请的权限范围中。所有申请的权限必须在scope参数中指明，并获得用户授权后，访问令牌的权限才会生效</br>
+4. 在权限范围页面，可以申请应用需要访问用户在京东云上的那些资源。京东云OAuth2授权码端点中，scope参数的值应在已申请的权限范围中。所有申请的权限必须在scope参数中指明，并获得用户授权后，访问令牌的权限才会生效。</br>
+目前scope仅支持openid。如果应用本身也需要作为身份提供商，为其他应用提供联合认证服务，则可能需要京东云用户的OpenID信息。</br>
 
 ![](../../../image/Identity-Authentication-Service/Application-Management/9-apply-scope.png)
 ![](../../../image/Identity-Authentication-Service/Application-Management/10-openid.png)
 ![](../../../image/Identity-Authentication-Service/Application-Management/11-review-scope.PNG)
-
-
-
-
-

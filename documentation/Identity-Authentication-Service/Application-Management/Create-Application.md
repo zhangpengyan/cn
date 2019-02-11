@@ -2,7 +2,7 @@
 
 创建应用、[接入京东云OAuth2](../../../documentation/Identity-Authentication-Service/Application-Management/OAuth2.md)的总体流程如下：</br>
 
-![](../../../image/Identity-Authentication-Service/Application-Management/app-flow2.png)
+![](../../../image/Identity-Authentication-Service/Application-Management/app-flow.png)
 
 您可以在京东云[身份管理控制台](https://ias-console.jdcloud.com/ias/apps)创建、管理应用程序。</br>
 
@@ -30,4 +30,4 @@
 
 ## 管理应用
 
-在应用管理列表页，点击应用的“管理”按钮，可编辑应用信息、申请应用权限、重置应用密码。</br>
+在应用管理列表页，点击应用的“管理”按钮，可查看应用详情、编辑应用信息、申请应用权限、重置应用密码。</br>

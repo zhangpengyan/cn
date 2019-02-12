@@ -29,7 +29,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 在授权码模式下，应用不会要求用户直接提供京东云账号和密码，而是引导用户到京东云，京东云对用户进行身份验证和授权询问，然后再引导用户带着一个授权码回到应用。拿到授权码后，应用需要向京东云证明自己的身份，才可以使用授权码来京东云换取用户的访问令牌。随后，在访问令牌指定的范围内，应用可以访问京东云的特定资源。</br>
 具体流程如下图所示：</br>
 
-![](../../image/Identity-Authentication-Service/Application-Management/authorization_code.png)
+![](../../../../image/Identity-Authentication-Service/Application-Management/authorization_code.png)
 
 - (A) 用户通过浏览器访问应用，应用向京东云授权服务器发起登录请求（提供应用ID、应用的回调地址、需要访问用户哪些资源），同时浏览器重定向到京东云登录页面；</br>
 - (B) 用户登录京东云，京东云验证用户身份（通过是否成功登录），并询问用户是否同意授权应用访问自己的资源；</br>

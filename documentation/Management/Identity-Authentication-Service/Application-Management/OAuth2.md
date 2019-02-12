@@ -7,7 +7,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 ## 二. 接入京东云OAuth2
 京东云OAuth2支持网站或Web应用接入，接入流程如下：</br>
-1. [创建应用](../../../documentation/Management/Identity-Authentication-Service/Application-Management/Create-Application.md)，获取client_id；</br>
+1. [创建应用](../../documentation/Management/Identity-Authentication-Service/Application-Management/Create-Application.md)，获取client_id；</br>
 2. 根据[京东云OAuth2协议](#0)，开发应用：</br>
 &emsp;2.1 在应用中[放置京东云登录按钮](#1)</br>
 &emsp;2.2 [获取用户的授权码](#2)</br>
@@ -29,7 +29,7 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 在授权码模式下，应用不会要求用户直接提供京东云账号和密码，而是引导用户到京东云，京东云对用户进行身份验证和授权询问，然后再引导用户带着一个授权码回到应用。拿到授权码后，应用需要向京东云证明自己的身份，才可以使用授权码来京东云换取用户的访问令牌。随后，在访问令牌指定的范围内，应用可以访问京东云的特定资源。</br>
 具体流程如下图所示：</br>
 
-![](../../../image/Identity-Authentication-Service/Application-Management/authorization_code.png)
+![](../../image/Identity-Authentication-Service/Application-Management/authorization_code.png)
 
 - (A) 用户通过浏览器访问应用，应用向京东云授权服务器发起登录请求（提供应用ID、应用的回调地址、需要访问用户哪些资源），同时浏览器重定向到京东云登录页面；</br>
 - (B) 用户登录京东云，京东云验证用户身份（通过是否成功登录），并询问用户是否同意授权应用访问自己的资源；</br>
@@ -46,11 +46,11 @@ OAuth2的更多说明，请参考其[官方网站](https://oauth.net/2/)。</br>
 
 <h3 id="1">放置京东云登录按钮</h3>
 
-京东云提供了几种标准图标供应用开发者[下载](../../../image/Identity-Authentication-Service/Application-Management/download-resource/jdcloud-icon.zip)。放置京东云登录按钮请参考下述标示。</br>
+京东云提供了几种标准图标供应用开发者[下载](../../image/Identity-Authentication-Service/Application-Management/download-resource/jdcloud-icon.zip)。放置京东云登录按钮请参考下述标示。</br>
 
 |图标|标示|
 |---|---|
-|彩色图标|![](../../../image/Identity-Authentication-Service/Application-Management/color.png)|
+|彩色图标|![](../../image/Identity-Authentication-Service/Application-Management/color.png)|
 
 <h3 id="2">获取用户的授权码</h3>
 

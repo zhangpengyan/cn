@@ -32,7 +32,7 @@
 
 <br>
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/cloud-disk-004.png)
+![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/cloud-disk-0999904.png)
 
 <br>
 

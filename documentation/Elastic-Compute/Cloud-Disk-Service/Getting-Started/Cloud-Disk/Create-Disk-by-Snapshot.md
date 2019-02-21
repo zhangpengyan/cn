@@ -32,8 +32,6 @@
 
 <br>
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/cloud-disk-0999904.png)
-
 <br>
 
 3、选择云硬盘付费类型，包年包月或按配置购买；

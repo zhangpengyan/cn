@@ -16,7 +16,7 @@
 
 - 基于快照创建云硬盘，需要经历从对象存储恢复数据至云硬盘的过程，因此要比创建新硬盘多花费一些时间，请您耐心等待。
 
-----[xiazai](/image/Marketplace/PDF/云市场平台入驻协议.pdf)---
+当前文件下载>>> [xiazai](/image/Marketplace/PDF/云市场平台入驻协议.pdf)
 
 <br>
 ##  操作指南

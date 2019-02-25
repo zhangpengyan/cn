@@ -1,0 +1,16 @@
+goConsulDemoAppName: go-consul-demo
+goConsulDemoInstanceId: go-consul-demo-1
+goConsulDemoHostIp: 10.12.140.173
+goConsulDemoPort: 19200
+goConsulDemoHealthCheckUrl: /api/health/check
+consulAddress: 10.12.209.43
+consulPort: 8500
+consulScheme: http
+traceConfig:
+  simpleType: const
+  simpleRate: 1
+  enable: true
+  #traceUdpAddress: 10.12.140.173
+  #traceUdpPort: 6832
+  traceHttpAddress: 10.12.140.173
+  traceHttpPort: 14268

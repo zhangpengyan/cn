@@ -5,3 +5,5 @@ items:
   items:
     - name: case01测试图片导入功能
       href: test.md
+    - name: case02测试中文名称图片转义功能
+      href: cnname_image.md

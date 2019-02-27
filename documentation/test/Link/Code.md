@@ -1,6 +1,6 @@
 以下是用python语言编写快速排序算法：
 
-```python
+```Python
 # 快排的主函数，传入参数为一个列表，左右两端的下标
 def QuickSort(list, low, high):
     if high > low:

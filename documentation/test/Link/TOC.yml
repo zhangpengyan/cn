@@ -9,4 +9,6 @@ items:
   items:
     - name: case04测试代码高亮
       href: Code.md
+    - name: case05测试重复代码高亮
+      href: SameCode.md
 

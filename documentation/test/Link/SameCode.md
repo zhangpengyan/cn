@@ -217,6 +217,8 @@ HAVING ppc.Name = 'Clothing'
 ```
 
 
+SHELL
+
 ```SQL
 [root@localhost ~]#name=dangxu    //定义一般变量 
 [root@localhost ~]# echo ${name} 

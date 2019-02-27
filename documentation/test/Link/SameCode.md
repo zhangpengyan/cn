@@ -182,3 +182,57 @@ JSON
   }
 ]
 ```
+
+Base：
+```SQL
+az vm create \
+    --resource-group myResourceGroupVM \
+    --name myVM \
+    --image UbuntuLTS \
+    --admin-username azureuser \
+    --generate-ssh-keys
+```
+SQL ：
+```SQL
+SELECT   
+   soh.OrderDate AS [Date],   
+   soh.SalesOrderNumber AS [Order],   
+   pps.Name AS Subcat, pp.Name as Product,    
+   SUM(sd.OrderQty) AS Qty,  
+   SUM(sd.LineTotal) AS LineTotal  
+FROM Sales.SalesPerson sp   
+   INNER JOIN Sales.SalesOrderHeader AS soh   
+      ON sp.BusinessEntityID = soh.SalesPersonID  
+   INNER JOIN Sales.SalesOrderDetail AS sd   
+      ON sd.SalesOrderID = soh.SalesOrderID  
+   INNER JOIN Production.Product AS pp   
+      ON sd.ProductID = pp.ProductID  
+   INNER JOIN Production.ProductSubcategory AS pps   
+      ON pp.ProductSubcategoryID = pps.ProductSubcategoryID  
+   INNER JOIN Production.ProductCategory AS ppc   
+      ON ppc.ProductCategoryID = pps.ProductCategoryID  
+GROUP BY ppc.Name, soh.OrderDate, soh.SalesOrderNumber, pps.Name, pp.Name,   
+   soh.SalesPersonID  
+HAVING ppc.Name = 'Clothing'
+```
+
+
+```SQL
+[root@localhost ~]#name=dangxu    //定义一般变量 
+[root@localhost ~]# echo ${name} 
+dangxu 
+[root@localhost ~]# cat test.sh   //验证脚本，实例化标题中的./*.sh 
+#!/bin/sh 
+echo ${name} 
+[root@localhost ~]# ls -l test.sh  //验证脚本可执行 
+-rwxr-xr-x 1 root root 23 Feb 6 11:09 test.sh 
+[root@localhost ~]# ./test.sh    //以下三个命令证明了结论一 
+[root@localhost ~]# sh ./test.sh 
+[root@localhost ~]# bash ./test.sh 
+[root@localhost ~]# . ./test.sh   //以下两个命令证明了结论二 
+dangxu 
+[root@localhost ~]# source ./test.sh 
+dangxu 
+[root@localhost ~]# 
+```
+    

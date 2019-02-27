@@ -11,4 +11,5 @@ items:
       href: Code.md
     - name: case05测试重复代码高亮
       href: SameCode.md
-
+    - name: case06测试一行MD支持两个代码段
+      href: TwoCodeLines.md

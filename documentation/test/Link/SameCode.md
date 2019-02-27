@@ -1,4 +1,4 @@
-相同的两段代码=-：
+相同的两段代码=->>>>：
 
 ```Python
 # 快排的主函数，传入参数为一个列表，左右两端的下标-=
@@ -40,7 +40,7 @@ list_demo = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8]
 QuickSort(list_demo, 0, 9)
 print(list_demo)
 ```
-```Python
+```
 # 快排的主函数，传入参数为一个列表，左右两端的下标
 def QuickSort(list, low, high):
     if high > low:

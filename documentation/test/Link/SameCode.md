@@ -1,7 +1,7 @@
 相同的两段代码：
 
 ```Python
-# 快排的主函数，传入参数为一个列表，左右两端的下标
+# 快排的主函数，传入参数为一个列表，左右两端的下标-=
 def QuickSort(list, low, high):
     if high > low:
         # 传入参数，通过Partitions函数，获取k下标值

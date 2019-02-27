@@ -5,3 +5,8 @@ items:
   items:
     - name: case03测试多行超链接
       href: LinkTest.md
+- name: 测试代码高亮
+  items:
+    - name: case04测试代码高亮
+      href: LinkTest.md
+

@@ -139,7 +139,7 @@ Java:
 ```
 
 JSON
-```SQL
+```Java
 [
   '{{repeat(5, 7)}}',
   {

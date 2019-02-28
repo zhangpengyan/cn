@@ -98,7 +98,7 @@ public static byte[] File2byte(String filePath) {
 ```
 
 ### JSON：
-```Java
+```JSON
 {
    "min_position": "int(3,4,5-9)",
    "has_more_items": "bool",
@@ -153,7 +153,7 @@ HAVING ppc.Name = 'Clothing'
 
 
 ### SHELL
-```SQL
+```Shell
 [root@localhost ~]#name=dangxu    //定义一般变量 
 [root@localhost ~]# echo ${name} 
 dangxu 
@@ -173,7 +173,7 @@ dangxu
 ```
 
 ### XML:
-```SQL
+```XML
 <?xml version="1.0" encoding="UTF-8" ?>
 <!---Students grades are uploaded by months---->
 <class_list>
@@ -184,8 +184,8 @@ dangxu
 </class_list>
 ```
 
-### html:
-```SQL
+### HTML:
+```HTML
 <h3>
     <a id="user-content-xml" class="anchor" href="#xml" aria-hidden="true">
         <span aria-hidden="true" class="octicon octicon-link">

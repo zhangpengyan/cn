@@ -44,57 +44,57 @@ print(list_demo)
 
 ### Java:
 ```Java
-    public static BufferedImage toBufferedImage(Image image) {
-        if (image instanceof BufferedImage) {
-            return (BufferedImage) image;
-        }
-        // This code ensures that all the pixels in the image are loaded
-        image = new ImageIcon(image).getImage();
-        BufferedImage bimage = null;
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        try {
-            int transparency = Transparency.OPAQUE;
-            GraphicsDevice gs = ge.getDefaultScreenDevice();
-            GraphicsConfiguration gc = gs.getDefaultConfiguration();
-            bimage = gc.createCompatibleImage(image.getWidth(null), image.getHeight(null), transparency);
-        } catch (HeadlessException e) {
-            // The system does not have a screen
-        }
-        if (bimage == null) {
-            // Create a buffered image using the default color model
-            int type = BufferedImage.TYPE_INT_RGB;
-            bimage = new BufferedImage(image.getWidth(null), image.getHeight(null), type);
-        }
-        // Copy image to buffered image
-        Graphics g = bimage.createGraphics();
-        // Paint the image onto the buffered image
-        g.drawImage(image, 0, 0, null);
-        g.dispose();
-        return bimage;
+public static BufferedImage toBufferedImage(Image image) {
+    if (image instanceof BufferedImage) {
+        return (BufferedImage) image;
     }
+    // This code ensures that all the pixels in the image are loaded
+    image = new ImageIcon(image).getImage();
+    BufferedImage bimage = null;
+    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    try {
+        int transparency = Transparency.OPAQUE;
+        GraphicsDevice gs = ge.getDefaultScreenDevice();
+        GraphicsConfiguration gc = gs.getDefaultConfiguration();
+        bimage = gc.createCompatibleImage(image.getWidth(null), image.getHeight(null), transparency);
+    } catch (HeadlessException e) {
+        // The system does not have a screen
+    }
+    if (bimage == null) {
+        // Create a buffered image using the default color model
+        int type = BufferedImage.TYPE_INT_RGB;
+        bimage = new BufferedImage(image.getWidth(null), image.getHeight(null), type);
+    }
+    // Copy image to buffered image
+    Graphics g = bimage.createGraphics();
+    // Paint the image onto the buffered image
+    g.drawImage(image, 0, 0, null);
+    g.dispose();
+    return bimage;
+}
 
 
-    public static byte[] File2byte(String filePath) {
-        byte[] buffer = null;
-        try {
-            File file = new File(filePath);
-            FileInputStream fis = new FileInputStream(file);
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            byte[] b = new byte[1024];
-            int n;
-            while ((n = fis.read(b)) != -1) {
-                bos.write(b, 0, n);
-            }
-            fis.close();
-            bos.close();
-            buffer = bos.toByteArray();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+public static byte[] File2byte(String filePath) {
+    byte[] buffer = null;
+    try {
+        File file = new File(filePath);
+        FileInputStream fis = new FileInputStream(file);
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        byte[] b = new byte[1024];
+        int n;
+        while ((n = fis.read(b)) != -1) {
+            bos.write(b, 0, n);
         }
-        return buffer;
+        fis.close();
+        bos.close();
+        buffer = bos.toByteArray();
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+    return buffer;
+}
 ```
 
 ### JSON：

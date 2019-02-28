@@ -1,9 +1,5 @@
 # 代码渲染：
-当前测试 < 你好i>ffdsf&gt;dsafas&lt;fdsfds</br>
-    gsdgsd&gt;fdsfsd
-    <td>
-    dasda
-</td>
+当前测试 
 ### Python:
 ```Python
 # 快排的主函数，传入参数为一个列表，左右两端的下标-=

@@ -170,4 +170,15 @@ dangxu
 dangxu 
 [root@localhost ~]# 
 ```
-    
+
+### XML:
+```SQL
+<?xml version="1.0" encoding="UTF-8" ?>
+<!---Students grades are uploaded by months---->
+<class_list>
+    <student>
+        <name>Tanmay</name>
+        <grade>A</grade>
+    </student>
+</class_list>
+```

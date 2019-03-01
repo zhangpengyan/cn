@@ -1,15 +1,15 @@
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
-    ```
+```
     apt-get update     apt-get install linux-image-3.13.0-139-generic
-    ```
+```
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
-    ```
+```
     apt-get update     apt-get install linux-image-4.4.0-109-generic
-    ```
+```
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
@@ -21,7 +21,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" /v Mi
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
- ```
+```
  PS> # Save the current execution policy so it can be reset
  PS> $SaveExecutionPolicy = Get-ExecutionPolicy
  PS> Set-ExecutionPolicy RemoteSigned -Scope Currentuser
@@ -34,7 +34,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" /v Mi
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
- ```
+```
  PS C:\> Get-SpeculationControlSettings
  Speculation control settings for CVE-2017-5715 [branch target injection]
  Hardware support for branch target injection mitigation is present: True
@@ -57,7 +57,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" /v Mi
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
- ```
+```
  PS> # Save the current execution policy so it can be reset
  PS> $SaveExecutionPolicy = Get-ExecutionPolicy
  PS> Set-ExecutionPolicy RemoteSigned -Scope Currentuser
@@ -66,11 +66,11 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" /v Mi
  PS> Get-SpeculationControlSettings
  PS> # Reset the execution policy to the original state
  PS> Set-ExecutionPolicy $SaveExecutionPolicy -Scope Currentuser
- ```
+```
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/Intel-Meltdown-Spectre-Solution.md
- ```
+```
  PS C:\> Get-SpeculationControlSettings
  Speculation control settings for CVE-2017-5715 [branch target injection]
  Hardware support for branch target injection mitigation is present: True
@@ -81,7 +81,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" /v Mi
  Windows OS support for kernel VA shadow is present: True
  Windows OS support for kernel VA shadow is enabled: True
  Windows OS support for PCID optimization is enabled: True
- ```
+```
 
 
 #### 当前代码: documentation/Cloud-Security/Security-Instruction/Security-Vulnerability-Instruction/NTP-Monlist-Vulnerability.md
@@ -163,7 +163,7 @@ make && make install
     memcached_free(memc);
      return 0;
  }
- ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Memcached/Best-Practices/Cplusplus-libmemcached.md
@@ -233,7 +233,7 @@ make && make install
     memcached_free(memc);
      return 0;
  }
- ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Memcached/Best-Practices/Python-bmemcached.md
@@ -602,7 +602,7 @@ sh.shardCollection("mytest.mycol",{_id:1})
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-MongoDB/Operation-Guide/Account-Management/Create-MongoDB-Account.md
-    ```
+```
     use products
     db.createUser( { user: "accountAdmin01",
                      pwd: "changeMe",
@@ -611,11 +611,11 @@ sh.shardCollection("mytest.mycol",{_id:1})
                               { role: "readAnyDatabase", db: "admin" },
                               "readWrite"] },
                    { w: "majority" , wtimeout: 5000 } )
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-MongoDB/Operation-Guide/Account-Management/Create-MongoDB-Account.md
-    ```
+```
     use products
     db.createUser(
        {
@@ -624,11 +624,11 @@ sh.shardCollection("mytest.mycol",{_id:1})
          roles: [ "readWrite", "dbAdmin" ]
        }
     )
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-MongoDB/Operation-Guide/Account-Management/Create-MongoDB-Account.md
-    ```
+```
     use admin
     db.createUser(
        {
@@ -637,11 +637,11 @@ sh.shardCollection("mytest.mycol",{_id:1})
          roles: [ ]
        }
     )
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-MongoDB/Operation-Guide/Account-Management/Create-MongoDB-Account.md
-    ```
+```
     use admin
     db.createUser(
        {
@@ -654,7 +654,7 @@ sh.shardCollection("mytest.mycol",{_id:1})
            ]
        }
     )
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Best-Practices/CorCplusplus-Connect-to-Redis-Instance.md
@@ -752,7 +752,7 @@ sh.shardCollection("mytest.mycol",{_id:1})
      redisFree(c);
      return 0;
  }
- ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Best-Practices/CorCplusplus-Connect-to-Redis-Instance.md
@@ -1082,7 +1082,7 @@ client.quit();
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Best-Practices/Python-Connect-to-Redis-Instance.md
- ```git clone https://github.com/andymccurdy/redis-py```
+```git clone https://github.com/andymccurdy/redis-py```
  
 - step2：编写测试用例
 
@@ -1139,7 +1139,7 @@ servers:
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Operation-Guide/Data-Migration.md
- ```
+```
 [source]
 type: aof file
 servers:
@@ -1153,227 +1153,227 @@ servers:
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/Local-to-MariaDB.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：自建数据库的用户名。
         密码：自建数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/Local-to-MariaDB.md
-    ```
+```
     scp /路径/导出文件名.sql 云主机用户名@云主机公网IP: /云主机路径
 
     参数描述
         云主机用户名：创建云主机实例时候的用户名。
         云主机公网 IP：云主机绑定的公网 IP 地址。
         云主机路径：本地上传的文件在云主机中存放的路径。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/Local-to-MariaDB.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /云主机路径/导出文件名.sql
 
     参数描述
         用户名：第 3 步操作中的用户名。
         密码：第 3 步操作中的用户对应的密码。
         数据库域名：云数据库 MariaDB 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/VM-to-MariaDB.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：自建数据库的用户名。
         密码：自建数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/VM-to-MariaDB.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /路径/导出文件名.sql
 
     参数描述
         用户名：第 3 步操作中的用户名。
         密码：第 3 步操作中的用户对应的密码。
         数据库域名：云数据库 MariaDB 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MySQL-Instance/Local-to-MySQL.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：自建数据库的用户名。
         密码：自建数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MySQL-Instance/Local-to-MySQL.md
-    ```
+```
     scp /路径/导出文件名.sql 云主机用户名@云主机公网IP: /云主机路径
 
     参数描述
         云主机用户名：创建云主机实例时候的用户名。
         云主机公网 IP：云主机绑定的公网 IP 地址。
         云主机路径：本地上传的文件在云主机中存放的路径。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MySQL-Instance/Local-to-MySQL.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /云主机路径/导出文件名.sql
 
     参数描述
         用户名：第 3 步操作中的用户名。
         密码：第 3 步操作中的用户对应的密码。
         数据库域名：云数据库 MySQL 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MySQL-Instance/VM-to-MySQL.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：自建数据库的用户名。
         密码：自建数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-MySQL-Instance/VM-to-MySQL.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /路径/导出文件名.sql
 
     参数描述
         用户名：第 3 步操作中的用户名。
         密码：第 3 步操作中的用户对应的密码。
         数据库域名：云数据库 MySQL 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-Percona-Instance/Local-to-Percona.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：自建数据库的用户名。
         密码：自建数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-Percona-Instance/Local-to-Percona.md
-    ```
+```
     scp /路径/导出文件名.sql 云主机用户名@云主机公网IP: /云主机路径
 
     参数描述
         云主机用户名：创建云主机实例时候的用户名。
         云主机公网 IP：云主机绑定的公网 IP 地址。
         云主机路径：本地上传的文件在云主机中存放的路径。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-Percona-Instance/Local-to-Percona.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /云主机路径/导出文件名.sql
 
     参数描述
         用户名：第 3 步操作中的用户名。
         密码：第 3 步操作中的用户对应的密码。
         数据库域名：云数据库 Percona 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-Percona-Instance/VM-to-Percona.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：自建数据库的用户名。
         密码：自建数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Import-Data-Into-Percona-Instance/VM-to-Percona.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /路径/导出文件名.sql
 
     参数描述
         用户名：第 3 步操作中的用户名。
         密码：第 3 步操作中的用户对应的密码。
         数据库域名：云数据库 Percona 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Migrate-From-MySQL-Database-to-Percona-Database.md
-    ```
+```
     mysqldump -u用户名 -p密码 --single-transaction  --set-gtid-purged=OFF -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：云数据库 MySQL 的用户名。
         密码：云数据库 MySQL 的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Data-Migration/Migrate-From-MySQL-Database-to-Percona-Database.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 < /云主机路径/导出文件名.sql
 
     参数描述
         用户名：第 6 步操作中的用户名。
         密码：第 6 步操作中的用户对应的密码。
         数据库域名：云数据库 Percona 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     # 查看帮助手册
     ./mysql_backup_extract.py -h
      
      # 解压云数据库 MariaDB 实例的备份数据
      ./mysql_backup_extract.py  -v 10.2 -f ./backup.xbstream
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     wget -c '<数据备份下载地址>' -O <自定义备份文件名>.xbstream
 
     -c：启动断点续传
     -O：将下载的结果保存为指定的文件，注意文件的后者必须是 .xbstream
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     ./mysql_backup_extract.py -v 10.2 -f <自定义备份文件名>.xbstream
     
     -v 参数必须指定，具体 -v 后面可以跟什么变量可以通过 -h 查看帮助手册得知。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     innobackupex --defaults-file=$HOME/tmp_snapshot/backup-my.cnf --apply-log $HOME/tmp_snapshot
-    ``` 
+``` 
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     # The MySQL server
     [mysqld]
     innodb_checksum_algorithm=innodb
@@ -1387,62 +1387,62 @@ servers:
     innodb_undo_directory=.
     innodb_undo_tablespaces=0
     #redo_log_version=1
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     chown -R mysql:mysql $HOME/tmp_snapshot
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     mysqld --defaults-file=/export/tmp_snapshot/backup-my.cnf --user=mysql --datadir=/export/tmp_snapshot
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MariaDB-Database.md
-    ```
+```
     mysql -uroot -p
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     # 查看帮助手册
     ./mysql_backup_extract.py -h
      
      # 解压云数据库 MySQL 实例的备份数据
      ./mysql_backup_extract.py  -v 5.7 -f ./backup.xbstream
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     wget -c '<数据备份下载地址>' -O <自定义备份文件名>.xbstream
 
     -c：启动断点续传
     -O：将下载的结果保存为指定的文件，注意文件的后者必须是 .xbstream
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     ./mysql_backup_extract.py -v 5.7 -f <自定义备份文件名>.xbstream
     
     -v 参数可以不指定，默认：5.7，具体 -v 后面可以跟什么变量可以通过 -h 查看帮助手册得知。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     innobackupex --defaults-file=$HOME/tmp_snapshot/backup-my.cnf --apply-log $HOME/tmp_snapshot
-    ``` 
+``` 
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     # The MySQL server
     [mysqld]
     innodb_checksum_algorithm=innodb
@@ -1456,62 +1456,62 @@ servers:
     innodb_undo_directory=.
     innodb_undo_tablespaces=0
     #redo_log_version=1
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     chown -R mysql:mysql $HOME/tmp_snapshot
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     mysqld_safe --defaults-file=$HOME/tmp_snapshot/backup-my.cnf --user=mysql --datadir=$HOME/tmp_snapshot &
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-MySQL-Database.md
-    ```
+```
     mysql -uroot -p
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     # 查看帮助手册
     ./mysql_backup_extract.py -h
      
      # 解压云数据库 Percona 实例的备份数据
      ./mysql_backup_extract.py  -v 5.7 -f ./backup.xbstream
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     wget -c '<数据备份下载地址>' -O <自定义备份文件名>.xbstream
 
     -c：启动断点续传
     -O：将下载的结果保存为指定的文件，注意文件的后者必须是 .xbstream
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     ./mysql_backup_extract.py -v 5.7 -f <自定义备份文件名>.xbstream
     
     -v 参数可以不指定，默认：5.7，具体 -v 后面可以跟什么变量可以通过 -h 查看帮助手册得知。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     innobackupex --defaults-file=$HOME/tmp_snapshot/backup-my.cnf --apply-log $HOME/tmp_snapshot
-    ``` 
+``` 
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     # The MySQL server
     [mysqld]
     innodb_checksum_algorithm=innodb
@@ -1525,47 +1525,47 @@ servers:
     innodb_undo_directory=.
     innodb_undo_tablespaces=0
     #redo_log_version=1
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     chown -R mysql:mysql $HOME/tmp_snapshot
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     mysqld --defaults-file=$HOME/tmp_snapshot/backup-my.cnf --user=mysql --datadir=$HOME/tmp_snapshot --socket=$HOME/tmp_snapshot/mysql.sock &
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Restore-Backup-To-Self-Built-Database/Restore-Backup-To-Self-Built-Percona-Database.md
-    ```
+```
     mysql -uroot -p --socket=$HOME/tmp_snapshot/mysql.sock
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Upgrade-Database-Version/Upgrade-MySQL.md
-    ```
+```
     mysqldump -u用户名 -p密码 -R -E --skip-tz-utc --opt --skip-add-drop-table --single-transaction --hex-blob --default-character-set=binary --master-data=2 -B 数据库名称 > /路径/导出文件名.sql
 
     参数描述
         用户名：云数据库的用户名。
         密码：云数据库的密码。
         数据库名称：填写您需要导出的库名，多个库名通过空格来分隔。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Best-Practices/Upgrade-Database-Version/Upgrade-MySQL.md
-    ```
+```
     mysql -u用户名 -p密码 -h 云数据库域名 --default-character-set=binary < /路径/导出文件名.sql
 
     参数描述
         用户名：第 6 步操作中的用户名。
         密码：第 6 步操作中的用户对应的密码。
         数据库域名：云数据库 MySQL 8.0 的域名可以在实例的详情页查看。
-    ```
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/MariaDB-Restrictions.md
@@ -2143,7 +2143,7 @@ for i from 0 to 23:
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/TiDB-Service/Best-Practices/Parameters-Optimization.md
- ``` toml
+``` toml
 # 日志级别，可选值为：trace，debug，info，warn，error，off
 log-level = "info"
 
@@ -3068,7 +3068,7 @@ apiVersion: v1
 
 
 #### 当前代码: documentation/Elastic-Compute/Function-Service/Getting-Started/helloworld.md
-  ```
+ ```
 def handler(event,context):
 print(event)
 return "hello world"
@@ -3107,7 +3107,7 @@ class FContext:
 ```
    def my_handler(event, context):
    return 'hello world'
-   ```
+  ```
 
 
 #### 当前代码: documentation/Elastic-Compute/Function-Service/Operation-Guide/buildfunction/programming-model/python/processing-program.md
@@ -6828,7 +6828,7 @@ wget -c http://devops-hb.oss.cn-north-1.jcloudcs.com/ifrit/ifrit-agent-external-
 
 
 #### 当前代码: documentation/Management/IAM/Policy-Management/Policy_v3/Resource.md
-``` jrn:<service_name>:<region>:<accountId>:<resourceType>/<resourceId><subresouceType>/<subresouceId> ```
+``` jrn:<service_name>:<region>:<accountId>:<resourceType>/<resourceId><subresouceType>/<subresouceId>```
 
 ## 格式说明
 
@@ -8885,7 +8885,7 @@ jdc monitor put-metric-data --input-json '{"metricDataList": [{"namespace": "tes
 
 
 #### 当前代码: documentation/Management/Resource-Orchestration/Operation-Guide/Resource-Stack/delete-stack.md
-     ```
+```
       "Resources" : {
         "MyInstance" : {
           "Type" : "JDCLOUD::VM::Instance",
@@ -8896,7 +8896,7 @@ jdc monitor put-metric-data --input-json '{"metricDataList": [{"namespace": "tes
         }
       }
       
-     ```
+```
 
 
 #### 当前代码: documentation/Management/Resource-Orchestration/Operation-Guide/orchestration-templates/templates-grammar-Conditions.md
@@ -9806,7 +9806,7 @@ JDCLOUD::Region
 
 
 #### 当前代码: documentation/Marketplace/Marketplace/ISV/Product-Enter/Notify-Interface-Standard.md
- ```
+```
     import java.io.UnsupportedEncodingException;
     import java.security.MessageDigest;
     import java.security.NoSuchAlgorithmException;
@@ -10217,7 +10217,7 @@ filebeat.prospectors:
 output.elasticsearch:
   # Array of hosts to connect to.
   hosts: ["172.16.0.39:9200"]
-  ```
+ ```
 
 
 #### 当前代码: documentation/Middleware/JCS-for-Elasticsearch/Best-Practices/plugin.md
@@ -10227,7 +10227,7 @@ nohup ./filebeat 2>&1 >/dev/null &
 
 
 #### 当前代码: documentation/Middleware/JCS-for-Elasticsearch/Best-Practices/plugin.md
- ```
+```
 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.6.9.tar.gz
 
 tar xvf logstash-5.6.9.tar.gz
@@ -10600,14 +10600,14 @@ public class ConsumerDemo {
 
 
 #### 当前代码: documentation/Middleware/Message-Queue/SDK-Rerference/Java-SDK/Environment-Preparation.md
-  ```
+ ```
   <dependency>
      <groupId>com.jdcloud</groupId>
      <artifactId>jcq-java-sdk</artifactId>
      <version>x.x.x</version>
      //设置为 Java SDK 的最新版本号
   </dependency>
-  ```
+ ```
 
 
 #### 当前代码: documentation/Middleware/Message-Queue/SDK-Rerference/Java-SDK/Initialization.md
@@ -14684,7 +14684,7 @@ Content-Length:  0
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Get-Bucket-Encryption-2.md
-  ```
+ ```
 HTTP/1.1 200 OK
 Server: JDCloudOSS
 Date: Wed, 14 Nov 2018 03:50:32 GMT
@@ -14704,7 +14704,7 @@ x-amz-request-id: 9DFB131D1820AD65
      </Rule>
 </ServerSideEncryptionConfiguration>
 
-  ```
+ ```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Get-Bucket-Lifecycle.md
@@ -15243,7 +15243,7 @@ default encryption configuration in the request body
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Put-Bucket-Encryption-2.md
-  ```
+ ```
 PUT /?encryption HTTP/1.1
 Host: examplebucket.s3.amazonaws.com
 Date: Wed, 06 Sep 2017 12:00:00 GMT
@@ -15258,11 +15258,11 @@ Content-Length: length
   </Rule>
 </ServerSideEncryptionConfiguration>
 
-  ```
+ ```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Put-Bucket-Encryption-2.md
-   ```
+  ```
 HTTP/1.1 200 OK
 Server: JDCloudOSS
 Date: Wed, 14 Nov 2018 03:50:29 GMT
@@ -15271,7 +15271,7 @@ Connection: keep-alive
 x-req-id: A8D4BE3AD5D9B626
 x-amz-request-id: A8D4BE3AD5D9B626
 
-  ```
+ ```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Put-Bucket-Lifecycle.md
@@ -19350,7 +19350,7 @@ public class SubscriptionTest {
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/Operation-Guide/Manage-Bucket/Manage-Origin-Retrieval-Settings-2.md
- ``` 
+``` 
 Content-Type
 Content-Encoding
 Content-Disposition
@@ -19360,22 +19360,22 @@ Expires
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/Operation-Guide/Manage-Bucket/Manage-Origin-Retrieval-Settings-2.md
-    ```
+```
     GET /object
     host : bucket.s3.cn-north-1.jcloudcs.com
     a-header : 111
     b-header : 222
     c-header : 333
-    ```
+```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/Operation-Guide/Manage-Bucket/Manage-Origin-Retrieval-Settings-2.md
-    ```
+```
     GET /object
     host : source.com
     a-header : 111
     c-header : 000
-    ```
+```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/Operation-Guide/Manage-Bucket/Set-Custom-Domain-Name-2.md

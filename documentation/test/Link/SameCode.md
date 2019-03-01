@@ -152,8 +152,8 @@ HAVING ppc.Name = 'Clothing'
 ```
 
 
-### SHELL
-```Shell
+### Linux 语句
+```Linux
 [root@localhost ~]#name=dangxu    //定义一般变量 
 [root@localhost ~]# echo ${name} 
 dangxu 
@@ -173,6 +173,24 @@ dangxu
 ```
 
 
+### Linux 语句
+```Linux
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+```
+
+### SHELL
+```SHELL
+#!/usr/bin/env bash
+mkdir code
+cd  code
+for ((i=0; i<3; i++)); do
+    touch test_${i}.txt
+    echo "shell很简单" >> test_${i}.txt
+done
+
+```
 
 
 ### Ruby

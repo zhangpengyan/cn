@@ -2458,9 +2458,9 @@ Empty set (0.00 sec)
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/TiDB-Service/SQL-Syntax/Database-SQL.md
-````
+```
 CREATE DATABASE db_name [options];
-````
+```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/TiDB-Service/SQL-Syntax/Database-SQL.md
@@ -2813,7 +2813,7 @@ permisssions:
 
 
 #### 当前代码: documentation/Developer-Tools/CodePipeline/Best-Practices/Deployment-On-K8S.md
-	```
+```
 	apiVersion: apps/v1beta1
 	kind: Deployment
 	metadata:
@@ -2832,11 +2832,11 @@ permisssions:
 		    - containerPort: 8088
 	      imagePullSecrets:
 		- name: my-secret	
-	```
+```
 
 
 #### 当前代码: documentation/Developer-Tools/CodePipeline/Best-Practices/Deployment-On-K8S.md
-	```
+```
 	kind: Service
 	apiVersion: v1
 	metadata:
@@ -2855,7 +2855,7 @@ permisssions:
 	  type: LoadBalancer
 	  sessionAffinity: None
 	  externalTrafficPolicy: Cluster 
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Cloud-Disk-Service/Getting-Started/Cloud-Disk/Expand-Filesystem/Expand-File-System-Linux.md
@@ -3063,7 +3063,7 @@ apiVersion: v1
 
 
 #### 当前代码: documentation/Elastic-Compute/Function-Service/Getting-Started/helloworld.md
- ```
+```
 def handler(event,context):
 print(event)
 return "hello world"
@@ -3102,7 +3102,7 @@ class FContext:
 ```
    def my_handler(event, context):
    return 'hello world'
-  ```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Function-Service/Operation-Guide/buildfunction/programming-model/python/processing-program.md
@@ -4605,33 +4605,33 @@ sh auto_fdisk.sh /dev/vdb jddata1 ext4
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Getting-Start-Linux/Mount-DataDisk.md
-	```
+```
 	fdisk -l
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Getting-Start-Linux/Mount-DataDisk.md
-	```
+```
 	fdisk /dev/vdb
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Getting-Start-Linux/Mount-DataDisk.md
-	```
+```
 	mkfs -t ext4 /dev/vdb1
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Getting-Start-Linux/Mount-DataDisk.md
-	```
+```
 	mkdir -p /mnt/vdb1 && mount -t ext4 /dev/vdb1 /mnt/vdb1
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Getting-Start-Linux/Mount-DataDisk.md
-	```
+```
 	blkid /dev/vdb1
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Getting-Start-Windows/Connect-to-Windows-Instance.md
@@ -4712,7 +4712,7 @@ wmic process where caption="MonitorPlugin.exe" get caption,commandline /value
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Operation-Guide/Network/Assign-Secondary-IPs.md
-	```
+```
 	TYPE="ETHERNET"  
 	BOOTPROTO="dhcp"
 	DEFROUTE="yes"
@@ -4729,11 +4729,11 @@ wmic process where caption="MonitorPlugin.exe" get caption,commandline /value
 	UUID="dd73a4ea-8f6b-409b-a271-5f7882a3ae53"
 	DEVICE="eth0"
 	ONBOOT="yes"</pre>
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Operation-Guide/Network/Assign-Secondary-IPs.md
-	```
+```
 	TYPE="ETHERNET"
 	#BOOTPROTO="dhcp"
 	DEFROUTE="yes"
@@ -4755,11 +4755,11 @@ wmic process where caption="MonitorPlugin.exe" get caption,commandline /value
 	NETMASK="255.255.255.0"
 	NETMASK1="255.255.255.0"
 	GATEWAY="192.168.0.1"
-	```
+```
 
 
 #### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Operation-Guide/Network/Configurate-ENI-Multi-Queue.md
-	```
+```
 	[root@test ~]# ethtool -l eth0
 	Channel parameters for eth0:
 	Pre-set maximums:
@@ -4773,36 +4773,8 @@ wmic process where caption="MonitorPlugin.exe" get caption,commandline /value
 	Other:		0
 	Combined:	1      # 此行代表当前生效1个队列
 	[root@test ~]# ethtool -L eth0 combined 4
-	```
-
-
-#### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Operation-Guide/Storage/Identify-Local-Data-Disk.md
-```ll /dev/disk/by-id```
-	
-5. 如下入所示，其中virtio-Ephemeral\_Disk\_1至virtio-Ephemeral\_Disk\_4即为对应四块本地数据盘<br>![](../../../../../image/vm/localdatadisklinux.png)
-
-### Windows系统
-
-Windows以 Windows 2008 标准版 系统为例，操作步骤如下：
-
-1. 访问[云主机控制台](https://cns-console.jdcloud.com/host/compute/list)，即进入实例列表页面。或访问[京东云控制台](https://console.jdcloud.com)点击左侧导航栏【弹性计算】-【云主机】进入实例列表页。
-2. 选择地域。
-3. 在实例列表中选择需要查看本地数据盘的实例，[登录Windows实例](https://docs.jdcloud.com/cn/virtual-machines/connect-to-windows-instance)
-4. 输入：
-```wmic
-
-
-#### 当前代码: documentation/Elastic-Compute/Virtual-Machines/Operation-Guide/Storage/Identify-Local-Data-Disk.md
 ```
-	
-5. 如下入所示，其中序列号Ephemeral\_Disk\_1至Ephemeral\_Disk\_4即为对应四块本地数据盘<br>![](../../../../../image/vm/localdatadiskwin.png)
 
-## 相关参考
-
-[登录Linux实例](https://docs.jdcloud.com/cn/virtual-machines/connect-to-linux-instance)
-
-[登录Windows实例](https://docs.jdcloud.com/cn/virtual-machines/connect-to-windows-instance)
-```
 
 
 #### 当前代码: documentation/Hybrid-Cloud/JDFusion/Operation-Guide/jdfusion-SecurityGroups-description.md
@@ -10155,7 +10127,7 @@ filebeat.prospectors:
 output.elasticsearch:
   # Array of hosts to connect to.
   hosts: ["172.16.0.39:9200"]
- ```
+```
 
 
 #### 当前代码: documentation/Middleware/JCS-for-Elasticsearch/Best-Practices/plugin.md
@@ -10538,14 +10510,14 @@ public class ConsumerDemo {
 
 
 #### 当前代码: documentation/Middleware/Message-Queue/SDK-Rerference/Java-SDK/Environment-Preparation.md
- ```
+```
   <dependency>
      <groupId>com.jdcloud</groupId>
      <artifactId>jcq-java-sdk</artifactId>
      <version>x.x.x</version>
      //设置为 Java SDK 的最新版本号
   </dependency>
- ```
+```
 
 
 #### 当前代码: documentation/Middleware/Message-Queue/SDK-Rerference/Java-SDK/Initialization.md
@@ -14622,7 +14594,7 @@ Content-Length:  0
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Get-Bucket-Encryption-2.md
- ```
+```
 HTTP/1.1 200 OK
 Server: JDCloudOSS
 Date: Wed, 14 Nov 2018 03:50:32 GMT
@@ -14642,7 +14614,7 @@ x-amz-request-id: 9DFB131D1820AD65
      </Rule>
 </ServerSideEncryptionConfiguration>
 
- ```
+```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Get-Bucket-Lifecycle.md
@@ -15181,7 +15153,7 @@ default encryption configuration in the request body
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Put-Bucket-Encryption-2.md
- ```
+```
 PUT /?encryption HTTP/1.1
 Host: examplebucket.s3.amazonaws.com
 Date: Wed, 06 Sep 2017 12:00:00 GMT
@@ -15196,11 +15168,11 @@ Content-Length: length
   </Rule>
 </ServerSideEncryptionConfiguration>
 
- ```
+```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Put-Bucket-Encryption-2.md
-  ```
+```
 HTTP/1.1 200 OK
 Server: JDCloudOSS
 Date: Wed, 14 Nov 2018 03:50:29 GMT
@@ -15209,7 +15181,7 @@ Connection: keep-alive
 x-req-id: A8D4BE3AD5D9B626
 x-amz-request-id: A8D4BE3AD5D9B626
 
- ```
+```
 
 
 #### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/Put-Bucket-Lifecycle.md
@@ -19313,53 +19285,6 @@ Expires
     host : source.com
     a-header : 111
     c-header : 000
-```
-
-
-#### 当前代码: documentation/Storage-and-CDN/Object-Storage-Service/Operation-Guide/Manage-Bucket/Set-Custom-Domain-Name-2.md
-```<BucketName>.<Endpoint>```
-[外网域名- endpoint ](../../API-Reference-S3-Compatible/Regions-And-Endpoints.md)
-
-
-
-自定义域名绑定成功后，OSS中存储文件的访问地址可使用自定义域名。例如，您的存储空间example位于华北-北京，对象文件名称为test.jpg，绑定的自定义域名为hello-world.com，则该对象访问地址为：
-
-* 未绑定之前：example.oss.cn-north-1.jcloudcs.com /test.jpg
-* 绑定成功后：hello-world.com/test.jpg
-  您可以通过控制台将自定义域名绑定到OSS外网域名上实现自定义域名访问存储空间下的文件。
-
-## 绑定域名操作步骤
-1.登入控制台->对象存储->空间管理->进入某个Bucket->空间设置，点击“自定义域名”。
-
-2.单击添加域名按钮，打开绑定用户域名页面，如下图所示：
-
-![图片](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-094.jpg)
- 
-3.绑定域名
-
- *  在用户域名框中，输入要绑定的域名名称。
- *  如果需要CDN加速，通过单击自定义域名tab 也的提示文案，前往京东云CDN控制台开通CDN加速。
- 
-4.单击提交。
-
-**说明**
- 
-*  一个域名只能绑定相同地域中一个Bucket，每个Bucket最多绑定20个域名。
-*  您绑定的域名需在工信部备案，否则域名访问将会受到影响。
-*  建议您将自定义的域名访问绑定在属于自己的Bucket上面。域名绑定成功后，为了使用域名正常访问OSS，还需要需要用户到域名解析商处添加CNAME记录指向OSS访问域名。
-*  如果您的用户域名需要通过HTTPS的方式访问OSS服务，必须购买相应的数字证书。并通过工单提交您的证书，并通过京东云OSS托管您的证书，详见[自定义域名支持HTTPS访问 OSS 服务](../../Best-Practices/Custom-Domain-Name-Guidance.md)。
-*  如果您输入的域名已经被其他用户恶意绑定，系统将提示域名被绑定。您可以单击提交工单的方式，按照OSS的验证方案，完成验证域名所有权，如果通过域名所有权验证，即可绑定域名，同时解除此域名与之前存储空间的绑定关系。
-*  目前仅支持使用自定义域名下载文件，如您需上传文件或对Bucket进行各种操作请使用京东云OSS访问域名。
-
-
-## 域名解析操作步骤（以京东云云解析为例）
-
-登录京东云云解析DNS 控制台进入域名解析列表页面。
-单击目标域名或右侧的解析按钮进入域名解析页面。
-单击添加解析后，打开添加解析页面。
-在记录类型下拉列表中，选择CNAME；在记录值框中，填写对应的存储空间外网域名（即Bucket域名，如BucketName.oss.cn-north-1.jcloudcs.com）。
-单击确认，域名解析完成。
-具体参考[京东云云解析DNS-添加解析记录](https://docs.jdcloud.com/cn/jd-cloud-dns/domain-record-add)
 ```
 
 

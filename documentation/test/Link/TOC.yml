@@ -13,3 +13,9 @@ items:
       href: SameCode.md
     - name: case06测试一行MD支持两个代码段
       href: TwoCodeLines.md
+    - name: API中的所有代码
+      href: Code_API.md
+    - name: SDK中所有代码
+      href: Code_SDK.md
+    - name: DOC中所有的代码
+      href: Code_DOC.md

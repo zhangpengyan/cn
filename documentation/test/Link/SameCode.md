@@ -153,7 +153,7 @@ HAVING ppc.Name = 'Clothing'
 
 
 ### Linux 语句
-```Linux
+```Linux-Host
 [root@localhost ~]#name=dangxu    //定义一般变量 
 [root@localhost ~]# echo ${name} 
 dangxu 

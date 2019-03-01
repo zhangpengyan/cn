@@ -1082,16 +1082,11 @@ client.quit();
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Best-Practices/Python-Connect-to-Redis-Instance.md
-```git clone https://github.com/andymccurdy/redis-py```
+```
+git clone https://github.com/andymccurdy/redis-py
+```
  
-- step2：编写测试用例
 
-```
-
-
-#### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Best-Practices/Python-Connect-to-Redis-Instance.md
-```
-```
 
 
 #### 当前代码: documentation/Database-and-Cache-Service/JCS-for-Redis/Best-Practices/data-migration.md

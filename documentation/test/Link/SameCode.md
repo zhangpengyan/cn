@@ -172,6 +172,29 @@ dangxu
 [root@localhost ~]# 
 ```
 
+
+
+
+### Ruby
+```Ruby
+[root@localhost ~]#name=dangxu    //定义一般变量 
+[root@localhost ~]# echo ${name} 
+dangxu 
+[root@localhost ~]# cat test.sh   //验证脚本，实例化标题中的./*.sh 
+#!/bin/sh 
+echo ${name} 
+[root@localhost ~]# ls -l test.sh  //验证脚本可执行 
+-rwxr-xr-x 1 root root 23 Feb 6 11:09 test.sh 
+[root@localhost ~]# ./test.sh    //以下三个命令证明了结论一 
+[root@localhost ~]# sh ./test.sh 
+[root@localhost ~]# bash ./test.sh 
+[root@localhost ~]# . ./test.sh   //以下两个命令证明了结论二 
+dangxu 
+[root@localhost ~]# source ./test.sh 
+dangxu 
+[root@localhost ~]# 
+```
+
 ### XML:
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>

@@ -9,3 +9,5 @@ items:
       href: cnname_image.md
     - name: Case003_下载图片
       href: Download.md
+    - name: Case004_更新图片
+      href: updatepic.md

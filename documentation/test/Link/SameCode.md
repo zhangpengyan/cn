@@ -542,7 +542,7 @@ sudo apt-get install oracle-java8-installer
 ```
 
 ### SHELL
-```SHELL
+```Shell
 #!/usr/bin/env bash
 mkdir code
 cd  code

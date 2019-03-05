@@ -180,7 +180,7 @@ Accept-Language: zh-CN,zh;q=0.9
 ```
 
 ### Swift
-``` Swift
+```Swift
 import Cocoa
 
 // 使用字符串字面量创建空字符串
@@ -514,7 +514,7 @@ HAVING ppc.Name = 'Clothing'
 
 
 ### Linux 语句
-```Linux-Host
+```Linux
 [root@localhost ~]#name=dangxu    //定义一般变量 
 [root@localhost ~]# echo ${name} 
 dangxu 

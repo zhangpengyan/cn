@@ -1,5 +1,248 @@
 # 代码渲染：
 当前测试 
+### JavaScript
+```JavaScript
+function k(a) {
+        var b = v.map
+          , c = a;
+        if (b)
+            for (var d = 0, e = b.length; e > d; d++) {
+                var f = b[d];
+                if (c = z(f) ? f(a) || a : a.replace(f[0], f[1]),
+                c !== a)
+                    break
+            }
+        return c
+    }
+    function l(a, b) {
+        var c, d = a.charAt(0);
+        if (J.test(a))
+            c = a;
+        else if ("." === d)
+            c = f((b ? e(b) : v.cwd) + a);
+        else if ("/" === d) {
+            var g = v.cwd.match(K);
+            c = g ? g[0] + a.substring(1) : a
+        } else
+            c = v.base + a;
+        return 0 === c.indexOf("//") && (c = ("https:" == location.protocol ? "https:" : "http:") + c),
+        c
+    }
+```
+
+### C#
+```C#
+using System;
+namespace HelloWorldApplication
+{
+    /* 类名为 HelloWorld */
+    class HelloWorld
+    {
+        /* main函数 */
+        static void Main(string[] args)
+        {
+            /* 我的第一个 C# 程序 */
+            Console.WriteLine("Hello World!");
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+### Scala
+```Scala
+import java.io._
+
+object Test {
+   def main(args: Array[String]) {
+      val writer = new PrintWriter(new File("test.txt" ))
+
+      writer.write("菜鸟教程")
+      writer.close()
+   }
+}
+
+```
+
+
+### PHP
+```PHP
+<?php
+// 定义变量并默认设为空值
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "名字是必需的。";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+
+  if (empty($_POST["email"])) {
+    $emailErr = "邮箱是必需的。";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+  }
+
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "性别是必需的。";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+?>
+```
+
+### C++
+```C++
+#include <iostream>
+ 
+using namespace std;
+ 
+class Box
+{
+   public:
+      double length;   // 长度
+      double breadth;  // 宽度
+      double height;   // 高度
+};
+ 
+int main( )
+{
+   Box Box1;        // 声明 Box1，类型为 Box
+   Box Box2;        // 声明 Box2，类型为 Box
+   double volume = 0.0;     // 用于存储体积
+ 
+   // box 1 详述
+   Box1.height = 5.0; 
+   Box1.length = 6.0; 
+   Box1.breadth = 7.0;
+ 
+   // box 2 详述
+   Box2.height = 10.0;
+   Box2.length = 12.0;
+   Box2.breadth = 13.0;
+ 
+   // box 1 的体积
+   volume = Box1.height * Box1.length * Box1.breadth;
+   cout << "Box1 的体积：" << volume <<endl;
+ 
+   // box 2 的体积
+   volume = Box2.height * Box2.length * Box2.breadth;
+   cout << "Box2 的体积：" << volume <<endl;
+   return 0;
+}
+```
+
+### Go
+```Go
+package main
+
+import "fmt"
+
+func main() {
+   const LENGTH int = 10
+   const WIDTH int = 5   
+   var area int
+   const a, b, c = 1, false, "str" //多重赋值
+
+   area = LENGTH * WIDTH
+   fmt.Printf("面积为 : %d", area)
+   println()
+   println(a, b, c)   
+}
+```
+
+### HTTP
+```HTTP
+GET /linhaifeng/p/7278389.html HTTP/1.1
+Host: www.cnblogs.com
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+```
+
+### Swift
+``` Swift
+import Cocoa
+
+// 使用字符串字面量创建空字符串
+var stringA = ""
+
+if stringA.isEmpty {
+   print( "stringA 是空的" )
+} else {
+   print( "stringA 不是空的" )
+}
+
+// 实例化 String 类来创建空字符串
+let stringB = String()
+
+if stringB.isEmpty {
+   print( "stringB 是空的" )
+} else {
+   print( "stringB 不是空的" )
+}
+```
+
+### Object-C
+```Object-C
+#import "Forwarder.h"
+
+@implementation Forwarder
+
+@synthesize recipient;
+
+- (retval_t) forward: (SEL) sel : (arglist_t) args
+{
+    /*
+     *检查转发对象是否响应该消息。
+     *若转发对象不响应该消息，则不会转发，而产生一个错误。
+     */
+    if([recipient respondsTo:sel])
+       return [recipient performv: sel : args];
+    else
+       return [self error:"Recipient does not respond"];
+}
+```
+
+### MongoDB
+```MongoDB
+>db.col.find({"likes": {$gt:50}, $or: [{"by": "菜鸟教程"},{"title": "MongoDB 教程"}]}).pretty()
+{
+        "_id" : ObjectId("56063f17ade2f21f36b03133"),
+        "title" : "MongoDB 教程",
+        "description" : "MongoDB 是一个 Nosql 数据库",
+        "by" : "菜鸟教程",
+        "url" : "http://www.runoob.com",
+        "tags" : [
+                "mongodb",
+                "database",
+                "NoSQL"
+        ],
+        "likes" : 100
+}
+```
+
+
+
 ### Python:
 ```Python
 # 快排的主函数，传入参数为一个列表，左右两端的下标-=

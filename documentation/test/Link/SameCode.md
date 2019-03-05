@@ -240,8 +240,126 @@ if stringB.isEmpty {
         "likes" : 100
 }
 ```
+### Ruby
+```Ruby
+#!/usr/bin/ruby
+ 
+require 'cgi'
+require 'cgi/session'
+cgi = CGI.new("html4")
+ 
+sess = CGI::Session.new( cgi, "session_key" => "a_test",
+                              "prefix" => "rubysess.")
+lastaccess = sess["lastaccess"].to_s
+sess["lastaccess"] = Time.now
+if cgi['bgcolor'][0] =~ /[a-z]/
+  sess["bgcolor"] = cgi['bgcolor']
+end
+ 
+cgi.out{
+  cgi.html {
+    cgi.body ("bgcolor" => sess["bgcolor"]){
+      "The background of this page"    +
+      "changes based on the 'bgcolor'" +
+      "each user has in session."      +
+      "Last access time: #{lastaccess}"
+    }
+  }
+}
+```
+### Rust
+```Rust
+extern {
+    fn log(__x : f64) -> f64;
+    fn pow(__x : f64, __y : f64) -> f64;
+    fn printf(__format : *const u8, ...) -> i32;
+    fn rand() -> i32;
+    fn sqrt(__x : f64) -> f64;
+}
+ 
+#[no_mangle]
+pub unsafe extern fn randn(mut mu : f64, mut sigma : f64) -> f64 {
+    let mut U1 : f64;
+    let mut U2 : f64;
+    let mut W : f64;
+    let mut mult : f64;
+    static mut X1 : f64 = 0f64;
+    static mut X2 : f64 = 0f64;
+    static mut call : i32 = 0i32;
+    if call == 1i32 {
+        call = (call == 0) as (i32);
+        return mu + sigma * X2 as (f64);
+    }
+    loop {
+        {
+            U1 = -1i32 as (f64) + rand(
+                                  ) as (f64) / 2147483647i32 as (f64) * 2i32 as (f64);
+            U2 = -1i32 as (f64) + rand(
+                                  ) as (f64) / 2147483647i32 as (f64) * 2i32 as (f64);
+            W = pow(U1,2i32 as (f64)) + pow(U2,2i32 as (f64));
+        }
+        if !(W >= 1i32 as (f64) || W == 0i32 as (f64)) {
+            break;
+        }
+    }
+    mult = sqrt(-2i32 as (f64) * log(W) / W);
+    X1 = U1 * mult;
+    X2 = U2 * mult;
+    call = (call == 0) as (i32);
+    mu + sigma * X1 as (f64)
+}
+ 
+fn main() {
+    let ret = unsafe { _c_main() };
+    std::process::exit(ret);
+}
+ 
+#[no_mangle]
+pub unsafe extern fn _c_main() -> i32 {
+    printf(b"%f\n\0".as_ptr(),randn(0i32 as (f64),1i32 as (f64)));
+    printf(b"%f\n\0".as_ptr(),randn(3i32 as (f64),2.5f64));
+    0i32
+}
+```
+### yaml
+```YAML
+---
+# Collection Types #############################################################
+################################################################################
 
+# http://yaml.org/type/map.html -----------------------------------------------#
 
+map:
+  # Unordered set of key: value pairs.
+  Block style: !!map
+    Clark : Evans
+    Ingy  : döt Net
+    Oren  : Ben-Kiki
+  Flow style: !!map { Clark: Evans, Ingy: döt Net, Oren: Ben-Kiki }
+
+# http://yaml.org/type/omap.html ----------------------------------------------#
+
+omap:
+  # Explicitly typed ordered map (dictionary).
+  Bestiary: !!omap
+    - aardvark: African pig-like ant eater. Ugly.
+    - anteater: South-American ant eater. Two species.
+    - anaconda: South-American constrictor snake. Scaly.
+    # Etc.
+  # Flow style
+  Numbers: !!omap [ one: 1, two: 2, three : 3 ]
+
+# http://yaml.org/type/pairs.html ---------------------------------------------#
+
+pairs:
+  # Explicitly typed pairs.
+  Block tasks: !!pairs
+    - meeting: with team.
+    - meeting: with boss.
+    - break: lunch.
+    - meeting: with client.
+  Flow tasks: !!pairs [ meeting: with team, meeting: with boss ]
+```
 
 ### Python:
 ```Python

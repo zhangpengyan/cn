@@ -35,5 +35,5 @@
 单库上云的操作步骤大致分为3步：
 
 1. 用户在本机将需要上云的数据库备份为一个文件，点击查看[文档](Backup-Local-Database.md)
-2. 用户将备份文件上传到京东云上，点击查看[老版使用方式](Upload-Backup.md)或[新版使用方式](./V2/Upload-Backup-v2.md)。
-3. 用户使用上传的备份文件，恢复到数据库上，完成上云任务，，点击查看[老版使用方式](Import-Backup.md)或[新版使用方式](./V2/Import-Backup-v2.md)。
+2. 用户将备份文件上传到京东云上，点击查看[从上传文件导入](Upload-Backup.md)或[从OSS导入](./V2/Upload-Backup-v2.md)。
+3. 用户使用上传的备份文件，恢复到数据库上，完成上云任务，，点击查看[从上传文件导入](Import-Backup.md)或[从OSS导入](./V2/Import-Backup-v2.md)。

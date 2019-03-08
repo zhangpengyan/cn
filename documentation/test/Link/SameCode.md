@@ -567,7 +567,7 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
 
-### SHELL SHEHLL采用SHELL渲染
+### SHELL （SHEHLL采用SHELL渲染）
 ```Shell
 #!/usr/bin/env bash
 mkdir code
@@ -579,7 +579,7 @@ done
 
 ```
 
-### bash SHELL采用BASH渲染 
+### SHELL （SHELL采用BASH渲染）
 ```bash
 #!/usr/bin/env bash
 mkdir code

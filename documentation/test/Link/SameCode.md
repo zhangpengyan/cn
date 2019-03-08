@@ -567,8 +567,20 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
 
-### SHELL
+### SHELL SHEHLL采用SHELL渲染
 ```Shell
+#!/usr/bin/env bash
+mkdir code
+cd  code
+for ((i=0; i<3; i++)); do
+    touch test_${i}.txt
+    echo "shell很简单" >> test_${i}.txt
+done
+
+```
+
+### bash SHELL采用BASH渲染 
+```bash
 #!/usr/bin/env bash
 mkdir code
 cd  code

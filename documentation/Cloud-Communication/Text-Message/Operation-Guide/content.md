@@ -47,3 +47,8 @@
 
 提交审核后您可以在短信模板列表页查看审核状态, 审核通过的短信模板可用于短信发送<br>
 ![查看状态](../../../../image/Text-Message/dx-017.png)<br><br>
+
+注: 验证码短信和通知短信需要通过API或SDK调用. <br>
+详细请参考 https://docs.jdcloud.com/cn/?act=3 <br>
+API和SDK所需要的相关信息在概览页获取 <br>
+![ak](../../../../image/Text-Message/dx-017a.png)<br><br>

@@ -107,7 +107,7 @@ items:
      items:
        - name: createVpcSubnet
          href: Vpc-Subnet/createVpcSubnet.md
-       - name: ddeleteVpcSubnetById
+       - name: deleteVpcSubnetById
          href: Vpc-Subnet/deleteVpcSubnetById.md
        - name: getVpcSubnetById
          href: Vpc-Subnet/getVpcSubnetById.md

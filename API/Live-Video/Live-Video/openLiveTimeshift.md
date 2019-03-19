@@ -1,4 +1,4 @@
-# openLiveTimeshift
+# openLiveTimeShift
 
 
 ## 描述
@@ -8,14 +8,19 @@
 PUT
 
 ## 请求地址
-https://live.jdcloud-api.com/v1/liveTimeshift:open
+https://live.jdcloud-api.com/v1/liveTimeShift:open
 
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**playDomain**|String|True| |直播的推流域名|
+|名称|类型|是否必需|描述|
+|---|---|---|---|
+|**playDomain**|String|True|直播的推流域名|
 
+## 示例
+    {
+       
+        "playDomain":"play.yourdomain.com"
+    }
 
 ## 返回参数
 |名称|类型|描述|

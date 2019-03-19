@@ -17,4 +17,6 @@ items:
       href: Code_API.md
     - name: SDK中所有代码
       href: Code_SDK.md
+    - name: 档代码高亮添加更新时间规则
+      href: UpdateCodeTime.md
 

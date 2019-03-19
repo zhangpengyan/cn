@@ -11,5 +11,5 @@
 
 各个列的使用方式如下： create index <索引名> on <表名>(<相等列>,<不等列>) include(<包含列>) , 其中选择性高的列放在前面
 
-详细的缺失索引的信息的使用及限制可以参考[微软官方文档](https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2008/ms345417\(v%3dsql.100\))
+详细的缺失索引的信息的使用及限制可以参考[微软官方文档](https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2008/ms345417\\(v%3dsql.100\\))
 

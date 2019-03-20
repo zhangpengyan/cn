@@ -90,9 +90,9 @@
      - name: 创建原生容器Pod
        items:
          - name: 部署Virtual-Kubelet
-           href: Operation-Guide/Instance/Deploy-Virtual-Kubelet.md
+           href: Best-Practices/Create-Pod/Deploy-Virtual-Kubelet.md
          - name: 在Kubernetes集群中创建Pod
-           href: Operation-Guide/Instance/Create-Pod-InKubernetes.md
+           href: Best-Practices/Create-Pod/Create-Pod-InKubernetes.md
      - name: 部署Helm
        href: Best-Practices/Deploy-Helm.md
   - name: 常见问题

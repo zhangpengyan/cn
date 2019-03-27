@@ -9,7 +9,7 @@
 
 ## 注意事项
 
-- 您开始使用京东云提供的队列服务，即代表您同意服务的[等级协议](<https://docs.jdcloud.com/cn/product-service-agreement/queue-servuce-service-terms>)及[计费标准](../Pricing/Price-Overview.md)。
+- 您开始使用京东云提供的队列服务，即代表您同意服务的[等级协议](<https://docs.jdcloud.com/cn/product-service-agreement/queue-service-terms-of-service>)及[计费标准](../Pricing/Price-Overview.md)。
 - 对于用户创建的队列数量服务没有限制，请根据您的业务需要创建。
 
 ## 步骤一：创建队列

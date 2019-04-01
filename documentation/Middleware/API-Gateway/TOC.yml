@@ -41,20 +41,9 @@ items:
       herf: Getting-Started/example_console.md
     - name: 使用Function函数构建API
       herf: Getting-Started/example_function.md
-    - name: 创建API分组
-      herf: Getting-Started/STEP1-Create-APIGroup.md
-    - name: 创建API
-      herf: Getting-Started/STEP2-Create-API.md
-    - name: 自定义域名
-      herf: Getting-Started/STEP3-1-Create-Domain.md
-    - name: 后端签名
-      herf: Getting-Started/STEP3-2-Create-BackSign.md
-    - name: 流控策略
-      herf: Getting-Started/STEP3-3-Create-Stream.md
-    - name: 发布API分组
-      herf: Getting-Started/STEP4-Create-Publish.md  
-    - name: API的访问授权
-      herf: Getting-Started/STEP5-Create-Auth.md
+    - name: 使用订阅密钥调用API
+      herf: Getting-Started/example_subkey.md
+  
 - name: 操作指南
   items:
     - name: API分组管理

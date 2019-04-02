@@ -1,4 +1,4 @@
-使用Npm软件包管理系统管理软件包，示例build.yml如下：
+使用Npm软件包管理系统管理软件包，示例jdcloud-build.yml如下：
 
 ```
 cmds:

@@ -1,4 +1,4 @@
-使用Apache Maven构建Java项目，示例build.yml如下：
+使用Apache Maven构建Java项目，示例jdcloud-build.yml如下：
 
 
 ```

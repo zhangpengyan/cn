@@ -45,7 +45,7 @@
                     href: Operation-Guide/Go.md
                   - name: 使用Npm软件包管理系统管理软件包
                     href: Operation-Guide/Npm.md
-          - name: 构建存放
+          - name: 构建类型
             href: Operation-Guide/Build-Storage.md
           - name: 高级设置
             href: Operation-Guide/Advanced-Setting.md

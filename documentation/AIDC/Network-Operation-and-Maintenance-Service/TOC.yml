@@ -11,16 +11,18 @@
         href: Introduction/Features.md
       - name: 产品优势
         href: Introduction/Benefits.md
-      - name: 限制说明
-        href: Introduction/Restrictions.md
       - name: 应用场景
         href: Introduction/Application-Scenarios.md
   - name: 产品定价
     items:
-      - name: 计费概述
-        href: Pricing/Billing-Overview.md    
-  - name: 常见问题
+      - name: 产品定价
+        href: Pricing/Product-Pricing.md
+  - name: 入门指南
     items:
-    - name: FAQ
-      href: FAQ/FAQ.md
+      - name: 服务开通
+        href: Getting-Started/Service-Provisioning.md
+  - name: 产品定价
+    items:
+      - name: 产品定价
+        href: Pricing/Product-Pricing.md
     

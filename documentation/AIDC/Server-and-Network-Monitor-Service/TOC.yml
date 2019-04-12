@@ -1,6 +1,6 @@
-﻿  name: 服务器与网络监控服务
-  href: 
-  items:
+name: 服务器与网络监控服务
+href: 
+items:
   - name: 产品简介
     items:
       - name: 产品概述
@@ -53,7 +53,7 @@
             href: Operation-Guide/Network-Monitoring-POP-Traffic-Monitoring.md     
           - name: 设备端口CRC监控管理
             href: Operation-Guide/Network-Monitoring-Port-CRC-Monitoring.md              
-           - name: 公网质量监控管理
+          - name: 公网质量监控管理
             href: Operation-Guide/Network-Monitoring-WAN-Quality-Monitoring.md                           
   - name: 最佳实践
     items:
@@ -65,9 +65,6 @@
         href: Best-Practices/Monitor-Hardware-Fault.md
       - name: 网络端口流量监控
         href: Best-Practices/Monitor-Network-Traffic.md
-               
-  - name: 常见问题
-
   - name: 问题排查
     items:
     - name: Agent部署常见问题
@@ -76,15 +73,3 @@
     items:
     - name: 文档历史记录
       href: Related-Resources/Document-History.md
-    - name: 服务条款
-      href: Related-Resources/Service-Terms.md
-      status: 0
-    - name: SLA
-      href: Related-Resources/SLA.md
-      status: 0
-    - name: 备案
-      href: Related-Resources/Filing.md
-      status: 0
-    - name: 词汇表
-      href: Related-Resources/Glossary.md
-      status: 0

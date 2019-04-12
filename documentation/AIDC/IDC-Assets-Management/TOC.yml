@@ -1,0 +1,40 @@
+name: IDC 资产管理服务
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md     
+      - name: 应用场景
+        href: Introduction/Application-Scenarios.md
+        
+  - name: 入门指南
+    items:
+      - name: 申请流程
+        href: Getting-Started/application_process.md
+  
+  - name: 操作指南
+    items:
+      - name: 操作指南
+        href: Operation-Guide/Operation-Guide.md  
+            
+  - name: 最佳实践
+    items:
+    - name: 某电商行业客户大促营销活动
+      href: Best-Practices/Assets_management_for_e-commerce_sales_peak/Assets_management_for_e-commerce_sales_peak.md
+    - name: 新建系统资产管理与技术咨询
+      href: Best-Practices/Assets_management_consulting/Assets_management_consulting.md
+
+  - name: 常见问题
+    items:
+    - name: FAQ
+      href: FAQ/FAQ.md
+        
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md

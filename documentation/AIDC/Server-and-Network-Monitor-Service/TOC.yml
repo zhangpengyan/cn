@@ -1,0 +1,90 @@
+﻿  name: 服务器与网络监控服务
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 应用场景
+        href: Introduction/Application-Scenarios.md
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Procedure.md
+      - name: 续费流程
+        href: Pricing/Renewal-Procedure.md
+        
+  - name: 入门指南
+    items:
+      - name: 网络监控入门指南
+        href: Getting-Started/Network-Mornitoring-Getting-Started.md
+      - name: 服务器监控入门指南
+        href: Getting-Started/Server-Mornitoring-Getting-Started.md
+  
+  - name: 操作指南
+    items:
+      - name: 服务器监控操作指南
+        items:
+          - name: Agent管理
+            href: Operation-Guide/Server-Monitoring-Agent-Management.md
+          - name: Plugin管理
+            href: Operation-Guide/Server-Monitoring-Plugin-Management.md
+          - name: 硬件监控
+            href: Operation-Guide/Server-Monitoring-Hardware-Monitor-Management.md
+      - name: 网络监控监控操作指南          
+        items:
+          - name: 设备探活监控管理
+            href: Operation-Guide/Network-Monitoring-Device-Healthy-Monitoring.md
+          - name: 日志监控管理
+            href: Operation-Guide/Network-Monitoring-Diary-Monitoring.md
+          - name: 专线质量监控管理
+            href: Operation-Guide/Network-Monitoring-Line-Quality-Monitoring.md  
+          - name: 专线流量监控管理
+            href: Operation-Guide/Network-Monitoring-Line-Traffic-Monitoring.md     
+          - name: 互联网出口流量监控管理
+            href: Operation-Guide/Network-Monitoring-POP-Traffic-Monitoring.md     
+          - name: 设备端口CRC监控管理
+            href: Operation-Guide/Network-Monitoring-Port-CRC-Monitoring.md              
+           - name: 公网质量监控管理
+            href: Operation-Guide/Network-Monitoring-WAN-Quality-Monitoring.md                           
+  - name: 最佳实践
+    items:
+    - name: 数据迁移
+      items:
+      - name: 硬件配置信息的自动化收集
+        href: Best-Practices/Auto-Collect-Hardware-Configuration.md
+      - name: 多厂商硬件故障监控
+        href: Best-Practices/Monitor-Hardware-Fault.md
+      - name: 网络端口流量监控
+        href: Best-Practices/Monitor-Network-Traffic.md
+               
+  - name: 常见问题
+
+  - name: 问题排查
+    items:
+    - name: Agent部署常见问题
+      href: Troubleshooting/Agent-Problem.md
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md
+    - name: 服务条款
+      href: Related-Resources/Service-Terms.md
+      status: 0
+    - name: SLA
+      href: Related-Resources/SLA.md
+      status: 0
+    - name: 备案
+      href: Related-Resources/Filing.md
+      status: 0
+    - name: 词汇表
+      href: Related-Resources/Glossary.md
+      status: 0

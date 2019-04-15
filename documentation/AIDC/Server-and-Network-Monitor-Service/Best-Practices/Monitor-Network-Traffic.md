@@ -5,10 +5,10 @@
 
 ## 操作步骤
 1. 单个端口的流量监控配置
-![配置界面1](../../../../image/AIDC/ARGUS-Monitoring/Monitor-Network-Traffic-1.png)
+![配置界面1](../../../../image/AIDC/Server-and-Network-Monitor-Service/Monitor-Network-Traffic-1.png)
 2. 端口组的流量监控配置
-![配置界面2](../../../../image/AIDC/ARGUS-Monitoring/Monitor-Network-Traffic-2.png)
+![配置界面2](../../../../image/AIDC/Server-and-Network-Monitor-Service/Monitor-Network-Traffic-2.png)
 3.	单个端口的流量监控视图
-![界面](../../../../image/AIDC/ARGUS-Monitoring/Monitor-Network-Traffic-3.png)
+![界面](../../../../image/AIDC/Server-and-Network-Monitor-Service/Monitor-Network-Traffic-3.png)
 4.端口组的流量监控视图
-![界面](../../../../image/AIDC/ARGUS-Monitoring/Monitor-Network-Traffic-4.png)
+![界面](../../../../image/AIDC/Server-and-Network-Monitor-Service/Monitor-Network-Traffic-4.png)

@@ -21,8 +21,9 @@
     items:
       - name: 服务开通
         href: Getting-Started/Service-Provisioning.md
-  - name: 产品定价
+  - name: 最佳实践
     items:
-      - name: 产品定价
-        href: Pricing/Product-Pricing.md
-    
+      - name: 基础网络服务解决方案
+        href: Best-Practices/Network-Base-Services-Solutions.md
+      - name: 远程管理服务解决方案
+        href: Best-Practices/Remote-Admin-Service-Solutions.md

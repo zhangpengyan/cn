@@ -43,6 +43,8 @@
         href: Getting-Started/Create-AvailabilityGroup.md
       - name: 创建监听器及后端服务
         href: Getting-Started/Create-ListenerPolicy.md
+      - name: 删除网络负载均衡实例
+        href: Getting-Started/ Delete-Instance.md
   - name: 操作指南
     items:
       - name: 配置导览

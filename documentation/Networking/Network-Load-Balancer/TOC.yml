@@ -53,7 +53,7 @@
         href: Operation-Guide/Create-NLB-Instance.md
       - name: 网络负载均衡管理
         href: Operation-Guide/NLB-Instance-Management.md
-      - name: 侦听器管理
+      - name: 监听器管理
         href: Operation-Guide/Listener-Management.md
       - name: 后端服务管理
         href: Operation-Guide/Backend-Management.md

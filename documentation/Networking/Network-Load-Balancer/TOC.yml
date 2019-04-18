@@ -67,8 +67,6 @@
       href: Best-Practices/Deploy-TCP-Service-with-Original-Client-IP-Passthrough.md
     - name: 利用网络负载均衡部署多端口业务、服务器复用服务
       href: Best-Practices/Deploy-Multiple-Listener-single-backend-NLB.md
-    - name: 利用网络负载均衡部署高可用业务
-      href: Best-Practices/Deploy-High-Availability-Service-with-NLB.md
     - name: 利用网络负载均衡部署会话保持业务
       href: Best-Practices/Session-Sticky-with-NLB.md
     - name: 利用网络负载均衡保证服务实例优雅退出

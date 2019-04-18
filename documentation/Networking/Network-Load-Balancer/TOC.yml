@@ -63,8 +63,6 @@
         href: Operation-Guide/Monitoring.md             
   - name: 最佳实践
     items:
-    - name: 利用网络负载均衡部署源IP透传TCP服务
-      href: Best-Practices/Deploy-TCP-Service-with-Original-Client-IP-Passthrough.md
     - name: 利用网络负载均衡部署多端口业务、服务器复用服务
       href: Best-Practices/Deploy-Multiple-Listener-single-backend-NLB.md
     - name: 利用网络负载均衡部署会话保持业务

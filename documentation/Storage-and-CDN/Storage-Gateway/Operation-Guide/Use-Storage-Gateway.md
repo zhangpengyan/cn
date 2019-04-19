@@ -28,7 +28,7 @@ mount -t nfs <IP>:/gw <local-directory>
 
 执行挂载命令后，使用`df -h`查看是否挂载成功。
 
-![mount](../../../../image/Storage-Gateway/storagegateway-6.png)
+![mount](../../../../image/Storage-Gateway/storagegateway11-6.png)
 
 **3.访问NFS文件系统**
 

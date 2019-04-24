@@ -1,66 +1,65 @@
-﻿{
-	"omId": "TempHumiditySensorModel-2",
-	"instanceId": "r27l9uo50ylmfkko",
-	"payload": "{
-    \"profile\": {
-        \"modelName\": \"TempHumiditySensorModel-2\"
+{
+    "profile": {
+        "modelName": "TempHumiditySensorModel-2"
     },
-    \"telemetry\": {
-        \"properties\": [{
-                \"name\": \"temperature\",
-                \"dataType\": {
-                    \"type\": \"float\",
-                    \"specs\": {
-                        \"unit\": \"°C\",
-                        \"min\": \"-40.0\",
-                        \"unitName\": \"摄氏度\",
-                        \"max\": \"100.0\",
-                        \"step\": \"0.1\"
+    "telemetry": {
+        "properties": [
+            {
+                "name": "temperature",
+                "dataType": {
+                    "type": "float",
+                    "specs": {
+                        "unit": "°C",
+                        "min": "-40.0",
+                        "unitName": "摄氏度",
+                        "max": "100.0",
+                        "step": "0.1"
                     }
                 }
             },
             {
-                \"name\": \"humidity\",
-                \"dataType\": {
-                    \"type\": \"float\",
-                    \"specs\": {
-                        \"unit\": \"%\",
-                        \"min\": \"20\",
-                        \"unitName\": \"百分比\",
-                        \"max\": \"40\",
-                        \"step\": \"0.1\"
+                "name": "humidity",
+                "dataType": {
+                    "type": "float",
+                    "specs": {
+                        "unit": "%",
+                        "min": "20.0",
+                        "unitName": "百分比",
+                        "max": "40.0",
+                        "step": "0.1"
                     }
-                }
+                } 
             }
         ]
     },
-    \"state\": { 
-        \"properties\": [
+    "state": {
+        "properties": [
             {
-                \"name\": \"frequency\",
-                \"dataType\": {
-                    \"type\": \"float\",
-                    \"specs\": {
-                        \"unit\": \"条/秒\",
-                        \"unitName\": \"条每秒\",
-                        \"min\": \"10\",
-                        \"max\": \"60\",
-                        \"step\": \"10\"
+                "name": "frequency",
+                "dataType": {
+                    "type": "float",
+                    "specs": {
+                        "unit": "条/秒",
+                        "min": "10",
+                        "unitName": "条/每秒",
+                        "max": "60",
+                        "step": "10"
                     }
                 }
             }
         ]
     },
-    \"commands\": { 
-        \"properties\": [{
-            \"name\": \"HelloWorld\",
-            \"inputData\": [],
-            \"outputData\": [],
-            \"callType\": 0, 
-            \"method\": \"/HelloWorld\", 
-            \"methodType\": 1, 
-            \"desc\":\"HelloWorld\"
-        }]
+    "commands": {
+        "properties": [
+            {
+                "name": "HelloWorld",
+                "inputData": [],
+                "outputData": [],
+                "callType": "0",
+                "method": "/HelloWorld",
+                "methodType": "1",
+                "desc":"HelloWorld"
+            }
+        ]
     }
-}"
 }

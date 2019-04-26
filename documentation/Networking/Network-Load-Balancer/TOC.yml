@@ -71,8 +71,12 @@
       href: Best-Practices/Connection-Draining-with-NLB.md
     - name: 利用网络负载均衡部署基于虚机与容器的服务
       href: Best-Practices/Distribute-service-to-vm-and-container-with-NLB.md
+    - name: 部署IP地址作为网络负载均衡的后端服务器
+      href: Distribute-service-to-ip-with-NLB.md
     - name: 利用网络负载均衡部署服务端可弹性伸缩的业务
       href: Best-Practices/AG-as-backend-server.md
+    - name: 配置后端服务器权重，满足更多业务场景需求
+      href: Deploy-weight-zero-with-target.md
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: API参考

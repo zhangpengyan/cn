@@ -4,7 +4,7 @@ items:
 - name: 产品简介
   items:
     - name: 产品概述
-      href: Introduction/Overview.md
+      href: Introduction/product-overview.md
     - name: 名词解释
       href: Introduction/Glossary.md
     - name: 审核标准
@@ -12,7 +12,7 @@ items:
 - name: 产品定价
   items:
     - name: 价格总览
-      href: Pricing/Price-Overview.md
+      href: Pricing/Billing-Overview.md
 - name: 入门指南
   items:
     - name: 应用管理

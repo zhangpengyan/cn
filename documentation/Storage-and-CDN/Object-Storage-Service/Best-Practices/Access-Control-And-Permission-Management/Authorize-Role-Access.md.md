@@ -15,7 +15,7 @@
 
 **1.创建角色**
 
-A账号创建角色test-role，指定A账号可以代入该角色；创建完成后为test-role附加Policy，该Policy允许访问test-app存储桶；详见[角色说明]()。
+A账号创建角色test-role，指定A账号可以代入该角色；创建完成后为test-role附加IAM Policy，该Policy允许访问test-app存储桶；详见[角色说明]()。
 
 Policy示例如下，允许该角色上传Object至test-app存储桶中。
 ```
@@ -36,7 +36,7 @@ Policy示例如下，允许该角色上传Object至test-app存储桶中。
 ```
 **2.创建子用户**
 
-A账号创建IAM子用户test-iam，并对该用户附加Policy，该Policy允许代入角色test-role；详见[子用户说明](https://docs.jdcloud.com/cn/iam/sub-user);
+A账号创建IAM子用户test-iam，并对该用户附加IAM Policy，该Policy允许代入角色test-role；详见[子用户说明](https://docs.jdcloud.com/cn/iam/sub-user);
 
 Policy示例如下，允许该用户扮演test-role角色。
 ```

@@ -42,7 +42,7 @@ Bucket Policy 大小限制为16k。
 
 ### principal
 
-委托人 principal 元素用于指定被允许或拒绝访问资源的用户、账户或其他实体。元素 principal 仅在存储空间中起作用；用户策略中不必指定，因为用户策略直接附加到特定用户。下面是 Bucket Policy 中指定 principal 的示例。
+委托人 principal 元素用于指定被允许或拒绝访问资源的用户、账户、角色或其他实体。元素 principal 仅在存储空间中起作用；用户策略中不必指定，因为用户策略直接附加到特定用户。下面是 Bucket Policy 中指定 principal 的示例。
    
 **说明**
 

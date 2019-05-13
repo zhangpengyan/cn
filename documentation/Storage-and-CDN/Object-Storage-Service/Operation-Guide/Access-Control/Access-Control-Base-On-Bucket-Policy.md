@@ -85,7 +85,7 @@ Bucket Policy 大小限制为16k。
 
 3.要授予京东云IAM 角色权限
 
-指定IAM角色："AWS":"arn:aws:iam::accountID:role/roleName"，roleName为您想要授权的角色名称。
+指定IAM角色："AWS":"arn:aws:iam::accountID:role/roleName"，roleName为授权的角色名称。
 ```
     //单个IAM 角色
     "Principal": { "AWS": "arn:aws:iam::123456789012:role/role-test" }  
@@ -93,8 +93,7 @@ Bucket Policy 大小限制为16k。
     "Principal": {
     "AWS": [
         "arn:aws:iam::123456789012:role/role-test1",
-        "arn:aws:iam::123456789012:role/role-test2"
-    ]
+        "arn:aws:iam::123456789012:role/role-test2"]
     }
 ```
  

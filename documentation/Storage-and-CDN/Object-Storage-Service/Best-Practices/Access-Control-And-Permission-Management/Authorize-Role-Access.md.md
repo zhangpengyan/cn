@@ -95,7 +95,7 @@ public class TokenExample {
         CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKey, secretKey);
         StsClient stsClient = StsClient.builder()
                 .credentialsProvider(credentialsProvider)
-                .httpRequestConfig(new HttpRequestConfig.Builder().protocol(Protocol.HTTP).build())
+                .httpRequestConfig(new HttpRequestConfig.Builder().protocol(Protocol.HTTPS).build())
                 .build();
         //调用AssumeRole API代入角色
         AssumeRoleInfo assumeRoleInfo = new AssumeRoleInfo()

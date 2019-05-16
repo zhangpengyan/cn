@@ -62,8 +62,7 @@ Bucket Policy 大小限制为16k。
     "Principal": {
     "AWS": [
     "arn:aws:iam::123456789012:root",
-    "arn:aws:iam::123456789010"
-    ]
+    "arn:aws:iam::123456789010"]
     }  
 ```
     
@@ -78,8 +77,7 @@ Bucket Policy 大小限制为16k。
     "Principal": {
     "AWS": [
         "arn:aws:iam::123456789012:user/user-name-1",
-        "arn:aws:iam::111111111111:user/UserName2"
-    ]
+        "arn:aws:iam::111111111111:user/UserName2"]
     }
 ``` 
 

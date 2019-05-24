@@ -33,11 +33,9 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/deviceTypes
 ### DeviceType
 |名称|类型|描述|
 |---|---|---|
-|**nameEN**|String|实例类型英文名称, 如 cps.c.normal|
-|**nameZH**|String|实例类型中文名称, 如 计算型|
+|**deviceType**|String|实例类型, 如 cps.c.normal|
+|**name**|String|实例类型名称, 如 标准计算型|
 |**family**|String|实例所属规格系列，如 计算、存储、GPU|
-|**useTypeEN**|String|镜像类型英文描述, 如 standard|
-|**useTypeZH**|String|镜像类型中文描述, 如 标准型|
 |**region**|String|区域代码, 如 cn-east-1|
 |**cpuConcise**|String|CPU概要描述|
 |**cpuDetail**|String|CPU详细信息|
@@ -45,12 +43,14 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/deviceTypes
 |**memDetail**|String|内存详细信息|
 |**ifConcise**|String|网口概要信息|
 |**ifDetail**|String|网口详细信息|
-|**systemDiskConcise**|String|系统磁盘概要信息|
-|**systemDiskDetail**|String|系统磁盘详细信息|
-|**dataDiskConcise**|String|数据磁盘概要信息|
-|**dataDiskDetail**|String|数据磁盘详细信息|
 |**gpuConcise**|String|GPU概要信息|
 |**gpuDetail**|String|GPU详细信息|
+|**systemDiskAmount**|Integer|系统盘数量|
+|**systemDiskSize**|Integer|系统盘单盘大小（GB）|
+|**systemDiskModel**|String|系统盘规格|
+|**dataDiskAmount**|Integer|数据盘数量|
+|**dataDiskSize**|Integer|数据盘单盘大小（GB）|
+|**dataDiskModel**|String|数据盘规格|
 |**isSoldOut**|Boolean|售罄状态|
 
 ## 返回码

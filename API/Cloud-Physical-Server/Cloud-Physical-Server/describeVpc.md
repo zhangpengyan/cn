@@ -1,19 +1,19 @@
-# describeInstanceStatus
+# describeVpc
 
 
 ## 描述
-查询单个云物理服务器硬件监控信息
+查询私有网络详情
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:describeInstanceStatus
+https://cps.jdcloud-api.com/v1/regions/{regionId}/vpcs/{vpcId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
-|**instanceId**|String|True| |云物理服务器ID|
+|**vpcId**|String|True| |私有网络ID|
 
 ## 请求参数
 无
@@ -28,10 +28,16 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:describ
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**cpus**|Boolean|CPU状态是否正常|
-|**mems**|Boolean|内存状态是否正常|
-|**disks**|Boolean|硬盘状态是否正常|
-|**nics**|Boolean|网卡状态是否正常|
+|**vpc**|Vpc|私有网络详细信息|
+### Vpc
+|名称|类型|描述|
+|---|---|---|
+|**region**|String|地域代码, 如cn-north-1|
+|**vpcId**|String|私有网络ID|
+|**name**|String|私有网络名称|
+|**cidr**|String|私有网络CIDR|
+|**description**|String|描述|
+|**createTime**|String|创建时间|
 
 ## 返回码
 |返回码|描述|

@@ -1,19 +1,19 @@
-# describeInstance
+# describeElasticIp
 
 
 ## 描述
-查询单台云物理服务器详细信息
+查询弹性公网IP详情
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
+https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps/{elasticIpId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
-|**instanceId**|String|True| |云物理服务器ID|
+|**elasticIpId**|String|True| |弹性公网IPID|
 
 ## 请求参数
 无
@@ -28,39 +28,19 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**instance**|Instance| |
-### Instance
+|**elasticIp**|ElasticIp|弹性公网IP详细信息|
+### ElasticIp
 |名称|类型|描述|
 |---|---|---|
-|**instanceId**|String|云物理服务器实例ID|
-|**region**|String|区域代码, 如 cn-east-1|
-|**az**|String|可用区, 如 cn-east-1a|
-|**deviceType**|String|实例类型, 如 cps.c.normal|
-|**name**|String|云物理服务器名称|
-|**description**|String|云物理服务器描述|
-|**status**|String|云物理服务器生命周期状态|
-|**enableInternet**|String|是否启用外网, 如 yes/no|
-|**enableIpv6**|String|是否启用IPv6, 如 yes/no|
-|**bandwidth**|Integer|带宽, 单位Mbps|
-|**imageType**|String|镜像类型, 如 standard|
-|**osTypeId**|String|操作系统类型ID|
-|**osName**|String|操作系统名称|
-|**osType**|String|操作系统类型, 如 ubuntu/centos|
-|**osVersion**|String|操作系统版本, 如 16.04|
-|**sysRaidTypeId**|String|系统盘RAID类型ID|
-|**sysRaidType**|String|系统盘RAID类型, 如 NORAID, RAID0, RAID1|
-|**dataRaidTypeId**|String|数据盘RAID类型ID|
-|**dataRaidType**|String|数据盘RAID类型, 如 NORAID, RAID0, RAID1|
-|**networkType**|String|网络类型, 如 basic, vpc|
-|**vpcId**|String|私有网络ID|
-|**vpcName**|String|私有网络名称|
-|**subnetId**|String|子网编号|
-|**subnetName**|String|子网名称|
-|**privateIp**|String|内网IP|
-|**lineType**|String|外网链路类型, 如 bgp|
+|**region**|String|地域代码, 如cn-north-1|
 |**elasticIpId**|String|弹性公网IPID|
-|**publicIp**|String|公网IP|
-|**publicIpv6**|String|公网IPv6|
+|**elasticIp**|String|弹性公网IP|
+|**bandwidth**|Integer|带宽, 单位Mbps|
+|**lineType**|String|链路类型|
+|**status**|String|状态|
+|**instanceType**|String|实例类型|
+|**instanceId**|String|实例ID|
+|**createTime**|String|创建时间|
 |**charge**|Charge|计费信息|
 ### Charge
 |名称|类型|描述|

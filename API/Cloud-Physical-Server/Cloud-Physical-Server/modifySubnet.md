@@ -1,11 +1,11 @@
-# describeSubnet
+# modifySubnet
 
 
 ## 描述
-查询子网详情
+修改子网
 
 ## 请求方式
-GET
+POST
 
 ## 请求地址
 https://cps.jdcloud-api.com/v1/regions/{regionId}/subnets/{subnetId}
@@ -16,7 +16,10 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/subnets/{subnetId}
 |**subnetId**|String|True| |子网ID|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**name**|String|False| |名称|
+|**description**|String|False| |描述|
 
 
 ## 返回参数

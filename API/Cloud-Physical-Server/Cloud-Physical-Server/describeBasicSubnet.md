@@ -1,22 +1,23 @@
-# describeSubnet
+# describeBasicSubnet
 
 
 ## 描述
-查询子网详情
+查询基础网络子网
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/subnets/{subnetId}
+https://cps.jdcloud-api.com/v1/regions/{regionId}/subnet
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
-|**subnetId**|String|True| |子网ID|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**az**|String|True| |可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区|
 
 
 ## 返回参数

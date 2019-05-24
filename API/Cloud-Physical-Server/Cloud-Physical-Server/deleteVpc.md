@@ -1,19 +1,20 @@
-# restartInstance
+# deleteVpc
 
 
 ## 描述
-重启单台云物理服务器，只能重启running状态的服务器
+删除私有网络
+
 
 ## 请求方式
-PUT
+DELETE
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:restartInstance
+https://cps.jdcloud-api.com/v1/regions/{regionId}/vpcs/{vpcId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
-|**instanceId**|String|True| |云物理服务器ID|
+|**vpcId**|String|True| |私有网络ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
@@ -30,7 +31,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:restart
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**success**|Boolean|重启操作是否成功|
+|**success**|Boolean|删除操作是否成功|
 
 ## 返回码
 |返回码|描述|

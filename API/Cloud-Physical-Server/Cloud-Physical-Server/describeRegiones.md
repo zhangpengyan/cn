@@ -12,7 +12,9 @@ https://cps.jdcloud-api.com/v1/regions
 
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**networkType**|String|False| |网络类型basic/vpc, 默认basic|
 
 
 ## 返回参数

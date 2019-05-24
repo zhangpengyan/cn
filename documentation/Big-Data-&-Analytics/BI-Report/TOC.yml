@@ -11,6 +11,8 @@ items:
       href: Introduction/Features.md
     - name: 应用场景 
       href: Introduction/Application-Scenarios.md    
+    - name: 测试新增
+      href: Introduction/new.md 
 - name: 产品定价
   items:
     - name: 计费概述

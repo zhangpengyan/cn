@@ -18,7 +18,7 @@
       <tr>
          <td>2</td>
          <td>10万条</td>
-         <td><del>39000元</del>&emsp&ensp活动价31000元</td>
+         <td><del>39000元</del>&nbsp活动价31000元</td>
          <td><del>0.39元/条</del>&emsp活动价0.31元</td>
       </tr>
       <tr>

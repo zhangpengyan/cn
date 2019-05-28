@@ -62,9 +62,11 @@ items:
   status: 0       
 - name: 常见问题
   href: FAQ/FAQ.md
-- name: 文档历史记录
-  href: Related-Resources/document-history.md     
-- name: 服务条款         
+- name: 相关资源
+  items:
+    - name: 文档发布历史
+      href: Related-Resources/document-history.md 
+    - name: 服务条款         
   status: 0      
 - name: SLA         
   status: 0       

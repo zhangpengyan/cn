@@ -13,7 +13,7 @@ Region表示OSS的数据中心所在的地域，Endpoint表示OSS对外服务的
 |华北-北京|cn-north-1|s3.cn-north-1.jdcloud-oss.com|是|s3-internal.cn-north-1.jdcloud-oss.com|是|
 |华南-广州|cn-south-1|s3.cn-south-1.jdcloud-oss.com|是|s3-internal.cn-south-1.jdcloud-oss.com|是|
 |华东-上海|cn-east-2|s3.cn-east-2.jdcloud-oss.com|是|s3-internal.cn-east-2.jdcloud-oss.com|是|
-|华东-宿迁 2|cn-east-1|s3.cn-east-1.jdcloud-oss.com|是|s3-internal.cn-east-1.jdcloud-oss.com|是|
+|华东-宿迁 |cn-east-1|s3.cn-east-1.jdcloud-oss.com|是|s3-internal.cn-east-1.jdcloud-oss.com|是|
 
 **说明：** 
 

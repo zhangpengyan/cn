@@ -1,8 +1,21 @@
 ## Jenkins插件
 
+**版本要求**
+
+不低于2.7.3
+
+
 **安装插件**
 
-在Jenkins中，支持通过上传插件的方式，来安装云部署插件。
+在Jenkins中，支持通过直接安装和上传插件两种方式，来安装云部署插件。
+
+1、直接安装
+
+在Jenkins中，由“系统管理”-->"管理插件"，可进入到管理插件页面。
+
+搜索“JDCloud CodeDeploy”即可按照插件。
+
+2、上传插件
 
 用户可先将插件下载到本地，下载地址为：https://jdcloud-codedeploy.oss.cn-north-1.jcloudcs.com/jdcloud-codedeploy.hpi
 

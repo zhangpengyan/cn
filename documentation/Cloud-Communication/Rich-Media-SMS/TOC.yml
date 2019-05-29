@@ -1,0 +1,35 @@
+name: 富媒体短信
+href:
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/product-overview.md
+    - name: 富媒体短信介绍
+      href: Introduction/Introduction.md
+    - name: 审核标准
+      href: Introduction/standard.md
+- name: 产品定价
+  items:
+    - name: 价格总览
+      href: Pricing/Billing-Overview.md
+- name: 入门指南
+  items:
+    - name: 应用管理
+      href: Getting-Started/Application.md
+- name: 操作指南
+  items:
+    - name: 业务规则
+      href: Operation-Guide/rule.md
+    - name: 创建富媒体短信
+      href: Operation-Guide/content.md
+    - name: 发送短信
+      href: Operation-Guide/send.md
+    - name: 统计分析
+      href: Operation-Guide/stat.md
+- name: 相关协议
+  items:
+    - name: 服务协议
+      href: Service-Agreements-and-Guarantees/Rich-Media-SMS-Term.md
+    - name: SLA服务协议
+      href: Service-Agreements-and-Guarantees/Rich-Media-SMS-SLA.md

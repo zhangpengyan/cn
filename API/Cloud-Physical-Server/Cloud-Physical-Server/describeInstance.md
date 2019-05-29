@@ -42,7 +42,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 |**enableInternet**|String|是否启用外网, 如 yes/no|
 |**enableIpv6**|String|是否启用IPv6, 如 yes/no|
 |**bandwidth**|Integer|带宽, 单位Mbps|
-|**imageType**|String|镜像类型, 如 standard/standard_app|
+|**imageType**|String|镜像类型, 如 standard|
 |**osTypeId**|String|操作系统类型ID|
 |**osName**|String|操作系统名称|
 |**osType**|String|操作系统类型, 如 ubuntu/centos|
@@ -51,10 +51,14 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 |**sysRaidType**|String|系统盘RAID类型, 如 NORAID, RAID0, RAID1|
 |**dataRaidTypeId**|String|数据盘RAID类型ID|
 |**dataRaidType**|String|数据盘RAID类型, 如 NORAID, RAID0, RAID1|
-|**networkType**|String|网络类型, 如 basic|
-|**lineType**|String|外网链路类型, 如 bgp|
+|**networkType**|String|网络类型, 如 basic, vpc|
+|**vpcId**|String|私有网络ID|
+|**vpcName**|String|私有网络名称|
 |**subnetId**|String|子网编号|
+|**subnetName**|String|子网名称|
 |**privateIp**|String|内网IP|
+|**lineType**|String|外网链路类型, 如 bgp|
+|**elasticIpId**|String|弹性公网IPID|
 |**publicIp**|String|公网IP|
 |**publicIpv6**|String|公网IPv6|
 |**charge**|Charge|计费信息|

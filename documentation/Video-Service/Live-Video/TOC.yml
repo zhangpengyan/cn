@@ -41,6 +41,8 @@ items:
       href: Getting-Started/Start-Playing.md
 - name: 操作指南
   items:
+    - name: 概览
+      href: Operation-Guide/Live-overview.md  
     - name: 域名管理
       href: Operation-Guide/Domain-Management.md
     - name: 直播推流
@@ -49,6 +51,8 @@ items:
       href: Operation-Guide/Live-Broadcast.md    
     - name: 直播转码
       href: Operation-Guide/Live-Transcoding.md
+    - name: 直播水印
+      href: Operation-Guide/Live-watermark.md 
     - name: 直播录制
       href: Operation-Guide/Live-Recording.md  
     - name: 直播截图

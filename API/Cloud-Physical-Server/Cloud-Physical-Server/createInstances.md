@@ -8,12 +8,12 @@
 - 实例类型<br/>
   - 调用接口（describeDeviceTypes）获取物理实例类型列表<br/>
   - 不能使用已下线、或已售馨的实例类型<br/>
-- 操作系统和预装软件<br/>
+- 操作系统<br/>
   - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表<br/>
 - 存储<br/>
   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表<br/>
 - 网络<br/>
-  - 网络类型目前只支持basic<br/>
+  - 网络类型目前支持basic、vpc<br/>
   - 线路目前只支持bgp<br/>
   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps<br/>
 - 其他<br/>
@@ -43,15 +43,16 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**az**|String|True| |可用区, 如 cn-east-1|
 |**deviceType**|String|True| |实例类型, 如 cps.c.normal|
 |**hostname**|String|False| |主机名|
-|**imageType**|String|True| |镜像类型, 取值范围：standard、standard_app|
+|**imageType**|String|True| |镜像类型, 取值范围：standard|
 |**osTypeId**|String|True| |操作系统类型ID|
 |**sysRaidTypeId**|String|True| |系统盘RAID类型ID|
 |**dataRaidTypeId**|String|True| |数据盘RAID类型ID|
 |**subnetId**|String|False| |子网编号|
 |**enableInternet**|String|False|yes|是否启用外网，取值范围：yes、no|
-|**enableIpv6**|String|False|yes|是否启用IPv6，取值范围：yes、no|
-|**networkType**|String|True| |网络类型，目前只支持basic|
+|**enableIpv6**|String|False|no|是否启用IPv6，取值范围：yes、no|
+|**networkType**|String|True| |网络类型，取值范围：basic、vpc|
 |**cidr**|String|False| |网络CIDR|
+|**privateIp**|String|False| |内网IP|
 |**lineType**|String|False| |外网链路类型, 目前只支持bgp|
 |**bandwidth**|Integer|False| |外网带宽, 范围[1,200] 单位Mbps|
 |**name**|String|True| |云物理服务器名称|
@@ -59,14 +60,6 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**password**|String|True| |密码|
 |**count**|Integer|True| |购买数量|
 |**charge**|ChargeSpec|True| |计费配置|
-|**softwares**|Software[]|False| | |
-### Software
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**name**|String|False| |软件包名称|
-|**version**|String|False| |软件包版本|
-|**osTypeId**|String|False| |操作系统系统类型ID|
-|**description**|String|False| |软件包描述|
 ### ChargeSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

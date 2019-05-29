@@ -50,11 +50,23 @@ JRN示例：
 | :---------: | :---------------------------------------------------------- |
 | 负载均衡   | jrn:lb:regionId:accountId:loadBalancers/{loadBalancerId}<br>jrn:lb:regionId:accountId:loadBalancers/{loadBalancerId}/backends/{backendId}<br>jrn:lb:regionId:accountId:loadBalancers/{loadBalancerId}/listeners/{listenerId}<br>jrn:lb:regionId:accountId:loadBalancers/{loadBalancerId}/targetGroups/{targetGroupId}<br>jrn:lb:regionId:accountId:loadBalancers/{loadBalancerId}/urlMaps/{urlMapId} |
 
-### 存储与CDN
+
+### 数据库与缓存
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 云缓存Memcached | jrn:memcached:regionId:accountId:instances/{instanceId} |
+
+### 存储
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
 | 对象存储     | jrn:oss:regionId:accountId:{BucketName} <br> jrn:oss:regionId:accountId:{BucketName}/{ObjectName}|
+
+### 边缘与加速
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
 | CDN| jrn:cdn::accountId:domain/{domain}<br>jrn:cdn::accountId:liveDomain/{domain}<br>jrn:cdn::accountId:domainGroup/{id}|
 
 ### 云安全
@@ -76,5 +88,6 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
-| 消息队列JCQ | jrn:jcq:regionId:accountId:/topics/{topicName}<br>jrn:jcq:regionId:accountId:/topics/{topicName}/subscriptions/{consumerGroupId}|
-
+| 消息队列JCQ      | jrn:jcq:regionId:accountId:/topics/{topicName<br>jrn:jcq:regionId:accountId:/topics/{topicName}/subscriptions/{consumerGroupId} |
+| 云搜索Elasticsearch  |  ``jrn:es:regionId:accountId:instances/{instanceId}`` |
+| 分布式服务框架 | jrn:jdsf:regionId:accountId:registries/{registryId}<br>jrn:jdsf:regionId:accountId:registries/{registryId}/services/{serviceName}<br>jrn:jdsf:regionId:accountId:registries/{registryId}/services/{serviceName}/instances/{instanceId}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}/services/{serviceName}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}/tracings/{traceId}<br>jrn:jdsf:regionId:accountId:appconfig/{appConfigId}<br>jrn:jdsf:regionId:accountId:appconfig/{appConfigId}/versions/{appConfigVersionId}/publishes/{appConfigPublishVersionId}<br>jrn:jdsf:regionId:accountId:deployapps/{appId} |

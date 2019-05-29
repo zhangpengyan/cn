@@ -2,40 +2,6 @@
 
 <br>
 
-##  使用脚本完成数据盘的分区、格式化及挂载
-<br>
-
-在Linux系统下您可以使用京东云提供的脚本检测是否有尚未分区的数据盘，自动完成数据盘的格式化并挂载，省去了您输入复杂的命令和步骤。
-
-<p><a title="挂载脚本.zip" href="https://docs-downloads.oss.cn-north-1.jcloudcs.com/auto_fdisk%25281%2529.sh" target="_self"><span style="color: rgb(0, 0, 0); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 14px;">挂载脚本.zip</span></a>
-</p>
-<br>
-您可以通过如下两种方式使用该脚本：
-
-1.不带任何参数：该脚本会自动将您所有未分区的设备进行分区、格式化、挂载（默认挂载点为jddata1、jddata2……jddatan）操作，并在/etc/fstab文件中通过UUID的方式实现云硬盘自动挂载
-
-</p>
-<pre class="brush:as3;toolbar:false;">
-sh auto_fdisk.sh</pre>
-<p>
-
-2.带设备名（如/dev/vdc等）、挂载点、文件系统参数：该脚本会根据您输入参数自动完成分区、格式化、挂载操作。
-
-</p>
-<pre class="brush:as3;toolbar:false;">
-sh auto_fdisk.sh /dev/vdb jddata1 ext4</pre>
-<p>
-
-**注意：**
-
-1.由于相关操作可能会导致数据丢失。 所以，执行操作之前，请务必确保已经通过快照等手段对数据进行有效备份，或明确相关数据丢失无影响；
-
-2.本脚本仅适用于未分区且未挂载的云硬盘，对于硬盘已经分区或挂载的硬盘，不会进行操作；
-
-3.本脚本默认为硬盘创建一个分区，且不可修改；
-
-4.本脚本会将磁盘的UUID和挂载信息写入/etc/fstab文件实现云硬盘自动挂载，如您需要卸载云硬盘，请将/etc/fstab对应的信息删除，否则可能造成云主机无法正常启动。
-
 
 ## 手动完成数据盘的分区、格式化及挂载
 
@@ -80,7 +46,7 @@ fdisk /dev/vdb
 ```
 mkfs -t ext4 /dev/vdb1
 ```
-
+警告：此命令会格式化并删除vdb1设备盘。如果该磁盘已有数据，请勿使用此命令。
 
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_006.png)
@@ -100,7 +66,11 @@ mkdir -p /mnt/vdb1 && mount -t ext4 /dev/vdb1 /mnt/vdb1
 ```
 blkid /dev/vdb1
 ```
-6.写入/etc/fstab文件实现云硬盘挂载
+6.使用查到的UUID和挂载目标位置替换下列代码并执行，即写入/etc/fstab文件实现云硬盘在云主机下次启动时自动挂载
+
+```
+echo "UUID="以第五步查到的UUID替换此处"             /mnt/vdb1                 ext4    defaults,nofail        0 0" >> /etc/fstab
+```
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_007.png)
 
 

@@ -20,7 +20,7 @@
 		</thead>
 	<tbody>
    	<tr>
-      	<td rowspan="6">中国大陆地域</td>
+      	<td rowspan="7">中国大陆地域</td>
       	<td rowspan="3">华北-北京<br>cn-north-1</td>
      	<td> 可用区A<br>cn-north-1a</td>
 	   	<td> 北京</td>

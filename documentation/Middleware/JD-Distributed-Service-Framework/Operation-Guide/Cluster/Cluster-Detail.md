@@ -1,7 +1,7 @@
 #  查看注册中心信息
 
 ## 操作步骤：
-###  第1步：选择要操作的注册中心
+###  第1步：进入微服务平台下的注册中心菜单，选择要操作的注册中心
 点击列表右侧“集群信息”操作。
  ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/zczx-list.png)
  

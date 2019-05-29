@@ -159,26 +159,57 @@ items:
         href: Live-Video/deleteLiveStreamDomainWatermark.md
       - name: 查询水印配置
         href: Live-Video/describeCustomLiveStreamWatermarkConfig.md
-  - name: 资源监控
+  - name: 数据统计
     items:
       - name: 查询直播录制时长数据
         status: 0
         href: Live-Video/describeLiveRecordData.md
-      - name: 查询直播截图张数数据
+      - name: 查询推流监控数据
+        href: Live-Video/describePublishStreamInfoData.md
+      - name: 查询直播流历史在线人数
+        href: Live-Video/describeLiveStreamHistoryUserNum.md
+      - name: 查询直播推流数
+        href: Live-Video/describeLivePublishStreamNum.md
+      - name: 查查询转码时长
+        href: Live-Video/describeLiveTranscodingDurationData.md
+      - name: 查询播放带宽
+        href: Live-Video/describeLiveStreamBandwidthData.md
+      - name: 查询播放流量
+        href: Live-Video/describeLiveStreamTrafficData.md
+      - name: 查询直播截图张数
         href: Live-Video/describeLiveSnapshotData.md
-      - name: 查询直播鉴黄张数数据
+      - name: 查询直播鉴黄张数
+        status: 0
         href: Live-Video/describeLivePornData.md
   - name: 鉴权相关
     items:
-      - name: 鉴权规则
-        href: Authentication/Url.md
-      - name: 查询播放鉴权KEY
-        href: Live-Video/describeLivePlayAuthKey.md
-      - name: 设置播放鉴权KEY
-        href: Live-Video/setLivePlayAuthKey.md
+      - name: 直播推流鉴权
+        items:
+          - name: 推流鉴权规则
+            href: Authentication/PublishUrl.md
+          - name: 设置推流鉴权KEY
+            status: 0
+            href: Authentication/PublishUrl.md
+          - name: 查询推流鉴权KEY
+            status: 0
+            href: Authentication/PublishUrl.md
+      - name: 直播推流鉴权
+        items:
+          - name: 播放鉴权规则
+            href: Authentication/PlayUrl.md
+          - name: 设置播放鉴权KEY
+            href: Live-Video/setLivePlayAuthKey.md
+          - name: 查询播放鉴权KEY
+            href: Live-Video/describeLivePlayAuthKey.md
 #  - name: 直播审核
 #    href: Loading.md
   - name: SDK调用方式
     href: Example/SDK-Java.md
+  - name: 参考文档
+    items:
+      - name: 地域简称参照表
+        href: Reference/Region.md
+      - name: 运营商简称参照表
+        href: Reference/Operator.md
 
 

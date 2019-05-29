@@ -14,7 +14,7 @@ https://live.jdcloud-api.com/v1/livePornData
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**publishDomain**|String|True| |推流域名|
+|**publishDomain**|String|False| |推流域名|
 |**appName**|String|False| |应用名称|
 |**streamName**|String|False| |流名称|
 |**startTime**|String|True| |起始时间<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 支持最大查询90天以内的数据<br>|
@@ -30,15 +30,17 @@ https://live.jdcloud-api.com/v1/livePornData
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**pornData**|PornData[]| |
-### PornData
+|**pornData**|PornCountStatisticResult[]| |
+### PornCountStatisticResult
 |名称|类型|描述|
 |---|---|---|
-|**publishDomain**|String|推流域名|
-|**appName**|String|应用名称|
-|**streamName**|String|流名称|
-|**date**|String|日期<br>- yyyyMMdd<br>- 示例: 20190308<br>|
-|**total**|Integer|鉴黄张数<br>- 单位: 张<br>|
+|**startTime**|String|时间点<br>|
+|**endTime**|String|时间点<br>|
+|**data**|PornCountStatisticData| |
+### PornCountStatisticData
+|名称|类型|描述|
+|---|---|---|
+|**count**|Integer|鉴黄张数<br>- 单位: 张<br>|
 
 ## 返回码
 |返回码|描述|
@@ -62,20 +64,20 @@ https://live.jdcloud-api.com/v1/livePornData?publishDomain=push.yourdomain.com&a
 {
     "requestId": "bgvmivir54gddpgi764se9f4kfr7ge41", 
     "result": {
-        "pronDatas": [
+        "pornData": [
             {
-                "appName": "yourapp", 
-                "date": "20180101", 
-                "publishDomain": "push.yourdomain.com", 
-                "streamName": "yourstream", 
-                "total": 86310
+                "data": {
+                    "count": 0
+                }, 
+                "endTime": "2019-04-15T15:59:59Z", 
+                "startTime": "2019-04-14T16:00:00Z"
             }, 
             {
-                "appName": "yourapp", 
-                "date": "20180102", 
-                "publishDomain": "push.yourdomain.com", 
-                "streamName": "yourstream", 
-                "total": 86310
+                "data": {
+                    "count": 0
+                }, 
+                "endTime": "2019-04-16T15:59:59Z", 
+                "startTime": "2019-04-15T16:00:00Z"
             }
         ]
     }

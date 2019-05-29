@@ -13,6 +13,6 @@
 3. 上传文件
 选择 **“Object管理”** 页面，根据需要点击 **【上传】** 或者 **【新建文件夹】**
 
-**注意：控制台上传单个文件大小不超过1GB，如需上传更大的文件请使用京东云对象存储提供的 [SDK](https://docs.jdcloud.com/cn/object-storage-service/multipart-upload-s3)**
+**注意：控制台上传单个文件大小不超过 5GB，如需上传更大的文件请使用京东云对象存储提供的 [SDK](https://docs.jdcloud.com/cn/object-storage-service/multipart-upload-s3)**
 
 ![上传备份3](../../../../../../image/RDS/Upload-Backup-V2-3.png)

@@ -19,13 +19,20 @@ SysBench 是一个基于 LuaJIT 的可脚本的多线程基准测试工具。它
 
 ```
 $ yum install gcc gcc-c++ autoconf automake make libtool bzr mysql-devel
-$ unzip sysbench-1.0.zip
+$ unzip 1.0.zip
 $ cd sysbench-1.0
 $ ./autogen.sh
 $ ./configure --prefix=/usr
 $ make
 $ make install
 ```
+
+## 数据库实例初始化
+### 创建账号
+参见 [创建账号](../Operation-Guide/Account/Create-Account/MySQL-Create-Account.md)。
+
+### 创建库
+参见 [创建库](../Operation-Guide/Database-Management/Create-Database.md), 需要创建一个库名为 ***sbtest*** 的库，并且记得创建库的时候需要给之前创建的账号授予新建库的读写权限。
 
 ## 测试命令
 ### 准备数据

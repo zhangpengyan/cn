@@ -15,6 +15,16 @@ items:
         href: Introduction/Restrictions.md
       - name: 支持IAM的云产品
         href: Introduction/Support-Services.md
+  - name: 入门指南
+    items:
+      - name: 创建子用户
+        href: Getting-Started/CreateSubuser.md
+      - name: 创建群组（可选）
+        href: Getting-Started/CreateUserGroup.md
+      - name: 创建自定义策略（可选）
+        href: Getting-Started/CreatePolicy.md
+      - name: 创建角色（可选）
+        href: Getting-Started/CreateRole.md
   - name: 操作指南
     items:
       - name: 概览

@@ -28,7 +28,7 @@
 
 8. 配置实例存储：
   * 云主机系统盘：支持本地盘及云硬盘，其中本地盘免费40GB，且容量不可变更。云硬盘支持40GB~500GB。                   
-  * 云主机数据盘：若系统盘为本地盘则支持挂载8块数据盘，若系统盘为云硬盘则支持挂载7块云硬盘作数据盘。可选通用型SSD云盘、性能型SSD云盘、容量型HDD云盘、SSD云盘及高效云盘（其中前三类当前仅在华东-上海地域提供，后两类仅在华北-北京、华东-宿迁及华南-广州地域提供）。云硬盘挂载到云主机后，需要进入云主机操作系统挂载云硬盘。          
+  * 云主机数据盘：若系统盘为本地盘则支持挂载8块数据盘，若系统盘为云硬盘则支持挂载7块云硬盘作数据盘。可选通用型SSD云盘、性能型SSD云盘及 容量型HDD云盘。云硬盘挂载到云主机后，需要进入云主机操作系统挂载云硬盘。          
    
      您可以随实例创建指定类型和容量的空盘，也可以基于已有云硬盘快照创建数据盘。关于数据盘设备名分配规则请查阅[设备名分配规则](../Operation-Guide/Storage/Assign-Device-Name.md)。  
      
@@ -104,4 +104,4 @@
   [10]: ./images/Getting-Start-Linux-Create-information.png "Getting-Start-Linux-Create-information.png"
   [11]: ./images/Getting-Start-Windows-Create-login.png "Getting-Start-Windows-Create-login.png"
   [12]: ./images/Getting-Start-Linux-Create-Region.png "Getting-Start-Linux-Create-Region.png"
-  [13]: ./images/Getting-Start-Linux-Create-Region.png "Getting-Start-Linux-Create-Region.png"f
+  [13]: ./images/Getting-Start-Linux-Create-Region.png "Getting-Start-Linux-Create-Region.png"

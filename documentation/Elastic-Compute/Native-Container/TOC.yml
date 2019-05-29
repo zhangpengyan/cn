@@ -103,6 +103,10 @@
             href: Operation-Guide/Monitoring-Alarm/Retrieve-Data.md
           - name: 获取Pod监控数据
             href: Operation-Guide/Monitoring-Alarm/Retrieve-PodData.md
+      - name: 访问控制
+        href: Operation-Guide/IAM.md
+      - name: 标签
+        href: Operation-Guide/Tag.md
   - name: 最佳实践
     items:
     - name: 制作带SSH的镜像

@@ -2,4 +2,4 @@
 
 （注：广东地区核验单为特殊版本，请广东个人用户点击此处<https://docs.jdcloud.com/cn/icp-license-service/guangdong-province-personal-verification-checklist-download>下载；广东单位用户点击此处<https://docs.jdcloud.com/cn/icp-license-service/guangdong-province-unit-verification-form-download>下载）
 
-![空白核验单.jpg](https://img1.jcloudcs.com/cms/0f645904-163c-40ca-9026-b9436593523320180208154655.jpg)
+![National-verification-checklist-download-cn-1.jpg](../../../../../image/ICP-License-Service/National-verification-checklist-download-cn-1.jpg)

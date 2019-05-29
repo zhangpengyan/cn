@@ -10,7 +10,7 @@
 ### 第2步：选择当前版本作为父版本，进入配置详情，然后点击操作中的生成新版本，进入版本编辑页。保存后生成新版本。
  
 
-  ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/config-vision-add.png)
+  ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/config-vision-add-new.png)
   
 #### 说明：
 - 这里默认的父版本号为您上一步中选择的版本的版本号。
@@ -21,7 +21,7 @@
 ### 第3步： 发布新版本。
 - 如果需要发布新版本，直接选择要发布的版本，点击发布按钮。
 - 然后填写发布信息，进行配置发布。
-  ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/config-vision-publish.png)
+  ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/config-vision-publish-new.png)
   
   
   

@@ -1,0 +1,23 @@
+  name: 富媒体短信
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name:  发送短信&获取回执
+        items:
+          - name: sendBatchMsg
+            href:  Send-Message-Related-APIs/sendBatchMsg.md
+          - name: querySendStatus
+            href:  Send-Message-Related-APIs/querySendStatus.md
+      - name: 短信模板
+        items:
+          - name: addTemplate
+            href: Message-Content-APIs/addTemplate.md
+          - name: queryOneTemplate
+            href: Message-Content-APIs/queryOneTemplate.md
+          - name: queryTemplateList
+            href: Message-Content-APIs/queryTemplateList.md

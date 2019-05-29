@@ -21,6 +21,8 @@
         href: Pricing/Price-Overview.md
       - name: 购买流程
         href: Pricing/Purchase-Process.md 
+      - name: 续费流程
+        href: Pricing/Renew-Process.md
   - name: 操作指南
     items:
       - name: 域名操作
@@ -30,7 +32,9 @@
           - name: 删除域名
             href: Operation-Guide/Domain-Name-Operation/Domaindelete.md
           - name: 修改域名
-            href: Operation-Guide/Domain-Name-Operation/Domainmodify.md      
+            href: Operation-Guide/Domain-Name-Operation/Domainmodify.md
+          - name: 域名锁定
+            href: Operation-Guide/Domain-Name-Operation/Domainlock.md 
       - name: 解析记录操作
         items:
           - name: 添加解析记录

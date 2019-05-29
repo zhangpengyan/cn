@@ -44,7 +44,17 @@
       - name: 计费规则
         href: Pricing/Billing-Rules.md
       - name: 价格总览
-        href: Pricing/Price-Overview.md
+        items:
+          - name: MySQL 价格
+            href: Pricing/Price-Overview/MySQL-Price.md
+          - name: Percona 价格
+            href: Pricing/Price-Overview/Percona-Price.md
+          - name: MariaDB 价格
+            href: Pricing/Price-Overview/MariaDB-Price.md
+          - name: SQL Server 价格
+            href: Pricing/Price-Overview/SQL-Server-Price.md
+          - name: PostgreSQL 价格
+            href: Pricing/Price-Overview/PostgreSQL-Price.md            
       - name: 购买流程
         href: Pricing/Purchase-Procedure.md
       - name: 续费流程
@@ -74,7 +84,9 @@
           - name: 主备切换
             href: Operation-Guide/Instance/Failover-Instance.md
           - name: 域名切换
-            href: Operation-Guide/Instance/Exchanged-DNS.md           
+            href: Operation-Guide/Instance/Exchanged-DNS.md          
+          - name: 迁移可用区
+            href: Operation-Guide/Instance/Migrate-AZ.md                
           - name: 重启实例
             items:
             - name: 重启 MySQL
@@ -169,6 +181,14 @@
               href: Operation-Guide/Backup/Restore-Instance/MariaDB-Backup-Restore.md
             - name: SQL Server 备份恢复
               herf: Operation-Guide/Backup/Restore-Instance/SQLServer-Backup-Restore.md
+          - name: 根据备份创建
+            items:
+            - name: SQL Server 根据备份创建
+              herf: Operation-Guide/Backup/Create-From-Backup/SQLServer-Create-From-Backup.md
+          - name: 根据时间点创建
+            items:
+            - name: SQL Server 根据时间点创建
+              herf: Operation-Guide/Backup/Create-To-Point-In-Time/SQLServer-Create-To-Point-In-Time.md                  
           - name: 删除备份
             href: Operation-Guide/Backup/Delete-Backup.md
             
@@ -318,6 +338,12 @@
           href: Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/Local-to-MariaDB.md
         - name: 从云主机 MariaDB 导入
           href: Best-Practices/Data-Migration/Import-Data-Into-MariaDB-Instance/VM-to-MariaDB.md
+      - name: 导入 PostgreSQL 
+        items:
+        - name: 从本地 PostgreSQL 导入
+          href: Best-Practices/Data-Migration/Import-Data-Into-PostgreSQL-Instance/Local-to-PostgreSQL.md
+        - name: 从云主机 PostgreSQL 导入
+          href: Best-Practices/Data-Migration/Import-Data-Into-PostgreSQL-Instance/VM-to-PostgreSQL.md
     - name: 将备份文件恢复到自建数据库
       items:
       - name: 将备份恢复到自建 MySQL
@@ -356,6 +382,8 @@
     items:
     - name: 内存使用率
       href: Troubleshooting/Memory-Use-Rate.md          
+    - name: 云数据库 MySQL 字符集编码问题 
+      href: Troubleshooting/Character-Encoding.md 
   - name: 相关资源
     items:
     - name: 文档历史记录

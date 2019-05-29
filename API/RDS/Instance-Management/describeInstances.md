@@ -48,16 +48,23 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances
 |名称|类型|描述|
 |---|---|---|
 |**instanceId**|String|实例ID|
-|**instanceName**|String|实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)|
+|**instanceName**|String|实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)|
 |**instanceType**|String|实例类别，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**engine**|String|实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**engineVersion**|String|实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
+|**instanceClass**|String|实例规格代码|
+|**instanceStorageGB**|Integer|磁盘，单位GB|
+|**instanceCPU**|Integer|CPU核数|
+|**instanceMemoryMB**|Integer|内存，单位MB|
 |**regionId**|String|地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)|
 |**azId**|String[]|可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)|
+|**vpcId**|String|VPC的ID|
+|**subnetId**|String|子网的ID|
 |**instanceStatus**|String|实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**createTime**|String|实例创建时间|
 |**charge**|Charge|计费配置|
 |**tags**|Tag[]|标签信息|
+|**sourceInstanceId**|String|MySQL只读实例对应的主实例ID|
 ### Tag
 |名称|类型|描述|
 |---|---|---|

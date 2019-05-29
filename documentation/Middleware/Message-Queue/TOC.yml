@@ -132,7 +132,7 @@
     items:
     - name: 文档历史记录
       href: Related-Resources/Document-History.md
-     - name: 服务条款
+    - name: 服务条款
       href: Related-Resources/Related-Agreement.md  
     - name: 备案
       href: Related-Resources/Filing.md           

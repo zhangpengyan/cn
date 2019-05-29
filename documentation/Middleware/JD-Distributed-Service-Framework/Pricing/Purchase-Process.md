@@ -10,6 +10,6 @@
 运营人员审批加入公测名单，用户会收到已开通的通知（邮件或短信）；
 
 ####   第3步：开始试用。
-服务入口：导航菜单互联网中间件下， 分布式服务框架。
+服务入口：导航菜单互联网中间件下， 微服务平台。
 ![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/zczx-list.png)
 

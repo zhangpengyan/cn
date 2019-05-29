@@ -21,8 +21,8 @@ https://live.jdcloud-api.com/v1/transcodeCustoms:template
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**videoCodeRate**|Integer|True| |转码输出的码率值<br>- 取值范围: [200,3000]<br>- 单位: kpbs<br>|
-|**videoFrameRate**|String|True| |转码输出的帧率值<br>- 取值：15、25、30、60<br>|
+|**videoCodeRate**|Integer|True| |转码输出的码率值<br>- 取值范围: [1,6000]<br>- 单位: kpbs<br>|
+|**videoFrameRate**|String|True| |转码输出的帧率值<br>- 取值：[1,30]<br>|
 |**width**|Integer|False| |转码输出视频宽度<br>- 取值: [100,1920]<br>- 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码<br>- 如果(width,height)都不设置，则按源流大小输出转码<br>|
 |**height**|Integer|False| |转码输出视频宽度<br>- 取值: [100,1920]<br>- 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码<br>- 如果(width,height)都不设置，则按源流大小输出转码<br>|
 |**template**|String|True| |转码模板(转码流输出后缀)<br>- 取值要求：数字、大小写字母或短横线("-"),必须以数字或字母作为开头和结尾,长度不超过50字符<br>- <b>注意: 不能与系统的标准的转码模板和当前用户已自定义命名重复</b><br>- 系统标准转码模板<br>  ld (h.264/640*360/15f)<br>  sd (h.264/854*480/24f)<br>  hd (h.264/1280*720/25f)<br>  shd (h.264/1920*1080/30f)<br>|

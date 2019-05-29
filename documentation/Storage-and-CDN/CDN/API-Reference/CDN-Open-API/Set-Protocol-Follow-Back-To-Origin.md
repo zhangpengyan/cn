@@ -51,7 +51,7 @@
     "data": {
         "domain": "www.a.com",
         "requestId": "144791ff-3d4b-4850-a7d1-75907006290a",
-        "followStatus": "on"
+        "followProtocolStatus": "on"
     }
 }
 
@@ -82,7 +82,7 @@
 | data     | 返回数据                                                   |
 | domain  | 查询的加速域名                         |
 | requestId  | 请求的唯一标识                 |
-| followStatus | 协议跟随回源的状态，“off”为关闭，“on”为打开        |
+| followProtocolStatus | 协议跟随回源的状态，“off”为关闭，“on”为打开        |
 
 ## **4. 调用示例**
 
@@ -111,7 +111,7 @@
     "data": {
         "domain": "www.a.com",
         "requestId": "144791ff-3d4b-4850-a7d1-75907006290a",
-        "followStatus": "on"
+        "followProtocolStatus": "on"
     }
 }
 

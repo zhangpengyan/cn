@@ -6,7 +6,7 @@ function相关接口
 
 
 ### 版本
-v1
+v1.0.3
 
 
 ## API
@@ -26,7 +26,6 @@ v1
 |**invoke**|POST|控制台测试执行函数|
 |**listAlias**|GET|查询别名列表|
 |**listFunction**|GET|查询函数列表|
-|**listTrigger**|GET|查询触发器列表|
 |**listVersion**|GET|查询版本列表|
 |**updateAlias**|PUT|更新别名|
 |**updateFunction**|PUT|更新函数|

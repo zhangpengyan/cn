@@ -61,4 +61,4 @@
 
 15.Q:云物理服务器支持接入哪些安全服务？
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:京东云自动为您的公网IP免费提供最高2Gbps的恶意流量攻击防护，开启DDoS基础防护请参考操作指南[https://docs.jdcloud.com/cn/anti-ddos-basic/anti-ddos-basic-started](https://docs.jdcloud.com/cn/anti-ddos-basic/anti-ddos-basic-started)；另外，如您已购买京东云Web应用防火墙，配置Web应用防护请参考操作指南[https://docs.jdcloud.com/cn/web-application-firewall/web-attack-protection](https://docs.jdcloud.com/cn/web-application-firewall/web-attack-protection)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:京东云自动为您的公网IP免费提供最高2Gbps的恶意流量攻击防护，开启DDoS基础防护请参考操作指南[https://docs.jdcloud.com/anti-ddos-basic/anti-ddos-basic-started](https://docs.jdcloud.com/anti-ddos-basic/anti-ddos-basic-started)；另外，如您已购买京东云Web应用防火墙，配置Web应用防护请参考操作指南[https://docs.jdcloud.com/web-application-firewall/web-attack-protection](https://docs.jdcloud.com/web-application-firewall/web-attack-protection)

@@ -69,6 +69,8 @@
         href: Operation-Guide/Convention.md
       - name: Jenkins插件  
         href: Operation-Guide/Jenkins.md
+      - name: 使用微服务平台  
+        href: Operation-Guide/JDSF.md
   - name: 最佳实践
     items: 
       - name: 蓝绿部署

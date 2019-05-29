@@ -18,7 +18,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/audit
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**enabled**|String|True| |要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等<br>各个数据库版本支持的审计选项可以通过接口[getAuditOptions](./getAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档|
+|**enabled**|String|True| |要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等<br>各个数据库版本支持的审计选项可以通过接口[describeAuditOptions](./describeAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档|
 
 
 ## 返回参数

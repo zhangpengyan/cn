@@ -38,7 +38,9 @@ items:
       - name: 删除文件
         href: Getting-Started/Delete-Object-1.md
       - name: 删除存储空间
-        href: Getting-Started/Delete-Bucket-1.md
+        href: Getting-Started/Delete-Bucket-1.md    
+      - name: 分片管理
+        href: Getting-Started/Part-Manage-1.md           
       - name: 设置事件通知
         href: Getting-Started/Event-Notifications-1.md 
  - name: 操作指南
@@ -153,6 +155,10 @@ items:
             href: Operation-Guide/Video-Service-Guide/Delete-Video-Task.md	
  - name:  API文档
    items:
+      - name: 强一致性
+        href: API-Reference/Introduction/Strong-Consistency.md
+      - name: OSS与文件系统的对比
+        href: API-Reference/Introduction/OSS-Compared-With-File-System.md
       - name: 兼容S3 API 概述
         href:  API-Reference-S3-Compatible/Introduction-2.md
       - name: 服务器域名
@@ -265,10 +271,6 @@ items:
         items:
            - name: 基本概念
              href: API-Reference/Introduction/Basic-Concepts.md
-           - name: 强一致性
-             href: API-Reference/Introduction/Strong-Consistency.md
-           - name: OSS与文件系统的对比
-             href: API-Reference/Introduction/OSS-Compared-With-File-System.md 
            - name: OSS术语表
              href: API-Reference/Introduction/OSS-Concepts.md 
            - name: API 概览
@@ -335,10 +337,18 @@ items:
               href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Installation-S3.md
             - name: 初始化
               href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Initialization-S3.md
+            - name: 存储空间
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Bucket-JavaSDK.md              
             - name: 简单上传
               href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Simple-Upload-S3.md
             - name: 分片上传
-              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Multipart-Upload-S3.md              
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Multipart-Upload-S3.md
+            - name: 下载
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/getObject-JavaSDK.md                
+            - name: 管理对象
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Manage-Object-JavaSDK.md
+            - name: TransferManager
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/TransferManager.md
        - name:  兼容S3  SDK-Python（推荐）
          href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Python.md   
        - name: 兼容S3  SDK-Go
@@ -352,7 +362,9 @@ items:
        - name: 兼容S3 SDK-.NET
          href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-NET.md 
        - name: 兼容S3 SDK-Node.js
-         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Nodejs.md     
+         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Nodejs.md
+       - name: 兼容S3 SDK-Ruby
+         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Ruby.md     
        - name: 旧版 Java SDK（不推荐）
          items:
            - name: 安装
@@ -427,3 +439,9 @@ items:
    items:
       - name: 一般性问题
         href: FAQ/General-Problem.md
+ - name: 用户协议
+   items:
+     - name: 服务条款
+       href: User-Agreement/Product-Terms-Of-Service.md                 
+     - name: SLA
+       href: User-Agreement/SLA.md             

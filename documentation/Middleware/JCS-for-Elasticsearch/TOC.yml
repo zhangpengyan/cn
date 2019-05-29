@@ -54,7 +54,9 @@
       - name: Elasticsearch日志
         href: Operation-Guide/eslog.md
       - name: 自定义词库
-        href: Operation-Guide/dic.md  
+        href: Operation-Guide/dic.md 
+      - name: 协调节点
+        href: Operation-Guide/coordination_node.md   
       - name: 快照
         items: 
         - name: 创建快照
@@ -64,7 +66,9 @@
         - name: 快照指定索引
           href: Operation-Guide/indexsnapshot.md
         - name: 删除快照
-          href: Operation-Guide/deletesnapshot.md 
+          href: Operation-Guide/deletesnapshot.md
+      - name: 访问控制
+        href: Operation-Guide/control.md
       - name: Kibana
         href: Operation-Guide/Kibana.md 
       - name: 监控集群

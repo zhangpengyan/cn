@@ -42,8 +42,24 @@ bucket.s3.cn-north-1.jdcloud-oss.com/lena.jpg?x-oss-process=imgalias/stylename
 **说明**
 
 *  StyleName是图片样式的名称。
+
 *   创建样式、删除样式和修改样式可在控制台操作也可通过OPENAPI操作。
-*   访问的图片样式必须为图片文件所在的bucket中，否则将报错。
+
+*   设置多个分隔符后，访问图片的时候如果url中包含多个分隔符，会按照 `- `→ `_ ` → `/` →` ! ` 的顺序执行，具体规则请看下面例子：
+示例：
+
+若bucket设置的图片样式名称为：`imgStyle` 。请求中包含了多个合法的分隔符，且bucke设置了这些分隔符，如：`http://downloads.s3.cn-north-1.jcloudcs.com/lena.jpg-imgStyle_imgStyle`。根据匹配顺序`- `→ `_ ` → `/` →` ! ` ，系统先将 `-` 匹配为分隔符，该分隔符后的内容为图片样式名，即`imgStyle_imgStyle`，该分隔符前的内容为文件url，即object key为`lena.jpg`，若bucket未设置名为`imgStyle_imgStyle`的样式，系统将认为此处 `-` 不作为分隔符使用。继续匹配bucket中已设置的下一个分隔符 `_` 。同样，图片样式名为`imgStyle`，object key为`lena.jpg-imgStyle`，若bucket已经设置了名为`imgStyle`的样式，匹配成功，返回处理结果。
+
+*   完成自定义分隔符设置后，若文件名中包含您设置的自定义分隔符，会优先按照自定义分隔符处理，详细说明请看下面例子。
+
+例一：testbucket中存在文件名为`animal.jpg!imgStyle` 的文件，同时testbucket中存在名为`imgStyle`的图片样式，
+访问文件URL`testbucket.s3.cn-north-1.jdcloud-oss.com/animal.jpg!imgStyle`,若名为animal.jpg的文件存在则将返回经过处理的图片，若不存在则返回404。
+
+例二：testbucket中存在文件名为`animal.jpg!imgStyle` 的文件，同时testbucket中不存在名为`imgStyle`的图片样式，
+访问文件URL`testbucket.s3.cn-north-1.jdcloud-oss.com/animal.jpg!imgStyle`,则返回`animal.jpg!imgStyle`文件。
+
+
+
   
 
 ## 设置分隔符 
@@ -72,6 +88,8 @@ bucket.s3.cn-north-1.jdcloud-oss.com/lena.jpg?x-oss-process=imgalias/stylename
         
 4.设置好您需要的选项之后单击**确定**完成分隔符的设置。
 
+**你也可以通过[OPENAPI](http://docs.jdcloud.com/cn/media-processing-service/api/setstyledelimiter)完成对自定义分隔符的设置。**
+
 
 ## 示例
 
@@ -80,7 +98,7 @@ bucket.s3.cn-north-1.jdcloud-oss.com/lena.jpg?x-oss-process=imgalias/stylename
 
 -   直接参数访问
 
-    [https://downloads.s3.cn-north-1.jcloudcs.com/lena.jpg?x-oss-process=img/r/60/q/71/p/s/200/300](https://downloads.s3.cn-north-1.jcloudcs.com/lena.jpg?x-oss-process=img/s/200/300/cc/200/260)
+    [https://downloads.s3.cn-north-1.jcloudcs.com/lena.jpg?x-oss-process=img/r/60/q/71/p/s/200/300](https://downloads.s3.cn-north-1.jcloudcs.com/lena.jpg?x-oss-process=img/r/60/q/71/p/s/200/300)
 
     ![](https://downloads.s3.cn-north-1.jcloudcs.com/lena.jpg?x-oss-process=img/r/60/q/71/p/s/200/300)
 
@@ -92,7 +110,7 @@ bucket.s3.cn-north-1.jdcloud-oss.com/lena.jpg?x-oss-process=imgalias/stylename
 
 -   通过样式分隔符，使用样式方式访问
 
-    [https://downloads.s3.cn-north-1.jdcloud-oss.com/lena.jpg!imgstyle_demo](https://downloads.s3.cn-north-1.jdcloud-oss.com/lena.jpg?x-oss-process=imgalias/imgstyle_demo)
+    [https://downloads.s3.cn-north-1.jdcloud-oss.com/lena.jpg!imgstyle_demo](https://downloads.s3.cn-north-1.jdcloud-oss.com/lena.jpg!imgstyle_demo)
 
     ![](https://downloads.s3.cn-north-1.jdcloud-oss.com/lena.jpg?x-oss-process=imgalias/imgstyle_demo)
 

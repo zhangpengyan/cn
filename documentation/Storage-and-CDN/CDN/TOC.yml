@@ -115,6 +115,12 @@
             href: API-Reference/CDN-Open-API/Set-range.md
           - name: 设置referer黑白名单
             href: API-Reference/CDN-Open-API/Set-referer.md
+          - name: 查询referer黑白名单
+            href: API-Reference/CDN-Open-API/Query-Referer.md
+          - name: 设置URL鉴权
+            href: API-Reference/CDN-Open-API/Set-Url-Authentication.md
+          - name: 查询URL鉴权
+            href: API-Reference/CDN-Open-API/Query-Url-Authentication.md
           - name: 分区域运营商详细数据统计
             href: API-Reference/CDN-Open-API/Area-isp-detail-statistics.md
           - name: 回源带宽统计
@@ -163,6 +169,14 @@
             href: API-Reference/CDN-Open-API/Query-uv.md
           - name: 设置/删除 Header
             href: API-Reference/CDN-Open-API/Set-Header.md
+          - name: 设置IP黑名单
+            href: API-Reference/CDN-Open-API/Set-IP-Blacklist.md
+          - name: 查询IP黑名单
+            href: API-Reference/CDN-Open-API/Query-IP-Blacklist.md
+          - name: 设置UA访问控制
+            href: API-Reference/CDN-Open-API/Set-UA.md
+          - name: 查询UA访问控制
+            href: API-Reference/CDN-Open-API/Query-UA.md
           - name: 查询Header
             href: API-Reference/CDN-Open-API/Query-Header.md
           - name: 附：提示信息状态码参照表

@@ -48,8 +48,13 @@ GET _snapshot/auto_snapshot/_all
 GET _snapshot/auto_snapshot/snapshot_1/_status
 ```
 响应包括快照的总体状况，但也包括下钻到每个索引和每个分片的统计值，分片的不同完成状态展示如下：</br>
+
 INITIALIZING：分片在检查集群状态看看自己是否可以被快照。这个一般是非常快的。</br>
+
 STARTED：数据正在被传输到仓库。</br>
+
 FINALIZING：数据传输完成；分片现在在发送快照元数据。</br>
+
 DONE：快照完成。</br>
+
 FAILED：快照处理的时候碰到了错误，这个分片/索引/快照不可能完成了。检查您的日志获取更多信息。</br>

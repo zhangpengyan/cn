@@ -1,4 +1,4 @@
-name: 分布式服务框架
+name: 微服务平台
 href:
 items:
 - name: 产品简介
@@ -49,7 +49,7 @@ items:
           herf: Operation-Guide/Cluster/Create-Cluster.md
         - name: 查看注册中心信息
           herf: Operation-Guide/Cluster/Cluster-Detail.md
-        - name: 扩缩容
+        - name: 扩容
           herf: Operation-Guide/Cluster/Expansion-Cluster.md
         - name: 删除注册中心
           herf: Operation-Guide/Cluster/Delete-Cluster.md

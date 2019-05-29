@@ -48,7 +48,7 @@
         items:
           - name: 发送消息
             href: Operation-Guide/Message-Management/Send-Message.md      
-          - name: 重发消息
+          - name: 接收消息
             href: Operation-Guide/Message-Management/Consume-Message.md   
       - name: 监控报警
         items:

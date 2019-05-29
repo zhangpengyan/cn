@@ -2,7 +2,7 @@
 
 通过context可获取函数运行时的函数相关信息。例如：获取函数基本信息，在context中获得本次请求的 ID，并记录到函数日志中。后续通过该 ID 来追踪请求执行的详细信息。
 
- 其定义如下：
+ ## Context对象（Python）：
 
 ```Python
 class FunctionMeta:

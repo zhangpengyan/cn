@@ -34,7 +34,7 @@ HTTPRequestMethod即HTTP协议请求方式(如POST、GET等，使用全大写字
 2. 通过用字符代码**升序**对请求头进行排序。
 3. 使用排序后的小写请求头名称，后跟冒号，然后添加该请求头的value；多个value时，以逗号(,)分隔，并且不要对value进行排序；最后添加('\n')。
 
-* 注意**：x-jdcloud-date**（遵循ISO8601标准，使用UTC时间，格式为YYYYMMDDTHHmmssZ）, **x-jdcloud-nonce**必须在请求中包含并且参与签名；如果有**x-jdcloud-security-token**头，此项也必须参与签名。
+* 注意：**x-jdcloud-date**（遵循ISO8601标准，使用UTC时间，格式为YYYYMMDDTHHmmssZ）, **x-jdcloud-nonce**必须在请求中包含并且参与签名；如果有**x-jdcloud-security-token**头，此项也必须参与签名。
 
 #### SignedHeaders是添加所有参与签名的请求头，后跟换行符。它是用于告知京东云，请求头中的哪些是签名过程的一部分。具体步骤如下：
 1. 请将所有HTTP请求头名称转换为**小写**。

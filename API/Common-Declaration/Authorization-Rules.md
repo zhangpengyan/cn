@@ -52,6 +52,28 @@
 是把请求体中的payload做SHA256哈希后，再转为**小写十六进制字符串**进行表示。如果payload为空，则使用空字符串('')作为SHA256哈希的输入。
 * 注意：如果payload过大，则可以在HTTP请求头中添加x-jdcloud-content-sha256，该请求头的value将直接代替LowerCase(HexEncode(Hash(Payload)))参与签名，而无需再对请求体中的payload进行计算转换。
 
+#### RFC 3986介绍
+* a.保持'A'-'Z', 'a'-'z', '0'-'9', '-', '.', '_', '~'不变，对除此以外的每个字符进行编码。
+* b.空格字符必須转成"%20"，而不是"+"。
+* c.每个URI编码字节必须编译成"%"后面跟两位的十六进制（字母大写）
+* d.对正斜杠('/')进行编码，对象键名称（object key name）除外。例如，如果对象密钥名称（object key name）是photos/jan/sample.jpg，则密钥名称（key name）中的正斜杠('/')不会编码。
+
+示例代码：
+
+      public static String UriEncode(CharSequence input, boolean encodeSlash) {
+          StringBuilder result = new StringBuilder();
+          for (int i = 0; i < input.length(); i++) {
+              char ch = input.charAt(i);
+              if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9') || ch == '_' || ch == '-' || ch == '~' || ch == '.') {
+                  result.append(ch);
+              } else if (ch == '/') {
+                  result.append(encodeSlash ? "%2F" : ch);
+              } else {
+                  result.append(toHexUTF8(ch));
+              }
+          }
+          return result.toString();
+      }
 
 #### POST示例请求
 
@@ -137,11 +159,11 @@ Lowercase(HexEncode(CanonicalRequest))是步骤1生成的标准请求进行**SHA
 计算签名后，需要将签名的结果作为Authorization请求头将其添加到请求中。
 
 Authorization的格式为
-JDCLOUD2-HMAC-SHA256 Credential={Access Key}/{Date}/{Region}/{Service}/jdcloud2_request, SignedHeaders={SignedHeaders}, Signature={signResult}
+JDCLOUD2-HMAC-SHA256-V2 Credential={Access Key}/{Date}/{Region}/{Service}/jdcloud2_request, SignedHeaders={SignedHeaders}, Signature={signResult}
 
 以curl命令调用方式的例子：
 
-	curl -X GET -H "x-jdcloud-date:20180404T061302Z" -H "x-jdcloud-nonce:ed558a3b-9808-4edb-8597-187bda63a4f2" -H "Authorization:JDCLOUD2-HMAC-SHA256 Credential=C61249XXXXXXXXXXXXXXXXXX/20180404/cn-north-1/monitor/jdcloud2_request, SignedHeaders=content-type;host;x-jdcloud-date;x-jdcloud-nonce, Signature=9b2026198d3acbf99da395e23a994ed369a0d70f5b4a5d7567dd0caf3009656d" -H "Content-Type:application/json" "http://vm.jdcloud-api.com/v1/regions/cn-north-1/metrics/cpu_util/metricData?serviceCode=vm&startTime=2018-04-04T06:01:46Z"
+	curl -X GET -H "x-jdcloud-date:20180404T061302Z" -H "x-jdcloud-nonce:ed558a3b-9808-4edb-8597-187bda63a4f2" -H "Authorization:JDCLOUD2-HMAC-SHA256-V2 Credential=C61249XXXXXXXXXXXXXXXXXX/20180404/cn-north-1/monitor/jdcloud2_request, SignedHeaders=content-type;host;x-jdcloud-date;x-jdcloud-nonce, Signature=9b2026198d3acbf99da395e23a994ed369a0d70f5b4a5d7567dd0caf3009656d" -H "Content-Type:application/json" "http://vm.jdcloud-api.com/v1/regions/cn-north-1/metrics/cpu_util/metricData?serviceCode=vm&startTime=2018-04-04T06:01:46Z"
 
 
 ## 签名步骤示例 ##
@@ -176,7 +198,7 @@ JDCLOUD2-HMAC-SHA256 Credential={Access Key}/{Date}/{Region}/{Service}/jdcloud2_
     
 步骤2的结果应该为：
 
-    JDCLOUD2-HMAC-SHA256
+    JDCLOUD2-HMAC-SHA256-V2
     20190214T104514Z
     20190214/cn-north-1/test/jdcloud2_request
     fb2e317056269590681d091f8eb22272967c0b922b2deda887312215ea4eed4c
@@ -192,4 +214,4 @@ JDCLOUD2-HMAC-SHA256 Credential={Access Key}/{Date}/{Region}/{Service}/jdcloud2_
     signResult = 2a98f83c074e7bee260bfc8ef64f009c07595bd93f7f0c3f4e156bf6479ed9bf
 步骤4的结果应该为：
 
-    JDCLOUD2-HMAC-SHA256 Credential=TESTAK/20190214/cn-north-1/test/jdcloud2_request, SignedHeaders=x-jdcloud-date;x-jdcloud-nonce;x-my-header;x-my-header_blank, Signature=2a98f83c074e7bee260bfc8ef64f009c07595bd93f7f0c3f4e156bf6479ed9bf
+    JDCLOUD2-HMAC-SHA256-V2 Credential=TESTAK/20190214/cn-north-1/test/jdcloud2_request, SignedHeaders=x-jdcloud-date;x-jdcloud-nonce;x-my-header;x-my-header_blank, Signature=2a98f83c074e7bee260bfc8ef64f009c07595bd93f7f0c3f4e156bf6479ed9bf

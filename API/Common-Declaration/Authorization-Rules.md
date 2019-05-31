@@ -95,7 +95,7 @@
 其中，
  
 
-Algorithm固定为JDCLOUD2-HMAC-SHA256是算法。
+Algorithm固定为JDCLOUD2-HMAC-SHA256-V2是算法。
 
 RequestDateTime与HTTP请求头x-jdcloud-date中的**格式和值必须完全一致**。
 

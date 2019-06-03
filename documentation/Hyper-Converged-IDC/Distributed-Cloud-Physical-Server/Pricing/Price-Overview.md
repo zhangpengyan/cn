@@ -10,12 +10,14 @@
     <tr>
         <td colspan="2"><B>实例规格类型</B></td> 
         <td ><B>实例规格</B></td> 
-		<td ><B>包月价格（元）</B></td>	
+	<td ><B>节点</B></td> 
+	<td ><B>包月价格（元）</B></td>	
     </tr>
     <tr>   
         <td rowspan="3">计算型</td>
 		<td >边缘标准计算型Ⅰ</td>
 		<td >edcps.c.normal1</td>
+	        <td  rowspan="4">华东-台州</td>
 		<td >4400</td>
     </tr>
 	<tr>   

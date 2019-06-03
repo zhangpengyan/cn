@@ -32,7 +32,7 @@
     <tr>   
         <td rowspan="4"><B>中国大陆境内</B></td>
 		<td >华东-台州</td>
-		<td >电信</td>
+		<td >电信1</td>
 		<td >已开放</td>
     </tr>
 </table>

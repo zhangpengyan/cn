@@ -4,7 +4,7 @@
 
 打开控制台，在左侧导航栏依次点击分布式云物理服务器->私有网络，进入私有网络列表页，点击 **创建** ，弹框如下图：<br/>
 
-根据需求选择 **节点** ，**运营商** ，名称，填写CIDR，点击 **确定** ，即可创建1个私有网络。
+根据需求选择 **节点** ，运营商，名称，填写CIDR，点击 **确定** ，即可创建1个私有网络。
 ![创建私有网络弹框](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-029.png)
 
 ## 查看私有网络

@@ -8,4 +8,4 @@ table--Linux的iptables防火墙默认有三种表，Filter、NAT与Mangle，当
 
 chain--条链，比如filter有INPUT、OUTPUT、FORWARD三条链。
 
-**注意：请谨慎关闭SSH登录22端口，关闭22端口会造成您不可从外部访问云物理服务器！**
+**注意：请谨慎关闭SSH登录22端口，关闭22端口会造成您不可从外部访问分布式云物理服务器！**

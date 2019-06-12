@@ -91,7 +91,7 @@
             href: Operation-Guide/Reinstall/Description-Reinstall.md
           - name: 操作步骤
             href: Operation-Guide/Reinstall/Steps-Reinstall.md
-      - name: 调整公网带宽
+      - name: 修改公网带宽
         items:
           - name: 功能描述
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md

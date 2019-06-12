@@ -54,7 +54,7 @@
           - name: 子网
             href: Operation-Guide/Networking/Subnet.md
           - name: 弹性公网IP
-            href: Operation-Guide/Networking/Elastic-IP-For-Physical-Cloud.md
+            href: Operation-Guide/Networking/Elastic-IP-For-Edge-Cloud.md
       - name: 防火墙配置说明
         items:
           - name: 功能描述

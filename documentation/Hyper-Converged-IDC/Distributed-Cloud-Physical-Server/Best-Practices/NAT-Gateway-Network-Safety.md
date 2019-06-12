@@ -12,7 +12,7 @@ NAT网关是通过定制安全策略允许到达与其相关联的云物理服�
 
 ## 网络架构示意图
 
-![网络架构示意图](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS024.png)
+![网络架构示意图](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-001.png)
 
 ## 配置方案
 配置命令的IP信息都是模拟的，请以购买的云物理服务器的IP信息替换。

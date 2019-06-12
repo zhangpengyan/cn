@@ -35,14 +35,14 @@
     items:
       - name: 入门指南概述
         href: Getting-Started/Getting-Started.md
-      - name: 创建云物理服务器
-        href: Getting-Started/Create-Cloud-Physical-Server.md
-      - name: 配置云物理服务器
-        href: Getting-Started/Allocate-Cloud-Physical-Server.md
-      - name: 查看云物理服务器
-        href: Getting-Started/Check-Cloud-Physical-Server.md
-      - name: 删除云物理服务器
-        href: Getting-Started/Delete-Cloud-Physical-Server.md
+      - name: 创建分布式云物理服务器
+        href: Getting-Started/Create-Distributed-Cloud-Physical-Server.md
+      - name: 配置分布式云物理服务器
+        href: Getting-Started/Allocate-Distributed-Cloud-Physical-Server.md
+      - name: 查看分布式云物理服务器
+        href: Getting-Started/Check-Distributed-Cloud-Physical-Server.md
+      - name: 删除分布式云物理服务器
+        href: Getting-Started/Delete-Distributed-Cloud-Physical-Server.md
   - name: 操作指南
     items:
       - name: 使用须知
@@ -79,12 +79,12 @@
             href: Operation-Guide/Remote-Login/Description-Remote-Login.md
           - name: 操作步骤
             href: Operation-Guide/Remote-Login/Steps-Remote-Login.md
-      - name: 云物理服务器生命周期管理
+      - name: 分布式云物理服务器生命周期管理
         items:
           - name: 功能描述
-            href: Operation-Guide/Cloud-Physical-Server-Life-Cycle-Management/Description-Cloud-Physical-Server-Life-Cycle-Management.md
+            href: Operation-Guide/Distributed-Cloud-Physical-Server-Life-Cycle-Management/Description-Distributed-Cloud-Physical-Server-Life-Cycle-Management.md
           - name: 操作步骤
-            href: Operation-Guide/Cloud-Physical-Server-Life-Cycle-Management/Steps-Cloud-Physical-Server-Life-Cycle-Management.md
+            href: Operation-Guide/Distributed-Cloud-Physical-Server-Life-Cycle-Management/Steps-Distributed-Cloud-Physical-Server-Life-Cycle-Management.md
       - name: 重装操作系统
         items:
           - name: 功能描述
@@ -101,8 +101,6 @@
     items:
     - name: NAT网关网络安全方案
       href: Best-Practices/NAT-Gateway-Network-Safety.md
-    - name: CPS到VPC专线通信配置方法
-      href: Best-Practices/CPS-VPC-DirectConnection.md 
   - name: 教程
     items:
     status: 0

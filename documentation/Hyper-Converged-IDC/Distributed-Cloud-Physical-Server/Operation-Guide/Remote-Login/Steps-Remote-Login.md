@@ -17,7 +17,7 @@
 -	Connect type：选择“SSH”。
 -	全部输入完后，单击“Open”，创建一个新对话。
 
-![PuTTY窗口](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS005.png)
+![PuTTY窗口](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-013.png)
 
 在Putty会话窗口中， 输入管理员帐号，按回车键。
 ```
@@ -27,7 +27,7 @@ Ubuntu：ubuntu
 ```
 再输入初始密码，回车完成登录过程。
 
-![PuTTY窗口](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS006.png)
+![PuTTY窗口](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-014.png)
 
 从本地Linux或Mac OS登录Linux云服务器，直接使用SSH命令进行连接，如：ssh root@Linux云服务器公网IP，然后输入root用户的初始密码，即可完成登录。
 

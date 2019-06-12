@@ -28,11 +28,11 @@ NAT网关是通过定制安全策略允许到达与其相关联的分布式云�
 
 2、默认IP信息，【图1.0】和路由信息【图1.1】
 
-![IP信息图1.0](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS025.png)
+![IP信息图1.0](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-019.png)
 
 <p align="center">IP信息【图1.0】</p>
 
-![路由信息图1.1](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS026.png)
+![路由信息图1.1](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-020.png)
 
 <p align="center">路由信息【图1.1】</p>
 
@@ -40,11 +40,11 @@ NAT网关是通过定制安全策略允许到达与其相关联的分布式云�
 
 vim /etc/sysconfig/network-scripts/ifcfg-eth0,添加一条`GATEWAY=172.16.0.3`，保存退出wq，重启服务生效service network restart.
 
-![修改默认网关图2.0](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS027.png)
+![修改默认网关图2.0](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-021.png)
 
 <p align="center">修改默认网关【图2.0】</p>
 
-![查看默认路由的网关图2.1](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS028.png)
+![查看默认路由的网关图2.1](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-022.png)
 
 <p align="center">查看默认路由的网关【图2.1】</p>
 
@@ -54,13 +54,13 @@ vim /etc/sysconfig/network-scripts/ifcfg-eth0,添加一条`GATEWAY=172.16.0.3`�
 
 编辑vim vi /etc/sysctl.conf 文件，修改`net.ipv4.ip_forward = 1`；sysctl –p 不用重启系统，配置生效。
 
-![开启路由转发功能](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS029.png)
+![开启路由转发功能](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-023.png)
 
 2、添加 FORWARD 转发规则
 
 默认的 iptables 的策略是不允许流量的转发，所以我们需要先删除默认的不允许转发的规则；`iptables -D FORWARD 1` ，其中 `1` 代表 FORWARD 规则中的第一条规则。因为默认的只有一条 FORWARD 规则，所以只需要删除第一条即可。
 
-![默认forward转发规则图2.0](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS030.png)
+![默认forward转发规则图2.0](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-024.png)
 
 <p align="center">默认forward转发规则【图2.0】</p>
 
@@ -76,7 +76,7 @@ vim /etc/sysconfig/network-scripts/ifcfg-eth0,添加一条`GATEWAY=172.16.0.3`�
 
 允许转发已经建立好链接的流量，不允许来自外网新的请求流量进来。
 
-![forward转发规则图2.1](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS031.png)
+![forward转发规则图2.1](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-025.png)
 
 <p align="center">forward转发规则【图2.1】</p>
 
@@ -86,7 +86,7 @@ vim /etc/sysconfig/network-scripts/ifcfg-eth0,添加一条`GATEWAY=172.16.0.3`�
 iptables -t nat -A POSTROUTING -s 172.16.0.0/16 -o eth1 -j SNAT --to-source 103.37.46.14
 ```
 
-![SNAT策略规则图3.0](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS032.png)
+![SNAT策略规则图3.0](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-026.png)
 
 <p align="center">SNAT策略规则【3.0】</p>
 
@@ -113,7 +113,7 @@ iptables -A INPUT -i eth1 -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEP
 Iptables –t nat -A PREROUTING -p tcp -m tcp --dport 8888 -j DNAT --to-destination 172.16.0.4:22
 ```
 
-![DNAT策略规则图2.0](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS033.png)
+![DNAT策略规则图2.0](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-026.png)
 
 <p align="center"> DNAT策略规则【2.0】</p>
 

@@ -1,28 +1,28 @@
 # NAT网关网络安全方案
 
 ## 概述
-NAT网关是通过定制安全策略允许到达与其相关联的云物理服务器（简称CPS）的入站流量，以及允许离开云物理服务器的出站流量。默认情况下，NAT网关（拒绝）所有流量。NAT为云物理服务器CPS提供有状态的防火墙，能够指定并记住为发送或接收信息包所建立的连接的状态，是一套用来设置、维护和检查云物理服务器外网通信的安全机制。
+NAT网关是通过定制安全策略允许到达与其相关联的分布式云物理服务器（简称DCPS）的入站流量，以及允许离开分布式云物理服务器的出站流量。默认情况下，NAT网关（拒绝）所有流量。NAT为分布式云物理服务器DCPS提供有状态的防火墙，能够指定并记住为发送或接收信息包所建立的连接的状态，是一套用来设置、维护和检查分布式云物理服务器外网通信的安全机制。
 
 ## 应用场景介绍
-内网的CPS访问公网，仅需要一台云物理服务器有一个公网和一个内网IP，其他的云物理服务器都只需一个内网IP，通过这台有公网IP的服务器做NAT网关，就可以实现所有的云物理服务器访问公网，用户还可以按照业务需要，仅仅允许特定的云物理服务器访问公网。
+内网的DCPS访问公网，仅需要一台分布式云物理服务器有一个公网和一个内网IP，其他的分布式云物理服务器都只需一个内网IP，通过这台有公网IP的服务器做NAT网关，就可以实现所有的分布式云物理服务器访问公网，用户还可以按照业务需要，仅仅允许特定的分布式云物理服务器访问公网。
 
-同理，公网访问内网的CPS，通过这台有公网IP的服务器做NAT网关，映射相应的IP和端口号，就可以实现公网访问CPS的业务应用系统或远程管理CPS.
+同理，公网访问内网的DCPS，通过这台有公网IP的服务器做NAT网关，映射相应的IP和端口号，就可以实现公网访问DCPS的业务应用系统或远程管理DCPS.
 
-通过NAT网关，简化了网络架构，降低了公网IP的数量，增强了内网CPS和业务应用系统的网络安全。
+通过NAT网关，简化了网络架构，降低了公网IP的数量，增强了内网DCPS和业务应用系统的网络安全。
 
 ## 网络架构示意图
 
 ![网络架构示意图](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-001.png)
 
 ## 配置方案
-配置命令的IP信息都是模拟的，请以购买的云物理服务器的IP信息替换。
+配置命令的IP信息都是模拟的，请以购买的分布式云物理服务器的IP信息替换。
 
 
-**注意**：请谨慎关闭SSH登录22端口，关闭22端口会造成您不可从外部访问NAT网关和云物理服务器！
+**注意**：请谨慎关闭SSH登录22端口，关闭22端口会造成您不可从外部访问NAT网关和分布式云物理服务器！
 
-### 内网CPS访问公网的配置方案
+### 内网DCPS访问公网的配置方案
 
-#### 修改云物理服务器
+#### 修改分布式云物理服务器
 
 1、通过NAT网关，SSH登录内部Server ssh root@172.16.0.4 （密码是购买时手动设置的密码）
 
@@ -36,7 +36,7 @@ NAT网关是通过定制安全策略允许到达与其相关联的云物理服�
 
 <p align="center">路由信息【图1.1】</p>
 
-3、修改云物理服务器为NAT网关的内网IP（如172.16.0.3）：
+3、修改分布式云物理服务器为NAT网关的内网IP（如172.16.0.3）：
 
 vim /etc/sysconfig/network-scripts/ifcfg-eth0,添加一条`GATEWAY=172.16.0.3`，保存退出wq，重启服务生效service network restart.
 
@@ -80,7 +80,7 @@ vim /etc/sysconfig/network-scripts/ifcfg-eth0,添加一条`GATEWAY=172.16.0.3`�
 
 <p align="center">forward转发规则【图2.1】</p>
 
-3、配置SNAT（内部CPS通过NAT网关访问公网）：
+3、配置SNAT（内部DCPS通过NAT网关访问公网）：
 
 ```
 iptables -t nat -A POSTROUTING -s 172.16.0.0/16 -o eth1 -j SNAT --to-source 103.37.46.14
@@ -94,7 +94,7 @@ iptables -t nat -A POSTROUTING -s 172.16.0.0/16 -o eth1 -j SNAT --to-source 103.
 
 service iptables save
 
-### 公网访问CPS的配置方案
+### 公网访问DCPS的配置方案
 
 1、添加filter安全规则：
 
@@ -106,7 +106,7 @@ iptables -A INPUT -i eth1 –p udp -m state --state NEW -m tcp --dport 123 -j AC
 iptables -A INPUT -i eth1 -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
 ```
 
-2、	配置DNAT（公网通过NAT网关访问云物理服务器）
+2、	配置DNAT（公网通过NAT网关访问分布式云物理服务器）
 将TCP 8888端口号，映射到CPS的SSH 22端口。
 
 ```

@@ -36,7 +36,7 @@
 用户可以在创建分布式云物理服务器时选择购买或不购买弹性公网IP。购买时勾选弹性公网IP，则由系统自动分配，用户不可修改弹性公网IP。
 
 用户可选择1-200Mbps的公网带宽速率，并可在创建后做升配操作。
-具体操作步骤参见[调整公网带宽](../Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md)章节。
+具体操作步骤参见[修改公网带宽](../Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md)章节。
 
 - 配置服务器基本信息：
 配置服务器名称、描述、操作系统密码。

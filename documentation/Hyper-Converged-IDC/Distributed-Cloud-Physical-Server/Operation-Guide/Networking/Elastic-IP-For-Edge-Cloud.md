@@ -73,7 +73,7 @@
 ## 绑定弹性公网IP
 
 打开控制台，在左侧导航栏依次点击分布式云物理服务器->私有网络实例，进入私有网络实例列表页，选择私有网络实例，点击操作中的 **绑定弹性公网IP** 按钮，弹框显示可绑定的EIP，选择即可完成绑定。
-![物理机绑定eip](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-011.png)<br/>
+![物理机绑定eip](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-0111.png)<br/>
 
 另外，打开控制台，在左侧导航栏依次点击分布式云物理服务器->弹性公网IP，点击操作中的 **绑定资源** 按钮，弹框选择所要绑定的分布式云物理服务器，选择即可完成绑定。
 ![eip绑定物理机](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-010.png)

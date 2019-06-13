@@ -9,7 +9,7 @@
 
 1、确认是否为服务器硬件故障。分布式云物理服务器提供独立的带外网络的硬件监控，在页面直观地展示服务器CPU、内存、硬盘、网卡的在位状态。正常状态下的页面如下图所示。
 
-![监控页面](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-032.png)
+![性能监控](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-032.png)
 
 当发现硬件硬件故障后，将故障硬件以及服务器id等信息提交至工单，或者致电客服4006151212。
 

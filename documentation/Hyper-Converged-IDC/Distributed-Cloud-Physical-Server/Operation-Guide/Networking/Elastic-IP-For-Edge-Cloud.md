@@ -61,7 +61,7 @@
 打开控制台，在左侧导航栏依次点击分布式云物理服务器->弹性公网IP，进入弹性公网IP列表页，点击 **申请** ，弹框如下图：<br/>
 
 根据需求选择 **节点**，运营商，带宽计费模式，线路类型，带宽上限，购买时长和数量，点击 **确定** ，即可创建1个弹性公网IP。
-![创建eip](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-008.png)
+![创建eip](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-0088.png)
 
 ## 查看弹性公网IP
 

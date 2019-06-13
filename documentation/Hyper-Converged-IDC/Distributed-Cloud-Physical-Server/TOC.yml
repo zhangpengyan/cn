@@ -106,8 +106,8 @@
     status: 0
   - name: 问题排查
     items:
-    - name: 创建云物理服务器失败
-      href: Troubleshooting/Create-Cloud-Physical-Server-Failed.md
+    - name: 创建分布式云物理服务器失败
+      href: Troubleshooting/Create-Distributed-Cloud-Physical-Server-Failed.md
     - name: 服务器状态为错误
       href: Troubleshooting/Server-State-Wrong.md
   - name: 常见问题

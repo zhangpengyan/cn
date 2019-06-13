@@ -6,4 +6,4 @@
 
 - 下面以创建实例为例，选择节点和运营商，点击“创建”按钮，跳转到创建页面。
 
-![创建分布式列表](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/cn-listpage-20181229.png)
+![创建分布式列表](https://github.com/jdcloudcom/cn/blob/cn-distributed-cloud-physical-service/documentation/Hyper-Converged-IDC/Distributed-Cloud-Physical-Server/Image/DCPS-002.png)

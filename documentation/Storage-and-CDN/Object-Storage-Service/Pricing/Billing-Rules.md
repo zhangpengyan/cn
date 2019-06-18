@@ -1,6 +1,36 @@
-# 计费规则
+# 计费说明
+
+本文主要介绍京东云对象存储 OSS 服务费用的各项组成部分及计费方式，您可以通过本文了解 OSS 服务费用收取详情。
+
+* [计费方式](Billing-Rules#user-content-1)
+* [费用组成](Billing-Rules#user-content-2)
+* [存储费用](Billing-Rules#user-content-3)
+* [流量费用](Billing-Rules#user-content-4)
+* [请求费用](Billing-Rules#user-content-5)
+* [数据取回费用](Billing-Rules#user-content-6)
+* [云端数据处理费用](Billing-Rules#user-content-7)
+
+## 计费方式
+
+<div id="user-content-1"></div>
+
+京东云对象存储所有地域均采用按量后付费的计费模式，根据用户实际用量按天推送账单，每天按照账单收取前一天的费用。
+
+**说明**：
+标准存储类型为您在全地域提供了免费额度，请参见[免费额度](https://docs.jdcloud.com/cn/object-storage-service/free-tier-for-oss)。
+
+### 费用组成
+
+<div id="user-content-2"></div>
+
+OSS 服务费用由存储费用、流量费用、请求费用、数据取回费用、云端处理费用几部分组成：
+
+![计费组成](../../../../image/Object-Storage-Service/OSS-156.png)
+
 
 ## 计费项
+
+OSS服务费用由存储费用、流量费用、请求费用、数据取回费用、云端数据处理费用几部分组成：
 
 <table>
 <tr>

@@ -1,4 +1,4 @@
-#  京东云存储类型介绍
+#  京东云对象存储类型介绍
 OSS提供标准、归档、低冗余三种存储类型，全面覆盖从热到冷的各种数据存储场景。
 **说明**：
 各存储类型的定价信息请参见[价格总览](https://docs.jdcloud.com/cn/object-storage-service/price-overview),具体的计费方式请参见[计费规则](https://docs.jdcloud.com/cn/object-storage-service/billing-rules)。

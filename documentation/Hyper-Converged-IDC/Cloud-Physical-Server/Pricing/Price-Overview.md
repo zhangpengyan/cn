@@ -112,8 +112,7 @@
 <tr>
 <td rowspan="12">BGP</td>
 <td rowspan="6">华北-北京<br/>
-华南-广州<br/>
-华东-上海</td>
+</td>
 <td>1Mbps</td>
 <td>23</td>
 <td>276</td>

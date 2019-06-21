@@ -18,6 +18,6 @@ items:
     - name: 数据全生命周期安全保障
       href: Data-security-practices/Data-life-cycle.md
     - name: 安全运营保障
-      href：Data-security-practices/Security-Operation.md
+      href: Data-security-practices/Security-Operation.md
 - name: 下载链接
   href: Download-Link/Related-Resources.md

@@ -58,7 +58,7 @@
 		    <td align="center">256G（8*32G）DDR4</td>
 		    <td >1*960GB（SSD）+<br/>7*960G（SSD）</td>
 		    <td align="center">独立管理口1块+<br/>2*10GE网卡</td>
-		<td align="center">5+1hotspare</td>
+		<td align="center">RAID5+1hotspare</td>
     </tr>
     <tr>   
         <td align="center"><B>标准存储型<br/>（cps.s.normal）<B></td>

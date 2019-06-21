@@ -82,7 +82,7 @@
 		    <td align="center">256G（8*32G）DDR4</td>
 		    <td >1*480GB（SSD）+<br/>12*6000G +<br/>1*4TB（NVME）</td>
 		    <td align="center">独立管理口1块+<br/>2*10GE网卡</td>
-		<td align="center">RAID 5+1 hotspare + NO RAID</td>
+		<td align="center">RAID 5+1hotspare + NO RAID</td>
     </tr>
 </table>
 

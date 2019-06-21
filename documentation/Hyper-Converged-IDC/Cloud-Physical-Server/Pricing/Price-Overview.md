@@ -12,7 +12,7 @@
 	    <td colspan="2"><B>包月价格（元）</B></td>
 	    <tr>
 		<td><B>华北-北京</B></td>
-                <td><B>华东宿迁</B></td>
+                <td><B>华东-宿迁</B></td>
             </tr>
    </tr>
     <tr>   
@@ -32,25 +32,25 @@
 		<td >计算效能型Ⅰ（二代）</td>
 		<td >cps.c2.perf1</td>
 		<td >8200</td>
-	        <td >6150</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 		<td >计算效能型Ⅱ</td>
 		<td >cps.c.perf2</td>
 		<td >9000</td>
-	        <td >6750</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 		<td >计算效能型Ⅱ内存型</td>
 		<td >cps.c.perf2.memory</td>
 		<td >9900</td>
-	        <td >7425</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 		<td >计算效能型Ⅲ</td>
 		<td >cps.c.perf3</td>
 		<td >5600</td>
-	        <td >4200</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 	    <td rowspan="3">存储型</td>
@@ -63,13 +63,13 @@
 		<td >标准存储型（二代）</td>
 		<td >cps.s2.normal</td>
 		<td >6500</td>
-	        <td >4875</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 		<td >存储效能型Ⅰ</td>
 		<td >cps.s.perf1</td>
 		<td >6600</td>
-	        <td >4950</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 		<td rowspan="3">GPU型</td>
@@ -82,13 +82,13 @@
 		<td >GPUⅡ</td>
 		<td >cps.gpu.2</td>
 		<td >19900</td>
-	        <td >14925</td>
+	        <td >--</td>
     </tr>
 	<tr>   
 		<td >GPUⅢ</td>
 		<td >cps.gpu.3</td>
 		<td >32000</td>
-	        <td >24000</td>
+	        <td >--</td>
     </tr>	
 </table>
 

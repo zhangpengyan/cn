@@ -23,15 +23,40 @@
 		<td >7000</td>
     </tr>
 	<tr>   
+		<td >计算效能型Ⅰ（二代）</td>
+		<td >cps.c2.perf1</td>
+		<td >8200</td>
+    </tr>
+	<tr>   
 		<td >计算效能型Ⅱ</td>
 		<td >cps.c.perf2</td>
 		<td >9000</td>
+    </tr>
+	<tr>   
+		<td >计算效能型Ⅱ内存型</td>
+		<td >cps.c.perf2.memory</td>
+		<td >9900</td>
+    </tr>
+	<tr>   
+		<td >计算效能型Ⅲ</td>
+		<td >cps.c.perf3</td>
+		<td >5600</td>
     </tr>
 	<tr>   
 		<td >存储型</td>
 		<td >标准存储型</td>
 		<td >cps.s.normal</td>
 		<td >4500</td>
+    </tr>
+	<tr>   
+		<td >标准存储型（二代）</td>
+		<td >cps.s2.normal</td>
+		<td >6500</td>
+    </tr>
+	<tr>   
+		<td >存储效能型Ⅰ</td>
+		<td >cps.s.perf1</td>
+		<td >6600</td>
     </tr>
 	<tr>   
 		<td rowspan="3">GPU型</td>

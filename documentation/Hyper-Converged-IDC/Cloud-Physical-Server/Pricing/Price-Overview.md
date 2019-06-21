@@ -12,7 +12,7 @@
 		<td ><B>包月价格（元）</B></td>	
     </tr>
     <tr>   
-        <td rowspan="3">计算型</td>
+        <td rowspan="6">计算型</td>
 		<td >标准计算型</td>
 		<td >cps.c.normal</td>
 		<td >6300</td>
@@ -43,7 +43,7 @@
 		<td >5600</td>
     </tr>
 	<tr>   
-		<td >存储型</td>
+	    <td rowspan="3">存储型</td>
 		<td >标准存储型</td>
 		<td >cps.s.normal</td>
 		<td >4500</td>

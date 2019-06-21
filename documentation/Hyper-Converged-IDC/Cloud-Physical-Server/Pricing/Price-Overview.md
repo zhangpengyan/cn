@@ -103,7 +103,7 @@
 <td rowspan="2"><B>线路</B></td>
 <td rowspan="2"><B>地域</B></td>
 <td rowspan="2"><B>带宽</B></td>
-<td colspan="2"><B>包年包月</B></td>
+<td colspan="2"><B>包年包月（元）</B></td>
 </tr>
 <tr>
 <td><B>元/月</B></td>

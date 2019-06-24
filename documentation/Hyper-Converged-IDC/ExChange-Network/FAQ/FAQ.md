@@ -19,4 +19,4 @@
 5.Q:控制台支持的浏览器有哪些？
 
 &nbsp;&nbsp;&nbsp;A:&nbsp;- 优先推荐chrome：31.0.1650.57以上。
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 其他浏览器的支持程度正在测试中。
+

@@ -4,7 +4,7 @@
 
 由于合规基线功能属于企业版范围，租户想拥有本功能需要申请企业版试用。
 
-登录官网-产品-主机安全，点击 企业版申请试用。
+登录官网->产品->主机安全，点击 企业版申请试用。
 [申请链接](https://www.jdcloud.com/cn/public/testApply/baseline)，
 
 ![申请试用1](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/申请试用-1.png)
@@ -25,11 +25,11 @@
 
 #### 产品功能入口
 
-进入控制台-云安全-主机安全-威胁概览  点击合规基线风险项跳转到 
+进入控制台->云安全->主机安全->威胁概览  点击合规基线风险项跳转到【合规基线】
 
 ![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png)
 
-进入控制台-云安全-主机安全-合规基线
+进入控制台->云安全->主机安全->合规基线
 
 ![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png)
 
@@ -38,5 +38,7 @@
 ![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)
 
 #### 检查结果呈现
+
+通过检查项视角呈现检查结果。（近期会上线以主机视角呈现检查结果）
 
 ![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)

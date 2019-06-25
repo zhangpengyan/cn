@@ -7,21 +7,21 @@ items:
     href: ChangeLog.md
   - name: 接口信息
     items:
-      - name: 策略管理接口
+      - name: 策略管理接口（老版本即将下线）
         items:
-          - name: addPermissionsToSubUser
+          - name: addPermissionsToSubUser（老版本即将下线）
             href: Permission-Management/addPermissionsToSubUser.md
-          - name: createPermission
+          - name: createPermission（老版本即将下线）
             href: Permission-Management/createPermission.md
-          - name: describePermissionDetail
+          - name: describePermissionDetail（老版本即将下线）
             href: Permission-Management/describePermissionDetail.md
-          - name: describePermissions
+          - name: describePermissions（老版本即将下线）
             href: Permission-Management/describePermissions.md
-          - name: describeSubUserPermissions
+          - name: describeSubUserPermissions（老版本即将下线）
             href: Permission-Management/describeSubUserPermissions.md
-          - name: removePermissionOfSubUser
+          - name: removePermissionOfSubUser（老版本即将下线）
             href: Permission-Management/removePermissionOfSubUser.md
-          - name: updatePermission
+          - name: updatePermission（老版本即将下线）
             href: Permission-Management/updatePermission.md
       - name: 用户管理接口
         items:

@@ -1,1 +1,66 @@
+  name: 交换网络
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 产品规格
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md 
+      - name: 续费流程
+        href: Pricing/Renew-Process.md
+  - name: 入门指南
+    items:
+      - name: 入门指南概述
+        href: Getting-Started/Getting-Started.md   
+  - name: 操作指南
+    items:
+      - name: 使用须知
+        href: Operation-Guide/Terms-and-Conditions.md
+      - name: 创建物理端口
+        href: Operation-Guide/Create-Physical-Port.md
+      - name: 创建虚拟链路
+        href: Operation-Guide/Create-Virtual-Link.md
+      - name: 查看物理端口
+        href: Operation-Guide/Check-Physical-Port.md
+      - name: 查看虚拟链路
+        href: Operation-Guide/Check-Virtual-Link.md        
+      - name: 删除物理端口
+        href: Operation-Guide/Delete-Physical-Port.md
+      - name: 删除虚拟链路
+        href: Operation-Guide/Delete-Virtual-Link.md     
+  - name: 最佳实践
+    items:
+    - name: 物理云接入
+      href: Best-Practices/Cloud-Physical-Linkin.md
+    - name: 用户机房接入
+      href: Best-Practices/User-IDC-Linkin.md 
+  - name: 常见问题
+    href: FAQ/FAQ.md      
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md   
 

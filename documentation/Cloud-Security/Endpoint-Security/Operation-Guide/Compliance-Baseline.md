@@ -37,6 +37,6 @@
 
 ![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)
 
-#### 查看检查结果
+#### 检查结果呈现
 
-
+![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)

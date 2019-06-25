@@ -7,10 +7,19 @@
 
 安全验证手机的初始值，是注册京东云账号时填写的手机号。当管理人员手机换号或发生人员变动时，需要即时更新安全验证手机。修改安全验证手机的方式如下。
 
-第一步，在账户管理中心，选择安全设置；
-第二步，点击修改安全验证手机；
+第一步：在账户管理中心，选择安全设置
+第二步：点击修改安全验证手机
 
 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新安全设置.png)
 
-第三步，在进入修改前，选择通过安全验证手机或安全验证邮箱对操作人身份进行验证；
+第三步：在进入修改前，选择通过安全验证手机或安全验证邮箱（未验证的邮箱不能用于身份验证）对操作人身份进行验证
 
+![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新身份验证.png)
+
+第四步：修改安全验证手机
+
+![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新设置手机.png)
+
+第五步：完成修改
+
+![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新完成修改.png)

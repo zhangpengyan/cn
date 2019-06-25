@@ -1,21 +1,23 @@
-# deleteRole
+# attachRolePolicy
 
 
 ## 描述
-删除角色
+为角色绑定策略
 
 ## 请求方式
-DELETE
+POST
 
 ## 请求地址
-https://iam.jdcloud-api.com/v1/role/{roleName}
+https://iam.jdcloud-api.com/v1/role/{roleName}:attachRolePolicy
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**roleName**|String|True| |角色名称|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**policyName**|String|True| |策略名称|
 
 
 ## 返回参数

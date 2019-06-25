@@ -1,30 +1,22 @@
-# createRole
+# describeRole
 
 
 ## 描述
-创建角色
+查询角色详情
 
 ## 请求方式
-POST
+GET
 
 ## 请求地址
-https://iam.jdcloud-api.com/v1/role
+https://iam.jdcloud-api.com/v1/role/{roleName}
 
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**roleName**|String|True| |角色名称|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**createRoleInfo**|CreateRoleInfo|True| |角色信息|
+无
 
-### CreateRoleInfo
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**path**|String|False| |角色路径|
-|**roleName**|String|True| |角色名，支持4~64位的字母，数字以及-和_, 以字母开头|
-|**type**|Integer|True| |角色类型，3-服务角色，4-用户角色|
-|**assumeRolePolicyDocument**|String|True| |角色信任关系策略|
-|**description**|String|False| |描述，0~256个字符|
-|**maxSessionDuration**|Integer|False| |最大会话时长3600~43200秒，默认3600秒|
 
 ## 返回参数
 |名称|类型|描述|

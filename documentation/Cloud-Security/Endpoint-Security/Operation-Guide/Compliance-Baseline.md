@@ -2,6 +2,8 @@
 
 ### 企业版申请
 
+由于合规基线功能属于企业版范围，租户想拥有本功能需要申请企业版试用。
+
 登录官网-产品-主机安全，点击 企业版申请试用。
 [申请链接](https://www.jdcloud.com/cn/public/testApply/baseline)，
 
@@ -10,7 +12,6 @@
 ![申请试用2](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/申请试用-2.png)
 
 等待后台审批。审批完成后，该账号下主机安全产品菜单中就会显示合规基线和资产管理。
-
 
 ### 合规基线
 

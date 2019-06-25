@@ -1,14 +1,14 @@
-# enableSubUserAccessKey
+# disableSubUserAccessKey
 
 
 ## 描述
-启用子用户AccessKey
+禁用子用户的AccessKey
 
 ## 请求方式
 PUT
 
 ## 请求地址
-https://iam.jdcloud-api.com/v1/subUser/{subUser}/accessKey/{accessKey}:enable
+https://iam.jdcloud-api.com/v1/subUser/{subUser}/accessKey/{accessKey}:disable
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

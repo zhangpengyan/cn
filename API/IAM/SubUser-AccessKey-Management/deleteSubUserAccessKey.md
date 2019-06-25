@@ -1,14 +1,14 @@
-# enableSubUserAccessKey
+# deleteSubUserAccessKey
 
 
 ## 描述
-启用子用户AccessKey
+删除子用户的AccessKey
 
 ## 请求方式
-PUT
+DELETE
 
 ## 请求地址
-https://iam.jdcloud-api.com/v1/subUser/{subUser}/accessKey/{accessKey}:enable
+https://iam.jdcloud-api.com/v1/subUser/{subUser}/accessKey/{accessKey}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

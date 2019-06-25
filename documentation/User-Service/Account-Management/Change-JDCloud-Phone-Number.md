@@ -14,7 +14,7 @@
 
 第三步：在进入修改前，选择通过安全验证手机或安全验证邮箱（未验证的邮箱不能用于身份验证）对操作人身份进行验证
 
-![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新身份验证.png)
+![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新验证身份.PNG)
 
 第四步：修改安全验证手机
 

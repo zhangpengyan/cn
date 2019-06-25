@@ -1,14 +1,14 @@
-# updateGroup
+# attachGroupPolicy
 
 
 ## 描述
-修改用户组
+为用户组绑定策略
 
 ## 请求方式
-PUT
+POST
 
 ## 请求地址
-https://iam.jdcloud-api.com/v1/group/{groupName}
+https://iam.jdcloud-api.com/v1/group/{groupName}:attachGroupPolicy
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,12 +17,8 @@ https://iam.jdcloud-api.com/v1/group/{groupName}
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**updateGroupInfo**|UpdateGroupInfo|True| | |
+|**policyName**|String|True| |策略名称|
 
-### UpdateGroupInfo
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**description**|String|False| |用户组描述|
 
 ## 返回参数
 |名称|类型|描述|

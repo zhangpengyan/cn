@@ -1,14 +1,14 @@
-# updateGroup
+# removeSubUserFromGroup
 
 
 ## 描述
-修改用户组
+将子用户从组中删除
 
 ## 请求方式
-PUT
+DELETE
 
 ## 请求地址
-https://iam.jdcloud-api.com/v1/group/{groupName}
+https://iam.jdcloud-api.com/v1/group/{groupName}:removeSubUserFromGroup
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,12 +17,8 @@ https://iam.jdcloud-api.com/v1/group/{groupName}
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**updateGroupInfo**|UpdateGroupInfo|True| | |
+|**subUser**|String|True| |子用户名|
 
-### UpdateGroupInfo
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**description**|String|False| |用户组描述|
 
 ## 返回参数
 |名称|类型|描述|

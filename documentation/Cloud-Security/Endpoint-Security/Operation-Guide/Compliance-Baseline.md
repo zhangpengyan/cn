@@ -7,9 +7,9 @@
 登录官网->产品->主机安全，点击 企业版申请试用。
 [申请链接](https://www.jdcloud.com/cn/public/testApply/baseline)，
 
-![申请试用1](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/申请试用-1.png)
+![申请试用1](../../../../image/Endpoint-Security/申请试用-1.png)
 
-![申请试用2](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/申请试用-2.png)
+![申请试用2](../../../../image/Endpoint-Security/申请试用-2.png)
 
 等待后台审批。审批完成后，该账号下主机安全产品菜单中就会显示合规基线和资产管理。
 
@@ -27,18 +27,25 @@
 
 进入控制台->云安全->主机安全->威胁概览  点击合规基线风险项跳转到【合规基线】
 
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png)
+![](../../../../image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png)
 
 进入控制台->云安全->主机安全->合规基线
 
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png)
+![](../../../../image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png)
 
 #### 新建检查任务
 
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)
+![](../../../../image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)
+
+#### 执行任务
+
+可忽略单个检查项，取消忽略单个检查项
+![](../../../../image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-7.png)
 
 #### 检查结果呈现
 
 通过检查项视角呈现检查结果。（近期会上线以主机视角呈现检查结果）
 
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)
+![](../../../../image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-5.png)
+
+![](../../../../image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-6.png)

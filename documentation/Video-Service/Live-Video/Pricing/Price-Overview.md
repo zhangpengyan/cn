@@ -57,6 +57,19 @@
     <td>0.05 </td>
 </tr>
 <tr>
+    <td rowspan="3">H.265<br/>
+    <td>360P ( 640 x 360 ) （含）及以下 </td>
+    <td>0.10 </td>
+</tr>
+<tr>
+    <td>360P( 640 x 360 ) -720P( 1280 x 720 ）（含） </td>
+    <td>0.15</td>
+</tr>
+<tr>
+    <td>720P( 1280 x 720 ）-1080P( 1920 x 1080 ）（含） </td>
+    <td>0.30</td>
+</tr>    
+<tr>
     <td>转封装</td>
     <td>Rtmp、Hls、flv 提供错误检测 </td>
     <td>FREE </td>

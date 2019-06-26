@@ -21,3 +21,7 @@
             href: Message-Content-APIs/queryOneTemplate.md
           - name: queryTemplateList
             href: Message-Content-APIs/queryTemplateList.md
+      - name: 套餐包
+        items:
+          - name: queryPackageRemainder
+            href: Package-APIs/queryPackageRemainder.md

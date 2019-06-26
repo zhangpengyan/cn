@@ -137,7 +137,6 @@ public class Demo {
 ![Java返回结果](../../../../image/Internet-Middleware/API-Gateway/exap_Java_return.png)
 
 
-
 ### （2）通过Python SDK调用
 
 #### 1.	解压下载的Python SDK，执行setup.py文件。

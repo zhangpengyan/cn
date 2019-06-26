@@ -10,6 +10,9 @@
 |     容器镜像仓库  |  containerregistry:deleteRegistry   |    删除注册表  |  
 |     容器镜像仓库  | containerregistry:deleteRepository   |  删除镜像仓库  | 
 |     容器镜像仓库  |  containerregistry:deleteImage   |    删除镜像 |  
+|     Pod  |   pod:deletePod    |   删除Pod  | 
+|     Kubernetes集群  |   kubernetes:deleteCluster   |   删除集群| 
+|    Kubernetes集群  |   kubernetes:deleteNodeGroup    |    删除工作节点组 | 
 
 #### 数据库与缓存
 |  **云产品**  | **接口名称** | **接口描述** |
@@ -19,6 +22,8 @@
 | 云数据库（My SQL）  |  rds:deleteInstance    |  删除实例   | 
 |     云数据库（SQL Server） |  rds:deleteDatabase    |    删除数据库  |  
 |     云数据库（SQL Server） |  rds:deleteInstance    |    删除实例|  
+|     云数据库（SQL Server） | rds:restoreDatabaseFromFile   |  单库上云导入|  
+|     云数据库（SQL Server） |rds:restoreDatabaseFromBackup |  单库恢复|  
 |     云数据库MongoDB |  mongodb:deleteInstance   |    删除实例|  
 |     DRDS |  drds:deleteInstance   |    删除实例|  
 |     云缓存|  redis:deleteCacheInstance  |    删除单个缓存Redis实例|  

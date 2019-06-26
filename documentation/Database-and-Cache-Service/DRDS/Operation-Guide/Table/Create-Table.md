@@ -1,37 +1,24 @@
 # 创建表
 
-**创建表有两个步骤(与删除表的顺序相反）：**
+原先DRDS创建表时，需要先通过控制台定义表的拆分信息，然后在通过SQL创建表。 这种方式操作相对麻烦，用户需要分别通过控制台和SQL进行操作。因此DRDS新版本对此进行了改进，可直接通过SQL语句创建拆分表。
 
-1）登录控制台，在【表管理】中，创建表的路由信息
 
-2）登录到DRDS中执行"CREATE TABLE"语句
-
-**注意：上述两个操作的顺序必须严格按照先登录控制台创建，再登录DRDS执行 "CREATE TABLE" 语句的顺序**
-
-**1. 进入【表管理】页面**
-
-选择【库管理】-> 【表管理】页面，点击 **【创建表】**
-
-![表列表](../../../../../image/DRDS/table-list.png)
-
-**2. 创建表路由信息**
-
-**表名称：** 表名称，名称的规则在控制台上有提示
-
-**类型：** 支持“拆分”和“不拆分两种类型”
-
-- 拆分：即该表会实际对应到多个MySQL实例上的多个表
-
-- 不拆分：不对该表进行任何拆分，还是对应1个MySQL实例上的1个表
-
-**拆分字段：** 按照哪个字段进行数据的拆分
-
-**请注意： 由于数据会被拆分到多个数据库的表中，因此如果Unique Index和拆分字段不一致时，由，Unique约束可能不会生效**
-
-**字段类型：** 选择int或者string，后续会开放更多类型的选择
-
-![创建表](../../../../../image/DRDS/create-table.png)
-
-**3. 登录到DRDS中执行"CREATE TABLE"语句**
-
-通过客户端工具链接到DRDS中，执行"CREATE TABLE"语句创建数据表，DRDS会根据前面创建的表的路由信息自动在后端多个MySQL实例上创建实际的表
+## 创建表的SQL语法
+```SQL
+CREATE TABLE table_name
+ (create_definition,...)
+ [DRDS partition options]
+ 
+ DRDS partition options:
+ dbpartition by
+     INT_MOD([column_name])    -- 整型字段的拆分
+     | STRING_HASH([column_name])    -- 字符字段的拆分，
+     | YYYYMM([column_name]) | YYYY([column_name]) START([start_date]) period [num]  -- 时间字段的拆分，按年或月拆分，从start_date开始，每[num]个月一个分表     
+```
+   
+## 拆分函数
+目前DRDS支持以下的拆分函数，函数名均不区分大小写
+- INT_MOD(): 对整型字段进行拆分
+- STRING_HASH()：对字符字段进行拆分
+- YYYYMM()：对时间，日期字段进行拆分，按月拆分
+- YYYY()：时间，日期字段进行拆分，按年拆分

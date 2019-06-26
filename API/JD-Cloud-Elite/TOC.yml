@@ -22,4 +22,12 @@
       - name: 获取云存服务信息            
         items:
           - name: getStoreService
-            href: Elite-CloudStore-APIs/getStoreService.md            
+            href: Elite-CloudStore-APIs/getStoreService.md 
+      - name: 查询价格            
+        items:
+          - name: jdxQueryPrice
+            href: JDX-Price-APIs/jdxQueryPrice.md
+      - name: 上报订单            
+        items:
+          - name: jdxReportOrder
+            href: JDX-Order-APIs/jdxReportOrder.md

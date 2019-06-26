@@ -34,7 +34,7 @@
 
 在 Python 运行环境中，读取环境变量的方法为：
 
-```
+```Python
 import os
 value = os.environ.get('key')
 print(value)

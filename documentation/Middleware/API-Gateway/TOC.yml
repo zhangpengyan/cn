@@ -37,8 +37,8 @@ items:
   items:
     - name: 概述
       herf: Getting-Started/Getting-Started.md
-    - name: 在控制台中使用示例构建API
-      herf: Getting-Started/example_console.md
+    - name: 使用签名密钥的方式构建API
+      herf: Getting-Started/example_SignatureKey.md
     - name: 使用Function函数构建API
       herf: Getting-Started/example_function.md
     - name: 使用订阅密钥的方式构建API
@@ -63,6 +63,14 @@ items:
           herf: Operation-Guide/Create-API/Create-API.md
         - name: API高级配置
           herf: Operation-Guide/Create-API/Adv-API.md
+    - name: 后端服务
+      items:
+        - name: HTTP/HTTPS后端服务
+          herf: Operation-Guide/Back-end-Services/Back-end-Services-HTTP.md
+        - name: Mock后端服务
+          herf: Operation-Guide/Back-end-Services/Back-end-Services-Mock.md
+        - name: 函数后端服务
+          herf: Operation-Guide/Back-end-Services/Back-end-Services-Function.md
     - name: 访问授权
       items:
         - name: API的访问授权

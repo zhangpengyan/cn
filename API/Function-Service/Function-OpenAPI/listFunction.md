@@ -17,6 +17,9 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
+|**listAll**|Boolean|True| |是否返回所有函数|
+|**pageNumber**|Integer|False| |页码|
+|**pageSize**|Integer|False| |分页大小|
 |**filters**|Filter[]|False| |functionId -函数ID，精确匹配，支持多个<br>functionName  - 函数名称，模糊匹配，支持单个<br>|
 
 ### Filter
@@ -35,7 +38,12 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**data**|FunctionSpec[]| |
+|**data**|ListFunctionResult| |
+### ListFunctionResult
+|名称|类型|描述|
+|---|---|---|
+|**functions**|FunctionSpec[]|函数列表|
+|**totalCount**|Integer|函数总数|
 ### FunctionSpec
 |名称|类型|描述|
 |---|---|---|

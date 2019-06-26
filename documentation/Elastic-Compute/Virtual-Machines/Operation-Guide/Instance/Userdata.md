@@ -74,6 +74,7 @@ systemctl status jcs-agent-core.service
 ```
  ps -ef|grep MonitorPlugin
 ```
+
 ![](../../../../../image/vm/Operation-Guide-Instance-userdata2.png)
 
 ### Windows系统： <br>
@@ -86,6 +87,7 @@ systemctl status jcs-agent-core.service
 ```
 wmic process where caption="MonitorPlugin.exe" get caption,commandline /value
 ```
+
 ![](../../../../../image/vm/Operation-Guide-Instance-userdata4.png)
 
       请注意：

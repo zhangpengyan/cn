@@ -60,7 +60,7 @@ Serverless 服务的突出的优点就是可弹性伸缩所需资源，函数服
 
 **6. Function函数是否支持版本控制？**
 
-Function函数支持版本控制。默认情况下，每个函数拥有唯一的当前版本（LATEST）的代码。函数客户端可调用特定的版本或获取最新的实现，请参考[版本管理](Operation-Guide/version.md)。
+Function函数支持版本控制。默认情况下，每个函数拥有唯一的当前版本（LATEST）的代码。函数客户端可调用特定的版本或获取最新的实现，请参考[版本管理](Operation-Guide/version-management/manegement.md)。
 
  
 

@@ -23,11 +23,16 @@ items:
    items:
       - name: 部署存储网关
         href: Operation-Guide/Installation-Configuration.md
-      - name: 使用存储网关
+      - name: 使用NFS访问
         href: Operation-Guide/Use-Storage-Gateway.md
+      - name: 使用FTP访问
+        href: Operation-Guide/Use-FTP.md     
       - name: 运维指南
         href: Operation-Guide/Operation-Maintenance.md
  - name: 相关资源
    items:
       - name: 文档发布历史
         href: Related-Resources/Document-History.md
+      - name: 镜像版本历史
+        href: Related-Resources/Images-History.md
+        

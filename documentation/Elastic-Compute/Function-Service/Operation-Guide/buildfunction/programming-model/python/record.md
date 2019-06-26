@@ -13,7 +13,7 @@
 
 您可以通过使用`logging`模块将信息写入函数日志，示例如下： 
 
-```
+```Python
 import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -30,7 +30,7 @@ return 'function is worked'
 
 您可以通过`print`语句打印函数日志，示例如下：
 
-```
+```Python
 from __future__ import print_function
 def lambda_handler(event, context):
   print('it is running')`

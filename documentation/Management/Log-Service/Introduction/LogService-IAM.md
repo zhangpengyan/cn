@@ -16,7 +16,7 @@
 
 ![image](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogserviceIAM/LS02.png)
 
-### 2.2.为子账户授权
+### 2.为子账户授权
 
 进入“管理-->访问控制-->用户管理”，选择指定的子账户，点击“授权”，可为子账户授予若干策略，策略的管理在“管理-->访问控制-->策略管理”。
 默认策略有 管理员、只读 两种，可支持自定义策略。

@@ -84,7 +84,9 @@
           - name: 主备切换
             href: Operation-Guide/Instance/Failover-Instance.md
           - name: 域名切换
-            href: Operation-Guide/Instance/Exchanged-DNS.md           
+            href: Operation-Guide/Instance/Exchanged-DNS.md          
+          - name: 迁移可用区
+            href: Operation-Guide/Instance/Migrate-AZ.md                
           - name: 重启实例
             items:
             - name: 重启 MySQL

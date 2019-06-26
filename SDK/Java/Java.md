@@ -22,7 +22,7 @@
 <dependency>
     <groupId>com.jdcloud.sdk</groupId>
     <artifactId>vm</artifactId>
-    <version>0.6.1</version>
+    <version>1.0.8</version>
 </dependency>
 ```
 您还可以下载sdk源代码自行使用，源代码地址为：[Java SDK](https://github.com/jdcloud-api/jdcloud-sdk-java)。

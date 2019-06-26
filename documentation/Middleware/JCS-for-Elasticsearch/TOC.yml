@@ -101,8 +101,6 @@
        href: Best-Practices/performance.md
   - name: 常见问题
     href: FAQ/FAQ.md
-  - name: API参考
-    href: API-Reference/API-Reference.md
   - name: 相关资源
     items:
     - name: 文档历史记录

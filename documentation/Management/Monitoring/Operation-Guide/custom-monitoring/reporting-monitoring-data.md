@@ -159,7 +159,7 @@ fail：
 
 配置KEY、所在区域region-id和网关地址endpoint，编辑 /root/.jdc/config
 ```
-vi /root/.jdc/config
+vi ~/.jdc/config
 ```
 
 ```
@@ -185,6 +185,8 @@ timeout = 20
 ```
 jdc monitor put-metric-data --input-json '{"metricDataList": [{"namespace": "test_ns","metric": "vm.cpu.usage1","dimensions": {"host": "10.10.10.23","datacenter": "cn_north_1"},"timestamp": 1544425695,"type": 1,"values": {"value": "12342213"}}]}'
 ```  
+注意：仅能上报近1周的监控数据，请将上边示例中timestamp 中的时间戳修改为你当前上报的UNIX时间。
+
 返回成功示例如下：
 ```
 {

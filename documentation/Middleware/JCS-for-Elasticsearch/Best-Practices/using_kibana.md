@@ -2,8 +2,48 @@
 Kibana是一个开源的数据分析和可视化的平台，用户可以使用Kibana查询和分析存储在云搜索Elastisearch中的数据。
 ![查询1](https://github.com/jdcloudcom/cn/blob/Elasticsearch/image/Internet-Middleware/JCS%20for%20Elasticsearch/kibana访问设置-01.png)
 
+### 存储数据
+#### 定义索引mapping
+进入ES控制台，在实例列表页单击kibana，跳转到kibana web页面，点击左侧导航栏的Dev Tools进入页面可进行数据的存储。索引名称blog_index，类型名称为user，字段title和name的类型均为text，字段age的类型为integer。然后就可以通过Management->Index Patterns添加index pattern。
+![查询1](https://github.com/jdcloudcom/cn/blob/Elasticsearch/image/Internet-Middleware/JCS%20for%20Elasticsearch/kibana_save1.png)
+```
+PUT blog_index
+{
+
+"mappings": {
+
+"user": {
+
+"properties": {
+
+"title": { "type": "text" },
+
+"name": { "type": "text" },
+
+"age": { "type": "integer" }
+
+}
+}
+}
+}
+```
+#### 添加索引文档
+```
+PUT blog_index/user
+{
+
+"title": "manager",
+
+"name": "Tom Jerry",
+
+"age": 34
+
+}
+
+```
+
 ### 定义索引模式
-进入ES控制台，在实例列表页单击kibana，跳转到kibana web页面，单击左侧导航栏的Management ，选择Index Patterns，在该页面中可以定义新的索引模式。</br>
+单击左侧导航栏的Management ，选择Index Patterns，在该页面中可以定义新的索引模式。</br>
 #### 操作示例
 1.为上一步骤中的样本数据集Shakespeare定义索引“shakes*”，然后点击“Create”；</br>
 

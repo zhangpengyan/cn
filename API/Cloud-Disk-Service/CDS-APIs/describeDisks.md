@@ -22,7 +22,7 @@ https://disk.jdcloud-api.com/v1/regions/{regionId}/disks
 |**pageNumber**|Integer|False|1|页码, 默认为1, 取值范围：[1,∞)|
 |**pageSize**|Integer|False|20|分页大小，默认为20，取值范围：[10,100]|
 |**tags**|TagFilter[]|False| |Tag筛选条件|
-|**filters**|Filter[]|False| |diskId - 云硬盘ID，精确匹配，支持多个<br>diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1<br>instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个<br>instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个<br>status - 可用区，精确匹配，支持多个<br>az - 云硬盘状态，精确匹配，支持多个<br>name - 云硬盘名称，模糊匹配，支持单个<br>multiAttach - 云硬盘是否多点挂载，精确匹配，支持单个<br>encrypted - 云硬盘是否加密，精确匹配，支持单个<br>|
+|**filters**|Filter[]|False| |diskId - 云硬盘ID，精确匹配，支持多个<br>diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1<br>instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个<br>instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个<br>az - 可用区，精确匹配，支持多个<br>status - 云硬盘状态，精确匹配，支持多个<br>name - 云硬盘名称，模糊匹配，支持单个<br>multiAttach - 云硬盘是否多点挂载，精确匹配，支持单个<br>encrypted - 云硬盘是否加密，精确匹配，支持单个<br>|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|

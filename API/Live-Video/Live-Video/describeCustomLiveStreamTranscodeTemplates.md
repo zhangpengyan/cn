@@ -17,7 +17,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms
 |---|---|---|---|---|
 |**pageNum**|Integer|False|1|页码<br>- 取值范围 [1, 100000]<br>|
 |**pageSize**|Integer|False|10|分页大小<br>- 取值范围 [10, 100]<br>|
-|**filters**|Filter[]|False| |转码模板查询过滤条件:<br>  - name:   template 录制模板自定义名称<br>  - value:  如果参数为空，则查询全部<br>  - 如果为空,则表示查询该用下所有自定义的转码模板<br>|
+|**filters**|Filter[]|False| |转码模板查询过滤条件:<br>  - name:   template 转码模板自定义名称<br>  - value:  如果参数为空，则查询全部<br>  - 如果为空,则表示查询该用户下所有自定义的转码模板<br>|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|
@@ -42,8 +42,8 @@ https://live.jdcloud-api.com/v1/transcodeCustoms
 ### TranscodeInfo
 |名称|类型|描述|
 |---|---|---|
-|**videoCodeRate**|Integer|转码输出的码率值:<br>  - 取值: [200,3000]<br>  - 单位: kpbs<br>|
-|**videoFrameRate**|String|转码输出的帧率值:<br>  - 取值: 15/1、25/1、30/1、60/1<br>|
+|**videoCodeRate**|Integer|转码输出的码率值:<br>  - 取值: [1,6000]<br>  - 单位: kpbs<br>|
+|**videoFrameRate**|String|转码输出的帧率值:<br>  - 取值: [1,30]<br>|
 |**width**|Integer|转码输出视频宽度:<br>  - 取值: [100,1920]<br>  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频<br>  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频<br>|
 |**height**|Integer|转码输出视频宽度:<br>  - 取值: [100,1920]<br>  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频<br>  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频<br>|
 |**template**|String|转码模板自定义名称:<br>  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,<br>              取值要求：数字、大小写字母或短横线("-"),<br>              首尾不能有特殊字符("-")<br>  - 注意: 不能与标准的转码模板和已定义命名重复<br>|

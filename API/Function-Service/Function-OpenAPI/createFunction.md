@@ -17,14 +17,14 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**name**|String|True| |函数名称|
+|**name**|String|False| |函数名称|
 |**description**|String|False| |函数描述信息|
-|**entrance**|String|True| |函数入口，格式为入口文件.入口函数名|
-|**memory**|Integer|True| |函数运行最大内存|
-|**runTime**|String|True| |函数运行环境|
-|**overTime**|Integer|True| |函数运行超时时间|
+|**entrance**|String|False| |函数入口，格式为入口文件.入口函数名|
+|**memory**|Integer|False| |函数运行最大内存|
+|**runTime**|String|False| |函数运行环境|
+|**overTime**|Integer|False| |函数运行超时时间|
 |**version**|String|False| |函数版本，默认为LATEST|
-|**code**|Code|True| |函数代码包|
+|**code**|Code|False| |函数代码包|
 |**environment**|Env|False| |函数运行时环境变量|
 |**logSetId**|String|False| |函数指定的日志集Id|
 |**logTopicId**|String|False| |函数指定的日志主题Id|

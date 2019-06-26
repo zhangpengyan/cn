@@ -6,15 +6,15 @@
  
 触发器示例：ossTrigger.yml
 
-```
+```YAML
 triggerConfig:
-   events:
-       s3:ObjectCreated:Put
-       s3:ObjectCreated:Post
-   filter:
-      key:
-          prefix: sourcefile/
-          suffix: .gif
+    events:
+        s3:ObjectCreated:Put
+        s3:ObjectCreated:Post
+    filter:
+       key:
+           prefix: sourcefile/
+           suffix: .gif
 ```
 
 **说明：**

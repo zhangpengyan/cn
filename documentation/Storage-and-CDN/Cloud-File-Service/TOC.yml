@@ -46,6 +46,10 @@ items:
         href: Operation-Guide/Unmount-File-System.md
       - name: 删除文件存储
         href: Operation-Guide/Deleting-File-System.md
+ - name: 应用实践
+   items:
+      - name: 通过对等连接（VPC Peering）跨VPC挂载文件系统
+        href: Best-Practice/Mount-Through-VPCPeering.md
  - name: 相关资源
    items:
       - name: 京东云云文件服务公测试用协议

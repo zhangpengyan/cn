@@ -13,6 +13,7 @@
 |     Pod  |   pod:deletePod    |   删除Pod  | 
 |     Kubernetes集群  |   kubernetes:deleteCluster   |   删除集群| 
 |    Kubernetes集群  |   kubernetes:deleteNodeGroup    |    删除工作节点组 | 
+|    函数服务 |   function:deleteFunction   |    删除函数 | 
 
 #### 数据库与缓存
 |  **云产品**  | **接口名称** | **接口描述** |
@@ -41,16 +42,19 @@
 | 应用安全网关  |      sgw:deleteWaf    |    删除WAF实例   | 
 | SSL数字证书  |    ssl:deleteCerts    |    删除证书  | 
 | SSL数字证书 |      ssl:downloadCert  |    下载证书  | 
+| 云解析 |      clouddnsservice:setLock  |    开启/关闭域名锁定 | 
 
 #### 管理
 |  **云产品**  | **接口名称** | **接口描述** |
 | :----------: | :--------------: | :------: |
 | 资源编排 |      jdro:deleteStack  |    删除堆栈  | 
+| 访问控制 |     iam:createSubUser |   创建子用户 | 
+| 访问控制|     iam:deleteSubUser  |    删除子用户  | 
 
-#### 域名服务
+#### 开发者工具
 |  **云产品**  | **接口名称** | **接口描述** |
 | :----------: | :--------------: | :------: |
-| 云解析 |      clouddnsservice:setLock  |    开启/关闭域名锁定 | 
+| 云部署|    deploy:deleteApp  |    删除应用 | 
 
 #### 互联网中间件
 |  **云产品**  | **接口名称** | **接口描述** |
@@ -62,3 +66,4 @@
 | 分布式服务框架 |    jdsf:deleteAppConfig |    删除应用配置 | 
 | 分布式服务框架 |     jdsf:deleteAppConfigVersion |   删除应用配置版本  | 
 | 分布式服务框架 |     jdsf:rollbackAppConfigVersion  |    回滚发布配置的版本  | 
+| 消息队列 |   jcq:deleteTopic  |    删除单个Topic  | 

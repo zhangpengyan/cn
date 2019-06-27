@@ -134,7 +134,7 @@ public class Demo {
 ```
 #### 3.	运行SDKTest.java，得到返回结果。
 
-![Java返回结果](../../../../image/Internet-Middleware/API-Gateway/exap_Java_return.png)
+![Java返回结果](../../../../image/Internet-Middleware/API-Gateway/example_Java_return.png)
 
 
 ### （2）通过Python SDK调用
@@ -180,7 +180,7 @@ if __name__ == "__main__":
 
 #### 3.	运行PetStoreTest.py，得到返回结果。
 
-![Python返回结果](../../../../image/Internet-Middleware/API-Gateway/exap_Python_return.png)
+![Python返回结果](../../../../image/Internet-Middleware/API-Gateway/example_Python_return.png)
 
 
 ### 您可以通过[API网关监控](http://cms-console-north-2a-backup.jdcloud.com/monitor/apigateway)实时获取您的API调用情况：成功数、流量、响应时间、请求异常等信息以及设置异常情况报警。

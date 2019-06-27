@@ -26,4 +26,6 @@ service jdcpsd stop <br/>
 chkconfig --del jdcpsd <br/>
 /bin/rm -f /etc/init.d/jdcpsd <br/>
 
+## 监控数据说明
+
 

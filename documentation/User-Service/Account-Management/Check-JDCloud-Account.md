@@ -6,4 +6,4 @@
 ![](../../../image/User/Account%20Management/Check%20your%20account/baseinfo.png)
 
 账号信息中，“账号” 为您的账号名，是账号的唯一标识。
-账号手机和账号邮箱主要用于账号安全验证。如果账号手机或账号邮箱带有 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/可用于验证.png) 图标时，可用于账号登录。
+手机和邮箱主要用于账号安全验证。当账号手机或邮箱带有 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/可用于验证.png) 图标时，可用于账号登录。

@@ -17,7 +17,7 @@ items:
       href: Getting-Started/Getting-Started.md
   - name: 操作指南
     items:
-    - name:威胁概览
+    - name: 威胁概览
       href: Operation-Guide/Security-Status.md
     - name: 安全配置
       href: Operation-Guide/Security-Configuration.md

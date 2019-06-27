@@ -13,7 +13,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中“标准镜像”支持CentOS6.6、7.1、7.2和7.5，Ubuntu14.04、16.04和18.04。详细情况参见[镜像使用说明](../Operation-Guide/Image/Description-Image.md)。
 
-![镜像选择](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/documentation/Hyper-Converged-IDC/Cloud-Physical-Server/Image/CPS-create-image.png)
+![镜像选择](../Image/CPS-create-image.png)
 
 - 配置存储：
 

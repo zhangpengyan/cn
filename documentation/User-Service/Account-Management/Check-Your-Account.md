@@ -1,5 +1,5 @@
 # 查看京东账号信息
-<small>如果您注册或升级了新版京东云账号，请参考 [《查看账号信息》](../../../documentation/User-Service/Account-Management/Check-Your-Account.md) 进行操作。</small>
+<small>如果您注册或升级了新版京东云账号，请参考 [《查看账号信息》](../../../documentation/User-Service/Account-Management/Check-JDCloud-Account.md) 进行操作。</small>
 
 如果您使用京东账号登录京东云，您有两种方式进行查看账号信息。
 

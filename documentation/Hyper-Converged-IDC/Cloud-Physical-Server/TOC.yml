@@ -97,6 +97,10 @@
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md
           - name: 操作步骤
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Steps-Adjust-Public-Network-Bandwidth.md
+      - name: 监控
+        items:
+          - name: 硬件监控
+            href: Operation-Guide/Monitoring/Hardware-Monitoring.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

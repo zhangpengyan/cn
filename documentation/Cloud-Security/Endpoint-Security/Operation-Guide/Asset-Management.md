@@ -2,37 +2,59 @@
 
 ### 企业版申请
 
-由于资产管理属于企业版范围，所以，拥有本功能需要申请企业版试用。
+由于合规基线功能属于企业版范围，租户想拥有本功能需要申请企业版试用。
 
-登录官网-产品-主机安全，点击 企业版申请试用。
+登录官网->产品->主机安全，点击 企业版申请试用。
 [申请链接](https://www.jdcloud.com/cn/public/testApply/baseline)，
 
-图片-申请页
+![申请试用1](../../../../image/Endpoint-Security/申请试用-1.png)
 
-![%E7%94%B3%E8%AF%B7%E9%A1%B5.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E7%94%B3%E8%AF%B7%E9%A1%B5.png)
+![申请试用2](../../../../image/Endpoint-Security/申请试用-2.png)
 
-等待后台审批。申请完成后就可以显示合规基线和资产管理两个菜单。
+等待后台审批。审批完成后，该账号下主机安全产品菜单中就会显示合规基线和资产管理。
 
 
 ### 资产管理
 
 #### 产品功能入口
 
-进入控制台-云安全-主机安全-威胁概览  点击合规基线风险项跳转到 
 
-图-合规基线1
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-1.png)
+进入控制台-云安全-主机安全-资产管理
 
-进入控制台-云安全-主机安全-合规基线
+![资产管理1](../../../../image/Endpoint-Security/资产管理-1.png)
 
-图-合规基线2
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-2.png)
-
-#### 新建检查任务
-
-图-合规基线3
-
-![%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png](https://github.com/jdcloudcom/cn/blob/bt0sea-patch-23/image/Endpoint-Security/%E5%90%88%E8%A7%84%E5%9F%BA%E7%BA%BF-3.png)
 
 ### 资产指纹
+
+#### 功能说明
+态势感知资产指纹功能定期收集并记录服务器上的以下信息：运行进程、端口服务、账号信息、软件信息，帮助您全面了解资产的运行状态，便于入侵排查。
+
+- 查看单个资产指纹
+
+登录【主机安全】->【资产管理】，点击具体资产信息。
+
+![资产管理1](../../../../image/Endpoint-Security/资产管理-1.png)
+
+
+- 查询指定资产指纹历史变更
+
+登录【主机安全】->【资产管理】，输入需要查询的进程，查询历史变更情况。
+
+![](../../../../image/Situational-Awareness/filter1.png)
+
+
+- 查看全部资产指纹
+
+登录【主机安全】->【资产管理】，点击具体资产信息，点击你关注的进程、进入你关注进程在全网资产中的运行情况。
+
+![](../../../../image/Situational-Awareness/bash.png)
+
+
+- 查询指定资产指纹聚合结果
+
+登录【主机安全】->【资产管理】，点击具体资产信息，点击进程、进入聚合数据界面，输入需要查询的进程。
+
+![](../../../../image/Situational-Awareness/filter2.png)
+
+![](../../../../image/Situational-Awareness/filter3.png)
 

@@ -1,6 +1,6 @@
 # 修改安全验证手机
 
-本文针对新版京东云账号。如果您使用的是京东账号，请参考 [《修改京东账号在京东云的联系手机》](../../../documentation/User-Service/Account-Management/Change-The-Phone-Number.md) 进行操作。
+<small>本文针对新版京东云账号。如果您使用的是京东账号，请参考 [《修改京东账号在京东云的联系手机》](../../../documentation/User-Service/Account-Management/Change-The-Phone-Number.md) 进行操作。</small>
 
 安全验证手机是一种身份验证方式。当账户发生敏感或异常操作时，可以通过安全验证手机对操作人的身份进行确认。
 同时，安全验证手机也是接收京东云重要通知的主要方式，如资源到期释放、监控告警等消息。

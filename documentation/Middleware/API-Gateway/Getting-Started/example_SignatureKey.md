@@ -177,6 +177,7 @@ if __name__ == "__main__":
     print(CreatePet_response)
 ```
 
+
 #### 3.	运行PetStoreTest.py，得到返回结果。
 
 ![Python返回结果](../../../../image/Internet-Middleware/API-Gateway/exap_Python_return.png)

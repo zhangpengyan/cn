@@ -67,3 +67,4 @@
 | 分布式服务框架 |     jdsf:deleteAppConfigVersion |   删除应用配置版本  | 
 | 分布式服务框架 |     jdsf:rollbackAppConfigVersion  |    回滚发布配置的版本  | 
 | 消息队列 |   jcq:deleteTopic  |    删除单个Topic  | 
+| 队列服务 |   jqs:deleteQueue  |  删除队列  | 

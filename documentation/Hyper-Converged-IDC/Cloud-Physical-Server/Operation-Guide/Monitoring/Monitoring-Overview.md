@@ -10,17 +10,20 @@
 
 ## 监控数据说明
 
-打开控制台，在左侧导航栏依次点击云物理服务器->私有网络实例，进入实例列表页，点击 **实例名称** ，进入实例详情页，选择硬件监控tab，展示CPU、内存、硬盘、网卡监控信息，如下图：<br/>
-
+监控数据采集周期为1分钟；<br/>
+统计周期默认支持1小时、6小时、12小时、1天、3天、7天及14天，此外还支持您设置统计周期，周期最长支持30天；<br/>
+不同统计周期不同监控项会做对应的聚合；<br/>
 
 ## 安装agent
 
-打开控制台，在左侧导航栏依次点击云物理服务器->私有网络实例，进入实例列表页，点击 **实例名称** ，进入实例详情页，选择硬件监控tab，展示CPU、内存、硬盘、网卡监控信息，如下图：<br/>
-
-![安装agent](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/documentation/Hyper-Converged-IDC/Cloud-Physical-Server/Image/cps-hardware-monitoring.png)
+curl [http://jdcps-proxy.jdcloud.com/agent/download/jdcps-agent-v1.0.0.bin](http://jdcps-proxy.jdcloud.com/agent/download/jdcps-agent-v1.0.0.bin) -O <br/>
+chmod +x jdcps-agent-v1.0.0.bin<br/>
+sudo ./jdcps-agent-v1.0.0.bin<br/>
 
 ## 卸载agent
 
-打开控制台，在左侧导航栏依次点击云物理服务器->私有网络实例，进入实例列表页，点击 **实例名称** ，进入实例详情页，选择硬件监控tab，展示CPU、内存、硬盘、网卡监控信息，如下图：<br/>
+service jdcpsd stop <br/>
+chkconfig --del jdcpsd <br/>
+/bin/rm -f /etc/init.d/jdcpsd <br/>
 
-![卸载agent](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/documentation/Hyper-Converged-IDC/Cloud-Physical-Server/Image/cps-hardware-monitoring.png)
+

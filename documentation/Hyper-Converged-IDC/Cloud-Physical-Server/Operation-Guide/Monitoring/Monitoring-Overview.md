@@ -14,18 +14,23 @@
 统计周期默认支持1小时、6小时、12小时、1天、3天、7天及14天，此外还支持您设置统计周期，周期最长支持30天；<br/>
 不同统计周期不同监控项会做对应的聚合；<br/>
 
-## 安装agent
+## 安装Agent
 
 curl [http://jdcps-proxy.jdcloud.com/agent/download/jdcps-agent-v1.0.0.bin](http://jdcps-proxy.jdcloud.com/agent/download/jdcps-agent-v1.0.0.bin) -O <br/>
 chmod +x jdcps-agent-v1.0.0.bin<br/>
 sudo ./jdcps-agent-v1.0.0.bin<br/>
 
-## 卸载agent
+## 卸载Agent
 
 service jdcpsd stop <br/>
 chkconfig --del jdcpsd <br/>
 /bin/rm -f /etc/init.d/jdcpsd <br/>
 
 ## 监控数据说明
+
+进入云物理服务器列表页，选择实例列表->私有网络实例，选择所需要查看的实例，点击安装“监控插件”，按照如上描述操作，可安装成功，即可获取监控数据；<br/>
+点击私有网络实例列表中的实例名称，进入资源信息页面，即可查看“Agent状态”。<br/>
+点击私有网络实例列表中的监控图标，进入性能监控页面，即可查看服务器性能监控指标。<br/>
+
 
 

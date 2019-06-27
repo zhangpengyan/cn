@@ -2,6 +2,13 @@
 
 ## 概述
 
+云物理服务器实例监控与告警为您提供实例监控与管理服务，
+<br/>
+
+## 概述
+
+打开控制台，在左侧导航栏依次点击云物理服务器->私有网络实例，进入实例列表页，点击 **实例名称** ，进入实例详情页，选择硬件监控tab，展示CPU、内存、硬盘、网卡监控信息，如下图：<br/>
+
 打开控制台，在左侧导航栏依次点击云物理服务器->私有网络实例，进入实例列表页，点击 **实例名称** ，进入实例详情页，选择硬件监控tab，展示CPU、内存、硬盘、网卡监控信息，如下图：<br/>
 
 ![实例列表+监控logo](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/documentation/Hyper-Converged-IDC/Cloud-Physical-Server/Image/cps-hardware-monitoring.png)

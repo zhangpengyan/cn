@@ -101,6 +101,8 @@
         items:
           - name: 硬件监控
             href: Operation-Guide/Monitoring/Hardware-Monitoring.md
+          - name: 性能监控
+            href: Operation-Guide/Monitoring/Monitoring-O.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

@@ -8,7 +8,7 @@
 
 3. 销售与您签订完成合同并确认需求信息；
 
-4. 京东云将您的资源信息录入后台，客户就可以在京东云官网控制台[https://epcs-console.jdcloud.com/](https://epcs-console.jdcloud.com/)开始使用京东云边缘物理计算服务。
+4. 京东云将您的资源信息录入后台，客户就可以在京东云官网控制台开始使用京东云边缘物理计算服务。
 
 5. 您可以通过控制台-边缘物理计算服务-工单管理模块，提交所需工单服务，方便快捷。
 ![](https://github.com/jdcloudcom/cn/blob/cn-edge-physical-computing-service/documentation/Hyper-Converged-IDC/Edge-Physical-Computing-Service/Image/EPCS001.png)

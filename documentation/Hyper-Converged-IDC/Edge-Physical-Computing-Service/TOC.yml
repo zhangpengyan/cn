@@ -52,11 +52,11 @@ items:
           - name: 查看机柜列表
             href: Operation-Guide/Resources-Management/View-Cabinet-List.md
           - name: 查看设备列表
-            href: Operation-Guide/Instance-Management/View-Device-List.md
+            href: Operation-Guide/Resources-Management/View-Device-List.md
           - name: 查看公网IP列表
-            href: Operation-Guide/Instance-Management/View-ipAddress-List.md
+            href: Operation-Guide/Resources-Management/View-ipAddress-List.md
           - name: 查看带宽列表
-            href: Operation-Guide/Instance-Management/View-Bandwidth-List.md
+            href: Operation-Guide/Resources-Management/View-Bandwidth-List.md
       - name: 工单管理
         items:
           - name: 提交工单
@@ -66,7 +66,7 @@ items:
       - name: 监控报警
         items:
           - name: 带宽流量
-            href: Operation-Guide/Monitoring Alarm/View-Bandwidth-Traffic-List.md
+            href: Operation-Guide/Monitoring-Alarm/View-Bandwidth-Traffic-List.md
 - name: 最佳实践
   items:
   status: 0

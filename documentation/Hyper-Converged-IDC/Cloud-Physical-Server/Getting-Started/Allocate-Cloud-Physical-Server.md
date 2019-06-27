@@ -47,7 +47,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 主机名为可选项，如果不输入主机名，则默认使用“host-内网IPv4地址第三段-内网IPv4地址第四段”为主机名。
 
-![配置服务器](../../Image/CPS-create-basicinfo.png)
+![配置服务器](../Image/CPS-create-basicinfo.png)
 
 
 - 配置购买时长：

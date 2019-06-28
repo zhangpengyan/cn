@@ -3,7 +3,6 @@
 
 ## 描述
 查询获取流水线任务列表，并显示最后一次执行的状态或结果信息
-/v1/regions/cn-south-1?sorts.1.name=startedAt&sorts.1.direction=desc&pageNumber=1&pageSize=10&filters.1.name=name&filters.1.values.1=我的pipeline
 
 
 ## 请求方式

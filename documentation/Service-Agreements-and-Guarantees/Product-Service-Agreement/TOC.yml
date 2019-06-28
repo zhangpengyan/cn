@@ -77,11 +77,11 @@ items:
   - name: 物理云公网IP服务协议
     href: Elastic-IP-For-Physical-Cloud-Terms-Of-Service.md
   - name: 分布式云物理服务器服务条款
-    href: Distributed-Cloud-Physical-Server.md
+    href: Distributed-Cloud-Physical-Server-Service-Clause.md
   - name: 分布式云物理服务器服务等级协议（SLA）
     href: Distributed-Cloud-Physical-Server-SLA.md
   - name: 边缘云公网IP服务条款
-    href: Elastic-IP-For-Edge-Cloud-Server.md 
+    href: Elastic-IP-For-Edge-Cloud-Terms-Of-Service.md
   - name: 消息队列 JCQ服务协议
     href: Message-Queue-JCQ-Service-Terms.md
   - name: 消息队列 JCQ服务等级协议（SLA）

@@ -15,7 +15,7 @@
 
 **1.创建角色**
 
-A账号创建角色test-role，指定A账号可以代入该角色；创建完成后为test-role附加IAM Policy，该Policy允许访问test-app存储桶；详见[角色说明]()。
+A账号创建角色test-role，指定A账号可以代入该角色；创建完成后为test-role附加IAM Policy，该Policy允许访问test-app存储桶；详见[角色说明](https://docs.jdcloud.com/cn/iam/role)。
 
 Policy示例如下，允许该角色上传Object至test-app存储桶中。
 ```
@@ -57,7 +57,7 @@ Policy示例如下，允许该用户扮演test-role角色。
 ```
 **3.获取临时秘钥**
 
-使用test-iam用户代入test-role角色，获取临时秘钥，并指定有效期；详见[扮演角色]();
+使用test-iam用户代入test-role角色，获取临时秘钥，并指定有效期；详见[角色-用户角色扮演和切换](https://docs.jdcloud.com/cn/iam/role);
 
 **4.访问OSS**
 
@@ -65,7 +65,7 @@ Policy示例如下，允许该用户扮演test-role角色。
 
 ## 访问示例
 以下以Java SDK为例，说明如何使用临时秘钥访问OSS。
-- 获取临时秘钥：调用STS服务 [AssumeRole]() API获取临时AccessKey、secretKey及Token；该示例使用[jdcloud-sdk-java](https://docs.jdcloud.com/cn/sdk/java)初始化stsClient获取临时秘钥。
+- 获取临时秘钥：调用STS服务AssumeRole接口获取临时AccessKey、secretKey及Token；该示例使用[jdcloud-sdk-java](https://docs.jdcloud.com/cn/sdk/java)初始化stsClient获取临时秘钥。
 - 使用临时秘钥访问OSS：该示例使用临时秘钥初始化s3Client，并上传Object。
 
 ```Java

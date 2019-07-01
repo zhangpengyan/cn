@@ -49,7 +49,7 @@ API 分组创建完成您就可以创建 API 了，创建 API 是定义 API 请�
 
 ###  第5步: API调用者下载和使用SDK包，进行函数调用
 
-- 快速上手： [快速发布和调用一个API应用](../Getting-Started/example_console.md)
+- 快速上手： [快速发布和调用一个API应用](https://docs.jdcloud.com/cn/api-gateway/example_signaturekey)
 
 
 

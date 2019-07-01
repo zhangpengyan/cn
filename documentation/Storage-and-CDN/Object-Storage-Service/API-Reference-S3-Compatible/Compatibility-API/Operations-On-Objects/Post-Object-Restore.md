@@ -4,7 +4,7 @@
 
 该操作可以对存储类型为 GLACIER 的对象恢复临时副本。恢复时支持指定临时副本的生命周期，即在指定的时间段后，OSS会删除该临时副本。
 
-还原已归档对象时，可以指定以下还原选项：
+取回已归档对象时，可以指定以下还原选项：
 - Expedited：快速取回
 - Standard：标准取回
 - Bulk：批量检索
@@ -46,7 +46,17 @@ Tier|还原选项，默认为Standard。<br>类型：Enum<br>有效值：Expedit
 
 ## 响应
 
+### 响应Header
+无特殊Header
+### 响应元素
+无响应元素
+### 特殊错误
+Error Code|描述|HTTP Status Code
+-|-|-
+RestoreAlreadyInProgress|对象还原已经在处理中。|409 Conflict
 
+## 示例
+**使用Expedited选项恢复对象，生命周期为2天**
 
 
 

@@ -7,11 +7,9 @@ OSS提供标准、归档、低冗余三种存储类型，全面覆盖从热到�
 * [归档存储](StorageClass-Overview#user-content-2)
 * [低冗余存储](StorageClass-Overview#user-content-3)
 
-### 标准存储：
+### 标准存储（STANDARD）
 
 <div id="user-content-1"></div>
-
-标准存储（STANDARD）
 
 为用户提供了高可靠性、高可用性、高性能的对象存储服务,能够支持频繁的数据访问。
 标准存储拥有低访问时延与高吞吐量，因而适用于有大量热点文件。标准存储类型是各种社交、分享类的图片、大型网站、音视频应用、大数据分析的合适选择。

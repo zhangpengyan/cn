@@ -9,8 +9,6 @@ items:
   items:
     - name:  订单服务相关接口
       items:
-        - name: payOrder
-          href: Order-Management-APIs/payOrder.md
         - name: queryOrder
           href: Order-Management-APIs/queryOrder.md
         - name: queryOrders

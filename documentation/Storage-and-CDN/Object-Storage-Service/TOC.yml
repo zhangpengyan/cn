@@ -410,7 +410,9 @@ items:
             - name: 跨账号授权概述
               href: Best-Practices/Access-Control-And-Permission-Management/Cross-Account-Access-Overview.md
             - name: 授权子账号访问 OSS
-              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Sub-Account-Access.md            
+              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Sub-Account-Access.md
+            - name: 使用临时秘钥访问 OSS
+              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Role-Access.md.md
       - name: 防盗链
         href: Best-Practices/Anti-leech.md         
       - name: 使用CloudBerry管理OSS

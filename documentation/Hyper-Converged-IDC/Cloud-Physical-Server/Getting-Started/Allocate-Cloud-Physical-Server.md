@@ -9,11 +9,12 @@
 
 - 选取镜像
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如，现阶段支持“标准镜像”和“标准镜像+应用”两种镜像类型。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如，现阶段支持“标准镜像类型。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中“标准镜像”支持CentOS6.6、7.1、7.2和7.5，Ubuntu14.04和16.04；“标准镜像+应用”支持CentOS6.6和CentOS7.2下的Nginx、MySQL和RabbitMQ三个应用。详细情况参见[镜像使用说明](../Operation-Guide/Image/Description-Image.md)。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中“标准镜像”支持CentOS6.6、7.1、7.2和7.5，Ubuntu14.04、16.04和18.04。详细情况参见[镜像使用说明](../Operation-Guide/Image/Description-Image.md)。
 
-![镜像选择](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/documentation/Hyper-Converged-IDC/Cloud-Physical-Server/Image/CPS-create-image.png)
+![镜像选择](../Image/CPS-create-image.png)
+
 
 - 配置存储：
 
@@ -45,7 +46,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 主机名为可选项，如果不输入主机名，则默认使用“host-内网IPv4地址第三段-内网IPv4地址第四段”为主机名。
 
-![配置服务器](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/documentation/Hyper-Converged-IDC/Cloud-Physical-Server/Image/CPS-create-basicinfo.png)
+
+![配置服务器](../Image/CPS-create-basicinfo.png)
+
 
 
 - 配置购买时长：

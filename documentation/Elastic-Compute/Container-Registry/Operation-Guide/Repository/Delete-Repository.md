@@ -2,13 +2,13 @@
 
  1. 打开控制台，选择[弹性计算-容器镜像仓库-镜像仓库](https://cns-console.jdcloud.com/host/containerrepository/list)，选择删除按钮  
  2. 如果镜像仓库为空，直接选择确定按钮，即可删除；  
-    ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Container-Registry/删除空的镜像仓库.png）
+    ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Container-Registry/删除空的镜像仓库.png)                                   
     如果镜像仓库非空，选择强制删除仓库中的镜像，点击确定按钮，即可删除。  
-    ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Container-Registry/删除非空镜像仓库.png）
+    ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Container-Registry/删除非空镜像仓库.png)
 
 **对单个镜像删除**
 
- 1. 打开控制台，选择[弹性计算-容器镜像仓库-镜像仓库](https://cns-console.jdcloud.com/host/containerrepository/list)，点击镜像仓库名称，进入详情页  
+ 1. 打开控制台，选择[弹性计算-容器镜像仓库-镜像仓库](https://cns-console.jdcloud.com/host/containerrepository/list)                             点击镜像仓库名称，进入详情页  
  2. 选择镜像版本，选择操作中的删除按钮  
  3. 在删除镜像版本弹窗中，选择确认，即可删除。  
- ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Container-Registry/删除单个镜像.png）
+ ![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/Container-Registry/删除单个镜像.png)

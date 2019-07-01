@@ -5,18 +5,66 @@ items:
   items:
     - name: 产品概述
       href: Introduction/Product-Overview.md
-    - name: 基础架构
-      href: Introduction/Basic-Infrastructure.md
     - name: 产品优势
       href: Introduction/Benefits.md
-    - name: 产品功能
+    - name: 核心功能
       href: Introduction/Features.md
-    - name: 应用场景 
-      href: Introduction/Application-Scenarios.md    
 - name: 产品定价
   items:
     - name: 计费概述
       href: Pricing/Billing-Overview.md
 - name: 操作指南
-  href: Operation-Guide/guide.md
-          
+  items:
+    - name: 1.登录京东云
+      href: Operation-Guide/login.md
+    - name: 2.我的大屏
+      href: 
+      items:
+       - name: 2.1创建大屏
+         href: Operation-Guide/Mydashboard.md      
+       - name: 2.2编辑大屏
+         href: Operation-Guide/editDashboard.md            
+      
+    - name: 3. 基础图表组件配置
+      href: 
+      items:
+       - name: 3.0 基础图表
+         href: Operation-Guide/BasicChart.md
+       - name: 3.1 柱折图
+         href: Operation-Guide/BarandLine.md
+       - name: 3.2 饼图
+         href: Operation-Guide/Pie.md
+       - name: 3.3 雷达图
+         href: Operation-Guide/leida.md
+       - name: 3.4 榜单
+         href: Operation-Guide/table.md
+       - name: 3.5 日期热力图
+         href: Operation-Guide/hot.md     
+    - name: 4. 地图组件配置
+      href: 
+      items:
+       - name: 4.0 地图组件
+         href: Operation-Guide/Map.md
+       - name: 4.1 3D边界地图
+         href: Operation-Guide/3DmapStyle.md
+       - name: 4.2 2D边界地图
+         href: Operation-Guide/2DmapStyle.md   
+       - name: 4.3 地图交互设置
+         href: Operation-Guide/MapInteractive.md    
+    - name: 5. 文本组件配置
+      href:
+      items:
+       - name: 5.1文本
+         href: Operation-Guide/text.md
+       - name: 5.2时间器
+         href: Operation-Guide/text_time.md
+       - name: 5.2词云
+         href: Operation-Guide/text_word.md
+    - name:  6. 交互组件配置
+      href: Operation-Guide/Interactive.md
+    - name:  7. 辅助组件配置
+      href: Operation-Guide/other.md
+    - name:  8. 大屏预览/发布
+      href: Operation-Guide/preview.md
+    - name: 9. 数据源管理
+      href: Operation-Guide/database.md

@@ -11,19 +11,20 @@
 1. 登录 [MongoDB 控制台](https://mongodb-console.jdcloud.com/mongodb)。
 1. 在“实例列表”页面，选择目标实例，点击 **实例名称**，进入“实例详情”页面。
 1. 在“实例详情”页面，依次点击 **备份与恢复** >  **备份策略**，进入“备份策略”页面。
-   
+
     ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-017.png)
 
 2. 在“实例列表”页面，选择目标实例，点击 **实例名称**，进入“实例详情”页面。
 
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-017.png)
+
 3. 在“实例详情”页面，依次点击 **备份与恢复** >  **备份策略**，进入“备份策略”页面。
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-017.png)
 
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-018.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-018.png)
 
-1. 在“修改策略弹窗”，重新选择期望的自动备份时间。
-1. 点击 **确定**，保存修改。
-1. 您可以在“备份策略”页面查看修改结果。
+     - 在“修改策略弹窗”，重新选择期望的自动备份时间。
+     - 点击 **确定**，保存修改。
+     - 您可以在“备份策略”页面查看修改结果。
 
 ## 相关参考
 

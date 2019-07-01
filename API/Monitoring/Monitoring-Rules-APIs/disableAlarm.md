@@ -8,12 +8,12 @@
 POST
 
 ## 请求地址
-https://monitor.jcloud.com/v1/regions/{regionId}/alarms/{alarmId}:disable
+https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms/{alarmId}/disable
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**alarmId**|String|True| |规则id|
-|**regionId**|String|True| |地域 Id|
+|**regionId**|String|True| |region|
+|**alarmId**|String|True| |规则 id|
 
 ## 请求参数
 无
@@ -22,6 +22,7 @@ https://monitor.jcloud.com/v1/regions/{regionId}/alarms/{alarmId}:disable
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
+|**result**|Object| |
 |**requestId**|String|请求的标识id|
 
 

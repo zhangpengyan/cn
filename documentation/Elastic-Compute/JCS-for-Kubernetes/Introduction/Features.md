@@ -16,4 +16,8 @@
 
 ## 兼容Kubernetes应用
 
-兼容所有标准 Kubernetes环境上运行的应用程序，并可轻松迁移到京东云Kubernetes集群。
+兼容所有标准 Kubernetes环境上运行的应用程序，并可轻松迁移到京东云Kubernetes集群。  
+
+## 通过控制台部署 Kubernetes集群应用  
+
+在 Kubernetes集群中部署Deployment、Pod、Service、ConfigMap等四种常用资源可通过控制台 Dashboard操作，简化用户部署流程。  

@@ -25,7 +25,6 @@
 7、托管通道: test_channel
 
 8、网络拓扑示意图
-
 ![网络拓扑示意图](https://github.com/jdcloudcom/cn/blob/edit/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-001.png)
  
 ## 三、配置方法

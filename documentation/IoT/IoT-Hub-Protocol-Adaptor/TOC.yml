@@ -1,0 +1,57 @@
+  name: 物联网协议适配
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+  - name: 入门指南
+    items:
+      - name: 创建实例
+        href: Getting-Started/Create-Instance.md
+      - name: 实例列表
+        href: Getting-Started/List-Instance.md
+      - name: 删除实例
+        href: Getting-Started/Delete-Instance.md
+  - name: 操作指南
+    items:
+      - name: 实例配置
+        items:
+          - name: 实例配置
+            href: Operation-Guide/Instance-Configuration/Instance-Configuration.md            
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: 用户协议
+    status: 0
+    items:
+    - name: 服务条款
+      href: User-Agreements/Product-Terms-of-Service.md               
+    - name: SLA
+      href: User-Agreements/SLA.md           
+      status: 0       
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md   
+    - name: 备案
+      href: Related-Resources/Filing.md           
+      status: 0        
+    - name: 词汇表
+      href: Related-Resources/Glossary.md           
+      status: 0

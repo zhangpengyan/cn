@@ -9,7 +9,7 @@
 GET
 
 ## 请求地址
-https://openapi.cr.jdcloud.com/v1/regions/{regionId}/images
+https://containerregistry.jdcloud-api.com/v1/regions/{regionId}/images
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -32,8 +32,8 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/images
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
@@ -43,22 +43,22 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/images
 ### ImageDetail
 |名称|类型|描述|
 |---|---|---|
+|**registryName**|String|image registry 表示镜像的注册表归属|
+|**repositoryName**|String|image repository表示镜像的仓库归属|
 |**imageDigest**|String|image manifest的sha256摘要|
 |**imageManifest**|String|镜像的Manifest|
 |**imagePushedAt**|String|当前image被push到repository的时间|
-|**imageSizeMB**|Number|image在repository中的大小。从Docker 1.9之后的版本, Docker client会压缩镜像层数据再push到V2版本的Docker registry。<br>docker image命令显示的是解压后的镜像大小，因此会比DescribeImages接口返回的镜像大小会大很多。      <br>|
+|**imageSizeMB**|Double|image在repository中的大小。从Docker 1.9之后的版本, Docker client会压缩镜像层数据再push到V2版本的Docker registry。<br>docker image命令显示的是解压后的镜像大小，因此会比DescribeImages接口返回的镜像大小会大很多。      <br>|
 |**imageTags**|String[]|镜像关联的所有Tag|
 |**lastPullAt**|String|最近pull的时间|
-|**registryName**|String|image registry 表示镜像的注册表归属|
-|**repositoryName**|String|image repository表示镜像的仓库归属|
 |**totalPullTimes**|Integer|镜像被拉取次数|
 
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

@@ -61,6 +61,8 @@ Endpoint表示OSS对外服务的访问域名。OSS以HTTP RESTful API的形式�
 |华东-上海|oss.cn-east-2.jcloudcs.com|oss-internal.cn-east-2.jcloudcs.com|
 |华南-广州|oss.cn-south-1.jcloudcs.com|oss-internal.cn-south-1.jcloudcs.com|
 
+公网Endpoint支持https协议，为了您的数据更加安全，推荐您使用https协议。
+
 ***访问域名- BucketName.Endpoint***
 
 针对OSS的网络请求，除了GetService这个API以外，其他所有请求的域名都是针对具体Bucket的三级域名，由BucketName和Endpoint构成：BucketName.Endpoint。

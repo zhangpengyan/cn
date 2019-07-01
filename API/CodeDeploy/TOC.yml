@@ -1,0 +1,31 @@
+name: 云部署
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 应用
+        items:
+          - name: describeApp
+            href: Application/describeApp.md
+          - name: describeApps
+            href: Application/describeApps.md
+      - name: 部署组
+        items:
+          - name: describeGroup
+            href: DeployGroup/describeGroup.md
+          - name: describeGroups
+            href: DeployGroup/describeGroups.md
+      - name: 部署任务
+        items:
+          - name: createDeploy
+            href: Deployment/createDeploy.md
+          - name: describeDeploy
+            href: Deployment/describeDeploy.md
+      - name: 用户信息
+        items:
+          - name: describePinInfo
+            href: Pin/describePinInfo.md    

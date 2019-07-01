@@ -17,8 +17,16 @@
         items:
           - name: 场景概述
             href: Introduction/Application-Scenarios/Overview.md
-          - name: 视频直播
-            href: Introduction/Application-Scenarios/living.md  
+          - name: 静态页面加速
+            href: Introduction/Application-Scenarios/Website-Acceleration.md 
+          - name: 下载加速
+            href: Introduction/Application-Scenarios/Download-Acceleration.md
+          - name: 视频点播加速
+            href: Introduction/Application-Scenarios/Video-Acceleration.md
+          - name: 视频直播加速
+            href: Introduction/Application-Scenarios/Live-Acceleration.md  
+          - name: CDN边缘计算
+            href: Introduction/Application-Scenarios/CDN-Edge-Computing.md
   - name: 产品定价
     items:
       - name: 计费概述
@@ -43,8 +51,14 @@
         href: Operation-Guide/Access-control.md  
       - name: 高级配置
         href: Operation-Guide/Advanced-configuration.md
-      - name: 回源策略
-        href: Operation-Guide/back-to-origin-Strategy.md
+      - name: 回源配置
+        items:
+          - name: 回源策略
+            href: Operation-Guide/Back-To-Origin-Configuration/back-to-origin-Strategy.md
+          - name: 协议跟随回源
+            href: Operation-Guide/Back-To-Origin-Configuration/Protocol-Follow-Back-To-Origin.md        
+          - name: 回源跟随302
+            href: Operation-Guide/Back-To-Origin-Configuration/Follow-302-Configuration.md
       - name: 业务监控
         href: Operation-Guide/Business-Monitoring.md        
       - name: 缓存配置
@@ -83,14 +97,16 @@
             href: API-Reference/CDN-Open-API/Open-api-business.md
           - name: 创建域名
             href: API-Reference/CDN-Open-API/Creat-domain.md
-          - name: 设置回源host
-            href: API-Reference/CDN-Open-API/Set-back-to-source-host.md
+          - name: 协议跟随回源
+            href: API-Reference/CDN-Open-API/Set-Protocol-Follow-Back-To-Origin.md
+          - name: 回源跟随302
+            href: API-Reference/CDN-Open-API/Set-Follow-302-Configuration.md
           - name: 回源策略变更
-            href: API-Reference/CDN-Open-API/Change-back-to-source.md
+            href: API-Reference/CDN-Open-API/Change-Back-To-Source.md
           - name: 缓存策略变更
             href: API-Reference/CDN-Open-API/Change-Cache-policy.md
           - name: 服务状态变更
-            href: API-Reference/CDN-Open-API/Change-domain-status.md
+            href: API-Reference/CDN-Open-API/Change-Domain-Status.md
           - name: 设置通信协议
             href: API-Reference/CDN-Open-API/Set-http-type.md
           - name: 设置忽略参数
@@ -99,6 +115,12 @@
             href: API-Reference/CDN-Open-API/Set-range.md
           - name: 设置referer黑白名单
             href: API-Reference/CDN-Open-API/Set-referer.md
+          - name: 查询referer黑白名单
+            href: API-Reference/CDN-Open-API/Query-Referer.md
+          - name: 设置URL鉴权
+            href: API-Reference/CDN-Open-API/Set-Url-Authentication.md
+          - name: 查询URL鉴权
+            href: API-Reference/CDN-Open-API/Query-Url-Authentication.md
           - name: 分区域运营商详细数据统计
             href: API-Reference/CDN-Open-API/Area-isp-detail-statistics.md
           - name: 回源带宽统计
@@ -145,8 +167,24 @@
             href: API-Reference/CDN-Open-API/Query-total-data.md
           - name: 查询UV
             href: API-Reference/CDN-Open-API/Query-uv.md
+          - name: 设置/删除 Header
+            href: API-Reference/CDN-Open-API/Set-Header.md
+          - name: 设置IP黑名单
+            href: API-Reference/CDN-Open-API/Set-IP-Blacklist.md
+          - name: 查询IP黑名单
+            href: API-Reference/CDN-Open-API/Query-IP-Blacklist.md
+          - name: 设置UA访问控制
+            href: API-Reference/CDN-Open-API/Set-UA.md
+          - name: 查询UA访问控制
+            href: API-Reference/CDN-Open-API/Query-UA.md
+          - name: 查询Header
+            href: API-Reference/CDN-Open-API/Query-Header.md
+          - name: 查询IP是否为厂商IP
+            href: API-Reference/CDN-Open-API/Query-Include-Node-IP.md
           - name: 附：提示信息状态码参照表
             href: API-Reference/CDN-Open-API/Status-code-reference-table.md
+          - name: 附：地域、运营商简称参照表
+            href: API-Reference/CDN-Open-API/area-isp-reference-table.md
       - name: 直播 OPEN API
         items:
           - name: 设置禁播
@@ -161,7 +199,17 @@
             href: API-Reference/Live-Video-Open-Api/Query-stream-data.md
           - name: 分区域运营商详细数据统计
             href: API-Reference/Live-Video-Open-Api/Area-isp-statistics.md
-          - name: 直播CDN OPEN API
-            href: API-Reference/Live-Video-Open-Api/Live-Video-Open-Api.md
+          - name: 回源策略变更
+            href: API-Reference/Live-Video-Open-Api/Change-Live-Back-To-Source.md
+          - name: 服务状态变更
+            href: API-Reference/Live-Video-Open-Api/Change-Live-Domain-Status.md
+          - name: 创建直播加速域名
+            href: API-Reference/Live-Video-Open-Api/Creat-Live-Domain.md
+          - name: 查询域名配置信息
+            href: API-Reference/Live-Video-Open-Api/Query-Live-Domain-Config.md
+          - name: 查询在线人数
+            href: API-Reference/Live-Video-Open-Api/Query-online-Number.md
+          - name: 设置推流IP白名单
+            href: API-Reference/Live-Video-Open-Api/Set-Push-IP-Whitelist.md
   - name: FAQ
     href: FAQ/FAQ.md

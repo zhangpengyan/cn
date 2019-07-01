@@ -12,9 +12,9 @@
       - name: 核心概念
         href: Introduction/Core-Concepts.md        
       - name: 产品规格
-        href: Introduction/Specifications.md       
-      - name: 公测说明 
-        href: Introduction/Public-Beta-Introduction.md
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md          
   - name: 产品定价
     items:
       - name: 计费概述
@@ -33,6 +33,8 @@
             href: Operation-Guide/Instance/Connect-Instance.md
           - name: 删除实例
             href: Operation-Guide/Instance/Delete-Instance.md
+          - name: 调整配置
+            href: Operation-Guide/Instance/Modify-Instance-Spec.md            
       - name: 账号管理
         items:
           - name: 创建账号
@@ -48,17 +50,26 @@
           - name: 查看数据库
             href: Operation-Guide/Database/View-Database.md        
           - name: 删除数据库
-            href: Operation-Guide/Database/Delete-Database.md        
+            href: Operation-Guide/Database/Delete-Database.md
+          - name: 数据库水平扩容
+            items:            
+            - name: 概述
+              href: Operation-Guide/Database/Expand-Database/Database-Expansion-Introduction.md
+            - name: 水平扩容
+              href: Operation-Guide/Database/Expand-Database/Database-Expansion.md  
+            - name: 查看扩容任务
+              href: Operation-Guide/Database/Expand-Database/View-Expansion-Task.md
+            - name: 检查并清理
+              href: Operation-Guide/Database/Expand-Database/Drop-Migrated-Databases.md               
+              
       - name: 表管理
         items:
-          - name: 创建表
-            href: Operation-Guide/Table/Create-Table.md
-          - name: 删除表
-            href: Operation-Guide/Table/Drop-Table.md              
+          - name: 表DDL语法
+            href: Operation-Guide/Table/Table-DDL.md
+            
   - name: 常见问题
     items:
     - name: FAQ
       href: FAQ/FAQ.md
-    - name: 使用限制
-      href: FAQ/Restrictions.md   
+
   

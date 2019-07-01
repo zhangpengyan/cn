@@ -12,7 +12,7 @@ AK/SK密钥对允许启用、禁用，启用后可用其调用OpenAPI，禁用�
 
 ### signature生成规则如下：
 
-使用secretKey对signSource进行**hmac-sha1**加密得到的字符串
+使用secretKey对signSource进行**hmac-sha1**加密得到的字符串,再用Base64编码
 
 ### signSource生成规则如下：
 
@@ -26,7 +26,7 @@ AK/SK密钥对允许启用、禁用，启用后可用其调用OpenAPI，禁用�
 
 ### 示例代码（Python3）
 
-```python
+```Python
 #!/home/lizhijian/opt/python3.7/bin/python3
 
 import base64

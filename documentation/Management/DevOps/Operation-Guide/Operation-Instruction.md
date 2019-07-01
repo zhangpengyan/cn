@@ -18,17 +18,10 @@
 
 在云主机中，需安装超级Agent，用于部署和管理使用。
 
-根据云主机地域的不同，选取不同的安装命令，具体方法如下：
+具体方法如下：
 
 ```
-#华北-北京    
-wget -c http://devops-hb.oss-internal.cn-north-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.391.dc2f953.20180910190347.bin -O installer && sh installer /usr/local/jdcloud/ifrit && rm -f installer
-#华东-上海：
-wget -c http://devops-hd.oss-internal.cn-east-2.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.391.dc2f953.20180910190347.bin -O installer && sh installer /usr/local/jdcloud/ifrit && rm -f installer
-#华东-宿迁：
-wget -c http://devops-sq.oss-internal.cn-east-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.391.dc2f953.20180910190347.bin -O installer && sh installer /usr/local/jdcloud/ifrit && rm -f installer
-#华南-广州：
-wget -c http://devops.oss-internal.cn-south-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.391.dc2f953.20180910190347.bin -O installer && sh installer /usr/local/jdcloud/ifrit && rm -f installer
+curl -fsSL http://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install | bash
 ```
 
 在第三方主机（物理机or虚机）中，请确保主机满足两个条件（联通公网+NTP正常）
@@ -36,7 +29,7 @@ wget -c http://devops.oss-internal.cn-south-1.jcloudcs.com/ifrit/ifrit-agent-ext
 安装Agent的方法如下：
 
 ```
-wget -c http://devops-hb.oss.cn-north-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.377.8918eae.20180418132906.bin -O installer && sh installer -- -t $tenant -r $region -v $vpc /export/servers/ifrit && rm -f installer
+wget -c http://devops-hb.oss.cn-north-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.448.0742c84.20190327191802.bin -O installer && sh installer -- -t $tenant -r $region -v $vpc -a zero-agent,hawkeye-agent,log-agent,ark-query /usr/local/share/jcloud/ifrit && rm -f installer
     -t tenant #devops中的租户名
     -v vpc    #由用户编写,将作为服务器的vpc名称
     -r region #由用户编写,将作为服务器的region名称

@@ -19,8 +19,6 @@
 
 ![表 1 中国大陆地域及可用区](https://github.com/jdcloudcom/cn/blob/edit/image/Security-Information/domestic3.jpg)
 
-
-
 ### 1.2 基础设施安全
 
 京东云执行更严格的 IDC 标准、服务器准入标准以及运维标准，以保证云计算整个基础框架的高可用性、数据的可靠性以及云主机的高可用性，提供不低于99.95% 的服务可用性。

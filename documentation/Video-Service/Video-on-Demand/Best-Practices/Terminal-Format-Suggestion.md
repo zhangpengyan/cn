@@ -1,0 +1,40 @@
+
+### 不同点播协议对于不同终端的适配情况
+<table>
+<tr>
+<tr>
+    <td rowspan="2"> 视频协议\端<br/>
+    <td>PC（flash浏览器）</td>
+    <td>PC（H5浏览器）</td>
+	<td>移动（H5浏览器）</td>
+    <td>移动（APP）</td>
+</tr>
+<tr>
+    <td>（H.264/AAC/MP3）</td>
+    <td>（H.264/AAC）</td>
+	<td>（H.264/AAC）</td>
+	<td>（全格式）</td>
+</tr>
+<tr>
+    <td>HLS</td>
+    <td>支持</td>
+	<td>支持</td>
+	<td>支持</td>
+	<td>支持</td>
+</tr>
+<tr>
+    <td>MP4</td>
+    <td>支持</td>
+	<td>支持</td>
+	<td>支持</td>
+	<td>支持</td>
+</tr>
+<tr>
+    <td>FLV</td>
+    <td>支持</td>
+    <td>不支持</td>
+    <td>不支持</td>
+    <td>支持</td>
+</tr>
+</tr>
+</table>

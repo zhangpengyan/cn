@@ -1,7 +1,8 @@
 
 # 部署私有镜像仓库  
 **私有镜像仓库**  
-    私有镜像仓库是可作为客户对内部容器镜像的存储、管理统一平台，相比公有镜像仓库可以提供更好的性能、安全性和可管理性。Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器，以下以Harbor为例。  
+    私有镜像仓库是可作为客户对内部容器镜像的存储、管理统一平台，相比公有镜像仓库可以提供更好的性能、安全性和可管理性。目前京东云已经提供[容器镜像仓库](https://docs.jdcloud.com/cn/container-registry/product-overview)产品，可以直接使用。  
+    以下以Harbor为例讲解客户搭建私有镜像仓库，Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器：  
 **安装步骤：**  
 1、创建云主机  
 a、在京东云控制台创建一台云主机，详见[创建Linux实例](https://docs.jdcloud.com/cn/virtual-machines/account-preparation-linux)。  

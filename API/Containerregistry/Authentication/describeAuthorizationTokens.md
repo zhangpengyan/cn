@@ -10,7 +10,7 @@
 GET
 
 ## 请求地址
-https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}/tokens
+https://containerregistry.jdcloud-api.com/v1/regions/{regionId}/registries/{registryName}/tokens
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -34,8 +34,8 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}/t
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
@@ -46,15 +46,15 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}/t
 |名称|类型|描述|
 |---|---|---|
 |**authorizationToken**|String|基于base64编码的字符串，包含指定JCR registry的授权信息。解码后可用于docker login。|
-|**expiresAt**|String|Unix 时钟，记录authorization token的过期时间。默认Authorization tokens有效期为12小时。|
 |**loginCmdLine**|String|用户直接使用的docker login 命令行|
+|**expiresAt**|String|Unix 时钟，记录authorization token的过期时间。默认Authorization tokens有效期为12小时。|
 
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

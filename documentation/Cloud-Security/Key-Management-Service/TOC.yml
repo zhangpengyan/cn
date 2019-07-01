@@ -1,5 +1,5 @@
 name: 密钥管理服务
-href: 
+href:
 items:
 - name: 产品简介
   items:
@@ -13,26 +13,36 @@ items:
       href: Introduction/Features.md
     - name: 限制说明
       href: Introduction/Restrictions.md
-    - name: 应用场景 
-      href: Introduction/Application-Scenarios.md    
 - name: 产品定价
   items:
     - name: 计费概述
       href: Pricing/Billing-Overview.md
-- name: 入门指南
-  items:
-    - name: 入门指导
-      href: Getting-Started/KMS-Started.md
 - name: 操作指南
   items:
-    - name: 密钥管理
-      href: Operation-Guide/Key-Management.md
-    - name: 在线工具加解密小数据
-      href: Operation-Guide/Online-tool.md
-    - name: 机密管理
-      href: Operation-Guide/Secret-Management.md  
-- name: API参考
-  items:
-    - name: API使用说明
-      href: API-Reference/Overview.md
-      
+    - name: 开通服务
+      href: Operation-Guide/Active.md
+    - name: 密钥
+      items:
+        - name: 密钥概念
+          href: Operation-Guide/Key-Management/Key-Concepts.md
+        - name: 创建密钥
+          href: Operation-Guide/Key-Management/Key-Create.md
+        - name: 轮换密钥
+          href: Operation-Guide/Key-Management/Key-Rotation.md
+        - name: 加解密
+          href: Operation-Guide/Key-Management/Key-Encrypt.md
+        - name: 删除密钥
+          href: Operation-Guide/Key-Management/Key-Delete.md
+        - name: 密钥状态
+          href: Operation-Guide/Key-Management/Key-Status.md
+        - name: 在线工具
+          href: Operation-Guide/Key-Management/Key-Tools.md
+    - name: 机密数据
+      items:
+        - name: 机密数据概念
+          href: Operation-Guide/Secret-Management/Secret-Concepts.md
+        - name: 创建机密数据
+          href: Operation-Guide/Secret-Management/Secret-Create.md
+        - name: 删除机密数据
+          href: Operation-Guide/Secret-Management/Secret-Delete.md
+

@@ -4,7 +4,7 @@
 
 ## 计费说明
 按配置计费
---请参见  [后付费计费说明](https://www.jdcloud.com/help/detail/1393/isCatalog/1)。
+--请参见  [后付费计费说明](https://docs.jdcloud.com/cn/billing/postpay)。
 
 包年包月
---请参见 [预付费计费说明](https://www.jdcloud.com/help/detail/1392/isCatalog/1)。
+--请参见 [预付费计费说明](https://docs.jdcloud.com/cn/billing/prepay)。

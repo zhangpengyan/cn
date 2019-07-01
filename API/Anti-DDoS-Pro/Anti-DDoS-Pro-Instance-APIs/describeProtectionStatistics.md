@@ -8,7 +8,7 @@
 GET
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instance/describeProtectionStatistics
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/describeProtectionStatistics
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -21,9 +21,16 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instance/describeProtection
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
+|**error**|Error| |
 
+### Error
+|名称|类型|描述|
+|---|---|---|
+|**code**|Integer|请求错误状态码|
+|**status**|String|请求错误状态码|
+|**message**|String|请求错误提示|
 ### Result
 |名称|类型|描述|
 |---|---|---|

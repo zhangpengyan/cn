@@ -1,10 +1,10 @@
 
 # 制作容器镜像
 
-**制作容器镜像**
+**制作容器镜像**  
 Docker Hub是Docker的官方镜像仓库，拥有大量高质量镜像，可以直接下载使用。如果不能满足需求，可以制作容器镜像，下面介绍用Dockerfile制作容器镜像的方法。  
 ## 1、安装Docker，
-      还请参考[docker安装](https://docs.docker.com/install/)。  
+   还请参考[docker安装](https://docs.docker.com/install/)。  
 ## 2、创建Dockerfile文件  
 新建一个目录，在里面新建一个dockerfile文件  
 ```

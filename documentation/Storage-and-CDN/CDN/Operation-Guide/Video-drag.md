@@ -8,4 +8,4 @@
 
 点击“[域名列表](https://cdn-console.jdcloud.com/domainlist)”--选择相应的域名进入“[高级配置](https://cdn-console.jdcloud.com/detail/advanced?id=pid-test1.jcloud.com)”--“视频拖拽”可进行设置，变更位置也在此
 
-![image.png](https://img1.jcloudcs.com/cms/381c8249-23ab-49db-b98c-e56537a2676f20180205110128.png)
+![image.png](https://img1.jcloudcs.com/cms/381c8249-23ab-49db-b98c-e56537a2676f20180205110128.png) 

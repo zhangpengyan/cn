@@ -10,13 +10,13 @@ WAF提供灵活的HTTPS配置功能，帮助您在不改造源站的情况下，
 
 3. 选择要操作的域名，单击其操作列下的**编辑**。
 
-4. 在**协议类型**下勾选**HTTPS**。![img](https://github.com/jdcloudcom/cn/blob/edit/image/waf-img/https%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.png)
+4. 在**协议类型**下勾选**HTTPS**。![image.png](../../../../../image/waf-img/https%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.png)
 
-5. - **开启HTTPS的强制跳转**
+5. **开启HTTPS的强制跳转**
 
 开启后,HTTP请求将显示为HTTPS，默认跳转到443端口
 
-![img](https://github.com/jdcloudcom/cn/blob/edit/image/waf-img/https%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE-2.png)
+![image.png](../../../../../image/waf-img/https%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE-2.png)
 
 **说明：** 开启跳转后，因为浏览器的缓存特性，继续访问http服务还是会跳转到https，开启HTTPS强制跳转前必须先取消HTTP协议。
 
@@ -26,6 +26,6 @@ WAF提供灵活的HTTPS配置功能，帮助您在不改造源站的情况下，
 
 **说明：** 使用HTTP回源，无需在源站服务器上做任何改动，也不需要配置HTTPS。但是，该配置的前提是在WAF的证书管理中上传正确的证书和私钥。
 
-![img](https://github.com/jdcloudcom/cn/blob/edit/image/waf-img/https%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE-3.png)
+![image.png](../../../../../image/waf-img/https%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE-3.png)
 
  

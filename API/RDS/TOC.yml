@@ -44,6 +44,11 @@
             herf: Audit-Management/enableAudit.md
           - name: modifyAudit
             herf: Audit-Management/modifyAudit.md
+
+      - name: 可用区管理
+        items:
+          - name: describeAzs
+            herf: AvailabilityZones/describeAzs.md
             
       - name: 备份管理
         items:
@@ -62,9 +67,13 @@
             herf: Binlog/describeBinlogDownloadURL.md
           - name: describeBinlogs
             herf: Binlog/describeBinlogs.md
+          - name: clearBinlogs
+            herf: Binlog/clearBinlogs.md
 
       - name: 单库上云
         items:
+          - name: deleteImportFile
+            herf: Cloud-on-Single-Database/deleteImportFile.md
           - name: describeImportFiles
             herf: Cloud-on-Single-Database/describeImportFiles.md
           - name: getUploadKey
@@ -80,6 +89,8 @@
             herf: Cross-region-synchronization-service/deleteBackupSynchronicity.md
           - name: describeBackupSynchronicities
             herf: Cross-region-synchronization-service/describeBackupSynchronicities.md
+          - name: createInstanceByTimeInCrossRegion
+            herf: Cross-region-synchronization-service/createInstanceByTimeInCrossRegion.md
 
       - name: 数据库管理
         items:
@@ -109,6 +120,8 @@
             herf: Instance-Management/createInstanceByTime.md
           - name: createInstanceFromBackup
             herf: Instance-Management/createInstanceFromBackup.md
+          - name: createROInstance
+            herf: Instance-Management/createROInstance.md
           - name: deleteInstance
             herf: Instance-Management/deleteInstance.md
           - name: describeBackupPolicy
@@ -117,10 +130,14 @@
             herf: Instance-Management/describeInstanceAttributes.md
           - name: describeInstances
             herf: Instance-Management/describeInstances.md
+          - name: describeLatestRestoreTime
+            herf: Instance-Management/describeLatestRestoreTime.md
           - name: disableInternetAccess
             href: Instance-Management/disableInternetAccess.md
           - name: enableInternetAccess
             href: Instance-Management/enableInternetAccess.md
+          - name: exchangeInstanceDns
+            href: Instance-Management/exchangeInstanceDns.md
           - name: failoverInstance
             herf: Instance-Management/failoverInstance.md
           - name: modifyBackupPolicy
@@ -131,13 +148,45 @@
             herf: Instance-Management/modifyInstanceName.md
           - name: modifyInstanceSpec
             herf: Instance-Management/modifyInstanceSpec.md
+          - name: modifyParameterGroup
+            herf: Instance-Management/modifyParameterGroup.md
           - name: rebootInstance
             herf: Instance-Management/rebootInstance.md
           - name: restoreInstance
             herf: Instance-Management/restoreInstance.md
+
+      - name: 参数组管理
+        items:
+          - name: copyParameterGroup
+            herf: Parameter-Group/copyParameterGroup.md
+          - name: createParameterGroup
+            herf: Parameter-Group/createParameterGroup.md
+          - name: deleteParameterGroup
+            herf: Parameter-Group/deleteParameterGroup.md
+          - name: describeParameterGroupAttachedInstances
+            herf: Parameter-Group/describeParameterGroupAttachedInstances.md
+          - name: describeParameterGroupParameters
+            herf: Parameter-Group/describeParameterGroupParameters.md
+          - name: describeParameterGroups
+            herf: Parameter-Group/describeParameterGroups.md
+          - name: describeParameterModifyRecords
+            herf: Parameter-Group/describeParameterModifyRecords.md
+          - name: modifyParameterGroupAttribute
+            herf: Parameter-Group/modifyParameterGroupAttribute.md
+          - name: modifyParameterGroupParameters
+            herf: Parameter-Group/modifyParameterGroupParameters.md
+
+      - name: 参数管理
+        items:
+          - name: describeParameters
+            herf: Parameters/describeParameters.md
+          - name: modifyParameters
+            herf: Parameters/modifyParameters.md
      
       - name: 性能统计
         items:
+          - name: describeActiveQueryPerformance
+            herf: Performance-Statistics/describeActiveQueryPerformance.md
           - name: describeIndexPerformance
             herf: Performance-Statistics/describeIndexPerformance.md
           - name: describeQueryPerformance
@@ -146,6 +195,17 @@
             herf: Performance-Statistics/describeSlowLogAttributes.md
           - name: describeSlowLogs
             herf: Performance-Statistics/describeSlowLogs.md
+
+      - name: SQL 拦截
+        items:
+          - name: describeIntercept
+            herf: SQL-Interception/describeIntercept.md
+          - name: describeInterceptResult
+            herf: SQL-Interception/describeInterceptResult.md
+          - name: disableIntercept
+            herf: SQL-Interception/disableIntercept.md
+          - name: enableIntercept
+            herf: SQL-Interception/enableIntercept.md
             
       - name: 白名单
         items:
@@ -158,8 +218,12 @@
     items:
       - name: MySQL 实例规格
         href: Instance-Specifications/Instance-Specifications-MySQL.md
+      - name: Percona 实例规格
+        href: Instance-Specifications/Instance-Specifications-Percona.md
+      - name: MariaDB 实例规格
+        href: Instance-Specifications/Instance-Specifications-MariaDB.md
       - name: SQL Server 实例规格
-        href: Instance-Specifications/Instance-Specifications-MySQL.md
+        href: Instance-Specifications/Instance-Specifications-SQLServer.md
 
   - name: 枚举参数说明
     items:

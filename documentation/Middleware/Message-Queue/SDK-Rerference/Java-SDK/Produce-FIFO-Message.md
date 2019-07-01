@@ -1,4 +1,5 @@
 # 生产顺序消息
+（说明：当topic类型选择全局顺序消息时候，应用此producer来发送消息）
 
 消息队列 JCQ SDK支持发送两种顺序消息方式：同步发送单条消息、同步发送批量消息（最多32条）。顺序消息适用由于需要严格按照先进先出的原则进行消息发布和消费的场景，具体参数和参考示例如下。
 
@@ -8,7 +9,7 @@
 | PROPERTY_TAGS | 可以设置消息的标签（tag），暂时支持一条tag |
 
 ## 代码示例
-```java
+```Java
 package com.jcloud.jcq.sdk.demo;
 
 import com.jcloud.jcq.protocol.Message;

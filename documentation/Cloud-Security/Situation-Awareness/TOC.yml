@@ -8,7 +8,7 @@
       - name: 产品架构
         href: Introduction/Basic-Infrastructure.md
       - name: 应用场景
-        href: Application-Scenarios.md
+        href: Introduction/Application-Scenarios.md
   - name: 操作手册
     items:
       - name: 威胁概览
@@ -19,9 +19,18 @@
         href: Operation-Guide/Weakness-Details.md
       - name: 配置变更
         href: Operation-Guide/Configuration-Change.md         
+      - name: 安全大屏
+        href: Operation-Guide/Security-Bigscreen.md     
+      - name: 资产指纹
+        href: Operation-Guide/Asset-Print.md   
+      - name: 云产品基线
+        href: Operation-Guide/Cloudbaseline.md      
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 版本更新
     href: Related-Resources/Release-Notes.md
+  - name: 计费模型
+    href: Related-Resources/Pricing-Model.md    
   - name: 服务条款
     href: SLA/SLA.md
+

@@ -15,7 +15,7 @@
 - 推流域名和播放域名不能为同一个，如主播的推流域名为a.com，播放域名为b.com，不能为a.com；
 - 不支持泛域名的添加
 - 音视频的格式支持H264，AAC
-- 拉流模式只支持回源拉rtmp格式，播放域名可以基于rtmp格式自助转为https和https
+- 拉流模式只支持回源拉rtmp格式，播放域名可以基于rtmp格式自助转为http和https
 
 ![image.png](https://img1.jcloudcs.com/cms/e88c953b-d500-49b3-a16a-024e572585ad20180514202416.png)
 

@@ -7,16 +7,16 @@
 在pom.xml中配置依赖的sdk,如下：
 ```
 <dependency>
-<groupId>com.amazonaws</groupId>
-<artifactId>aws-java-sdk</artifactId>
-<version>1.11.136</version>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk</artifactId>
+    <version>1.11.490</version>
 </dependency>
 ```
 
 2.示例代码
 
 生成带有签名的URL示例代码如下：
-```
+```Java
 import java.net.URL;
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.Protocol;

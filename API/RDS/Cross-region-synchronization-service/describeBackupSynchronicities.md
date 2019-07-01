@@ -34,15 +34,15 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/backupSynchronicities
 ### BackupSynchronicity
 |名称|类型|描述|
 |---|---|---|
-|**createTime**|String|创建时间|
+|**serviceId**|String|跨地域备份同步服务ID|
+|**instanceId**|String|RDS 实例ID|
+|**serviceStatus**|String|跨地域备份同步服务状态，正常，running；错误，error|
+|**srcRegion**|String|源实例所在地域|
 |**destRegion**|String|备份同步的目标地域|
 |**engine**|String|数据库类型|
 |**engineVersion**|String|数据库版本|
-|**instanceId**|String|RDS 实例ID|
+|**createTime**|String|创建时间|
 |**newestDataTime**|String|跨地域备份的最新数据时间点|
-|**serviceId**|String|跨地域备份同步服务ID|
-|**serviceStatus**|String|跨地域备份同步服务状态，正常，running；错误，error|
-|**srcRegion**|String|源实例所在地域|
 
 ## 返回码
 |返回码|描述|

@@ -1,6 +1,6 @@
 ## 基础架构
 京东云Elasticsearch提供Elasticsearch + kibana的托管服务，支持用户方便地扩容Elasticsearch集群、集群的监控报警。
-![查询1](https://github.com/jdcloudcom/cn/blob/Elasticsearch/image/Internet-Middleware/JCS%20for%20Elasticsearch/ES基础架构-01.png)
+![查询1](https://github.com/jdcloudcom/cn/blob/Elasticsearch/image/Internet-Middleware/JCS%20for%20Elasticsearch/基础架构1210.png)
 
 | 概念 | 解释 |
 | :- | :- |

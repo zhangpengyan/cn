@@ -235,8 +235,10 @@ GPU型当前提供GPU标准型，为您提供高性能的一够计算资源。�
 * 异构计算
 * GPU：
 	* Nvidia Tesla P40 
+	* Nvidia Tesla V100
 * 处理器：
-	* 2.1 GHz主频的Intel Xeon E5-2683 v4（Broadwell）处理器
+	* 2.1 GHz主频的Intel Xeon E5-2683 v4（Broadwell）处理器（P40）
+	* 2.2 GHz主频的Intel Xeon E5-2650 v4（Broadwell）处理器（V100）
 * 支持本地数据盘（临时存储），请注意 **关机时本地数据盘数据将被清空** ，并支持以下两种云硬盘：
 	* 高效云盘
 	* SSD云盘
@@ -250,7 +252,7 @@ GPU型当前提供GPU标准型，为您提供高性能的一够计算资源。�
 第一代：
 
 实例规格|vCPU（核）|内存（GB）|GPU|本地数据盘（临时存储）|网卡多队列
-:---|:---|:---|:---|:---|:---|:---
+:---|:---|:---|:---|:---|:---|
 |p.n1p40.3xlarge|12|48|1 x Nvidia Tesla P40|1 x 960GB SSD|4
 |p.n1p40.7xlarge|28|110|2 x Nvidia Tesla P40|2 x 960GB SSD|4
 |p.n1p40.14xlarge|56|220|4 x Nvidia Tesla P40|4 x 960GB SSD|4

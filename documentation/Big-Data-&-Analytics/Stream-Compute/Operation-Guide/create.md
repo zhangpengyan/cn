@@ -4,9 +4,9 @@
 在使用流数据总线服务之前，首先需要注册京东云账号。<br><br>
 2.	**创建应用**<br>
 第一步：登录流计算WEB控制台，进入流计算的“应用管理”页面，点击“创建”。<br>
-![sc-013](https://github.com/jdcloudcom/cn/blob/edit/image/Streamcompute/SC-013.png?raw=true)<br><br>
+![sc-013](../../../../image/Streamcompute/SC-013.png)<br><br>
 在创建应用界面中输入资料信息后点击确定, 应用创建完成.<br>
-![sc-014](https://github.com/jdcloudcom/cn/blob/edit/image/Streamcompute/SC-014.png?raw=true)<br>
+![sc-014](../../../../image/Streamcompute/SC-014.png)<br>
 应用名称: <br>
 创建一个方便您记忆的应用名称<br><br>
 任务类型: <br>

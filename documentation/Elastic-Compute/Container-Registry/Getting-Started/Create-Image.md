@@ -40,7 +40,7 @@
 
 **四、上传、下载镜像**
 
- 1. 安装最新版的[京东云CLI](https://docs.jdcloud.com/cn/cli/introduction)和[Docker](https://docs.docker.com/install/)
+ 1. 建议使用Linux系统，如Centos、Ubuntu；安装最新版的[京东云CLI](https://docs.jdcloud.com/cn/cli/introduction)和[Docker](https://docs.docker.com/install/)
  
  2. 例：注册表为myregistry，镜像仓库为myrepo，镜像版本号为latest，地域选择华北-北京为cn-north-1。用户可根据具体情况修改。
  

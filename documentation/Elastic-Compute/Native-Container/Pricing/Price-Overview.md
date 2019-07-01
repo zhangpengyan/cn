@@ -129,8 +129,8 @@
       <td>0.005904</td>
    </tr>
    <tr> 
-      <td rowspan="4">内存优化</td>
-      <td rowspan="4">标准</td>
+      <td rowspan="7">内存优化</td>
+      <td rowspan="7">标准</td>
       <td>m.n2.large</td>
       <td>2</td>
       <td>16</td>
@@ -157,6 +157,27 @@
       <td>128</td>
       <td>2477.6</td>
       <td>0.002391</td>
+   </tr>
+   <tr>
+      <td>m.n2.8xlarge</td>
+      <td>32</td>
+      <td>256</td>
+      <td>4955.2</td>
+      <td>0.004779</td>
+   </tr>
+    <tr>
+      <td>m.n2.16xlarge</td>
+      <td>64</td>
+      <td>512</td>
+      <td>9910.4</td>
+      <td>0.009558</td>
+   </tr>
+    <tr>
+      <td>m.n2.18xlarge</td>
+      <td>72</td>
+      <td>576</td>
+      <td>11149.2</td>
+      <td>0.010753</td>
    </tr>
    <tr>
       <td rowspan="5">高频计算</td>
@@ -340,6 +361,7 @@
    </tr>
    <tr>
 </table>
+  
 关于云硬盘：请参考[云硬盘购买须知][1]
 
 关于弹性公网IP：请参考[弹性公网IP购买须知][2]

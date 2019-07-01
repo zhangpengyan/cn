@@ -8,7 +8,7 @@
 GET
 
 ## 请求地址
-https://monitor.jcloud.com/v1/metrics
+https://monitor.jdcloud-api.com/v1/metrics
 
 
 ## 请求参数
@@ -20,8 +20,8 @@ https://monitor.jcloud.com/v1/metrics
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|

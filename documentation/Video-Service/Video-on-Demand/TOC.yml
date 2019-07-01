@@ -1,0 +1,66 @@
+name: 视频点播
+href:
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/Product-Overview.md
+    - name: 核心概念
+      href: Introduction/Core-Concepts.md
+    - name: 基础架构
+      href: Introduction/Basic-Infrastructure.md
+    - name: 产品优势
+      href: Introduction/Benefits.md
+    - name: 产品功能
+      href: Introduction/Features.md
+    - name: 限制说明
+      href: Introduction/Restrictions.md
+    - name: 应用场景 
+      href: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+    - name: 计费规则
+      href: Pricing/Billing-Rules.md
+    - name: 价格总览
+      href: Pricing/Price-Overview.md
+    - name: 欠费说明
+      href: Pricing/Arrears-Description.md 
+- name: 入门指南
+  items:
+    - name: 开通服务
+      href: Getting-Started/Service-Provisioning.md
+    - name: 视频上传
+      href: Getting-Started/Video-Upload.md
+    - name: 视频查看
+      href: Getting-Started/Video-View.md
+    - name: 视频播放
+      href: Getting-Started/Video-Play.md
+- name: 操作指南
+  items:
+    - name: 视频管理
+      href: Operation-Guide/Media-Asset-Management.md
+    - name: 视频处理
+      href: Operation-Guide/Video-Processing.md
+    - name: 全局配置
+      href: Operation-Guide/Global-Settings.md
+    - name: 统计分析
+      href: Operation-Guide/Statistical-Analysis.md
+- name: 最佳实践
+  items:
+    - name: 终端格式建议
+      href: Best-Practices/Terminal-Format-Suggestion.md
+- name: 教程
+  items:
+  status: 0
+- name: 问题排查
+  items:
+    - name: 视频播放失败
+      href: Troubleshooting/Video-Playback-Failed.md
+- name: 常见问题
+  href: FAQ/FAQ.md
+- name: 相关资源
+  items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md

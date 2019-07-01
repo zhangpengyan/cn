@@ -1,40 +1,31 @@
 # 直播转码
 
-视频直播服务支持转码功能，可以对视频流按照设置的模板实时转成不同码率分辨率，当推流开始时，转码操作自动启动，客户使用转码后的播放地址可观看转码后的视频流，转码播放地址由一定规则拼接，具体请参考《直播播放-播放地址》章节。
+视频直播服务支持转码功能，可以对视频流按照设置的模板实时转成不同码率分辨率。转码配置完成后，当推流开始时，转码操作自动启动。   
+客户使用转码后的播放地址可观看转码后的视频流，转码播放地址有一定规则拼接，拼接规则为：  
+rtmp://域名/{AppName}/{StreamName}_码率标识  
+http://域名/{AppName}/{StreamName}_码率标识.flv  
+http://域名/{AppName}/{StreamName}_码率标识.m3u8。  
+其中“码率标识”为创建转码模板时您填入的拉取转码流标识字段。  
 
-直播转码模板按照应用名称（AppName）来区分，同一个应用名称（AppName）下的所有流都按照当前模板设置的参数来进行转码。
+直播转码的配置分为两个步骤：1.创建转码模板；2.添加转码配置。   
+系统为您预设了标准质量模板，如果不能满足您的转码需求，请先新建转码模板后再添加域名转码配置，转码配置完成后，对于新推上来的直播流生效。转码配置可绑定域名、APP、流三个级别，配置按最小粒度生效，举例：对于域名rtmp://abc.com/live/123，可在APP“live”级绑定转码模板A，在流“123”级绑定转码模板B，那么A模板对于APP“live”下除“123”外的其他所有流都生效，B模板对于流“123”生效。
 
-如设置模板时填写的AppName为test，那么test下面所有的流都会执行转码操作，同时会按照test模板设置的参数对流进行转码。
+## 步骤1.新建模板
 
-## 1.新建模板
+登录直播控制台，进入“模板管理”-“转码模板管理”页面，查看“通用转码模板”，查看以下系统预制转码模板是否符合您的转码需求，如果满足，则无需再创建新模板，在转码配置中直接调用相应模板即可。   
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/9%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E6%A8%A1%E6%9D%BF%E9%9C%80%E4%BF%AE%E6%94%B9.png)  
+如果预制转码模板不能满足您的转码需求，请进入“自定义转码模板”页面添加自定义转码模板。
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/10%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E6%A8%A1%E6%9D%BF.png)
+点击“添加转码模板”，按照您的实际转码输出需求，填写相应的转码视频、音频参数，点击“立即创建”即可成功创建转码模板。创建成功的转码模板会展示在转码模板列表当中。  
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/11%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E6%A8%A1%E6%9D%BF.png) 
 
-登录直播控制台，进入“域名管理”页面，选择要查看播放地址的一组域名，点击右侧的“管理”进入域名配置页，点击“转码配置”切换到录制模板管理页面
+## 步骤2.新建转码配置  
 
-![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/%E7%9B%B4%E6%92%AD%E8%BD%AC%E7%A0%81-%E8%BD%AC%E7%A0%81%E9%A1%B5%E5%88%87%E6%8D%A2.png)
-
-在转码配置页面，点击“新建模板”，在弹出的窗口中填写对应的参数信息，点“确定”完成转码模板的添加。
-
-![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/%E7%9B%B4%E6%92%AD%E8%BD%AC%E7%A0%81-%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E6%A8%A1%E6%9D%BF%E6%8C%89%E9%92%AE.png)
-
-模板参数说明如下：
-
-![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/%E7%9B%B4%E6%92%AD%E8%BD%AC%E7%A0%81-%E6%96%B0%E5%BB%BA%E6%A8%A1%E6%9D%BF.png)
-
-**App
-Name**：要进行直播转码的应用名称，目前仅支持英文，数字，“-”，"_",长度需要在1-50字符之间
-
-**转码模板**：可选择的预制转码模板类型，目前支持流畅、标清、高清三种，创建模板时必须勾选其中一种。
-
-预制模板参数说明：
-
-| **模板名称** | **模板 ID** | **分辨率** | **码率（kbps）** |
-|--------------|-------------|------------|------------------|
-| 流畅         | lld         | 640x360    | 200              |
-| 标清         | lsd         | 854x480    | 400              |
-| 高清         | lhd         | 1280x720   | 800              |
-
-## 2.删除模板
-
-登录直播控制台，进入“转码配置”页面，在想要删除的转码模板右侧点击“删除”，在弹出的窗口中点“确认”完成删除操作。
-
-![](https://github.com/jdcloudcom/cn/blob/cn-live-video/image/live-video/%E7%9B%B4%E6%92%AD%E8%BD%AC%E7%A0%81-%E6%A8%A1%E6%9D%BF%E5%88%A0%E9%99%A4.png)
+在控制台左侧菜单栏点击“域名管理”，找到需要做转码配置的直播域名组，点击“管理”，进入“转码配置”页面。
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/12%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E9%85%8D%E7%BD%AE.png)
+在转码配置页面，点击“新建转码配置”，进入转码配置页面：
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/13%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E9%85%8D%E7%BD%AE.png)  
+选择“全部AppName”则配置对于所有APP也就是对于整个域名生效，如果自定义指定AppName，则需要填入需要配置转码的APP名称，并可以继续选择生效范围为“全部StreamName”或自定义指定StreamName，如果自定义指定StreamName，则需要填入需要配置转码的StreamName名称。然后选择相应的转码模板，转码模板可以单选、多选。点击“立即创建”，即可完成转码配置。转码配置创建完成后，在转码配置列表即可看到刚才创建的转码规则。此条配置对于新推的直播流生效。
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/14%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E9%85%8D%E7%BD%AE.png) 
+在转码配置列表中，AppName列的ALL表示刚刚创建的转码配置对于所有AppName生效即对于域名级别生效，StreamName列的ALL表示刚刚创建的转码配置对于所有StreamName生效，即对于APP级别生效。
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/15%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E9%85%8D%E7%BD%AE.png) 

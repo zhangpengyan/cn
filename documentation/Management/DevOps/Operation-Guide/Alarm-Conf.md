@@ -110,7 +110,7 @@ nsFilter支持的函数：
 | GroupIn        | 1        | 分组在此范围内              | GroupIn(\\"pre,online\\"\)                   |
 | HasHostTag     | 1        | 包含此HostTag返回true       | HasHostTag(\\"backup\\")                     |
 | HostTagValueIn | 2        | 指定HostTag的值在指定范围内 | HostTagValueIn(\\"version\\", \\"1.0,2.0\\") |
-| NsContain      | 1        | ns里包含指定的字符串        | NsContain(\\".judge-hawkeye-ark\\")          |
+| NsContain      | 1        | ns里包含指定的字符串        | NsContain(\\"judge-hawkeye-ark\\")          |
 | HasTag         | 1        | 包含tag                     | HasTag(\\"lang\\")                           |
 | TagValueIn     | 2        | 指定tag的值在指定范围内     | TagValueIn(\\"priority\\",\\"0,1\\")         |
 

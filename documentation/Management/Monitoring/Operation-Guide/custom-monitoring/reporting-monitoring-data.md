@@ -1,11 +1,12 @@
-## 上报监控数据
-自定义监控功能为您提供上报监控数据的接口，方便您将自己采集的时序数据上报到云监控。目前支持OpenAPI的方式进行上报，可上报原始数据和已聚合的统计数据。
+# 上报监控数据
+自定义监控功能为您提供上报监控数据的接口，方便您将自己采集的时序数据上报到云监控。目前支持OpenAPI和命令行工具CLI的方式进行上报。  
+## OpenAPI上报
 
 ### 上报接口描述
 
 1. 接口名称：putMetricData
 
-2. 公网域名：
+2. 公网域名  
 
 地域 | 域名
 ---|---
@@ -14,13 +15,22 @@
 华东-宿迁 |monitor.cn-east-1.jdcloud-api.com
 华东-上海 |monitor.cn-east-2.jdcloud-api.com
 
-3. 支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
+3. 内网域名  
+
+地域 | 域名
+---|---
+华北-北京 |monitor.internal.cn-north-1.jdcloud-api.com
+华南-广州 |monitor.internal.cn-south-1.jdcloud-api.com
+华东-宿迁 |monitor.internal.cn-east-1.jdcloud-api.com
+华东-上海 |monitor.internal.cn-east-2.jdcloud-api.com
+
+4.  支持批量上报方式。单次请求最多包含 50 个数据点；数据大小不超过 256k。
 
 注：OpenAPI入门使用请参看<a href="http://docs.jdcloud.com/cn/common-declaration/api/introduction">公共说明</a>
 
 ### 请求方式
 
-POST   https://{公网域名}/v1/customMetrics
+POST   https://{域名}/v1/customMetrics
 
 例如： POST    https://monitor.cn-north-1.jdcloud-api.com/v1/customMetrics
 
@@ -30,7 +40,7 @@ POST   https://{公网域名}/v1/customMetrics
 ---|---|---|---
 metricDataList|	MetricDataCm[] |	False |	数据参数   
 
-### MetricDataCm
+#### MetricDataCm
 
 名称 | 类型 | 是否必选 | 描述
 ---|---|---|---
@@ -38,8 +48,8 @@ dimensions|Object |True|数据维度，数据类型为map类型，支持最少�
 metric|	String |True |	监控指标名称，长度不超过255字节，只允许英文、数字、下划线_、点.,  [0-9][a-z] [A-Z] [. _ ]， 其它会返回err               
 namespace |	String|	True|命名空间 ，长度不超过255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err               
 timestamp|Integer|True|上报数据点的时间戳,只支持10位，秒级时间戳，不能写入过去30天的时间                              
-type |Integer|True |数据上报类型，1为原始值，2为聚合数据。当上报聚合数据时，建议为60s的周期时行上报、否则无法正常查询                           
-values |	Object |	True |指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type=1时，key只能为”value”，上报的是原始值，当type=2时，K的值可以为"avg","sum","last","max","min","count"，只支持以上类型，否则会报错，value内容为整型或浮点型数字，最大值为9223372036854775807，count只支持>=0的数  
+type |Integer|True |数据类型，当前仅支持输入值1，表示原始数据。                          
+values |	Object | True |指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当前仅支持type=1，且key只能为”value”。  
 
 ### 返回参数  
 
@@ -49,13 +59,13 @@ error |Object| 错误信息 。
 requestId|String |请求的标识id                        
 result |Result |                
                       
-### Result
+#### Result
 名称 | 类型 | 是否必选 
 ---|---|---
 errMetricDataList|MetricDataList[]|
 success|Boolean  |全部写入成功为true，否则为false   
 
-### MetricDataList
+#### MetricDataList
 名称 | 类型 | 是否必选 
 ---|---|---
 errDetail|string	| 错误数据描述
@@ -72,6 +82,8 @@ errMetricData |string |错误数据
 
 ### 示例代码
 
+注：直接使用该示例时，请替换timestamp参数为最新的10位秒级时间戳，否则会写入失败（禁止写入时间戳超过过去30天的数据）。  
+
 请求示例
 ```
 {
@@ -81,9 +93,9 @@ errMetricData |string |错误数据
 			"metric": "vm.mem.usage1",
 			"dimensions": {
 				"host": "1.2.3.23",
-				"datacenter": "cn-north-1 "
+				"datacenter": "cn-north-1"
 			},
-			"timestamp": 15305424971,
+			"timestamp": 1552446075,
 			"type": 1,
 			"values": {
 				"value": "12342213"
@@ -97,11 +109,10 @@ errMetricData |string |错误数据
 				"host": "1.2.3.19",
 				"tag": "bj"
 			},
-			"timestamp": 1530542497,
+			"timestamp": 1552446075,
 			"type": 2,
 			"values": {
-				"avg": "80",
-				"max": "32424244120"
+				"value": "12342213"
 			}
 		}
 	]
@@ -139,4 +150,51 @@ fail：
 	}
 }
 
+```
+
+## CLI上报 
+### 安装CLI  
+如何安装请参看<a href="https://docs.jdcloud.com/cn/cli/installation">安装说明</a> 。
+### 配置环境  
+
+配置KEY、所在区域region-id和网关地址endpoint，编辑 /root/.jdc/config
+```
+vi ~/.jdc/config
+```
+
+```
+[default]
+access_key = YourAccessKeyID
+secret_key = YourAccessKeySecret
+region_id = cn-north-1
+endpoint = monitor.cn-north-1.jdcloud-api.com
+scheme = https
+timeout = 20
+```  
+不同地域的region_id 和 上报的网关endpoint地址如下：  
+
+地域 |region_id |公网endpoint|内网endpoint
+---|---|---|---
+华北-北京 |cn-north-1| monitor.cn-north-1.jdcloud-api.com |monitor.internal.cn-north-1.jdcloud-api.com
+华南-广州 |cn-south-1| monitor.cn-south-1.jdcloud-api.com |monitor.internal.cn-south-1.jdcloud-api.com
+华东-宿迁 |cn-east-1 |monitor.cn-east-1.jdcloud-api.com  |monitor.internal.cn-east-1.jdcloud-api.com
+华东-上海 |cn-east-2 | monitor.cn-east-2.jdcloud-api.com |monitor.internal.cn-east-2.jdcloud-api.com
+
+### 上报监控数据  
+使用 put-metric-data 接口上报监控数据，示例如下：  
+```
+jdc monitor put-metric-data --input-json '{"metricDataList": [{"namespace": "test_ns","metric": "vm.cpu.usage1","dimensions": {"host": "10.10.10.23","datacenter": "cn_north_1"},"timestamp": 1544425695,"type": 1,"values": {"value": "12342213"}}]}'
+```  
+注意：仅能上报近1周的监控数据，请将上边示例中timestamp 中的时间戳修改为你当前上报的UNIX时间。
+
+返回成功示例如下：
+```
+{
+    "error": null, 
+    "result": {
+        "errMetricDataList": [], 
+        "success": true
+    }, 
+    "request_id": "bg9ofp78ikqqgvastas64owpqmoijk77"
+}
 ```

@@ -27,6 +27,8 @@
         href: Pricing/Purchase-Process.md
   - name: 入门指南
     items:
+      - name: 版本说明
+        href: Getting-Started/Version-Notes.md
       - name: 创建集群
         href: Getting-Started/Create-to-Cluster.md
       - name: 连接集群
@@ -36,25 +38,45 @@
       - name: 集群
         items:
           - name: 集群概述
-            href: Operation-Guide/Cluster/Overview.md
+            href: Operation-Guide/Cluster/Cluster-Overview.md
           - name: 创建集群
             href: Operation-Guide/Cluster/Create-Cluster.md
           - name: 连接集群
             href: Operation-Guide/Cluster/Connect-Cluster.md
           - name: 删除集群
             href: Operation-Guide/Cluster/Delete-Cluster.md
+          - name: 集群监控
+            href: Operation-Guide/Cluster/Cluster-Monitor.md
       - name: 工作节点组
         items:
           - name: 工作节点组概述
-            href: Operation-Guide/NodeGroup/Overview.md
+            href: Operation-Guide/NodeGroup/Nodegroup-Overview.md
           - name: 创建工作节点组
             href: Operation-Guide/NodeGroup/Create-NodeGroup.md
+          - name: 添加GPU工作节点组
+            href: Operation-Guide/NodeGroup/Add-GPU.md  
           - name: 工作节点组伸缩
             href: Operation-Guide/NodeGroup/Telescopic-NodeGroup.md
           - name: 删除工作节点组
             href: Operation-Guide/NodeGroup/Delete-NodeGroup.md
+          - name: 设置自动修复
+            href: Operation-Guide/NodeGroup/Auto-Repair.md
+      - name: 集群Dashboard
+        items:
+          - name: Dashboard
+            href: Operation-Guide/Dashboard/Dashboard-Overview.md
+          - name: Deployment
+            href: Operation-Guide/Dashboard/Deployment-Overview.md
+          - name: Pod
+            href: Operation-Guide/Dashboard/Pod-Overview.md
+          - name: Service
+            href: Operation-Guide/Dashboard/Service-Overview.md
+          - name: Configmap
+            href: Operation-Guide/Dashboard/Configmap-Overview.md
   - name: 最佳实践
     items:
+     - name: 集成容器镜像仓库
+       href: Best-Practices/Deploy-Container-Registry.md
      - name: 访问Dashboard
        href: Best-Practices/Connect-Dashboard.md
      - name: 部署应用
@@ -67,14 +89,24 @@
             href: Best-Practices/Deploy-Applications/Deploy-PV.md
          -  name: 部署Service
             href: Best-Practices/Deploy-Applications/Deploy-Service.md
+     - name: Ingress
+       items:
+         -  name: 部署 Nginx-ingress controller
+            href: Best-Practices/Ingress/Deploy-Ingress-NGINX-Controller.md
      - name: 创建原生容器Pod
        items:
          - name: 部署Virtual-Kubelet
-           href: Operation-Guide/Instance/Deploy-Virtual-Kubelet.md
+           href: Best-Practices/Create-Pod/Deploy-Virtual-Kubelet.md
          - name: 在Kubernetes集群中创建Pod
-           href: Operation-Guide/Instance/Create-Pod-InKubernetes.md
+           href: Best-Practices/Create-Pod/Create-Pod-InKubernetes.md
      - name: 部署Helm
        href: Best-Practices/Deploy-Helm.md
+     - name: 在Kubernetes集群上运行Istio
+       href: Best-Practices/Deploy-istio.md
+     - name: 使用对象存储Bucket作为共享存储
+       href: Best-Practices/Oss-s3fs-volume.md
+     - name: 部署自定义版本的NVIDIA GPU驱动
+       href: Best-Practices/Custom-GPU-driver.md
   - name: 常见问题
     href: Common-Problem.md
   - name: 相关资源

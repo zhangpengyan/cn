@@ -13,10 +13,10 @@ public static void main(String[] args) {
     try {
         String host = "${your redis domain}";//控制台显示访问地址
         int port = 6379;
-        String token = "${redis-id}:{your password}";//控制台显示的token
+        String password = "${your password}";//控制台显示的token
         jedis = new Jedis(host, port);
         //鉴权信息
-        jedis.auth(token);
+        jedis.auth("password");
         String key = "redis";
         String value = "jmiss-redis";
         //set一个key
@@ -101,10 +101,10 @@ public static void main(String[] args) {
 
 ```
 #IP地址
-redis.pool.host=jcache-online20***59f-aeba-46*0-9fec-2de*****cd4c.jdicts.jcloud.com
+redis.pool.host=jredis-cn-north-1-prod-redis-xxxxxxxxxx.jdcloud.com
 #端口号
 redis.pool.port=6379
-redis.pool.pass=89376FC86*******403911BF5C538
+redis.pool.pass=********
 #最大idle
 redis.pool.maxIdle=300
 #最大分配对象

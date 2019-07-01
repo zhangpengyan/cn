@@ -24,7 +24,7 @@
 4.	执行请求得到响应
 
 ### 大致代码如下：
-``` go
+```Go
 package main
 
 import (
@@ -52,9 +52,10 @@ func main() {
 ```
 如果需要设置额外的header，例如要调用开启了MFA操作保护的接口，需要传递x-jdcloud-security-token，则按照如下方式：
 
-```go
+```Go
+const securityTokenHeader = "x-jdcloud-security-token"
 req := NewDeleteInstanceRequest("cn-north-1", "i-xxxxx")
-req.AddHeader("x-jdcloud-security-token", "xxx")
+req.AddHeader(securityTokenHeader, "xxx")
 resp, err := client.DeleteInstance(req)
 ```
 

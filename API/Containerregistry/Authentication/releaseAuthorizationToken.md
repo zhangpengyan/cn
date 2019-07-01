@@ -9,7 +9,7 @@
 POST
 
 ## 请求地址
-https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}:releaseAuthorizationToken
+https://containerregistry.jdcloud-api.com/v1/regions/{regionId}/registries/{registryName}:releaseAuthorizationToken
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -32,9 +32,9 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}:r
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

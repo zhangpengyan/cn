@@ -32,7 +32,7 @@
 
 - 只做云硬盘容量的扩容，未做文件系统的扩容。
 
-- 扩容生效之后的云硬盘，仍然需要用户手动格式化新扩展的存储空间，新增的云硬盘空间才可见；具体操作方法详见[云硬盘扩容概述](https://www.jdcloud.com/help/detail/1636/isCatalog/1)。
+- 扩容生效之后的云硬盘，仍然需要用户手动格式化新扩展的存储空间，新增的云硬盘空间才可见；具体操作方法详见[云硬盘扩容概述](https://docs.jdcloud.com/cn/cloud-disk-service/cloud-disk-expansion-overview)。
 
 <br>
 

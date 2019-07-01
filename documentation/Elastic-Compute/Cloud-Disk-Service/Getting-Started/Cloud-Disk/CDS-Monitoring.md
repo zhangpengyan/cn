@@ -97,4 +97,4 @@
 
 4、监控图：目前提供折线图展示，可查看最近30天内的监控数据，采样数据最小周期为1分钟。
 
-更多详情，请参考[云监控](https://www.jdcloud.com/help/detail/94/isCatalog/1)帮助中心。
+更多详情，请参考[云监控](https://www.jdcloud.com/cn/products/monitoring)帮助中心。

@@ -12,8 +12,8 @@ https://vpc.jdcloud-api.com/v1/regions/{regionId}/networkSecurityGroups/{network
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**networkSecurityGroupId**|String|True| |NetworkSecurityGroup ID|
 |**regionId**|String|True| |Region ID|
+|**networkSecurityGroupId**|String|True| |NetworkSecurityGroup ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

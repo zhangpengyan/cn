@@ -1,0 +1,33 @@
+name: 云编译
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 编译任务
+        items:
+          - name: createJob
+            href: Job-APIs/createJob.md
+          - name: deleteJob
+            href: Job-APIs/deleteJob.md
+          - name: deleteJobs
+            href: Job-APIs/deleteJobs.md
+          - name: getBuildLog
+            href: Job-APIs/getBuildLog.md
+          - name: getBuildStatus
+            href: Job-APIs/getBuildStatus.md           
+          - name: getExternalLink
+            href: Job-APIs/getExternalLink.md
+          - name: getJob
+            href: Job-APIs/getJob.md
+          - name: getJobs
+            href: Job-APIs/getJobs.md
+          - name: startJob
+            href: Job-APIs/startJob.md
+          - name: stopBuild
+            href: Job-APIs/stopBuild.md
+          - name: updateJob
+            href: Job-APIs/updateJob.md           

@@ -1,0 +1,90 @@
+name: 微服务平台
+href:
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      herf: Introduction/Product-Overview.md
+    - name: 核心概念
+      herf: Introduction/Core-Concepts.md
+    - name: 基础架构
+      herf: Introduction/Basic-Infrastructure.md
+    - name: 产品优势
+      herf: Introduction/Benefits.md
+    - name: 产品功能
+      herf: Introduction/Features.md
+    - name: 产品规格
+      herf: Introduction/Specifications.md
+      status: 0
+    - name: 限制说明
+      herf: Introduction/Restrictions.md
+    - name: 应用场景 
+      herf: Introduction/Application-Scenarios.md    
+- name: 产品定价
+  items:
+    - name: 计费概述
+      herf: Pricing/Billing-Overview.md
+    - name: 购买流程
+      herf: Pricing/Purchase-Process.md 
+    - name: 计费规则
+      herf: Pricing/Billing-Rules.md
+      status: 0 
+    - name: 价格总览
+      herf: Pricing/Price-Overview.md
+      status: 0 
+    - name: 续费流程
+      herf: Pricing/Renew-Process.md
+      status: 0 
+- name: 入门指南
+  items:
+    - name: 服务使用概述
+      herf: Getting-Started/Getting-Started.md
+    - name: 入门示例
+      herf: Getting-Started/Basic-Example.md
+- name: 操作指南
+  items:
+    - name: 注册中心
+      items:
+        - name: 创建注册中心
+          herf: Operation-Guide/Cluster/Create-Cluster.md
+        - name: 查看注册中心信息
+          herf: Operation-Guide/Cluster/Cluster-Detail.md
+        - name: 扩容
+          herf: Operation-Guide/Cluster/Expansion-Cluster.md
+        - name: 删除注册中心
+          herf: Operation-Guide/Cluster/Delete-Cluster.md
+    - name: 服务管理
+      items:
+        - name: 服务管理列表
+          herf: Operation-Guide/Service-List/Service-List.md
+        - name: 实例列表
+          herf: Operation-Guide/Service-List/Instance-List.md
+        - name: 服务鉴权
+          herf: Operation-Guide/Service-List/Service-Assignuse.md 
+          status: 0
+    - name: 配置管理
+      items:
+        - name: 配置管理列表
+          herf: Operation-Guide/Config-List/Config-List.md
+        - name: 新建配置项
+          herf: Operation-Guide/Config-List/Create-Config.md
+        - name: 生成新版本
+          herf: Operation-Guide/Config-List/Config-V-Add.md
+        - name: 删除版本
+          herf: Operation-Guide/Config-List/Del-Config.md
+    - name: 调用链分析
+      items:
+        - name: 新建分析服务
+          herf: Operation-Guide/Analysis-Service/Create-Analysis-Service.md
+        - name: 查看调用链服务详情
+          herf: Operation-Guide/Analysis-Service/Analysis-Detail.md
+        - name: 依赖图谱
+          herf: Operation-Guide/Analysis-Service/Analysis-Service-Dependline.md
+        - name: 修改服务规格和信息
+          herf: Operation-Guide/Analysis-Service/Update-Analysis-Service.md
+        - name: 删除服务
+          herf: Operation-Guide/Analysis-Service/del-Analysis-Service.md
+    
+- name: 常见问题
+  herf: FAQ/faq.md
+

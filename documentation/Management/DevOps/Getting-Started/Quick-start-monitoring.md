@@ -2,7 +2,7 @@
 ## 智能监控  
 智能监控的实现包括以下各部分，
 
-![image](https://github.com/jdcloudcom/cn/blob/DevOps-guhezhu1/image/DevOps/Getting-Started8.jpg)  
+![image](https://github.com/jdcloudcom/cn/blob/DevOps-guhezhu1/image/DevOps/Getting-Started8.jpg) 
 
 【**数据采集**】通过采集插件获取需要监控的数据并使其标准化。目前支持四个层级共9种监控类型，包括机器监控、死机监控、端口监控、进程监控、日志监控、方法监控、组件监控、域名监控、自定义监控。除机器监控由agent默认采集外，其余均需要配置对应的采集。
 

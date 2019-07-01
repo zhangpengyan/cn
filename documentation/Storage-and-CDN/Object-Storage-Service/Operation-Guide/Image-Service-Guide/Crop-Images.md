@@ -11,8 +11,6 @@
 
 示例：将图片居中裁剪宽高比：300*200
 
-http://s3.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=img/cc/300/200
-
-http://oss.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=img/cc/300/200
+http://s3.cn-north-1.jdcloud-oss.com/downloads/example.jpg?x-oss-process=img/cc/300/200
 
 ![居中裁剪](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-060.jpg)

@@ -1,26 +1,48 @@
 # 什么是群组
-通过管理群组，您可以为一组子账号添加或移除相同的权限。本文介绍了如何创建或删除群组、在群组中管理子账号，以及如何管理群组的权限。
 
-# 创建或删除群组
-登陆京东云控制台，进入 访问控制 > 群组管理，您可以
+群组即子用户组，是一组子用户的集合。利用群组，主账号可以更方便地管理多个权限相同的子用户，也可以通过将子用户加入或移出群组，来变更用户的权限。
 
- - 创建群组
- - 查看群组列表
- - 编辑群组名称和描述
- - 管理群组的授权
- - 管理群组的组员
- - 删除群组（注意：如果您要删除一个群组，请先将组内所有的组员移出。）
+本文介绍了如何创建或删除群组、在群组中管理子账号，以及如何管理群组的权限。
 
-点击【创建】按钮，创建群组。
-![创建1](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E5%88%9B%E5%BB%BA1.jpg)
-![创建2](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E5%88%9B%E5%BB%BA2.jpg)
-# 管理群组的成员
-点击群组名，进入 群组详情 > 群组成员管理 页面，查看组内成员、添加新组员，或将某个组员移出群组。
-![管理1](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E7%AE%A1%E7%90%861.jpg)
-![管理2](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E7%AE%A1%E7%90%862.jpg)
-![管理3](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E7%AE%A1%E7%90%862.jpg)
-# 管理群组的授权
-在 群组详情 > 群组授权策略管理 页面，查看群组已添加的授权策略、添加新的策略，或移除某条策略。
-![授权1](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E6%8E%88%E6%9D%831.jpg)
-![授权2](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E6%8E%88%E6%9D%832.jpg)
-![授权3](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Group/%E6%8E%88%E6%9D%833.jpg)
+## 创建群组
+
+登录京东云控制台，进入访问控制 > 群组管理，点击【创建】按钮，在创建群组窗口填写群组信息：
+
+![群组创建](../../../../image/IAM/GroupManagement/群组创建.jpg)
+
+## 编辑群组
+
+访问群组列表，点击【编辑】按钮，可快捷的编辑群组的描述信息。
+
+![群组列表编辑按钮弹窗](../../../../image/IAM/GroupManagement/群组编辑.jpg)
+
+## 删除群组
+
+访问群组列表，点击【删除】按钮，删除群组的信息及其子用户和策略的关联关系。
+
+![群组列表删除按钮弹窗页面](../../../../image/IAM/GroupManagement/群组删除.jpg)
+
+## 给群组添加子用户
+
+访问群组列表，点击【添加组员】按钮，可快捷的为群组添加相应的子用户
+
+![群组列表添加组员按钮弹窗页面](../../../../image/IAM/GroupManagement/群组添加子用户.jpg)
+
+## 给群组移除子用户
+
+点击群组名称，进入相应的群组详情页面，选择 【组员】，选定对应子用户后，点击【移除】即可把子用户移除相应的群组。
+
+![群组详情移除子用户](../../../../image/IAM/GroupManagement/群组移除子用户.jpg)
+
+## 给群组授予策略
+
+访问群组列表，点击【授权】按钮，可快捷的授予群组相应的策略。
+
+![群组列表授予策略](../../../../image/IAM/GroupManagement/群组授予策略.jpg)
+
+## 给群组解绑策略
+
+点击群组名称，进入相应的群组详情页面，选择 【关联策略】，选定对应策略后，点击【解除】即可为群组解绑策略。
+
+![群组详情解绑策略](../../../../image/IAM/GroupManagement/群组移除策略.jpg)
+

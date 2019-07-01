@@ -113,7 +113,7 @@ use_http_expect = False
 use_https = True
 use_mime_magic = True
 verbosity = WARNING
-website_endpoint = http://%(bucket)s.s3-website-%(location)s.amazonaws.com/
+website_endpoint = http://%(bucket)s.s3.%(location)s.amazonaws.com/
 website_error = 
 website_index = index.html
 ```
@@ -209,7 +209,7 @@ Commands：
     <td>Synchronize a directory tree to S3 (checks files freshness using size and md5 checksum, unless overridden by options, see below)<br>s3cmd sync LOCAL_DIR s3://BUCKET[/PREFIX] or s3://BUCKET[/PREFIX] LOCAL_DIR<br>注：不会自动同步，需要自己输入这条命令来同步一个目录。</td>
 </tr>
 <tr>
-    <td>Sign an S3 URL to provide limited public access with expiry <br>s3cmd signurl s3://BUCKET/OBJECT &lt expiry_epoch|+expiry_offset &gt </td>
+    <td>Sign an S3 URL to provide limited public access with expiry <br>s3cmd signurl s3://BUCKET/OBJECT &lt; expiry_epoch|+expiry_offset &gt; </td>
 </tr>
 </table>
 

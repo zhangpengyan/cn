@@ -1,12 +1,15 @@
 # 软件类商品发布介绍
+
 软件类：
-1．选择发布类目
+
+1.选择发布类目
 
 登录服务商后台发布软件类服务：选择服务管理-->发布服务，选择软件类交付类型，选择完成后点击 “下一步，发布服务”
 
 ![image](https://github.com/jdcloudcom/cn/blob/edit/documentation/Marketplace/Marketplace/MarketPlace-Image/%E8%BD%AF%E4%BB%B61.png)
 
-2. 编辑基本信息
+
+2.编辑基本信息
 
 ![image](https://github.com/jdcloudcom/cn/blob/edit/documentation/Marketplace/Marketplace/MarketPlace-Image/%E8%BD%AF%E4%BB%B62.png)
 
@@ -32,8 +35,6 @@
 2.9搜索引擎优化：请根据实际情况填写
 
 2.10是否隐藏：选择【否，在服务平台列表正常显示，所有用户可见】（如不想被检索到，可选择“是”）勾选同意并签署《京东云市场入驻及服务协议》，请点击”发布服务”。
-
-
 
 3. 至此，服务已成功发布，进入服务审核流程。可在服务管理-->发布服务查看服务审核状态与修改。审核通过，则服务上线可销售。
 

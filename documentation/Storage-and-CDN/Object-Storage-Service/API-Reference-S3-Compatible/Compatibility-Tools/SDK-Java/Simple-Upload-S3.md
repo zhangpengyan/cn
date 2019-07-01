@@ -4,7 +4,7 @@
 
 ## 流式上传
 
-```
+```Java
 String bucket_name = "<your bucketname>";
 String file_path = "<your path>";
 String key = Paths.get(file_path).getFileName().toString();
@@ -27,7 +27,7 @@ try {
 
 ## 普通上传
 
-```
+```Java
 String bucket_name = "<your bucketname>";
 String file_path = "<your path>";
 String key = Paths.get(file_path).getFileName().toString();

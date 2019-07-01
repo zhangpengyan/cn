@@ -23,26 +23,28 @@
 - 脚本执行后退出状态码必须为0
 
 
-​     脚本的规范如下：
+​     插件会捕捉脚本的stdout输出，脚本的输出须符合一定的规范，格式如下：
 
 ```sh
 [tags:k1:v1,k2:v2]
 
-    $ItemName:$ItemValue,type:$type[,desc:%desc]
+$ItemName:$ItemValue[,type:$type][,desc:%desc][,classify:%classify]
 ```
 
- 其中，$ItemValue认定为double类型, 如果是"$itemValue"，则会被认定为string类型，默认只存储最新值
+ 其中， 
+ tags：填写监控项的tag，以key:value的形式配置，key的命名支持 英文字母、数字、"、_"（下划线）、 "."(英文句号）和"-"(英文中划线)。
 
- $type默认为gauge, counter, counterQps，
+$ItemName: 监控项名，监控项的命名支持 英文字母、数字、_（下划线）和 . (英文句号）且不能以数字开头.$ItemValue认定为double类型, 如果是"$itemValue"，则会被认定为string类型，默认只存储最新值
+
+type: type字段填入用户希望采集的数据类型，agent默认支持的三种类型为gauge, counter, counterQps，
 
 - gauge: 不对值做任何处理，默认方式
 - counter: newValue - lastValue
 - counterQps: (newValue - lastValue) / cycle
 
+desc：该字段可填写描述这个监控项的信息，只会发送给报警
 
- $desc是字符串，表示的是描述这个监控项的信息，只会发送给报警
-
- $classify是字符串，用来表示生成的监控项的类别，具体可填的类型信息[点击查看](https://cf.jd.com/pages/viewpage.action?pageId=96879313)  
+classify：字符串类型，用来表示生成的监控项的类别  
 
 
 ```sh

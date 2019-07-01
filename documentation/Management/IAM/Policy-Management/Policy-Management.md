@@ -1,68 +1,73 @@
-主账号是资源的所有者，是为资源实际付费的人，拥有资源的完全控制权；子账号不拥有任何资源，默认没有任何资源访问权限；只有得到主账号的授权时，子账号才能通过控制台或 API 访问特定的资源。
+# 什么是策略
 
-主账号授权子账号的方式，是为子账号（或其所在的群组）附加授权策略。子账号所拥有的资源访问权限，是子账号和其所在的群组附加的授权策略的合集。
+授权策略是定义一条或多条权限的 JSON 文档，撰写策略需要遵循 JSON 语法规范。通过给子用户，群组，角色授予策略，来控制子用户，群组和角色对京东云资源的访问权限。其中子用户所拥有的访问权限，是子用户和其所在的群组附加的授权策略的合集。
 
-授权策略（Policy）是描述一条或多条权限的 JSON 文档。主账号通过创建策略、将策略附加到子账号或群组，来完成对子账号或群组的授权。
+IAM 支持两种类型的策略：京东云预置的系统策略和用户自行管理的自定义策略。
 
-本文介绍了如何在控制台查看策略内容和授权情况、创建策略、将策略附加到子账号和群组，及从子账号和群组的权限中移除策略。
+- 京东云预置的系统策略是产品线接入的时京东云预置好的，不允许用户修改。
+- 用户自行管理的自定义策略，用户可以通过自定义策略的方式创建对特定资源（resource）的特定操作（action）的策略，您也可以增加限定条件（condition）来限定源IP，特定访问时间和虚拟MFA认证等。用户可自主编辑，删除自定义策略。
 
-# 查看策略
+> Condition的功能持续更新中，敬请期待
+
+本文介绍了如何在控制台如何使用策略管理功能。
+
+## 策略列表
+
 登录控制台，进入 访问控制 > 授权策略管理，可以查看所有的系统策略和自定义策略。
-策略的 引用次数 是该条策略已经被附加的实体数目，包括子账号和群组。对于系统策略，不支持您进行修改或删除；但您可以创建、修改或删除您的自定义策略。
-![查看策略1](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E6%9F%A5%E7%9C%8B%E7%AD%96%E7%95%A51.jpg)
-点击 策略名，进入策略详情页面。在 基本信息 中，有两种方式查看策略信息。
-第一种是可视化策略，列举了该策略文档中授权的所有资源和操作。
-第二种是 JSON 格式文档。
-在 授权策略记录 中，可以查看子账号或群组添加、解除授权策略的记录。
-![查看策略2](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E6%9F%A5%E7%9C%8B%E7%AD%96%E7%95%A52.jpg)
-![查看策略3](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E6%9F%A5%E7%9C%8B%E7%AD%96%E7%95%A53.jpg)
-![查看策略4](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E6%9F%A5%E7%9C%8B%E7%AD%96%E7%95%A54.jpg)
 
-# 创建策略
-在 授权策略管理 列表页面，点击【创建】按钮，支持两种创建自定义策略的方式。第一种是便利化策略生成器，第二种是 JSON 策略编辑器。
-![创建策略](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E5%88%9B%E5%BB%BA%E7%AD%96%E7%95%A5.jpg)
+![策略列表](../../../../image/IAM/PolicyManagement/策略列表.jpg)
 
-# 便利化策略生成器
-在便利化策略生成器中，支持通过可视化的方式选择资源类型、资源 IDs、操作权限，生成一组或多组权限。
-![便利化策略生成器](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E4%BE%BF%E5%88%A9%E5%8C%96%E7%AD%96%E7%95%A5%E7%94%9F%E6%88%90%E5%99%A8.jpg)
+> 您也许会发现，策略列表突然新增了一些包含“-v3”的策略名称，这是在产品线接入IAM时，由v2版本切换成v3版本后，策略（Policy）语法发生了变更，为兼容您之前创建策略中所有操作能够生效，系统自动为您创建的策略。例如当您需要给IAM所有用户类型授予京东云管理员权限时，您需要同时授予JDCloudAdmin和JDCloudAdmin-new策略，当您授予京东云只读权限时，您需要同时授予JDCloudRead和JDCloudRead-new两个策略。这部分操作将会持续，直至所有支持v2版本的产品线切换成v3版本。
 
-例如，选择对云主机进行授权，然后点击 添加资源，在如下图所示的窗口中选择需要授权的云主机实例：
+## 策略创建
 
- - 授权主账号下所有（包括所有区域）的云主机资源，包括未来新购的资源，则勾选 a 选择框并确定；
- - 授权当前区域已购的云主机资源，则勾选 b，点击选择箭头并确定；
- - 授权当前区域部分资源，则根据需求勾选 c，点击选择箭头并确定。
+在 授权策略管理 列表页面，点击【创建】按钮，支持三种创建自定义策略的方式。第一种是可视化策略生成器，第二种是 JSON 策略编辑器，第三种是按标签创建策略。
 
-注：切换了地域后，需要重新选择资源。
-![重新选择资源](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E9%87%8D%E6%96%B0%E9%80%89%E6%8B%A9%E8%B5%84%E6%BA%90.png)
+![创建策略](../../../../image/IAM/PolicyManagement/创建策略.jpg)
 
-完成一组资源权限配置后，可以 继续添加权限，直到完成策略设置。
-![继续添加权限](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E7%BB%A7%E7%BB%AD%E6%B7%BB%E5%8A%A0%E6%9D%83%E9%99%90.jpg)
+### 可视化策略生成器
 
-点击【下一步】按钮，填写策略名称和描述后，即可 生成策略。
-![生成策略](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E7%94%9F%E6%88%90%E7%AD%96%E7%95%A5.jpg)
+可视化策略生成器旨在为用户提供更友好，更便利的策略创建的工具，用户可以可视化的方式依次选择产品线，操作，资源等信息，点击确认后将自动为您生成Json格式的策略。
 
-# JSON 策略生成器
-在 JSON 策略生成器中，您可以直接编写 JSON 策略，也可以先选择一个策略模板，再进行 JSON 文档编辑。
-![Json 选择模板](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/Json%20%E9%80%89%E6%8B%A9%E6%A8%A1%E6%9D%BF.jpg)
+- 输入策略名称和描述。
+- 产品线选择（Service Name），更多内容请参考 [支持IAM的云服务](https://docs.jdcloud.com/cn/iam/support-services)
+- 选择操作（Action）
+- 选择资源（Resource）
+- 完成一组产品线，资源和操作的指定后，您可以通过点击添加按钮，直至您完成整个策略。
 
-点击【选择模板】按钮，可以选择一条系统策略或自定义策略作为模板。
-![Json 选择模板2](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/Json%20%E9%80%89%E6%8B%A9%E6%A8%A1%E6%9D%BF2.jpg)
+**V2版本可视化策略创建页面**
 
-如果需要在已选择的策略模板上，再添加其他权限，可以点击 添加权限，通过便利化的方式来完成。
-![添加其他权限](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/Json%20%E6%B7%BB%E5%8A%A0%E6%9D%83%E9%99%90.png)
-最后，根据授权需求，对生成的 JSON 策略进行编辑，完善策略名称和描述后，即可生成一条自定义策略。
+![V2版本可视化策略创建页面](../../../../image/IAM/PolicyManagement/可视化策略创建v2.jpg)
 
-# 添加或解除子账号（群组）的授权策略
-在 用户管理 页面，可以为子账号添加授权。
-![为子账号添加授权](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E4%B8%BA%E5%AD%90%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0%E6%8E%88%E6%9D%83.jpg)
-![为子账号添加授权](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E4%B8%BA%E5%AD%90%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0%E6%8E%88%E6%9D%832.png)
+**V3版本可视化策略创建页面**
 
-在 用户详情 > 用户授权策略 页面，可以 添加 或 解除 子账号的授权。
-![添加或解除子账号的授权](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E5%8A%A0%20%E6%88%96%20%E8%A7%A3%E9%99%A4%20%E5%AD%90%E8%B4%A6%E5%8F%B7%E7%9A%84%E6%8E%88%E6%9D%83.jpg)
+![V3版本可视化策略创建页面](../../../../image/IAM/PolicyManagement/可视化策略创建v3.jpg)
 
-在 群组管理 页面，可以为群组添加授权。
-![为群组添加授权](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E4%B8%BA%E7%BE%A4%E7%BB%84%E6%B7%BB%E5%8A%A0%E6%8E%88%E6%9D%83.jpg)
+### 按标签创建策略
 
-在 群组详情 > 群组授权策略管理 页面，可以 添加 或 解除 群组的授权。
-![添加或解除群组的授权](https://github.com/jdcloudcom/cn/blob/edit/image/IAM/Strategy%20Management/%E6%B7%BB%E5%8A%A0%20%E6%88%96%20%E8%A7%A3%E9%99%A4%20%E7%BE%A4%E7%BB%84%E7%9A%84%E6%8E%88%E6%9D%83.jpg)
+按标签创建策略，跟标签服务联合提供的一种可视化策略创建的功能，用户无需逐个地指定操作和资源。
+
+ - 资源的指定可根据指定的标签自动获取标签关联的资源，当主账号需要给子用户授予新创建资源的权限时，无需更改策略，只需对对应的资源打上标签，策略可及时生效。
+ - 操作的指定，可根据产品线名称选择对应的权限集合批量指定操作。
+ 
+ ![按标签创建策略页面](../../../../image/IAM/PolicyManagement/按标签创建策略页面.jpg)
+ 
+### JSON 策略生成器
+
+在 JSON 策略生成器中，输入策略名称和描述后，您可以直接编写 JSON 策略，也可以先选择一个策略模板，再进行 JSON 文档编辑。
+
+![Json 选择模板](../../../../image/IAM/PolicyManagement/Json策略创建.jpg)
+
+## 策略详情
+
+点击 策略名 或 编辑 按钮，进入策略详情页面。
+您可以通过可视化策略和Json策略的方式查看策略的详情，您也可以通过点击编辑策略的方式进行策略内容的变更。
+
+![可视化策略详情](../../../../image/IAM/PolicyManagement/可视化策略详情.jpg)
+
+![Json策略详情](../../../../image/IAM/PolicyManagement/Json策略详情.jpg)
+
+在授权策略记录中，您可以可以看到所有引用该策略的子用户，群组，用户角色和服务角色。
+
+![策略授权记录](../../../../image/IAM/PolicyManagement/策略授权记录.jpg)
 

@@ -25,11 +25,11 @@
   - name: 入门指南
     items:
     - name: 创建实例
-      herf: Getting-Started/Create-Instance.md
+      herf: Getting-Started/Create-TiDB-Instance.md
     - name: 连接实例
-      herf: Getting-Started/Connect-Instance.md
+      herf: Getting-Started/Connect-TiDB-Instance.md
     - name: 监控实例
-      herf: Getting-Started/Monitor.md
+      herf: Getting-Started/TiDB-Monitor.md
 
   - name: 操作指南
     items:
@@ -64,6 +64,14 @@
 
   - name: 最佳实践
     items:
+    - name: 数据迁移
+      items:
+      - name: 数据迁移概述
+        herf: Best-Practices/Data-Migration/Data-Migration-Overview.md
+      - name: 全量迁移
+        herf: Best-Practices/Data-Migration/Full-Import.md
+      - name: 增量迁移
+        herf: Best-Practices/Data-Migration/Incremental-Import.md
     - name: 大数据量处理
       herf: Best-Practices/Data-Operation.md
     - name: 参数优化
@@ -71,10 +79,14 @@
     - name: 高效使用 Secondary Index
       herf: Best-Practices/Secondary-Index.md
 
+  - name: 性能测试
+    items:
+    - name: sysbench 性能测试
+      herf: Performance-Test/sysbench-Test.md
+    - name: TPC-H 50G 性能测试
+      herf: Performance-Test/tpch-Test.md
+
   - name: 常见问题
     herf: FAQ/FAQ.md
 
-  - name: API参考
-    herf:
-  - name: SDK参考
-    herf:
+

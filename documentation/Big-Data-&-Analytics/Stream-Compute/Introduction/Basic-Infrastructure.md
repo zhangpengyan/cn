@@ -1,5 +1,5 @@
 ## 系统结构<br>
-![系统结构](https://github.com/jdcloudcom/cn/blob/edit/image/Streamcompute/SC-001.png?raw=true)<br><br><br>
+![系统结构](../../../../image/Streamcompute/SC-001.png)<br><br><br>
 **数据源输入：**<br>
 数据源主要来自于流数据总线的流式数据，在流计算中您也可以选择配置参考数据源来丰富您的数据源，参考数据将被导入到流计算的参考数据表中以供后续分析使用， 如果您想在流计算服务中使用参考数据，您必须把它存储在数据库或对象存储中。<br><br>
 **分析/计算：**<br>

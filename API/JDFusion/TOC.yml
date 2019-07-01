@@ -1,0 +1,294 @@
+name: JDFusion
+href: 
+items:
+- name: 接口概览
+  href: overview.md
+- name: 更新历史
+  href: ChangeLog.md
+- name: 接口信息
+  items:
+   - name: 云信息相关接口
+     items:
+       - name: getCloudInfoById
+         href: Cloud/getCloudInfoById.md
+       - name: getCloudInfos
+         href: Cloud/getCloudInfos.md
+       - name: registCloudInfo
+         href: Cloud/registCloudInfo.md
+       - name: unregistCloudInfo
+         href: Cloud/unregistCloudInfo.md
+       - name: validCloudInfo
+         href: Cloud/validCloudInfo.md
+   - name: 云硬盘相关接口
+     items:
+       - name: attachDiskToVmInstanceByDiskId.md
+         href: Disk/attachDiskToVmInstanceByDiskId.md
+       - name: createDisk
+         href: Disk/createDisk.md
+       - name: detachDiskToVmInstanceByDiskId
+         href: Disk/detachDiskToVmInstanceByDiskId.md
+       - name: getDiskById
+         href: Disk/getDiskById.md
+       - name: getDisks
+         href: Disk/getDisks.md
+       - name: removeDiskById
+         href: Disk/removeDiskById.md
+   - name: 镜像相关接口
+     items:
+       - name: getVmImages
+         href: Vm-Image/getVmImages.md
+   - name: 虚机实例相关接口
+     items:
+        - name: createVmInstance
+          href: Vm-Instance/createVmInstance.md
+        - name: deleteVmInstanceById
+          href: Vm-Instance/deleteVmInstanceById.md
+        - name: getVmInstances
+          href: Vm-Instance/getVmInstances.md
+        - name: getVmInstancesById
+          href: Vm-Instance/getVmInstancesById.md
+        - name: rebootVmInstanceById
+          href: Vm-Instance/rebootVmInstanceById.md
+        - name: startVmInstanceById
+          href: Vm-Instance/startVmInstanceById.md
+        - name: stopVmInstanceById
+          href: Vm-Instance/stopVmInstanceById.md
+   - name: 虚机实例类型相关接口
+     items:
+       - name: getVmInstanceTypes
+         href: Vm-InstanceType/getVmInstanceTypes.md
+   - name: 密钥对相关接口
+     items:
+       - name: createVmKeypair
+         href: Vm-Keypair/createVmKeypair.md
+       - name: deleteVmKeypairByName
+         href: Vm-Keypair/deleteVmKeypairByName.md
+       - name: getVmKeypairs
+         href: Vm-Keypair/getVmKeypairs.md
+       - name: getVmKeypairsByName
+         href: Vm-Keypair/getVmKeypairsByName.md
+   - name: 弹性公网IP相关接口
+     items:
+       - name: createVpcEip
+         href: Vpc-Eip/createVpcEip.md
+       - name: associateVpcEipById
+         href: Vpc-Eip/associateVpcEipById.md	
+       - name: deleteVpcEipById
+         href: Vpc-Eip/deleteVpcEipById.md
+       - name: disassociateVpcEipById
+         href: Vpc-Eip/disassociateVpcEipById.md
+       - name: getVpcEipById
+         href: Vpc-Eip/getVpcEipById.md
+       - name: getVpcEips
+         href: Vpc-Eip/getVpcEips.md
+   - name: 弹性网卡相关接口
+     items:
+       - name: createVpcNetworkInterface
+         href: Vpc-NetworkInterface/createVpcNetworkInterface.md
+       - name: attachVpcNetworkInterfaceById
+         href: Vpc-NetworkInterface/attachVpcNetworkInterfaceById.md
+       - name: deleteVpcNetworkInterfaceById
+         href: Vpc-NetworkInterface/deleteVpcNetworkInterfaceById.md
+       - name: detachVpcNetworkInterfaceById
+         href: Vpc-NetworkInterface/detachVpcNetworkInterfaceById.md
+       - name: getVpcNetworkInterfaceById
+         href: Vpc-NetworkInterface/getVpcNetworkInterfaceById.md
+       - name: getVpcNetworkInterfaces
+         href: Vpc-NetworkInterface/getVpcNetworkInterfaces.md
+   - name: 负载均衡相关接口
+     items:
+       - name: createVpcSlb
+         href: Vpc-Slb/createVpcSlb.md
+       - name: deleteVpcSlbById
+         href: Vpc-Slb/deleteVpcSlbById.md
+       - name: getVpcSlbById
+         href: Vpc-Slb/getVpcSlbById.md
+       - name: getVpcSlbs
+         href: Vpc-Slb/getVpcSlbs.md 
+       - name: deleteSlbsListener
+         href: Vpc-Slb/deleteSlbsListener.md
+       - name: startSlb
+         href: Vpc-Slb/startSlb.md
+       - name: startSlbListener
+         href: Vpc-Slb/startSlbListener.md
+       - name: stopSlb
+         href: Vpc-Slb/stopSlb.md
+       - name: stopSlbListener
+         href: Vpc-Slb/stopSlbListener.md
+   - name: 子网相关接口
+     items:
+       - name: createVpcSubnet
+         href: Vpc-Subnet/createVpcSubnet.md
+       - name: ddeleteVpcSubnetById
+         href: Vpc-Subnet/deleteVpcSubnetById.md
+       - name: getVpcSubnetById
+         href: Vpc-Subnet/getVpcSubnetById.md
+       - name: getVpcSubnets
+         href: Vpc-Subnet/getVpcSubnets.md
+   - name: 服务器组相关接口
+     items:
+       - name: createVpcVServerGroup
+         href: Vpc-VserverGroup/createVpcVServerGroup.md
+       - name: getVpcVServerGroups
+         href: Vpc-VserverGroup/getVpcVServerGroups.md
+   - name: 私有网络相关接口
+     items:
+       - name: createVpc
+         href: Vpc/createVpc.md
+       - name: deleteVpcById
+         href: Vpc/deleteVpcById.md
+       - name: getVpcById
+         href: Vpc/getVpcById.md
+       - name: getVpcs
+         href: Vpc/getVpcs.md
+   - name: 安全组相关接口
+     items:
+       - name: createVpcSecurityGroup
+         href: vpc-securityGroups/createVpcSecurityGroup.md
+       - name: deleteVpcSecurityGroupById
+         href: vpc-securityGroups/deleteVpcSecurityGroupById.md
+       - name: getVpcSecurityGroupById
+         href: vpc-securityGroups/getVpcSecurityGroupById.md
+       - name: getVpcSecurityGroups
+         href: vpc-securityGroups/getVpcSecurityGroups.md
+       - name: createSecurityGroupsRule
+         href: vpc-securityGroups/createSecurityGroupsRule.md
+       - name: deleteSecurityGroupsRule
+         href: vpc-securityGroups/deleteSecurityGroupsRule.md
+   - name: HTTP监听相关接口
+     items:
+       - name: createVpcLBHttpListener
+         href: Vpc-LbHttpListener/createVpcLBHttpListener.md
+       - name: getLbHttpListener
+         href: Vpc-LbHttpListener/getLbHttpListener.md 
+   - name: 运行状态相关接口
+     items:
+       - name: getTaskInfoById
+         href: Task/getTaskInfoById.md
+       - name: getTaskInfoHistoryById
+         href: Task/getTaskInfoHistoryById.md
+   - name: 编排相关接口
+     items:
+       - name: applyDeployment
+         href: Deployment/applyDeployment.md
+       - name: cloneDeployment
+         href: Deployment/cloneDeployment.md
+       - name: createDeployment
+         href: Deployment/createDeployment.md
+       - name: deleteDeployment
+         href: Deployment/deleteDeployment.md        
+       - name: dryrunDeployment
+         href: Deployment/dryrunDeployment.md
+       - name: editDeployment
+         href: Deployment/editDeployment.md
+       - name: getDeploymentResult
+         href: Deployment/getDeploymentResult.md
+       - name: getDeploymentVersions
+         href: Deployment/getDeploymentVersions.md
+       - name: getDeployments
+         href: Deployment/getDeployments.md        
+       - name: getDeploymentsById
+         href: Deployment/getDeploymentsById.md
+       - name: getDeploymentsVersion
+         href: Deployment/getDeploymentsVersion.md
+       - name: reverseDeployment
+         href: Deployment/reverseDeployment.md
+       - name: rollbackDeploymentsVersion
+         href: Deployment/rollbackDeploymentsVersion.md                
+   - name: OSS存储桶相关接口
+     items:
+       - name: createBucket
+         href: Oss-Bucket/createBucket.md
+       - name: deleteBucket
+         href: Oss-Bucket/deleteBucket.md
+       - name: getBucketByName
+         href: Oss-Bucket/getBucketByName.md
+       - name: getBucketFiles
+         href: Oss-Bucket/getBucketFiles.md
+       - name: getBuckets
+         href: Oss-Bucket/getBuckets.md        
+   - name: OSS迁移相关接口
+     items:
+       - name: createTransferTask
+         href: Oss-TransferTasks/createTransferTask.md
+       - name: deleteTransferTask
+         href: Oss-TransferTasks/deleteTransferTask.md
+       - name: editTransferTask
+         href: Oss-TransferTasks/editTransferTask.md
+       - name: getTransferTaskById
+         href: Oss-TransferTasks/getTransferTaskById.md
+       - name: getTransferTaskFailedFiles
+         href: Oss-TransferTasks/getTransferTaskFailedFiles.md
+       - name: getTransferTaskProgress
+         href: Oss-TransferTasks/getTransferTaskProgress.md
+       - name: getTransferTasks
+         href: Oss-TransferTasks/getTransferTasks.md
+       - name: startTransferTask
+         href: Oss-TransferTasks/startTransferTask.md        
+       - name: stopTransferTask
+         href: Oss-TransferTasks/stopTransferTask.md        
+   - name: RDS账户相关接口
+     items:
+       - name: createRdsAccounts
+         href: Rds-Account/createRdsAccounts.md
+       - name: deleteRdsAccount
+         href: Rds-Account/deleteRdsAccount.md
+       - name: getRdsAccountsByInstId
+         href: Rds-Account/getRdsAccountsByInstId.md         
+       - name: getRdsAccountsByInstIdAndAccountName
+         href: Rds-Account/getRdsAccountsByInstIdAndAccountName.md
+       - name: grantRdsAccount
+         href: Rds-Account/grantRdsAccount.md
+       - name: grantRdsAccountsByTask
+         href: Rds-Account/grantRdsAccountsByTask.md   
+       - name: revokeRdsAccount
+         href: Rds-Account/revokeRdsAccount.md    
+   - name: RDS数据库相关接口
+     items:
+       - name: createRdsDatabase
+         href: Rds-Database/createRdsDatabase.md
+       - name: deleteRdsDatabase
+         href: Rds-Database/deleteRdsDatabase.md
+       - name: getRdsDatabaseByInstIdAndDbName
+         href: Rds-Database/getRdsDatabaseByInstIdAndDbName.md       
+       - name: getRdsDatabasesByInstId
+         href: Rds-Database/getRdsDatabasesByInstId.md                   
+   - name: RDS实例相关接口
+     items:
+       - name: createRdsInstance
+         href: Rds-Instance/createRdsInstance.md
+       - name: deleteRdsByInstId
+         href: Rds-Instance/deleteRdsByInstId.md
+       - name: getRdsByInstId
+         href: Rds-Instance/getRdsByInstId.md     
+       - name: getRdsInstances
+         href: Rds-Instance/getRdsInstances.md                 
+   - name: RDS数据迁移相关接口
+     items:
+       - name: createChannel
+         href: Rds-Migration-MySQL/createChannel.md
+       - name: createDatasource
+         href: Rds-Migration-MySQL/createDatasource.md
+       - name: deleteChannel
+         href: Rds-Migration-MySQL/deleteChannel.md     
+       - name: deleteDatasource
+         href: Rds-Migration-MySQL/deleteDatasource.md    
+       - name: getChannels
+         href: Rds-Migration-MySQL/getChannels.md
+       - name: getDatasources
+         href: Rds-Migration-MySQL/getDatasources.md
+       - name: startChannel
+         href: Rds-Migration-MySQL/startChannel.md     
+       - name: stopChannel
+         href: Rds-Migration-MySQL/stopChannel.md
+   - name: RDS数据库实例规格相关接口
+     items:
+       - name: getRdsSpecification
+         href: Rds-Specification/getRdsSpecification.md
+   - name: 地域相关接口
+     items:
+       - name: getRegions
+         href: Region/getRegions.md
+       - name: getRegionsAvailableZones
+         href: Region/getRegionsAvailableZones.md
+         

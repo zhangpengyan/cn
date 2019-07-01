@@ -13,12 +13,12 @@ items:
         href: Introduction/Scene.md
 - name:  产品定价
   items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+    - name: 价格说明
+      href: Pricing/Price-Overview.md
     - name: 购买方式
-      href: Pricing/Purchase-Method.md
-    - name: 购买流程
       href: Pricing/Purchase-Process.md
-    - name: 套餐详解
-      href: Pricing/Package-Details.md
 - name:  快速入门
   items:
     - name: 添加准备

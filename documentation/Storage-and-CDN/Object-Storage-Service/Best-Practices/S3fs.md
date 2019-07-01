@@ -14,13 +14,17 @@ On CentOS 7:
 sudo yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel
 ```
 
-On Ubuntu 14.04:
+On Ubuntu 16.04:
 
 ```
 sudo apt-get install automake autotools-dev fuse g++ git libcurl4-openssl-dev libfuse-dev libssl-dev libxml2-dev make pkg-config
 ```
 
-**2.安装以及编译**
+**2.安装**
+
+支持通过以下两种方式安装：
+
+2.1编译安装：
 
 ```
 git clone https://github.com/s3fs-fuse/s3fs-fuse.git
@@ -29,6 +33,19 @@ cd s3fs-fuse
 ./configure
 make
 sudo make install
+```
+
+2.2packages安装：
+
+CentOS：
+```
+sudo yum install epel-release
+sudo yum install s3fs-fuse
+```
+
+Ubuntu:
+```
+sudo apt-get install s3fs
 ```
 
 **3.创建密码文件**
@@ -44,12 +61,11 @@ Access_Key_ID:Access_Key_Secret获取方式：https://uc.jdcloud.com/account/acc
 
 chmod 600：设置密钥文件只能被当前用户访问。
 
-
 **4.挂载对象存储到本地目录/new**
 
 ```
 mkdir /new
-s3fs bucketname /new -o passwd_file=~/.passwd-s3fs -o url="https://s3.cn-north-1.jcloudcs.com"
+s3fs bucketname /new -o passwd_file=~/.passwd-s3fs -o url="https://s3.cn-north-1.jdcloud-oss.com"
 ```
 说明
 
@@ -103,18 +119,18 @@ sudo make install
 
 注：--prefix=/usr/local非必须；PKG_CONFIG_PATH必须，/usr/local/要替换成用户本地路径。
 
-如果您在Mac OS挂载Bucket时使用的非root账号，请在指定挂载命令是指定当前账户的uid及gid。如下示例：
+3.如果您在挂载Bucket时使用的非root账号，请在指定挂载命令是指定当前账户的uid及gid。如下示例：
 
 ```
-sudo s3fs bucketname /new -o passwd_file=~/.passwd-s3fs -o url="https://s3.cn-north-1.jcloudcs.com" -o uid=11111 -o gid=11111
+sudo s3fs bucketname /new -o passwd_file=~/.passwd-s3fs -o url="https://s3.cn-north-1.jdcloud-oss.com" -o uid=11111 -o gid=11111
 ```
 
-3.使用s3fs-fuse工具挂载京东云对象存储，通过cp命令拷贝文件时，若遇到文件mime-type被修改的问题，可通过如下方式解决：
+4.使用s3fs-fuse工具挂载京东云对象存储，通过cp命令拷贝文件时，若遇到文件无content-type的问题，可通过如下方式解决：
 
-- 使用`cp`命令拷贝文件，`s3fs-fuse`工具底层进行的操作依赖于`/etc/mime.types`文件，这个文件决定了`cp`命令目的文件的mime-type属性。
+- 使用`cp`命令拷贝文件，`s3fs-fuse`工具底层进行的操作依赖于`/etc/mime.types`文件，这个文件决定了`cp`命令目的文件的mime-type属性。请查看您目录下是否有该文件。
 
 - 默认情况下，京东云的centos7版本并不包含`/etc/mime.types`文件，所以需要通过拷贝，或者安装`httpd`获得，安装命令为`yum install httpd`
 
 - 对于已经通过`s3fs`命令挂载的目录，需要先`umount`，然后再次执行`s3fs`命令才能生效。
 
-4.如果您在使用S3fs挂载Bucket之前开启了静态网站托管，会导致挂载失败；如果您使用S3fs挂载Bucket之后开启了静态网站托管，会导致文件操作失效。
+5.如果您在使用S3fs挂载Bucket之前开启了静态网站托管，会导致挂载失败；如果您使用S3fs挂载Bucket之后开启了静态网站托管，会导致文件操作失效。

@@ -14,6 +14,10 @@
 - backupMode 备份模式
 - backupUnit 备份粒度
 - instanceClass 实例规格
+- parameterGroupStatus 参数组状态
+- parameterStatus 参数状态
+- instanceType 实例类型
+- instanceStorageType 存储类型
 
 ## engine RDS引擎类型
 
@@ -23,13 +27,16 @@
 |MariaDB|MariaDB数据库引擎|
 |Percona|Percona数据库引擎|
 |SQL Server|SQL Server数据库引擎，注意中间有空格|
+|PostgreSQL|PostgreSQL数据库引擎|
 
 ## engineVersion RDS引擎版本
 
 |取值|说明|
 |-|-|
-|5.6|MySQL 5.6版本|
-|5.7|MySQL 5.7版本|
+|5.6|MySQL 5.6 版本|
+|5.7|MySQL 5.7 版本|
+|5.7|Percona 5.7 版本|
+|10.2|MariaDB 10.2 版本|
 |2008R2 EE|SQL Server 2008R2 企业版|
 |2012 EE|SQL Server 2012 企业版|
 |2014 EE|SQL Server 2014 企业版|
@@ -40,6 +47,7 @@
 |2012 Web|SQL Server 2012 Web版|
 |2014 Web|SQL Server 2014 Web版|
 |2016 Web|SQL Server 2016 Web版|
+|10.5|PostgreSQL 10.5版本|
 
 ## instanceStatus 实例状态
 
@@ -95,7 +103,10 @@
 
 |取值|说明|
 |-|-|
-|utf8|MySQL字符集|
+|utf8|MySQL, Percona, MariaDB字符集|
+|gbk|MySQL, Percona, MariaDB字符集|
+|latin1|MySQL, Percona, MariaDB字符集|
+|utf8mb4|MySQL, Percona, MariaDB字符集|
 |Chinese_PRC_CI_AS|SQL Server字符集|
 |Chinese_PRC_CS_AS|SQL Server字符集|
 |SQL_Latin1_General_CP1_CI_AS|SQL Server字符集|
@@ -147,3 +158,89 @@
 |-|-|
 |instance|实例备份|
 |database|数据库备份|
+
+## instanceClass  实例规格
+- SQL Server
+
+|   instanceClass   |   CPU(核) |   内存(GB)    |   磁盘(GB)    |
+|   -   |   -   |   -   |   -   |
+|   db.sqlsvr.s1.large  |   2   |   8   |   200 |
+|       |   2   |   8   |   300 |
+|       |   2   |   8   |   400 |
+|       |   2   |   8   |   500 |
+|   db.sqlsvr.s1.xlarge |   4   |   16  |   400 |
+|       |   4   |   16  |   500 |
+|       |   4   |   16  |   600 |
+|       |   4   |   16  |   800 |
+|   db.sqlsvr.s1.2xlarge    |   8   |   32  |   600 |
+|       |   8   |   32  |   800 |
+|       |   8   |   32  |   1000    |
+|       |   8   |   32  |   1200    |
+|   db.sqlsvr.s1.4xlarge    |   16  |   64  |   1000    |
+|       |   16  |   64  |   12000   |   |
+
+- MySQL
+
+|   instanceClass   |   CPU(核) |   内存(GB)    |   磁盘(GB)    |
+|   --- |   --- |   --- |   --- |
+|   db.mysql.s1.micro   |   1   |   1   |   20  |
+|       |   1   |   1   |   40  |
+|       |   1   |   1   |   60  |
+|       |   1   |   1   |   80  |
+|       |   1   |   1   |   100 |
+|   db.mysql.s1.small   |   1   |   2   |   60  |
+|       |   1   |   2   |   80  |
+|       |   1   |   2   |   100 |
+|       |   1   |   2   |   120 |
+|       |   1   |   2   |   150 |
+|   db.mysql.s1.medium  |   1   |   4   |   100 |
+|       |   1   |   4   |   120 |
+|       |   1   |   4   |   150 |
+|       |   1   |   4   |   200 |
+|       |   1   |   4   |   300 |
+|   db.mysql.s1.large   |   2   |   8   |   200 |
+|       |   2   |   8   |   250 |
+|       |   2   |   8   |   300 |
+|       |   2   |   8   |   400 |
+|       |   2   |   8   |   500 |
+|   db.mysql.s1.xlarge  |   4   |   16  |   400 |
+|       |   4   |   16  |   500 |
+|       |   4   |   16  |   600 |
+|       |   4   |   16  |   800 |
+|       |   4   |   16  |   1000    |
+|   db.mysql.s1.2xlarge |   8   |   32  |   600 |
+|       |   8   |   32  |   800 |
+|       |   8   |   32  |   1000    |
+|       |   8   |   32  |   1200    |
+|       |   8   |   32  |   1600    |
+|   db.mysql.s1.4xlarge |   16  |   64  |   1000    |
+|       |   16  |   64  |   1200    |
+|       |   16  |   64  |   1600    |
+|       |   16  |   64  |   2000    |
+
+## parameterStatus 参数状态 
+|取值|说明|
+|-|-|
+|VALID|生效|
+|SYNCING|同步中|
+|PENDING_REBOOT|待重启|
+
+## parameterGroupStatus 参数组状态 
+|取值|说明|
+|-|-|
+|AVAILABLE|可用|
+|SYNCING|同步中|
+
+## instanceType 实例类型 
+|取值|说明|
+|-|-|
+|standalone|单实例|
+|cluster|主备实例|
+|readonly|只读实例|
+
+## instanceStorageType 存储类型 
+|取值|说明|
+|-|-|
+|LOCAL_SSD|本地SSD|
+|EBS_SSD|SSD云盘|
+

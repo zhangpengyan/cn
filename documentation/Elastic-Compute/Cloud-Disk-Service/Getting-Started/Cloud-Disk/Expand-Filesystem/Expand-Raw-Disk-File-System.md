@@ -4,9 +4,9 @@
 
 如果之前并未对硬盘执行过分区操作，可以参考如下方法，直接对硬盘文件系统进行扩容：
 
-1.在控制台完成云硬盘[升级容量](https://www.jdcloud.com/help/detail/508/isCatalog/1)操作；
+1.在控制台完成云硬盘[升级容量](https://docs.jdcloud.com/cn/cloud-disk-service/disk-expand)操作；
 
-2.执行[挂载云硬盘](https://www.jdcloud.com/help/detail/505/isCatalog/1)，确保云硬盘处于“已挂载”状态；
+2.执行[挂载云硬盘](https://docs.jdcloud.com/cn/cloud-disk-service/attach-cloud-disk)，确保云硬盘处于“已挂载”状态；
 
 3.使用fdisk -l 查看硬盘分区信息；
 

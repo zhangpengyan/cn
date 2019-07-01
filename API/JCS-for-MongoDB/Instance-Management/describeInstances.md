@@ -21,6 +21,7 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances
 |**pageNumber**|Integer|False| |页码；默认为1，取值范围：[1,∞)|
 |**pageSize**|Integer|False| |分页大小；默认为10；取值范围[1, 100]|
 |**sorts**|Sort[]|False| |createTime - 创建时间,asc（正序），desc（倒序）<br>|
+|**tagFilters**|TagFilter[]|False| |Tag筛选条件|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|
@@ -33,6 +34,11 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances
 |---|---|---|---|---|
 |**direction**|String|False| |排序条件的方向|
 |**name**|String|False| |排序条件的名称|
+### TagFilter
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**key**|String|True| |Tag键|
+|**values**|String[]|True| |Tag值|
 
 ## 返回参数
 |名称|类型|描述|
@@ -71,6 +77,7 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances
 |**preferredmaintenanceWindow**|String|系统维护时间，如：00:00-02:00，表示0点到2点进行系统维护|
 |**replicaSetName**|String|副本集名称|
 |**subnetId**|String|子网ID|
+|**tags**|Tag[]|标签|
 |**vpcId**|String|VPCID|
 ### Charge
 |名称|类型|描述|
@@ -80,6 +87,11 @@ https://mongodb.jdcloud-api.com/v1/regions/{regionId}/instances
 |**chargeRetireTime**|String|预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
 |**chargeStartTime**|String|计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
 |**chargeStatus**|String|费用支付状态，取值为：normal、overdue、arrear，normal表示正常，overdue表示已到期，arrear表示欠费|
+### Tag
+|名称|类型|描述|
+|---|---|---|
+|**key**|String|Tag键|
+|**value**|String|Tag值|
 
 ## 返回码
 |返回码|描述|

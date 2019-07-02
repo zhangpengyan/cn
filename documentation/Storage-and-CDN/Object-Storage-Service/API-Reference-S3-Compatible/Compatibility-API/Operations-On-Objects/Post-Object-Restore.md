@@ -2,9 +2,9 @@
 
 ## 描述
 
-该操作可以对存储类型为 GLACIER 的对象恢复临时副本。恢复时支持指定临时副本的生命周期，即在指定的时间段后，OSS会删除该临时副本。
+该操作可以对存储类型为 GLACIER 的对象恢复临时副本。恢复时支持指定临时副本的生命周期，即在指定的时间段后，OSS会删除该临时副本。该操作不影响被还原的源对象。
 
-取回已归档对象时，可以指定以下还原选项：
+还原已归档对象时，可以指定以下还原选项：
 - Expedited：快速取回
 - Standard：标准取回
 - Bulk：批量检索
@@ -56,7 +56,27 @@ Error Code|描述|HTTP Status Code
 RestoreAlreadyInProgress|对象还原已经在处理中。|409 Conflict
 
 ## 示例
-**使用Expedited选项恢复对象，生命周期为2天**
+该请求从归档存储中还原photo1.jpg的副本，还原选项为Expedited，且该副本的生命周期为2天。
+```
+POST /photo1.jpg?restore HTTP/1.1
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
+Date: Mon, 22 Oct 2012 01:49:52 GMT
+Authorization: authorization string
+Content-Length: content length
 
-
+<RestoreRequest>
+  <Days>2</Days>
+  <GlacierJobParameters>
+    <Tier>Expedited</Tier>
+  </GlacierJobParameters>
+</RestoreRequest>
+```
+若该Bucket中没有还原对象的副本，OSS将会启动还原任务，并返回202 Accepted响应。
+```
+HTTP/1.1 202 Accepted
+x-amz-request-id: 9F341CD3C4BA79E0
+Date: Sat, 20 Oct 2012 23:54:05 GMT
+Content-Length: 0
+Server: JDCloudOSS
+```
 

@@ -63,6 +63,8 @@ items:
           href: Operation-Guide/LogSearch/fullTextSearch.md
         - name: 键值检索
           href: Operation-Guide/LogSearch/KVSearch.md
+    - name: 日志转储
+      href: Operation-Guide/LogTransfer.md
 - name: 最佳实践
   items:
     - name: 应用安全网关日志

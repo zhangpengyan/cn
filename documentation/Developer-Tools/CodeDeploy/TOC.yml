@@ -29,42 +29,52 @@
         href: Getting-Started/Create-VM.md
       - name: 新建应用及部署组
         href: Getting-Started/Create-Application1.md
-      - name: 新建部署
+      - name: 发起部署
         href: Getting-Started/Create-Deployment1.md
       - name: 查看部署详情
         href: Getting-Started/Details1.md
   - name: 操作指南
     items:
-      - name: 部署应用列表
+      - name: 应用列表
         href: Operation-Guide/Deployment-Application-List.md
       - name: 新建应用
         href: Operation-Guide/Create-Application2.md
+      - name: 应用部署组列表
+        href: Operation-Guide/Deployment-Group-List.md
+      - name: 应用里程牌列表
+        href: Operation-Guide/Milestone-List.md  
       - name: 在应用中新建部署组
         href: Operation-Guide/Create-Deployment-Group.md
       - name: 部署类型
         href: Operation-Guide/Deployment-Type.md
       - name: 部署组高级选项
         href: Operation-Guide/Advanced-Option.md
-      - name: 应用部署组列表
-        href: Operation-Guide/Deployment-Group-List.md
-      - name: 应用里程牌列表
-        href: Operation-Guide/Milestone-List.md
       - name: 编辑部署组
         href: Operation-Guide/Edit-Deployment-Group.md
-      - name: 新建部署
+      - name: 部署组详情
+        href: Operation-Guide/Deployment-Group-Detail.md
+      - name: 发起部署
         href: Operation-Guide/Create-Deployment2.md
+      - name: 部署详情
+        href: Operation-Guide/Details2.md        
       - name: 部署历史
         href: Operation-Guide/Deployment-History.md
-      - name: 部署详情
-        href: Operation-Guide/Details2.md
       - name: 部署工作流
         href: Operation-Guide/Workflow.md
-      - name: AppSpec文件
-        href: Operation-Guide/AppSpec.md
+      - name: Jdcloud-codedeploy文件
+        href: Operation-Guide/Jdcloud-codedeploy.md
       - name: Agent安装
         href: Operation-Guide/Install-Agent.md
       - name: 约定
         href: Operation-Guide/Convention.md
+      - name: Jenkins插件  
+        href: Operation-Guide/Jenkins.md
+      - name: 使用微服务平台  
+        href: Operation-Guide/JDSF.md
+  - name: 最佳实践
+    items: 
+      - name: 蓝绿部署
+        href: Best-Practice/Blue-green-Deployment.md
   - name: 常见问题
     href: FAQ/FAQ.md          
   - name: 相关资源

@@ -4,7 +4,41 @@
 
 全国各省经营性备案网站链接：
 
-[安徽省](http://www.ahta.gov.cn/)，[北京市](http://www.bca.gov.cn/)，[重庆市](http://www.cqca.gov.cn/)，[福建省](http://www.fjca.gov.cn/)，[广东省](http://www.gdca.gov.cn/)，[甘肃省](http://www.gsca.gov.cn/)，[广西壮族自治区](http://www.gxca.gov.cn/)，[贵州省](http://www.gzca.gov.cn/)，[海南省](http://www.hnca.gov.cn/)，[河北省](http://www.heca.gov.cn/)，[湖北省](http://www.eca.gov.cn/)，[河南省](http://www.hca.gov.cn/)，[湖南省](http://www.xca.gov.cn/)，[黑龙江](http://www.hlca.gov.cn/)，[吉林省](http://www.jlca.gov.cn/)，[江苏省](http://www.jsca.gov.cn/)，[江西省](http://www.jxca.gov.cn/)，[辽宁省](http://www.lnca.gov.cn/)，[宁夏回族自治区](http://www.nxca.gov.cn/)，[内蒙古自治区](http://www.nmca.gov.cn/)，[青海省](http://www.qhca.gov.cn/)，[山东省](http://www.sdca.gov.cn/)，[四川省](http://www.scca.gov.cn/)，[上海市](http://www.shcaeg.gov.cn/)，[山西省](http://www.sxca.gov.cn/)，[陕西省](http://www.shxca.gov.cn/)，[天津市](http://www.tjca.gov.cn/)，[新疆维吾尔自治区](http://www.xjca.gov.cn/)，[西藏自治区](http://www.xzca.gov.cn/)，[云南省](http://www.ynca.gov.cn/)，[浙江省](http://www.zca.gov.cn/)。
+| 省份             | 网址                 |
+| ---------------- | -------------------- |
+| 安徽省           | ahca.miit.gov.cn     |
+| 北京市           | bjca.miit.gov.cn     |
+| 重庆市           | cqca.miit.gov.cn     |
+| 福建省           | fjca.miit.gov.cn     |
+| 广东省           | gdca.miit.gov.cn     |
+| 甘肃省           | gsca.miit.gov.cn     |
+| 广西壮族自治区   | gxca.miit.gov.cn     |
+| 贵州省           | gzca.miit.gov.cn     |
+| 海南省           | hnca.miit.gov.cn     |
+| 河北省           | hbca.miit.gov.cn     |
+| 湖北省           | hb.beian.miit.gov.cn |
+| 河南省           | hca.miit.gov.cn      |
+| 湖南省           | xca.gov.cn           |
+| 黑龙江           | hljca.miit.gov.cn    |
+| 吉林省           | jlca.miit.gov.cn     |
+| 江苏省           | jsca.miit.gov.cn     |
+| 江西省           | jxca.miit.gov.cn     |
+| 辽宁省           | lnca.miit.gov.cn     |
+| 宁夏回族自治区   | nxca.miit.gov.cn     |
+| 内蒙古自治区     | nmca.miit.gov.cn     |
+| 青海省           | qhca.gov.cn          |
+| 山东省           | sdca.miit.gov.cn     |
+| 四川省           | scca.miit.gov.cn     |
+| 上海市           | shca.miit.gov.cn     |
+| 山西省           | sxca.miit.gov.cn     |
+| 陕西省           | shxca.miit.gov.cn    |
+| 天津市           | tjca.miit.gov.cn     |
+| 新疆维吾尔自治区 | xjca.miit.gov.cn     |
+| 西藏自治区       | xzca.miit.gov.cn     |
+| 云南省           | ynca.miit.gov.cn     |
+| 浙江省           | zca.gov.cn           |
+
+
 
 ## **经营性备案的 IP 注意事项**
 

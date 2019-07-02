@@ -8,4 +8,5 @@
 
 每种地图组件都支持多图层数据叠加，您可以在同一份地图上叠加飞线、3D柱图、气泡，轨迹、热力效果。此外每一种数据展示方式都支持多系列业务数据。例如您可以通过散点图的颜色、形状来表示不同类型的农作物种类。
 
+![](https://github.com/jdcloudcom/cn/blob/edit/image/Data-Visualization/media/guangxian.png)
 

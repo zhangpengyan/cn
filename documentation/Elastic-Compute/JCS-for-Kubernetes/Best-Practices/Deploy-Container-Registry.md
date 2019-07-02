@@ -1,110 +1,180 @@
 # 集成容器镜像仓库  
 
-关于使用容器镜像仓库的方法，请参考[容器镜像仓库帮助文档](https://docs.jdcloud.com/cn/container-registry/create-image)。例：注册表为myregistry，镜像仓库为myrepo，镜像版本号为latest，地域选择华北-北京为cn-north-1。用户可根据具体情况修改。  
-1.   
-**第一步：一次性保存secret，有时效性**
+关于使用容器镜像仓库的方法，请参考[容器镜像仓库帮助文档](https://docs.jdcloud.com/cn/container-registry/create-image)。  
+例：注册表为myregistry，镜像仓库为myrepo，镜像版本号为latest，地域选择华北-北京为cn-north-1。用户可根据具体情况修改。
+
+**对于一次性使用，临时令牌有效期内有效，有一定时效性**  
+该方案只能实现某个注册表下的所有容器镜像的获取权限。  
+1、获取临时令牌，Docker客户端登录命令中，-p后面的一串字符串为docker-password的内容：  
+例：Docker客户端登录命令：docker login -u jdcloud -p cWj36rigll1J2k8u 1227-cn-north-1.jcr.service.jdcloud.com。即cWj36rigll1J2k8u为docker-password内容。  
+2、创建命名为my-secret的secret，执行以下命令，相关内容需要根据情况进行修改：  
 ```
-kubectl create secret docker-registry my-secret --docker-server=myregistry-cn-north-1.jcr.service.jdcloud.com --docker-username=jdcloud --docker-password=C********u --docker-email=l****@jd.com
+kubectl create secret docker-registry my-secret --docker-server=myregistry-cn-north-1.jcr.service.jdcloud.com --docker-username=jdcloud --docker-password=cWj36rigll1J2k8u --docker-email=l****@jd.com
+```  
+3、创建资源的时候，imagePullSecrets使用my-secret:  
+例
 ```
-**第二步：自动定期获取临时令牌，长期有效：**  
-创建jcr-credential-rbac.yaml文件，内容如下：
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx
+  template:
+    metadata:
+      labels:
+        run: nginx
+    spec:
+      containers:
+      - image: myregistry-cn-north-1.jcr.service.jdcloud.com/myrepo:latest
+        imagePullPolicy: Always
+        name: nginx
+      imagePullSecrets:
+      - name: my-secret
+```  
+
+**对于长期使用，自动获取容器镜像仓库登录权限**  
+该方案可以实现对该账户下所有注册表的容器镜像的获取权限。  
+1、把用户的Access Key和Access Key Secret进行base 64位编码：  
+`
+printf  22BC1***********02C8C  | base64   #22BC1***********02C8C为Access Key、Access Key Secret
+`  
+输出内容即为Access Key和Access Key Secret进行base 64位编码：   
+2、创建secret.yaml文件：  
+`
+vi secret.yaml
+`  
+内容如下：
 ```
+apiVersion: v1
+kind: Secret
+metadata: 
+  name: c-tokens-fresher-secret
+  
+type: Opaque
+data: 
+  ak: NE*******************xQjk= #需要修改成用户Access Key的base64位编码
+  sk: RU*******************4QTE= #需要修改成用户的Access Key Secret的base64编码
+```
+3、创建cronjod.yaml文件:  
+`
+vi cronjob.yaml
+`  
+内容如下：
+```
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: init-jcr-token-refresher
+spec:
+  template:
+    metadata:
+      name: init-jcr-token-refresher
+    spec:
+      serviceAccountName: jcr-credential
+      restartPolicy: Never
+      hostNetwork: true
+      containers:
+      - name: init-jcr-token-refresher
+        env:
+        - name: ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: c-tokens-fresher-secret
+              key: ak
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: c-tokens-fresher-secret
+              key: sk
+        imagePullPolicy: Always
+        image: jdcloudiaas/jcrtoken:cronjob
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jcr-credential
+  namespace: default
+---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: jcr-credential-rbac
 subjects:
   - kind: ServiceAccount
-    # Reference to upper's `metadata.name`
-    name: default
-    # Reference to upper's `metadata.namespace`
+    name: jcr-credential
     namespace: default
 roleRef:
   kind: ClusterRole
   name: cluster-admin
   apiGroup: rbac.authorization.k8s.io
-```
-创建jcr-credential-cron.yaml文件，设定每一个小时获取临时令牌，请使用时添加JDCLOUD_ACCESS_KEY和JDCLOUD_SECRET_KEY内容，yaml内容如下：
-```
+---
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: jdcloud-jcr-credential-cron
 spec:
-  schedule: "* */1 * * *"
+  schedule: "*/5 * * * *"
   successfulJobsHistoryLimit: 2
-  failedJobsHistoryLimit: 2  
+  failedJobsHistoryLimit: 2
   jobTemplate:
     spec:
       backoffLimit: 4
       template:
         spec:
-          serviceAccountName: default
+          serviceAccountName: jcr-credential
           terminationGracePeriodSeconds: 0
           restartPolicy: Never
           hostNetwork: true
           containers:
           - name: jcr-token-refresher
+            env:
+            - name: ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: c-tokens-fresher-secret
+                  key: ak
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: c-tokens-fresher-secret
+                  key: sk
             imagePullPolicy: Always
-            image: jdcloudcli/jdcloud-cli:latest
-            command:
-            - "/bin/sh"
-            - "-c"
-            - |
-              REGISTRY_NAME=myregistry
-              JCR_REGION=cn-north-1
-              DOCKER_REGISTRY_SERVER=https://${REGISTRY_NAME}-${JCR_REGION}.jcr.service.jdcloud.com
-              DOCKER_USER=jdcloud
-              JDCLOUD_ACCESS_KEY=****************************
-              JDCLOUD_SECRET_KEY=****************************
-              jdc configure add --profile ${DOCKER_USER} --access-key ${JDCLOUD_ACCESS_KEY} --secret-key ${JDCLOUD_SECRET_KEY}
-              PRECHECK=`jdc cr get-authorization-token --region-id ${JCR_REGION} --registry-name ${REGISTRY_NAME} |jq .result.authorizationToken`
-              if [ 'null' = "$PRECHECK" ]; then
-                  echo "jdc cr call failed no valid content" 
-                  exit 0 
-              else
-                  echo "jdc cr call return authentication string"
-              fi;
-              DOCKER_PASSWORD=`echo ${PRECHECK} | base64 -d |cut  -d  ':' -f2`
-              kubectl delete secret my-secret || true
-              echo "0:"$PRECHECK
-              echo "1:"$DOCKER_REGISTRY_SERVER
-              echo "2:"$DOCKER_USER
-              echo "3:"$DOCKER_PASSWORD
-              kubectl create secret docker-registry my-secret \
-              --docker-server=$DOCKER_REGISTRY_SERVER \
-              --docker-username=$DOCKER_USER \
-              --docker-password=$DOCKER_PASSWORD \
-              --docker-email=**@jd.com
-              kubectl patch serviceaccount default  -p '{"imagePullSecrets":[{"name":"my-secret"}]}'
+            image: jdcloudiaas/jcrtoken:cronjob
+```  
+4、执行以下命令，运行：
 ```
+kubectl create -f secret.yaml
+kubectl create -f cronjob.yaml
 ```
-kubectl apply  -f  jcr-credential-rbac.yaml
-kubectl apply  -f  jcr-credential-cron.yaml
+5、创建资源时，image选取使用ak和sk用户下的镜像，imagePullSecrets使用jcr-pull-secret：  
+例：
 ```
-2.   创建yaml文件，文件名称为registrysecret
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx
+  template:
+    metadata:
+      labels:
+        run: nginx
+    spec:
+      containers:
+      - image: myregistry-cn-north-1.jcr.service.jdcloud.com/myrepo:latest
+        imagePullPolicy: Always
+        name: nginx
+      imagePullSecrets:
+      - name: jcr-pull-secret
 ```
-apiVersion: v1
- kind: ReplicationController
- metadata:
-    name: webapp
- spec:
-    replicas: 1
-    selector:
-      name: container-private-repo
-    template:
-      metadata:
-        labels:
-           name: container-private-repo
-      spec:
-        containers:
-          - name:  mycontainer
-            image: myregistry-cn-north-1.jcr.service.jdcloud.com/myrepo:latest
-            imagePullPolicy: Always
-        imagePullSecrets:
-          - name: my-secret
-```
-3.   创建：  
- `kubectl create -f registrysecret`  
-4.   查看详情：  
- `kubectl describe rc webapp`  

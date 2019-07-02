@@ -1,4 +1,4 @@
- # 入门指南概述
+# 入门指南概述
 
 京东云API 网关提供了API的全生命周期管理、流控策略、访问授权、后端签名和API调用情况监控等服务。用户可通过API网关实现自身系统集成和服务聚合，还能便捷安全地开放其业务功能和数据。您可在控制台依次完成以下步骤完成开放API服务：
  
@@ -69,5 +69,5 @@ API 分组创建完成您就可以创建 API 了，创建 API 是定义 API 请�
 ###  第6步: API调用者下载和使用SDK包
 
 - 快速上手
-	- [快速发布和调用一个API应用](../Best-Practices/example_for_create_api.md)
+	- [快速发布和调用一个API应用](../Getting-Started/example_console.md)
 

@@ -47,7 +47,15 @@
     items:
       - name: 使用须知
         href: Operation-Guide/Terms-and-Conditions.md
-      - name: 网络和安全性
+      - name: 网络
+        items:
+          - name: 私有网络
+            href: Operation-Guide/Networking/Virtual-Network-Interface.md
+          - name: 子网
+            href: Operation-Guide/Networking/Subnet.md
+          - name: 弹性公网IP
+            href: Operation-Guide/Networking/Elastic-IP-For-Physical-Cloud.md
+      - name: 防火墙配置说明
         items:
           - name: 功能描述
             href: Operation-Guide/Network-And-Security/Description-Network-And-Security.md
@@ -71,7 +79,7 @@
             href: Operation-Guide/Remote-Login/Description-Remote-Login.md
           - name: 操作步骤
             href: Operation-Guide/Remote-Login/Steps-Remote-Login.md
-      - name: 云物理服务器生命周期管理
+      - name: 生命周期管理
         items:
           - name: 功能描述
             href: Operation-Guide/Cloud-Physical-Server-Life-Cycle-Management/Description-Cloud-Physical-Server-Life-Cycle-Management.md
@@ -89,6 +97,12 @@
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md
           - name: 操作步骤
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Steps-Adjust-Public-Network-Bandwidth.md
+      - name: 监控
+        items:
+          - name: 硬件监控
+            href: Operation-Guide/Monitoring/Hardware-Monitoring.md
+          - name: 性能监控
+            href: Operation-Guide/Monitoring/Monitoring-Overview.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案
@@ -109,13 +123,7 @@
   - name: API参考
     status: 0
   - name: SDK参考
-    status: 0
-  - name: 用户协议
-    items:
-    - name: 服务条款
-      href: User-Agreements/Product-Terms-of-Service.md              
-    - name: SLA
-      href: User-Agreements/SLA.md               
+    status: 0               
   - name: 相关资源
     items:
     - name: 文档历史记录

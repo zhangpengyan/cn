@@ -6,6 +6,10 @@
 POST {Http接入点}/v1/messages HTTP/1.1
 ```
 
+- 请求headers参数
+
+请求公共参数请参考[公共参数](../Call-Method/Common-parameters.md)及[签名算法](../Call-Method/Signature-Algorithm.md)章节。
+
 - Request Body
 
   Request Body为JSON格式，其中包含的字段如下：

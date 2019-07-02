@@ -26,7 +26,7 @@ AK/SK密钥对允许启用、禁用，启用后可用其调用OpenAPI，禁用�
 
 ### 示例代码（Python3）
 
-```python
+```Python
 #!/home/lizhijian/opt/python3.7/bin/python3
 
 import base64

@@ -24,8 +24,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/raids
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
@@ -34,12 +34,12 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/raids
 ### Raid
 |名称|类型|描述|
 |---|---|---|
-|**description**|String|RAID类型描述|
-|**deviceType**|String|云物理服务器类型, 如 cps.c.normal|
-|**raidType**|String|RAID类型, 如 NORAID, RAID0, RAID1|
-|**raidTypeId**|String|RAID类型ID|
-|**volumeDetail**|String|设备详情|
 |**volumeType**|String|磁盘类型, 如 system/data|
+|**volumeDetail**|String|设备详情|
+|**raidTypeId**|String|RAID类型ID|
+|**raidType**|String|RAID类型, 如 NORAID, RAID0, RAID1|
+|**deviceType**|String|云物理服务器类型, 如 cps.c.normal|
+|**description**|String|RAID类型描述|
 
 ## 返回码
 |返回码|描述|

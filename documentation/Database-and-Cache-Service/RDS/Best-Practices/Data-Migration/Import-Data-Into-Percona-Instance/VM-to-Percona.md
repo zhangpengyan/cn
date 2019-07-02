@@ -8,7 +8,7 @@
 ## 操作步骤
 1. 创建云数据库 Percona，具体的创建步骤请参考 [创建云数据库 RDS 实例](../../../Operation-Guide/Instance/Create-Instance.md)。
 2. 通过控制台进行库的创建，确保云主机自建的 Percona 中需要导出的库名在云数据库 Percona 中同样的创建了一遍，具体的创建步骤请参考 [创建库](../../../Operation-Guide/Database-Management/Create-Database.md)。
-3. 通过控制台进行数据库账号的创建，也可以使用创建云数据库 Percona 的时候的账号，然后赋予这个账号在第 2 步操作中新建的库的 ***读写*** 权限，具体的创建步骤请参考 [创建账号](../../../Operation-Guide/Account/Create-Account.md)。
+3. 通过控制台进行数据库账号的创建，也可以使用创建云数据库 Percona 的时候的账号，然后赋予这个账号在第 2 步操作中新建的库的 ***读写*** 权限，具体的创建步骤请参考 [创建账号](../../../Operation-Guide/Account/Create-Account/Percona-Create-Account.md)。
 4. 完成云数据库 Percona 创建和初始化工作之后，开始从云主机中自建的 Percona 进行数据导出到云主机本地的操作，执行命令
 
     ```

@@ -5,7 +5,7 @@
 
 ## 操作步骤
 1. 登录 [IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)。
-2. 在“实例列表”页面，选择目标实例，点击 **实例名称**或 **转发配置**，进入”实例详情“页面。
+2. 在“实例列表”页面，选择目标实例，点击 **实例名称**或 **转发配置**，进入“实例详情”页面。
 3. 在”实例详情“页面，点击 **IP黑/白名单**，即可进行配置。
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/blacklist%2001.png)
 

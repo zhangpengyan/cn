@@ -3,7 +3,7 @@
 本文档介绍了购买DevOps的入口
 
 
-1.登录京东云官网https://www.jdcloud.com/。
+1.登录京东云官网 https://www.jdcloud.com/ 
 
 2.选择“产品-->管理-->DevOps”，具体见下图。
 

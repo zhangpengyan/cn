@@ -2,4 +2,5 @@
 
 请右键点击核验单“图片另存为”至本地后打印即可
 
-![多域名核验单.jpg](https://img1.jcloudcs.com/cms/4d037105-ce0d-49ef-aac9-d8c74695b14620180925102546.jpg)
+![Beijing-multi-domain-verification-form-cn-1.jpg](../../../../../image/ICP-License-Service/Beijing-multi-domain-verification-form-cn-1.jpg)
+

@@ -21,7 +21,7 @@ OSS通过服务端加密机制，提供静态数据保护。适合于用户对�
  
  *  并且您需要使用兼容S3 API 时，上传下载等操作均仅支持HTTPS协议，这点请您特别注意。
  
-同时通过服务器端加密存储的Object，使用以下s3 API请求改加密过的object,OSS会返回x-aws-server-side-encryption头：
+同时通过服务器端加密存储的Object，使用以下s3 API请求该加密过的object,OSS会返回x-aws-server-side-encryption头：
 
 PutObject
 
@@ -46,7 +46,7 @@ HeadObject
 
 |名称|描述|示例|
 |:-|:-|:-|
-|x-aws-server-side-encryption|指定服务端加密方式|x-aws-server-side-encryption：aws-kms|
+|x-aws-server-side-encryption|指定服务端加密方式|x-aws-server-side-encryption：aws:kms|
 
 ##  使用OSS管理控制台，设置默认加密
 
@@ -77,6 +77,6 @@ HeadObject
 
 **相关API参考**
 
--  设置存储空间默认加密  [PUT Bucket encryption](../../API-Reference-S3-Compatible/Compatibility-API/PUT-Bucket-Encryption-2.md)
--  删除存储空间默认加密  [DELETE Bucket encryption](../../API-Reference-S3-Compatible/Compatibility-API/DELETE-Bucket-Encryption-2.md)
--  获取存储空间默认加密设置  [GET Bucket encryption](../../API-Reference-S3-Compatible/Compatibility-API/GET-Bucket-Encryption-2.md)
+-  设置存储空间默认加密  [PUT Bucket encryption](https://docs.jdcloud.com/cn/object-storage-service/put-bucket-encryption-2)
+-  删除存储空间默认加密  [DELETE Bucket encryption](https://docs.jdcloud.com/cn/object-storage-service/delete-bucket-encryption-2)
+-  获取存储空间默认加密设置  [GET Bucket encryption](https://docs.jdcloud.com/cn/object-storage-service/get-bucket-encryption-2)

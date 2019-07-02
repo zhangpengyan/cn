@@ -12,4 +12,4 @@ API分组信息创建完成后，需要通过发布才能使用。目前京东�
 
 ##  相关参考：
 
-* [发布步骤说明](../Operation-Guide/Create-Publish/Create-Publish.md)
+* [发布步骤说明](../Operation-Guide/Create-APIGroup/Create-Publish.md)

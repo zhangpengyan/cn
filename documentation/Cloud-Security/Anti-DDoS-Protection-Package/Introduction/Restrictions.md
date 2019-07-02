@@ -3,9 +3,9 @@
 DDoS防护包在使用中有部分约束条件需要注意。
 
 ## 套餐能力限制
-目前仅支持华北-北京和华东-上海两个区域的IP防护；
+目前支持华北-北京、华东-上海、宿迁三个区域的IP防护；
 
-华北区域最大的防护能力为50G，华东区域为30G；
+华北区域最大的防护能力为50G，华东区域为30G，宿迁区域为10G；
 
 只针对已经拥有了京东云内公网IP的用户，如对云主机、负载均衡等提供防护；
 
@@ -29,6 +29,6 @@ DDoS防护包在使用中有部分约束条件需要注意。
 
 ## 相关参考
 
-- [产品概述](../Product-Introduction/Overview.md)
+- [产品概述](../Introduction/Product-Overview.md)
 - [价格总览](../Pricing/Price-Overview.md)
 - [创建实例](../Getting-Started/Create-Instance.md)

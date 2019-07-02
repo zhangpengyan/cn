@@ -8,17 +8,48 @@ Oracle是业界使用最广泛的商业级数据库，目前很多用户都有�
 - 操作系统环境：centos 6.5 64位
 - 数据库版本： oracle 11.2.0.4
 
-## 2. IP规划
+## 2. 环境规划
+### IP规划
 
 |主机名|公共IP|私有IP|虚拟IP|scan IP|
 |-|-|-|-|-|
 |oracle-rac1|10.10.10.101|192.168.100.101|10.10.10.103|10.10.10.105 scan-ip|
 |oracle-rac2|10.10.10.102|192.168.100.102|10.10.10.104|10.10.10.105 scan-ip|
 
+### ASM共享存储规划
+
+|磁盘组|冗余类型|磁盘LIST|
+|-|-|-|
+|OCR|NORMAL|VOLCRS01、VOLCRS01、VOLCRS03|
+|DATA|EXTERNAL|VOLDATA01、VOLDATA02、VOLDATA03|
+
+### 配置/etc/hosts文件：
+
+两个节点
+```
+#pub
+10.10.10.101 oracle-rac1
+10.10.10.102 oracle-rac2
+#vip
+10.10.10.103 oracle-rac1-vip
+10.10.10.104 oracle-rac2-vip 
+#priv
+192.168.100.101 oracle-rac1-priv 
+192.168.100.102 oracle-rac2-priv 
+#scan-ip
+10.10.10.105 scan-ip
+```
+
 ## 3. 安装配置n2n
 由于Oracle RAC需要网络具有组播功能，因此在云端需要借助n2n软件实现
 
 ### 3.1 安装n2n
+安装svn需要的rpm
+```
+yum -y install subversion
+sudo yum install openssl-devel
+```
+
 在两台云主机上均执行下面的命令
 ```
 cd /usr/src
@@ -39,6 +70,10 @@ echo "/opt/n2n/sbin/supernode -l 65530" >> /etc/rc.local
 ```
 
 两个节点运行客户端，并写入到/etc/rc.local
+
+注意：server端ip，是supernode的ip
+- edge0: private网卡
+- edge1: public网卡
 
 - **节点1**
 ```
@@ -162,6 +197,16 @@ swapon /home/oracle/myswaps/swapfile1
 echo "/home/oracle/myswaps/swapfile1 swap swap defaults 0 0" >>/etc/fstab
 ```
 
+### 4.6 准备软件
+一共需要三个安装文件：
+- p13390677_112040_Linux-x86-64_1of7.zip
+- p13390677_112040_Linux-x86-64_2of7.zip
+- p13390677_112040_Linux-x86-64_3of7.zip
+
+将oracle软件的安装介质（前两个文件），上传到/home/oracle:
+
+将grid软件的安装介质（第三个文件），上传到/home/grid:
+
 ## 5. 安装oracle rac的依赖包
 
 ### 5.1 检查缺少的rpm包
@@ -220,18 +265,22 @@ yum install -y compat-libcap1.x86_64
 ```
 其中2个rpm包的特殊处理 pdksh 和 cvuqdisk ，一个需要单独下载，一个需要在oracle安装介质中找
 
-- pdksh
 ksh无用，需要安装pdksh
 ```
 rpm -ivh pdksh-5.2.14-21.x86_64.rpm
 pdksh conflicts with ksh-20120801-37.el6_9.x86_64
 rpm -e ksh-20120801-37.el6_9.x86_64
 ```
-- cvuqdisk
-可在在Oracle安装介质中可以找到
+假如冲突，卸载ksh
 ```
+pdksh conflicts with ksh-20120801-37.el6_9.x86_64
+rpm -e ksh-20120801-37.el6_9.x86_64
+```
+
+cvuqdisk 可在在Oracle安装介质中可以找到
+```
+yum install -y smartmontools
 rpm -ivh cvuqdisk-1.0.9-1.rpm
-依赖于：yum install -y smartmontools
 ```
 
 安装asmlib的相关包，oracleasmlib、oracleasm-support、Kmod-oracleasm
@@ -243,7 +292,7 @@ rpm -ivh oracleasmlib-2.0.4-1.el6.x86_64.rpm
 
 ## 6. 系统参数设置
 
-1. 修改内核参数
+### 6.1 修改内核参数
 ```
 vi /etc/sysctl.conf
 echo "fs.aio-max-nr = 1048576" >> /etc/sysctl.conf
@@ -260,7 +309,7 @@ echo "net.core.wmem_max = 1048576" >> /etc/sysctl.conf
 sysctl -p 
 ```
 
-2. 修改用户限制
+### 6.2 修改用户限制
 ```
 vi /etc/security/limits.conf
 echo "oracle soft nofile 4096" >> /etc/security/limits.conf
@@ -277,12 +326,12 @@ echo "* soft memlock 18874368" >> /etc/security/limits.conf
 echo "* hard memlock 18874368" >> /etc/security/limits.conf
 ```
 
-3. 修改/etc/pam.d/login，加入认证模块
+### 6.3 修改/etc/pam.d/login，加入认证模块
 ```
 echo "session required pam_limits.so" >> /etc/pam.d/login
 ```
 
-4. disable iptables 和selinux
+### 6.4 disable iptables ,selinux 和 ntp server
 ```
 chkconfig --list iptables
 chkconfig iptables off
@@ -290,17 +339,22 @@ chkconfig --list iptables
 service iptables stop
 service network restart
 echo "SELINUX=disabled" >>/etc/selinux/config
-```
 
-5. disable ntp server
-```
 /sbin/service ntpd stop
 chkconfig ntpd off
 mv /etc/ntp.conf /etc/ntp.conf.bk
 rm /var/run/ntpd.pid
 ```
 
-6. 配置asmlib，分区规划（6个分区）
+### 6.5 共享磁盘
+
+1. 购买支持多点挂载的硬盘
+京东云控制台的操作： 位置在 “弹性计算\云硬盘” ，注意一定要选择“多点挂载”
+
+2. 两台节点分别挂载共享硬盘
+京东云控制台的操作： 位置在“弹性计算\云主机” ，选择购买的共享disk进行挂载
+
+### 6.6 分区规划（6个分区）
 ```
 parted /dev/vdb mklabel gpt
 parted /dev/vdb mkpart primary 0 10000 
@@ -312,14 +366,14 @@ parted /dev/vdb mkpart primary 50000 60000
 parted /dev/vdb p
 ```
 
-7. 配置asmlib
+### 6.7 配置asmlib
 ```
 /usr/sbin/oracleasm configure -i #两个节点
 /etc/init.d/oracleasm enable #两个节点
 /etc/init.d/oracleasm start #两个节点
 ```
 
-8. 创建磁盘
+### 6.8 创建磁盘
 ```
 /etc/init.d/oracleasm createdisk VOLCRS01 /dev/vdb1
 /etc/init.d/oracleasm createdisk VOLCRS02 /dev/vdb2
@@ -331,14 +385,33 @@ parted /dev/vdb p
 /usr/sbin/oracleasm listdisks #
 ```
 
+### 6.9 扫描识别asm硬盘
+```
+/usr/sbin/oracleasm scandisks #一个节点创建磁盘后，另一个节点扫描磁盘即可
+```
+
+### 6.10 检查输出asm清单
+两个节点分别执行
+```
+/usr/sbin/oracleasm listdisks 
+```
+
 ## 7. grid安装
 
-1. 环境核验
+### 7.1 环境核验
+用grid用户解压grid软件的安装介质
+
 ```
+su - grid
+unzip p13390677_112040_Linux-x86-64_3of7.zip -d /home/grid
 /home/grid/grid/runcluvfy.sh stage -pre crsinst -n oracle-rac1,oracle-rac2 -verbose 
 ```
 
-2. 准备响应文件
+### 7.2 准备响应文件
+```
+cp /home/grid/grid/response/grid_install.rsp grid_install_jdtest.rsp
+```
+编辑文件grid_install_jdtest.rsp文件，修改的参数如下
 ```
 ORACLE_HOSTNAME=oracle-rac1
 INVENTORY_LOCATION=/u01/app/oraInventory
@@ -362,7 +435,7 @@ oracle.install.asm.diskGroup.diskDiscoveryString=/dev/oracleasm/disks
 oracle.install.asm.monitorPassword=Grid123
 ```
 
-3. 安装grid
+### 7.3 安装grid
 ```
 ./runInstaller -silent -responseFile /home/grid/grid/response/grid_install_jdtest.rsp -ignoreSysPrereqs -ignorePrereq
 ```
@@ -372,7 +445,29 @@ oracle.install.asm.monitorPassword=Grid123
 /u01/crs/11.2.0/root.sh
 ```
 
-4. grid安装完成，查看集群资源的输出如下：
+### 7.4 设置grid的用户密码
+创建和写入文件 cfgrsp.properties
+```
+cd /home/grid/grid/response
+cat << EOF > cfgrsp.properties 
+oracle.assistants.asm|S_ASMPASSWORD=Grid123
+oracle.assistants.asm|S_ASMMONITORPASSWORD=Grid123
+EOF
+```
+
+修改文件属性
+```
+chmod 600 cfgrsp.properties
+```
+
+执行configToolAllCommands，生成密码信息
+```
+/u01/app/grid_home/cfgtoollogs/configToolAllCommands RESPONSE_FILE=/home/grid/grid/response/cfgrsp.properties
+```
+
+
+### 7.5 查看集群资源
+grid安装完成，查看集群资源的输出如下：
 ```
 crs_stat -t
 Name Type Target State Host 
@@ -411,14 +506,14 @@ CRS-4533: Event Manager is online
 # **************************************************************
 ```
 
-5. 创建asmdisk group
+### 7.6 创建asmdisk group
 ```
 su – grid
 asmca -silent -createDiskGroup -sysAsmPassword Grid123 -diskString '/dev/oracleasm/disks/*' -diskGroupName DATA -diskList '/dev/oracleasm/disks/VOLDATA01' -redundancy EXTERNAL -compatible.asm 11.2 -compatible.rdbms 11.2
 asmca -silent -addDisk -sysAsmPassword Grid123 -diskGroupName DATA -diskList '/dev/oracleasm/disks/VOLDATA02','/dev/oracleasm/disks/VOLDATA03'
 ```
 
-6. 查看信息：
+### 7.7 查看信息
 ```
 select name,path,STATE,GROUP_NUMBER 
 from v$asm_disk;
@@ -429,13 +524,15 @@ from v$asm_diskgroup;
 
 ## 8. 安装oracle数据库软件：
 
-1. 安装前验证：
+### 8.1 安装前验证：
 ```
+#grid用户执行
 /home/grid/grid/runcluvfy.sh stage -pre dbinst -n oracle-rac1,oracle-rac2 -verbose
 ```
 
-2. 编译响应文件
+### 8.2 编译响应文件
 ```
+#oracle用户执行
 vi u01/soft/oracle/database/response/db_install_jdtest.rsp
 ```
 
@@ -457,25 +554,36 @@ oracle.install.db.CLUSTER_NODES=rac1,rac2
 DECLINE_SECURITY_UPDATES=true
 ```
 
-3. 执行静默安装oracle软件
+### 8.3 修改目录权限
+
+因为/u01/app的权限变成了root，所以需要修改一下.两个节点执行:
+```
+chown -R oracle:oinstall /u01/app
+chmod -R 775 /u01/app/
+chown -R grid:oinstall /u01/app/grid_base
+chown -R grid:oinstall /u01/app/grid_home
+```
+
+
+### 8.4. 执行静默安装oracle软件
 ```
 ./runInstaller -silent -ignoreSysPrereqs -ignorePrereq -responseFile /home/oracle/database/response/db_install_jdtest.rsp
 ```
 
-4. 根据提示执行下面的脚本:
+### 8.5 根据提示执行下面的脚本:
 ```
 /u01/app/oracle/product/11.2.0/db_1/root.sh
 ```
 
-
 ## 9. 安装DB
 
-1. 准备响应文件
+### 9.1 准备响应文件
 ```
-vi /u01/soft/oracle/database/response/dbca_jdtest.rsp
+#oracle用户执行
+cp /home/oracle/database/response/dbca.rsp /home/oracle/database/response/dbca_jdtest.rsp
 ```
-
-2. 修改参考:
+### 9.2 编辑文件dbca_jdtest.rsp
+修改的参数如下：
 ```
 GDBNAME = "orcl"
 SID = "orcl"
@@ -488,11 +596,30 @@ RECOVERYGROUPNAME=DATA
 CHARACTERSET = "ZHS16GBK"
 ```
 
-3. 静默创建数据库
+检查$ORACLE_HOME/bin/oracle文件属性
+```
+su - grid #切换到grid用户
+```
+
+检查文件属性：
+```
+ls -l $ORACLE_HOME/bin/oracle
+```
+
+输出结果应该为：
+```
+-rwsr-sr-x 1 grid oinstall
+```
+
+如果不是-rwsr-sr-x ，执行属性修改：
+```
+chmod 6755 $ORACLE_HOME/bin/oracle
+```
+
+### 9.3 静默创建数据库
 ```
 dbca -silent -responseFile /home/oracle/database/response/dbca_jdtest.rsp
 ```
-
 
 至此全部安装完成,确认结果的输出如下：
 ```

@@ -26,21 +26,21 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/keypairs:import
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**keyFingerprint**|String|密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。|
 |**keyName**|String|密钥对名称|
+|**keyFingerprint**|String|密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。|
 
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

@@ -12,19 +12,19 @@
 
 试点省份短信验证平台地址：
 
-**甘肃：**gscainfo.miitbeian.gov.cn
+**甘肃**：gs.beian.miit.gov.cn
 
-**西藏：**xzcainfo.miitbeian.gov.cn
+**西藏**：xz.beian.miit.gov.cn
 
-**宁夏：**nxcainfo.miitbeian.gov.cn
+**宁夏**：nx.beian.miit.gov.cn
 
-**海南：**hncainfo.miitbeian.gov.cn
+**海南**：hi.beian.miit.gov.cn
 
-**新疆：**xjcainfo.miitbeian.gov.cn
+**新疆**：xj.beian.miit.gov.cn
 
-**青海：**qhcainfo.miitbeian.gov.cn
+**青海**：qh.beian.miit.gov.cn
 
-**天津：**tjcainfo.miitbeian.gov.cn
+**天津**：tj.beian.miit.gov.cn
 
 ![1.png](https://img1.jcloudcs.com/cms/b779ee76-5dcf-4e25-bb3d-c7337a87391b20171218111115.png)
 

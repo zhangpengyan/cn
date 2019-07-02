@@ -2,7 +2,7 @@
 
 
 ## 描述
-重启单个云物理服务器，只能重启running状态的服务器
+重启单台云物理服务器，只能重启running状态的服务器
 
 ## 请求方式
 PUT
@@ -12,8 +12,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:restart
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True| |云物理服务器ID|
 |**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**instanceId**|String|True| |云物理服务器ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
@@ -24,8 +24,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:restart
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|

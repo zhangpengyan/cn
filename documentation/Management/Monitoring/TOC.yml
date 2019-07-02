@@ -36,7 +36,7 @@ items:
         - name: 设置报警规则
           href: Getting-Started/Alarm-Management/set-alarm-rules.md
     - name: 使用Dashboard
-      href: Getting-Started/use-Dashboard.md
+      href: Getting-Started/use-dashboard.md 
     - name: 使用站点监控
       href: Getting-Started/use-site-monitoring.md 
     - name: 使用可用性监控
@@ -120,7 +120,7 @@ items:
 - name: 常见问题
   href: FAQ/FAQ.md
 - name: 文档历史记录
-  href: Related-Resources/Document-History.md     
+  href: Related-Resources/document-history.md     
 - name: 服务条款         
   status: 0      
 - name: SLA         

@@ -12,7 +12,7 @@
 
   域名填写字符只支持英文26个字母、10个阿拉伯数字以及横杠“-”'*'；
 
-  支持泛域名，最多支持4级泛域名，如“*.*.jdcloud.com”；
+  支持泛域名，不支持泛域名与子域名以相同内容结尾的域名添加，如已经添加泛域名*.b.a.com,不支持在添加c.b.a.com或b.a.com；
 
   最多支持添加100个加速域名，如有更多的域名加速需求，请提交在线工单。
 
@@ -28,4 +28,4 @@
 
 * 回源方式：请根据实际需求选择IP回源、域名回源，或OSS回源，并对应填写源站IP地址、源站域名，选择OSS的bucket信息。京东云CDN支持多IP负载均衡回源，以及多IP、多域名备份回源，请您根据实际需要填写回源配置。
 
-![image.png](https://img1.jcloudcs.com/cms/d1393737-6ebb-42fa-a89b-2bdfca2a4c5320180423142209.png)
+![image.png](https://github.com/jdcloudcom/cn/blob/cdn-new/image/CDN/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%9E%E6%BA%90host.png)

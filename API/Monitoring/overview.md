@@ -13,13 +13,13 @@ v1
 |接口名称|请求方式|功能描述|
 |---|---|---|
 |**createAlarm**|POST|创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。|
+|**deleteAlarms**|DELETE|批量删除规则|
 |**deleteAlarmsCm**|DELETE|删除自定义监控规则|
 |**describeAlarmContacts**|GET|查询规则的报警联系人|
-|**describeAlarmHistory**|GET|查询报警历史</br>检索条件组合优先级从高到低为</br>1. serviceCode</br>1.1 serviceCode + resourceId</br>1.2 serviceCode + resourceIds</br>2. serviceCodes</br>3. 用户所有规则|
-|**describeAlarmHistoryAllRegion**|POST|查询报警历史</br>检索条件组合优先级从高到低为</br>1. serviceCode</br>1.1 serviceCode + resourceId</br>1.2 serviceCode + resourceIds</br>2. serviceCodes</br>3. 用户所有规则|
-|**describeAlarms**|GET|查询规则, 查询参数组合及优先级从高到低为：</br>1：serviceCode不为空</br>1.1：serviceCode + resourceId</br>1.2: serviceCode + resourceIds</br>2：serviceCodes不为空</br>3: 所有规则|
+|**describeAlarmHistory**|GET|查询报警历史</br>检索条件组合优先级从高到低为</br>1. alarmId</br>2. serviceCode</br>2.1 serviceCode + resourceId</br>2.2 serviceCode + resourceIds</br>3. serviceCodes</br>4. 用户所有规则|
+|**describeAlarmHistoryAllRegion**|POST|查询报警历史</br>检索条件组合优先级从高到低为</br>1. alarmId</br>2. serviceCode</br>2.1 serviceCode + resourceId</br>2.2 serviceCode + resourceIds</br>3. serviceCodes</br>4. 用户所有规则|
+|**describeAlarms**|GET|查询规则, 查询参数组合及优先级从高到低为：</br>1：alarmId不为空</br>2：serviceCode不为空</br>2.1：serviceCode + resourceId</br>2.2: serviceCode + resourceIds</br>3：serviceCodes不为空</br>4: 所有规则|
 |**describeAlarmsByID**|GET|查询规则详情|
-|**describeCmMetricDataByTagSpec**|GET|查询自定义监控项数据|
 |**describeMetricData**|GET|查看某资源多个监控项数据，metric介绍1：<a href="https://docs.jdcloud.com/cn/monitoring/metrics">Metrics</a>|
 |**describeMetrics**|GET|根据产品线查询可用监控项列表,metric介绍：<a href="https://docs.jdcloud.com/cn/monitoring/metrics">Metrics</a>|
 |**describeMetricsForCreateAlarm**|GET|查询可用创建监控规则的指标列表,metric介绍：<a href="https://docs.jdcloud.com/cn/monitoring/metrics">Metrics</a>|

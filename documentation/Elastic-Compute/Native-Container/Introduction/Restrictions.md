@@ -8,8 +8,7 @@
 
 |  资源   |  限制   |  例外申请方式   |
 | --- | --- | --- |
-|  产品类型  | 原生容器实例| 所有用户|
-|  产品类型  | 原生容器Pod| 申请开通|
+|  产品类型  | 原生容器实例、Pod| 所有用户|
 |  创建原生容器用户身份限制  | 用户需完成实名认证| 无例外|
 |  创建原生容器账户金额限制  |创建按配置计费容器，账户余额需大于50元 | [工单](https://ticket.jdcloud.com/myorder/form?cateId=1&questionId=251)  |
 |单地域原生容器实例配额     | 5台    |  [工单](https://ticket.jdcloud.com/myorder/form?cateId=1&questionId=251)   |

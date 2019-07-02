@@ -1,15 +1,15 @@
-# 查询推流实时帧率码率参数
+# **查询推流实时帧率码率参数**
 
-## 1 描述
+## **1. 描述**
 
 查询推流域名下某路流的实时（一分钟粒度）码率、帧率信息(queryStreamData)
 
-## 2 请求参数
+## **2. 请求参数**
 
 | **名称**   | **类型** | **是否必填** | **描述**                                                     |
 | ---------- | -------- | ------------ | ------------------------------------------------------------ |
 | username   | String   | 是           | 京东用户名pin                                                |
-| signature  | String   | 是           | 用户签名，通过md5的方式校验用户的身份信息，保障信息安全。  md5=日期+username+秘钥SecretKey日期：格式为 yyyymmddusername：京东用户名pin秘钥：双方约定示例：比如当前日期2016-10-23，用户pin: jcloud_00 ,用户秘钥SecretKey   ：e7a31b1c5ea0efa9aa2f29c6559f7d61那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61) |
+| signature  | String   | 是           | 用户签名，通过md5的方式校验用户的身份信息，保障信息安全。</br>md5=日期+username+秘钥SecretKey; 日期：格式为 yyyymmdd; username：京东用户名pin; 秘钥：双方约定; </br>示例：比如当前日期2016-10-23,用户pin:jcloud_00,用户秘钥SecretKey：e7a31b1c5ea0efa9aa2f29c6559f7d61,那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61) |
 | domain     | String   | 是           | 目前只支持单个推流域名查询，参数示例“publish.jcloud.com”     |
 | app        | String   | 是           | 目前只支持单个app的查询，不支持多个app同时查询               |
 | stream     | String   | 是           | 目前只支持单路流的查询，暂不支持多路流同时查询               |
@@ -18,7 +18,7 @@
 
  
 
-## 3 返回参数
+## **3. 返回参数**
 
 | **名称** | **描述**                                        |
 | -------- | ----------------------------------------------- |
@@ -28,17 +28,17 @@
 
  
 
-## 4  调用示例
+## **4. 调用示例**
 
-- ### 请求地址
+- ### **请求地址**
 
-http://opencdn.jcloud.com/api/live/queryStreamData
+https://opencdn.jcloud.com/api/live/queryStreamData
 
-- ### 请求示例
+- ### **请求示例**
 
-•        json格式
+* json格式
 
-http://opencdn.jcloud.com/api/live/queryStreamData
+https://opencdn.jcloud.com/api/live/queryStreamData
 ```
 {
     "username" :"test_user",
@@ -51,9 +51,9 @@ http://opencdn.jcloud.com/api/live/queryStreamData
  }
 ```
 
-- ### 返回参数说明
+- ### **返回参数说明**
 
-•        json格式
+* json格式
 ```
 {
     "status": 0,
@@ -85,9 +85,9 @@ http://opencdn.jcloud.com/api/live/queryStreamData
    }
 ```
 
-- ### 返回示例
+- ### **返回示例**
 
-•        json格式
+* json格式
 ```
 {
     "status": 0,

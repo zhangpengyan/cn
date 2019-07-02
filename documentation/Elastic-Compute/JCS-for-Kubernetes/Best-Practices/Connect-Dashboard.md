@@ -1,7 +1,27 @@
 
 # 访问Dashboard
 
-京东云Kubernetes集群服务已预置Dashboard插件。
+通过kubectl[连接到集群][1]，确定Kubernetes集群中是否已预置Dashboard插件：
+
+`
+kubectl get deployments -n kube-system
+`  
+如集群中未预置Dashboard插件，可使用如下命令将插件部署部署到集群：
+
+`
+kubectl apply -f https://kubernetes.s3.cn-north-1.jdcloud-oss.com/dashboard/kubernetes-dashboard.yaml
+`
+
+输出如下内容：
+
+```
+secret/kubernetes-dashboard-certs unchanged
+serviceaccount/kubernetes-dashboard unchanged
+role.rbac.authorization.k8s.io/kubernetes-dashboard-minimal unchanged
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard-minimal unchanged
+deployment.apps/kubernetes-dashboard configured
+service/kubernetes-dashboard unchanged
+```
 
 ## 一、访问dashboard，有以下两种方式  
 
@@ -44,6 +64,7 @@ spec:
   selector:
      k8s-app: kubernetes-dashboard
 ```  
+注：该服务会自动创建一个带公网IP的负载均衡，可以在控制台-网络-负载均衡-实例查看，会占用在该地域的负载均衡和公网IP的配额。  
 2）执行如下命令，在kube-system命名空间中创建服务：  
 `
 kubectl create -f dashboard-lb.yaml --namespace=kube-system
@@ -71,3 +92,5 @@ kubectl describe secret admin-user-token-b6djq -n kube-system
 
 您也可以将token信息添加到config文件user项目中，之后，您即可选择Kubeconfig方式进行身份认证。
 
+
+  [1]: https://docs.jdcloud.com/cn/jcs-for-kubernetes/connect-to-cluster

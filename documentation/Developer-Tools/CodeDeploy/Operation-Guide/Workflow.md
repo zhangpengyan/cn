@@ -14,7 +14,7 @@
 
 3）执行部署前置脚本：对应yaml文件中“hooks”下的“BeforeInstall”
 
-4）部署：对应yaml文件中的“files”
+4）部署：对应yaml文件中的“files”和“permisssions”
 
 5）执行部署后置脚本：对应yaml文件中“hooks”下的“AfterInstall”
 
@@ -32,7 +32,7 @@
 
 2）执行部署前置脚本：对应yaml文件中“hooks”下的“BeforeInstall”
 
-3）部署：对应yaml文件中的“files”
+3）部署：对应yaml文件中的“files”和“permisssions”
 
 4）执行部署后置脚本：对应yaml文件中“hooks”下的“AfterInstall”
 
@@ -64,7 +64,7 @@
 
 6）执行部署前置脚本：对应yaml文件中“hooks”下的“BeforeInstall”
 
-7）部署：对应yaml文件中的“files”
+7）部署：对应yaml文件中的“files”和“permisssions”
 
 8）执行部署后置脚本：对应yaml文件中“hooks”下的“AfterInstall”
 
@@ -94,7 +94,7 @@
 
 5）执行部署前置脚本：对应yaml文件中“hooks”下的“BeforeInstall”
 
-6）部署：对应yaml文件中的“files”
+6）部署：对应yaml文件中的“files”和“permisssions”
 
 7）执行部署后置脚本：对应yaml文件中“hooks”下的“AfterInstall”
 
@@ -128,7 +128,7 @@
 
 3）执行部署前置脚本：对应yaml文件中“hooks”下的“BeforeInstall”
 
-4）部署：对应yaml文件中的“files”
+4）部署：对应yaml文件中的“files”和“permisssions”
 
 5）执行部署后置脚本：对应yaml文件中“hooks”下的“AfterInstall”
 

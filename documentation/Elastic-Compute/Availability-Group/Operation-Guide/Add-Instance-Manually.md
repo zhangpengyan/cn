@@ -17,4 +17,4 @@
 
 ## 相关参考
 
-[创建实例](../../Virtual-Machine/Operation-Guide/Instance/Create-Instance.md)
+[创建实例](../../Virtual-Machines/Operation-Guide/Instance/Create-Instance.md)

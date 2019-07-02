@@ -12,8 +12,8 @@ https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms/{alarmId}/contacts
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**alarmId**|String|True| |规则id|
 |**regionId**|String|True| |地域 Id|
+|**alarmId**|String|True| |规则id|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
@@ -26,8 +26,8 @@ https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms/{alarmId}/contacts
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求的标识id|
 |**result**|Result| |
+|**requestId**|String|请求的标识id|
 
 ### Result
 |名称|类型|描述|

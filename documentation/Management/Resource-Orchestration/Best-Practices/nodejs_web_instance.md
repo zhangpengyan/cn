@@ -7,7 +7,7 @@
 为了监测userdata的安装部署脚本执行结果，我们在模版中添加了两个虚拟资源， 类型分别为：“JDCLOUD::ResourceOrchestration::WaitCondition” 和 “JDCLOUD::ResourceOrchestration::WaitConditionHandle”。关于这两种资源类型的详细介绍，请参考JDRO资源类型介绍页面。
 
 在弹性云主机的userdata执行脚本中，我们建议用户首先通过资源编排服务指定的对象存储地址，下载资源编排服务提供的发送消息脚本。在Node.js安装完成后，调用该发送消息脚本反馈给资源编排服务端，详见该实例模版。  
-`注`：资源编排服发送消息脚本指定的下载地址为：  
+`注`：资源编排服务发送消息脚本指定的下载地址为：  
 
 - 华北-北京  
   Linux主机： jdro-userdata-cn-north-1.oss.cn-north-1.jcloudcs.com/signal.py  

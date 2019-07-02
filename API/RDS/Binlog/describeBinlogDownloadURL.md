@@ -12,9 +12,9 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/binlogs
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**binlogBackupId**|String|True| |binlog的备份ID，可以通过describeBinlogs获得|
-|**instanceId**|String|True| |RDS 实例ID，唯一标识一个RDS实例|
 |**regionId**|String|True| |地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)|
+|**instanceId**|String|True| |RDS 实例ID，唯一标识一个RDS实例|
+|**binlogBackupId**|String|True| |binlog的备份ID，可以通过describeBinlogs获得|
 
 ## 请求参数
 无
@@ -28,8 +28,8 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/binlogs
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**internalURL**|String|内网下载链接|
 |**publicURL**|String|公网下载链接|
+|**internalURL**|String|内网下载链接|
 
 ## 返回码
 |返回码|描述|

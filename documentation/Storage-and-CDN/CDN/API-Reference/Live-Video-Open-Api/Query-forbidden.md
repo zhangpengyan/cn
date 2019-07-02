@@ -1,15 +1,15 @@
-# 查询禁播流列表
+# **查询禁播流列表**
 
-## 1 描述
+## **1. 描述**
 
 查询某段时间内禁播流列表(queryForbidden)
 
-## 2 请求参数
+## **2. 请求参数**
 
 | 名称       | 类型   | 是否必填 | 描述                                                         |
 | ---------- | ------ | -------- | ------------------------------------------------------------ |
 | username   | String | 是       | 京东用户名pin                                                |
-| signature  | String | 是       | 用户签名，通过md5的方式校验用户的身份信息，保障信息安全。  md5=日期+username+秘钥SecretKey日期：格式为 yyyymmddusername：京东用户名pin秘钥：双方约定示例：比如当前日期2016-10-23，用户pin:   jcloud_00 ,用户秘钥SecretKey ：e7a31b1c5ea0efa9aa2f29c6559f7d61那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61) |
+| signature  | String | 是       |用户签名，通过md5的方式校验用户的身份信息，保障信息安全。</br>md5=日期+username+秘钥SecretKey; 日期：格式为 yyyymmdd; username：京东用户名pin; 秘钥：双方约定; </br>示例：比如当前日期2016-10-23,用户pin:jcloud_00,用户秘钥SecretKey：e7a31b1c5ea0efa9aa2f29c6559f7d61,那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61)|
 | domain     | String | 是       | 禁播域名，目前只支持单域名                                   |
 | app        | String | 否       | 发布点，目前支持单发布点的查询，不支持同时查询多个，当不输入app，只输入域名时，查询结果为该域名下的所有禁播流 |
 | stream     | String | 否       | 流名，支持多个流名的查询，以英文字母分割，如stream1, stream2；输入流名时必须输入app |
@@ -18,9 +18,7 @@
 | pageNumber | int    | 否       | 查询分页页码，不传默认为1                                    |
 | pageSize   | int    | 否       | 查询分页条数，不传默认10条                                   |
 
- 
-
-## 3   返回参数
+## **3. 返回参数**
 
 | **名称**  | **描述**                                         |
 | --------- | ------------------------------------------------ |
@@ -37,15 +35,15 @@
 | endTime   | 查询结束时间                                     |
 | time      | 限时封禁时的禁播时长                             |
 
-## 4 调用示例
+## **4. 调用示例**
 
-- ### 请求地址
+- ### **请求地址**
 
-http://opencdn.jcloud.com/api/live/queryForbidden
+https://opencdn.jcloud.com/api/live/queryForbidden
 
-- ### 请求示例
+- ### **请求示例**
 
-http://opencdn.jcloud.com/api/live/queryForbidden
+https://opencdn.jcloud.com/api/live/queryForbidden
 ```
 {
     "username" :"jd_cdntest",
@@ -59,7 +57,7 @@ http://opencdn.jcloud.com/api/live/queryForbidden
     "end_time" :"2018-06-01 21:49"
  }
 ```
-- ### 返回示例
+- ### **返回示例**
 
 * json格式
 ```

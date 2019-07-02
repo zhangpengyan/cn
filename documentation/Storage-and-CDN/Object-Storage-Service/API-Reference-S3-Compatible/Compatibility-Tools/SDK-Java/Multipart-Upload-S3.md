@@ -22,7 +22,7 @@
 
 ## 分片上传完整示例
 
-```
+```Java
 // 初始化分片上传
 String bucket_name = "<your bucketname>";
 String file_path = "<your loacl file>";
@@ -71,7 +71,7 @@ catch(SdkClientException e) {
 
 ## 列举分片上传
 
-```
+```Java
 String bucket_name = "<your bucketname>";
 	    
 try {
@@ -94,7 +94,7 @@ catch(SdkClientException e) {
 
 ## 终止分片上传
 
-```
+```Java
 String bucket_name = "<your bucketname>";
     
 try {

@@ -41,11 +41,11 @@
 以Java SDK为例进行说明，其他方式及开发语言请参考其他章节。
 
 1. 引入依赖
-```
+```XML
 <dependency>
    <groupId>com.jdcloud</groupId>
    <artifactId>jcq-java-sdk</artifactId>
-   <version>1.0.2</version>
+   <version>${jcq.sdk.version}</version>
 </dependency>
 ```
 2. 发送和订阅代码部分请参考demo示例：[jcq-sdk-demo.zip](http://jcq-inuse-important-cannotdelete.oss.cn-north-1.jcloudcs.com/jcq-sdk-demo.zip)。

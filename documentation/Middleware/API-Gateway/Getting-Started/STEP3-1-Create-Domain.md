@@ -14,4 +14,4 @@ API网关提供基于 API分组的域名绑定。API网关通过域名来定位�
 
 ##  相关参考：
 
-*  [配置自定义域名步骤说明](../Operation-Guide/Create-Domain/Create-Domain.md)
+*  [配置自定义域名步骤说明](../Operation-Guide/Create-APIGroup/Create-Domain.md)

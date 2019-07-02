@@ -45,7 +45,7 @@ a.设置Referer白名单，且不允许referer为空，能实现防盗链功能
 
 |访问类型|说明|结果|
 |-|-|-|
-|http://test-refer.oss.cn-east-1.jcloudcs.com/example.jpg |直接访问，Referer为空|不允许Referer为空的请求，返回403|
+|http://test-refer.oss.cn-east-1.jdcloud-oss.com/example.jpg |直接访问，Referer为空|不允许Referer为空的请求，返回403|
 |http://jd.com/|请求来自于与源站|访问成功|
 |http://jd-steal.com/|请求来自于盗链网站|返回403|
 
@@ -57,7 +57,7 @@ b.设置Referer白名单，且允许referer为空，能实现防盗链功能
 
 |访问类型|说明|结果|
 |-|-|-|
-|http://test-refer.oss.cn-east-1.jcloudcs.com/example.jpg |直接访问，Referer为空|允许Referer为空的请求，访问成功|
+|http://test-refer.oss.cn-east-1.jdcloud-oss.com/example.jpg |直接访问，Referer为空|允许Referer为空的请求，访问成功|
 |http://jd.com/ |请求来自于与源站|访问成功|
 |http://jd-steal.com/ |请求来自于盗链网站|返回403|
 c.设置Referer白名单为空，若HTTP请求中若带有Referer，OSS将拒绝所有网站发起的请求，包括信任网站，所以不推荐使用该配置。若您需要实现防盗链功能，请使用前两种配置方案。

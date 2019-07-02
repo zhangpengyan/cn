@@ -1,0 +1,63 @@
+name: 流水线
+href:
+items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景
+        href: Introduction/Application-Scenarios.md
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+  - name: 入门指南
+    items:
+      - name: 快速创建
+        href: Getting-Started/Quick-Creation.md
+      - name: 自定义创建
+        href: Getting-Started/Create-Customized-Instance.md
+  - name: 操作指南
+    items:
+      - name: 创建流水线
+        href: Operation-Guide/Create-Pipeline.md
+      - name: 编辑流水线
+        href: Operation-Guide/Edit-Pipeline.md
+      - name: 查看流水线
+        href: Operation-Guide/View-Pipeline.md
+      - name: 发布流水线
+        href: Operation-Guide/Release-Pipeline.md
+      - name: 查看执行历史记录
+        href: Operation-Guide/View-Execution-History.md
+      - name: 删除流水线
+        href: Operation-Guide/Delete-Pipeline.md        
+      - name: 操作类型-源代码
+        href: Operation-Guide/Source-Action.md    
+      - name: 操作类型-构建
+        href: Operation-Guide/Build-Action.md    
+      - name: 操作类型-部署
+        href: Operation-Guide/Deploy-Action.md        
+      - name: 添加更多操作
+        href: Operation-Guide/Add-Action.md    
+      - name: 编辑操作
+        href: Operation-Guide/Edit-Action.md    
+      - name: 停止操作
+        href: Operation-Guide/Check-Action.md    
+      - name: 删除操作
+        href: Operation-Guide/Delete-Action.md   
+  - name: 最佳实践
+    items:
+        - name: 构建并部署到京东云-云部署
+          href: Best-Practices/Deployment-On-CodeDeploy.md 
+        - name: 构建并部署到Kubernetes集群
+          href: Best-Practices/Deployment-On-K8S.md
+  
+  

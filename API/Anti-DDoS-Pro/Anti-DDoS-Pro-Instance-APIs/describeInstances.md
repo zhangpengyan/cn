@@ -17,56 +17,65 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**name**|String|False| |实例名称，可模糊匹配|
 |**pageNumber**|Integer|False| |页码, 默认为 1|
 |**pageSize**|Integer|False| |分页大小, 默认为 10, 取值范围[10, 100], 0 表示全量|
+|**name**|String|False| |实例名称，可模糊匹配|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
+|**error**|Error| |
 
+### Error
+|名称|类型|描述|
+|---|---|---|
+|**code**|Integer|请求错误状态码|
+|**status**|String|请求错误状态码|
+|**message**|String|请求错误提示|
 ### Result
 |名称|类型|描述|
 |---|---|---|
 |**dataList**|Instance[]| |
-|**totalCount**|Integer| |
+|**currentCount**|Integer|当前页数量|
+|**totalCount**|Integer|总数|
+|**totalPage**|Integer|总页数|
 ### Instance
 |名称|类型|描述|
 |---|---|---|
+|**id**|Long|实例 Id|
+|**name**|String|实例名称|
+|**carrier**|Integer|链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动|
+|**ipType**|Integer|可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:<br>- 0: IPV4,<br>- 1: IPV4/IPV6<br>|
+|**elasticTriggerCount**|Integer|触发弹性带宽的次数|
 |**abovePeakCount**|Integer|超峰次数|
+|**inBitslimit**|Integer|保底带宽|
+|**resilientBitslimit**|Integer|弹性带宽|
 |**businessBitslimit**|Integer|业务带宽大小|
-|**carrier**|String|线路，UNICOM、TELECOM|
+|**ccThreshold**|Integer|cc阈值大小|
+|**ruleCount**|Integer|非网站类规则数|
+|**webRuleCount**|Integer|网站类规则数|
+|**chargeStatus**|String|PAID|ARREARS|EXPIRED|
+|**securityStatus**|String|SAFE|CLEANING|BLOCKING|
+|**createTime**|String|实例的创建的时间|
+|**expireTime**|String|实例的过期时间|
+|**resourceId**|String|资源id，升级和续费时使用|
 |**ccProtectMode**|Integer|cc防护模式，0正常、1紧急、2宽松、3自定义|
 |**ccProtectStatus**|Integer|cc开关状态，0关闭，1开启|
 |**ccSpeedLimit**|Integer|cc防护模式为自定义时的限速大小|
 |**ccSpeedPeriod**|Integer|cc防护模式为自定义时的限速周期|
-|**ccThreshold**|Integer|cc阈值大小|
-|**chargeStatus**|String|PAID|ARREARS|EXPIRED|
-|**createTime**|Integer|实例的创建的时间|
-|**elasticTriggerCount**|Integer|触发弹性带宽的次数|
-|**expireTime**|Integer|实例的过期时间|
-|**hostQps**|Integer|ccProtectMode为自定义模式时，每个Host的防护阈值|
-|**hostUrlQps**|Integer|ccProtectMode为自定义模式时，每个Host+URI的防护阈值|
-|**inBitslimit**|Integer|保底带宽|
-|**instanceId**|Integer|实例id|
 |**ipBlackList**|String[]|ip黑名单列表|
 |**ipBlackStatus**|Integer|ip黑名单状态，0关闭，1开启|
-|**ipHostQps**|Integer|ccProtectMode为自定义模式时，每个源IP对Host的防护阈值|
-|**ipHostUrlQps**|Integer|ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值|
 |**ipWhiteList**|String[]|ip白名单列表|
 |**ipWhiteStatus**|Integer|ip白名单状态，0关闭，1开启|
-|**name**|String|实例名称|
-|**pin**|String|用户pin|
-|**resilientBitslimit**|Integer|弹性带宽|
-|**resourceId**|String|资源id，升级和续费时使用|
-|**ruleCount**|Integer|非网站类规则数|
-|**securityStatus**|String|SAFE|CLEANING|BLOCKING|
 |**urlWhitelist**|String[]|url白名单列表|
 |**urlWhitelistStatus**|Integer|url白名单状态，0关闭，1开启|
-|**webRuleCount**|Integer|网站类规则数|
+|**hostQps**|Integer|ccProtectMode为自定义模式时，每个Host的防护阈值|
+|**hostUrlQps**|Integer|ccProtectMode为自定义模式时，每个Host+URI的防护阈值|
+|**ipHostQps**|Integer|ccProtectMode为自定义模式时，每个源IP对Host的防护阈值|
+|**ipHostUrlQps**|Integer|ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值|
 
 ## 返回码
 |返回码|描述|

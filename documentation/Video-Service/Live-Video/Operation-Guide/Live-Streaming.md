@@ -4,11 +4,11 @@
 
 登录直播控制台，进入“域名管理”页面，选择要查看推流地址的一组域名，点击右侧的“管理”进入域名“基本信息”页面
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E6%8E%A8%E6%B5%81%E5%9C%B0%E5%9D%80-%E8%8E%B7%E5%8F%96%E6%8E%A8%E6%B5%81%E5%9C%B0%E5%9D%80.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/6%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81.png)
 
 在“推流信息”一栏可以查看和复制推流地址，推流地址是按一定规则拼接，其中应用名“APPName”和流名“StreamName”用户可以自定义，应用名（APPName）、流名（StreamName）目前仅支持英文、数字、“-”、"_",长度需要在1-50字符之间，客户需要根据自己定义按规则拼接出推流地址
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E6%8E%A8%E6%B5%81%E5%9C%B0%E5%9D%80-%E8%8E%B7%E5%8F%96%E6%8E%A8%E6%B5%81%E5%9C%B0%E5%9D%80-%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF%E9%A1%B5%E9%9D%A2.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/7%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%812.png)
 
 ## **2.推流地址说明**
 
@@ -38,3 +38,4 @@ rtmp://aaa.bbb.com/app3/1
 -   注意：如果开启了推流鉴权功能后，地址后会增加鉴权信息部分，如rtmp://aaa.bbb.com/app1/1?auth_key=1520565052-0-0-245681ddfefef6598560af1d2264ec3f
 
 具体请参考直播鉴权部分内容。
+

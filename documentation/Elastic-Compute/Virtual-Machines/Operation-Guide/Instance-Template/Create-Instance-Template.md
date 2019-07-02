@@ -83,7 +83,7 @@
     
 	可以选择“立即设置”或“暂不设置”登录密码，若选择“暂不设置”，在使用启动模板创建云主机时系统会以短信和邮件方式发送随机密码，建议您完成云主机创建后通过控制台修改密码。    
     
-	对于Linux系统，还可以选择SSH密钥登录，通过绑定已经创建的SSH密钥进行更安全的实例登录认证，详细SSH密钥创建及登录帮助，请参考 [SSH密钥](../Key-Pair/KeyPair-Overview)。
+	对于Linux系统，还可以选择SSH密钥登录，通过绑定已经创建的SSH密钥进行更安全的实例登录认证，详细SSH密钥创建及登录帮助，请参考 [SSH密钥](../Key-Pair/KeyPair-Overview.md)。
 
 
 实例模板服务免费，创建页面右侧将显示您已配置的信息，同时会展示根据您的配置，基于此启动模板创建实例的预估费用：包括包年包月计费情况下每月费用及按配置计费情况下每小时费用。费用包括云硬盘及按固定带宽计费公网IP的费用，若您选择按流量计费公网IP则将单独列出。
@@ -94,4 +94,4 @@
 
 [实例规格类型](http://docs.jdcloud.com/cn/virtual-machines/instance-type-family)
 
-[SSH密钥](../Key-Pair/KeyPair-Overview)
+[SSH密钥](../Key-Pair/KeyPair-Overview.md)

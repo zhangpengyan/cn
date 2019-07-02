@@ -1,0 +1,80 @@
+name: 云桌面
+href:
+items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 产品规格
+        href: Introduction/Specifications.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Applicaton-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md 
+      - name: 续费流程
+        href: Pricing/Renewal-Process.md
+  - name: 入门指南
+    items:
+      - name: 入门指南概述
+        href: Getting-Started/Overview.md
+      - name: 邀请码（定制化）
+        href: Getting-Started/Invitation-Code.md
+      - name: 开通Workspace
+        href: Getting-Started/Create-Workspace.md
+      - name: 用户管理
+        href: Getting-Started/Active-Directory-Manager.md
+      - name: 创建（购买）云桌面
+        href: Getting-Started/Purchase-Workspace.md
+      - name: 云桌面实例管理
+        href: Getting-Started/Workspace-Instance.md
+      - name: 云桌面实例详情
+        href: Getting-Started/Workspace-Details.md
+      - name: 镜像管理
+        href: Getting-Started/Private-Image.md
+      - name: 策略管理
+        href: Getting-Started/Policy-Management.md
+      - name: 云桌面用户（终端用户）
+        href: Getting-Started/User.md
+  - name: 操作指南
+    items:
+      - name: 购买须知
+        href: Operation-Guide/Purchase-Notes.md
+      - name: 开通Workspace的流程
+        href: Operation-Guide/Create-Workspace-Process.md
+      - name: 创建（购买）云桌面的流程
+        href: Operation-Guide/Purchase-Workspace.md
+      - name: 查看云桌面详情
+        href: Operation-Guide/View-Workspace-Details.md
+      - name: 新增用户的流程
+        href: Operation-Guide/Create-User.md 
+      - name: 新增私有镜像
+        href: Operation-Guide/Create-Image.md        
+      - name: 新增策略的流程
+        href: Operation-Guide/Create-Policy.md          
+  - name: 常见问题
+    href: FAQ/FAQ.md
+  - name: API参考
+    href: API-Reference/API-Reference.md
+    status: 0
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md 

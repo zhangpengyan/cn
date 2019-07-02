@@ -45,6 +45,8 @@
         href: Getting-Started/Getting-Started-Overview.md
   - name: 操作指南
     items:
+      - name: 登录账号
+        href: Operation-Guide/Login.md
       - name: 实例管理
         items:
           - name: 变更配置
@@ -55,16 +57,18 @@
             href: Operation-Guide/Instance-Management/Modify-Instancename.md      
           - name: 释放实例
             href: Operation-Guide/Instance-Management/Release-Instance.md
-      - name: 账号登录
-        items:
-          - name: 登录账号
-            href: Operation-Guide/Login/Login.md
+      - name: 备份恢复
+        href: Operation-Guide/Backup-And-Recovery.md
+      - name: 参数修改
+        href: Operation-Guide/Parameter-Modification.md
       - name: 监控报警
         items:
           - name: 查看监控信息
             href: Operation-Guide/Monitoring/Monitoring.md
           - name: 设置报警规则
-            href: Operation-Guide/Monitoring/Alarm-Rules.md              
+            href: Operation-Guide/Monitoring/Alarm-Rules.md   
+      - name: 数据迁移
+        href: Operation-Guide/Data-Migration.md   
   - name: 最佳实践
     items:
     - name: C/C++连接Redis实例

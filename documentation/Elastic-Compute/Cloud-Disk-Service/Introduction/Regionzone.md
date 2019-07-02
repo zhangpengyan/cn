@@ -202,7 +202,7 @@
                 <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0);">单地域全可用区可用&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
             </td>
             <td colspan="1" class="confluenceTd" style="margin: 0px; padding: 7px 8px; border-color: rgb(237, 237, 237); vertical-align: top;" width="1134">
-                <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0);">可基于云硬盘创建快照，该云硬盘快照可用于在该地域下创建云硬盘。暂不支持跨地域复制云硬盘快照。&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+                <span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0);">可基于云硬盘创建快照，该云硬盘快照可用于在该地域下创建云硬盘。支持跨地域复制和共享云硬盘快照。&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
             </td>
         </tr>
     </tbody>

@@ -1,53 +1,41 @@
 # 直播录制
 
-视频直播服务支持录制功能，可以把视频流录制成文件，存放到对象存储中，要使用此功能需要开通京东云的对象存储服务，并在华北区域（目前视频直播只支持华北）创建对应的Bucket空间，当直播结束后会自动生成文件，客户可以根据存储路径查看和下载视频文件。
 
-直播录制模板按照应用名称（AppName）来区分，同一个应用名称（AppName）下的所有流都按照当前模板设置的参数来进行录制。
+视频直播服务支持录制功能，可以把直播流录制成文件，存放在对象存储中。要使用此功能需要开通京东云的对象存储服务，并在华北区域（目前视频直播只支持华北）创建对应的Bucket空间，当直播结束后会自动生成文件，客户可以根据存储路径查看和下载视频文件。  
+```
+录制文件存储路径：  
+record/{Date}/{SourceId}/{AppName}/{StreamName}/{StartTime}_{EndTime}。
+{Date} 为直播流录制日期
 
-如设置模板时填写的AppName为test，那么test下面所有的流都会执行录制操作，同时会按照test模板设置的参数生成视频文件。
+{SourceID} Source ID是一组域名关联的唯一任务ID，对于同一组推流和播放域名来说，SourceId是随机生成的、唯一的，不会变化。
+一组域名的ID号在控制台“域名管理”-“基本信息”可查。
 
-## 1.新建模板
+{AppName} 为直播应用名称
 
-登录直播控制台，进入“域名管理”页面，选择要查看播放地址的一组域名，点击右侧的“管理”进入域名配置页，点击“录制配置”切换到录制模板管理页面
+{StreamName} 为直播流名称
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E7%9B%B4%E6%92%AD%E5%BD%95%E5%88%B6-%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2.png)
+{StartTime} 为录制开始时间
 
-在录制配置页面，点击“新建模板”，在弹出的窗口中填写对应的参数信息，点“确定”完成录制模板的添加。
+{EndTime} 为录制结束时间
+```  
+直播录制的配置分为两个步骤：1.创建录制模板；2.添加录制配置。   
+请先新建录制模板后再添加域名录制配置，录制配置完成后，对于新推上来的直播流生效。录制配置可绑定域名、APP、流三个级别，配置按最小粒度生效，举例：对于域名rtmp://abc.com/live/123，可在APP“live”级绑定录制模板A，在流“123”级绑定录制模板B，那么A模板对于APP“live”下除“123”外的其他所有流都生效，B模板对于流“123”生效。
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E7%9B%B4%E6%92%AD%E5%BD%95%E5%88%B6-%E6%96%B0%E5%BB%BA%E6%A8%A1%E6%9D%BF%E6%8C%89%E9%92%AE.png)
+## 步骤1.新建录制模板
 
-模板参数说明如下：
+登录直播控制台，进入“模板管理”-“录制模板管理”页面，点击“添加录制模板”  
+按照您的实际录制需求，填写相应的录制文件参数，点击“立即创建”即可成功创建录制模板。创建成功的录制模板会展示在录制模板列表当中。    
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/29%E5%BD%95%E5%88%B6%E7%AE%A1%E7%90%86.png) 
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/30%E5%BD%95%E5%88%B6%E7%AE%A1%E7%90%86.png) 
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/31%E5%BD%95%E5%88%B6%E7%AE%A1%E7%90%86.png) 
+## 步骤2.新建录制配置  
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E7%9B%B4%E6%92%AD%E5%BD%95%E5%88%B6-%E6%96%B0%E5%BB%BA%E6%A8%A1%E6%9D%BF.png)
+在控制台左侧菜单栏点击“域名管理”，找到需要做录制配置的直播域名组，点击“管理”，进入“录制配置”页面。  
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/12%E6%96%B0%E5%BB%BA%E8%BD%AC%E7%A0%81%E9%85%8D%E7%BD%AE.png)
+在录制配置页面，点击“新建录制配置”，进入录制配置页面：  
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/32%E5%BD%95%E5%88%B6%E7%AE%A1%E7%90%86.png) 
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/33%E5%BD%95%E5%88%B6%E7%AE%A1%E7%90%86.png)
+选择“全部AppName”则配置对于所有APP也就是对于整个域名生效，如果自定义指定AppName，则需要填入需要配置录制的APP名称，并可以继续选择生效范围为“全部StreamName”或自定义指定StreamName，如果自定义指定StreamName，则需要填入需要配置录制的StreamName名称。然后选择相应的录制模板。点击“立即创建”，即可完成录制配置。录制配置创建完成后，在录制配置列表即可看到刚才创建的录制配置规则。此条配置对于新推的直播流生效。    
 
-**App
-Name**：要进行直播录制的应用名称，目前仅支持英文，数字，“-”，"_","长度需要在1-50字符之间
-
-**存储位置**：录制视频文件要存放的位置，如果为空请先点击“新建存储”在跳转的页面中创建Bucket空间
-
-**周期长度**：视频文件录制的时长，范围在15-360分钟，如果超过6小时，系统会自动生成一个新的视频文件
-
-**录制格式**：生成视频的文件格式，目前只支持flv
-
-**存储路径**：录制文件详细的存放目录，系统会根据客户设置的Bucket自动生成对应的文件存储目录
-
-record/{Date}/{DomainName}/{AppName}/{StreamName}/{StartTime}_{EndTime}.flv
-
--   {Date} 将录制文件按照日期进行文件夹分类，默认日期格式为“年-月-日”。
-
--   {DomainName} 客户配置的推流域名
-
--   {APPName}可自动获取您推流的AppName名称作为存储路径，若需更改，更改{APPName}
-    即可，目前仅支持英文、数字、“-”、"_",长度需要在1-50字符之间
-
--   {StreamName} 可自动获取您推流的 StreamName
-    名称作为存储路径，若需更改，更改{streamName}
-    即可，目前仅支持英文、数字、“-”、"_",长度需要在1-50字符之间
-
--   {StartTime} 为录制开始时间，{EndTime} 为录制结束时间
-
-## 2.删除模板
-
-登录直播控制台，进入“录制配置”页面，在想要删除的录制模板右侧点击“删除”，在弹出的窗口中点“确认”完成删除操作。
-
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E7%9B%B4%E6%92%AD%E5%BD%95%E5%88%B6-%E6%A8%A1%E6%9D%BF%E5%88%A0%E9%99%A4.png)
+在录制配置列表中，AppName列的ALL表示刚刚创建的录制配置对于所有AppName生效即对于域名级别生效，StreamName列的ALL表示刚刚创建的录制配置对于所有StreamName生效，即对于APP级别生效。  
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/34%E5%BD%95%E5%88%B6%E7%AE%A1%E7%90%86.png)   

@@ -1,0 +1,29 @@
+  name: 高可用组
+  href:
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 高可用组相关接口
+        items:
+          - name: 创建高可用组
+            href: Availability-Group/createAg.md
+          - name: 查询高可用组详情
+            href: Availability-Group/describeAg.md
+          - name: 查询一个或多个高可用组
+            href: Availability-Group/describeAgs.md
+          - name: 修改高可用组
+            href: Availability-Group/updateAg.md
+          - name: 删除高可用组
+            href: Availability-Group/deleteAg.md
+          - name: 修改高可用组的实例模板
+            href: Availability-Group/setInstanceTemplate.md
+          - name: 从高可用组中剔除实例
+            href: Availability-Group/abandonInstances.md
+      - name: 配额
+        items:
+          - name: 查询高可用组相关配额
+            href: Quota/describeQuotas.md

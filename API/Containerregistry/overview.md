@@ -16,9 +16,9 @@ v1
 |**checkRepositoryName**|POST|查询指定镜像仓库名称是否已经存在以及是否符合命名规范。</br>|
 |**createRegistry**|POST|通过参数创建注册表。</br>|
 |**createRepository**|POST|通过参数创建镜像仓库。</br>仓库名称可以分解为多个路径名，每个名称必须至少包含一个小写字母数字，考虑URL规范。</br>支持包含段划线或者下划线进行分割，但不允许点'.'，多个路径名之间通过("/")连接，总长度不超过256个字符，当前只支持二级目录。</br>|
-|**deleteImage**|POST|删除镜像</br>imageDigest imageTag imageTagStatus 三者只能且必须传一个。</br>可根据Tag状态删除Image，例如删除所有tagged的镜像。</br>digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。</br>例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  "precise" </br>|
-|**deleteRegistry**|DELETE|删除指定用户下某个 registry.</br>|
-|**deleteRepository**|DELETE|删除指定用户下某个镜像仓库.</br>|
+|**deleteImage**|POST|删除镜像</br>imageDigest imageTag imageTagStatus 三者只能且必须传一个。</br>可根据Tag状态删除Image，例如删除所有tagged的镜像。</br>digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。</br>例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  "precise" </br></br>敏感操作，可开启<a href="https://docs.jdcloud.com/IAM/Operation-Protection">MFA操作保护</a>|
+|**deleteRegistry**|DELETE|删除指定用户下某个 registry.</br></br>敏感操作，可开启<a href="https://docs.jdcloud.com/IAM/Operation-Protection">MFA操作保护</a>|
+|**deleteRepository**|DELETE|删除指定用户下某个镜像仓库.</br></br>敏感操作，可开启<a href="https://docs.jdcloud.com/IAM/Operation-Protection">MFA操作保护</a>|
 |**describeAuthorizationTokens**|GET|<p>批量查询令牌。</p> </br><p>暂时不支持分页和过滤条件。</p></br>|
 |**describeImages**|GET|返回指定repository中images的元数据，包括image size, image tags和creation date。</br>|
 |**describeQuotas**|GET|查询配额|

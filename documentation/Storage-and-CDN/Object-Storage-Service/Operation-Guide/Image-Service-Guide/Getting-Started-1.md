@@ -55,7 +55,7 @@
 
 3.样式名为Stylename的图片样式可通过如下URL访问：
 
-http://s3.cn-south-1.jcloudcs.com/bucket/object?x-oss-process=imgalias/Stylename
+http://s3.cn-north-1.jdcloud-oss.com/bucket/object?x-oss-process=imgalias/Stylename
 
 
 示例：
@@ -64,6 +64,6 @@ http://s3.cn-south-1.jcloudcs.com/bucket/object?x-oss-process=imgalias/Stylename
 
 img-style-example样式：缩放80%、旋转60°
 
-http://s3.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=imgalias/img-style-example
+http://s3.cn-north-1.jdcloud-oss.com/downloads/example.jpg?x-oss-process=imgalias/img-style-example
 
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-057.jpg)

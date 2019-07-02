@@ -17,14 +17,14 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:attachNe
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceId**|String|True| |云主机ID|
 |**regionId**|String|True| |地域ID|
+|**instanceId**|String|True| |云主机ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**autoDelete**|Boolean|False| |随主机自动删除，默认为False|
 |**networkInterfaceId**|String|True| |弹性网卡ID|
+|**autoDelete**|Boolean|False| |随主机自动删除，默认为False|
 
 
 ## 返回参数
@@ -34,9 +34,9 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:attachNe
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

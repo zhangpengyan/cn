@@ -60,14 +60,14 @@ func main() {
     client.SetConfig(config)
 
     /** 将待加密的数据进行base64编码 **/
-    data := base64.StdEncoding.EncodeToString("Hello World.")
+    data := base64.StdEncoding.EncodeToString([]byte("Hello World."))
 
     /** 设置加密所用密钥ID **/
     keyId = "aabbccddeeffgghh"
 
     /** 创建加密请求 **/
     reqEnc := kms.NewEncryptRequest(keyId)
-    reqEnc.SetPlaintext(reqEnc)
+    reqEnc.SetPlaintext(data)
 
     /** 发送加密请求 **/
     if resp, err := client.Encrypt(reqEnc); err != nil {

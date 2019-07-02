@@ -13,13 +13,15 @@
 | JDCLOUD::VM::AttachDisk | 将已有硬盘挂载到运行中的实例 | 
 | JDCLOUD::VPC::VPC | 创建VPC |
 | JDCLOUD::VPC::Subnet | 在VPC中创建子网 | 
-| JDCLOUD::VPC::EIP | 分配一个公网IP |
-| JDCLOUD::VPC::AssociateEIP | 负载均衡。本期支持云主机和负载均衡。|
-| JDCLOUD::LB::LoadBalancer | 创建负载均衡 |
-| JDCLOUD::LB::Listener | 创建监听 |
-| JDCLOUD::LB::TargetGroup | 创建目标组 |
-| JDCLOUD::LB::RegisterTargets | 目标组中添加实例 |
-| JDCLOUD::LB::Backend | 创建后端服务 | 
+| JDCLOUD::VPC::SecurityGroup | 安全组 |
+| JDCLOUD::VPC::AssociateSecurityGroup | 绑定安全组 | 
+| JDCLOUD::VPC::ElasticIp | 弹性公网IP |
+| JDCLOUD::VPC::AssociateElasticIp | 将弹性 IP 地址与实例关联|
+| JDCLOUD::LoadBalance::LoadBalancer | 创建负载均衡 |
+| JDCLOUD::LoadBalance::Listener | 创建监听 |
+| JDCLOUD::LoadBalance::TargetGroup | 创建目标组 |
+| JDCLOUD::LoadBalance::Backend | 创建后端服务 | 
+| JDCLOUD::LoadBalance::RegisterTargets| 实例注册到LB |
 | JDCLOUD::RDS::DBInstance | 创建云数据库实例 |
 
 　　表1 资源编排服务支持的资源类型 

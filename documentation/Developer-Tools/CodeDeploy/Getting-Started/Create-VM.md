@@ -10,25 +10,22 @@
 - 带宽：需购买公网IP
 - 基本信息：填写主机名、密码。这里填写主机名为：codedeploy-demo01
 
-![Alt text](https://github.com/jdcloudcom/cn/blob/codedeploy/image/CodeDeploy/starting1.png)
-![Alt text](https://github.com/jdcloudcom/cn/blob/codedeploy/image/CodeDeploy/starting2.png)
 
 
 点击“立即购买”，即可按照已选规格，创建云主机。
 
-![Alt text](https://github.com/jdcloudcom/cn/blob/codedeploy/image/CodeDeploy/starting3.png)
+![Alt text](https://github.com/jdcloudcom/cn/blob/edit/image/CodeDeploy/Ch/Start-1%EF%BC%88Ch%EF%BC%89.png)
 
 
 接下来，在此云主机中安装部署用Agent，以root用户执行：
 
 ```
-# 华北-北京
-wget -c http://devops-hb.oss-internal.cn-north-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.403.a81f9eb.20181127121007.bin -O installer && sh installer -- -a zero-agent  /usr/local/share/jdcloud/ifrit && rm -f installer
+curl -fsSL http://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install_deploy | bash
 ```
 
 执行结果如下：
 
-![Alt text](https://github.com/jdcloudcom/cn/blob/codedeploy/image/CodeDeploy/starting7.png)
+![Alt text](https://github.com/jdcloudcom/cn/blob/codedeploy/image/CodeDeploy/starting20.png)
 
 接下来，安装JDK
 

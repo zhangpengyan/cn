@@ -8,7 +8,7 @@
 | filterExpression | 可以设置consumer接收消息的标签（tag），暂时为一条 |
 
 ## 示例代码
-```java
+```Java
 package com.jcloud.jcq.sdk.demo;
 
 import com.jcloud.jcq.client.consumer.ConsumeResult;

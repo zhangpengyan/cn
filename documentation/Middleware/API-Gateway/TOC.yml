@@ -37,57 +37,63 @@ items:
   items:
     - name: 概述
       herf: Getting-Started/Getting-Started.md
-    - name: 创建API分组
-      herf: Getting-Started/STEP1-Create-APIGroup.md
-    - name: 创建API
-      herf: Getting-Started/STEP2-Create-API.md
-    - name: 自定义域名
-      herf: Getting-Started/STEP3-1-Create-Domain.md
-    - name: 后端签名
-      herf: Getting-Started/STEP3-2-Create-BackSign.md
-    - name: 流控策略
-      herf: Getting-Started/STEP3-3-Create-Stream.md
-    - name: 发布API分组
-      herf: Getting-Started/STEP4-Create-Publish.md  
-    - name: API的访问授权
-      herf: Getting-Started/STEP5-Create-Auth.md
+    - name: 使用签名密钥的方式构建API
+      herf: Getting-Started/example_SignatureKey.md
+    - name: 使用Function函数构建API
+      herf: Getting-Started/example_function.md
+    - name: 使用订阅密钥的方式构建API
+      herf: Getting-Started/example_subscriptionKey.md
 - name: 操作指南
   items:
-    - name: 创建API分组
+    - name: API分组管理
       items:
         - name: 创建API分组
-          herf: Create-APIGroup/Create-APIGroup.md
-    - name: 创建API
+          herf: Operation-Guide/Create-APIGroup/Create-APIGroup.md
+        - name: 发布API分组
+          herf: Operation-Guide/Create-APIGroup/Create-Publish.md  
+        - name: 自定义域名
+          herf: Operation-Guide/Create-APIGroup/Create-Domain.md  
+        - name: 访问监控
+          herf: Operation-Guide/Create-APIGroup/Monitoring.md  
+        - name: 日志服务
+          herf: Operation-Guide/Create-APIGroup/Log-Service.md  
+    - name: API管理
       items:
         - name: 创建API
-          herf: Create-API/Create-API.md
-    - name: API的访问授权
+          herf: Operation-Guide/Create-API/Create-API.md
+        - name: API高级配置
+          herf: Operation-Guide/Create-API/Adv-API.md
+    - name: 后端服务
+      items:
+        - name: HTTP/HTTPS后端服务
+          herf: Operation-Guide/Back-end-Services/Back-end-Services-HTTP.md
+        - name: Mock后端服务
+          herf: Operation-Guide/Back-end-Services/Back-end-Services-Mock.md
+        - name: 函数后端服务
+          herf: Operation-Guide/Back-end-Services/Back-end-Services-Function.md
+    - name: 访问授权
       items:
         - name: API的访问授权
-          herf: Create-Auth/Create-Auth.md  
+          herf: Operation-Guide/Create-Auth/Create-Auth.md  
     - name: 后端签名
       items:
         - name: 后端签名
-          herf: Create-BackSign/Create-BackSign.md  
-    - name: 自定义域名
-      items:
-        - name: 自定义域名
-          herf: Create-Domain/Create-Domain.md  
-    - name: 发布API分组
-      items:
-        - name: 发布API分组
-          herf: Create-Publish/Create-Publish.md  
+          herf: Operation-Guide/Create-BackSign/Create-BackSign.md        
     - name: 流控策略
       items:
         - name: 流控策略
-          herf: Create-Stream/Create-Stream.md  
-    
+          herf: Operation-Guide/Create-Stream/Create-Stream.md  
+    - name: 调试
+      items:
+        - name:  调试API
+          herf: Operation-Guide/Code/TestAPI.md        
+        - name:  错误码
+          herf: Operation-Guide/Code/API_Errorcode.md
 - name: 最佳实践
   items:
   - name: 最佳实践
     herf: Best-Practices/BestPractices.md
-  - name: 使用示例构建API
-    herf: Best-Practices/example_for_create_api.md
+
 - name: 常见问题
   herf: FAQ/faq.md
 - name: 相关资源

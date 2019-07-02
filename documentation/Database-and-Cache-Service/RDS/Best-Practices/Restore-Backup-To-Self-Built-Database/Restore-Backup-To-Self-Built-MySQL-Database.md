@@ -16,7 +16,7 @@
     # 查看帮助手册
     ./mysql_backup_extract.py -h
      
-     # 解压云数据库 Percona 实例的备份数据
+     # 解压云数据库 MySQL 实例的备份数据
      ./mysql_backup_extract.py  -v 5.7 -f ./backup.xbstream
     ```
 3. 下载备份文件

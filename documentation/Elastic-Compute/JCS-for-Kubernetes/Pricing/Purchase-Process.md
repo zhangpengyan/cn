@@ -1,19 +1,9 @@
 
 # 购买流程
 
-目前Kubernetes集群在公测中，需要先申请公测后，才能进行相关购买。
 
-## 一、申请公测
 
-打开京东云官网
-
-选择[产品-弹性计算-Kubernetes集群](https://www.jdcloud.com/cn/products/jcs-for-kubernetes)
-
-进入Kubernetes集群产品介绍页，点击[申请公测](https://www.jdcloud.com/cn/public/testApply/kubernetes)
-
-填写相关相关信息，通过申请后才能在控制台进行创建Kubernetes集群
-
-## 二、在控制台创建
+## 在控制台创建
 
 登录[京东云控制台](https://console.jdcloud.com/overview)
 

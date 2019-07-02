@@ -9,7 +9,7 @@
 | PROPERTY_TAGS | 可以设置消息的标签（tag），暂时支持一条tag |
 
 ## 代码示例
-```java
+```Java
 package com.jcloud.jcq.sdk.demo;
 
 import com.jcloud.jcq.protocol.Message;

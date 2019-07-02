@@ -310,9 +310,9 @@
       - name: 日志管理
         items:
         - name: 慢日志 
-        href: Operation-Guide/Log/Log-Management.md   
+          href: Operation-Guide/Log/Log-Management.md   
         - name: PostgreSQL 日志管理 
-        href: Operation-Guide/Log/PostgreSQL-Log-Management.md   
+          href: Operation-Guide/Log/PostgreSQL-Log-Management.md   
       - name: 设置访问模式
         href: Operation-Guide/Set-Access-Mode.md     
       - name: PostgreSQL 插件 

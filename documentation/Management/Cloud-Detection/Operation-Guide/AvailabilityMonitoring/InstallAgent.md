@@ -14,3 +14,27 @@
 3.敲击回车键，执行安装操作。  
 ![安装Agent](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/install-2.png)  
 
+4.配置credential文件  
+#### 根据当前执行agent安装操作的用户来创建monitor_credentials.yml文件存放目录。  
+  - 使用root用户安装agent，执行操作：  
+    ```
+    mkdir -p /root/.jdcloud/  
+    ```  
+    其完整的monitor_credentials.yml文件存放路径为：/root/.jdcloud/monitor_credentials.yml  
+    
+  - 非root用户安装agent,执行操作：  
+    ```
+    mkdir -p /home/{USER}/.jdcloud/  
+    ```  
+    其完整的monitor_credentials.yml文件存放路径为 ：/home/{USER}/.jdcloud/monitor_credentials.yml  
+    注：{USER}需要替换为实际执行agent安装操作的用户名
+    
+   注：请按照以上路径创建文件，路径错误则agent无法正常工作，导致无监控数据。 
+   
+#### 编缉并保存monitor_credentials.yml文件，文件内容为：  
+
+   ```
+   ak: xxxxxxx(填写YourAccessKeyID)   
+   sk: xxxxxxx(填写YourAccessKeySecret) 
+   ```
+   注： ak\sk内容填写须符合yaml语法（键值对之间必须要有空格），否则会读取ak\sk失败。如: ak:(空格)xxxxxx

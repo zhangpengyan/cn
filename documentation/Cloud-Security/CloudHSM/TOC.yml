@@ -1,46 +1,47 @@
 name: 数据加密服务
-href: 
+href:
 items:
-- name: 产品简介
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 地域与可用性
+        href: Introduction/Regions-and-AvailabilityZones.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 实例规格类型
+        href: Introduction/Instance-Type-Family.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景
+        href: Introduction/Application-Scenarios.md
+  - name: 产品定价
   items:
-    - name: 产品概述
-      href: Introduction/Product-Overview.md
-    - name: 核心概念
-      href: Introduction/Core-Concepts.md
-    - name: 地域与可用性
-      href:
-    - name: 产品优势
-      href: 
-    - name: 产品功能
-      href:
-    - name: 实例规格类型
-      href:
-    - name: 限制说明
-      href:
-- name: 产品定价
-  items:
-    - name: 计费概述
-      href:
-    - name: 计费规则
-      href:
-    - name: 价格总览
-      href:
-    - name: 购买流程
-      href:
-    - name: 续费流程
-      href:
-- name: 操作指南
-  items:
-    - name: 控制台操作
-      items:
-        - name: 管理实例
-          href:
-        - name: 管理白名单
-          href:
-    - name: 数据加密实例操作
-      items:
-        - name: 实例初始化
-          href:
-        - name: 密钥管理
-          href: 
-    
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md
+      - name: 续费流程
+        href: Pricing/Renew-Process.md
+  - name: 操作指南
+    items:
+      - name: 控制台操作
+        items:
+          - name: 管理实例
+            href:
+          - name: 管理白名单
+            href:
+      - name: 数据加密实例操作
+        items:
+          - name: 实例初始化
+            href:
+          - name: 密钥管理
+            href:

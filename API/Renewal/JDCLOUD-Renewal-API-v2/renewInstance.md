@@ -24,7 +24,7 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:renew
 |---|---|---|---|---|
 |**appCode**|String|True| |业务线|
 |**serviceCode**|String|True| |产品线|
-|**timeUnit**|Integer|True| |时间单位 1:小时 2:天 3:月 4:年|
+|**timeUnit**|Integer|True| |时间单位 3:月 4:年|
 |**timeSpan**|Integer|True| |时长|
 |**sign**|String|True| |签名 md5(pin+serviceCode+key)|
 |**instanceIds**|String|True| |待续费资源id列表,英文逗号分隔|

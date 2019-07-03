@@ -26,10 +26,9 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:renew
 |**serviceCode**|String|True| |产品线|
 |**timeUnit**|Integer|True| |时间单位 3:月 4:年|
 |**timeSpan**|Integer|True| |时长|
-|**sign**|String|True| |签名 md5(pin+serviceCode+key)|
+|**sign**|String|True| |签名 md5(pin+serviceCode+key) key为renewalOnline|
 |**instanceIds**|String|True| |待续费资源id列表,英文逗号分隔|
-|**unifyDate**|Integer|False| |是否统一续费到期日续费 1-是 0-否（默认为0）|
-|**returnURL**|String|False| |回调地址|
+|**unifyDate**|Integer|False|0|是否统一续费到期日续费 1-是 0-否|
 
 ## 返回参数
 |名称|类型|描述|

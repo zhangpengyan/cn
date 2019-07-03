@@ -6,7 +6,7 @@ items:
     - name: 产品概述
       href: Introduction/Product-Overview.md
     - name: 核心概念
-      href:
+      href: Introduction/Core-Concepts.md
     - name: 地域与可用性
       href:
     - name: 产品优势

@@ -27,7 +27,7 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:autoRenewStatus
 |**appCode**|String|True| |业务线|
 |**serviceCode**|String|True| |产品线|
 |**timeSpan**|Integer|False| |续费周期（autoRenewStatus=1时必传）|
-|**timeUnit**|Integer|False| |时间单位 1-小时 2-天 3-月 4-年（autoRenewStatus=1时必传）|
+|**timeUnit**|Integer|False| |时间单位 3-月 4-年（autoRenewStatus=1时必传）|
 |**allAutoPay**|Integer|False| |是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus=1时必传）|
 
 ## 返回参数

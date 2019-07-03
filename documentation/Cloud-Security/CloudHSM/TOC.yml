@@ -7,7 +7,7 @@ items:
         href: Introduction/Product-Overview.md
       - name: 核心概念
         href: Introduction/Core-Concepts.md
-      - name: 地域与可用性
+      - name: 地域与可用区
         href: Introduction/Regions-and-AvailabilityZones.md
       - name: 产品优势
         href: Introduction/Benefits.md

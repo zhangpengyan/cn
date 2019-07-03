@@ -2,6 +2,7 @@
 
 ## 描述
 该操作可以从OSS中取回Object,您必须对该Object有READ权限。如果该Object权限为公有读，则可在不进行签名认证的情况下取回Object。
+
 注：支持通过x-amz-customize-back-source-url、x-amz-customize-back-source-param头指定数据拉取，指定后下载该对象时，将会拉取请求头提供的URL数据，并返回给用户。
 
 ## 请求

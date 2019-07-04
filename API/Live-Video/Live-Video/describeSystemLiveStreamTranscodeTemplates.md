@@ -1,15 +1,15 @@
-# describeCustomLiveStreamTranscodeTemplates
+# describeSystemLiveStreamTranscodeTemplates
 
 
 ## 描述
-查询用户自定义转码模板列表
+查询系统默认转码模板列表
 
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://live.jdcloud-api.com/v1/transcodeCustoms
+https://live.jdcloud-api.com/v1/transcodeSystem
 
 
 ## 请求参数
@@ -17,7 +17,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms
 |---|---|---|---|---|
 |**pageNum**|Integer|False|1|页码<br>- 取值范围 [1, 100000]<br>|
 |**pageSize**|Integer|False|10|分页大小<br>- 取值范围 [10, 100]<br>|
-|**filters**|Filter[]|False| |转码模板查询过滤条件:<br>  - name:   template 转码模板自定义名称<br>  - value:  如果参数为空，则查询全部<br>  - 如果为空,则表示查询该用户下所有自定义的转码模板<br>|
+|**filters**|Filter[]|False| |转码模板查询过滤条件:<br>  - name:   template 录制模板自定义名称<br>  - value:  如果参数为空，则查询全部<br>  - 如果为空,则表示查询该用下所有自定义的转码模板<br>|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|
@@ -43,11 +43,12 @@ https://live.jdcloud-api.com/v1/transcodeCustoms
 |名称|类型|描述|
 |---|---|---|
 |**videoCodec**|String|视频编码格式<br>  - 取值：h264,h265，默认h264<br>|
-|**videoCodeRate**|Integer|转码输出的码率值:<br>  - 取值: [1,6000]<br>  - 单位: kpbs<br>|
-|**videoFrameRate**|String|转码输出的帧率值:<br>  - 取值: [1,30]<br>|
+|**videoCodeRate**|Integer|转码输出的码率值:<br>  - 取值: [200,3000]<br>  - 单位: kpbs<br>|
+|**videoFrameRate**|String|转码输出的帧率值:<br>  - 取值：[1,30]<br>|
 |**width**|Integer|转码输出视频宽度:<br>  - 取值: [100,1920]<br>  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频<br>  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频<br>|
 |**height**|Integer|转码输出视频宽度:<br>  - 取值: [100,1920]<br>  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频<br>  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频<br>|
 |**template**|String|转码模板自定义名称:<br>  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,<br>              取值要求：数字、大小写字母或短横线("-"),<br>              首尾不能有特殊字符("-")<br>  - 注意: 不能与标准的转码模板和已定义命名重复<br>|
+|**templateName**|String|转码模板名称<br>|
 |**audioCodec**|String|转码输出音频编码格式:<br>  - 取值: aac、mp3<br>  - 不区分大小写<br>|
 |**audioFormat**|String|转码输出音频格式:<br>  - 取值: aac_lc，aac_low，aac_he，aac_he_v2<br>  - 不区分大小写<br>|
 |**audioSampleRate**|Integer|转码输出音频采样率:<br>  - 取值: [44100,48000]<br>|
@@ -67,7 +68,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms
 ## 请求示例
 GET
 ```
-https://live.jdcloud-api.com/v1/transcodeCustoms?filters.1.name=template&filters.1.values.1=yt
+https://live.jdcloud-api.com/v1/transcodeSystem?filters.1.name=template&filters.1.values.1=yt
 
 ```
 
@@ -82,15 +83,17 @@ https://live.jdcloud-api.com/v1/transcodeCustoms?filters.1.name=template&filters
         "transcodeTemplates": [
             {
                 "audioChannel": 2, 
-                "audioCodeRate": 16, 
+                "audioCodeRate": 64, 
                 "audioCodec": "aac", 
-                "audioFormat": "aac_lc", 
-                "audioSampleRate": 44800, 
-                "height": 480, 
-                "template": "yt", 
-                "videoCodeRate": 300, 
-                "videoFrameRate": "25/1", 
-                "width": 720
+                "audioFormat": "aac_he", 
+                "audioSampleRate": 44100, 
+                "height": 720, 
+                "template": "lhd", 
+                "templateName": "default_template_lhd", 
+                "videoCodeRate": 800, 
+                "videoCodec": "h264", 
+                "videoFrameRate": "24", 
+                "width": 1280
             }
         ]
     }

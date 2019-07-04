@@ -4,7 +4,7 @@
 | 概念    |    解释 |
 | --- | --- |
 |    集群 |    Kubernetes集群运行所需云资源的集合，包含云服务器、云硬盘、公网IP、负载均衡器等京东云云资源。 |
-|  管理节点   |一台已经安装了kube-apiserver, kube-controller-manager and kube-schedule等Kubernetes管理组件的实例。     |
+|  管理节点   |一台已经安装了kube-apiserver, kube-controller-manager 和 kube-schedule等Kubernetes管理组件的实例。     |
 |  工作节点   |一台已经安装了容器运行时（京东云使用docker Engine）、Kubelet、网络插件等Kubernetes组件的云主机实例，实例必须先注册到某一个集群上，状态为可用时，才可以用于部署和管理容器化应用。     |
 |工作节点组     |  一组具有相同实例规格配置的工作节点集合。   |  
  

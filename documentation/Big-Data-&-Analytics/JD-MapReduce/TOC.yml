@@ -60,7 +60,11 @@ items:
   - name: JMR问题排查说明
     href: Troubleshooting/Troubleshooting-Instructions.md
 - name: 常见问题
-  href: FAQ/FAQ.md
+  items:
+  - name: JMR特点和优势
+    href: FAQ/FAQ.md
+  - name: 如何与OSS交互
+    href: FAQ/uploadOSS.md
 - name: 相关资源
   items:
   - name: 文档历史记录

@@ -1,27 +1,65 @@
-# 创建免费体验版实例 
+## 创建说明
 
-- 京东云云安全-应用安全网关（JD Cloud Application Security Gateway）是基于京东云高性能负载均衡集群的Web应用安全防护产品，也简称：VPC-WAF。
+应用安全网关（VPC-WAF）是基于京东云高性能负载均衡集群的Web应用安全防护产品，可创建四种实例套餐：体验版、基础版、高级版和旗舰版实例套餐，一个用户可创建多个套餐实例，对经过应用型负载均衡的HTTP/HTTPs流量进行防护。
 
-  应用安全网关提供四种套餐模式：体验版、基础版、高级版和旗舰版，目前提供体验版和基础版。**体验版免费提供，**主要功能包括：Web安全检测功能、特征库更新、安全分析报表和用户审计等功能。
+目前支持体验版、基础版和高级版实例创建，各个套餐版本说明，可参考[套餐说明](../Introduction/Specifications.md)。
 
-  1、进入京东云**控制台-云安全-应用安全网关-实例管理**页面，点击创建：![image.png](https://img1.jcloudcs.com/cms/b5e03c75-9d4c-4e05-8403-6d00b6c4851a20180815151830.png)
+## 创建步骤
 
-  2、进入订单创建页面，填写名称应用安全网关名称，此时如果已经有负载均衡，可以选择绑定负载均衡，也可以选择不绑定稍后创建。
+  #### 1、创建实例
+  
+进入京东云**控制台-云安全-应用安全网关-实例管理**页面，点击**创建**,接入应用安全网关实例创建页面：![image.png](../../../../image/AppliAcation-Security-Gateway/list01.png)
 
-  ![image.png](https://img1.jcloudcs.com/cms/b56ee557-458e-427d-90e4-a82c19d8d94e20180815152101.png)
+  #### 2、绑定应用负载均衡
+  
+进入**实例创建**页面，填写名称应用安全网关名称，此时如果已经有可用的应用负载均衡，选择绑定即可；也可以选择不绑定待创建实例成功之后进行绑定，此处选择绑定。
+  ![image.png](../../../../image/AppliAcation-Security-Gateway/list02.png)
 
-  3、点击【立即购买】直到结束。
+ #### 3、订单信息确认
+  
+ 确认购买时间，确认无误后，点击**立即购买**进行购买直到流程结束。
 
-  4、返回实例管理页面，点击刷新，可以看到之前创建的应用安全网关实例
+  #### 4、创建成功
+  
+ 返回**实例管理**页面，点击刷新，此时可以看到在上一个步骤中创建的应用安全网关实例。
+  
+   ![image.png](../../../../image/AppliAcation-Security-Gateway/list03.png)
 
-  ![image.png](https://img1.jcloudcs.com/cms/7ade0ed0-f86e-4627-8399-2de40c8e50bc20180815152427.png)      5、点击【绑定负载均衡】绑定已经创建好的负载均衡，如果无可用的负载均衡，需要到控制台-网络-负载均衡页面创建负载均衡，然后在进行绑定操作。
+     
+  #### 5、绑定/解绑/更换应用负载均衡
+  
+如果在**步骤2**中未绑定应用负载均衡，点击实例列表**操作-绑定负载均衡**选择ALB进行绑定；如果已绑定也可以进行解绑或者更换绑定应用负载均衡。
 
-  ![image.png](https://img1.jcloudcs.com/cms/c58c4c65-ca5a-492a-89a0-474f3d2772d520180815152658.png)
+ ![image.png](../../../../image/AppliAcation-Security-Gateway/list04-1.png)
+ 
+如果无可用的负载均衡，需要到**控制台-网络-应用负载均衡**页面创建应用负载均衡，然后在进行绑定操作。应用负载均衡详细[创建流程](https://docs.jdcloud.com/cn/application-load-balancer/create-instance)
 
-  6、新建负载均衡之后，进入应用安全网关实例管理页面再次进行绑定。
+   
+ #### 6、防护模式调整
+ 
+ 应用安全网关创建成功后，默认为检测模式，实例开通后观察一段时间，确保业务正常后，点击实例列表**操作-更多-切换模式**切换WAF防护模式为：拦截模式。（体验版不支持模式调整，只支持检测模式；可通过查看首页或分析报表-Web安全报表查看是否存在异常或误报）
 
-  ![image.png](https://img1.jcloudcs.com/cms/2b62793e-20e9-4563-8117-43dd8a3a32ca20180815152931.png)
+  ![image.png](../../../../image/AppliAcation-Security-Gateway/list05-1.png)
+  
+ ## 结果确认
+ 
+ #### 1、攻击触发
+ 
+ 实例创建完成后，在浏览器输入对应防护的域名或者IP，在最后添加**/etc/passwd**,弹出以下页面，说明防护已经生效。
+ ![image.png](../../../../image/AppliAcation-Security-Gateway/list06-2.png)
+ 
+ #### 2、防护结果查看
+ 通过查看首页统计和分析报表页面数据，如果有数据出现说明防护已经生效。
+ 
+ 首页统计
+ 
+ ![image.png](../../../../image/AppliAcation-Security-Gateway/list07-1.png)
+ 
+ 分析报表统计
+ 
+ ![image.png](../../../../image/AppliAcation-Security-Gateway/list08-1.png)
 
-  7、此时应用安全体验版创建完成，可以在应用安全网关首页查看访问趋势进行流量检查，确认配置是否生效。
-
-  ![image.png](https://img1.jcloudcs.com/cms/b4232217-90d7-4193-8fd5-abd0bd14f6df20180815153051.png)
+## 相关参考
+- [套餐说明](../Introduction/Specifications.md)
+- [价格说明](../Pricing/Price-Overview.md)
+- [应用负载均衡创建流程](https://docs.jdcloud.com/cn/application-load-balancer/create-instance)

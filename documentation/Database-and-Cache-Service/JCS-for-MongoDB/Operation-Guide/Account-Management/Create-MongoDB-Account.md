@@ -22,62 +22,61 @@ user文档格式如下
 
 1. 在products库创建accountAdmin01账号。
 
-   ```
-   use products
-   db.createUser( { user: "accountAdmin01",
-                    pwd: "changeMe",
-                    customData: { employeeId: 12345 },
-                    roles: [ { role: "clusterAdmin", db: "admin" },
-                             { role: "readAnyDatabase", db: "admin" },
-                             "readWrite"] },
-                  { w: "majority" , wtimeout: 5000 } )
-   ```
-
+    ```
+    use products
+    db.createUser( { user: "accountAdmin01",
+                     pwd: "changeMe",
+                     customData: { employeeId: 12345 },
+                     roles: [ { role: "clusterAdmin", db: "admin" },
+                              { role: "readAnyDatabase", db: "admin" },
+                              "readWrite"] },
+                   { w: "majority" , wtimeout: 5000 } )
+    ```
 
 2. 创建带角色的用户
 
-   以下操作在products库创建账号accountUser，并给账号赋予readWrite、dbAdmin角色。
-   ```
-   use products
-   db.createUser(
-      {
-        user: "accountUser",
-        pwd: "password",
-        roles: [ "readWrite", "dbAdmin" ]
-      }
-   )
-   ```
+    以下操作在products库创建账号accountUser，并给账号赋予readWrite、dbAdmin角色。
+    ```
+    use products
+    db.createUser(
+       {
+         user: "accountUser",
+         pwd: "password",
+         roles: [ "readWrite", "dbAdmin" ]
+       }
+    )
+    ```
 3. 创建不带角色的用户
 
-   以下操作在admin库创建账号reportsUser，但未赋予角色。
-   ```
-   use admin
-   db.createUser(
-      {
-        user: "reportsUser",
-        pwd: "password",
-        roles: [ ]
-      }
-   )
-   ```
+    以下操作在admin库创建账号reportsUser，但未赋予角色。
+    ```
+    use admin
+    db.createUser(
+       {
+         user: "reportsUser",
+         pwd: "password",
+         roles: [ ]
+       }
+    )
+    ```
 
 4. 创建带角色的管理员账号
 
-   以下操作在admin库中创建appAdmin账号，并给账号赋予config库的readWrite角色。
-   ```
-   use admin
-   db.createUser(
-      {
-        user: "appAdmin",
-        pwd: "password",
-        roles:
-          [
-            { role: "readWrite", db: "config" },
-            "clusterAdmin"
-          ]
-      }
-   )
-   ```
+    以下操作在admin库中创建appAdmin账号，并给账号赋予config库的readWrite角色。
+    ```
+    use admin
+    db.createUser(
+       {
+         user: "appAdmin",
+         pwd: "password",
+         roles:
+           [
+             { role: "readWrite", db: "config" },
+             "clusterAdmin"
+           ]
+       }
+    )
+    ```
 
 ## 常用角色
 

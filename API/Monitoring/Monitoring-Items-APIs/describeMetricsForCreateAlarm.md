@@ -2,13 +2,13 @@
 
 
 ## 描述
-查询可用创建监控规则的指标列表
+查询可用创建监控规则的指标列表,metric介绍：<a href="https://docs.jdcloud.com/cn/monitoring/metrics">Metrics</a>
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://monitor.jcloud.com/v1/metricsForCreateAlarm
+https://monitor.jdcloud-api.com/v1/metricsForCreateAlarm
 
 
 ## 请求参数
@@ -20,8 +20,8 @@ https://monitor.jcloud.com/v1/metricsForCreateAlarm
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|

@@ -15,11 +15,11 @@
 ## 3. 上传文件
 
 执行upload-tool.exe，上传备份文件，upload-tool.exe的命令格式为：
-```
+```Shell
 upload-tool.exe -r [区域代码] -f [备份文件本地路径] -k [上传key值]
 ```
 ## 如果备份文件已经在京东云内网中，建议使用内网方式上传，上传效率更高，命令如下：
-```
+```Shell
 upload-tool.exe -r [区域代码] -f [备份文件本地路径] -k [上传key值] -i
 
 ## -i:表示使用内网进行文件上传
@@ -35,7 +35,7 @@ upload-tool.exe -r [区域代码] -f [备份文件本地路径] -k [上传key值
 |华南-广州|cn-south-1|
 
 **命令示例：** 将“z:/Backup/testdb.bak”这个备份文件上传到华北-北京区域。
-```
+```Shell
 upload-tool.exe -r cn-north -f z:/Backup/testdb.bak -k   U2FsdGVkX19c7B0ZGP0mU++sXgWZoHCeGP0tacbRz3TpoOKPsXmncA
 ```
 ## 注意事项：

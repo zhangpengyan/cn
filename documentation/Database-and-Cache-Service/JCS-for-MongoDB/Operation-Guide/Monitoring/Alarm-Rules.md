@@ -14,11 +14,11 @@
 1. 在"实例详情"页面，点击 **监控**，进入"监控信息"页面。
 1. 点击页面右侧 **设置报警规**，进入"报警规则"页面。
 
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-025.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-025.png)
 
 1. 在“报警规则”页面，点击 **新增报警规则**，进入”设置报警规则“页面，按页面提示添加新规则。
  
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-026.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-026.png)
 
 ## 相关参考
 

@@ -13,15 +13,20 @@
 
 3. 选择要操作的域名，单击其操作列下的**防护配置**。
 
-4. 在**网站防篡改**下，启用防护，并单击**前去配置**。 **说明：** 如果您不想使用网站防篡改，您可以在该页面关闭防护。![img](https://github.com/jdcloudcom/cn/blob/edit/image/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-1.png)
+4. 在**网站防篡改**下，启用防护，并单击**前去配置**。 **说明：** 如果您不想使用网站防篡改，您可以在该页面关闭防护。
+![image.png](../../../../../image/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-1.png)
 
-5. 单击**新增规则**，在添加URL对话框配置要防护的具体页面。![img](https://github.com/jdcloudcom/cn/blob/edit/image/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-2.png)
+5. 单击**新增规则**，在添加URL对话框配置要防护的具体页面。
+![image.png](../../../../../image/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-2.png)
 
-6. - **规则名称**：为该规则命名。
-   - **URL**：填写精确的要防护的路径。
+6. **规则名称**：为该规则命名。
 
-7. 添加规则后，手动打开对应规则**防护状态**下的开关。如果您在添加规则后未打开防护开关，则设置不会生效。![img](https://github.com/jdcloudcom/cn/blob/edit/image/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-3.png)
+   **URL**：填写精确的要防护的路径。
 
-8. 如果被防护页面进行了内容更新，您必须单击**更新缓存**来更新缓存。如果您在页面更新后未更新缓存，WAF将始终返回最近一次缓存的页面内容。![img](https://github.com/jdcloudcom/cn/blob/dns-zhangjingfeng/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-4.png)
+7. 添加规则后，手动打开对应规则**防护状态**下的开关。如果您在添加规则后未打开防护开关，则设置不会生效。
+![image.png](../../../../../image/waf-img/%E7%BD%91%E9%A1%B5%E9%98%B2%E7%AF%A1%E6%94%B9-3.png)
+
+8. 如果被防护页面进行了内容更新，您必须单击**更新缓存**来更新缓存。如果您在页面更新后未更新缓存，WAF将始终返回最近一次缓存的页面内容。
+![image.png](../../../../../image/WAF/fanchgai1.png)
 
  

@@ -1,18 +1,18 @@
 # **获取所有区域+运营商**
 
-## **1、描述**
+## **1. 描述**
 
 获取所有区域+运营商 (region_name)
 
-## **2、请求参数**
+## **2. 请求参数**
 
 | **名称**  | **类型** | **是否必填** | **描述**                                                     |
 | --------- | -------- | ------------ | ------------------------------------------------------------ |
 | username  | String   | 是           | 京东用户名pin                                                |
-| signature | String   | 是           | 用户签名，通过md5的方式校验用户的身份信息，保障信息安全。  md5=日期+username+秘钥SecretKey日期：格式为 yyyymmddusername：京东用户名pin秘钥：双方约定示例：比如当前日期2016-10-23，用户pin: jcloud_00 ,用户秘钥SecretKey   ：e7a31b1c5ea0efa9aa2f29c6559f7d61那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61) |
+| signature | String   | 是           |用户签名，通过md5的方式校验用户的身份信息，保障信息安全。</br>md5=日期+username+秘钥SecretKey; 日期：格式为 yyyymmdd; username：京东用户名pin; 秘钥：双方约定; </br>示例：比如当前日期2016-10-23,用户pin:jcloud_00,用户秘钥SecretKey：e7a31b1c5ea0efa9aa2f29c6559f7d61,那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61) |
 
 
-## **3、返回参数data中说明**
+## **3. 返回参数data中说明**
 
 | **名称** | **描述**                       |
 | -------- | ------------------------------ |
@@ -21,16 +21,16 @@
 | data     | 返回数据                       |
 
 
-## **4、调用示例**
+## **4. 调用示例**
 
 - ### **请求地址**
 
-http://opencdn.jcloud.com/api/region_name
+https://opencdn.jcloud.com/api/region_name
 
 - ### **请求示例**
 
 ```
-http://opencdn.jcloud.com/api/region_name
+https://opencdn.jcloud.com/api/region_name
 {
     "username" :"test_user",
     "signature" :"dbc1c1302d0a1baa48a256cbfc840317"
@@ -39,7 +39,7 @@ http://opencdn.jcloud.com/api/region_name
 
 - ### **返回说明**
 
-•        json格式
+* json格式
 
 ```
 {

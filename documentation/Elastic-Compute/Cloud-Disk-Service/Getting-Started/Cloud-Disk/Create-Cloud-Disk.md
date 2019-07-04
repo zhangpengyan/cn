@@ -13,11 +13,11 @@
 
 
 
-- 每块SSD云盘最大支持1000G容量；每块高效云盘最大支持3000G容量；
+- 三款新云硬盘最大都支持4000GB容量；（OpenAPI创建支持到16000GB）
 
 
 
-- 如您需要在新硬盘中保留某一云硬盘的历史数据，可以使用某个云硬盘的快照创建新盘，请参考[使用快照创建](https://www.jdcloud.com/help/detail/891/isCatalog/1)；
+- 如您需要在新硬盘中保留某一云硬盘的历史数据，可以使用某个云硬盘的快照创建新盘，请参考[使用快照创建](https://docs.jdcloud.com/cn/cloud-disk-service/create-disk-by-snapshot)；
 
 
 
@@ -47,7 +47,7 @@
 
 6、输入云硬盘名称及描述；
 
-注： 也可在云硬盘创建页面单击【[使用快照创建](https://www.jdcloud.com/help/detail/891/isCatalog/1)】，基于快照创建新的云硬盘；
+注： 也可在云硬盘创建页面单击【[使用快照创建](https://docs.jdcloud.com/cn/cloud-disk-service/create-disk-by-snapshot)】，基于快照创建新的云硬盘；
 
 <br>
 
@@ -87,9 +87,9 @@
 
 对于 Linux 系统，购买云盘之后，您需要进行挂载、分区、格式化、之后才能在系统中看到并使用。
 
-1、挂载数据盘，请参见[挂载云硬盘](https://www.jdcloud.com/help/detail/505/isCatalog/1)。<br>
+1、挂载数据盘，请参见[挂载云硬盘](https://docs.jdcloud.com/cn/cloud-disk-service/attach-cloud-disk)。<br>
 
-2、对挂载的磁盘进行分区格式化和挂载新分区的操作，请参见 [Linux分区、格式化和创建文件系统](https://www.jdcloud.com/help/detail/515/isCatalog/1)。
+2、对挂载的磁盘进行分区格式化和挂载新分区的操作，请参见 [Linux分区、格式化和创建文件系统](https://docs.jdcloud.com/cn/cloud-disk-service/linux-partition)。
 
 
 
@@ -98,9 +98,9 @@
 
 对于 Windows 系统，购买云盘之后，您需要进行挂载、格式化之后才能使用。
 
-1、挂载数据盘，请参见 [挂载云硬盘](https://www.jdcloud.com/help/detail/505/isCatalog/1)。<br>
+1、挂载数据盘，请参见 [挂载云硬盘](https://docs.jdcloud.com/cn/cloud-disk-service/attach-cloud-disk)。<br>
 
-2、对挂载的磁盘进行格式化，请参见 [Windows分区、格式化和创建文件系统](https://www.jdcloud.com/help/detail/514/isCatalog/1)。
+2、对挂载的磁盘进行格式化，请参见 [Windows分区、格式化和创建文件系统](https://docs.jdcloud.com/cn/cloud-disk-service/windows-partition)。
 
 	
 

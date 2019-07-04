@@ -1,0 +1,41 @@
+# associateElasticIp
+
+
+## 描述
+pod 绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. <br>
+一个 pod 只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。<br>
+如果是黑名单中的用户，会返回错误。
+
+
+## 请求方式
+POST
+
+## 请求地址
+https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}:associateElasticIp
+
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**regionId**|String|True| |Region ID|
+|**podId**|String|True| |Pod ID|
+
+## 请求参数
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**elasticIpId**|String|True| |弹性IP ID|
+
+
+## 返回参数
+|名称|类型|描述|
+|---|---|---|
+|**requestId**|String| |
+
+
+## 返回码
+|返回码|描述|
+|---|---|
+|**200**|OK|
+|**400**|Invalid parameter|
+|**401**|Authentication failed|
+|**404**|Not found|
+|**500**|Internal server error|
+|**503**|Service unavailable|

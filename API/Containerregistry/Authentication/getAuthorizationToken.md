@@ -11,7 +11,7 @@
 POST
 
 ## 请求地址
-https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}:getAuthorizationToken
+https://containerregistry.jdcloud-api.com/v1/regions/{regionId}/registries/{registryName}:getAuthorizationToken
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -27,22 +27,22 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/registries/{registryName}:g
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
 |---|---|---|
 |**authorizationToken**|String| |
-|**expiresAt**|String| |
 |**loginCmdLine**|String| |
+|**expiresAt**|String| |
 
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

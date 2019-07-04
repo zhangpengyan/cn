@@ -214,7 +214,7 @@
 
 ## 11.         附则
 
-11.1.     京东云在[www.jdcloud.com](https://www.jdcloud.com/index)相关页面上的服务说明、价格说明和您确认同意的订购页面是本服务条款不可分割的一部分。如果www.jdcloud.com相关页面上的服务说明、价格说明和您确认同意的订购页面与本服务条款有不一致之处，以本服务条款为准。
+11.1.     京东云在[www.jdcloud.com](https://www.jdcloud.com/index)相关页面上的服务说明、价格说明和您确认同意的订购页面是本服务条款不可分割的一部分。如果[www.jdcloud.com](https://www.jdcloud.com/index)相关页面上的服务说明、价格说明和您确认同意的订购页面与本服务条款有不一致之处，以本服务条款为准。
 
 11.2.     京东云有权以提前在[www.jdcloud.com](https://www.jdcloud.com/index)上公布、或给您发网站内通知或书面通知的方式将本服务条款的权利义务全部或者部分转移给京东云的关联公司。
 

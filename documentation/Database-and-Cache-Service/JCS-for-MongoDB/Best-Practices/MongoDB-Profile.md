@@ -12,22 +12,21 @@
 
 1. 查询分析器状态。
 
-   > db.getProfilingStatus()
+    > db.getProfilingStatus()
    
 1. 修改分析器级别。
 
-   > db.setProfilingLevel(level, slowms)
+    > db.setProfilingLevel(level, slowms)
 
-   - evel：0，关闭；1，记录慢速操作；2，记录所有操作。
-   - slowms：时间阈值，单位ms。
+    - evel：0，关闭；1，记录慢速操作；2，记录所有操作。
+    - slowms：时间阈值，单位ms。
 	
 1. 查询记录信息。
 	
-   Mongo Profile 记录存储在amdin库中，集合名为system.profile ，只要查询这个Collection的记录就可以获取到Profile信息。
+    Mongo Profile 记录存储在amdin库中，集合名为system.profile ，只要查询这个Collection的记录就可以获取到Profile信息。
 
-   > use admin   #在admin库执行
-   
-   > db.system.profile.find()
+    > use admin   #在admin库执行   
+    > db.system.profile.find()
    
    
 ## Profile记录说明

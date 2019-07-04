@@ -1,0 +1,224 @@
+name: 视频直播
+href:
+items:
+  - name: 直播API概述
+    href: Summary/Summary.md
+  - name: API鉴权规则
+    href: Authentication/Rule.md
+  - name: 域名管理
+    items:
+      - name: 添加直播域名
+        href: Live-Video/addLiveDomain.md
+      - name: 查询指定域名相关信息
+        href: Live-Video/describeLiveDomainDetail.md
+      - name: 查询域名列表
+        href: Live-Video/describeLiveDomains.md
+      - name: 启动域名
+        href: Live-Video/startLiveDomain.md
+      - name: 停用域名
+        href: Live-Video/stopLiveDomain.md
+      - name: 删除域名
+        href: Live-Video/deleteLiveDomain.md
+  - name: APP管理
+    status: 0
+    items:
+      - name: 添加直播APP
+        href: Live-Video/addLiveApp.md
+      - name: 删除直播APP
+        href: Live-Video/deleteLiveApp.md
+      - name: 启用APP
+        href: Live-Video/startLiveApp.md
+      - name: 停用APP
+        href: Live-Video/stopLiveApp.md
+      - name: 查询域名下的APP列表
+        href: Live-Video/describeLiveApp.md
+  - name: 直播流管理
+    items:
+      - name: 禁止直播流推送
+        href: Live-Video/forbidLiveStream.md
+      - name: 恢复直播流推送
+        href: Live-Video/resumeLiveStream.md
+      - name: 查看域名下实时推流信息
+        href: Live-Video/describeLiveStreamOnlineList.md
+      - name: 查看域名下历史推流记录
+        href: Live-Video/describeLiveStreamPublishList.md
+      - name: 查询实时流信息
+        href: Live-Video/describeLiveStreamInfo.md
+  - name: 状态通知
+    items:
+      - name: 设置直播流状态通知
+        href: Live-Video/setLiveStreamNotifyConfig.md
+      - name: 查询直播流状态通知
+        href: Live-Video/describeLiveStreamNotifyConfig.md
+      - name: 删除直播流状态通知
+        href: Live-Video/deleteLiveStreamNotifyConfig.md
+  - name: 直播时移
+    items:
+      - name: 开启时移
+        href: Live-Video/openLiveTimeshift.md
+      - name: 关闭时移
+        href: Live-Video/closeLiveTimeshift.md
+      - name: 查询时移配置
+        href: Live-Video/describeLiveTimeshiftConfigs.md
+  - name: 直播回看
+    status: 0
+    items:
+      - name: 开启回看
+        href: Live-Video/openLiveRestart.md
+      - name: 关闭回看
+        href: Live-Video/closeLiveRestart.md
+      - name: 查询回看配置
+        href: Live-Video/describeLiveRestartConfigs.md
+  - name: 直播转码
+    items:
+      - name: 转码配置规则
+        href: Example/Transcode.md
+      - name: 添加域名转码配置
+        href: Live-Video/addLiveStreamDomainTranscode.md
+      - name: 删除域名转码配置
+        href: Live-Video/deleteLiveStreamDomainTranscode.md
+      - name: 添加app转码配置
+        href: Live-Video/addLiveStreamAppTranscode.md
+      - name: 删除APP转码配置
+        href: Live-Video/deleteLiveStreamAppTranscode.md
+      - name: 添加自定义转码模板
+        href: Live-Video/addCustomLiveStreamTranscodeTemplate.md
+      - name: 删除用户自定义转码模板
+        href: Live-Video/deleteCustomLiveStreamTranscodeTemplate.md
+      - name: 查询用户自定义转码模板详情
+        href: Live-Video/describeCustomLiveStreamTranscodeTemplate.md
+      - name: 查询用户自定义转码模板列表
+        href: Live-Video/describeCustomLiveStreamTranscodeTemplates.md
+      - name: 查询系统默认转码模板列表
+        href: Live-Video/describeSystemLiveStreamTranscodeTemplates.md
+      - name: 查询转码模板配置
+        href: Live-Video/describeLiveStreamTranscodeConfig.md
+  - name: 直播录制
+    items:
+      - name: 添加录制模板
+        href: Live-Video/addCustomLiveStreamRecordTemplate.md
+      - name: 删除录制模板
+        href: Live-Video/deleteCustomLiveStreamRecordTemplate.md
+      - name: 查询录制模板列表
+        href: Live-Video/describeCustomLiveStreamRecordTemplates.md
+      - name: 添加APP录制配置
+        href: Live-Video/addLiveStreamAppRecord.md
+      - name: 删除APP录制配置
+        href: Live-Video/deleteLiveStreamAppRecord.md
+      - name: 添加域名录制配置
+        href: Live-Video/addLiveStreamDomainRecord.md
+      - name: 删除域名录制配置
+        href: Live-Video/deleteLiveStreamDomainRecord.md
+      - name: 查询录制配置
+        href: Live-Video/describeCustomLiveStreamRecordConfig.md
+      - name: 设置录制回调通知
+        href: Live-Video/setLiveStreamRecordNotifyConfig.md
+      - name: 查询录制回调配置
+        href: Live-Video/describeLiveStreamRecordNotifyConfig.md
+      - name: 删除录制回调配置
+        href: Live-Video/deleteLiveStreamRecordNotifyConfig.md
+      - name: 添加打点录制任务
+        href: Live-Video/addLiveRecordTask.md
+  - name: 直播截图
+    items:
+      - name: 添加直播截图模板
+        href: Live-Video/addCustomLiveStreamSnapshotTemplate.md
+      - name: 删除直播截图模板
+        href: Live-Video/deleteCustomLiveStreamSnapshotTemplate.md
+      - name: 查询直播截图模板列表
+        href: Live-Video/describeCustomLiveStreamSnapshotTemplates.md
+      - name: 添加APP直播截图配置
+        href: Live-Video/addLiveStreamAppSnapshot.md
+      - name: 删除APP直播截图配置
+        href: Live-Video/deleteLiveStreamAppSnapshot.md
+      - name: 添加域名直播截图配置
+        href: Live-Video/addLiveStreamDomainSnapshot.md
+      - name: 查询直播截图配置
+        href: Live-Video/describeCustomLiveStreamSnapshotConfig.md
+      - name: 删除域名截图配置
+        href: Live-Video/deleteLiveStreamDomainSnapshot.md
+      - name: 设置截图回调通知
+        href: Live-Video/setLiveStreamSnapshotNotifyConfig.md
+      - name: 查询截图回调配置
+        href: Live-Video/describeLiveStreamSnapshotNotifyConfig.md
+      - name: 删除截图回调配置
+        href: Live-Video/deleteLiveStreamSnapshotNotifyConfig.md
+  - name: 直播水印
+    items:
+      - name: 添加直播水印模板
+        href: Live-Video/addCustomLiveStreamWatermarkTemplate.md
+      - name: 删除用户自定义水印模板
+        href: Live-Video/deleteCustomLiveStreamWatermarkTemplate.md
+      - name: 查询水印模板列表
+        href: Live-Video/describeCustomLiveStreamWatermarkTemplates.md
+      - name: 添加APP水印配置
+        href: Live-Video/addLiveStreamAppWatermark.md
+      - name: 删除app水印配置
+        href: Live-Video/deleteLiveStreamAppWatermark.md
+      - name: 添加域名水印配置
+        href: Live-Video/addLiveStreamDomainWatermark.md
+      - name: 删除域名水印配置
+        href: Live-Video/deleteLiveStreamDomainWatermark.md
+      - name: 查询水印配置
+        href: Live-Video/describeCustomLiveStreamWatermarkConfig.md
+  - name: 数据统计
+    items:
+      - name: 查询直播录制时长数据
+        status: 0
+        href: Live-Video/describeLiveRecordData.md
+      - name: 查询推流监控数据
+        href: Live-Video/describePublishStreamInfoData.md
+      - name: 查询直播流历史在线人数
+        href: Live-Video/describeLiveStreamHistoryUserNum.md
+      - name: 查询直播推流数
+        href: Live-Video/describeLivePublishStreamNum.md
+      - name: 查查询转码时长
+        href: Live-Video/describeLiveTranscodingDurationData.md
+      - name: 查询播放带宽
+        href: Live-Video/describeLiveStreamBandwidthData.md
+      - name: 查询播放流量
+        href: Live-Video/describeLiveStreamTrafficData.md
+      - name: 查询流分组统计数据
+        href: Live-Video/describeLiveStatisticGroupByStream.md
+      - name: 查询地域/运营商分组统计数据
+        href: Live-Video/describeLiveStatisticGroupByAreaIsp.md
+      - name: 查询在线流列表
+        href: Live-Video/describeDomainOnlineStream.md
+      - name: 查询直播截图张数
+        href: Live-Video/describeLiveSnapshotData.md
+      - name: 查询直播鉴黄张数
+        status: 0
+        href: Live-Video/describeLivePornData.md
+
+  - name: 鉴权相关
+    items:
+      - name: 直播推流鉴权
+        items:
+          - name: 推流鉴权规则
+            href: Authentication/PublishUrl.md
+          - name: 设置推流鉴权KEY
+            status: 0
+            href: Authentication/PublishUrl.md
+          - name: 查询推流鉴权KEY
+            status: 0
+            href: Authentication/PublishUrl.md
+      - name: 直播推流鉴权
+        items:
+          - name: 播放鉴权规则
+            href: Authentication/PlayUrl.md
+          - name: 设置播放鉴权KEY
+            href: Live-Video/setLivePlayAuthKey.md
+          - name: 查询播放鉴权KEY
+            href: Live-Video/describeLivePlayAuthKey.md
+#  - name: 直播审核
+#    href: Loading.md
+  - name: SDK调用方式
+    href: Example/SDK-Java.md
+  - name: 参考文档
+    items:
+      - name: 地域简称参照表
+        href: Reference/Region.md
+      - name: 运营商简称参照表
+        href: Reference/Operator.md
+
+

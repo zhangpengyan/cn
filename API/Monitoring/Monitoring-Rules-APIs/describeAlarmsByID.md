@@ -8,12 +8,12 @@
 GET
 
 ## 请求地址
-https://monitor.jcloud.com/v1/regions/{regionId}/alarms/{alarmId}
+https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms/{alarmId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**alarmId**|String|True| |规则id|
 |**regionId**|String|True| |地域 Id|
+|**alarmId**|String|True| |规则id|
 
 ## 请求参数
 无
@@ -22,8 +22,8 @@ https://monitor.jcloud.com/v1/regions/{regionId}/alarms/{alarmId}
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求的标识id|
 |**result**|Result| |
+|**requestId**|String|请求的标识id|
 
 ### Result
 |名称|类型|描述|
@@ -36,22 +36,22 @@ https://monitor.jcloud.com/v1/regions/{regionId}/alarms/{alarmId}
 |**contactGroups**|String[]| |
 |**contactPersons**|String[]| |
 |**createTime**|String| |
-|**enabled**|Integer|启用禁用 1启用，0禁用|
+|**enabled**|Long|启用禁用 1启用，0禁用|
 |**id**|String|规则id|
 |**metric**|String|监控项|
 |**metricName**|String|规则id监控项名称|
-|**noticePeriod**|Integer|通知周期 单位：小时|
+|**noticePeriod**|Long|通知周期 单位：小时|
 |**noticeTime**|String| |
 |**operation**|String|>=、>、<、<=、=、！=|
-|**period**|Integer|统计周期（单位：分钟）|
+|**period**|Long|统计周期（单位：分钟）|
 |**region**|String|地域信息|
 |**resourceId**|String|此规则所应用的资源id|
 |**serviceCode**|String|报警规则对应的产品|
-|**status**|Integer|监控项状态:1正常，2告警，4数据不足|
+|**status**|Long|监控项状态:1正常，2告警，4数据不足|
 |**tag**|String|监控项附属信息|
-|**threshold**|Number|阈值|
-|**times**|Integer|连续多少次后报警|
-|**value**|Number|报警值|
+|**threshold**|Double|阈值|
+|**times**|Long|连续多少次后报警|
+|**value**|Double|报警值|
 
 ## 返回码
 |返回码|描述|

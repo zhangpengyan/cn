@@ -5,30 +5,59 @@
     items:
       - name: 产品概述
         href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
       - name: 产品优势
         href: Introduction/Benefits.md
       - name: 产品功能
         href: Introduction/Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
       - name: 应用场景 
-        href: Introduction/Application-Scenarios.md    
+        href: Introduction/Application-Scenarios.md   
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
   - name: 入门指南
     items:
-      - name: 新建项目
+      - name: 新建任务
         href: Getting-Started/Create-Project.md
       - name: 执行构建
         href: Getting-Started/Build.md
+      - name: 任务详情
+        href: Getting-Started/Detail.md
       - name: 构建历史
         href: Getting-Started/Build-History.md
   - name: 操作指南
     items:
-          - name: 构建类型
+          - name: 编译镜像
             href: Operation-Guide/Build-Environment.md
           - name: 源代码配置
             href: Operation-Guide/Source-Configuration.md
-          - name: 构建规范
-            href: Operation-Guide/Build-Spec.md      
-          - name: 构建存放
+          - name: 构建规范 
+            items:
+                  - name: 规范概述
+                    href: Operation-Guide/Build-Spec.md
+                  - name: 使用Apache Maven构建Java项目
+                    href: Operation-Guide/Maven.md
+                  - name: 使用Go语言环境构建
+                    href: Operation-Guide/Go.md
+                  - name: 使用Npm软件包管理系统管理软件包
+                    href: Operation-Guide/Npm.md
+          - name: 构建类型
             href: Operation-Guide/Build-Storage.md
           - name: 高级设置
             href: Operation-Guide/Advanced-Setting.md
-    
+          - name: 更多操作
+            items:
+                  - name: 编辑
+                    href: Operation-Guide/Edit.md
+                  - name: 复制
+                    href: Operation-Guide/Copy.md
+                  - name: 删除
+                    href: Operation-Guide/Delete.md
+  - name: 最佳实践
+    items:
+          - name: 构建镜像并存储至镜像仓库
+            href: Best-Practices/Build-Image-Container.md

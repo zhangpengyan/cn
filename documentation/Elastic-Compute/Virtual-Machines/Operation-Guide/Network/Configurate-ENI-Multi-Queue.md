@@ -1,4 +1,4 @@
-# 配置网卡多队列（内测中）
+# 配置网卡多队列
 
 单个vCPU处理网络中断存在瓶颈，您可以通过配置网卡多队列将实例中的网卡中断分散给不同的vCPU处理，提升网络处理性能。
 
@@ -34,7 +34,7 @@
 对于CentOS 6及Ubuntu系统，若需要使用网卡多队列，实例创建完成后需要登录实例进行配置。CentOS 7系统默认配置当前实例规格支持的最大队列数。
 这里以CentOS 6.9为例，介绍配置步骤。
 
-1. [登录实例](../../Getting-Start-Linux/Connect-To-Instance.md)。
+1. [登录实例](../../Getting-Start-Linux/Connect-to-Linux-Instance.md)。
 2. 查看网卡是否支持多队列。运行命令：
 	
 	`ethtool -l eth0`
@@ -74,6 +74,6 @@
 
 ## 相关参考
 
-[登录实例](../../Getting-Start-Linux/Connect-To-Instance.md)
+[登录实例](../../Getting-Start-Linux/Connect-to-Linux-Instance.md)
 
 

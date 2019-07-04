@@ -9,7 +9,7 @@
 POST
 
 ## 请求地址
-https://openapi.cr.jdcloud.com/v1/regions/{regionId}/listRepositories
+https://containerregistry.jdcloud-api.com/v1/regions/{regionId}/listRepositories
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,6 +19,7 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/listRepositories
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**filters**|Filter[]|False| |name - 仓库名称，模糊匹配，支持单个<br>|
+|**registryName**|String|False| |注册表名|
 |**pageNumber**|Integer|False| |页码；默认为1|
 |**pageSize**|Integer|False| |分页大小；默认为20；取值范围[10, 100]|
 
@@ -32,8 +33,8 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/listRepositories
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result| |
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
@@ -44,19 +45,19 @@ https://openapi.cr.jdcloud.com/v1/regions/{regionId}/listRepositories
 |名称|类型|描述|
 |---|---|---|
 |**createdAt**|String|记录用户repository创建的时间。|
-|**description**|String|镜像仓库描述。|
+|**updatedAt**|String|记录用户repository更新的时间。|
 |**registryName**|String|注册表名称。|
 |**repositoryName**|String|镜像仓库名称。|
 |**repositoryUri**|String|镜像仓库中的镜像总个数。|
-|**totalSpaceUsedMB**|Number|镜像仓库大小。|
-|**updatedAt**|String|记录用户repository更新的时间。|
+|**totalSpaceUsedMB**|Double|镜像仓库大小。|
+|**description**|String|镜像仓库描述。|
 
 ## 返回码
 |返回码|描述|
 |---|---|
+|**200**|OK|
 |**400**|Invalid parameter|
 |**401**|Authentication failed|
 |**404**|Not found|
-|**503**|Service unavailable|
-|**200**|OK|
 |**500**|Internal server error|
+|**503**|Service unavailable|

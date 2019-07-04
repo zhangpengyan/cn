@@ -6,7 +6,7 @@
 ![开启归档](https://github.com/jdcloudcom/cn/blob/edit/image/DataBus/db-007.png?raw=true)<br><br>
 3. 配置归档信息<br>
 ![归档配置](https://github.com/jdcloudcom/cn/blob/edit/image/DataBus/db-008.png?raw=true)<br><br>
-归档除法条件:数据进行归档的触发条件,可以已时间或者数据量大小为条件进行归档的触发条件<br><br>
+归档触发条件:数据进行归档的触发条件,可以已时间或者数据量大小为条件进行归档的触发条件<br><br>
 归档目标设置: 可以选择数据归档到的目的地. 例如数据计算服务, 云存储. <br><br>
 如果选择了数据计算服务, 后面需要选择 “数据库” “数据表”.<br><br>
 消息识别模式: <br>

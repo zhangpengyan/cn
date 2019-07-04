@@ -36,9 +36,11 @@ items:
         - name: 设置报警规则
           href: Getting-Started/Alarm-Management/set-alarm-rules.md
     - name: 使用Dashboard
-      href: Getting-Started/use-Dashboard.md
+      href: Getting-Started/use-dashboard.md 
     - name: 使用站点监控
       href: Getting-Started/use-site-monitoring.md 
+    - name: 使用可用性监控
+      href: Getting-Started/use-usability-monitoring.md
     - name: 使用自定义监控
       href: Getting-Started/use-custom-monitoring.md
     - name: 监控统计
@@ -70,9 +72,25 @@ items:
         - name: 站点监控限制与配额
           href: Operation-Guide/site-monitoring/quota-restrictions.md
         - name: 站点监控任务管理
-          href: Operation-Guide/site-monitoring/site-monitoring-management.md    
+          href: Operation-Guide/site-monitoring/site-monitoring-management.md
+        - name: 查看站点监控图
+          href: Operation-Guide/site-monitoring/site-monitoring-view.md
         - name: 设置报警规则
           href: Operation-Guide/site-monitoring/site-monitoring-alarm.md
+    - name: 可用性监控
+      items:
+        - name: 可用性监控概述
+          href: Operation-Guide/Usability-Monitor/usability-monitor-overview.md
+        - name: 可用性监控限制与配额
+          href: Operation-Guide/Usability-Monitor/UM-quota-restrictions.md
+        - name: 安装可用性监控插件
+          href: Operation-Guide/Usability-Monitor/UM-installAgent.md
+        - name: 可用性监控任务管理
+          href: Operation-Guide/Usability-Monitor/UM-management.md
+        - name: 查看监控图
+          href: Operation-Guide/Usability-Monitor/UM-view.md
+        - name: 设置报警规则
+          href: Operation-Guide/Usability-Monitor/UM-alarm.md
     - name: 自定义监控 
       items:
         - name: 自定义监控概述
@@ -102,7 +120,7 @@ items:
 - name: 常见问题
   href: FAQ/FAQ.md
 - name: 文档历史记录
-  href: Related-Resources/Document-History.md     
+  href: Related-Resources/document-history.md     
 - name: 服务条款         
   status: 0      
 - name: SLA         

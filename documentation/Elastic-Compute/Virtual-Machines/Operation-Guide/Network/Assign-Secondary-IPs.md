@@ -31,7 +31,7 @@
 
 Linux系统以CentOS 7.2为例，详细操作如下：
 
-1. 登录实例，详细请查阅[登录Linux实例](../../Getting-Start-Linux/Connect-To-Instance.md)
+1. 登录实例，详细请查阅[登录Linux实例](../../Getting-Start-Linux/Connect-to-Linux-Instance.md)
 
 2. 以主网卡示例，若为辅助网卡则对应修改为eth1、eth2等。执行命令 
 
@@ -100,7 +100,7 @@ Linux系统以CentOS 7.2为例，详细操作如下：
 
 Windows系统以Windows Server 2012 R2 标准版 64位 中文版为例，详细操作如下：
 
-1. 登录实例，详细请查阅[登录Windows实例](../../Getting-Start-Windows/Connect-To-Instance.md)。
+1. 登录实例，详细请查阅[登录Windows实例](../../Getting-Start-Windows/Connect-to-Windows-Instance.md)。
 
 	示例：若需要配置在子网 192.168.2.0/24 内的 IP 192.168.2.43（辅助IP），当前主内网IP为IP 192.168.2.42。
 
@@ -115,6 +115,6 @@ Windows系统以Windows Server 2012 R2 标准版 64位 中文版为例，详细�
 
 [弹性网卡侧分配辅助IP](../../../../Networking/Elastic-Network-Interface/Operation-Guide/Private-IP-Management/Assign-Secondary-IP.md)
 
-[登录Linux实例](../../Getting-Start-Linux/Connect-To-Instance.md)
+[登录Linux实例](../../Getting-Start-Linux/Connect-to-Linux-Instance.md)
 
-[登录Windows实例](../../Getting-Start-Windows/Connect-To-Instance.md)
+[登录Windows实例](../../Getting-Start-Windows/Connect-to-Windows-Instance.md)

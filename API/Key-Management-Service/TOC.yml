@@ -1,0 +1,75 @@
+  name: 密钥管理服务
+  href:
+  items:
+  - name: 使用说明
+    href: Introduction.md
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 密钥管理接口
+        items:
+          - name: 创建密钥
+            href: Key-Management-Service/createKey.md
+          - name: 启用密钥
+            href: Key-Management-Service/enableKey.md
+          - name: 禁用密钥
+            href: Key-Management-Service/disableKey.md
+          - name: 计划删除密钥
+            href: Key-Management-Service/scheduleKeyDeletion.md
+          - name: 取消计划删除密钥
+            href: Key-Management-Service/cancelKeyDeletion.md
+          - name: 更新密钥描述
+            href: Key-Management-Service/updateKeyDescription.md
+          - name: 加密
+            href: Key-Management-Service/encrypt.md
+          - name: 解密
+            href: Key-Management-Service/decrypt.md
+          - name: 生成数据密钥
+            href: Key-Management-Service/generateDataKey.md	
+          - name: 轮换密钥
+            href: Key-Management-Service/keyRotation.md
+          - name: 获取密钥信息
+            href: Key-Management-Service/describeKey.md
+          - name: 获取密钥详情
+            href: Key-Management-Service/describeKeyDetail.md
+          - name: 获取密钥列表
+            href: Key-Management-Service/describeKeyList.md
+          - name: 禁用密钥版本
+            href: Key-Management-Service/disableKeyVersion.md
+          - name: 启用密钥版本
+            href: Key-Management-Service/enableKeyVersion.md
+          - name: 计划删除密钥版本
+            href: Key-Management-Service/scheduleKeyVersionDeletion.md
+          - name: 取消计划删除密钥版本
+            href: Key-Management-Service/cancelKeyVersionDeletion.md
+      - name: 机密数据管理接口
+        items:
+          - name: 创建机密数据
+            href: Secret-Management-Service/createSecret.md
+          - name: 删除机密数据
+            href: Secret-Management-Service/deleteSecret.md
+          - name: 启用机密数据
+            href: Secret-Management-Service/enableSecret.md
+          - name: 禁用机密数据
+            href: Secret-Management-Service/disableSecret.md
+          - name: 更新机密数据描述
+            href: Secret-Management-Service/updateSecret.md
+          - name: 获取机密数据列表
+            href: Secret-Management-Service/describeSecretList.md
+          - name: 创建机密数据版本
+            href: Secret-Management-Service/createSecretVersion.md
+          - name: 删除机密数据版本
+            href: Secret-Management-Service/deleteSecretVersion.md
+          - name: 启用机密数据版本
+            href: Secret-Management-Service/enableSecretVersion.md
+          - name: 禁用机密数据版本
+            href: Secret-Management-Service/disableSecretVersion.md
+          - name: 更新机密数据版本信息
+            href: Secret-Management-Service/updateSecretVersion.md
+          - name: 获取机密数据版本信息
+            href: Secret-Management-Service/describeSecretVersionInfo.md
+          - name: 获取机密数据版本列表
+            href: Secret-Management-Service/describeSecretVersionList.md

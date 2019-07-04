@@ -10,12 +10,12 @@
 
 	连接自建数据库，选用相应权限的账号，执行 mongodump 将自建数据库内容导出。例如，执行以下语句导出所有数据库，默认生成文件名为dump的备份文件。
 
-	> mongodump --host xxx:27017 --authenticationDatabase  admin -u xxx -p xxx
+	    > mongodump --host xxx:27017 --authenticationDatabase  admin -u xxx -p xxx
 
 2. 通过 mongostore 命令将备份出的文件导入至云数据库 MongoDB。
 	根据上一步导出生成的备份文件，执行 mongostore 命令将数据全部导入至云数据库MongoDB。例如，执行以下语句将数据库全部导入。
 
-	> mongorestore --host dds-xxx:3717 --authenticationDatabase  admin -u root -p xxx dump(文件路径)
+	    > mongorestore --host dds-xxx:3717 --authenticationDatabase  admin -u root -p xxx dump(文件路径)
 
 
 ## 相关参考 

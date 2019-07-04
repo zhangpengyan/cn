@@ -63,6 +63,16 @@ items:
             href: Operation-Guide/Tickets-Management/submitTicket.md
           - name: 查看工单列表
             href: Operation-Guide/Tickets-Management/View-Tickets-List.md
+      - name: 监控报警
+        items:
+          - name: 带宽流量
+            href: Operation-Guide/Monitoring Alarm/View-Bandwidth-Traffic-List.md
+      - name: 报警管理
+        items:
+          - name: 报警规则
+            href: Operation-Guide/Alarm-Management/View-Alarm-Rules.md
+          - name: 报警历史
+            href: Operation-Guide/Alarm-Management/View-Alarm-History.md
 - name: 最佳实践
   items:
   status: 0

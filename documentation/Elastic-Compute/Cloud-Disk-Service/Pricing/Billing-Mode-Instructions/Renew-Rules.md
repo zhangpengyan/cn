@@ -12,4 +12,4 @@
 
 - 批量续费：对多个资源进行批量续费，根据用户所选续费时长，延长选中资源的使用时长。
 
-	续费详细操作请参考[续费管理](https://www.jdcloud.com/help/detail/1414/isCatalog/1)。
+	续费详细操作请参考[续费管理](https://docs.jdcloud.com/cn/online-buying/renew-management)。

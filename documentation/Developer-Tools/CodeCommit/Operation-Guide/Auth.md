@@ -1,4 +1,4 @@
-**Project用户权限**
+**项目用户权限**
 
 |Action|Guest|Reporter|Developer|Maintainer|Owner|
 | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -71,7 +71,7 @@
 
 
 
-**Group用户权限**
+**群组用户权限**
 
 |Action|Guest|Reporter|Developer|Maintainer|Owner|
 | :--: | :--: | :--: | :--: | :--: | :--: |

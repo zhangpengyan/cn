@@ -20,7 +20,7 @@
 1. 在实例详情页面，点击 **备份与恢复**， 查看备份数据。
 1. 选择要使用的备份，在操作项中点击 **数据恢复**，打开“确认弹窗”。
 
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-021.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-021.png)
 
 1. 请点击 **确定**，确认执行数据恢复，实例状态变更为“恢复中”，请等待数据恢复完成。
 2. 当实例状态变更为“正常”时，表示数据恢复完成。

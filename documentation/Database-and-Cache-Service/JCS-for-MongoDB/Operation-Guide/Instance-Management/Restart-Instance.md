@@ -15,7 +15,7 @@
 1. 登录 [MongoDB 控制台](http://mongodb-console.jdcloud.com/mongodb)。
 1. 在"实例列表"页面，选择目标实例，在操作项中，点击 **重启**，打开确认弹窗。
 
-   ![重启实例](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-013.png)
+    ![重启实例](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-013.png)
    
 1. 在确认弹窗中，点击 **确定**。
 1. 实例状态变更为“重启中”，等待重启完成。

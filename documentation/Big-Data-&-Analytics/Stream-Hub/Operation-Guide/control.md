@@ -9,4 +9,4 @@
 华北: hb-streamhub-gw-inner.jcloud.com<br><br>
 2. accessKey secretKey<br>
 在流数据总线列表页, 点击右上角的“查看秘钥”, 在弹出框中获取accessKey 和 secretKey。<br>
-![ak](https://github.com/jdcloudcom/cn/blob/edit/image/DataBus/db-010.png?raw=true)
+![ak](../../../../image/DataBus/db-010.png)

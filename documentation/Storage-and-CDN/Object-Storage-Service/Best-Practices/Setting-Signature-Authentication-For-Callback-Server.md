@@ -60,7 +60,7 @@ x-jdcloud-version:2015-06-06
 3.Base64 是指使用 base64 算法转码文本
 
 ### Java示例代码
-```
+```Java
 public class SignDemo {
       private Boolean authenticate(String method, String uri, Map<String, String> headers) {
           try {

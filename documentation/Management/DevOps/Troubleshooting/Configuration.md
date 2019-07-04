@@ -33,8 +33,11 @@
     - 0.app_key/ # 实例名称
 ```
 
+示例请参见：[编译构建](https://github.com/jdcloudcom/cn/blob/DevOps/documentation/Management/DevOps/Operation-Guide/CI.md) 中的规范
 
 **2. control脚本是什么**
 
 在代码根目录下 bin/增加control 脚本，用来启动、停止、服务健康检查 
+
+示例请参见：[编译构建](https://github.com/jdcloudcom/cn/blob/DevOps/documentation/Management/DevOps/Operation-Guide/CI.md) 中的规范
 

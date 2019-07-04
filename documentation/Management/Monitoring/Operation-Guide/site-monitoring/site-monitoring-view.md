@@ -5,10 +5,10 @@
 
 监控图中展示用户设置的各个探测点的响应时间以及所有探测点的平均响应时间，可根据需求隐藏无需查看的折线图。
 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/Monitoring-cn/image/Cloud-Monitor/site-monitoring/site-view.png)
+![image](https://raw.githubusercontent.com/jdcloudcom/cn/monitoring/image/Cloud-Monitor/site-monitoring/site-view.png)
 
-可用率  可用率=探测周期内探测点的状态码小于400的探测结果数量/探测结果总数量*100。
+**可用率**  可用率=探测周期内探测点的状态码小于400的探测结果数量/探测结果总数量*100。
 
 监控图中展示用户设置的各个探测点的可用率以及所有探测点的平均可用率，可根据需求隐藏无需查看的折线图。
 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/Monitoring-cn/image/Cloud-Monitor/site-monitoring/site-view2.png)
+![image](https://raw.githubusercontent.com/jdcloudcom/cn/monitoring/image/Cloud-Monitor/site-monitoring/site-view2.png)

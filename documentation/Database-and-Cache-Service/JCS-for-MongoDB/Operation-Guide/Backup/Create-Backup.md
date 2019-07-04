@@ -13,7 +13,7 @@
 1. 在“实例列表”页面，选择目标实例，点击 **实例名称**，进入“实例详情”页面。
 1. 在“实例详情”页面，依次点击 **备份与恢复**  >  **备份数据** ，进入“备份数据”页面。
 
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-019.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-019.png)
 
 1. 在“备份数据”页面，点击 **创建备份**，打开“创建备份确认弹窗”。
 1. 点击 **确定**，确认执行创建备份。

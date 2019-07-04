@@ -6,7 +6,7 @@ tag可以理解为标签，或属性，比如微信里给微信好友添加标�
 
 （1）监控对象的tag：主要指应用、分组、实例、机器的tag，分组和实例的tag可用于标记生产环境、所属区域等，为机器打tag可以标记机器的服务器类型等。
 
-（2）监控项的tag：监控项tag包括平台默认添加的，和日志监控、自定义监控中用户自定义的，作为监控项的属性，便于用户区分不同属性下监控项的值。使用方式为，在监控项后加“/key=value”的形式表示，key为tag的关键字，value为tag的值。
+（2）监控项的tag：监控项tag包括平台默认添加的，和日志监控、自定义监控中用户自定义的，作为监控项的属性，便于用户区分不同属性下监控项的值。使用方式为，在监控项后加“/key=value”的形式表示，key为tag的关键字，value为tag的值。[key的命名支持 英文字母、数字、"、_"（下划线）、 "."(英文句号）和"-"(英文中划线)。]
 
 平台默认添加tag的监控项有：
 
@@ -125,7 +125,7 @@ nsFilter支持的函数：
 | GroupIn        | 1        | 分组在此范围内              | GroupIn(\\"pre,online\\"\)                   |
 | HasHostTag     | 1        | 包含此HostTag返回true       | HasHostTag(\\"backup\\")                     |
 | HostTagValueIn | 2        | 指定HostTag的值在指定范围内 | HostTagValueIn(\\"version\\", \\"1.0,2.0\\") |
-| NsContain      | 1        | ns里包含指定的字符串        | NsContain(\\".judge-hawkeye-ark\\")          |
+| NsContain      | 1        | ns里包含指定的字符串        | NsContain(\\"judge-hawkeye-ark\\")          |
 | HasTag         | 1        | 包含tag                     | HasTag(\\"lang\\")                           |
 | TagValueIn     | 2        | 指定tag的值在指定范围内     | TagValueIn(\\"priority\\",\\"0,1\\")         |
 

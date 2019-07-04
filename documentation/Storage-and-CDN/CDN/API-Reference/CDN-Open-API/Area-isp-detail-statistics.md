@@ -1,20 +1,20 @@
 # **分区域运营商详细数据统计**
 
-## **1、描述**
+## **1. 描述**
 
 分区域运营商详细数据统计 (area_isp_stat_v2)
 
-## **2、请求参数**
+## **2. 请求参数**
 
 | **名称**   | **类型** | **是否必填** | **描述**                                                    |
 | ---------- | -------- | ------------ | ----------------------------------------------------------- |
 | username   | String   | 是           | 京东用户名pin                                               |
-| signature  | String   | 是           | 用户签名                                                    |
+| signature  | String   | 是           | 用户签名，通过md5的方式校验用户的身份信息，保障信息安全。</br>md5=日期+username+秘钥SecretKey; 日期：格式为 yyyymmdd; username：京东用户名pin; 秘钥：双方约定; </br>示例：比如当前日期2016-10-23,用户pin:jcloud_00,用户秘钥SecretKey：e7a31b1c5ea0efa9aa2f29c6559f7d61,那签名为MD5(20161023jcloud_00e7a31b1c5ea0efa9aa2f29c6559f7d61)  |
 | domain     | String   | 是           | 待查询的域名，支持多域名查询，格式为"www.a.com,www.b.com" 查询的结果为每一个域名的详细数据 |
 | start_time | String   | 是           | 时间格式：yyyy-mm-dd hh:mi 参考示例：2016-12-14 07:00；查询的时间跨度不能超过1小时  |
 | end_time   | String   | 否           | 不是必填参数，不传默认到当前时间，时间跨度最大为1个小时，且粒度为5分钟           |
 
-## **3、返回参数data中说明**
+## **3. 返回参数**
 
 | **名称** | **描述**                       |
 | -------- | ------------------------------ |
@@ -22,16 +22,16 @@
 | msg      | 提示信息                       |
 | data     | 返回数据                       |
 
-## **4、调用示例**
+## **4. 调用示例**
 
 - ### **请求地址**
 
-http://opencdn.jcloud.com/api/area_isp_stat_v2
+https://opencdn.jcloud.com/api/area_isp_stat_v2
 
 - ### **请求示例**
 
 ```
-http://opencdn.jcloud.com/api/area_isp_stat_v2
+https://opencdn.jcloud.com/api/area_isp_stat_v2
 {
     "username" :"test_user",
     "signature" :"d847267fc702273abf394dd0c3128d64",
@@ -43,7 +43,7 @@ http://opencdn.jcloud.com/api/area_isp_stat_v2
 
 - ### **返回说明**
 
-• json格式
+* json格式
 
 ```
 {
@@ -72,7 +72,7 @@ SVG_SPEED, // 平均下载速度,单位:KB/s
 
 - ### **返回示例**
 
-• json格式
+* json格式
 
 ```
 {

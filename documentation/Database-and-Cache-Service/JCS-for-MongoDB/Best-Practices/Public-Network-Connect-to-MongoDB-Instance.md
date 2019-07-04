@@ -22,11 +22,11 @@
 
 1. 本地电脑安装SecureCRT，以SSH2协议远程连接到有公网IP的云主机。
    
-   - 选择 **Connection**，填写名称、选择协议为SSH2。
+    - 选择 **Connection**，填写名称、选择协议为SSH2。
   
       ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-031.png)
 
-   - 选择 **SSH2**，填写作为代理的主机信息。
+    - 选择 **SSH2**，填写作为代理的主机信息。
    
       Hostname：填写云主机的公网IP。
 
@@ -37,11 +37,11 @@
       ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-032.png)
 
 1. 设置端口转发规则。
-   - 选择 **Port Forwarding**，点击 **Add**。
+    - 选择 **Port Forwarding**，点击 **Add**。
 
       ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-033.png)
 
-   - 填写端口转发相关信息。
+    - 填写端口转发相关信息。
    
       Name：填写名称
 
@@ -56,11 +56,11 @@
 1. 保存设置，并连接云主机。
 1. 本地连接 MongoDB 实例。
 
-   连接地址：填localhost或127.0.0.1。
+    连接地址：填localhost或127.0.0.1。
    
-   端口：监听的本地端口，如上文的27019。
+    端口：监听的本地端口，如上文的27019。
    
-   账号、密码：MongoDB 实例设置的账号密码信息。
+    账号、密码：MongoDB 实例设置的账号密码信息。
 
 ## 方式2：在云主机上设置转发规则，以下以socat为例说明。
 
@@ -72,18 +72,18 @@
 
 1. 登录云主机。
 1. 安装socat。
-   > yum install -y socat
+    > yum install -y socat
 
 2. 添加代理规则。
-   > socat TCP-LISTEN:27019,fork TCP:jmongo-hb1-prod-mongo-xxxx.jmiss.jcloud.com:27017
+    > socat TCP-LISTEN:27019,fork TCP:jmongo-hb1-prod-mongo-xxxx.jmiss.jcloud.com:27017
 
-   - TCP-LISTEN:填写监听端口，如上文的27019。
-   - TCP：您的云数据库MongoDB的连接地址和域名。
+    - TCP-LISTEN:填写监听端口，如上文的27019。
+    - TCP：您的云数据库MongoDB的连接地址和域名。
 
 1. 本地连接本地连接云数据库MongoDB实例。
-   - 连接地址：填云主机的公网IP。
-   - 端口：监听端口，如上文的27019。
-   - 账号、密码：云数据库MongoDB设置的账号密码信息。
+    - 连接地址：填云主机的公网IP。
+    - 端口：监听端口，如上文的27019。
+    - 账号、密码：云数据库MongoDB设置的账号密码信息。
    
 ### 相关参考
 

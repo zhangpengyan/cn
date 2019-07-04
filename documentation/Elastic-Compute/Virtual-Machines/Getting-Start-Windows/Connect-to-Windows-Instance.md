@@ -18,7 +18,7 @@
    </tr>
    <tr>  
       <td> Mac OS    </td>
-      <td> VNC 登录<br>rdesktop登录 </td>
+      <td> VNC 登录<br>Remote Desktop登录 </td>
    </tr>
 </table>
 
@@ -65,7 +65,7 @@ VNC登陆的场景至少包括以下几种：
 ![](../../../../image/vm/Getting-Start-Linux-Connect-Windows-mstsc3.png)
 6. 成功连接到您在京东云创建的Windows实例。<br>
 ![](../../../../image/vm/Getting-Start-Linux-Connect-Windows-mstsc4.png)
-7. 如果登录失败，请确认公网IP地址是否输入正确，并查看实例关联[安全组](../Operation-Guide/Security-Group/Overview.md)及所在子网的[网络ACL](../../../Networking/Virtual-Private-Cloud/Introduction/Functions/Network-ACL.md)配置，确认实例是否允许3389端口的入流量。
+7. 如果登录失败，请确认公网IP地址是否输入正确，并查看实例关联[安全组](https://docs.jdcloud.com/cn/virtual-private-cloud/security-group-features)及所在子网的[网络ACL](http://docs.jdcloud.com/cn/virtual-private-cloud/network-acl-features)配置，确认实例是否允许3389端口的入流量。
 
 
 ## 本地为Linux，使用rdesktop登录Windows实例
@@ -78,7 +78,23 @@ VNC登陆的场景至少包括以下几种：
 rdesktop -u administrator -p <实例登录密码> <实例公网IP地址>
 ```
 
-## 相关参考
+## 本地为MAC，使用远程桌面登录Windows实例
+以微软官方提供的Remote Desktop为例，示意本地为MAC OS如何远程登录Windows实例。Remote Desktop可以前往[HockeyApp](https://rink.hockeyapp.net/apps/5e0c144289a51fca2d3bfa39ce7f2b06/)下载，下载前请确认当前系统版本是否支持。
+
+1. 运行Microsoft Remote Desktop，点击【Add Desktop】。
+![](../../../../image/vm/Getting-Start-Windows-Connect-Windows-mac1.png)
+
+2. 在弹出的窗口中输入windows实例的公网IP地址,点击【Add】添加保存。
+![](../../../../image/vm/Getting-Start-Windows-Connect-Windows-mac2.png)
+
+3. 完成添加后，在“saved Desktop”中通过公网IP地址找到该实例，点击图标，输入用户名和密码，Windows实例的默认用户名是 administrator。随后点击【Done】即可连接实例。
+![](../../../../image/vm/Getting-Start-Windows-Connect-Windows-mac3.png)
+![](../../../../image/vm/Getting-Start-Windows-Connect-Windows-mac4.png)
+
+4. 首次连接后，再次连接时可以直接找到并选中希望连接的实例图标，点击窗口设置图标里的【Connect】完成登录信息输入后进行连接。
+
+
+## 相关参考 
 
 [重置密码](../Operation-Guide/Instance/Reset-Password.md)
 

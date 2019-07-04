@@ -11,11 +11,11 @@
 1. 登录 [MongoDB 控制台](https://mongodb-console.jdcloud.com/mongodb)。
 1. 进入“实例列表”页面，选择目标实例，在操作项中点击 **续费**，打开“续费”页面。
 
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-037.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-037.png)
 
 1. 在“续费”页面，选择您要续费的时长，并阅读确认《云数据库 MongoDB 服务条款》。
 
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-038.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-038.png)
 
 1. 确认无误，点击 **去支付**，完成支付流程。
 

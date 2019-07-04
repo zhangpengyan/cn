@@ -1,0 +1,39 @@
+name: 资源编排
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 资源栈
+        items:
+          - name: createStack
+            href: Stack/createStack.md
+          - name: deleteStack
+            href: Stack/deleteStack.md         
+          - name: describeStack
+            href: Stack/describeStack.md
+          - name: describeStacks
+            href: Stack/describeStacks.md
+          - name: describeStackTemplate
+            href: Stack/describeStackTemplate.md
+          - name: describeStackResources
+            href: Stack/describeStackResources.md
+          - name: describeStackEvents
+            href: Stack/describeStackEvents.md
+          - name: createChangeSet
+            href: Stack/createChangeSet.md
+          - name: executeChangeSet
+            href: Stack/executeChangeSet.md
+      - name: 模板
+        items:
+          - name: validateTemplate
+            href: Template/validateTemplate.md
+      - name: 资源
+        items:
+          - name: describeResourceTypeList
+            href: Resource/describeResourceTypeList.md
+          - name: describeResourceTypeSpecification
+            href: Resource/describeResourceTypeSpecification.md

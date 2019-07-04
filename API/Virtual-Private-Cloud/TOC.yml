@@ -1,4 +1,4 @@
-  name: 私有网络
+﻿  name: 私有网络
   href: 
   items:
   - name: 接口概览
@@ -13,6 +13,8 @@
             href: Elastic-IP/createElasticIps.md
           - name: deleteElasticIp
             href: Elastic-IP/deleteElasticIp.md
+          - name: modifyElasticIp
+            href: Elastic-IP/modifyElasticIp.md
           - name: describeElasticIp
             href: Elastic-IP/describeElasticIp.md
           - name: describeElasticIps

@@ -16,8 +16,9 @@
 # SDK使用方法 #
 
 建议使用npm安装京东云Node.js SDK，如下所示：
-
-	npm install jdcloud-sdk-js
+```
+npm install jdcloud-sdk-js
+```
 
 您还可以下载sdk源代码自行使用，源代码地址为：[Node.js SDK](https://github.com/jdcloud-api/jdcloud-sdk-nodejs)。
 
@@ -34,35 +35,35 @@ SDK使用中的任何问题，欢迎您在[Github SDK使用问题反馈页面](h
 ### 两种引用方式 ###
 
 这种引用方式会加载所有的可用的services
-
-	var JDCloud = require('jdcloud-sdk-js');
-
+```
+var JDCloud = require('jdcloud-sdk-js');
+```
 这种引用方式只会加载用到的service，此时仍然可以使用 var JDCloud = require('jdcloud-sdk-js/global') 来引用JDCloud对象
-
-	var NC = require('jdcloud-sdk-js/services/nc');
-
+```
+var NC = require('jdcloud-sdk-js/services/nc');
+```
 
 ### 配置方法  ###
 
 对JDCloud的配置为通用配置，所有services共享配置:
-
-	JDCloud.config.update({//*配置项/*/});
-
+```
+JDCloud.config.update({//*配置项/*/});
+```
 对某个service的配置会覆盖通用配置：
-
-	var NC = require('jdcloud-sdk-js/services/nc'); 
-	var nc = new NC({//*配置项/*/});
-
+```JavaScript
+var NC = require('jdcloud-sdk-js/services/nc'); 
+var nc = new NC({//*配置项/*/});
+```
 
 ### 配置项 ###
-
-	let config = { 
-		credentials: { 
-			accessKeyId: global.accessKeyId, secretAccessKey: global.secretAccessKey 
-		},
-		regionId: 'cn-north-1' //地域信息，某个api调用可以单独传参regionId，如果不传则会使用此配置中的regionId 
-	}
-
+```JavaScript
+let config = { 
+	credentials: { 
+		accessKeyId: global.accessKeyId, secretAccessKey: global.secretAccessKey 
+	},
+	regionId: 'cn-north-1' //地域信息，某个api调用可以单独传参regionId，如果不传则会使用此配置中的regionId 
+}
+```
 
 ### 调用示例 ###
 
@@ -70,7 +71,7 @@ SDK使用中的任何问题，欢迎您在[Github SDK使用问题反馈页面](h
 
 
 ####  引用和配置  ####
-
+```JavaScript
     var VM = require('jdcloud-sdk-js/services/vm')
     var vm = new VM({
             credentials: {
@@ -79,11 +80,11 @@ SDK使用中的任何问题，欢迎您在[Github SDK使用问题反馈页面](h
     },
     regionId: 'cn-north-1'
     })
-
+```
 
 
 #### Promise方式调用 #### 
-
+```JavaScript
 	vm.createInstances({
         instanceSpec: {
             instanceType: 'g.s1.micro',
@@ -109,11 +110,11 @@ SDK使用中的任何问题，欢迎您在[Github SDK使用问题反馈页面](h
     },
     function(e){ // 调用API失败，错误处理 
     })
-
+```
 
 
 #### callback方式调用 #### 
-
+```JavaScript
 	vm.createInstances({
         instanceSpec: {
             instanceType: 'g.s1.micro',
@@ -143,14 +144,14 @@ SDK使用中的任何问题，欢迎您在[Github SDK使用问题反馈页面](h
 		else { // 返回数据处理 data 
         } 
     })
-
+```
 如果需要设置额外的header，例如要调用开启了MFA操作保护的接口，需要传递x-jdcloud-security-token，则按照如下方式：
-
-    vm.deleteInstances({ 
-            instanceId: 'xxx', x-jdcloud-security-token: 'xxx' 
-        }, 
-        'cn-north-1'
-    )	
-
+```JavaScript
+vm.deleteInstances({ 
+	  instanceId: 'xxx', x-jdcloud-security-token: 'xxx' 
+	}, 
+	'cn-north-1'
+)	
+```
 
 

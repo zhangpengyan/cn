@@ -59,7 +59,15 @@
             href: Operation-Guide/Monitoring/Monitoring.md
           - name: 设置报警规则
             href: Operation-Guide/Monitoring/Alarm-Rules.md
-      - name: API参考
+      - name: 授权管理
+        items:
+          - name: 权限控制概述
+            href: Operation-Guide/Authorization-Management/Authorization-Overview.md
+          - name: 主主账号授权
+            href: Operation-Guide/Authorization-Management/Main-Main-Authorization.md
+          - name: 主子账号授权
+            href: Operation-Guide/Authorization-Management/Main-Sub-Authorization.md
+      - name: API参考（HTTP消息收发）
         items:
           - name: 调用方式
             items:
@@ -79,8 +87,12 @@
               href: Operation-Guide/API-Reference/Interface-Specification/Consume-Message.md
   - name: SDK参考
     items:
+      - name: 示例下载
+        href: SDK-Rerference/Demo.md
       - name: Java SDK
         items:
+          - name: 版本说明
+            href: SDK-Rerference/Java-SDK/JavaSDK-Versions.md
           - name: 环境准备
             href: SDK-Rerference/Java-SDK/Environment-Preparation.md
           - name: 初始化创建
@@ -89,11 +101,14 @@
             href: SDK-Rerference/Java-SDK/Produce-Standard-Message.md
           - name: 生产顺序消息
             href: SDK-Rerference/Java-SDK/Produce-FIFO-Message.md
-          - name: 消费消息
-            href: SDK-Rerference/Java-SDK/Consumer-Message-SDK.md
+          - name: 消费消息（Push）
+            href: SDK-Rerference/Java-SDK/Consume-Message-SDK.md
+          - name: 消费消息（Pull）
+            href: SDK-Rerference/Java-SDK/Pull-Consume-Messgae-SDK.md
   - name: 最佳实践
     items:
-    status: 0
+      - name: 消息分类
+        href: Best-Practice/Message-Classification.md
   - name: 教程
     items:
     status: 0
@@ -116,7 +131,9 @@
   - name: 相关资源
     items:
     - name: 文档历史记录
-      href: Related-Resources/Document-History.md   
+      href: Related-Resources/Document-History.md
+    - name: 服务条款
+      href: Related-Resources/Related-Agreement.md  
     - name: 备案
       href: Related-Resources/Filing.md           
       status: 0        

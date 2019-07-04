@@ -68,7 +68,6 @@ virtual-kubelet-cn-****-2b   Ready     agent     3d        v1.8.3
   InstanceTypeFamily = "g.n2"		#Virtual-kubelet虚节点创建原生容器Pod时默认选择的实例规格族
 
 ```  
-
 2. Virtual-Kubelet的部署文件：  
 
 - virtual-kubelet-serviceaccount：创建 Virtual-Kubelet 对应的 serviceaccount，提供访问K8S APIserver、 操作 Pod 等资源的权限。  

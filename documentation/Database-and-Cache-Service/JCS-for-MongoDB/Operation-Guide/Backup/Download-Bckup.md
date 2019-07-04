@@ -8,7 +8,7 @@ MongoDB 实例的备份文件支持下载，您可以根据需要自行下载备
 1. 在"实例详情"页面，点击 **备份与恢复**， 查看备份数据。
 1. 选择要下载的备份，在操作项中，点击 **下载**，打开"下载弹窗"。
 	
-   ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-020.png)
+    ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-020.png)
 
 1. 下载备份文件到本地。
 

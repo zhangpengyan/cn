@@ -41,14 +41,14 @@
 以Java SDK为例进行说明，其他方式及开发语言请参考其他章节。
 
 1. 引入依赖
-```
+```XML
 <dependency>
    <groupId>com.jdcloud</groupId>
    <artifactId>jcq-java-sdk</artifactId>
-   <version>1.0.2</version>
+   <version>${jcq.sdk.version}</version>
 </dependency>
 ```
-2. 发送代码部分请参考demo示例：[jcq-sdk-demo.zip](http://jcq-inuse-important-cannotdelete.oss.cn-north-1.jcloudcs.com/jcq-sdk-demo.zip)。
+2. 发送和订阅代码部分请参考demo示例：[jcq-sdk-demo.zip](http://jcq-inuse-important-cannotdelete.oss.cn-north-1.jcloudcs.com/jcq-sdk-demo.zip)。
 
 ### 说明：
 
@@ -56,5 +56,5 @@
 
 2. 服务端在尝试推送消息16次均失败后，消息会进入死信队列，在死信队列保存时间为消息的生命周期3天，超过消息生命周期消息不可恢复、重发。
 
-3. Spring框架下集成消息队列 JCQ，请参考demo示例：[jcq-spring-demo.zip](http://jcq-inuse-important-cannotdelete.oss.cn-north-1.jcloudcs.com/jcq-spring-demo.zip)。
+3. Spring框架下消息队列 JCQ的集成，请参考demo示例：[jcq-spring-demo.zip](http://jcq-inuse-important-cannotdelete.oss.cn-north-1.jcloudcs.com/jcq-spring-demo.zip)。
 

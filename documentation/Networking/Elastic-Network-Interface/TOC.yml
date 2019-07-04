@@ -64,24 +64,9 @@
           - name: Linux临时配置
             href: Operation-Guide/VM-Configuration/Linux-Temporary-Configuration.md    
           - name: Linux永久配置
-            href: Operation-Guide/VM-Configuration/Linux-Permanent-Configuration.md  
-  - name: 最佳实践
-    items:
-    status: 0
-  - name: 问题排查
-    items:
-    status: 0      
+            href: Operation-Guide/VM-Configuration/Linux-Permanent-Configuration.md   
   - name: 常见问题
-    href: FAQ/FAQ.md
-  - name: API参考
-    href:
-    status: 0      
-  - name: SDK参考
-    href:
-    status: 0      
-  - name: 用户协议
-    items:
-    status: 0        
+    href: FAQ/FAQ.md         
   - name: 相关资源
     items:
     - name: 文档历史记录

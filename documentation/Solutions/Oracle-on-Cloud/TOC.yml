@@ -1,0 +1,11 @@
+  name: Oracle 上云
+  href: 
+  items:
+  - name: Oracle 上云概述
+    href: Solution-Overview.md
+  - name: 搭建共享存储
+    href: Building-Shared-Storages.md
+  - name: 设置IP及组播
+    href: Setting-Multicase.md 
+  - name: 主要步骤
+    href: Key-Steps.md

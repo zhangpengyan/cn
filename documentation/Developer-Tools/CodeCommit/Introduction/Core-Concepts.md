@@ -3,5 +3,5 @@
 
 | 术语名称     |   解释 | 
 | :--------: | :--------:| 
-| Group  | 指定Namespace，支持用户管理Group | 
-| Project  | Project可属于某个Group，也可属于User | 
+| 群组（Group）  | 指定Namespace，支持用户管理群组 | 
+| 项目（Project）  | 项目可属于某个群组，也可属于用户（User） | 

@@ -12,7 +12,7 @@
 
 2. 在购买页面中选择所需购买的”地域“和”可用区“，并在“规格”一栏选择“性能型SSD云盘”，此时可配置所需云盘的容量和IOPS。
 
-   ![1562321916383](C:\Users\wangguanyang\AppData\Roaming\Typora\typora-user-images\1562321916383.png)
+   ![创建云盘时配置IOPS](/../../image/Elastic-Compute/CloudDisk/cloud-disk/creating_disk_iops.PNG)
 
    IOPS可配置的范围最低为200，最高不超过所创建云硬盘大小(GiB)的50倍且不超过32000。例如：当所创云盘容量为20GB时，IOPS最低为200，最高为20乘50=1000，所以此时IOPS最高可配置为1000；当所创云盘容量为700GB时，700乘50=35000，高于32000，所以此时IOPS最高可配置为32000。
 
@@ -28,7 +28,7 @@
 
 2. 在弹出的修改云硬盘修改框中，可在“IOPS”前的输入框中输入目标IOPS值。可修改的IOPS范围同样为200至32000且不超过该云硬盘容量的50倍。
 
-   ![edit](C:\Users\wangguanyang\Desktop\云盘配置IOPS\edit.png)
+   ![修改已购云盘的IOPS](/../../image/Elastic-Compute/CloudDisk/cloud-disk/edit_iops.png)
 
 3. 修改IOPS后，按配置计费的云盘会实时更新该云盘在此IOPS配置下的最新单价，包年包月云盘会实时计算IOPS变更后的“变配后到期时间”。如您提升了原盘的IOPS，会计算出您需要支付的配置提升所需金额；如您降低了IOPS配置，则会相应延长该云硬盘的到期时间。完成配置后，点击“确定”并完成支付流程（如需支付），即完成了该云盘的IOPS配置调整。
 

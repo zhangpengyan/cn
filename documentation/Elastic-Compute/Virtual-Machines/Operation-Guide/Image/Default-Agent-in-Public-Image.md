@@ -56,7 +56,7 @@ https://bj-jcs-agent-linux.s3.cn-north-1.jdcloud-oss.com/jcloud-jcs-agent-linux-
 https://bj-jcs-agent-linux.s3.cn-north-1.jdcloud-oss.com/jcloud-jcs-agent-linux.zip <br>
 
 2、在存放安装包和脚本的目录中执行下述命令进行安装。<br>
-```bash
+```
 python jcloud-jcs-agent-linux-deploy.py install
 ```
 
@@ -87,40 +87,40 @@ Ifrit是京东云自研的轻量、通用的部署运维工具，可实现对其
 ### 安装方式
 **Linux：** <br>
 * 公网/外网环境：<br>
-```bash
+```
 wget -c http://devops-hb.s3.cn-north-1.jdcloud-oss.com/ifrit/ifrit-agent-external-v0.01.465.534ae3d.20190523181914.bin -O installer && sh installer -- -a jcs-agent-core,jcs-agent-upgrade,jcs-agent-script,jcs-agent-monitor -O /usr/local/share/jcloud/ifrit && rm -f installer
 ```
 
 * 京东云内网环境<br>
-```bash
+```
 curl -fsSL http://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install_jcs | bash
 ```
 
 **Windows:** <br>
 * 公网/外网环境：<br>
-```powershell
+```
 ($client = new-object System.Net.WebClient) -and ($client.DownloadFile('http://devops-hb.s3.cn-north-1.jdcloud-oss.com/ifrit/ifrit-external-v0.01.461.56ff760.20190517095556.exe', 'c:\ifrit.exe')) -or (Start-Process 'c:\ifrit.exe')
 ```
 
 * 京东云内网环境<br>
 
 ① 华北-北京：<br>
-```powershell
+```
 ($client = new-object System.Net.WebClient) -and ($client.DownloadFile('http://devops-hb.s3-internal.cn-north-1.jdcloud-oss.com/ifrit/ifrit-external-v0.01.461.56ff760.20190517095556.exe', 'c:\ifrit.exe')) -or (Start-Process 'c:\ifrit.exe')
 ```
 
 ② 华东-上海：<br>
-```powershell
+```
 ($client = new-object System.Net.WebClient) -and ($client.DownloadFile('http://devops-hd.s3-internal.cn-east-2.jdcloud-oss.com/ifrit/ifrit-external-v0.01.461.56ff760.20190517095556.exe', 'c:\ifrit.exe')) -or (Start-Process 'c:\ifrit.exe')
 ```
 
 ③ 华东-宿迁：<br>
-```powershell
+```
 ($client = new-object System.Net.WebClient) -and ($client.DownloadFile('http://devops-sq.s3-internal.cn-east-1.jdcloud-oss.com/ifrit/ifrit-external-v0.01.461.56ff760.20190517095556.exe', 'c:\ifrit.exe')) -or (Start-Process 'c:\ifrit.exe')
 ```
 
 ④ 华南-广州：<br>
-```powershell
+```
 ($client = new-object System.Net.WebClient) -and ($client.DownloadFile('http://devops.s3-internal.cn-south-1.jdcloud-oss.com/ifrit/ifrit-external-v0.01.461.56ff760.20190517095556.exe', 'c:\ifrit.exe')) -or (Start-Process 'c:\ifrit.exe')
 ```
 
@@ -144,11 +144,12 @@ Jdog-Monitor是京东云提供的针对核心安全组件的升级插件，可�
 ### 安装方式
 当前仅提供Linux系统的安装方式。<br>
 **Linux：**<br>
+
 1、下载安装包：（非华北地域主机请绑定公网IP后下载）<br>
 https://iaas-cns-download.oss.cn-north-1.jcloudcs.com/JdogMonitor/jdog-op-agent-master-fbe96b07-0306202642.tar <br>
 
 2、运行以下指令进行安装。<br>
-```bash
+```
 mkdir -p /usr/local/share/jcloud/jdog-monitor
 tar zxvf jdog-op-agent-master-fbe96b07-0306202642.tar -C /usr/local/share/jcloud/jdog-monitor
 /usr/local/share/jcloud/jdog-monitor/scripts/jdog_service install

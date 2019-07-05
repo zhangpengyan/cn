@@ -17,10 +17,5 @@
         href: Operation-Guide/Task-Management.md
       - name: 风险管理
         href: Operation-Guide/Risk-Management.md         
-  - name: 常见问题
-    href: FAQ/FAQ.md
-  - name: 版本更新
-    href: Related-Resources/Release-Notes.md 
-  - name: 服务条款
-    href: SLA/SLA.md
+
 

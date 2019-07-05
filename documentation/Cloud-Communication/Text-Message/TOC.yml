@@ -1,4 +1,4 @@
-name: 短信服务
+name: 文本短信
 href:
 items:
 - name: 产品简介
@@ -29,6 +29,10 @@ items:
       href: Operation-Guide/send.md
     - name: 统计分析
       href: Operation-Guide/stat.md
+- name: SDK参考
+  items:
+    - name: 环境准备
+      href: SDK-Rerference/Environment-Preparation.md      
 - name: 相关协议
   items:
     - name: 服务协议

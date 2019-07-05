@@ -12,11 +12,11 @@
       - name: 威胁概览
         href: Operation-Guide/Threat-Overview.md
       - name: 资产管理
-        href: Operation-Guide/Attack-Details.md
+        href: Operation-Guide/Asset-Management.md
       - name: 任务管理
-        href: Operation-Guide/Weakness-Details.md
+        href: Operation-Guide/Task-Management.md
       - name: 风险管理
-        href: Operation-Guide/Configuration-Change.md         
+        href: Operation-Guide/Risk-Management.md         
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 版本更新

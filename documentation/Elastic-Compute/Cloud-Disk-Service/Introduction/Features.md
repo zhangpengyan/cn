@@ -9,7 +9,7 @@
 | 单盘容量       | 20-4000G                                                     | 20-4000G                                             | 20-4000G                                                     |
 | 单盘最大IOPS   | 15000                                                        | 32000                                                | 500                                                          |
 | 单盘最大吞吐量 | 150MBps                                                      | 150MBps                                              | 80MBps                                                       |
-| 单盘性能公式   | min(max(500，10&times;size)，15000)                          | min(30&times;size，32000)                            | 不适用                                                       |
+| 单盘性能公式   | min(max(500，10&times;size)，15000)                          | min(30&times;size，32000)  可按需配置                          | 不适用                                                       |
 | 单盘吞吐公式   | min（max（80, 0.2&times;size），150）                        | min（max（120, 0.5&times;size），150）               | 不适用                                                       |
 | 数据持久性     | 99.9999999%                                                  | 99.9999999%                                          | 99.9999999%                                                  |
 | API名称        | ssd.gp1                                                      | ssd.io1                                              | hdd.std1                                                     |

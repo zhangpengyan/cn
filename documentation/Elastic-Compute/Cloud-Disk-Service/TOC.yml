@@ -78,6 +78,9 @@
         - name: 云硬盘监控
           href: Getting-Started/Cloud-Disk/CDS-Monitoring.md
           
+    - name: 性能型SSD云盘配置IOPS
+      href: Getting-Started/Cloud-Disk/Editing_Iops.md
+          
   - name: 快照操作指南
     items:
     - name: 创建云硬盘快照

@@ -60,7 +60,7 @@ Web扫描配置：爬虫深度：默认为3，最大可设置为6，由于启动
 | web漏洞扫描 |	跨站脚本攻击（XSS）检测
 | web漏洞扫描 |	SQL注入攻击检测
 | web漏洞扫描 |	本地文件包含（LFI）检测
-| web漏洞扫描 |	Struts2历史高危漏洞检测ch
+| web漏洞扫描 |	Struts2历史高危漏洞检测
 | web漏洞扫描 |	心脏出血（HeartBleed）漏洞检测
 | web漏洞扫描 |	破壳（ShellShock）漏洞检测
 | web漏洞扫描  |	WordPress 远程代码执行漏洞检测（CVE-2016-10033）

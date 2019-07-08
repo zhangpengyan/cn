@@ -50,7 +50,7 @@ items:
           - name: queryLiveDomainApps
             href: JCloud-Openapi-For-CDN/queryLiveDomainApps.md
           - name: queryPushDomainORAppOrStream
-            href: JCloud-OpenApi-For-CDN/queryPushDomainORAppOrStream.md
+            href: JCloud-Openapi-For-CDN/queryPushDomainORAppOrStream.md
           - name: getSslCertDetail
             href: SSL-Certificate/getSslCertDetail.md
           - name: getSslCertList
@@ -112,7 +112,7 @@ items:
           - name: setFollowSourceProtocol
             href: JCloud-Openapi-For-CDN/setFollowSourceProtocol.md
           - name: uploadCert
-            href: JCloud-Openapi-For-CDN/uploadCert.md
+            href: SSL-Certificate/uploadCert.md
           - name: queryDomainConfig
             href: JCloud-Openapi-For-CDN/queryDomainConfig.md
 

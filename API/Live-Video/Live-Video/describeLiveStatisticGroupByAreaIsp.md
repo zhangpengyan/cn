@@ -14,11 +14,11 @@ https://live.jdcloud-api.com/v1/describeLiveStatisticGroupByAreaIsp
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**domainName**|String|True| |推流域名|
+|**domainName**|String|True| |播放域名|
 |**appName**|String|True| |应用名称|
 |**streamName**|String|True| |流名称|
-|**ispName**|String|False| |运营商<br>|
-|**locationName**|String|False| |查询的区域，如beijing,shanghai。多个用逗号分隔<br>|
+|**ispName**|String|False| |[运营商](../Reference/Operator.md)|
+|**locationName**|String|False| |[地域](../Reference/Region.md)，如beijing,shanghai。多个用逗号分隔<br>|
 |**protocolType**|String|False| |查询的流协议类型，取值范围："rtmp,hdl,hls"，多个时以逗号分隔<br>|
 |**period**|String|False| |查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点<br>|
 |**startTime**|String|True| |起始时间<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>|

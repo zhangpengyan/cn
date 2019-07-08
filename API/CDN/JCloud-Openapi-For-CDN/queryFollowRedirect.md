@@ -1,14 +1,14 @@
-# queryMonitor
+# queryFollowRedirect
 
 
 ## 描述
-查询源站监控信息
+查询回源302跳转信息
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/domain/{domain}/monitor
+https://cdn.jdcloud-api.com/v1/domain/{domain}/followRedirect
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -27,10 +27,8 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/monitor
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**domain**|String|域名|
-|**cycle**|Integer|探测周期，单位分钟|
-|**monitorPath**|String|探测路径|
-|**httpRequestHeader**|Object|查询结果,类型为HashMap<String, Object>|
+|**domain**|String| |
+|**followRedirect**|String| |
 
 ## 返回码
 |返回码|描述|

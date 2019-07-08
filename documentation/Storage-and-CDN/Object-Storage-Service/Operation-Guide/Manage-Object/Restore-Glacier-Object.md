@@ -2,11 +2,11 @@
 
 ## 简介
 
-您可以通过对象存储控制台，对已归档的对象进行还原，以便能够继续被访问或进行其他操作。如需了解对象的存储类型，请参见[对象存储类型介绍](../Introduction/StorageClass-Overview.md)。
+您可以通过对象存储控制台，对已归档的对象进行还原，以便能够继续被访问或进行其他操作。如需了解对象的存储类型，请参见[对象存储类型介绍](../../Introduction/StorageClass-Overview.md)。
 
-该还原操作会新增一个标准存储类型的对象副本，对象副本可以进行正常的操作，包括读取、下载等。对象副本产生的费用按照标准存储计费。如您未删除源对象，源对象将继续按归档存储类型计费。有关定价详情，请参见[计费说明](../Pricing/Billing-Rules.md)。
+该还原操作会新增一个标准存储类型的对象副本，对象副本可以进行正常的操作，包括读取、下载等。对象副本产生的费用按照标准存储计费。如您未删除源对象，源对象将继续按归档存储类型计费。有关定价详情，请参见[计费说明](../../Pricing/Billing-Rules.md)。
 
-如需使用API还原归档对象，请参见[Post-Object-Restore](../API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Post-Object-Restore.md)
+如需使用API还原归档对象，请参见[Post-Object-Restore](../../API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Post-Object-Restore.md)
 
 ## 操作步骤
 

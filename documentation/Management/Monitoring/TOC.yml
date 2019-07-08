@@ -91,6 +91,9 @@ items:
           href: Operation-Guide/Usability-Monitor/UM-view.md
         - name: 设置报警规则
           href: Operation-Guide/Usability-Monitor/UM-alarm.md
+        - name: 监控插件Agent升级说明
+          href: Operation-Guide/Usability-Monitor/NotesofAgentupgrade.md
+          
     - name: 自定义监控 
       items:
         - name: 自定义监控概述

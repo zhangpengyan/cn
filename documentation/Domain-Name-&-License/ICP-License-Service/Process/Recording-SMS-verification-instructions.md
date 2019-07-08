@@ -56,7 +56,7 @@
 
 **云南**：yn.beian.miit.gov.cn
 
-![1.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-1.png>)
+![1.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-1.png)
 
 **验证码发送原则**
 
@@ -102,25 +102,25 @@
 
 1.访问备案所在省市管局网站，单击管局网站页面上      **备案短信核验** 按钮，进入核验页面。
 
-![2.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-2.png>)
+![2.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-2.png)
 
 2.填写信息：验证码、手机号码、证件号码后六位数，完成图形验证，再单击      **验证** 。
 
-![3.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-3.png>)
+![3.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-3.png)
 
 验证通过后，系统提示核验完成。如果您的备案订单中，还有其他需验证的手机号，请继续完成。
 
-![4.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-4.png>)
+![4.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-4.png)
 
 **注意：**
 
 - 如果您的信息输入错误，或输入的三条信息（证件号码、手机号码、验证码）不匹配，则系统找不到对应的订单。系统提示找不到记录。请核实信息后，重新输入。
 
-![5.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-5.png>)
+![5.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-5.png)
 
 - 如果负责人证件号码输错 5 次以后，系统提示短信核验失败。您的备案申请信息将被工信部系统退回。
 
-![6.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-6.png>)
+![6.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-6.png)
 
 **未收到验证短信，怎么办？**
 
@@ -141,18 +141,18 @@
 
 1.访问备案所在省市管局网站，单击管局网站页面上      **备案短信核验** 按钮。
 
-![7.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-7.png>)
+![7.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-7.png)
 
-2.单击 **发送短信**      ，进入核验短信重发页面。
+2.单击 **发送短信**，进入核验短信重发页面。
 
-![8.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-8.png>)
+![8.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-8.png)
 
 3.填写您需验证的手机号码和证件号码后 6 位数，完成图形验证，然后单击 **发通知信**。
 
-![9.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-9.png>)
+![9.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-9.png)
 
 发送成功通知：**您的短信已发送成功。**
 
-![10.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-10.png>)
+![10.png](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-10.png)
 
 查看手机，获取验证码，并在管局网站页面完成验证。

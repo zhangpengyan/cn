@@ -1,14 +1,14 @@
-# getDomainList
+# getDomainListByFilter
 
 
 ## 描述
-查询加速域名接口
+通过标签查询加速域名接口
 
 ## 请求方式
-GET
+POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/domain
+https://cdn.jdcloud-api.com/v1/domain:query
 
 
 ## 请求参数
@@ -16,11 +16,17 @@ https://cdn.jdcloud-api.com/v1/domain
 |---|---|---|---|---|
 |**keyWord**|String|False| |根据关键字进行模糊匹配|
 |**x-jdcloud-channel**|String|False|cdn|域名来源cdn/cdn,video视频云|
-|**pageNumber**|Integer|False|1|pageNumber,默认值1|
-|**pageSize**|Integer|False|20|pageSize,最大值50,默认值20|
+|**pageNumber**|Integer|False|1|pageNumber,默认值为1|
+|**pageSize**|Integer|False|20|pageSize,默认值为20,最大值为50|
 |**status**|String|False| |根据域名状态查询, 可选值[offline, online, configuring, auditing, audit_reject]|
 |**type**|String|False| |域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有|
+|**tagFilters**|TagFilter[]|False| |标签过滤条件|
 
+### TagFilter
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**key**|String|False| | |
+|**values**|String[]|False| | |
 
 ## 返回参数
 |名称|类型|描述|
@@ -34,8 +40,8 @@ https://cdn.jdcloud-api.com/v1/domain
 |**totalCount**|Integer| |
 |**pageSize**|Integer| |
 |**pageNumber**|Integer| |
-|**domains**|ListDomainItem[]|域名列表|
-### ListDomainItem
+|**domains**|ListDomainItemByFilter[]| |
+### ListDomainItemByFilter
 |名称|类型|描述|
 |---|---|---|
 |**cname**|String| |
@@ -46,6 +52,12 @@ https://cdn.jdcloud-api.com/v1/domain
 |**status**|String| |
 |**type**|String| |
 |**auditStatus**|String| |
+|**tags**|Tag[]| |
+### Tag
+|名称|类型|描述|
+|---|---|---|
+|**key**|String| |
+|**value**|String| |
 
 ## 返回码
 |返回码|描述|

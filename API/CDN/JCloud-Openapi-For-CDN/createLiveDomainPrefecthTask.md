@@ -1,23 +1,22 @@
-# operateLiveDomainIpBlackList
+# createLiveDomainPrefecthTask
 
 
 ## 描述
-开启或关闭ip黑名单
+创建直播预热任务
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
+https://cdn.jdcloud-api.com/v1/task:createLivePrefetchTask
 
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**domain**|String|True| |用户域名|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**blackIpsEnable**|String|False| | |
+|**urlList**|String[]|False| |预热的URL|
+|**prefetchTime**|Integer|False| |预热时长|
+|**action**|String|False| |操作类型只能是[start,stop]中的一种|
 
 
 ## 返回参数

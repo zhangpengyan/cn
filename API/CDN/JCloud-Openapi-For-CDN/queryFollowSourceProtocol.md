@@ -1,14 +1,14 @@
-# queryMonitor
+# queryFollowSourceProtocol
 
 
 ## 描述
-查询源站监控信息
+查询协议跟随回源
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/domain/{domain}/monitor
+https://cdn.jdcloud-api.com/v1/domain/{domain}/followSourceProtocol
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -27,10 +27,8 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/monitor
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**domain**|String|域名|
-|**cycle**|Integer|探测周期，单位分钟|
-|**monitorPath**|String|探测路径|
-|**httpRequestHeader**|Object|查询结果,类型为HashMap<String, Object>|
+|**domain**|String| |
+|**followProtocolStatus**|String| |
 
 ## 返回码
 |返回码|描述|

@@ -1,14 +1,14 @@
-# createCacheRule
+# queryPushDomainORAppOrStream
 
 
 ## 描述
-添加缓存规则
+查询用户推流域名app名/流名
 
 ## 请求方式
-POST
+GET
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/domain/{domain}/cacheRule
+https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/stream:fuzzyQuery
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,10 +17,9 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/cacheRule
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**weight**|Integer|False| |此条配置的权重值, 取值范围为1-10,1最大|
-|**ttl**|Long|False| |缓存时间,单位秒|
-|**contents**|String|False| |规则内容。其他类型只能以/或者.开头，如/a/b或.jpg|
-|**cacheType**|Integer|False| |缓存方式：0、不缓存，1自定义|
+|**app**|String|False| |app名，传appName查询流名列表|
+|**stream**|String|False| |流名模糊查询|
+|**limit**|Long|False|50|指定app/流名列表大小，默认50|
 
 
 ## 返回参数
@@ -32,7 +31,7 @@ https://cdn.jdcloud-api.com/v1/domain/{domain}/cacheRule
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**configId**|Long|缓存规则配置ID|
+|**streams**|String[]| |
 
 ## 返回码
 |返回码|描述|

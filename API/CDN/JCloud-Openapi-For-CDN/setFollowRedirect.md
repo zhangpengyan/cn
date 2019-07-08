@@ -1,14 +1,14 @@
-# operateLiveDomainIpBlackList
+# setFollowRedirect
 
 
 ## 描述
-开启或关闭ip黑名单
+设置回源302跳转
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
+https://cdn.jdcloud-api.com/v1/domain/{domain}/followRedirect
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,7 +17,7 @@ https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**blackIpsEnable**|String|False| | |
+|**status**|String|False| |开关取值[on,off]|
 
 
 ## 返回参数

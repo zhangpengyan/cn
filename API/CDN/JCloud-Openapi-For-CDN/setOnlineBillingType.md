@@ -1,23 +1,20 @@
-# operateLiveDomainIpBlackList
+# setOnlineBillingType
 
 
 ## 描述
-开启或关闭ip黑名单
+设置线上计费方式
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
+https://cdn.jdcloud-api.com/v1/onlineBillingType
 
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**domain**|String|True| |用户域名|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**blackIpsEnable**|String|False| | |
+|**allType**|Integer|False| |计费方式,取值[0,1],0:日流量计费,1:日峰值带宽计费.|
 
 
 ## 返回参数

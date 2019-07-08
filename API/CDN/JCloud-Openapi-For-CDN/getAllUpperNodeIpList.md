@@ -1,14 +1,14 @@
-# queryDefaultHttpHeaderKey
+# getAllUpperNodeIpList
 
 
 ## 描述
-查询默认http header头部参数列表
+获取所有上层节点的ip
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/defaultHttpHeaderKey
+https://cdn.jdcloud-api.com/v1/serviceNode:getAllUpperNodeIpList
 
 
 ## 请求参数
@@ -24,11 +24,10 @@ https://cdn.jdcloud-api.com/v1/defaultHttpHeaderKey
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**reqDefaultHttpHeaderKey**|String[]|默认的http请求头|
-|**respDefaultHttpHeaderKey**|String[]|默认的http响应头|
+|**ipList**|String[]| |
 
 ## 返回码
 |返回码|描述|
 |---|---|
-|**200**||
+|**200**|OK|
 |**404**|NOT_FOUND|

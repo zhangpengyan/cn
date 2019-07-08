@@ -1,14 +1,14 @@
-# operateLiveDomainIpBlackList
+# deleteForbiddenStream
 
 
 ## 描述
-开启或关闭ip黑名单
+删除禁播流
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
+https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/stream:unForbidden
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,8 +17,13 @@ https://cdn.jdcloud-api.com/v1/liveDomain/{domain}/ipBlackList:operate
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**blackIpsEnable**|String|False| | |
+|**deleteStreams**|DeleteStream[]|False| |要删除的禁播流|
 
+### DeleteStream
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**stream**|String|False| |禁播流|
+|**app**|String|False| |封禁推流的app|
 
 ## 返回参数
 |名称|类型|描述|

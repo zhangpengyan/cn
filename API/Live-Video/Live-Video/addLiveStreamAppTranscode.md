@@ -18,7 +18,7 @@ https://live.jdcloud-api.com/v1/transcodeApps:config
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
-|**template**|String|True| |转码模版<br>- 取值范围: 系统标准转码模板, 用户自定义转码模板<br>- 系统标准转码模板<br>  ld (h.264/640 * 360/15f)<br>  sd (h.264/960 * 540/24f)<br>  hd (h.264/1280 * 720/25f)<br>  shd (h.264/1920 * 1080/30f)<br>  ld-265 (h.265/640 * 360/15f)<br>  sd-265 (h.265/960 * 540/24f)<br>  hd-265 (h.265/1280 * 720/25f)<br>  shd-265 (h.265/1920 * 1080/30f)<br>|
+|**template**|String|True| |转码模版<br>- 取值范围: 系统标准转码模板, 用户自定义转码模板<br>- 系统标准转码模板<br>  ld (h.264/640 * 360/15f)<br>  sd (h.264/960 * 540/25f)<br>  hd (h.264/1280 * 720/25f)<br>  shd (h.264/1920 * 1080/30f)<br>  ld-265 (h.265/640 * 360/15f)<br>  sd-265 (h.265/960 * 540/25f)<br>  hd-265 (h.265/1280 * 720/25f)<br>  shd-265 (h.265/1920 * 1080/30f)<br>|
 
 
 ## 返回参数

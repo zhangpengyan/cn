@@ -2,7 +2,7 @@
 
 
 ## 描述
-开通、取消实例自动续费
+为一个或多个实例设置自动续费服务。
 
 ## 请求方式
 PUT
@@ -22,13 +22,13 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:autoRenewStatus
 ### SetRenewalParam
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**instanceIds**|String|True| |资源id列表,英文逗号分隔|
-|**autoRenewStatus**|Integer|True| |自动续费状态 0-关闭自动续费,1-开通或修改自动续费|
 |**appCode**|String|True| |业务线|
 |**serviceCode**|String|True| |产品线|
-|**timeSpan**|Integer|False| |续费周期（autoRenewStatus=1时必传）|
-|**timeUnit**|Integer|False| |时间单位 3-月 4-年（autoRenewStatus=1时必传）|
-|**allAutoPay**|Integer|False| |是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus=1时必传）|
+|**timeSpan**|Integer|False| |续费时长(timeUnit=MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit=YEAR时只能传1、2、3)|
+|**timeUnit**|String|False| |时间单位(MONTH-月,YEAR-年)|
+|**instanceIds**|String|True| |资源ID列表,英文逗号分隔|
+|**autoRenewStatus**|String|True| |自动续费状态(OPEN-开通自动续费,CLOSE-关闭自动续费,MODIFY-修改自动续费)|
+|**allAutoPay**|String|False| |是否绑定关联资源一并自动续费(AUTO_RENEW-是,UN_AUTO_RENEW-否)|
 
 ## 返回参数
 |名称|类型|描述|
@@ -39,7 +39,7 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:autoRenewStatus
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**stringResult**|String|更新成功条数|
+|**stringResult**|String|设置成功条数|
 
 ## 返回码
 |返回码|描述|

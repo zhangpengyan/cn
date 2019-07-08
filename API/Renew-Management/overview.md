@@ -1,8 +1,8 @@
-# JDCLOUD Renewal API v2
+# 续费管理
 
 
 ## 简介
-API related to Renewal
+续费管理相关接口
 
 
 ### 版本
@@ -12,6 +12,6 @@ v2
 ## API
 |接口名称|请求方式|功能描述|
 |---|---|---|
-|**queryInstance**|POST|查询可续费实例|
-|**renewInstance**|POST|实例续费|
-|**setRenewal**|PUT|开通、取消实例自动续费|
+|**queryInstance**|POST|提供可续费的实例信息查询。|
+|**renewInstance**|POST|对相关实例进行续费。调用该接口会创建一个续费订单，并自动扣除您账户可用代金券和余额完成支付，如因为某些原因支付失败，订单会自动取消。|
+|**setRenewal**|PUT|为一个或多个实例设置自动续费服务。|

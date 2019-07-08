@@ -2,7 +2,7 @@
 
 
 ## 描述
-实例续费
+对相关实例进行续费。调用该接口会创建一个续费订单，并自动扣除您账户可用代金券和余额完成支付，如因为某些原因支付失败，订单会自动取消。
 
 ## 请求方式
 POST
@@ -24,11 +24,9 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:renew
 |---|---|---|---|---|
 |**appCode**|String|True| |业务线|
 |**serviceCode**|String|True| |产品线|
-|**timeUnit**|Integer|True| |时间单位 3:月 4:年|
-|**timeSpan**|Integer|True| |时长|
-|**sign**|String|True| |签名 md5(pin+serviceCode+key) key为renewalOnline|
-|**instanceIds**|String|True| |待续费资源id列表,英文逗号分隔|
-|**unifyDate**|Integer|False|0|是否统一续费到期日续费 1-是 0-否|
+|**timeSpan**|Integer|True| |续费时长(timeUnit=MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit=YEAR时只能传1、2、3)|
+|**timeUnit**|String|True| |时间单位(MONTH-月,YEAR-年)|
+|**instanceIds**|String|True| |待续费资源ID列表,英文逗号分隔|
 
 ## 返回参数
 |名称|类型|描述|
@@ -39,7 +37,7 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances:renew
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**orderNumber**|String|创建成功的订单id|
+|**orderNumber**|String|创建成功的订单ID|
 
 ## 返回码
 |返回码|描述|

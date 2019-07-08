@@ -26,35 +26,35 @@
 
 **天津**：tj.beian.miit.gov.cn
 
-**山西：**sx.beian.miit.gov.cn
+**山西**：sx.beian.miit.gov.cn
 
-**内蒙古：**nm.beian.miit.gov.cn
+**内蒙古**：nm.beian.miit.gov.cn
 
-**黑龙江：**hl.beian.miit.gov.cn
+**黑龙江**：hl.beian.miit.gov.cn
 
-**浙江：**zj.beian.miit.gov.cn
+**浙江**：zj.beian.miit.gov.cn
 
-**安徽：**ah.beian.miit.gov.cn
+**安徽**：ah.beian.miit.gov.cn
 
-**福建：**fj.beian.miit.gov.cn
+**福建**：fj.beian.miit.gov.cn
 
-**山东：**sd.beian.miit.gov.cn
+**山东**：sd.beian.miit.gov.cn
 
-**河南：**ha.beian.miit.gov.cn
+**河南**：ha.beian.miit.gov.cn
 
-**湖北：**hb.beian.miit.gov.cn
+**湖北**：hb.beian.miit.gov.cn
 
-**湖南：**hn.beian.miit.gov.cn
+**湖南**：hn.beian.miit.gov.cn
 
-**广西：**gx.beian.miit.gov.cn
+**广西**：gx.beian.miit.gov.cn
 
-**重庆：**cq.beian.miit.gov.cn
+**重庆**：cq.beian.miit.gov.cn
 
-**四川：**sc.beian.miit.gov.cn
+**四川**：sc.beian.miit.gov.cn
 
-**陕西：**sn.beian.miit.gov.cn
+**陕西**：sn.beian.miit.gov.cn
 
-**云南：**yn.beian.miit.gov.cn
+**云南**：yn.beian.miit.gov.cn
 
 ![1.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-1.png>)
 
@@ -158,4 +158,3 @@
 ![10.png](<https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190708/image/ICP-License-Service/recording-sms-verification-instructions-cn-10.png>)
 
 查看手机，获取验证码，并在管局网站页面完成验证。
-

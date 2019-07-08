@@ -50,6 +50,12 @@ PIN风险值定义
 
 点击【威胁数量】->【发现漏洞数量】，跳转到 【风险管理】-> 【漏洞维度】
 
+  ![](../../../../image/Website-Threat-Inspector/webscan-risk1.png)
+  
 点击【威胁对象】->【漏洞IP】，跳转到 【风险管理】-> 【IP维度】
 
+  ![](../../../../image/Website-Threat-Inspector/webscan-risk3.png)
+
 点击【威胁对象】->【漏洞域名】，跳转到 【风险管理】-> 【域名维度】
+
+  ![](../../../../image/Website-Threat-Inspector/webscan-risk4.png)

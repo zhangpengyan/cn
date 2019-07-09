@@ -10,7 +10,9 @@ a. 探测目标为URL/IP类型，协议为HTTP(S)时，输入IP地址或域名�
 b. 探测目标为云数据库RDS类型时, 探测协议仅为TELNET，探测目标选择当前已创建的RDS数据库。  
 注：目标类型为云数据库RDS时，是对数据库的内网域名地址进行探测。
 - 若为HTTP(S)，可以支持配置HTTP请求头、Cookie信息，若为Post请求方式时，还支持设置body部分的内容信息。  
+
 ![新建任务](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/create-task-usa.png)
+
 3.点击“确定”按钮，保存监控任务  
 
 **修改监控任务**  

@@ -10,15 +10,13 @@
 |  Jcloudhids   |jcloudhids <br> jcloudhidsupdate    | 安全核心组件，提供安全防护能力    | 无法通过“主机安全”产品获得关于云主机的安全隐患及异常行为监测   |
 | Jdog-Monitor |	jdog-monitor.'版本号'<br>jdog-watchdog<br>jdog-kunlunmirror| 安全辅助插件，实现Jcloudhids的自动升级及其他辅助功能（目前仅安装于Linux系统）|无法获得自动升级Jcloudhids的能力，如后续希望使用基于Jcloudhids开发的新功能，需要手动升级|
 
-* [JCS-Agent](default-agent-in-public-image#JCS-Agent)
-* [Ifrit](default-agent-in-public-image#Ifrit)
-* [Jcloudhids](default-agent-in-public-image#Jcloudhids)
-* [Jdog-Monitor](default-agent-in-public-image#Jdog-Monitor)
+* [JCS-Agent](default-agent-in-public-image#user-content-1)
+* [Ifrit](default-agent-in-public-image#user-content-2)
+* [Jcloudhids](default-agent-in-public-image#user-content-3)
+* [Jdog-Monitor](default-agent-in-public-image#user-content-4)
 
 
-
-<div id="JSC-Agent"></div>
-
+<div id="user-content-1"></div>
 ## JCS-Agent
 ### 组件介绍
 JCS-Agent是京东云自研的云主机核心组件，可提供诸如云主机基本信息（密码、密钥）注入、用户数据注入、Windows系统KSM激活、监控数据上报等功能。
@@ -76,8 +74,8 @@ https://bj-jcs-agent-windows.s3.cn-north-1.jdcloud-oss.com/MD5.exe <br>
 
 3、执行`ps -ef`命令看到JCSAgentCore、MonitorPlugin和UpgradePlugin三个进程即表示安装成功。安装成功后可以删除安装包、安装脚本和MD5工具。
 
-<div id="Ifrit"></div>
 
+<div id="user-content-2"></div>
 ## Ifrit
 ### 组件介绍
 Ifrit是京东云自研的轻量、通用的部署运维工具，可实现对其所管理组件的部署、升级、卸载等管理操作。Ifrit与JCS-Agent配合工作，实现对JCS-Agent的自动化升级。
@@ -124,7 +122,7 @@ curl -fsSL http://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install_jcs | bash
 ($client = new-object System.Net.WebClient) -and ($client.DownloadFile('http://devops.s3-internal.cn-south-1.jdcloud-oss.com/ifrit/ifrit-external-v0.01.461.56ff760.20190517095556.exe', 'c:\ifrit.exe')) -or (Start-Process 'c:\ifrit.exe')
 ```
 
-<div id="Jcloudhids"></div>
+<div id="user-content-3"></div>
 
 ## Jcloudhids
 ### 组件介绍
@@ -135,8 +133,8 @@ Jcloudhids是京东云提供的主机安全核心组件，是“主机安全”�
 ### 安装方式
 请参考：https://docs.jdcloud.com/cn/endpoint-security/getting-started
 
-<div id="Jdog-Monitor"></div>
 
+<div id="user-content-4"></div>
 ## Jdog-Monitor
 ### 组件介绍
 Jdog-Monitor是京东云提供的针对核心安全组件的升级插件，可实现安全相关组件的维护和升级。
@@ -146,7 +144,7 @@ Jdog-Monitor是京东云提供的针对核心安全组件的升级插件，可�
 **Linux：**<br>
 
 1、下载安装包：（非华北地域主机请绑定公网IP后下载）<br>
-https://iaas-cns-download.oss.cn-north-1.jcloudcs.com/JdogMonitor/jdog-op-agent-master-fbe96b07-0306202642.tar <br>
+https://iaas-cns-download.s3.cn-north-1.jdcloud-oss.com/JdogMonitor/jdog-op-agent-master-7a35746b-0709091136.tar <br>
 
 2、运行以下指令进行安装。<br>
 ```

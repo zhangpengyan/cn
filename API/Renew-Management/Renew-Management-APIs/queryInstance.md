@@ -26,7 +26,7 @@ https://renewal.jdcloud-api.com/v2/regions/{regionId}/instances
 |**serviceCode**|String|True| |产品线|
 |**instanceName**|String|False| |资源名称|
 |**instanceId**|String|False| |资源ID|
-|**renewStatus**|String|False| |资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)|
+|**renewStatus**|String|True| |资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)|
 |**billingType**|String|False| |资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部资源|
 |**expireType**|String|False| |资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)|
 |**ipAddress**|String|False| |主机绑定的内网IP地址|

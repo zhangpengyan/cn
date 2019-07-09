@@ -21,16 +21,16 @@
 
 2.选择设置图标对需要可视化的数据进行筛选，否则图表无法支持超过20种数据指标。
 
-![1562290944070](C:\Users\yanyuchao2\AppData\Roaming\Typora\typora-user-images\1562290944070.png)
+![visualization01](../../../../../image/Blockchain-Data-Service/visualization01.png)
 
 3.保留所要查询的三个数据指标，选择”可视化“中的”区域”，并刷新。
 
-![1562229004386](C:\Users\yanyuchao2\AppData\Roaming\Typora\typora-user-images\1562229004386.png)
+![visualization02](../../../../../image/Blockchain-Data-Service/visualization02.png)
 
 4.对生成的区域图，可以进行更进一步的内容编辑，包括改变颜色，改变坐标轴名称，添加趋势线等诸多功能。
 
-![1562229217434](C:\Users\yanyuchao2\AppData\Roaming\Typora\typora-user-images\1562229217434.png)
+![visualization03](../../../../../image/Blockchain-Data-Service/visualization03.png)
 
 5.完成该次查询，三者的关系如下图所示，移动鼠标所指可查看详细数据。
 
-![1562229375867](C:\Users\yanyuchao2\AppData\Roaming\Typora\typora-user-images\1562229375867.png)
+![visualization04](../../../../../image/Blockchain-Data-Service/visualization04.png)

@@ -1,7 +1,4 @@
-# 系统架构
-
-
-## ![1562210445226](C:\Users\yanyuchao2\AppData\Roaming\Typora\typora-user-images\1562210445226.png)
+## ![framework](../../../../image/Blockchain-Data-Service/framework.png)
 
 
 

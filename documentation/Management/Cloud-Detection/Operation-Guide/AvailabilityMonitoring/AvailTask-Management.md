@@ -33,5 +33,6 @@ b. 探测目标为云数据库RDS类型时, 探测协议仅为TELNET，探测目
 
 **删除任务**  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
+![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png)
 2.选中要删除的监控任务，点击操作列下的“更多->删除”按钮，或者选择任务前边的复选框，点击批量“删除”按钮。  
 3.在确认删除提示框中，点击“确定”按钮即可。

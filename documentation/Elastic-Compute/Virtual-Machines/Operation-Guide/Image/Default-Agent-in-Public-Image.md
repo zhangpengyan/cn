@@ -10,10 +10,10 @@
 |  Jcloudhids   |jcloudhids <br> jcloudhidsupdate    | 安全核心组件，提供安全防护能力    | 无法通过“主机安全”产品获得关于云主机的安全隐患及异常行为监测   |
 | Jdog-Monitor |	jdog-monitor.'版本号'<br>jdog-watchdog<br>jdog-kunlunmirror| 安全辅助插件，实现Jcloudhids的自动升级及其他辅助功能（目前仅安装于Linux系统）|无法获得自动升级Jcloudhids的能力，如后续希望使用基于Jcloudhids开发的新功能，需要手动升级|
 
-* [JCS-Agent](Default-Agent-in-Public-Image#JCS-Agent)
-* [Ifrit](Default-Agent-in-Public-Image#Ifrit)
-* [Jcloudhids](Default-Agent-in-Public-Image#Jcloudhids)
-* [Jdog-Monitor](Default-Agent-in-Public-Image#Jdog-Monitor)
+* [JCS-Agent](default-agent-in-public-image#JCS-Agent)
+* [Ifrit](default-agent-in-public-image#Ifrit)
+* [Jcloudhids](default-agent-in-public-image#Jcloudhids)
+* [Jdog-Monitor](default-agent-in-public-image#Jdog-Monitor)
 
 
 

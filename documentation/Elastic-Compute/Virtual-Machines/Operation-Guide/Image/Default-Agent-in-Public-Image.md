@@ -146,7 +146,7 @@ Jdog-Monitor是京东云提供的针对核心安全组件的升级插件，可�
 **Linux：**<br>
 
 1、下载安装包：（非华北地域主机请绑定公网IP后下载）<br>
-https://iaas-cns-download.oss.cn-north-1.jcloudcs.com/JdogMonitor/jdog-op-agent-master-fbe96b07-0306202642.tar <br>
+https://iaas-cns-download.s3.cn-north-1.jdcloud-oss.com/JdogMonitor/jdog-op-agent-master-7a35746b-0709091136.tar <br>
 
 2、运行以下指令进行安装。<br>
 ```

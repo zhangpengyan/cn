@@ -33,7 +33,8 @@ OSS 的所有收费项目都是单独计费的，例如：您在 OSS 的存储�
 
 ###  存储费用
 <div id="user-content-3"></div>
-OSS 服务提供多种存储类型：标准存储类型、归档存储类型、低冗余存储类型。详情请参见[存储类型介绍](../Introduction/StorageClass-Overview.md)。
+
+OSS 服务提供多种存储类型：标准存储类型、归档存储类型、低冗余存储类型。详情请参见 [存储类型介绍](../Introduction/StorageClass-Overview.md)。
 
 存储费用根据实际存储容量收取，不同的存储类型，产生的存储费用说明如下：
 

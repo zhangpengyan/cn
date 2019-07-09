@@ -1,5 +1,14 @@
 # 安装监控插件
-1.选择需要作为探测源的云主机（仅支持Linux类主机），登录该云主机。  
+选择需要作为探测源的云主机（仅支持Linux类主机），登录该云主机。  
+1. 配置credential文件  
+  - 创建 ~/.jdc/monitor_credentials.yml 文件  
+  - 编缉并保存monitor_credentials.yml文件，文件内容为：  
+   ```
+   ak: xxxxxxx(填写YourAccessKeyID)   
+   sk: xxxxxxx(填写YourAccessKeySecret) 
+   ```
+   注： ak\sk内容填写须符合yaml语法（键值对之间必须要有空格），否则会读取ak\sk失败。如: ak:(空格)xxxxxx
+
 2.根据该云主机所在地域，复制以下命令至云主机。  
 
 地域 | 安装命令
@@ -14,28 +23,3 @@
 3.敲击回车键，执行安装操作。  
 ![安装Agent](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/install-2.png)  
 注：如果安装失败，1-3分钟后重新执行安装命令。多次失败，请联系客服。
-
-4.配置credential文件  
-**根据当前执行agent安装操作的用户来创建monitor_credentials.yml文件存放目录。**  
-  - 使用root用户安装agent，执行操作：  
-    ```
-    mkdir -p /root/.jdcloud/  
-    ```  
-    其完整的monitor_credentials.yml文件存放路径为：/root/.jdcloud/monitor_credentials.yml  
-    
-  - 非root用户安装agent,执行操作：  
-    ```
-    mkdir -p /home/{USER}/.jdcloud/  
-    ```  
-    其完整的monitor_credentials.yml文件存放路径为 ：/home/{USER}/.jdcloud/monitor_credentials.yml  
-    注：{USER}需要替换为实际执行agent安装操作的用户名
-    
-   注：请按照以上路径创建文件，路径错误则agent无法正常工作，导致无监控数据。 
-   
-**编缉并保存monitor_credentials.yml文件，文件内容为：**  
-
-   ```
-   ak: xxxxxxx(填写YourAccessKeyID)   
-   sk: xxxxxxx(填写YourAccessKeySecret) 
-   ```
-   注： ak\sk内容填写须符合yaml语法（键值对之间必须要有空格），否则会读取ak\sk失败。如: ak:(空格)xxxxxx

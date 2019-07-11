@@ -23,10 +23,14 @@
 
 1. PC 的个人实名认证展示待扫描的二维码
 
-2. 您需要下载京东云 APP 
+![](../../../image/User/personal/%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+
+2. 您需要下载[京东云 APP](https://console.jdcloud.com/download)
 
 3. 使用京东云 APP 的扫一扫功能扫描 PC 端的二维码
 
 4. 根据 APP 提示完成扫脸认证
+
+![](../../../image/User/personal/052334.AI-2%E4%BF%A1%E6%81%AF%E7%A1%AE%E8%AE%A4.png)
 
 5. 扫脸校验通过后，您可以在 PC 端查看实名认证状态

@@ -6,7 +6,7 @@
 
 示例请求
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/metrics?serviceCode=vm
 ```
 
@@ -70,13 +70,13 @@ https://monitor.jdcloud-api.com/v1/metrics?serviceCode=vm
 
 示例请求
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/regions/cn-north-1/metrics/memory.usage/metricData?timeInterval=1h&serviceCode=vm&resourceId=i-test01&tags.1.key=role&tags.1.values.1=M
 ```
 
 返回
 
-```json
+```
 {
     "requestId": "4b2d2495-33d4-4b44-a0c1-a9deb31370a1",
     "result": {
@@ -149,13 +149,13 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/metrics/memory.usage/metri
 
 请求示例
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/regions/cn-north-1/metrics/memory.usage/lastDownsample?timeInterval=1h&serviceCode=vm&resourceId=i-test01
 ```
 
 返回
 
-```json
+```
 {
     "requestId": "345b7934-f178-46a2-bfc8-786e8af363fb",
     "result": {

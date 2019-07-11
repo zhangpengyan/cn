@@ -6,13 +6,13 @@
 
 示例请求
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/metricsForCreateAlarm?serviceCode=vm
 ```
 
 返回
 
-```json
+```
 {
     "requestId": "11111",
     "result": {
@@ -75,14 +75,14 @@ https://monitor.jdcloud-api.com/v1/metricsForCreateAlarm?serviceCode=vm
 
 示例请求
 
-```go
+```
 https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 ```
 
 
 参数
 
-```json
+```
 {
     "clientToken": "vm-1562675527",
     "createAlarmSpec": {
@@ -125,7 +125,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 
 返回
 
-```json
+```
 {
     "requestId": "b95ad29e-4c73-4654-a720-41ac35e5ef21",
     "result": {
@@ -142,13 +142,13 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 
 示例请求
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 ```
 
 参数
 
-```json
+```
 {
 	"ids":"alarm-fczoaanast|alarm-46o8wi1tjw"
 }
@@ -156,7 +156,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 
 返回
 
-```json
+```
 {
     "requestId": "1111"
 }
@@ -168,13 +168,13 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 
 示例请求
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms/alarm-fczoaanast
 ```
 
 参数
 
-```json
+```
 {
     "rule": {
         "metric": "memory.usage",
@@ -211,7 +211,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms/alarm-fczoaanast
 
 返回
 
-```json
+```
 {
     "requestId": "b95ad29e-4c73-4654-a720-41ac35e5ef21",
     "result": {
@@ -228,13 +228,13 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms/alarm-fczoaanast
 
 示例请求
 
-```json
+```
 https://monitor.jdcloud-api.com/v1/regions/cn-north-1/alarms
 ```
 
 返回
 
-```json
+```
 {
     "requestId": "7ebd0e7f-b7ce-45e7-a6c8-ed2e2fc06c70",
     "result": {

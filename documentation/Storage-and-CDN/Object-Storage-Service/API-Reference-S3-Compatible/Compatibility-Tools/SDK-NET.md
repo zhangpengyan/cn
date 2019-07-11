@@ -51,8 +51,6 @@ namespace Amazon.Samples.S3
 ## 上传文件
 使用.NET s3Client上传文件。
 ```C#
-AmazonS3Client client = new AmazonS3Client();
- 
 // Create a PutObject request
 PutObjectRequest request = new PutObjectRequest
 {
@@ -63,7 +61,7 @@ PutObjectRequest request = new PutObjectRequest
 };
  
 // Put object
-PutObjectResponse response = client.PutObject(request);
+PutObjectResponse response = s3Client.PutObject(request);
 ```
 
 注：需设置UseChunkEncoding为false，禁用Chunked-Encoding编码

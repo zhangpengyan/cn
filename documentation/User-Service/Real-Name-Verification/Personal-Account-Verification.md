@@ -25,7 +25,7 @@
 
 1. PC 的个人实名认证页面自动展示待扫描的二维码
 
-![](../../../image/User/personal/%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+![](../../../image/User/personal/%E4%BA%8C%E7%BB%B4%E7%A0%8111.jpg)
 
 2. 您需要下载[京东云 APP](https://console.jdcloud.com/download) 并使用京东云 APP 的扫一扫功能扫描 PC 端的二维码
 

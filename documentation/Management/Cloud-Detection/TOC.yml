@@ -47,7 +47,7 @@ items:
         - name: 全部报警规则
           href: Operation-Guide/AlarmManagement/AlarmRules.md
         - name: 全部报警历史
-         href: Operation-Guide/AlarmManagement/Alarms.md
+          href: Operation-Guide/AlarmManagement/Alarms.md
 - name: 最佳实践
   items:
     - name: 监控站点质量

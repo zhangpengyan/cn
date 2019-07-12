@@ -31,7 +31,7 @@ items:
         - name: 查看监控图表
           href: Operation-Guide/Site-Monitoring/ViewSiteMonitoring.md
         - name: 报警管理
-          href: Operation-Guide/Site-Monitoring/AlarmRules.md
+          href: Operation-Guide/Site-Monitoring/AlarmRules-site.md
     - name: 可用性监控
       items:
         - name: 安装监控插件
@@ -41,7 +41,7 @@ items:
         - name: 查看监控信息
           href: Operation-Guide/AvailabilityMonitoring/ViewAvailMonitoring.md
         - name: 报警管理
-          href: Operation-Guide/AvailabilityMonitoring/AlarmRules.md
+          href: Operation-Guide/AvailabilityMonitoring/AlarmRules-usa.md
     - name: 报警管理
       items:
         - name: 全部报警规则

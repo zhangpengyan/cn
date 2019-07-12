@@ -3,5 +3,7 @@
 ![规则列表1](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/site-alarmrules.png)
 ![规则列表2](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/usa-alarmrules.png)
 2.输入规则名称或者任务名称，可查询到包含该名称字段的规则信息。  
+
 3.单条规则支持禁用/启用、修改、查看通知对象、报警历史和删除操作。  
+
 4.同时也支持批量启用/禁用 和删除报警规则。

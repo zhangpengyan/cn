@@ -31,6 +31,6 @@
 
 3. 根据 APP 提示完成扫脸认证
 
-![](../../../image/User/personal/app.png)
+![](../../../image/User/personal/%E6%89%AB%E8%84%B8.jpg)
 
 4. 扫脸校验通过后，您可以在 PC 端查看实名认证状态

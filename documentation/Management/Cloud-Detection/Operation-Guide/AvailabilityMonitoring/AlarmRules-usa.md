@@ -1,10 +1,9 @@
-# 报警管理
-## 查看报警规则  
+# 查看报警规则  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png)  
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面，可以查看到已设置的报警规则及其状态信息。  
 ![报警规则](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/alarmrule_usa-1.png)  
-## 设置报警规则  
+# 设置报警规则  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png) 
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面。  
@@ -14,7 +13,7 @@
 4.设置报警规则名称，选择地域、监控项、统计周期、统计方法、计算方法，阈值和持续周期，也可配置报警级别和通知方式。  
 5.点击“下一步”设置通知方式，选择需要通知的联系人或者联系组，点击下一步即可完成报警配置。
 
-## 修改报警规则  
+# 修改报警规则  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png) 
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面。  
@@ -24,14 +23,14 @@
 4.可更改规则名称、地域、监控项、统计周期、统计方法、计算方法，阈值和持续周期及通知周期，也可配置报警级别和通知方式。  
 5.点击“下一步”设置通知方式，可根据需要更改通知的联系人或者联系组以及报警回调（URL执行动作），点击下一步即可完成报警配置的修改。
 
-## 禁用/启用报警规则  
+# 禁用/启用报警规则  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png)
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面。  
 ![报警规则](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/alarmrule_usa-1.png)  
 3. 选中需要禁用/启用的的报警规则， 点击“禁用”/“启用”按钮，即可。
 
-## 查看通知对象  
+# 查看通知对象  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png)
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面。  
@@ -39,7 +38,7 @@
 3.选择需要查看的报警规则，点击“通知对象”，可以查看到该条规则设置的通知联系人。  
 ![联系人](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/contacts.png)
 
-## 报警历史  
+# 报警历史  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png)
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面，选择需要查看的报警规则，点击“报警历史”。   
@@ -47,7 +46,7 @@
 3.可以查看到该条规则历史报警情况。默认展示最近3天的报警历史，支持自定义时间段查看对应告警历史。  
 ![报警历史](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/alarmhistory-usa.png)
 
-## 删除报警规则  
+# 删除报警规则  
 1.登录京东云云拨测控制台，点击“管理->云拨测->可用性监控”，进入监控任务列表页面。  
 ![任务列表](https://raw.githubusercontent.com/luolei-laurel/cn/Cloud-Detection/image/Cloud-Detection/task-usa-list.png)
 2.选中监控任务，点击操作列下“报警规则”，进入到“报警规则”页面。  

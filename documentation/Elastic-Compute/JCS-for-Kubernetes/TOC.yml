@@ -104,7 +104,11 @@
      - name: 在Kubernetes集群上运行Istio
        href: Best-Practices/Deploy-istio.md
      - name: 使用对象存储Bucket作为共享存储
-       href: Best-Practices/Oss-s3fs-volume.md
+       items:
+         - name: 在Kubernetes集群中挂载对象存储Bucket
+           href: Best-Practices/s3fs/Oss-s3fs-volume.md
+         - name: 构建s3fs自定义镜像
+           href: Best-Practices/s3fs/s3fs-custom-image.md
      - name: 部署自定义版本的NVIDIA GPU驱动
        href: Best-Practices/Custom-GPU-driver.md
   - name: 常见问题

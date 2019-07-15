@@ -1,13 +1,15 @@
-# 使用对象存储Bucket作为Kubernetes集群的共享存储
+# 在Kubernetes集群中挂载对象存储Bucket
 S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统，S3fs能够保持对象原来的格式。使用S3fs可以把Bucket当成一个文件夹挂载到Linux系统内部，当成一个系统文件夹使用。更多详情参考[使用S3fs在Linux实例上挂载Bucket](https://docs.jdcloud.com/cn/object-storage-service/s3fs)。本文将使用Daemonset方式，将对象存储Bucket挂载到Kubernetes集群工作节点，并提供应用示例说明如何在两个Pod中共享指定的Bucket存储。
 
 ## 一、使用DaemonSet方式部署挂载S3的BUCKET
 
 1. 创建一个secret保存访问对象存储Bucket的秘钥文件，文件名称保存为s3fs-secret.yaml，执行如下命令创建secret对象；
 
-    `
+    ```
+    wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/s3fs/s3fs-secret.yaml                #请先修改s3fs-secret.yaml文件中的Access_Key_ID、Access_Key_Secret，再执行secret创建操作
+
     kubectl create -f s3fs-secret.yaml
-    `
+    ```
     
     Yaml文件内容如下：
 
@@ -24,8 +26,16 @@ S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统
         Access_Key_ID:Access_Key_Secret     #Access_Key_ID、Access_Key_Secret请分别使用具有指定对象存储Bucket访问权限的Access Key内容替换；
     ```
 
-2. 使用Daemonset方式创建具有s3fs文件系统的Pod，在允许使用对象存储Bucket的工作节点上部署Daemonset，本例将Daemonset部署到集群的全部工作节点上；
+2. 使用Daemonset方式创建具有s3fs文件系统的Pod，在允许使用对象存储Bucket的工作节点上部署Daemonset，本例将Daemonset部署到集群的全部工作节点上，：
 
+  * 执行如下命令创建Daemonset对象:
+
+    ```
+    wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/s3fs/s3fs-ds.yaml                #请先修改s3fs-ds.yaml文件中对象存储Bucket相关的内容，再执行Daemonset创建操作
+
+    kubectl create -f s3fs-ds.yaml
+    ``` 
+  **注**：本例中Daemonset使用的京东云提供的s3fs镜像，您也可以参考[构建s3fs自定义镜像](https://docs.jdcloud.com/cn/jcs-for-kubernetes/s3fs-custom-image)帮助文档说明构建自定义镜像
   * Yaml文件内容如下：
     ```
     
@@ -44,7 +54,7 @@ S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统
         spec:
           containers:
           - name: s3fs-mount
-            image: jdcloud-cn-north-1.jcr.service.jdcloud.com/jdcloud/oss-volumes   
+            image: jdcloud-cn-north-1.jcr.service.jdcloud.com/jdcloud/oss-volumes:latest       #京东云提供的s3fs镜像，您也可以使用自定义的s3fs镜像替换
             securityContext:
               privileged: true        #不可修改，否则对象存储Bucket将无法挂载
             env:
@@ -73,12 +83,19 @@ S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统
 
     ```
 
-  * 将Yaml文件名称保存为s3fs-ds.yaml，执行如下命令创建secret对象；
+* **注**：
 
-    `
-    kubectl create -f s3fs-ds.yaml
-    `
-  * 执行如下命令，确定所有Daemonset处于running状态：
+  * 如需在Pod中使用指定UID、GID访问s3fs的挂载目录，请在SecurityContext中增加runAsUser或runAsGroup定义。
+  * 如需在s3fs-mount container的CMD exec指令中添加其他s3fs自定义参数，可通过env的OPTION添加；例如授权所有用户访问MNT_POINT，请新增一组env定义，name设置为OPTION，value值定义为allow_other（ENV OPTION allow_other）：
+
+    ```
+    - name: OPTION
+      value: allow_other
+    ```
+
+
+
+* 执行如下命令，确定所有Daemonset处于running状态：
     ```
     
     kubectl get daemonset s3fs-mount
@@ -95,9 +112,11 @@ S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统
 
 1. 部署第一个Pod在对象存储中创建一个名称为SUCCESS的文件，将Yaml文件名称保存为test-s3fs-pod1.yaml，执行如下命令创建Pod对象：
 
-    `
+    ```
+    wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/s3fs/test-s3fs-pod1.yaml
+
     kubectl create -f test-s3fs-pod1.yaml
-    `
+    ```
     
     Yaml文件内容如下：
     ```
@@ -137,9 +156,11 @@ S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统
    
 2. 部署第二个Pod在上一步中创建的SUCESS文件中写入字符“helloworld”，将Yaml文件名称保存为test-s3fs-pod2.yaml，执行如下命令创建Pod对象：
 
-    `
+    ```
+    wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/s3fs/test-s3fs-pod2.yaml
+
     kubectl create -f test-s3fs-pod1.yaml
-    `
+    ```
     
     Yaml文件内容如下：
     ```

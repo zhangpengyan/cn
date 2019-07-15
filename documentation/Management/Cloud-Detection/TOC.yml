@@ -38,7 +38,7 @@ items:
           href: Operation-Guide/AvailabilityMonitoring/InstallAgent.md
         - name: 任务管理
           href: Operation-Guide/AvailabilityMonitoring/AvailTask-Management.md
-        - name: 查看监控信息
+        - name: 查看监控图表
           href: Operation-Guide/AvailabilityMonitoring/ViewAvailMonitoring.md
         - name: 报警管理
           href: Operation-Guide/AvailabilityMonitoring/AlarmRules-usa.md

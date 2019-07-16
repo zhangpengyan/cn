@@ -84,7 +84,13 @@ items:
       - name: 网络配置
         href: Operation-Guide/net.md 
       - name: 版本管理
-        href: Operation-Guide/version.md         
+        items:
+          - name: 函数版本概述
+            href: Operation-Guide/version-management/manegement.md
+          - name: 版本
+            href: Operation-Guide/version-management/version.md
+          - name: 别名
+            href: Operation-Guide/version-management/alias.md
       - name: 函数日志
         href: Operation-Guide/function-log.md            
       - name: 函数监控

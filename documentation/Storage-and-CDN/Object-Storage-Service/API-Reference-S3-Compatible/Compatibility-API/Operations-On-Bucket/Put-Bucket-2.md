@@ -11,9 +11,9 @@ Bucket命名规则：<br>
 ## 请求
 
 ## 语法
-```
+```HTTP
 PUT / HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Content-Length: <length>
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
@@ -39,20 +39,18 @@ Authorization: <authorization string> (see Authenticating Requests (AWS Signatur
 ## 示例
 
 ### 请求示例
-```
+```HTTP
 PUT / HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Content-Length: 0
 Date: Wed, 01 Mar  2006 12:00:00 GMT
 Authorization: <authorization string>
 ```
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 236A8905248E5A01
 Date: Wed, 01 Mar  2006 12:00:00 GMT
-
-Location: /colorpictures
 Content-Length: 0
 Connection: close
 Server: JDCloudOSS

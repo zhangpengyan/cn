@@ -5,9 +5,9 @@
 
 ## 请求
 ### 语法
-```
+```HTTP
 DELETE /?cors HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -26,15 +26,15 @@ Authorization: <authorization string> (see Authenticating Requests (AWS Signatur
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 DELETE /?cors HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Tue, 13 Dec 2011 19:14:42 GMT
 Authorization: <authorization string>
 ```
 
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 204 No Content
 x-amz-request-id: 0CF038E9BCF63097
 Date: Tue, 13 Dec 2011 19:14:42 GMT

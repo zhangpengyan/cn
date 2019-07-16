@@ -8,7 +8,7 @@
 POST
 
 ## 请求地址
-https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks
+https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks_simple
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,30 +17,26 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**task**|TransferTaskInfo|False| | |
-|**x-jdcloud-fusion-cloudid**|String|True| |云注册信息ID|
+|**task**|TransferSimpleTaskInfo|False| | |
 
-### TransferTaskInfo
+### TransferSimpleTaskInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**dstAddress**|TaskAddressInfo|False| | |
 |**name**|String|False| |任务名称|
-|**srcAddress**|TaskAddressInfo|False| | |
-### TaskAddressInfo
+|**srcAddress**|SimpleTaskAddressInfo|False| | |
+|**dstAddress**|SimpleTaskAddressInfo|False| | |
+### SimpleTaskAddressInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**accessKey**|String|False| |源地址的accesskey|
+|**cloudID**|String|False| |云信息ID|
 |**bucket**|String|False| |源地址的Bucket|
-|**endpoint**|String|False| |源地址的Endpoint|
 |**prefix**|String|False| |源地址的Prefix，不能以/开头|
-|**secretKey**|String|False| |源地址的securitykey|
-|**storageType**|String|False| |任务类型:源地址中支持 s3file, aliyunfile，目标现在只支持s3file|
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -49,22 +45,23 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks
 ### TransferTaskInfoWithID
 |名称|类型|描述|
 |---|---|---|
-|**dstAddress**|TaskAddressInfo| |
 |**id**|String|任务ID|
 |**name**|String|任务名称|
 |**srcAddress**|TaskAddressInfo| |
+|**dstAddress**|TaskAddressInfo| |
 ### TaskAddressInfo
 |名称|类型|描述|
 |---|---|---|
-|**accessKey**|String|源地址的accesskey|
-|**bucket**|String|源地址的Bucket|
-|**endpoint**|String|源地址的Endpoint|
-|**prefix**|String|源地址的Prefix，不能以/开头|
-|**secretKey**|String|源地址的securitykey|
 |**storageType**|String|任务类型:源地址中支持 s3file, aliyunfile，目标现在只支持s3file|
+|**accessKey**|String|源地址的accesskey|
+|**secretKey**|String|源地址的securitykey|
+|**endpoint**|String|源地址的Endpoint|
+|**bucket**|String|源地址的Bucket|
+|**prefix**|String|源地址的Prefix，不能以/开头|
+|**cloudID**|String|云信息ID|
 
 ## 返回码
 |返回码|描述|
 |---|---|
-|**400**|无效参数|
 |**201**|创建成功|
+|**400**|无效参数|

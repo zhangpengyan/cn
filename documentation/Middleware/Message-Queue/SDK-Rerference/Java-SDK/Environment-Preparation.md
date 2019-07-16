@@ -6,7 +6,7 @@
 
 ## 2. SDK环境依赖
 - 建议使用Maven 方式引入依赖：
-  ```
+  ```XML
   <dependency>
      <groupId>com.jdcloud</groupId>
      <artifactId>jcq-java-sdk</artifactId>

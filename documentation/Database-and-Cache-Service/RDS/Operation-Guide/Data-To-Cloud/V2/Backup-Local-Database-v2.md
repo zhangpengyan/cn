@@ -1,7 +1,7 @@
 # 数据库本地备份
 
 ## 1.  检查数据库恢复模式
-```commandline
+```SQL
 use master;
 go
 select name,   case recovery_model
@@ -17,10 +17,10 @@ go
 - 如果model值为Full，请执行步骤3
 
 用户也可使用使用SQL Server Management Studio客户端工具对数据库进行完整备份，同样需确保数据库的恢复模式为“完整”
-![本地备份1](../../../../../image/RDS/Backup-Local-Database-1.png)
+![本地备份1](../../../../../../image/RDS/Backup-Local-Database-1.png)
 
 ## 2.将数据库的恢复模式设置为Full
-```commandline
+```SQL
 alter database [dbname] set recovery full;
 go
 ```
@@ -29,14 +29,14 @@ go
 
 ## 3.  备份数据库
 下面以备份文件名为testdb.bak为例：
-```commandline
+```SQL
 use master;
 go
 backup database [dbname] to disk   ='z:\Backup\testdb.bak' with compression,init,stats=5;
 go
 ```
 ## 4. 校验备份文件的完整性
-```commandline
+```SQL
 use master;
 go
 restore filelistonly 
@@ -51,7 +51,7 @@ go
 ## 5.还原数据库的恢复模式
 - 如变更过数据库的恢复模式，请执行如下命令，还原数据库的恢复模式；
 - 如没有做过变更，则无需执行该步骤。
-```commandline
+```SQL
 alter database [dbname] set recovery [model];
 go
 ```

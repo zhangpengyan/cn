@@ -12,10 +12,11 @@
   * 函数代码：在代码编辑页面输入Hello World 函数，控制台编辑器默认函数为HelloWorld函数；<br>
   
  
-  ```
+  ```Python
 def handler(event,context):
 print(event)
 return "hello world"
+
 ```
      
   * 函数执行内存：默认128MB；  

@@ -2,7 +2,7 @@
 
 
 ## 描述
-给RDS账号分配数据库权限
+撤销RDS账号在指定数据库的所有权限
 
 ## 请求方式
 DELETE
@@ -12,9 +12,9 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances/{instId}/ac
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
+|**instId**|String|True| |RDS实例ID|
 |**accountName**|String|True| |账号名称|
 |**dbName**|String|True| |数据库名称|
-|**instId**|String|True| |RDS实例ID|
 |**regionId**|String|True| |地域ID|
 
 ## 请求参数

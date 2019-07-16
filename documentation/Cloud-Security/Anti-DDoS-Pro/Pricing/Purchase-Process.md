@@ -12,7 +12,7 @@
 
 ![MongoDB-buy](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/ipanti%20purchase.png)
 
-4.购买的具体操作，请参考[创建实例](https://github.com/jdcloudcom/cn/blob/master/documentation/Cloud-Database-and-Cache/MongoDB/Getting-Started/Create-Instance.md)。
+4.购买的具体操作，请参考[创建实例](../Getting-Started/Create-Instance.md)。
 
 ## 入口2：[IP高防 控制台](https://ip-anti-console.jdcloud.com/instancelist)
 

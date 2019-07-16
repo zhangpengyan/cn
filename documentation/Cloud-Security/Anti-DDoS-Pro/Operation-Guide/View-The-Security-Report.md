@@ -4,6 +4,7 @@ IP高防提供丰富的安全报表，帮助您了解接入高防后的防护效
 ## 操作步骤
 ### 方法1
 1. 登录IP高防 [监控报表页面](https://ip-anti-console.jdcloud.com/charts)。菜单栏位置如下：</BR>
+
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Advanced%20Anti-DDoS/report%2001.png)
 
 2. 默认将显示第一个实例的相关报表。您可以在 **实例名称** 的下拉框中进行实例切换，也可以选择多个或全部实例。若选择多个实例，则报表中图的数据将累加显示。

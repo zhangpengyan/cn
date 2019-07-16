@@ -5,9 +5,9 @@
 
 ## 请求
 ### 语法
-```
+```HTTP
 PUT /?website HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Content-Length: <ContentLength>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
@@ -47,9 +47,9 @@ ReplaceKeyPrefixWith|将替换重定向请求中的 KeyPrefixEquals 值的对象
 ## 示例
 ### 示例1
 以下请求将example.com配置为website。请求中将index.html指定为索引页，将SomeErrorDocument.html指定为错误页面。
-```
+```HTTP
 PUT ?website HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Content-Length: 256
 Date: Thu, 27 Jan 2011 12:00:00 GMT
 Authorization: <authorization string>
@@ -64,7 +64,7 @@ Authorization: <authorization string>
 </WebsiteConfiguration>
 ```
 返回示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 80CD4368BD211111
 Date: Thu, 27 Jan 2011 00:00:00 GMT
@@ -74,9 +74,9 @@ Server: JDCloudOSS
 
 ### 示例2
 该请求中指定RoutingRule中HTTP错误码为特定条件，并指定重定向到ec2-11-22-333-44.compute-1.amazonaws.com/reprot-404/ 下。例如，如果请求ExamplePage.html发生404错误时，将会重定向到 report-404/testPage.html。如果无重定向规则，则返回Error.html。
-```
+```HTTP
 PUT ?website HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Content-Length: 580
 Date: Thu, 27 Jan 2011 12:00:00 GMT
 Authorization: <authorization string>

@@ -35,7 +35,7 @@
         href: Getting-Started/Details1.md
   - name: 操作指南
     items:
-      - name: 部署应用列表
+      - name: 应用列表
         href: Operation-Guide/Deployment-Application-List.md
       - name: 新建应用
         href: Operation-Guide/Create-Application2.md
@@ -67,6 +67,10 @@
         href: Operation-Guide/Install-Agent.md
       - name: 约定
         href: Operation-Guide/Convention.md
+      - name: Jenkins插件  
+        href: Operation-Guide/Jenkins.md
+      - name: 使用微服务平台  
+        href: Operation-Guide/JDSF.md
   - name: 最佳实践
     items: 
       - name: 蓝绿部署

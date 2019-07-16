@@ -43,4 +43,3 @@ A：建议您购买DDoS防护包服务，提升防护能力。
 
 - [什么是基础防护？](../Introduction/Product-Overview.md)
 - [基础防护架构](../Introduction/Basic-Infrastructure.md)
-- [快速入门](../Getting-Started/Anti-DDos-Basic-Started.md)

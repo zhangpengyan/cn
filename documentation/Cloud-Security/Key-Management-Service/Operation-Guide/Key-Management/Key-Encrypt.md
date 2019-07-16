@@ -6,6 +6,5 @@
 
 # 相关参考
 
-- [控制台在线工具加解密](Tools.md)
 - [OpenAPI 加密](/API/Key-Management-Service/Key-Management-Service/encrypt.md)
 - [OpenAPI 解密](/API/Key-Management-Service/Key-Management-Service/decrypt.md)

@@ -67,6 +67,8 @@
         items:
           - name: 镜像列表概述
             href: Operation-Guide/Image-List/Image-List-Overview.md
+      - name: 访问控制
+        href: Operation-Guide/IAM.md
   - name: 最佳实践
     items:
          -  name: 持续部署容器化应用

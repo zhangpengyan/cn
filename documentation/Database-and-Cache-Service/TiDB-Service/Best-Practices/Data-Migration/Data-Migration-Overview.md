@@ -26,7 +26,7 @@
 
 - MySQL 开启 binlog 功能，参考 Setting the Replication Master Configuration
 - Binlog 格式必须使用 ROW format，这也是 MySQL 5.7 之后推荐的 binlog 格式，可以使用如下语句打开:
-```
+```Shell
 SET GLOBAL binlog_format = ROW;
 ```
 
@@ -34,7 +34,7 @@ SET GLOBAL binlog_format = ROW;
 在迁移之前，我们可以使用 TiDB 的 checker 工具，来预先检查 TiDB 是否能支持需要迁移的 table schema。如果 check 某个 table schema 失败，表明 TiDB 当前并不支持，我们不能对该 table 里面的数据进行迁移。checker 包含在 TiDB 工具集里面，我们可以直接下载。
 
 ## 下载 TiDB 工具集 (Linux)
-```
+```Shell
 # 下载 tool 压缩包
 wget http://download.pingcap.org/tidb-enterprise-tools-latest-linux-amd64.tar.gz
 wget http://download.pingcap.org/tidb-enterprise-tools-latest-linux-amd64.sha256
@@ -48,7 +48,7 @@ cd tidb-enterprise-tools-latest-linux-amd64
 
 ## 使用 checker 检查的一个示范
 - 在 MySQL 的 test database 里面创建几张表，并插入数据:
-```
+```SQL
 USE test;
 CREATE TABLE t1 (id INT, age INT, PRIMARY KEY(id)) ENGINE=InnoDB;
 CREATE TABLE t2 (id INT, name VARCHAR(256), PRIMARY KEY(id)) ENGINE=InnoDB;
@@ -58,7 +58,7 @@ INSERT INTO t2 VALUES (1, "a"), (2, "b"), (3, "c");
 ```
 
 - 使用 checker 检查 test database 里面所有的 table
-```
+```Shell
 ./bin/checker -host 127.0.0.1 -port 3306 -user root test
 2016/10/27 13:11:49 checker.go:48: [info] Checking database test
 2016/10/27 13:11:49 main.go:37: [info] Database DSN: root:@tcp(127.0.0.1:3306)/test?charset=utf8
@@ -71,7 +71,7 @@ INSERT INTO t2 VALUES (1, "a"), (2, "b"), (3, "c");
 - 使用 checker 检查 test database 里面某一个 table
 这里，假设我们只需要迁移 table t1。
 
-```
+```Shell
 ./bin/checker -host 127.0.0.1 -port 3306 -user root test t1
 2016/10/27 13:13:56 checker.go:48: [info] Checking database test
 2016/10/27 13:13:56 main.go:37: [info] Database DSN: root:@tcp(127.0.0.1:3306)/test?charset=utf8
@@ -83,7 +83,7 @@ Check database succ!
 ## 一个无法迁移的 table 例子
 我们在 MySQL 里面创建如下表：
 
-```
+```Shell
 CREATE TABLE t_error ( a INT NOT NULL, PRIMARY KEY (a))
 ENGINE=InnoDB TABLESPACE ts1
 PARTITION BY RANGE (a) PARTITIONS 3 (
@@ -93,7 +93,7 @@ PARTITION P3 VALUES LESS THAN (6) TABLESPACE ts3);
 ```
 使用 checker 进行检查，会报错，表明我们没法迁移 t_error 这张表。
 
-```
+```Shell
 ./bin/checker -host 127.0.0.1 -port 3306 -user root test t_error
 2017/08/04 11:14:35 checker.go:48: [info] Checking database test
 2017/08/04 11:14:35 main.go:39: [info] Database DSN: root:@tcp(127.0.0.1:3306)/test?charset=utf8

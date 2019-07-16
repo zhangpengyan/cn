@@ -1,23 +1,35 @@
 # 入门示例
 
-目前，我们已经提供如下语言的入门示例：
+目前，我们已经提供对Spring Cloud、Dubbo等主流微服务框架的支持，并已实现对多种语言的支撑。
 
--   Java：[示例项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/JDSF-Demo.zip)
+根据Java语言选择入门示例：
 
--   Dotnet：[示例项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/jdsf-dotnet-core-demo.zip)
+-   Spring Cloud框架：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-springcloud)
 
--   Go ：[示例项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/jdsf-go-demo.zip)
+-   Spring Cloud + K8S框架：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-springcloud-kubernetes)
 
--   Python ：[示例项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/jdsf-python-flask-demo.zip)
+-   Dubbo框架：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-dubbo)
 
 
-下面以Java为例说明调用方式。
+根据其他语言选择入门示例：
+
+-   Python ：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-python)
+
+-   Dotnet：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-dotnet)
+
+-   Go ：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-go)
+
+
+
+下面以Spring Cloud应用接入为例说明调用方式。
 
 # 环境准备
 
 1. 要求jdk版本1.8以上；<br />
-2. 下载示例项目：[示例项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/JDSF-Demo.zip)<br />
+2. 下载示例项目：[示例项目下载地址](https://github.com/jdcloud-cmw/jdsf-demo-springcloud)<br />
 3. 本Demo为idea项目，构建工具为maven。如果您的环境也是idea+maven，那么可以直接下载使用。否则请按照自己的工具和环境来创建项目；<br />
+4. 如果在配置文件中没有配置spring.cloud.consul.discovery.prefer-ip-address=true，那么需要在云主机的host文件中加上 本机名 本机IP；<br />
+5. VPC的安全策略要能让注册中心的Consul拥有访问权限，保证服务探活正常。<br />
 
 
 # 项目结构

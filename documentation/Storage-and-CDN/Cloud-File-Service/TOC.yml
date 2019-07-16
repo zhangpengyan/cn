@@ -1,0 +1,64 @@
+name: 云文件服务
+href: 
+items:
+ - name: 产品简介
+   href:
+   items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 地域和可用区
+        href: Introduction/Regions-and-AvailabilityZones.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 性能
+        href: Introduction/Performance.md
+      - name: 性能测试
+        href: Introduction/Performance_Test.md        
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md 
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+ - name: 产品定价
+   items:
+      - name: 计费规则
+        href: Pricing/Pricing-Rules.md
+      - name: 资源欠费处理规则
+        href: Pricing/Owe-Rules.md
+      - name: 欠费提醒
+        href: Pricing/Owe-Remind.md
+
+        
+ - name: 操作指南
+   items:
+      - name: 文件存储列表
+        href: Operation-Guide/File-System-List.md
+      - name: 创建文件存储
+        href: Operation-Guide/Creating-File-System.md
+      - name: 文件存储信息
+        href: Operation-Guide/File-System-Detail.md
+      - name: 创建挂载目标
+        href: Operation-Guide/Creating-Mount-Target.md
+      - name: 删除挂载目标
+        href: Operation-Guide/Deleting-Mount-Target.md
+      - name: 修改挂载目标
+        href: Operation-Guide/Editing-Mount-Target.md
+      - name: 挂载文件存储
+        href: Operation-Guide/Mount-File-System.md
+      - name: 卸载文件存储
+        href: Operation-Guide/Unmount-File-System.md
+      - name: 删除文件存储
+        href: Operation-Guide/Deleting-File-System.md
+ - name: 应用实践
+   items:
+      - name: 通过对等连接（VPC Peering）跨VPC挂载文件系统
+        href: Best-Practice/Mount-Through-VPCPeering.md
+ - name: 相关资源
+   items:
+      - name: 京东云云文件服务公测试用协议
+        href: Related-Resources/Service-Agreement-For-Open-Test.md
+      - name: 京东云云文件服务服务协议
+        href: Related-Resources/Service-Agreement.md
+      - name: 文档历史记录
+        href: Related-Resources/Release-History.md       

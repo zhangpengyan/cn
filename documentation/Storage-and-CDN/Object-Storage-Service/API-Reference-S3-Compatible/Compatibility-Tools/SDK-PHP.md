@@ -17,7 +17,8 @@ require 'C:\mydir\aws\aws-autoloader.php';
 ## 创建client
 
 我们仍然通过创建一个client来帮助您快速入手，更多用法请参考：http://docs.aws.amazon.com/aws-sdk-php/v3/guide/getting-started/index.html
-```
+
+```PHP
 <?php    
 require 'C:\mydir\aws\aws-autoloader.php';    
 use Aws\S3\S3Client;    
@@ -25,7 +26,7 @@ use Aws\S3\S3Client;
 $s3 = new S3Client([    
     'version'=>'latest',    
     'region'=>'cn-north-1',    
-    'endpoint' => 'http://s3.cn-north-1.jcloudcs.com',    
+    'endpoint' => 'http://s3.cn-north-1.jdcloud-oss.com',    
     'signature_version' => 'v4',    
      'credentials' => [    
        'key'    => 'your accesskey',    

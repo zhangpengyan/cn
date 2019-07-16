@@ -16,9 +16,7 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks/{id}:st
 |**regionId**|String|True| |地域ID|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**x-jdcloud-fusion-cloudid**|String|True| |云注册信息ID|
+无
 
 
 ## 返回参数

@@ -24,4 +24,4 @@
    
 ### 第4步：查看版本详情。
 点击版本号名称可查看版本详情。
-   ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/config-vision-detail.png)
+   ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/config-vision-detail-new.png)

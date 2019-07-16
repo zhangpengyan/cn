@@ -6,7 +6,7 @@
 
 2.Q:有公网和内网IP吗？
 
-&nbsp;&nbsp;&nbsp;A:基础网络环境下每个云物理服务器提供一个公网IP和一个内网IP。用户可选择10/192/172开头的内网CIDR网段。IP地址由系统自动分配，用户不可指定。用户也可以选择不绑定公网IP，但是一旦不绑定公网IP，后期不能购买公网IP。
+&nbsp;&nbsp;&nbsp;A:基础网络环境下每个云物理服务器提供一个公网IP和一个内网IP。创建基础网络实例，用户可选择10/192/172开头的内网CIDR网段。IP地址由系统自动分配，用户不可指定。用户也可以选择不绑定公网IP，但是一旦不绑定公网IP，后期不能购买公网IP。创建私有网络实例，内网IP可以指定，且创建完后可以绑定公网IP。
 
 3.Q:不同地域之间内网互通吗？不同可用区之间内网互通吗？
 
@@ -61,4 +61,4 @@
 
 15.Q:云物理服务器支持接入哪些安全服务？
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:京东云自动为您的公网IP免费提供最高2Gbps的恶意流量攻击防护，开启DDoS基础防护请参考操作指南[https://docs.jdcloud.com/cn/anti-ddos-basic/anti-ddos-basic-started](https://docs.jdcloud.com/cn/anti-ddos-basic/anti-ddos-basic-started)；另外，如您已购买京东云Web应用防火墙，配置Web应用防护请参考操作指南[https://docs.jdcloud.com/cn/web-application-firewall/web-attack-protection](https://docs.jdcloud.com/cn/web-application-firewall/web-attack-protection)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A:京东云自动为您的公网IP免费提供最高2Gbps的恶意流量攻击防护，开启DDoS基础防护请参考操作指南[https://docs.jdcloud.com/anti-ddos-basic/anti-ddos-basic-started](https://docs.jdcloud.com/anti-ddos-basic/anti-ddos-basic-started)；另外，如您已购买京东云Web应用防火墙，配置Web应用防护请参考操作指南[https://docs.jdcloud.com/web-application-firewall/web-attack-protection](https://docs.jdcloud.com/web-application-firewall/web-attack-protection)

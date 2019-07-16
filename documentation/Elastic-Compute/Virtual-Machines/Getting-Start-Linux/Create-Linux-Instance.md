@@ -28,11 +28,11 @@
 8. 配置实例存储：
 
   * 云主机系统盘：支持本地盘及云硬盘，其中本地盘免费40GB，且容量不可变更。云硬盘支持40GB~500GB。                
-  * 云主机数据盘：若系统盘为本地盘则支持挂载8块数据盘，若系统盘为云硬盘则支持挂载7块云硬盘作数据盘。可选通用型SSD云盘、性能型SSD云盘、容量型HDD云盘、SSD云盘及高效云盘（其中前三类当前仅在华东-上海地域提供，后两类仅在华北-北京、华东-宿迁及华南-广州地域提供）。云硬盘挂载到云主机后，需要进入云主机操作系统挂载云硬盘。     
+  * 云主机数据盘：若系统盘为本地盘则支持挂载8块数据盘，若系统盘为云硬盘则支持挂载7块云硬盘作数据盘。可选通用型SSD云盘、性能型SSD云盘及容量型HDD云盘。云硬盘挂载到云主机后，需要进入云主机操作系统挂载云硬盘。     
    
-    您可以随实例创建指定类型和容量的空盘，也可以基于已有云硬盘快照创建数据盘。关于数据盘设备名分配规则请查阅[设备名分配规则](../Operation-Guide/Cloud-Disk/Assign-Device-Name.md)。      
+    您可以随实例创建指定类型和容量的空盘，也可以基于已有云硬盘快照创建数据盘。关于数据盘设备名分配规则请查阅[设备名分配规则](../Operation-Guide/Storage/Assign-Device-Name.md)。     
     
-    支持为云主机挂载加密云硬盘（一代实例规格不支持），可在创建空盘时指定云硬盘加密属性，若使用快照创建则云硬盘加密属性从快照侧继承，云硬盘创建后加密属性不可修改。详情请参见[云硬盘加密](../Operation-Guide/Cloud-Disk/Encryption-of-Cloud-Disk.md)。 
+    支持为云主机挂载加密云硬盘（一代实例规格不支持），可在创建空盘时指定云硬盘加密属性，若使用快照创建则云硬盘加密属性从快照侧继承，云硬盘创建后加密属性不可修改。详情请参见[云硬盘加密](../Operation-Guide/Storage/Encryption-of-Cloud-Disk.md)。 
     
     支持按配置计费且非多点挂载云硬盘设置随实例删除属性，若勾选，会在实例删除时一并删除。
     
@@ -53,7 +53,7 @@
 ![](../../../../image/vm/Getting-Start-Linux-Create-IP.png)
 
 11. 设置实例名称、描述：
-您需要设置创建的主机名，名称不可为空，只支持中文、数字、大小写字母、英文下划线“ _ ”及中划线“ - ”，且不能超过32字符，如果为批量创建购买，名称以“xxx1”、“xxx2”依次显示。同时支持为实例添加描述，描述允许为空，若添加长度不能超过256字符。
+您需要设置创建的主机名，名称不可为空，只支持中文、数字、大小写字母、英文下划线“ _ ”、中划线“ - ”及点“.”，且不能超过128字符，如果为批量创建购买，名称以“xxx1”、“xxx2”依次显示。同时支持为实例添加描述，描述允许为空，若添加长度不能超过256字符。
 ![](../../../../image/vm/Getting-Start-Linux-Create-information.png)
 
 12. 设置密码、密钥：
@@ -63,8 +63,7 @@
 ![](../../../../image/vm/Getting-Start-Linux-Create-login.png)
 
 13. 确认云主机数量及购买时长：
-	购买数量受限该地域您云主机、云硬盘、公网IP限额以及所选子网剩余IP数量，若限额不够，可通过[提交工单](https://ticket.jdcloud.com/myorder/submit
-)提升限额。
+	购买数量受限该地域您云主机、云硬盘、公网IP限额以及所选子网剩余IP数量，若限额不够，可通过[提交工单](https://ticket.jdcloud.com/myorder/submit)提升限额。
 	
 	若购买包年包月实例，则需要设置购买时长，最短为1个月，最长为3年。若需要更长服务时长请[提交工单](https://ticket.jdcloud.com/myorder/submit
 )。
@@ -75,13 +74,13 @@
 
 [计费规则](../Pricing/Billing-Rules.md)
 
-[镜像概述](../Operation-Guide/Image/Overview.md)
+[镜像概述](../Operation-Guide/Image/Image-Overview.md)
 
 [实例规格](../Introduction/Instance-Type-Family.md)
 
-[设备名分配规则](../Operation-Guide/Cloud-Disk/Assign-Device-Name.md)
+[设备名分配规则](../Operation-Guide/Storage/Assign-Device-Name.md)
 
-[云硬盘加密](../Operation-Guide/Cloud-Disk/Encryption-of-Cloud-Disk.md)
+[云硬盘加密](../Operation-Guide/Storage/Encryption-of-Cloud-Disk.md)
 
 [云硬盘价格](http://docs.jdcloud.com/cn/cloud-disk-service/billing-rules)
 

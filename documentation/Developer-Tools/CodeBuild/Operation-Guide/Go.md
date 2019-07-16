@@ -1,4 +1,4 @@
-使用Go语言环境构建，示例build.yml如下
+使用Go语言环境构建，示例jdcloud-build.yml如下
 
   ```
   cmds:

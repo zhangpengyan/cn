@@ -5,9 +5,9 @@
 
 ## 请求
 ### 语法
-```
+```HTTP
 GET /?website HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -26,14 +26,14 @@ Authorization: <authorization string> (see Authenticating Requests (AWS Signatur
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 GET ?website HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Thu, 27 Jan 2011 00:49:20 GMT
 Authorization: <authorization string>
 ```
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 3848CD259D811111
 Date: Thu, 27 Jan 2011 00:49:26 GMT

@@ -15,7 +15,7 @@
 | weight    | String   | 是           | 权重，权重不能重复，权重相同的只能创建一条                   |
 | content   | String   | 是           | 缓存策略内容                                                 |
 | ttl       | int      | 是           | 过期时间，时间秒                                             |
-| status    | String   | 是           | add,update,delete 其中update和delete必须要configid,缓存配置id |
+| configid   | int      | 否         |  调用update和delete时请求参数必须要configid,缓存配置id                                        |
 
 ## **3. 返回参数**
 
@@ -31,7 +31,9 @@
 
 - ### **请求地址**
 
-https://opencdn.jcloud.com/api/changeCache/add
+设置缓存配置：https://opencdn.jcloud.com/api/changeCache/add
+变更缓存配置：https://opencdn.jcloud.com/api/changeCache/update
+删除缓存配置：https://opencdn.jcloud.com/api/changeCache/delete
 
 - ### **请求示例**
 
@@ -51,7 +53,6 @@ https://opencdn.jcloud.com/api/changeCache/add
     "domain" :"www.a.com",
     "weight" :"1",
     "ttl" :"7200",
-    "configId": "1303",//修改和删除时必填字段，新加缓存配置不需要
     "content" :".jpg"
  }
 ```
@@ -62,8 +63,11 @@ https://opencdn.jcloud.com/api/changeCache/add
 
 ```
 {
-  "status": 0,
-  "msg": "成功",
-  "data": "www.a.com"
+    "status": 0,
+    "msg": "成功",
+    "data": {
+        "domain": "www.a.com",
+        "configId": "12310"
+    }
 }
 ```

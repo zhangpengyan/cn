@@ -23,8 +23,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/migration_mysqlChannels
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -36,13 +36,6 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/migration_mysqlChannels
 |**info**|ChannelBaseInfo| |
 |**source**|DataMediaInfo| |
 |**target**|DataMediaInfo| |
-### ChannelBaseInfo
-|名称|类型|描述|
-|---|---|---|
-|**description**|String|名称|
-|**id**|String|ID|
-|**name**|String|名称|
-|**status**|String|状态|
 ### DataMediaInfo
 |名称|类型|描述|
 |---|---|---|
@@ -50,21 +43,28 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/migration_mysqlChannels
 |**datasource**|DatasourceInfo| |
 |**schema**|String|schema|
 |**tables**|String[]|table|
+### DatasourceInfo
+|名称|类型|描述|
+|---|---|---|
+|**id**|String|ID|
+|**address**|String|服务器地址|
+|**port**|Integer|端口|
+|**username**|String|数据库账号|
+|**password**|String|数据库密码|
 ### CloudInfo
 |名称|类型|描述|
 |---|---|---|
 |**cloudId**|String|云ID|
-|**password**|String|数据库密码|
 |**rdsId**|String|数据库ID|
 |**username**|String|数据库账号|
-### DatasourceInfo
+|**password**|String|数据库密码|
+### ChannelBaseInfo
 |名称|类型|描述|
 |---|---|---|
-|**address**|String|服务器地址|
 |**id**|String|ID|
-|**password**|String|数据库密码|
-|**port**|Integer|端口|
-|**username**|String|数据库账号|
+|**name**|String|名称|
+|**description**|String|名称|
+|**status**|String|状态|
 
 ## 返回码
 |返回码|描述|

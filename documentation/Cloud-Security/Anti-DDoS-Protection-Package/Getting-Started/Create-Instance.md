@@ -11,15 +11,19 @@
 
 ## 操作步骤
 1. 登录 DDoS防护包控制台，其位于DDoS基础防护的目录下。</br>
+
    ![防护包菜单](https://github.com/jdcloudcom/cn/blob/edit/image/Anti-DDoS-Protection-Package/防护包菜单.png) 
 
 2. 首次购买，请先在控制台DDoS防护包菜单下，**立即开通** ；
+
    ![防护包开通页](https://github.com/jdcloudcom/cn/blob/edit/image/Anti-DDoS-Protection-Package/防护包开通页.jpg)
 
 3. 开通服务后，如果还需购买，请在防护包列表下，选择 **创建** 。
+
    ![防护包列表页](https://github.com/jdcloudcom/cn/blob/edit/image/Anti-DDoS-Protection-Package/防护包列表页.jpg)
 
 4. 选择合适的套餐类型，建议购买保底防护+弹性防护的组合方式。
+
    ![防护包购买页](https://github.com/jdcloudcom/cn/blob/edit/image/Anti-DDoS-Protection-Package/防护包购买页.jpg)
 
 购买支付以后，即成功创建一个实例。

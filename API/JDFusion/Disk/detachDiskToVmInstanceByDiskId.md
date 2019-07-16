@@ -18,11 +18,11 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/disk_disks/{id}:detach
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**authorization**|String|True| |获取方式请参考签名算法指导文档|
-|**detach**|DetachDataDisk|True| |从虚拟机卸载云硬盘|
-|**x-jdcloud-date**|String|True| |获取方式请参考签名算法指导文档|
 |**x-jdcloud-fusion-cloudid**|String|True| |云注册信息ID|
 |**x-jdcloud-nonce**|String|True| |获取方式请参考签名算法指导文档|
+|**x-jdcloud-date**|String|True| |获取方式请参考签名算法指导文档|
+|**authorization**|String|True| |获取方式请参考签名算法指导文档|
+|**detach**|DetachDataDisk|True| |从虚拟机卸载云硬盘|
 
 ### DetachDataDisk
 |名称|类型|是否必需|默认值|描述|

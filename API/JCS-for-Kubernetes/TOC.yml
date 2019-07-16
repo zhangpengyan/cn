@@ -1,0 +1,47 @@
+name: Kubernetes 集群
+href: 
+items:
+- name: 接口概览
+  href: overview.md
+- name: 更新历史
+  href: ChangeLog.md
+- name: 接口信息
+  items:
+  - name: 集群
+    items:
+    - name: 创建集群
+      href: Cluster/createCluster.md
+    - name: 删除集群
+      href: Cluster/deleteCluster.md
+    - name: 查询集群详情
+      href: Cluster/describeCluster.md
+    - name: 查询集群列表
+      href: Cluster/describeClusters.md
+    - name: 修改集群属性
+      href: Cluster/modifyCluster.md
+    - name: 设置用户自定义监控
+      href: Cluster/setUserMetrics.md
+  - name: 节点组
+    items:
+    - name: 创建节点组
+      href: NodeGroup/createNodeGroup.md
+    - name: 删除节点组
+      href: NodeGroup/deleteNodeGroup.md
+    - name: 查询节点组详情
+      href: NodeGroup/describeNodeGroup.md
+    - name: 查询节点组列表
+      href: NodeGroup/describeNodeGroups.md
+    - name: 修改节点组属性
+      href: NodeGroup/modifyNodeGroup.md
+    - name: 设置自动升级
+      href: NodeGroup/setAutoRepair.md
+    - name: 设置节点组大小
+      href: NodeGroup/setNodeGroupSize.md
+  - name: 配额
+    items:
+    - name: 查询配额
+      href: Quota/describeQuotas.md
+  - name: 服务配置
+    items:
+    - name: 查询版本信息
+      href: ServiceConfig/describeVersions.md

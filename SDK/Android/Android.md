@@ -43,6 +43,8 @@ Java SDK的调用主要分为4步：
 
 以下是查询单个云主机实例详情的调用示例
 
+```Java
+
     private static CredentialsProvider credentialsProvider = new StaticCredentialsProvider("ak", "sk");
 
     VmClient vmClient = VmClient.builder()
@@ -78,7 +80,9 @@ Java SDK的调用主要分为4步：
         }
 
     }
-
+```
 如果需要设置额外的header，例如要调用开启了MFA操作保护的接口，需要传递x-jdcloud-security-token，则按照如下方式：
-
+```Java
 	vmClient.setCustomHeader("x-jdcloud-security-token", "xxxx");
+	
+```

@@ -16,13 +16,15 @@ expires：过期时间，标准HTTP Header
 
 policy：转码策略，JSON格式，policy相关参数说明如下：
 
-"targetSaveas"：另存为，即在处理后的视频文件存放的位置。
+* "targetSaveas"：另存为，即在处理后的视频文件存放的位置。
 
-"persistentOps"：资源上传成功后触发执行的视频转换规则。
+* "persistentOps"：资源上传成功后触发执行的视频转换规则。
 
-"vcodec"：可选值h264或h265默认h264(注：flv为输出时不支持h265，如果调用会返回错误4)
+* "vcodec"：可选值h264或h265默认h264(注：flv为输出时不支持h265，如果调用会返回错误4)。
 
-"audioVolume"：可选值如下：
+* "inFrameRate"：设置视频输入源帧率，如15/1表示帧率15 。
+
+* "audioVolume"：可选值如下：
 1.浮点数，输出音量=原音量*输入值，如“5.0”； 
 2.输出音量绝对值，如 “10dB ”
 

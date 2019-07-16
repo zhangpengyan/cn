@@ -55,7 +55,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**vpcId**|String|主网卡所属vpcId|
 |**subnetId**|String|主网卡所属子网的ID|
 |**privateIpAddress**|String|主网卡主IP地址|
-|**dnsConfig**|DnsConfig|pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置|
+|**dnsConfig**|DnsConfig|pod内容器的/etc/resolv.conf配置|
 |**logConfig**|LogConfig|容器日志配置信息；默认会在本地分配10MB的存储空间|
 |**hostAliases**|HostAlias[]|pod内容器的/etc/hosts配置|
 |**volumes**|Volume[]|属于Pod的volume列表，提供挂载到containers上。|

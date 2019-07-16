@@ -17,18 +17,18 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/vpc_vserverGroups
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**authorization**|String|True| |获取方式请参考签名算法指导文档|
-|**slbid**|String|False| |负载均衡id|
-|**x-jdcloud-date**|String|True| |获取方式请参考签名算法指导文档|
-|**x-jdcloud-fusion-cloudid**|String|False| |云注册信息ID|
 |**x-jdcloud-nonce**|String|True| |获取方式请参考签名算法指导文档|
+|**x-jdcloud-date**|String|True| |获取方式请参考签名算法指导文档|
+|**authorization**|String|True| |获取方式请参考签名算法指导文档|
+|**x-jdcloud-fusion-cloudid**|String|False| |云注册信息ID|
+|**slbid**|String|False| |负载均衡id|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|

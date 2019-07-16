@@ -24,11 +24,11 @@ SSH密钥登录是指使用密钥技术对登录信息进行加密解密，为�
 4. 用户使用本地私钥对其进行解密。
 5. 用户将解密结果返回至远端云主机进行信息比对。若比对成功则用户登录成功，否则则登录失败。
 
-京东云在控制台提供密钥创建及对应管理注入实例操作入口，此外也支持您对实例自行进行相应的配置。详细请参考[创建密钥](../Operation-Guide/Key-Pair/Create-Keypair.md)。
+京东云在控制台提供密钥创建及对应管理注入实例操作入口，此外也支持您对实例自行进行相应的配置。详细请参考[创建密钥](Create-Keypair.md)。
 
 ## 相关参考
 
-[创建密钥](../Operation-Guide/Key-Pair/Create-Keypair.md)
+[创建密钥](Create-Keypair.md)
 
 
   [1]: ./images/Operation-Guide-keypair-overview1.png "Operation-Guide-keypair-overview1.png"

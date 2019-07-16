@@ -71,28 +71,28 @@ items:
       href: SDK-Reference/SDK-introduction.md
     - name: 推流SDK
       items:
-        -name：功能特性
-         href:SDK-Reference/pushstream-feature.md
-        -name：Android端快速集成
-         href:SDK-Reference/Android-push-guidance.md
-        -name：Android端SDK的使用
-         href:SDK-Reference/Android-push-API.md
-        -name：iOS端快速集成
-         href:SDK-Reference/iOS-push-guidance.md
-        -name：iOS端SDK的使用
-         href:SDK-Reference/iOS-push-API.md
+        - name: 功能特性
+          href: SDK-Reference/pushstream-feature.md
+        - name: Android端快速集成
+          href: SDK-Reference/Android-push-guidance.md
+        - name: Android端SDK的使用
+          href: SDK-Reference/Android-push-API.md
+        - name: iOS端快速集成
+          href: SDK-Reference/iOS-push-guidance.md
+        - name: iOS端SDK的使用
+          href: SDK-Reference/iOS-push-API.md
     - name: 播放器SDK
       items:
-        -name：功能特性
-         href:SDK-Reference/playstream-feature.md
-        -name：Android端快速集成
-         href:SDK-Reference/Android-play-guidance.md
-        -name：Android端SDK的使用
-         href:SDK-Reference/Android-play-API.md
-        -name：iOS端快速集成
-         href:SDK-Reference/iOS-play-guidance.md
-        -name：iOS端SDK的使用
-         href:SDK-Reference/iOS-play-API.md
+        - name: 功能特性
+          href: SDK-Reference/playstream-feature.md
+        - name: Android端快速集成
+          href: SDK-Reference/Android-play-guidance.md
+        - name: Android端SDK的使用
+          href: SDK-Reference/Android-play-API.md
+        - name: iOS端快速集成
+          href: SDK-Reference/iOS-play-guidance.md
+        - name: iOS端SDK的使用
+          href: SDK-Reference/iOS-play-API.md
 - name: 最佳实践
   items:
     - name: 使用FMLE工具推流
@@ -102,7 +102,6 @@ items:
     - name: 使用OBS工具推流
       href: Best-Practices/Push-with-the-OBS-tool.md
 - name: 教程
-  items:
   status: 0
 - name: 问题排查
   items:

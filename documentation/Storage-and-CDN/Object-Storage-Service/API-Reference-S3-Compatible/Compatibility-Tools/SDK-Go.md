@@ -22,7 +22,7 @@ go get github.com/aws/aws-sdk-go
 
 下面为创建client的例子，更多Go SDK示例请访问[S3 Go Example Code](https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/go/example_code/s3)。
 
-```
+```Go
 package main
 
 import (
@@ -41,7 +41,7 @@ func main() {
 
     config := &aws.Config{
         Region          :aws.String("cn-north-1"),
-        Endpoint        :aws.String("s3.cn-north-1.jcloudcs.com"),
+        Endpoint        :aws.String("s3.cn-north-1.jdcloud-oss.com"),
         DisableSSL      :aws.Bool(false),
         Credentials     :creds,
     }

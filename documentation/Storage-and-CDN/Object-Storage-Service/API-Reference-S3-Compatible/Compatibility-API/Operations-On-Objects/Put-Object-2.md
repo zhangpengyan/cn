@@ -9,7 +9,7 @@
 ### 语法
 ```
 PUT /ObjectName HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com
+Host: <bucket>.s3.<region>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -30,7 +30,7 @@ Content-MD5|对报文主体进行MD5算法获得128位二进制数，再通过Ba
 Content-Type|表示请求中的MIME类型。<br>Type: String<br>Default: binary/octet-stream<br>Valid Values: MIME types<br>Constraints: None|否
 Expect|客户端使用Expect告知OSS，期望出现某种特定的行为。若OSS无法做出回应而发生错误时，请求报文主体将不会发送。<br>Type: String<br>Default: None<br>Valid Values: 100-continue<br>Constraints: None|否
 Expires|Object缓存过期时间。<br>Type: String<br>Default: None<br>Constraints: None|否
-x-amz-storage-class| Object存储类型，如果未指定，默认为标准存储。<br>Type: Enum<br>Default: STANDARD<br>Valid Values: STANDARD、REDUCED_REDUNDANCY|否
+x-amz-storage-class| Object存储类型，如果未指定，默认为标准存储。<br>Type: Enum<br>Default: STANDARD<br>Valid Values: STANDARD、 GLACIER、REDUCED_REDUNDANCY  |否
 
 ## 响应
 ### 响应Header
@@ -43,7 +43,7 @@ x-amz-storage-class| Object存储类型，如果未指定，默认为标准存�
 ### 请求示例
 ```
 PUT /my-image.jpg HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: oss-example.s3.<region>.jdcloud-oss.com 
 Date: Wed, 12 Oct 2009 17:50:00 GMT
 Authorization: <authorization string>
 Content-Type: text/plain

@@ -25,6 +25,5 @@
 
 - [什么是DDoS基础防护](Product-Overview.md)
 - [核心概念](Core-Concepts.md)
-- [应用场景](Application-Scenarios.md)
 - [基本功能](Features.md)
 - [使用限制](Restrictions.md)

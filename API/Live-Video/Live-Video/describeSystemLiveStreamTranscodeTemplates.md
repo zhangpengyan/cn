@@ -39,6 +39,7 @@ https://live.jdcloud-api.com/v1/transcodeSystem
 |**pageSize**|Integer|每页数量|
 |**totalCount**|Integer|查询总数|
 |**transcodeTemplates**|TranscodeInfo[]|码率信息|
+
 ### TranscodeInfo
 |名称|类型|描述|
 |---|---|---|
@@ -54,6 +55,8 @@ https://live.jdcloud-api.com/v1/transcodeSystem
 |**audioSampleRate**|Integer|转码输出音频采样率:<br>  - 取值: [44100,48000]<br>|
 |**audioChannel**|Integer|转码输出音频通道数:<br>  - 1  单声道<br>  - 2  双声道<br>|
 |**audioCodeRate**|Integer|转码输出音频码率:<br>  - 取值: [16,128]<br>  - 单位: kbps<br>|
+|**jdchd**|String|京享超清<br>- 取值: jdchd-1.0,off<br>|
+|**audioComfort**|String|舒适音频<br>- 取值: on,off<br>|
 
 ## 返回码
 |返回码|描述|

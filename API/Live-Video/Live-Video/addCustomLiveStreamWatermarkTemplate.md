@@ -47,7 +47,6 @@ https://live.jdcloud-api.com/v1/watermarkCustoms:template
 POST
 ```
 https://live.jdcloud-api.com/v1/watermarkCustoms:template
-
 ```
 ```
 {

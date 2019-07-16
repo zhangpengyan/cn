@@ -38,7 +38,6 @@ https://live.jdcloud-api.com/v1/streamNotifys
 POST
 ```
 https://live.jdcloud-api.com/v1/streamNotifys
-
 ```
 ```
 {

@@ -18,7 +18,7 @@ https://live.jdcloud-api.com/v1/snapshotApps:template
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
-|**template**|String|True| |截图模板<br>|
+|**template**|String|True| |截图模板|
 
 
 ## 返回参数
@@ -41,7 +41,6 @@ https://live.jdcloud-api.com/v1/snapshotApps:template
 POST
 ```
 https://live.jdcloud-api.com/v1/snapshotApps:template
-
 ```
 ```
 {

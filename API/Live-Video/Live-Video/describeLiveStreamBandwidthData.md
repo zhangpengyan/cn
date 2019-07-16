@@ -64,7 +64,6 @@ https://live.jdcloud-api.com/v1/describeLiveStreamBandwidthData
 GET
 ```
 https://live.jdcloud-api.com/v1/describeLiveStreamBandwidthData?domainName=xxx
-
 ```
 ```
 {

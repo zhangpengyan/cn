@@ -31,7 +31,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms:template
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**videoCodec**|String|False| |视频编码格式，取值：h264,h265，默认h264<br>|
-|**videoCodeRate**|Integer|True| |转码输出的码率值<br>- 取值范围: [1,6000]<br>- 单位: kpbs<br>|
+|**videoCodeRate**|Integer|True| |转码输出的码率值<br>- 取值范围: [128,15000]<br>- 单位: kpbs<br>|
 |**videoFrameRate**|String|True| |转码输出的帧率值<br>- 取值：[1,30]<br>|
 |**width**|Integer|False| |转码输出视频宽度<br>- 取值: [128,4096]<br>- 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码<br>- 如果(width,height)都不设置，则按源流大小输出转码<br>|
 |**height**|Integer|False| |转码输出视频宽度<br>- 取值: [128,4096]<br>- 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码<br>- 如果(width,height)都不设置，则按源流大小输出转码<br>|
@@ -66,7 +66,6 @@ https://live.jdcloud-api.com/v1/transcodeCustoms:template
 POST
 ```
 https://live.jdcloud-api.com/v1/transcodeCustoms:template
-
 ```
 ```
 {

@@ -39,7 +39,6 @@ https://live.jdcloud-api.com/v1/livePlayAuthKey
 POST
 ```
 https://live.jdcloud-api.com/v1/setLivePlayAuthKey
-
 ```
 ```
 {

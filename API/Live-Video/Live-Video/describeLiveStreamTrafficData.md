@@ -63,7 +63,6 @@ https://live.jdcloud-api.com/v1/describeLiveStreamTrafficData
 GET
 ```
 https://live.jdcloud-api.com/v1/describeLiveStreamTrafficData?domainName=xxx
-
 ```
 ```
 {

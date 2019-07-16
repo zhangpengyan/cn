@@ -49,7 +49,6 @@ https://live.jdcloud-api.com/v1/describeStatisticData:traffic
 GET
 ```
 https://live.jdcloud-api.com/v1/describeStatisticData:traffic
-
 ```
 ```
 {

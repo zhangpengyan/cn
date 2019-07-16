@@ -32,7 +32,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms/{template}
 |**videoCodeRate**|Integer|转码输出的码率值<br>- 单位: kpbs<br>|
 |**videoFrameRate**|String|转码输出的帧率值<br>|
 |**width**|Integer|转码输出视频宽度<br>|
-|**height**|Integer|转码输出视频宽度<br>|
+|**height**|Integer|转码输出视频高度<br>|
 |**template**|String|转码模板<br>|
 |**audioCodec**|String|转码输出音频编码格式<br>|
 |**audioFormat**|String|转码输出音频格式<br>|
@@ -57,7 +57,6 @@ https://live.jdcloud-api.com/v1/transcodeCustoms/{template}
 GET
 ```
 https://live.jdcloud-api.com/v1/transcodeCustoms/yt
-
 ```
 
 ## 返回示例

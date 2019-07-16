@@ -45,7 +45,6 @@ https://live.jdcloud-api.com/v1/recordFiles/{fileId}:url
 GET
 ```
 https://live.jdcloud-api.com/v1/recordFiles/{fileId}:url
-
 ```
 ```
 {

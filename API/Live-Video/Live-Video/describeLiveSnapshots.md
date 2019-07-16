@@ -63,7 +63,6 @@ https://live.jdcloud-api.com/v1/snapshots
 GET
 ```
 https://live.jdcloud-api.com/v1/snapshots
-
 ```
 ```
 {

@@ -39,7 +39,6 @@ https://live.jdcloud-api.com/v1/domains:start
 PUT
 ```
 https://live.jdcloud-api.com/v1/domains:start
-
 ```
 ```
 {

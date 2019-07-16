@@ -60,7 +60,6 @@ https://live.jdcloud-api.com/v1/describeDomainsLog
 GET
 ```
 https://live.jdcloud-api.com/v1/describeDomainsLog?domains=push.yourdomain.com&startTime=2018-10-21T10:00:00Z
-
 ```
 
 ## 返回示例

@@ -39,7 +39,6 @@ https://live.jdcloud-api.com/v1/streams:resume
 PUT
 ```
 https://live.jdcloud-api.com/v1/streams:resume
-
 ```
 ```
 {

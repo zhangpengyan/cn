@@ -39,6 +39,9 @@ https://live.jdcloud-api.com/v1/transcodeCustoms/{template}
 |**audioSampleRate**|Integer|转码输出音频采样率<br>|
 |**audioChannel**|Integer|转码输出音频通道数<br>  1: 单声道<br>  2: 双声道<br>|
 |**audioCodeRate**|Integer|转码输出音频码率<br>- 单位: kbps<br>|
+|**jdchd**|String|京享超清<br>- 取值: jdchd-1.0,off<br>|
+|**audioComfort**|String|舒适音频<br>- 取值: on,off<br>|
+
 
 ## 返回码
 |返回码|描述|

@@ -61,7 +61,6 @@ https://live.jdcloud-api.com/v1/streams/{publishDomain}/publishList
 GET
 ```
 https://live.jdcloud-api.com/v1/streams/push.yourdomain.com/onlineList?appName=yourapp&streamName=yourstream&startTime=2015-12-02T01:00:00Z&endTime=2015-12-02T04:00:00Z
-
 ```
 
 ## 返回示例

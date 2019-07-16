@@ -45,7 +45,6 @@ https://live.jdcloud-api.com/v1/snapshots/{imgId}:url
 GET
 ```
 https://live.jdcloud-api.com/v1/snapshots/{imgId}:url
-
 ```
 ```
 {

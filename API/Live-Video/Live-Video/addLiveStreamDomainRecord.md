@@ -40,7 +40,6 @@ https://live.jdcloud-api.com/v1/recordDomains:config
 POST
 ```
 https://live.jdcloud-api.com/v1/recordDomains:config
-
 ```
 ```
 {

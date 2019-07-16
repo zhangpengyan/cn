@@ -40,7 +40,6 @@ https://live.jdcloud-api.com/v1/transcodeDomains:config
 POST
 ```
 https://live.jdcloud-api.com/v1/transcodeDomains:config
-
 ```
 ```
 {

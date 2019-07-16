@@ -16,8 +16,7 @@ https://live.jdcloud-api.com/v1/watermarkApps/{publishDomain}/appNames/{appName}
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
-|**template**|String|True| |水印模板
-|
+|**template**|String|True| |水印模板|
 
 ## 请求参数
 无

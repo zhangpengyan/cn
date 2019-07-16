@@ -41,7 +41,6 @@ https://live.jdcloud-api.com/v1/streams:interrupt
 PUT
 ```
 https://live.jdcloud-api.com/v1/streams:interrupt
-
 ```
 ```
 {

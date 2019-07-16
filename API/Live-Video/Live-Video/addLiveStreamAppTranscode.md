@@ -41,7 +41,6 @@ https://live.jdcloud-api.com/v1/transcodeApps:config
 POST
 ```
 https://live.jdcloud-api.com/v1/transcodeApps:config
-
 ```
 ```
 {

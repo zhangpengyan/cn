@@ -37,7 +37,6 @@ https://live.jdcloud-api.com/v1/liveTimeshift:close
 PUT
 ```
 https://live.jdcloud-api.com/v1/liveTimeshift:close
-
 ```
 ```
 {

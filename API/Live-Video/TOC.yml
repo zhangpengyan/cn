@@ -174,7 +174,7 @@ items:
         href: Live-Video/describeLiveStreamHistoryUserNum.md
       - name: 查询直播推流数
         href: Live-Video/describeLivePublishStreamNum.md
-      - name: 查查询转码时长
+      - name: 查询转码时长
         href: Live-Video/describeLiveTranscodingDurationData.md
       - name: 查询播放带宽
         href: Live-Video/describeLiveStreamBandwidthData.md
@@ -208,7 +208,7 @@ items:
           - name: 查询推流鉴权KEY
             status: 0
             href: Authentication/PublishUrl.md
-      - name: 直播推流鉴权
+      - name: 直播播放鉴权
         items:
           - name: 播放鉴权规则
             href: Authentication/PlayUrl.md

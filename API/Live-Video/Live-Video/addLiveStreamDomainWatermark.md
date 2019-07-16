@@ -16,7 +16,7 @@ https://live.jdcloud-api.com/v1/watermarkDomains:config
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**publishDomain**|String|True| |推流域名|
-|**template**|String|True| |水印模板<br>|
+|**template**|String|True| |水印模板|
 
 
 ## 返回参数
@@ -39,7 +39,6 @@ https://live.jdcloud-api.com/v1/watermarkDomains:config
 POST
 ```
 https://live.jdcloud-api.com/v1/watermarkDomains:config
-
 ```
 ```
 {

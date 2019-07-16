@@ -50,10 +50,15 @@
      	<td>可用区B<br>cn-east-2b</td>
 	   	<td>上海</td>
    </tr>
+<<<<<<< HEAD
    </tr>
       </tr>
     	<tr>
      	<td>可用区C<br>cn-east-2b</td>
+=======
+       	<tr>
+     	<td>可用区C<br>cn-east-2c</td>
+>>>>>>> 64d4345ffb20dceb5bb07bf5639371819f930369
 	   	<td>上海</td>
    </tr>
   <tr>

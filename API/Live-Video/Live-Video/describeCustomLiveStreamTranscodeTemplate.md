@@ -3,12 +3,6 @@
 
 ## 描述
 查询用户自定义转码模板详情
-- 查询用户自定义转码模板详情
-- 系统标准转码模板<br>
-    ld (h.264/640 * 360/15f)<br>
-    sd (h.264/854 * 480/24f)<br>
-    hd (h.264/1280 * 720/25f)<br>
-    shd (h.264/1920 * 1080/30f)<br>
 
 
 ## 请求方式
@@ -34,6 +28,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms/{template}
 ### Result
 |名称|类型|描述|
 |---|---|---|
+|**videoCodec**|String|视频编码格式<br>  - 取值：h264,h265，默认h264<br>|
 |**videoCodeRate**|Integer|转码输出的码率值<br>- 单位: kpbs<br>|
 |**videoFrameRate**|String|转码输出的帧率值<br>|
 |**width**|Integer|转码输出视频宽度<br>|

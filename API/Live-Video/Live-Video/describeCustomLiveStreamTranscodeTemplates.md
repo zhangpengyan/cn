@@ -42,6 +42,7 @@ https://live.jdcloud-api.com/v1/transcodeCustoms
 ### TranscodeInfo
 |名称|类型|描述|
 |---|---|---|
+|**videoCodec**|String|视频编码格式<br>  - 取值：h264,h265，默认h264<br>|
 |**videoCodeRate**|Integer|转码输出的码率值:<br>  - 取值: [1,6000]<br>  - 单位: kpbs<br>|
 |**videoFrameRate**|String|转码输出的帧率值:<br>  - 取值: [1,30]<br>|
 |**width**|Integer|转码输出视频宽度:<br>  - 取值: [100,1920]<br>  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频<br>  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频<br>|

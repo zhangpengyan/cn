@@ -43,14 +43,14 @@ https://live.jdcloud-api.com/v1/transcodeDomains:config
 ```
 ```
 {
-    "publishDomain": "push.yourdomain.com", 
-    "template": "shd"
+    "publishDomain":"push.yourdomain.com",
+    "template":"shd"
 }
 ```
 
 ## 返回示例
 ```
 {
-    "requestId": "bgvmivir54gddpgi764se9f4kfr7ge41"
+    "requestId":"bgvmivir54gddpgi764se9f4kfr7ge41"
 }
 ```

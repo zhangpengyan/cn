@@ -15,8 +15,7 @@ https://live.jdcloud-api.com/v1/describeDomainsLog
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**domains**|String|True| |播放域名，多个时以逗号（,）分隔|
-|**interval**|String|False| |时间间隔，取值(hour，day，fiveMin),不传默认小时|
-|**logType**|String|False| |日志后缀格式，取值（zip，log，gz）,默认值为log|
+|**interval**|String|False| |时间间隔，取值(hour，day),不传默认小时<br>- 按小时（hour）下载时是.log文件<br>- 按天（day）下载时是.zip文件|
 |**startTime**|String|True| |起始时间<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>|
 |**endTime**|String|False| |结束时间:<br>- UTC时间<br>  格式:yyyy-MM-dd'T'HH:mm:ss'Z'<br>  示例:2018-10-21T10:00:00Z<br>- 为空,默认为当前时间<br>|
 

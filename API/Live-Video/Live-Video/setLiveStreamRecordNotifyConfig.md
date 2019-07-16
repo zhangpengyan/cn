@@ -40,6 +40,7 @@ POST
 ```
 https://live.jdcloud-api.com/v1/recordNotifys:config
 ```
+
 ```
 {
     "notifyUrl": "http://xxx.com/xxx/xxx", 

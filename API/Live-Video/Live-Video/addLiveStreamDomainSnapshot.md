@@ -41,6 +41,7 @@ POST
 ```
 https://live.jdcloud-api.com/v1/snapshotDomains:template
 ```
+
 ```
 {
     "publishDomain": "push.yourdomain.com", 

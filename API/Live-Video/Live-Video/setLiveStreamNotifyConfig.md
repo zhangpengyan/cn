@@ -39,6 +39,7 @@ POST
 ```
 https://live.jdcloud-api.com/v1/streamNotifys
 ```
+
 ```
 {
     "notifyUrl": "http://xxx.com/xxx/xxx", 

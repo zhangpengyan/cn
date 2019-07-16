@@ -40,6 +40,7 @@ POST
 ```
 https://live.jdcloud-api.com/v1/watermarkDomains:config
 ```
+
 ```
 {
     "publishDomain": "push.yourdomain.com", 

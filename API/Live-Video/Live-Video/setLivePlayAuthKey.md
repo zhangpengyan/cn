@@ -40,6 +40,7 @@ POST
 ```
 https://live.jdcloud-api.com/v1/setLivePlayAuthKey
 ```
+
 ```
 {
     "authKey": "testAuthKey123", 

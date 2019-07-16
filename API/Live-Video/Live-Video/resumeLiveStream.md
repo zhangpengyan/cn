@@ -40,6 +40,7 @@ PUT
 ```
 https://live.jdcloud-api.com/v1/streams:resume
 ```
+
 ```
 {
     "appName": "yourapp", 

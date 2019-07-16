@@ -67,6 +67,7 @@ POST
 ```
 https://live.jdcloud-api.com/v1/transcodeCustoms:template
 ```
+
 ```
 {
     "audioChannel": 2, 

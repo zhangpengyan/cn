@@ -61,7 +61,6 @@ https://live.jdcloud-api.com/v1/domains/{publishDomain}
 GET
 ```
 https://live.jdcloud-api.com/v1/domains/push.yourdomain.com
-
 ```
 
 ## 返回示例

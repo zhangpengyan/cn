@@ -65,6 +65,7 @@ GET
 ```
 https://live.jdcloud-api.com/v1/describeLiveStreamBandwidthData?domainName=xxx
 ```
+
 ```
 {
     "endTime": "2019-03-27T16:00:00Z", 

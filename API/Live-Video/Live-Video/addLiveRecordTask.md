@@ -54,6 +54,8 @@ POST
 ```
 https://live.jdcloud-api.com/records/push.yourdomain.com/appNames/yourapp/streamNames/yourstream/task
 ```
+
+
 ```
 {
     "appName":"yourapp",

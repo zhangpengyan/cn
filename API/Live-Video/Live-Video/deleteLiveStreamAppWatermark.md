@@ -42,7 +42,6 @@ https://live.jdcloud-api.com/v1/watermarkApps/{publishDomain}/appNames/{appName}
 DELETE
 ```
 https://live.jdcloud-api.com/v1/watermarkApps/push.yourdomain.com/appNames/yourapp/templates/yourwatermarktemplate
-
 ```
 
 ## 返回示例

@@ -46,6 +46,7 @@ GET
 ```
 https://live.jdcloud-api.com/v1/recordFiles/{fileId}:url
 ```
+
 ```
 {
     "authExpire": 3600

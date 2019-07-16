@@ -38,6 +38,8 @@ items:
         href: Live-Video/forbidLiveStream.md
       - name: 恢复直播流推送
         href: Live-Video/resumeLiveStream.md
+      - name: 中断直播流推送
+        href: Live-Video/interruptLiveStream.md
       - name: 查看域名下实时推流信息
         href: Live-Video/describeLiveStreamOnlineList.md
       - name: 查看域名下历史推流记录
@@ -180,6 +182,8 @@ items:
         href: Live-Video/describeLiveStreamTrafficData.md
       - name: 查询流分组统计数据
         href: Live-Video/describeLiveStatisticGroupByStream.md
+      - name: 查询地域分组统计数据
+        href: Live-Video/describeLiveStatisticGroupByArea.md
       - name: 查询地域/运营商分组统计数据
         href: Live-Video/describeLiveStatisticGroupByAreaIsp.md
       - name: 查询在线流列表
@@ -189,6 +193,8 @@ items:
       - name: 查询直播鉴黄张数
         status: 0
         href: Live-Video/describeLivePornData.md
+      - name: 查询播放URL排行
+        href: Live-Video/describeUrlRanking.md
 
   - name: 鉴权相关
     items:
@@ -210,8 +216,8 @@ items:
             href: Live-Video/setLivePlayAuthKey.md
           - name: 查询播放鉴权KEY
             href: Live-Video/describeLivePlayAuthKey.md
-#  - name: 直播审核
-#    href: Loading.md
+  - name: 日志下载
+    href: Live-Video/describeDomainsLog.md
   - name: SDK调用方式
     href: Example/SDK-Java.md
   - name: 参考文档

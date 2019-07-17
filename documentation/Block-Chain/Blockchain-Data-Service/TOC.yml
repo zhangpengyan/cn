@@ -25,7 +25,7 @@
     - name: 仪表盘
       items:
       - name: 仪表盘
-      herf: Operation-Guide/Dashboard/Dashboard.md
+        herf: Operation-Guide/Dashboard/Dashboard.md
     - name: 下载数据
       items:
       - name: 下载数据

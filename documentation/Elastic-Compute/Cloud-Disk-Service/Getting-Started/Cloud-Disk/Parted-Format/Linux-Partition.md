@@ -16,11 +16,11 @@
 
    当该设备无文件系统时如下图所示：
 
-   ![vdb_nonfs](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\vdb_nonfs.PNG)
+   ![vdb_nonfs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/vdb_nonfs.PNG)
 
    如果该设备已有文件系统，系统输出入下图所示（设备/dev/vdb包含XFS格式的文件系统）：
 
-   ![vdb_fsexs](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\vdb_fsexs.PNG)
+   ![vdb_fsexs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/vdb_fsexs.PNG)
 
    **注意：**如果您的云盘是通过快照创建的，此云盘可能已包含文件系统和数据，此时无需重新创建文件系统即可挂载，重新创建文件系统将覆盖原盘数据。如果确认无需创建文件系统，请跳过此步，直接执行第X步进行挂载。
 
@@ -30,7 +30,7 @@
 
    操作成功后入下图所示：
 
-   ![mkfs](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\mkfs.PNG)
+   ![mkfs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/mkfs.PNG)
 
 4. 使用mount命令将该设备挂载到指定目录，以将/dev/vdb挂载到/mnt目录为例：
 
@@ -38,7 +38,7 @@
 
    执行成功后，系统无提示信息。可以通过输入 `df -h` 命令检查挂载情况。如下图所示，设备/dev/vdb已挂载成功。
 
-   ![mounted](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\mounted.PNG)
+   ![mounted](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/mounted.PNG)
 
    如果希望将设备挂载在其他目录，也可以先通过输入mkdir 命令创建挂载目录，以目录名为/mypoint为例：
 

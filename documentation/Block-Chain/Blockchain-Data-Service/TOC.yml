@@ -24,7 +24,7 @@
       - name: 仪表盘
         items:
         - name: 仪表盘
-          herf: Operation-Guide/Dashboard/Dashboard.md
+          herf: Operation-Guide/Dashboard/dashboard.md
       - name: 下载数据
         items:
         - name: 下载数据
@@ -36,12 +36,11 @@
       - name: 个人集合
         items:
         - name: 个人集合
-          href: Operation-Guide/Personal-collectionst/Personal-collections.md
+          href: Operation-Guide/Personal-collections/Personal-collections.md
       - name: 可视化
         items:
         - name: 可视化
           href: Operation-Guide/Visualization/Visualization.md
-
   - name: 相关资源
     items:
     - name: 文档历史记录

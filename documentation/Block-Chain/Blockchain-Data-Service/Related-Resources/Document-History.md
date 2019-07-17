@@ -13,5 +13,4 @@
 - [产品概述](../Introduction/Product-Overview.md)
 - [产品优势](../Introduction/Benefits.md)
 - [应用场景](../Introduction/Application-Scenarios.md)
-- [FAQ](../FAQ/FAQ.md)
 

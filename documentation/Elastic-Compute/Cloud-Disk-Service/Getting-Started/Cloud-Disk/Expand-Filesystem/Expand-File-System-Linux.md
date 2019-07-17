@@ -1,114 +1,61 @@
 # 扩容文件系统（Linux）
 
-<br>
+在云硬盘控制台完成扩容操作并挂载此云硬盘后，需要登录云主机对文件系统进行扩容才可继续使用。在控制台对云硬盘的扩容操作可参见“[云硬盘升级容量](https://docs.jdcloud.com/cn/cloud-disk-service/disk-expand)”
 
-以 CentOS 操作系统为例，假设主机上已挂载一块 42.9GB 的硬盘，分区为 “/dev/vdb1” ，文件系统格式为 “ext4”，挂载位置是 “/home/test”，现在需要扩容到 53.7GB 。具体步骤如下 (需要 root 权限)：
+**注意：扩容之前要备份好数据，避免因误操作等因素导致数据丢失**
 
-** 注意：扩容之前要备份好数据，避免因误操作等因素导致数据丢失**。
+以CentOS操作系统为例，假设需扩容的云硬盘原大小为20GB，在控制台已扩容至50GB并重新挂载。文件系统扩容操作如下（需要root权限）：
 
-1、在控制台将硬盘从云主机上卸载，完成云硬盘扩容操作后重新挂载到云主机。
+## ext2、ext3或ext4文件系统的扩容
 
-2、环境查看
+1. 确认云硬盘已经在控制台完成扩容并再次挂载到此云主机后，从控制台重启此云主机。
 
-1）使用fdisk -l 查看硬盘分区信息
+   ![vm_restart](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/vm_restart.png)
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_001.png)
+2. 重启后登陆此云主机，输入`lsblk` 命令检查设备名称：
 
-2）可以看到/dev/vdb的磁盘容量为53.7GB，有一个分区/dev/vdb1，使用fdisk -l /dev/vdb1查看分区容量，可以看到/dev/vdb1的容量是42.9GB
+   `lsblk`
 
+   ![lsblk_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/lsblk_ext4.PNG)
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_002.png)
+3. 使用`e2fsck`命令检查文件系统：
 
-3）使用df -h查看文件系统，可以看到挂载点为/home/test，且大小为40GB
+   `e2fsck -f /dev/vde`
 
+   ![e2fsck_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/e2fsck_ext4.PNG)
 
+4. 使用resize2fs命令对文件系统进行扩容，如扩容/dev/vde设备的文件系统：
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_003.png)
+   `sudo resize2fs /dev/vde`
 
-3、下面开始对分区/dev/vdb1进行扩容
+   ![resize2fs_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/resize2fs_ext4.PNG)
 
-1）卸载文件系统
+5. 使用`mount`命令重新挂载此设备，已设备名称/dev/vde为例：
 
-```
-umount /home/test
-```
+   `mount /dev/vde /mnt`
 
-2）扩大分区容量，此处以fdisk为例，也可使用parted来进行扩容，但两个命令不能混用，混用会导致起始扇区不一致。
+6. 挂在成功后可运行`df -h`命令验证挂载是否成功。
 
-```
-fdisk /dev/vdb
-```
+## XFS文件系统的扩容
 
-依次键入p d n p 1 两次回车 wq
+1. 使用 `df -h` 命令验证待扩容的卷的文件系统大小。如下图示例，待扩容的/dev/vdc原始大小为20GB：
 
-p: 打印分区信息
+   ![expand_df](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/expand_df.PNG)
 
-d: 删除分区
+2. 输入`lsblk` 命令检查设备名称：
 
-n: 新建分区
+   `lsblk`
 
-p: 新建分区的类型为主分区
+   ![lsblk](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/lsblk.PNG)
 
-1: 分区号为1
+3. 使用`xfs_growfs` 命令扩展文件系统，如该设备当前挂载在/mnt：
 
-wq: 保存并退出
+   `sudo xfs_growfs -d /mnt`
 
-**注：保存之前请确定自己的操作无误，若发现有误操作，可键入q直接退出，此前操作都将无效。**
+   ![growfs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/growfs.PNG)
 
+   
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_004.png)
+4. （可选）执行完成后可以再次执行`df -h`命令验证扩容后的卷大小。
 
-3） 查看扩容后的分区容量
-
-```
-fdisk -l /dev/vdb1
-```
-
-
-
-
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_005.png)
-
-
-分区容量已经扩大到53.7GB，但是此时文件系统还是原来的大小，下面两条命令是让文件系统扩展到与分区相匹配的大小。
-
-4）检测文件系统正确性
-
-```
-e2fsck -f /dev/vdb1
-```
-
-
-
-
-
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_006.png)
-
-
-5）重定义文件系统大小
-
-```
-resize2fs /dev/vdb1
-```
-
-
-
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_007.png)
-
-6）mount /dev/vdb1 /home/test 将扩容好的文件系统挂载到挂载点/home/test
-
-7）查看文件系统大小
-
-```
-df -h /dev/vdb1
-```
-
-
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/linux_expand_008.png)
-
-可见文件系统已经扩展了。
-
-	
-	
-
-
+   ![df_aga](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/df_aga.PNG)

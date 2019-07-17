@@ -1,0 +1,13 @@
+# DRDS SQL 简介
+
+京东云 DRDS 高度兼容 MySQL 协议和语法，但由于DRDS分布式数据库和单机数据库在具体使用上还是存在一些差异，因此在某些具体SQL上存在一些差异和限制。
+
+## SQL 限制
+
+暂不支持用户自定义数据类型、自定义函数。
+暂不支持视图、存储过程、触发器、游标。
+暂不支持临时表。
+暂不支持 BEGIN…END、LOOP…END LOOP、REPEAT…UNTIL…END REPEAT、WHILE…DO…END WHILE 等复合语句。
+暂不支类似 IF ，WHILE 等流程控制类语句。
+
+不支持rname拆分表

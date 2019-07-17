@@ -8,7 +8,7 @@
 
    如下图所示，未经分区、格式化的磁盘设备是/dev/vdb，**lsblk** 的输出从完整的设备路径中去掉了 `/dev/` 前缀。如果设备/dev/vdb已有分区，将会如/dev/vda一样列出其分区：/dev/vda1。
 
-![lsblk](../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/lsblk.PNG)
+![lsblk](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/lsblk.PNG)
 
 2. 新创建的云盘需要在其上创建文件系统后才能够挂载并使用它们。在此之前可以通过输入以下命令来确认设备是否包含文件系统，以设备/dev/vdb为例：
 

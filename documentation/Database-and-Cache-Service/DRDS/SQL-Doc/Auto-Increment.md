@@ -19,9 +19,9 @@ CREATE TABLE table_name (
 - drds_auto_increment_offset：对应MySQL的auto_increment_offset
 - drds_group_size：使用group方式申请自增ID时，每个group的大小，默认为1000
 
-使用 
+使用 'show variables' 可以查看drds相关的环境变量
 ```
-show variables like 'drds%' 可以查看drds相关的环境变量
+show variables like 'drds%' 
 ```
 
 ## 示例
@@ -38,3 +38,4 @@ name varchar(10)
 2. DRDS的全局自增ID不支持循环使用，超出最大限制后，会报错。
 3. SIMPLE,GROUP,TIME 不区分大小写
 4. 如果插入语句报错，当前的ID值将被丢弃，下次插入会申请新的ID
+5. 如果自增ID字段插入'0'，也会生成自增ID

@@ -10,7 +10,7 @@
 
 1. 确认云硬盘已经在控制台完成扩容并再次挂载到此云主机后，从控制台重启此云主机。
 
-   ![vm_restart](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\vm_restart.png)
+   ![vm_restart](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/vm_restart.png)
 
 2. 重启后登陆此云主机，输入`lsblk` 命令检查设备名称：
 

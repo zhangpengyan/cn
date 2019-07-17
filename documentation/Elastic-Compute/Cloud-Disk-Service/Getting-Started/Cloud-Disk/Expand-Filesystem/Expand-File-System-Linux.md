@@ -16,19 +16,19 @@
 
    `lsblk`
 
-   ![lsblk_ext4](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\lsblk_ext4.PNG)
+   ![lsblk_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/lsblk_ext4.PNG)
 
 3. 使用`e2fsck`命令检查文件系统：
 
    `e2fsck -f /dev/vde`
 
-   ![e2fsck_ext4](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\e2fsck_ext4.PNG)
+   ![e2fsck_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/e2fsck_ext4.PNG)
 
 4. 使用resize2fs命令对文件系统进行扩容，如扩容/dev/vde设备的文件系统：
 
    `sudo resize2fs /dev/vde`
 
-   ![resize2fs_ext4](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\resize2fs_ext4.PNG)
+   ![resize2fs_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/resize2fs_ext4.PNG)
 
 5. 使用`mount`命令重新挂载此设备，已设备名称/dev/vde为例：
 
@@ -40,22 +40,22 @@
 
 1. 使用 `df -h` 命令验证待扩容的卷的文件系统大小。如下图示例，待扩容的/dev/vdc原始大小为20GB：
 
-   ![expand_df](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\expand_df.PNG)
+   ![expand_df](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/expand_df.PNG)
 
 2. 输入`lsblk` 命令检查设备名称：
 
    `lsblk`
 
-   ![lsblk](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\lsblk.PNG)
+   ![lsblk](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/lsblk.PNG)
 
 3. 使用`xfs_growfs` 命令扩展文件系统，如该设备当前挂载在/mnt：
 
    `sudo xfs_growfs -d /mnt`
 
-   ![growfs](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\growfs.PNG)
+   ![growfs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/growfs.PNG)
 
    
 
 4. （可选）执行完成后可以再次执行`df -h`命令验证扩容后的卷大小。
 
-   ![df_aga](C:\Users\wangguanyang\Desktop\云盘挂载帮助文档用图\新建文件夹\df_aga.PNG)
+   ![df_aga](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/df_aga.PNG)

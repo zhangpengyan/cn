@@ -1,1 +1,0 @@
-# DRDS DML SQL 语法

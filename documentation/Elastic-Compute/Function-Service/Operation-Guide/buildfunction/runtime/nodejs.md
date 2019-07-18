@@ -10,9 +10,11 @@ NodeJS 8 ( 支持  NodeJS 8.16 版本 )
 
 定义一个简单的Python函数作为函数入口：
 
-```Python
-   def handler(event, context):
-   return 'hello world'
+```nodejs
+exports.handler = function(event, context, callback) {
+  console.log('hello world');
+  callback(null, 'hello world');
+}
 ```
 
 函数创建时需以[文件名].[函数名]定义函数执行入口，handler函数与创建函数时，入口函数定义中的“函数名”字段对应。

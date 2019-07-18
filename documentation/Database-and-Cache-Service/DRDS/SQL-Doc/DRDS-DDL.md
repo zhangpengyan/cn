@@ -32,7 +32,7 @@ CREATE TABLE table_name
 - YYYY()：时间，日期字段进行拆分，按年拆分，支持 timestamp，date，datetime
  
  **关键字：**（不区分大小写）
- - START ： 按时间拆分时，数据的起始时间，格式为‘YYYY’或者‘YYYY-MM’
+ - START ： 按时间拆分时，数据的起始时间，格式为 ‘YYYY’ 或者 ‘YYYY-MM’，其他格式将不被接受
  - PERIOD：按时间拆分时，每多少时间周期的数据放入到一个分表中，例如每3个月，或每2年的数据放入一个分表中
  
  ## 示例

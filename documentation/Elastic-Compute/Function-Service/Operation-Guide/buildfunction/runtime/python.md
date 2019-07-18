@@ -44,9 +44,10 @@ def main_handler(event, context):
 ## 使用内置模块
 
 除了 Python 的标准模块，函数服务的 Python 运行环境中还包含以下常用模块，用户可以直接引用。
-| 模块名称 | 模块介绍 | 相关链接 |
-| ---------- | -------- | -------- |
-| boto3 | OSS Python SDK  | [ OSS Python SDK](https://docs.jdcloud.com/cn/object-storage-service/sdk-python) |  
+
+| 模块名称|模块介绍 | 相关链接 |
+| ------ | ------ | ----- |
+| boto3 | OSS Python SDK | [ OSS Python SDK](https://docs.jdcloud.com/cn/object-storage-service/sdk-python) |  
 
 编写函数代码时，可通过如下方式引入使用OSS SDK：
 ```Python

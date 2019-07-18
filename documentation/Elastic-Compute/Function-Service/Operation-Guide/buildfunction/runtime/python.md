@@ -2,11 +2,11 @@
 
 函数服务前支持以下 Python 运行环境：
 
-Python 2.7 ( runtime = python2.7 )
+Python 2.7 ( 支持 python2.7版本 )
 
-Python 3.6 ( runtime = python3.6 )
+Python 3.6 ( 支持 python3.6版本 )
 
-Python 3.7 ( runtime = python3.7 )
+Python 3.7 ( 支持 python3.7版本)
 
 ## 处理程序
 

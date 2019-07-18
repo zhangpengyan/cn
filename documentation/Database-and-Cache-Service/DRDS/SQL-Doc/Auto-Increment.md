@@ -36,7 +36,7 @@ id int AUTO_INCREMENT group，
 name varchar(10),
 key(id)
 ) AUTO_INCREMENT=10
-[table partition options];
+dbpartion by init_mod(id);
 ```
 
 ## 使用说明：

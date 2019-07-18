@@ -38,6 +38,12 @@ items:
         items:
            - name: 函数概述
              href: Operation-Guide/buildfunction/function-overview.md 
+           - name: 编程语言
+             items:
+               - name: Python
+                 href: Operation-Guide/buildfunction/runtime/python.md
+               - name: NodeJS
+                 href: Operation-Guide/buildfunction/runtime/nodejs.md                
            - name: 编程模型
              items:
                - name: 基本概念
@@ -50,8 +56,6 @@ items:
                  href: Operation-Guide/buildfunction/programming-model/python/record.md 
            - name: 创建函数部署包
              href: Operation-Guide/buildfunction/programming-model/package.md  
-           - name: 配置函数
-             href: Operation-Guide/buildfunction/config-function.md  
            - name: 测试函数
              href: Operation-Guide/buildfunction/test-function.md                  
                

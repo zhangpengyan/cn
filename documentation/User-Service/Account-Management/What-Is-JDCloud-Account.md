@@ -28,6 +28,7 @@
 ![](../../../image/User/Account-Mgmt/UC-Upgrade2.png)
 
 升级成功后，您即可使用新设置的账号名和密码登录京东云。
+![](../../../image/User/Account-Mgmt/Upgrade-Success.PNG)
 ![](../../../image/User/Account-Mgmt/login.png)
 
 ### 常见问题

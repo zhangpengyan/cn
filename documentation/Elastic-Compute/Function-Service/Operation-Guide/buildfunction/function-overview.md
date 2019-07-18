@@ -43,11 +43,11 @@
 
 **说明**：除函数名称外，其他属性均可后续修改。
 
-## Function支持的函数运行时列表。
+## Function支持的函数运行时列表
 
 
 | 运行时类型 |   文档链接 |
 | ---------- | -------- |
-| Python 2.7版本   |  [编程模型](programming-model/basic-concept.md) |  
-| Python 3.6版本   |  [编程模型](programming-model/basic-concept.md) | 
-| Python 3.7版本   |  [编程模型](programming-model/basic-concept.md) | 
+| Python 2.7  |  [编程模型](programming-model/basic-concept.md) |  
+| Python 3.6   |  [编程模型](programming-model/basic-concept.md) | 
+| Python 3.7   |  [编程模型](programming-model/basic-concept.md) | 

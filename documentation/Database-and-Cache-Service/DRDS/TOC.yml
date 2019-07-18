@@ -67,6 +67,8 @@
         href: SQL-Doc/DRDS-SQL-Introduction.md
       - name: DDL 语法
         href: SQL-Doc/DRDS-DDL.md
+      - name: DML 语法
+        href: SQL-Doc/DRDS-DML.md        
       - name: 全局自增ID
         href: SQL-Doc/Auto-Increment.md
       - name: SQL 限制

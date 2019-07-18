@@ -61,11 +61,16 @@
               href: Operation-Guide/Database/Expand-Database/View-Expansion-Task.md
             - name: 检查并清理
               href: Operation-Guide/Database/Expand-Database/Drop-Migrated-Databases.md               
-              
-      - name: 表管理
-        items:
-          - name: 表DDL语法
-            href: Operation-Guide/Table/Table-DDL.md
+  - name: SQL 文档
+    items:
+      - name: DRDS SQL 简介
+        href: SQL-Doc/DRDS-SQL-Introduction.md
+      - name: DDL 语法
+        href: SQL-Doc/DRDS-DDL.md
+      - name: 全局自增ID
+        href: SQL-Doc/Auto-Increment.md
+      - name: SQL 限制
+        href: SQL-Doc/SQL-Restrictions.md
             
   - name: 常见问题
     items:

@@ -17,8 +17,8 @@ Python 3.7 ( 支持 python3.7版本)
    return 'hello world'
 ```
 
-函数创建时需以[文件名].[函数名]定义函数执行入口，handler函数与创建函数时，入口函数定义中的“函数名”字段对应。
-Function从处理程序开始执行您的代码，函数入口格式为：文件名.函数名。例如，用户指定函数入口为：index.handler，则函数服务会在代码程序包中寻找index.py中的handler函数开始执行。
+函数创建时以[文件名].[函数名]的格式定义函数执行入口，handler函数与创建函数时，入口函数定义中的“函数名”字段对应。
+
 使用本地ZIP包上传，请确认ZIP包根目录下包含指定的入口文件，文件内有函数名对应的入口函数，确保能够根据定义的函数入口查找到对应的文件及函数执行。
 
    
@@ -32,7 +32,7 @@ context：使用此参数向您的处理程序传递运行时信息。
 
 ## 日志
 
-您可以在程序中使用 print 或使用 logging 模块来完成日志输出。例如如下函数：
+您可以使用 print 或 logging 模块来打印日志输出，并在函数日志中查看：
 
 ```Python
 import logging
@@ -43,7 +43,7 @@ def main_handler(event, context):
     print("got event{}".format(event))
     return 'Hello World!'
 ```
-您可以在函数日志中查看日志输出。
+
 
 ## 使用内置模块
 

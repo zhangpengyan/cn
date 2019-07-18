@@ -7,8 +7,9 @@ DRDS 兼容 MySQL 协议和语法，但由于DRDS和MyDQL还是存在一定的�
 ## SQL限制
 - 不支持schema.table_name这样的创建及增删改查SQL
 - 不支持 insert into ... select, load data, replace into 等插入语句
-- 不支持 select into outfile/into dumpfile/into <variables>
-- 不支持 rename表；不支持rename 拆分表中的拆分字段、auto increment字段
+- 不支持 select into outfile/into dumpfile/into <variables>这样的SQL
+- 不支持 rename表
+- 不支持rename 拆分表中的拆分字段、auto increment字段
 - 拆分表不支持CREATE TABLE ... LIKE 和 CREATE TABLE ... SELECT ... 
 
 ## 函数限制

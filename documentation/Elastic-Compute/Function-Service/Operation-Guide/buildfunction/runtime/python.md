@@ -23,6 +23,7 @@ Function从处理程序开始执行您的代码，函数入口格式为：文件
 Python 环境下的入参包括 event 和 context，两者均为 Python dict 类型。
 
 event：调用函数时的输入触发事件参数。
+
 context：使用此参数向您的处理程序传递运行时信息。
 
 

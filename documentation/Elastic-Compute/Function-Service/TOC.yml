@@ -37,7 +37,11 @@ items:
       - name: 函数构建
         items:
            - name: 函数概述
-             href: Operation-Guide/buildfunction/function-overview.md 
+             href: Operation-Guide/buildfunction/function-overview.md
+           - name: 函数开发指南
+             href: Operation-Guide/buildfunction/programming-model/dev-guide.md  
+           - name: 创建函数部署包
+             href: Operation-Guide/buildfunction/programming-model/package.md  
            - name: 编程语言
              items:
                - name: Python
@@ -46,16 +50,12 @@ items:
                  href: Operation-Guide/buildfunction/runtime/nodejs.md                
            - name: 编程模型
              items:
-               - name: 基本概念
-                 href: Operation-Guide/buildfunction/programming-model/basic-concept.md 
                - name: 处理程序
                  href: Operation-Guide/buildfunction/programming-model/python/processing-program.md 
                - name: Context对象
                  href: Operation-Guide/buildfunction/programming-model/python/context.md 
                - name: 日志记录
                  href: Operation-Guide/buildfunction/programming-model/python/record.md 
-           - name: 创建函数部署包
-             href: Operation-Guide/buildfunction/programming-model/package.md  
            - name: 测试函数
              href: Operation-Guide/buildfunction/test-function.md                  
                

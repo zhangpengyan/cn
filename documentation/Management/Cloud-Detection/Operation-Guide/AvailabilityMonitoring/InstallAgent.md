@@ -1,7 +1,7 @@
 # 安装监控插件
 选择需要作为探测源的云主机（仅支持Linux类主机），登录该云主机。  
 1. 配置credential文件  
-  - 创建 ~/.jdc/monitor_credentials.yml 文件  
+  - 创建 ~/.jdcloud/monitor_credentials.yml 文件  
   - 编缉并保存monitor_credentials.yml文件，文件内容为：  
    ```
    ak: xxxxxxx(填写YourAccessKeyID)   

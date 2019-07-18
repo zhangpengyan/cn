@@ -46,8 +46,10 @@
 ## Function支持的函数运行时列表
 
 
-| 运行时类型 |   文档链接 |
-| ---------- | -------- |
-| Python 2.7  |  [编程模型](programming-model/basic-concept.md) |  
-| Python 3.6   |  [编程模型](programming-model/basic-concept.md) | 
-| Python 3.7   |  [编程模型](programming-model/basic-concept.md) | 
+| 运行时类型 | 运行时版本 | 文档链接 |
+| ---------- | -------- | -------- |
+| Python 2.7  | Python 2.7 版本 | [编程模型](programming-model/basic-concept.md) |  
+| Python 3.6   | Python 3.6 版本 | [编程模型](programming-model/basic-concept.md) | 
+| Python 3.7   | Python 3.7 版本 | [编程模型](programming-model/basic-concept.md) | 
+| NodeJS 6    | NodeJS 6.17 版本 | [编程模型](programming-model/basic-concept.md) | 
+| NodeJS 8    | NodeJS 8.16 版本 | [编程模型](programming-model/basic-concept.md) | 

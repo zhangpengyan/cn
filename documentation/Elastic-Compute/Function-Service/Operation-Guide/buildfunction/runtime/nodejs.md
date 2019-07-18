@@ -10,7 +10,7 @@ NodeJS 8 ( 支持  NodeJS 8.16 版本 )
 
 定义一个简单的Python函数作为函数入口：
 
-```nodejs
+```JavaScript
 exports.handler = function(event, context, callback) {
   console.log('hello world');
   callback(null, 'hello world');

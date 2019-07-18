@@ -16,10 +16,12 @@ CREATE TABLE table_name (
 ) AUTO_INCREMENT=<start value>
 [dbpartion options]
 ```
-为配合DRDS全局自增ID，DRDS新增了3个变量
+为配合DRDS全局自增ID，DRDS新增了3个变量。这三个变量只支持global级别的设置，不支持session级的。
 - drds_auto_increment_increment：对应MySQL的auto_increment_increment 。
 - drds_auto_increment_offset：对应MySQL的auto_increment_offset 。
 - drds_group_size：使用group方式申请自增ID时，每个group的大小，默认为1000 。
+> 注意：在DRDS中设置原先MySQL的auto_increment_increment和auto_increment_offset，只能是session级别，global级别的set不生效。
+
 
 使用 'show variables' 可以查看drds相关的环境变量
 ```
@@ -31,14 +33,15 @@ show variables like 'drds%'
 ```SQL
 create table increment_demo1(
 id int AUTO_INCREMENT group，
-name varchar(10)
+name varchar(10),
+key(id)
 ) AUTO_INCREMENT=10
 [table partition options];
 ```
 
 ## 使用说明：
 1. 使用TIME方式的自增ID，字段类型必须是bigint。
-2. DRDS的全局自增ID不支持循环使用，超出最大限制后，会报错。
+2. DRDS的全局自增ID不支持循环使用，超出最大限制后，会报错，因此请设置合适的int字段类型。
 3. SIMPLE,GROUP,TIME 不区分大小写。
 4. 如果插入语句报错，当前的ID值将被丢弃，下次插入会申请新的ID。
 5. 如果自增ID字段插入'0'，也会生成自增ID，这是跟MySQL略有区别的地方。

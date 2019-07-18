@@ -11,7 +11,7 @@ DRDS会根据SQL语句中包含的拆分字段的值来判断将SQL语句发往�
 - 拆分函数：使用什么算法对表中的数据进行拆分。
 
 
-下面是创建拆分表的具体语法：
+下面是创建拆分表的具体语法，**注意 [DRDS Partition Optiosn] 部分的语法必须在放在最后**
 ```SQL
 CREATE TABLE table_name
  (create_definition,...)
@@ -41,6 +41,7 @@ CREATE TABLE table_name
  create table ddl_demo1(
  id int,
  name varchar(10))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8
  dbpartition by init_mod(id);
  ```
  
@@ -49,6 +50,7 @@ CREATE TABLE table_name
  create table ddl_demo2(
  id int,
  name varchar(10))
+ ENGINE=InnoDB DEFAULT CHARSET=utf8
  dbpartition by string_hash(name);
  ```
  
@@ -57,6 +59,7 @@ CREATE TABLE table_name
  create table ddl_demo3(
  order_id int,
  order_date datetime)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8
  dbpartition by YYYYMM(order_date) start('2019-5') period(3);
  ```
  4. 使用YYYY函数，数据的起始时间为2000年，每2年的数据放入一个分表中
@@ -64,5 +67,6 @@ CREATE TABLE table_name
  create table ddl_demo4(
  order_id int,
  order_date datetime)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8
  dbpartition by YYYY(order_date) start('2000') period(2);
  ```

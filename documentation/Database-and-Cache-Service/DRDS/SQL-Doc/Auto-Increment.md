@@ -10,10 +10,10 @@ DRDS支持全局自增ID，可以根据用户定义，按以下三种方式生�
 ## SQL 语法
 ```SQL
 CREATE TABLE table_name (
-   [column definition]  AUTO_INCREMENT [SIMPLE| GROUP | TIME ],
+   [column definition]  auto_increment by [SIMPLE| GROUP | TIME ],
    [other column definition],
    ...
-) AUTO_INCREMENT=<start value>
+) auto_increment=<start value>
 [dbpartion options]
 ```
 为配合DRDS全局自增ID，DRDS新增了3个变量。这三个变量只支持global级别的设置，不支持session级的。
@@ -32,11 +32,11 @@ show variables like 'drds%'
 1. 创建自增ID类型为group，起始值为10的表
 ```SQL
 create table increment_demo1(
-id int AUTO_INCREMENT group，
+id int auto_increment by group,
 name varchar(10),
 key(id)
-) AUTO_INCREMENT=10
-dbpartion by init_mod(id);
+) auto_increment=10
+dbpartition by int_mod(id);
 ```
 
 ## 使用说明：

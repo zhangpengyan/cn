@@ -15,7 +15,8 @@ Python 3.7 ( runtime = python3.7 )
    return 'hello world'
 ```
 
-handler函数与创建函数时，入口函数定义中的“handler”字段对应。Function从处理程序开始执行您的代码，函数入口格式为：文件名.函数名。例如，用户指定函数入口为：index.handler，则函数服务会在代码程序包中寻找index.py中的handler函数开始执行。
+handler函数与创建函数时，入口函数定义中的“handler”字段对应。
+Function从处理程序开始执行您的代码，函数入口格式为：文件名.函数名。例如，用户指定函数入口为：index.handler，则函数服务会在代码程序包中寻找index.py中的handler函数开始执行。
 
    
 ## 入参
@@ -46,5 +47,8 @@ def main_handler(event, context):
 | 模块名称 | 模块介绍 | 相关链接 |
 | ---------- | -------- | -------- |
 | boto3 | OSS Python SDK  | [ OSS Python SDK](https://docs.jdcloud.com/cn/object-storage-service/sdk-python) |  
-| Python 3.6   | Python 3.6 版本 | [编程模型](programming-model/basic-concept.md) | 
 
+编写函数代码时，可通过如下方式引入使用OSS SDK：
+```Python
+import boto3
+```

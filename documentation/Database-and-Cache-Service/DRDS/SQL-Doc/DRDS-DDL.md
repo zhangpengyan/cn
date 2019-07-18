@@ -42,7 +42,7 @@ CREATE TABLE table_name
  id int,
  name varchar(10))
  ENGINE=InnoDB DEFAULT CHARSET=utf8
- dbpartition by init_mod(id);
+ dbpartition by int_mod(id);
  ```
  
 2. 按字符字段拆分
@@ -60,7 +60,7 @@ CREATE TABLE table_name
  order_id int,
  order_date datetime)
  ENGINE=InnoDB DEFAULT CHARSET=utf8
- dbpartition by YYYYMM(order_date) start('2019-5') period(3);
+ dbpartition by YYYYMM(order_date) start('2019-05') period 3;
  ```
  4. 使用YYYY函数，数据的起始时间为2000年，每2年的数据放入一个分表中
   ```SQL
@@ -68,5 +68,5 @@ CREATE TABLE table_name
  order_id int,
  order_date datetime)
  ENGINE=InnoDB DEFAULT CHARSET=utf8
- dbpartition by YYYY(order_date) start('2000') period(2);
+ dbpartition by YYYY(order_date) start('2000') period 2;
  ```

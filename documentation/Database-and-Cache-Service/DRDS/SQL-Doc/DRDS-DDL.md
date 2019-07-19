@@ -20,7 +20,7 @@ CREATE TABLE table_name
 [DRDS partition options]
 ```
 
-**DRDS 分表语法**
+**[DRDS Partition Optiosn] 语法**
 ```SQL
  dbpartition by
      INT_MOD ([column_name])     |
@@ -29,8 +29,8 @@ CREATE TABLE table_name
      YYYY ([column_name]) START ([start_date]) PERIOD [num]  
 ```
    
-## 拆分函数
-目前DRDS支持以下的拆分函数，函数名均不区分大小写
+### 拆分函数
+目前DRDS支持以下的拆分函数，函数名不区分大小写
 - INT_MOD(): 对整型字段进行拆分，支持 int，smallint，bigint，tinyint，mediumint
 - STRING_HASH()：对字符字段进行拆分，支持 char， varchar
 - YYYYMM()：对时间，日期字段进行拆分，按月拆分，支持 timestamp，date，datetime
@@ -40,7 +40,7 @@ CREATE TABLE table_name
  - START ： 按时间拆分时，数据的起始时间，格式为 ‘YYYY’ 或者 ‘YYYY-MM’，其他格式将不被接受，例如start('2018')或start('2018-05')
  - PERIOD：按时间拆分时，每多少时间周期的数据放入到一个分表中，例如每3个月，或每2年的数据放入一个分表中
  
- ## 示例
+ ### 示例
  1. 按整型字段拆分
   ```SQL
  create table ddl_demo1(

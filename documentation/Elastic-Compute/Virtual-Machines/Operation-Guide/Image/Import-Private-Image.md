@@ -12,7 +12,7 @@
 ### Linux系统基本要求<br>
 | 镜像属性                  | 要求                | 
 | :------------------- |  :------------------- |
-|操作系统|* 支持CentOS、Ubuntu<br> * 支持64位  |
+|操作系统|* 支持CentOS、Ubuntu、Debian、SUSE Linux Enterprise、OpenSUSE<br> * 支持64位  |
 |镜像格式|* 支持RAW、VHD、QCOW2、VMDK|
 |镜像大小|* 实际大小（disk size）和虚拟大小（virtual size）均不超过500G|
 |文件系统|* xfs、ext3、ext4|

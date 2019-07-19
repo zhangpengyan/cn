@@ -27,7 +27,7 @@ pod install {framework name}
 ```Swift
 dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/jdcloud-api/jdcloud-sdk-ios.git", from: "0.0.1"),
+        .package(url: "https://github.com/jdcloud-api/jdcloud-sdk-ios.git", from: "0.0.11"),
     ]
 ```
 

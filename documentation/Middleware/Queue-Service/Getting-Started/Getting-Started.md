@@ -14,5 +14,5 @@
 
 Java, Go, Python, C++, JavaScript, .Net, PHP, Ruby
 
-为了使用AWS SQS开发的应用程序、SDK及第三方服务能无改动接入京东云队列服务，京东云队列服务支持了SQS SDK的接口。
+为了兼容基于AWS SQS开发的应用程序、软件及第三方服务能无改动接入京东云队列服务，京东云队列服务支持了SQS SDK的接口。
 

@@ -1,4 +1,4 @@
-DRDS DML SQL 语法
+# DRDS DML SQL 语法
 
 ## INSERT
 在DRDS中对拆分表进行insert时，必须在表名后加入字段名，否则拒绝执行该SQL

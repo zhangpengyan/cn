@@ -30,11 +30,7 @@
 
    ![resize2fs_ext4](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/expand-filesystem/resize2fs_ext4.PNG)
 
-5. 使用`mount`命令重新挂载此设备，已设备名称/dev/vde为例：
-
-   `mount /dev/vde /mnt`
-
-6. 挂在成功后可运行`df -h`命令验证挂载是否成功。
+5. 挂在成功后可运行`df -h`命令验证挂载是否成功。
 
 ## XFS文件系统的扩容
 

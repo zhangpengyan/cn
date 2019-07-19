@@ -4,7 +4,7 @@
 DRDS的自动分库分表是采用拆分表来实现的，即将原先的一个大表拆分为分布在多个数据库中的分表，每个分表只存储一部分数据，从而提高了对表增删改查的性能。 
 
 虽然DRDS将一个大表拆分成了多个小表，但这对用户是透明的，用户还是可以使用原先的表名访问所有分表中的数据，
-DRDS会根据SQL语句中包含的拆分字段的值来判断将SQL语句发往哪个RDS MySQL数据库中执行。
+DRDS会根据SQL语句中拆分字段的值来判断将SQL语句发往哪个分表中执行。
 
 因此，在DRDS中定义一个拆分表跟传统的非拆分表相比，主要有两个关键的地方需要定义：
 - 拆分字段：使用哪个字段对表中的数据进行拆分。
@@ -12,17 +12,26 @@ DRDS会根据SQL语句中包含的拆分字段的值来判断将SQL语句发往�
 
 
 下面是创建拆分表的具体语法，**注意 [DRDS Partition Optiosn] 部分的语法必须在放在最后**
-```SQL
+
 CREATE TABLE table_name
+
  (create_definition,...)
- [DRDS partition options]
  
- DRDS partition options:
- dbpartition by**
-     INT_MOD([column_name])   
-     | STRING_HASH([column_name])    
-     | YYYYMM([column_name]) | YYYY([column_name]) START([start_date]) period [num]  
-```
+ [DRDS partition options]
+  
+ ### DRDS partition options:
+ dbpartition by
+ 
+     int_mod ([column_name])     |
+     
+     string_hash ([column_name]) |
+     
+     YYYYMM ([column_name]) start([start_date]) period [num]|
+     
+     YYYY ([column_name]) start([start_date]) period [num]  
+
+
+
    
 ## 拆分函数
 目前DRDS支持以下的拆分函数，函数名均不区分大小写

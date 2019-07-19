@@ -17,7 +17,7 @@ CREATE TABLE table_name (
 ) auto_increment=<start value>
 [dbpartion options]
 ```
-为配合DRDS全局自增ID，DRDS新增了3个变量。这三个变量只支持global级别的设置，不支持session级的。
+为配合DRDS全局自增ID，DRDS新增了3个变量。这三个变量**只支持global级别的设置，不支持session级的。**
 - drds_auto_increment_increment：对应MySQL的auto_increment_increment 。
 - drds_auto_increment_offset：对应MySQL的auto_increment_offset 。
 - drds_group_size：使用group方式申请自增ID时，每个group的大小，默认为1000 。

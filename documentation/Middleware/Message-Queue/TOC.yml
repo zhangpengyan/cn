@@ -65,8 +65,10 @@
             href: Operation-Guide/Authorization-Management/Authorization-Overview.md
           - name: 主主账号授权
             href: Operation-Guide/Authorization-Management/Main-Main-Authorization.md
-          - name: 主子账号授权
+          - name: 主子账号授权Role-Authorization.md
             href: Operation-Guide/Authorization-Management/Main-Sub-Authorization.md
+          - name: 角色授权
+            href: Operation-Guide/Authorization-Management/Role-Authorization.md           
       - name: API参考（HTTP消息收发）
         items:
           - name: 调用方式

@@ -11,27 +11,23 @@ DRDS会根据SQL语句中拆分字段的值来判断将SQL语句发往哪个分�
 - 拆分函数：使用什么算法对表中的数据进行拆分。
 
 
-下面是创建拆分表的具体语法，**注意 [DRDS Partition Optiosn] 部分的语法必须在放在最后**
+下面是创建拆分表的具体语法
 
+**注意 [DRDS Partition Optiosn] 部分的语法必须在放在最后**
+```SQL
 CREATE TABLE table_name
+(create_definition,...)
+[DRDS partition options]
+```
 
- (create_definition,...)
- 
- [DRDS partition options]
-  
- ### DRDS partition options:
+**DRDS 分表语法**
+```SQL
  dbpartition by
- 
-     int_mod ([column_name])     |
-     
-     string_hash ([column_name]) |
-     
-     YYYYMM ([column_name]) start([start_date]) period [num]|
-     
-     YYYY ([column_name]) start([start_date]) period [num]  
-
-
-
+     INT_MOD ([column_name])     |
+     STRING_HASH ([column_name]) |
+     YYYYMM ([column_name]) START ([start_date]) PERIOD [num]|
+     YYYY ([column_name]) START ([start_date]) PERIOD [num]  
+```
    
 ## 拆分函数
 目前DRDS支持以下的拆分函数，函数名均不区分大小写
@@ -41,7 +37,7 @@ CREATE TABLE table_name
 - YYYY()：时间，日期字段进行拆分，按年拆分，支持 timestamp，date，datetime
  
  **关键字：**（不区分大小写）
- - START ： 按时间拆分时，数据的起始时间，格式为 ‘YYYY’ 或者 ‘YYYY-MM’，其他格式将不被接受
+ - START ： 按时间拆分时，数据的起始时间，格式为 ‘YYYY’ 或者 ‘YYYY-MM’，其他格式将不被接受，例如start('2018')或start('2018-05')
  - PERIOD：按时间拆分时，每多少时间周期的数据放入到一个分表中，例如每3个月，或每2年的数据放入一个分表中
  
  ## 示例

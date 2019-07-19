@@ -41,8 +41,7 @@
 
 ## 导入步骤
 
-![](../../../../../image/vm/Image-Import-Image-Overview.png)
-
+![](../../../../../image/vm/Image-Import-Image-Overview.png)<br>
 ### 1、准备镜像文件
 为保证导入镜像的可用性，请务必在导入前参照上述京东云镜像制作要求进行镜像配置检测，确认导入镜像符合京东云规范后再行操作导入。<br>
 同时为了保证导入镜像在京东云环境下可以获得修改密码、获得监控数据、安全扫描检测等功能，建议您在导出镜像之前进行重要系统组件的安装。系统组件功能及安装方法请参见：[官方镜像系统组件](https://docs.jdcloud.com/cn/virtual-machines/default-agent-in-public-image) <br>

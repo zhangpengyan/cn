@@ -65,6 +65,8 @@ items:
       href: Operation-Guide/Streaming-Management.md
     - name: 统计分析
       href: Operation-Guide/Statistical-Analysis.md
+    - name: 日志管理
+      href: Operation-Guide/Live-Log.md
 - name: 直播工具
   items:
     - name: SDK简介

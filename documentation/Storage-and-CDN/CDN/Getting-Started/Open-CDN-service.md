@@ -6,7 +6,7 @@
 
 ![image.png](https://img1.jcloudcs.com/cms/266a0834-5e5d-47db-9710-d01195b30bf520180117155324.png)
 
- 1、       登录[京东云官网](https://www.jdcloud.com/index)，点击右上角的“[免费注册](https://uc.jdcloud.com/reg?returnUrl=http%3A%2F%2Fwww.jdcloud.com)”，注册京东云账号
+ 1、       登录[京东云官网](https://www.jdcloud.com/index)，点击右上角的“[免费注册](https://user.jdcloud.com/register)”，注册京东云账号
 
 ![image.png](https://img1.jcloudcs.com/cms/750664a7-65c2-4f36-b443-d1ed4ff865e020180423110225.png)
 

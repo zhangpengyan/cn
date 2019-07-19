@@ -5,6 +5,7 @@ DRDS 兼容 MySQL 协议和语法，但由于DRDS和MyDQL还是存在一定的�
 - 暂不支持 BEGIN…END、LOOP…END LOOP、REPEAT…UNTIL…END REPEAT、WHILE…DO…END WHILE 等复合语句。
 
 ## SQL限制
+- 不支持修改拆分字段的类型
 - 不支持schema.table_name这样的创建及增删改查SQL
 - 不支持 insert into ... select, load data, replace into 等插入语句
 - 不支持 select into outfile/into dumpfile/into <variables>这样的SQL

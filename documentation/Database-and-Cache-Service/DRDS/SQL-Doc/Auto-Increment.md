@@ -1,6 +1,5 @@
 # 全局自增ID
 在单机MySQL的环境中，自增字段可以帮助用户生成表中唯一，递增的数值。但在DRDS中情况发生了变化，对于拆分表来说原先的一个表实际上已经被拆分成了后端多个分表，所以传统的自增字段已经不能满足用户的需求。所以DRDS对此做了改进，对于拆分表也可以生成唯一的数值。
-
 >备注：本文中介绍的全局自增ID只针对拆分表；对于非拆分表，可以直接用MySQL的语法，
 
 DRDS的全局自增ID，可以根据用户定义，按以下三种方式生成自增ID。
@@ -25,7 +24,7 @@ CREATE TABLE table_name (
 > 注意：在DRDS中设置原先MySQL的auto_increment_increment和auto_increment_offset，只能是session级别，global级别的set不生效。
 
 
-使用 'show variables' 可以查看drds相关的环境变量
+使用 'show variables' 可以查看drds相关的变量
 ```
 show variables like 'drds%' 
 ```

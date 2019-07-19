@@ -5,12 +5,14 @@
 
 您可以使用函数服务支持的开发语言（见表1）编写函数代码。
 
+| 运行时类型 | 运行时版本 | 文档链接 |
+| ---------- | -------- | -------- |
+| Python 2.7  | Python 2.7 版本 | [python runtime](runtime/python.md) |  
+| Python 3.6   | Python 3.6 版本 | [python runtime](runtime/python.md) | 
+| Python 3.7   | Python 3.7 版本 | [python runtime](runtime/python.md) | 
+| NodeJS 6    | NodeJS 6.17 版本 | [nodejs runtime](runtime/nodejs.md) | 
+| NodeJS 8    | NodeJS 8.16 版本 | [nodejs runtime](runtime/nodejs.md) | 
 
-|运行时类型     | 相关文档    |
-| ---------- | ---------- |
-| Python 2.7  | [函数编程模型](../Operation-Guide/buildfunction/programming-model/basic-concept.md)|
-| Python 3.6 | [函数编程模型](../Operation-Guide/buildfunction/programming-model/basic-concept.md)|
-| Python 3.7 | [函数编程模型](../Operation-Guide/buildfunction/programming-model/basic-concept.md)|
 
 ## 函数支持多种代码上传方式
 

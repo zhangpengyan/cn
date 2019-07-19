@@ -47,3 +47,35 @@
    然后以/mypoint 替换mount命令中的/mnt，`sudo mount /dev/vdb /mypoint`即可。
 
    
+## 重启后自动挂载
+
+云主机在每次重启时都需要重新挂载云硬盘，未避免每次云主机重启时都手动挂载与硬盘，可以通过在/etc/fstab文件中为设备添加条目来实现云主机重启后对云硬盘的自动挂载。
+
+1. （可选）备份/etc/fstab文件，以便对此文件误操作后恢复。
+
+   `sudo cp /etc/fstab /etc/fstab.bak`
+
+2. 输入`blkid`命令查找此设备的UUID。
+
+   ![check_uuid](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/check_uuid.PNG)
+
+3. 使用vim或其他文本编辑器打开/etc/fstab文件，以下以使用vim为例：
+
+   `vim /etc/fstab`
+
+4. 在fstab中添加一行新的条目，分别加入希望重启后自动挂载的设备的UUID，当前挂载目录，文件系统和挂载选项。
+
+   `UUID=e4abe4f9-4c65-4ce7-b8b1-171b7ab93f39 /mnt xfs defaults,nofail 0 2`
+
+   ![fstab](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/fstab.PNG)
+
+   **注意：**
+
+   建议如上述示例一样，在挂载选项中加入 **nofail**，即允许该实例在挂载此设备过程中即时出现错误也可正常启动。否则可能会造成此实例重启或通过此实例创建的镜像再创建主机时，在此UUID的设备不存在（比如卸载了此云硬盘）的情况下，实例无法正常启动。
+
+5. （可选）如果要检查fstab文件编辑的有效性，可以通过`umount /mnt`命令卸载已挂载的设备，然后输入：
+
+   `mount -a`
+
+   此命令将按照fstab文件中的挂载信息自动进行设备挂载，如果系统没有产生错误信息则fstab文件编辑成功。
+

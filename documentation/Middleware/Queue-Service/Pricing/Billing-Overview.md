@@ -1,7 +1,5 @@
 # 计费概述
 
-说明：队列服务公测期间不收取费用, 产品正式上线前会通知用户计费，产品收费标准请查看[价格总览](Price-Overview.md)。
-
 ## 计费方式
 
 队列服务计费方式：[按用量计费](http://docs.jdcloud.com/cn/billing/pay-as-you-go)。

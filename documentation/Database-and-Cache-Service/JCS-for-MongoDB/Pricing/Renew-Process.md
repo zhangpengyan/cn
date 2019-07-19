@@ -4,7 +4,7 @@
 
 
 ## 入口1：[MongoDB 控制台](https://mongodb-console.jdcloud.com/mongodb)
-1. 进入[京东云控制台]()。
+1. 进入[京东云控制台](https://console.jdcloud.com/overview)。
 2. 通过页头导航，依次点击 **产品** >  **MongoDB**,打开“实例列表”页面；也可以通过左侧菜单，依次点击 **数据库与缓存** > **MongoDB**,打开“实例列表”页面。
 
     ![](../../../../image/mongodb/mongo-039.png)

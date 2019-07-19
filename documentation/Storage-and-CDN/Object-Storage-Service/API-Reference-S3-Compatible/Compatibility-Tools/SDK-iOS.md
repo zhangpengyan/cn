@@ -22,4 +22,5 @@ end
 
 ## Demo下载
 
-下载地址：http://s3-sdk-demo.oss.cn-north-1.jcloudcs.com/ios-sdk/S3UploadDemo-v1.zip
+[点击下载](http://s3-sdk-demo.oss.cn-north-1.jcloudcs.com/ios-sdk/S3UploadDemo-v1.zip)
+

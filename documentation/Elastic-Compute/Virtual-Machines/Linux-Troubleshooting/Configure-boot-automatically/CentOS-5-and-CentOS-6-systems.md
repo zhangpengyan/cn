@@ -20,7 +20,7 @@
 
 ![](https://github.com/jdcloudcom/cn/blob/cn-VirtualMachine-Linux/image/Elastic-Compute/Virtual-Machine/Linux/CentOS%205%E5%8F%8ACentOS%206%E7%B3%BB%E7%BB%9F02.png)
 
-注：/etc/rc[0~6].d其实是/etc/rc.d/rc[0~6].d的软连接，是为了实现和Unix的兼容性
+注：/etc/rc[0 ~ 6].d其实是/etc/rc.d/rc[0 ~ 6].d的软连接，是为了实现和Unix的兼容性
 
 这7个目录中，每个目录分别存放着对应运行级别加载时需要关闭或启动的服务。由详细信息可知，每个脚本文件都对应着/etc/init.d/目录下具体的服务。
 

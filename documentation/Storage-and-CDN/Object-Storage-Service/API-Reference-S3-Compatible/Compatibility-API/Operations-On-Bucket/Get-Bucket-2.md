@@ -8,9 +8,9 @@
 ## 请求
 
 ### 语法
-```
+```HTTP
 GET /?list-type=2 HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -52,7 +52,7 @@ Key| object key<br>Type: String<br>Ancestor: ListBucketResult.Contents
 LastModified | object最后修改时间。<br>Type: Date<br>Ancestor: ListBucketResult.Contents
 MaxKeys| 限定此次返回object的最大数。<br>Type: Date<br>Ancestor: ListBucketResult.Contents
 Name| bucket的名称。<br>Type: String<br>Ancestor: ListBucketResult
-Owner| bucket拥有者。<br>Type: String<br>Children: DisplayName, ID<br>Ancestor: ListBucketResult.Contents | CommonPrefixes
+Owner| bucket拥有者。<br>Type: String<br>Children: DisplayName, ID<br>Ancestor: ListBucketResult.Contents
 Prefix |限定返回的object key必须以prefix作为前缀。<br>Type: String<br>Ancestor: ListBucketResult
 Size| object大小。<br>Type: String<br>Ancestor: ListBucketResult.Contents
 StorageClass| 存储类型：STANDARD、REDUCED_REDUNDANCY<br>Type: String<br>Ancestor: ListBucketResult.Contents
@@ -66,15 +66,15 @@ StartAfter| 请求中包含此元素，则响应中也包含此元素。<br>Type
 ### 示例1：Listing Keys
 该请求可返回某bucket中的object。该请求指定list-type元素为2。
 #### 请求示例
-```
+```HTTP
 GET /?list-type=2 HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 x-amz-date: 20160430T233541Z
 Authorization: <authorization string>
 Content-Type: text/plain
 ```
 #### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 3B3C7C725673C630
 Date: Sat, 30 Apr 2016 23:29:37 GMT
@@ -105,14 +105,14 @@ Server: JDCloudOSS
 ```
 ### 示例2：Listing Keys（使用max-keys,prefix,start-after元素）
 #### 请求示例
-```
+```HTTP
 GET /?list-type=2&max-keys=3&prefix=E&start-after=ExampleGuide.pdf HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 x-amz-date: 20160430T232933Z
 Authorization: <authorization string>
 ```
 #### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 3B3C7C725673C630
 Date: Sat, 30 Apr 2016 23:29:37 GMT
@@ -147,14 +147,14 @@ photos/2006/February/sample3.jpg<br>
 photos/2006/February/sample4.jpg<br>
 
 **以下示例指定delimiter值为"/"：**
-```
+```HTTP
 GET /?list-type=2&delimiter=/ HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com 
 x-amz-date: 20160430T235931Z
 Authorization: <authorization string>			
 ```
 sample.jpg不包含delimiter字符，所以OSS将它返回到Contents元素中。其他object包含delimiter字符，且包含共同的prefix:photos/，所以OSS将其作为单个CommonPrefixes元素返回。
-```
+```XML
 <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
   <Name>oss-example</Name>
   <Prefix></Prefix>
@@ -176,14 +176,14 @@ sample.jpg不包含delimiter字符，所以OSS将它返回到Contents元素中�
 ```
 
 **以下示例指定delimiter值为"/"，prefix值为"photos/2006/"**
-```
+```HTTP
 GET /?list-type=2&prefix=photos/2006/&delimiter=/ HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 x-amz-date: 20160501T000433Z
 Authorization: <authorization string>
 ```
 在响应中，OSS将会返回指定的prefix，并将包含prefix且第一次出现delimiter字符的不同字符串作为不同的CommonPrefixes进行分组并返回。
-```
+```XML
 <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
   <Name>oss-example</Name>
   <Prefix>photos/2006/</Prefix>
@@ -210,15 +210,15 @@ Authorization: <authorization string>
 
 ### 示例4：使用Continuation Token
 在这个示例中，初次请求返回object数量超过1000个。在响应中，OSS返回了值为true的IsTruncated元素以及NextContinuationToken元素。
-```
+```HTTP
 GET /?list-type=2 HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Mon, 02 May 2016 23:17:07 GMT
 Authorization: <authorization string>
 ```
 
 以下为响应示例：
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 3B3C7C725673C630
 Date: Sat, 30 Apr 2016 23:29:37 GMT
@@ -246,16 +246,14 @@ Server: JDCloudOSS
 ```
 
 如下随后的请求中，我们加入了continuation-token作为请求参数，并将之前返回的<NextContinuationToken> 作为该参数值。
-```
-GET /?list-type=2 HTTP/1.1
+```HTTP
 GET /?list-type=2&continuation-token=1ueGcxLPRx1Tr/XYExHnhbYLgveDs2J/wm36Hy4vbOwM= HTTP/1.1
-
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Mon, 02 May 2016 23:17:07 GMT
 Authorization: <authorization string>  
 ```
 在如下返回示例中，OSS将返回上次请求超出未返会的object。
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 3B3C7C725673C630
 Date: Sat, 30 Apr 2016 23:29:37 GMT

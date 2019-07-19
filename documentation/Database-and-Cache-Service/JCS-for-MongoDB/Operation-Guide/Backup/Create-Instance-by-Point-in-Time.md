@@ -15,7 +15,7 @@ MongoDB 控制台提供了根据时间点创建实例的功能，您可以根据
 
     ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-036.png)
 
-5. 在“创建实例”页面，选择计费类型、实例规格配置等信息，完成实例创建。创建过程同 [创建实例 ](https://github.com/jdcloudcom/cn/blob/master/documentation/Cloud-Database-and-Cache/MongoDB/Getting-Started/CreateInstance.md)。
+5. 在“创建实例”页面，选择计费类型、实例规格配置等信息，完成实例创建。创建过程同 [创建实例 ](../../Getting-Started/Create-Instance.md)。
 
     ![](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/mongo-036.png)
 

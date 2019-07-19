@@ -8,7 +8,7 @@ TiDB 提供 syncer 工具能方便的将 MySQL 的数据增量的导入到 TiDB 
 syncer 属于 TiDB 企业版工具集，如何获取可以参考 下载 TiDB 企业版工具集。
 
 ## 下载 TiDB 企业版工具集 (Linux)
-```
+```Shell
 # 下载 tool 压缩包
 wget http://download.pingcap.org/tidb-enterprise-tools-latest-linux-amd64.tar.gz
 wget http://download.pingcap.org/tidb-enterprise-tools-latest-linux-amd64.sha256
@@ -26,7 +26,7 @@ cd tidb-enterprise-tools-latest-linux-amd64
 如上文所提，mydumper 导出的数据目录里面有一个 metadata 文件，里面就包含了我们所需的 position 信息。
 
 medadata 文件信息内容举例：
-```
+```Shell
 Started dump at: 2017-04-28 10:48:10
 SHOW MASTER STATUS:
     Log: mysql-bin.000003
@@ -38,7 +38,7 @@ Finished dump at: 2017-04-28 10:48:11
 
 我们将 position 相关的信息保存到一个 syncer.meta 文件里面，用于 syncer 的同步:
 
-```
+```Shell
 # cat syncer.meta
 binlog-name = "mysql-bin.000003"
 binlog-pos = 930143241
@@ -54,7 +54,7 @@ binlog-gtid = "2bfabd22-fff7-11e6-97f7-f02fa73bcb01:1-23,61ccbb5d-c82d-11e6-ac2e
 
 syncer 的配置文件 config.toml:
 
-```
+```Shell
 log-level = "info"
 
 server-id = 101
@@ -141,7 +141,7 @@ port = 4000
 
 启动 syncer:
 
-```
+```Shell
 ./bin/syncer -config config.toml
 
 2016/10/27 15:22:01 binlogsyncer.go:226: [info] begin to sync binlog from position (mysql-bin.000003, 1280)
@@ -151,13 +151,13 @@ port = 4000
 ```
 
 ## 在 MySQL 插入新的数据
-```
+```SQL
 INSERT INTO t1 VALUES (4, 4), (5, 5);
 ```
 
 登录到 TiDB 查看：
 
-```
+```Shell
 mysql -h127.0.0.1 -P4000 -uroot -p
 mysql> select * from t1;
 +----+------+
@@ -173,7 +173,7 @@ mysql> select * from t1;
 
 syncer 每隔 30s 会输出当前的同步统计，如下
 
-```
+```Shell
 2017/06/08 01:18:51 syncer.go:934: [info] [syncer]total events = 15, total tps = 130, recent tps = 4,
 master-binlog = (ON.000001, 11992), master-binlog-gtid=53ea0ed1-9bf8-11e6-8bea-64006a897c73:1-74,
 syncer-binlog = (ON.000001, 2504), syncer-binlog-gtid = 53ea0ed1-9bf8-11e6-8bea-64006a897c73:1-17

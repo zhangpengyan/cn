@@ -6,7 +6,7 @@
 
 注销网站执行结果：被注销网站备案号下的所有网站信息被清除，主体信息保留
 
-工信部查询网址：[**www.miitbeian.gov.cn**](http://www.miitbeian.gov.cn)
+工信部查询网址：[**www.beian.miit.gov.cn**](http://www.beian.miit.gov.cn)
 
 **填表说明：**
 

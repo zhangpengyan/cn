@@ -61,3 +61,10 @@ reboot
 ```
 uname -r
 ```
+10.存储网关1_0_4镜像相对于早期版本，修复了以下两个漏洞：
+- [Intel处理器Meltdown和Spectre安全漏洞](https://docs.jdcloud.com/cn/security-instruction/intel-meltdown-spectre-solution)
+- [NTP服务和Monlist漏洞](https://docs.jdcloud.com/cn/security-instruction/ntp-monlist-vulnerability)
+
+若您使用的早期版本的镜像（如：存储网关1_0_0），请尽快升级至存储网关1_0_4版本。
+
+若因业务原因不便升级，请参考以上漏洞解决方案在原系统上进行修复即可。

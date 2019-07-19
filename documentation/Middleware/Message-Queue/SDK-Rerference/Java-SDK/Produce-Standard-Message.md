@@ -20,7 +20,7 @@
 | PROPERTY_DELAY_TIME | 可以设置消息的延迟时间，范围为0-3600秒     |
 
 ## 代码示例
-```java
+```Java
 package com.jcloud.jcq.sdk.demo;
 
 import com.jcloud.jcq.common.constants.MessageConstants;

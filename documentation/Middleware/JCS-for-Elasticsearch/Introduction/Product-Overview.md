@@ -5,9 +5,9 @@
 
 - 快速上手
 	- [创建集群](../Getting-Started/Create-ES.md)
-	- [访问集群](../Operation-Guide/connect-ES.md)
+	- [访问集群](../Best-Practices/connect-ES.md)
 - 操作指南
-	- [使用kibana](../Operation-Guide/using_kibana.md)
+	- [使用kibana](../Best-Practices/using_kibana.md)
 	- [查看监控信息](../Operation-Guide/Monitoring.md)
 	- [查看状态信息](../Operation-Guide/status.md)
 

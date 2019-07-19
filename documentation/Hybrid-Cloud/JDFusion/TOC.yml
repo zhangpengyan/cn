@@ -25,7 +25,8 @@ items:
       href: Operation-Guide/jdfusion-cloud-InvitationCode.md
     - name: 如何登录JDFuison控制台
       href: Operation-Guide/jdfusion-cloud-uc.md
- 
+    - name: Deployment操作指南
+      href: Operation-Guide/jdfusion-cloud-deployment.md 
       
 - name: 历史发布
   items:

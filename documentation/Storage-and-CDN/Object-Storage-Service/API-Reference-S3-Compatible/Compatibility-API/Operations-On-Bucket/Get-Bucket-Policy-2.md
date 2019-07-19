@@ -4,9 +4,9 @@
 该操作可返回指定Bukcet的policy。仅Bukcet的Owner可操作。
 ## 请求
 ### 语法
-```
+```HTTP
 GET /?policy HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -25,14 +25,14 @@ Authorization: <authorization string> (see Authenticating Requests (AWS Signatur
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 GET ?policy HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 28 Oct 2009 22:32:00 GMT
 Authorization: <authorization string>
 ```
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK   
 x-amz-request-id: 656c76696e67SAMPLE57374  
 Date: Tue, 04 Apr 2010 20:34:56 GMT  

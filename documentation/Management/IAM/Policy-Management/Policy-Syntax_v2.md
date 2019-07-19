@@ -14,7 +14,7 @@ IAM Policy 包含以下基本元素：content（策略内容）、permission（�
   支持 3 种类型的资源操作，即读（R，指 Read）、改（M，指 Modify）、删除（D，指 Delete）。例如，查看云主机详情是读操作，备份或重启云主机均属于改操作，删除镜像是删除操作。
   当需要授权多种操作类型时，可以用竖线 "|" 将操作类型隔开。如，仅授权只读操作时，permission 为 "R"；授权管理员权限时，permission 为 "R|M|D"。
  
-   > 注：如果授权子账号改权限（M）和删除权限（D），则子账号默认也具有读权限（R）。
+ > 注：如果授权子账号改权限（M）和删除权限（D），则子账号默认也具有读权限（R）。
  
 - resource
   被授权的资源由资源类型（type）和资源 ID （ids） 指定。
@@ -33,7 +33,8 @@ Policy 的语法应符合 JSON 格式。如果您创建的授权策略不符合 
 
 ## Policy 的语法描述
 
-```<policy> =
+```JSON
+<policy> =
 {
 <content>,
 <version>
@@ -42,7 +43,8 @@ Policy 的语法应符合 JSON 格式。如果您创建的授权策略不符合 
 
 其中 Content 的描述可以包含一组或多组 Permission 和 Resource 对：
 
-```<content> = 
+```JSON
+<content> = 
 "content":[
 {
 <permission>,
@@ -55,15 +57,15 @@ Policy 的语法应符合 JSON 格式。如果您创建的授权策略不符合 
 ]
 ```
 
-```<permission>``` 中的内容 为（以管理员权限为例）：
+` permission`  中的内容 为（以管理员权限为例）：
 
-```
+```JSON
 "permission" : "R|M|D"
 ```
 
-```<resource>```中需要指定资源的类型和 IDs：
+` resource` 中需要指定资源的类型和 IDs：
 
-```
+```JSON
 "resource":[
 {
 <ids>,
@@ -72,16 +74,16 @@ Policy 的语法应符合 JSON 格式。如果您创建的授权策略不符合 
 ]
 ```
 
-```<ids>```中的可指定一个或多个资源（以指定资源 ID 为例）：
+` ids` 中的可指定一个或多个资源（以指定资源 ID 为例）：
 
-```
+```JSON
 "ids":[
 "resource-id1",
 "resource-id2"
 ]
 ```
 
-```<type>```为指定产品线的service name：
-
-```
+`type`为指定产品线的service name：
+```JSON
 "type":"service name"
+```

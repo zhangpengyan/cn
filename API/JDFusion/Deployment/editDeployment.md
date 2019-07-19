@@ -24,44 +24,51 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}
 ### DeploymentInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**content**|DeploymentResourcesInfo|False| | |
 |**info**|DeploymentBaseInfo|False| | |
+|**content**|DeploymentResourcesInfo|False| | |
 ### DeploymentResourcesInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**diskAttachment**|Object|False| | |
-|**disks**|Object|False| | |
-|**eipAssociate**|Object|False| | |
-|**eips**|Object|False| | |
-|**httpListeners**|Object|False| | |
-|**keypairs**|Object|False| | |
-|**netInterfaceAttachment**|Object|False| | |
-|**networkInterfaces**|Object|False| | |
-|**securityGroups**|Object|False| | |
-|**slbs**|Object|False| | |
-|**subnets**|Object|False| | |
-|**variables**|Object|False| | |
 |**vms**|Object|False| | |
+|**eips**|Object|False| | |
+|**subnets**|Object|False| | |
+|**networkInterfaces**|Object|False| | |
+|**slbs**|Object|False| | |
+|**securityGroups**|Object|False| | |
+|**securityGroupRules**|Object|False| | |
+|**keypairs**|Object|False| | |
+|**disks**|Object|False| | |
 |**vpcs**|Object|False| | |
 |**vserverGroups**|Object|False| | |
+|**httpListeners**|Object|False| | |
+|**diskAttachment**|Object|False| | |
+|**netInterfaceAttachment**|Object|False| | |
+|**eipAssociate**|Object|False| | |
+|**rds**|Object|False| | |
+|**rdsDatabase**|Object|False| | |
+|**rdsAccount**|Object|False| | |
+|**rdsAccountGrant**|Object|False| | |
+|**bucket**|Object|False| | |
+|**variables**|Object|False| | |
 ### DeploymentBaseInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**cloudId**|String|False| |云ID|
-|**createdTime**|String|False| |创建时间|
-|**description**|String|False| |描述|
+|**version**|String|False| |版本|
+|**readOnly**|Integer|False| |是否只读 0：否 1：是|
 |**id**|String|False| |ID|
 |**name**|String|False| |名称|
-|**readOnly**|Integer|False| |是否只读 0：否 1：是|
-|**updatedTime**|String|False| |更新时间|
+|**description**|String|False| |描述|
 |**userId**|String|False| |用户ID|
-|**version**|String|False| |版本|
+|**createdTime**|String|False| |创建时间|
+|**updatedTime**|String|False| |更新时间|
+|**lastOperation**|String|False| |最近一次操作|
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -70,38 +77,45 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}
 ### DeploymentInfo
 |名称|类型|描述|
 |---|---|---|
-|**content**|DeploymentResourcesInfo| |
 |**info**|DeploymentBaseInfo| |
+|**content**|DeploymentResourcesInfo| |
 ### DeploymentResourcesInfo
 |名称|类型|描述|
 |---|---|---|
-|**diskAttachment**|Object| |
-|**disks**|Object| |
-|**eipAssociate**|Object| |
-|**eips**|Object| |
-|**httpListeners**|Object| |
-|**keypairs**|Object| |
-|**netInterfaceAttachment**|Object| |
-|**networkInterfaces**|Object| |
-|**securityGroups**|Object| |
-|**slbs**|Object| |
-|**subnets**|Object| |
-|**variables**|Object| |
 |**vms**|Object| |
+|**eips**|Object| |
+|**subnets**|Object| |
+|**networkInterfaces**|Object| |
+|**slbs**|Object| |
+|**securityGroups**|Object| |
+|**securityGroupRules**|Object| |
+|**keypairs**|Object| |
+|**disks**|Object| |
 |**vpcs**|Object| |
 |**vserverGroups**|Object| |
+|**httpListeners**|Object| |
+|**diskAttachment**|Object| |
+|**netInterfaceAttachment**|Object| |
+|**eipAssociate**|Object| |
+|**rds**|Object| |
+|**rdsDatabase**|Object| |
+|**rdsAccount**|Object| |
+|**rdsAccountGrant**|Object| |
+|**bucket**|Object| |
+|**variables**|Object| |
 ### DeploymentBaseInfo
 |名称|类型|描述|
 |---|---|---|
 |**cloudId**|String|云ID|
-|**createdTime**|String|创建时间|
-|**description**|String|描述|
+|**version**|String|版本|
+|**readOnly**|Integer|是否只读 0：否 1：是|
 |**id**|String|ID|
 |**name**|String|名称|
-|**readOnly**|Integer|是否只读 0：否 1：是|
-|**updatedTime**|String|更新时间|
+|**description**|String|描述|
 |**userId**|String|用户ID|
-|**version**|String|版本|
+|**createdTime**|String|创建时间|
+|**updatedTime**|String|更新时间|
+|**lastOperation**|String|最近一次操作|
 
 ## 返回码
 |返回码|描述|

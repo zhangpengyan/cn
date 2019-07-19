@@ -7,7 +7,7 @@
 了解京东云云主机时，通常会涉及到的概念请参见[核心概念](Core-Concepts.md)。
 ## 相关服务
 * 您可以从云市场获取由第三方服务商提供的基础软件、企业软件、网站建设、代运维、云安全、数据及API、解决方案等相关的各类软件和服务。您也可以成为云市场服务商。详细信息请参见云市场文档。
-* 您可以使用负载均衡将业务流量自动分发至多个后端实例。详细信息请参见[负载均衡产品文档](../../../Networking/Load-Balancer/Introduction/Product-Overview.md)。
+* 您可以使用负载均衡将业务流量自动分发至多个后端实例。详细信息请参见[应用负载均衡产品文档](https://docs.jdcloud.com/cn/application-load-balancer/product-overview)及[分布式负载均衡](https://docs.jdcloud.com/cn/distributed-network-load-balancer/product-overview)。
 * 您可以使用云监控对您实例、存储、网络进行实时监控并设置异常报警。详细信息请参见[云监控产品文档](../../../Management/Monitoring/Introduction/Product-Overview.md)。
 * 您可以使用容器服务管理部署在一组云主机的应用生命周期。详细信息请参见[容器服务产品文档](../../Native-Container/Introduction/Product-Overview.md)。
 * 您可以使用云主机搭建数据库服务，也可以使用京东云云数据库服务。详细信息请参见[云数据库](../../../Database-and-Cache-Service/RDS/Introduction/Product-Overview.md)。

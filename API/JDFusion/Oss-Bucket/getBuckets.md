@@ -23,8 +23,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_buckets
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -33,9 +33,9 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_buckets
 ### OssBucketInfo
 |名称|类型|描述|
 |---|---|---|
-|**cloudID**|String|云信息|
-|**creationDate**|String|创建时间|
 |**name**|String|存储桶名称|
+|**creationDate**|String|创建时间|
+|**cloudID**|String|云信息|
 
 ## 返回码
 |返回码|描述|

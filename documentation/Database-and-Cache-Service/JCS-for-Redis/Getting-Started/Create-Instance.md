@@ -30,8 +30,7 @@
 
 ## 相关参考
 
-- [入门指南概述](Set-Whitelist.md)
+
 - [连接实例](Connect-Instances.md)
-- [修改密码](../../Operation-Guide/Instance-Management/Change-Password.md)
-- [变更实例配置](../../Operation-Guide/Instance-Management/Change-Configuration.md)
-- [计费规则](../../Pricing/Billing-Rules.md)
+- [Redis SLA](https://docs.jdcloud.com/cn/product-service-agreement/caching-redis-service-level-agreement-sla)
+

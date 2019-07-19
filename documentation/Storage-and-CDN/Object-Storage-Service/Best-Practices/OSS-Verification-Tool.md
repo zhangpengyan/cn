@@ -17,7 +17,7 @@
 以Linux为例：
 
 ```
-wget http://downloads.s3.cn-north-1.jcloudcs.com/tools/oss_verification_tool.tar.gz
+wget http://downloads.s3.cn-north-1.jdcloud-oss.com/tools/oss_verification_tool.tar.gz
 tar -xzvf oss_verification_tool.tar.gz
 ```
 

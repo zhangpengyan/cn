@@ -5,9 +5,9 @@
 
 ## 请求
 ### 语法
-```
+```HTTP
 PUT /?replication HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Content-Length: <length>
 Date: <date>
 Authorization: <authorization string> 
@@ -22,11 +22,11 @@ Replication configuration XML in the body
 
 名称|描述|必须
 ---|---|---
-Content-MD5|对128位MD5进行base64编码。该Header用来确定请求实体在传输中没有损坏。<br>Type: String<br>Default: None|是
+Content-MD5|该Header用来确定请求实体在传输中没有损坏。<br>Type: String<br>Default: None|是
 
 ### 请求实体
 可在请求实体中指定一个或多个复制规则。
-```
+```XML
 <ReplicationConfiguration>
     <Role>IAM-role-ARN</Role>
     <Rule>
@@ -72,9 +72,9 @@ HTTP 400|InvalidArgument|The AWS account specified in the <Account> element must
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 PUT /?replication HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 11 Feb 2015 02:11:21 GMT
 Content-MD5: q6yJDlIkcBaGGfb3QLY69A==
 Authorization: <authorization string>
@@ -94,7 +94,7 @@ Content-Length: 406
 ```
 
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 9E26D08072A8EF9E
 Date: Wed, 11 Feb 2015 02:11:22 GMT

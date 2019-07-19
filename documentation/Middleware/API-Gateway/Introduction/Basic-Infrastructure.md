@@ -17,13 +17,5 @@ API网关提供API提供者服务和API调用者服务。API提供者通过管�
 
 
 
-## 相关参考
-
-- [产品优势](../Introduction/Benefits.md)
-- [产品功能](../Introduction/Features.md)
-- [价格总览](../Pricing/Price-Overview.md)
-- [计费规则](../Pricing/Billing-Rules.md)
-
-
 
 

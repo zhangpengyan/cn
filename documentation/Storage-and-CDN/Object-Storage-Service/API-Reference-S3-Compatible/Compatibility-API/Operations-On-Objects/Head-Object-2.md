@@ -8,7 +8,7 @@
 ### 语法
 ```
 HEAD /ObjectName HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <bucket>.s3.<region>.jdcloud-oss.com 
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 Date: <date>
 ```
@@ -38,7 +38,8 @@ IF-None-Match|如果ETag与指定的不同，则返回该Object，否则返回30
 
 名称|描述
 ---|---
-x-amz-storage-class|提供Object的存储类型信息
+x-amz-storage-class|提供Object的存储类型信息。非标准存储情况下，OSS将会返回该Header
+x-amz-restore|该对象的还原信息及副本生命周期
 
 ### 响应元素
 无响应元素
@@ -47,7 +48,7 @@ x-amz-storage-class|提供Object的存储类型信息
 ### 请求示例
 ```
 HEAD /my-image.jpg HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: oss-example.s3.<region>.jdcloud-oss.com
 Date: Wed, 28 Oct 2009 22:32:00 GMT
 Authorization: <authorization string>
 ```

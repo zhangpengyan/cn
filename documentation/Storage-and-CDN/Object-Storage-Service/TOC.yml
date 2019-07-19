@@ -9,6 +9,8 @@ items:
         href: Introduction/Core-Concepts.md
       - name: 产品功能
         href: Introduction/Features.md
+      - name: 存储类型
+        href: Introduction/StorageClass-Overview.md
       - name: 限制说明
         href: Introduction/Restrictions.md 
       - name: 应用场景 
@@ -16,11 +18,15 @@ items:
  - name: 产品定价
    items:
       - name: 计费概述
-        href: Pricing/Billing-Overview.md 
+        href: Pricing/Billing-Overview.md
+      - name: 免费额度
+        href: Pricing/Free-Tier-For-Oss.md
       - name: 计费规则
         href: Pricing/Billing-Rules.md
       - name: 价格总览
         href: Pricing/Price-Overview.md
+      - name: 计费案例
+        href: Pricing/Billing-Case.md
       - name: 查看账单
         href: Pricing/Check-Bill.md
  - name: 入门指南
@@ -36,13 +42,21 @@ items:
       - name: 删除文件
         href: Getting-Started/Delete-Object-1.md
       - name: 删除存储空间
-        href: Getting-Started/Delete-Bucket-1.md
+        href: Getting-Started/Delete-Bucket-1.md    
+      - name: 分片管理
+        href: Getting-Started/Part-Manage-1.md           
+      - name: 设置事件通知
+        href: Getting-Started/Event-Notifications-1.md 
  - name: 操作指南
    items:
       - name: 开通服务
         href: Operation-Guide/Sign-Up-Service-2.md
-      - name: 对象存储概览页
+      - name: OSS概览页
         href: Operation-Guide/Overview-Page-2.md
+      - name: OSS访问域名和地域
+        href: Operation-Guide/OSS-Endpoint-Guide/Oss-endpont-list.md
+      - name: OSS访问域名使用规则
+        href: Operation-Guide/OSS-Endpoint-Guide/Endpoint-Using-Rulers.md           
       - name: 存储空间管理
         items:
            - name: 空间概览
@@ -85,6 +99,8 @@ items:
             href: Operation-Guide/Manage-Object/Post-Object-1.md                  
           - name: 用量监控
             href: Operation-Guide/Manage-Object/Usage-Monitoring.md
+          - name: 还原归档对象
+            href: Operation-Guide/Manage-Object/Restore-Glacier-Object.md
       - name: 权限控制
         items:
            - name: 权限控制概述
@@ -104,7 +120,7 @@ items:
           - name: 快速使用图片服务
             href: Operation-Guide/Image-Service-Guide/Getting-Started-1.md  
           - name: 图片缩放
-            href: peration-Guide/Image-Service-Guide/Resize-Images.md
+            href: Operation-Guide/Image-Service-Guide/Resize-Images.md
           - name: 图片旋转
             href: Operation-Guide/Image-Service-Guide/Rotate-Image.md 
           - name: 图片裁剪
@@ -123,6 +139,8 @@ items:
             href: Operation-Guide/Image-Service-Guide/Porn-Recognition.md  
           - name: 图片原图保护
             href: Operation-Guide/Image-Service-Guide/Source-Image-Protection.md
+          - name: 自定义分隔符
+            href: Operation-Guide/Image-Service-Guide/Delimiter-Guidance.md           
           - name: 错误响应
             href: Operation-Guide/Image-Service-Guide/Response-To-Errors.md
       - name: 视频处理指南
@@ -143,6 +161,10 @@ items:
             href: Operation-Guide/Video-Service-Guide/Delete-Video-Task.md	
  - name:  API文档
    items:
+      - name: 强一致性
+        href: API-Reference/Introduction/Strong-Consistency.md
+      - name: OSS与文件系统的对比
+        href: API-Reference/Introduction/OSS-Compared-With-File-System.md
       - name: 兼容S3 API 概述
         href:  API-Reference-S3-Compatible/Introduction-2.md
       - name: 服务器域名
@@ -242,7 +264,9 @@ items:
               - name: Upload Part
                 href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Upload-Part-2.md
               - name: Upload Part Copy	
-                href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Upload-Part-Copy-2.md	                                     
+                href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Upload-Part-Copy-2.md
+              - name: Post Object Restore
+                href: API-Reference-S3-Compatible/Compatibility-API/Operations-On-Objects/Post-Object-Restore.md
       - name: 错误响应
         href: API-Reference-S3-Compatible/Error-Response-2.md                
       - name: 扩展接口
@@ -255,10 +279,6 @@ items:
         items:
            - name: 基本概念
              href: API-Reference/Introduction/Basic-Concepts.md
-           - name: 强一致性
-             href: API-Reference/Introduction/Strong-Consistency.md
-           - name: OSS与文件系统的对比
-             href: API-Reference/Introduction/OSS-Compared-With-File-System.md 
            - name: OSS术语表
              href: API-Reference/Introduction/OSS-Concepts.md 
            - name: API 概览
@@ -268,7 +288,7 @@ items:
                - name: 通用请求头
                  href: API-Reference/HTTP-Header/Request-Headers.md
                - name: 公共响应头
-                 href: API-Reference/Introduction/Response-Headers.md
+                 href: API-Reference/HTTP-Header/Response-Headers.md
                - name: 访问控制
                  href: API-Reference/Access-Control-Signature-In-Header-Or-URL.md
            - name:  关于Service的操作
@@ -325,10 +345,18 @@ items:
               href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Installation-S3.md
             - name: 初始化
               href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Initialization-S3.md
+            - name: 存储空间
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Bucket-JavaSDK.md              
             - name: 简单上传
               href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Simple-Upload-S3.md
             - name: 分片上传
-              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Multipart-Upload-S3.md              
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Multipart-Upload-S3.md
+            - name: 下载
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/getObject-JavaSDK.md                
+            - name: 管理对象
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Manage-Object-JavaSDK.md
+            - name: TransferManager
+              href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/TransferManager.md
        - name:  兼容S3  SDK-Python（推荐）
          href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Python.md   
        - name: 兼容S3  SDK-Go
@@ -340,7 +368,11 @@ items:
        - name: 兼容S3  SDK-iOS
          href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-iOS.md      
        - name: 兼容S3 SDK-.NET
-         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-NET.md   
+         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-NET.md 
+       - name: 兼容S3 SDK-Node.js
+         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Nodejs.md
+       - name: 兼容S3 SDK-Ruby
+         href: API-Reference-S3-Compatible/Compatibility-Tools/SDK-Ruby.md     
        - name: 旧版 Java SDK（不推荐）
          items:
            - name: 安装
@@ -386,7 +418,9 @@ items:
             - name: 跨账号授权概述
               href: Best-Practices/Access-Control-And-Permission-Management/Cross-Account-Access-Overview.md
             - name: 授权子账号访问 OSS
-              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Sub-Account-Access.md            
+              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Sub-Account-Access.md
+            - name: 使用临时秘钥访问 OSS
+              href: Best-Practices/Access-Control-And-Permission-Management/Authorize-Role-Access.md
       - name: 防盗链
         href: Best-Practices/Anti-leech.md         
       - name: 使用CloudBerry管理OSS
@@ -415,3 +449,9 @@ items:
    items:
       - name: 一般性问题
         href: FAQ/General-Problem.md
+ - name: 用户协议
+   items:
+     - name: 服务条款
+       href: User-Agreement/Product-Terms-Of-Service.md                 
+     - name: SLA
+       href: User-Agreement/SLA.md             

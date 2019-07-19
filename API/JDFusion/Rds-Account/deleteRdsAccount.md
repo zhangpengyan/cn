@@ -12,8 +12,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances/{instId}/ac
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**accountName**|String|True| |账号用户名|
 |**instId**|String|True| |RDS实例ID|
+|**accountName**|String|True| |账号用户名|
 |**regionId**|String|True| |地域ID|
 
 ## 请求参数

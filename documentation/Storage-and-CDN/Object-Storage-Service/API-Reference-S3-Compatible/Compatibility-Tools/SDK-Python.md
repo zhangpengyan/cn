@@ -15,8 +15,8 @@ pip install boto3
 ## 创建client
 
 下面我们给出了一个创建client的例子，更多信息请参考：http://boto3.readthedocs.io/en/latest/reference/services/s3.html
-```
 
+```Python
 import boto3  
         
 ACCESS_KEY = 'your accesskey'  
@@ -26,7 +26,7 @@ s3 = boto3.client(
     aws_access_key_id=ACCESS_KEY,  
     aws_secret_access_key=SECRET_KEY,  
     #下面给出一个endpoint_url的例子  
-    endpoint_url='http://s3.cn-north-1.jcloudcs.com'  
+    endpoint_url='https://s3.cn-north-1.jdcloud-oss.com'  
     )  
 #use s3 client to create bucket、put object....
 ```

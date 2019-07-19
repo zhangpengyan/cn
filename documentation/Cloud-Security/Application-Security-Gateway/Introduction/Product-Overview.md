@@ -1,10 +1,12 @@
-### 产品概述 
+## 产品概述 
 
 京东云应用安全网关（VPC-WAF）是对网站或APP服务进行可视化安全分析和应用层威胁防护的产品。通过提供WAF、用户访问审计、业务安全可视和合规性检查等功能，保障业务稳定可持续运行，提升用户体验，为网络服务提供者解决HTTP/HTTPS业务因攻击导致的异常或合规性问题。
 
+应用安全网关通过绑定[应用负载均衡](https://docs.jdcloud.com/cn/application-load-balancer/product-overview)，对所有通过应用负载均衡HTTP/HTTPs(含Websocket)的流量进行防护。
+
 京东云应用安全网关（VPC-WAF）的逻辑部署示意图如下：
 
- ![https://github.com/jdcloudcom/cn/blob/cn-waf/image/AppliAcation-Security-Gateway/01-overview.png](https://github.com/jdcloudcom/cn/blob/cn-waf/image/AppliAcation-Security-Gateway/01-overview.png)
+ ![](../../../../image/AppliAcation-Security-Gateway/01-overview.png)
 
 京东云应用安全网关（VPC-WAF）基于京东云高性能负载均衡集群，只需要在控制台创建VPC-WAF防护实例绑定负载均衡即可对所有经过负载均衡的HTTP/HTTPs流量，无域名也可实现防护，不需要对网站进行任何修改。
 
@@ -13,10 +15,10 @@
 #### 常用操作
 
 - 快速上手
-  - [创建VPC-WAF实例](../Operation-Guide/Instance-Management/Create-Application-Security-Gateway.md)
+  - [创建实例](../Operation-Guide/Instance-Management/Create-Application-Security-Gateway.md)
 - 套餐介绍
   - [套餐介绍](../Introduction/Specifications.md)
 
 ## 计费
 
-应用安全网关支持包年包月计费类型。详细说明请参见“[计费规则](../Pricing/Billing-Rules.md)”。
+应用安全网关按照包年包月计费进行计费。详细说明请参见“[计费规则](../Pricing/Price-Overview.md)”。

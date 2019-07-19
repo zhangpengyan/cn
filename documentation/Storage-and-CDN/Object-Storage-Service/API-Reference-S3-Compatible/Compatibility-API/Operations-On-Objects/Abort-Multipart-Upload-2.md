@@ -7,7 +7,7 @@
 ### 语法
 ```
 DELETE /ObjectName?uploadId=UploadId HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <bucket>.s3.<region>.jdcloud-oss.com
 Date: <Date>
 Authorization: <authorization string>
 ```
@@ -34,7 +34,7 @@ NoSuchUpload|指定的分片上传不存在，Upload ID可能是无效的。|404
 ### 请求示例
 ```
 DELETE /example-object?uploadId=VXBsb2FkIElEIGZvciBlbHZpbmcncyBteS1tb3ZpZS5tMnRzIHVwbG9hZ HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: oss-example.s3.<region>.jdcloud-oss.com
 Date:  Mon, 1 Nov 2010 20:34:56 GMT
 Authorization: <authorization string>
 ```

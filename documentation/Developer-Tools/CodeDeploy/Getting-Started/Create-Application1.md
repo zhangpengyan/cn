@@ -1,13 +1,15 @@
 ## 新建应用及部署组
 
-在“部署应用”页，指定与云主机相同的地域后，点击“新建应用”，
+在“应用列表”页，指定与云主机相同的地域后，点击“新建应用”，
 
 ![Alt text](https://github.com/jdcloudcom/cn/blob/edit/image/CodeDeploy/Ch/Start-2%EF%BC%88Ch%EF%BC%89.png)
 
 
 跳转到“新建应用”页。
 
-在“新建应用”页，首先填写应用信息。应用名称：codedeploy-app-demo01
+在“新建应用”页，首先填写应用信息。应用名称：codedeploy-app-demo01。
+
+使用分布式服务框架：请按照默认选择“否”
 
 ![Alt text](https://github.com/jdcloudcom/cn/blob/edit/image/CodeDeploy/Ch/Start-3%EF%BC%88Ch%EF%BC%89.png)
 

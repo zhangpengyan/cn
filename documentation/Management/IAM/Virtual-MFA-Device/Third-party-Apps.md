@@ -10,33 +10,33 @@ IOS 系统|Google Authenticator|APP Store下载
 
 #### 1. 打开APP Store 搜索 ‘Google Authenticator’ 或者通过扫描下方二维码来直接安装。
 
-![IOS二维码](../../../../image/IAM/MFA/IOS二维码.png)
+![IOS二维码](../../../../image/IAM/Virtual-MFA-Device/IOS二维码.png)
 
 #### 2. 打开Google Authenticator后，点击最下面的 ‘开始设置’ 按钮
 
-![IOS开始设置](../../../../image/IAM/MFA/IOS开始设置.png)
+![IOS开始设置](../../../../image/IAM/Virtual-MFA-Device/IOS开始设置.png)
 
 #### 3. 选择 ‘扫描条形码’，然后会弹出条形扫描窗，扫描启用MFA第二步中的二维码生成6位动态验证码，您也可以选择手动输入用户名和密钥的方式来进行绑定。
 
-![IOS扫描条形码](../../../../image/IAM/MFA/IOS扫描条形码.png)
+![IOS扫描条形码](../../../../image/IAM/Virtual-MFA-Device/IOS扫描条形码.png)
 
 #### 4. 动态验证码每隔30s刷新一次，输入连续的两组动态验证码，点击确认后即可完成绑定。
 
-![IOS动态验证码](../../../../image/IAM/MFA/IOS动态验证码.png)
+![IOS动态验证码](../../../../image/IAM/Virtual-MFA-Device/IOS动态验证码.png)
 
 # 安卓系统如何安装和使用
 #### 1. 打开应用宝或百度 搜索 ‘谷歌动态口令’ 和 ‘条码扫描器’，或者通过扫描下方二维码来直接安装。
 
-![安卓二维码](../../../../image/IAM/MFA/安卓二维码.png)
+![安卓二维码](../../../../image/IAM/Virtual-MFA-Device/安卓二维码.png)
 
 #### 2. 打开谷歌动态口令后，点击页面中的 ‘开始’ 按钮
 
-![安卓谷歌动态口令](../../../../image/IAM/MFA/安卓谷歌动态口令.png)
+![安卓谷歌动态口令](../../../../image/IAM/Virtual-MFA-Device/安卓谷歌动态口令.png)
 
 #### 3. 选择 ‘扫描条形码’，然后会弹出条形扫描窗，扫描启用MFA第二步中的二维码生成6位动态验证码，您也可以选择手动输入用户名和密钥的方式来进行绑定。 
 
-![安卓扫描条形码](../../../../image/IAM/MFA/安卓扫描条形码.png)
+![安卓扫描条形码](../../../../image/IAM/Virtual-MFA-Device/安卓扫描条形码.png)
 
 #### 4. 动态验证码每隔30s刷新一次，输入连续的两组动态验证码，点击确认后即可完成绑定。 
 
-![安卓动态验证码](../../../../image/IAM/MFA/安卓动态验证码.png)
+![安卓动态验证码](../../../../image/IAM/Virtual-MFA-Device/安卓动态验证码.png)

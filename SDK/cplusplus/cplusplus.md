@@ -107,7 +107,7 @@ devenv Demo.sln /build
 使用Visual Studio打开Demo.sln解决方案，编译。
 
 ## 调用方法
-```
+```C++
 // 引用头文件
 #include "Credential.h"
 #include "JdcloudSigner.h"

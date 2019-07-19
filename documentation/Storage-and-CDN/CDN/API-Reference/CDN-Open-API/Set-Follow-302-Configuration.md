@@ -89,7 +89,7 @@
 
  **请求地址**
 
-设置回源跟随302地址：https://opencdn.jcloud.com/api/setFollow302Redirect
+查询回源跟随302地址：https://opencdn.jcloud.com/api/queryFollow302Redirect
 
  **请求示例**
 

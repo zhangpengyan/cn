@@ -26,7 +26,7 @@ mydumper 是一个更强大的数据迁移工具，具体可以参考 https://gi
 ## 从 MySQL 导出数据
 我们使用 mydumper 从 MySQL 导出数据，如下:
 
-```
+```Shell
 ./bin/mydumper -h 127.0.0.1 -P 3306 -u root -t 16 -F 64 -B test -T t1,t2 --skip-tz-utc -o ./var/test
 ```
 上面，我们使用 -B test 表明是对 test 这个 database 操作，然后用 -T t1,t2 表明只导出 t1，t2 两张表。
@@ -44,13 +44,13 @@ mydumper 是一个更强大的数据迁移工具，具体可以参考 https://gi
 
 我们使用 loader 将之前导出的数据导入到 TiDB。Loader 的下载和具体的使用方法见 Loader 使用文档
 
-```
+```Shell
 ./bin/loader -h 127.0.0.1 -u root -P 4000 -t 32 -d ./var/test
 ```
 
 导入成功之后，我们可以用 MySQL 官方客户端进入 TiDB，查看:
 
-```
+```Shell
 mysql -h127.0.0.1 -P4000 -uroot
 
 mysql> show tables;

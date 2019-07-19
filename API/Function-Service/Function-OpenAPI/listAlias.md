@@ -22,8 +22,8 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions/{functionName}/
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String| |
 |**result**|Result|别名列表|
+|**requestId**|String| |
 
 ### Result
 |名称|类型|描述|
@@ -34,8 +34,8 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions/{functionName}/
 |---|---|---|
 |**aliasId**|String|别名Id|
 |**aliasName**|String|别名名称|
-|**description**|String|别名描述信息|
 |**functionName**|String|别名对应的函数名称|
+|**description**|String|别名描述信息|
 |**version**|String|别名对应的版本名称|
 
 ## 返回码

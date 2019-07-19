@@ -36,7 +36,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/databas
 ### Database
 |名称|类型|描述|
 |---|---|---|
-|**dbName**|String|数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)|
+|**dbName**|String|数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)|
 |**dbStatus**|String|数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- **MySQL：不支持，不返回该字段**<br>- **SQL Server：返回该字段**|
 |**characterSetName**|String|字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**createTime**|String|数据库创建时间，格式YYYY-MM-DD HH:mm:ss<br>- 仅支持SQL Server|

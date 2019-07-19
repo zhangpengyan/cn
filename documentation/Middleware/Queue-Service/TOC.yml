@@ -1,0 +1,83 @@
+  name: 队列服务
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+        status: 0
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 产品定价
+    items:
+      - name: 计费概述
+        href: Pricing/Billing-Overview.md
+      - name: 计费规则
+        href: Pricing/Billing-Rules.md
+      - name: 价格总览
+        href: Pricing/Price-Overview.md
+      - name: 购买流程
+        href: Pricing/Purchase-Process.md 
+  - name: 入门指南
+    items:
+      - name: 使用须知
+        href: Getting-Started/Getting-Started.md
+      - name: 创建资源
+        href: Getting-Started/Create-Resource.md
+      - name: 发送和接收消息
+        href: Getting-Started/Produce-And-Consume-Message.md
+  - name: 操作指南
+    items:
+      - name: 队列管理
+        items:
+          - name: 创建队列
+            href: Operation-Guide/Queue-Management/Create-Queue.md
+          - name: 管理队列
+            href: Operation-Guide/Queue-Management/Manage-Queue.md
+      - name: 消息管理
+        items:
+          - name: 发送消息
+            href: Operation-Guide/Message-Management/Send-Message.md      
+          - name: 接收消息
+            href: Operation-Guide/Message-Management/Consume-Message.md   
+      - name: 监控报警
+        items:
+          - name: 查看监控信息
+            href: Operation-Guide/Monitoring/Monitoring.md
+          - name: 设置报警规则
+            href: Operation-Guide/Monitoring/Alarm-Rules.md
+      - name: 授权管理
+        items:
+          - name: 权限控制概述
+            href: Operation-Guide/Authorization-Management/Authorization-Overview.md
+          - name: 主账号对IAM子用户的授权
+            href: Operation-Guide/Authorization-Management/Main-Sub-Authorization.md
+          - name: 跨主账号的授权
+            href: Operation-Guide/Authorization-Management/Main-Main-Authorization.md
+  - name: 教程
+    items:
+    status: 0
+  - name: 问题排查
+    items:
+    status: 0     
+  - name: 常见问题
+    items:
+      - name: FAQ
+        href: FAQ/FAQ.md
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md
+    - name: 服务条款
+      href: Related-Resources/Related-Agreement.md  
+

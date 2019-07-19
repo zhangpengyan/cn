@@ -63,7 +63,7 @@
 
 ### 语法描述
 
-```
+```JSON
 policy  = {
      <version_block>
      <principal_block?>,

@@ -12,8 +12,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances/{instId}/da
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**dbName**|String|True| |数据库名称|
 |**instId**|String|True| |RDS实例ID|
+|**dbName**|String|True| |数据库名称|
 |**regionId**|String|True| |地域ID|
 
 ## 请求参数

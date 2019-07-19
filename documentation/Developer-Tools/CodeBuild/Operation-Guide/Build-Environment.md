@@ -1,6 +1,6 @@
 # 编译镜像
 
-目前支持Java、Golang、NodeJs等主流编译语言环境；支持用户自定义编译镜像。
+支持Maven、golang、npm、cmake等主流编译语言环境；支持用户自定义编译镜像。
 
 ### 使用自定义镜像
 
@@ -11,4 +11,4 @@
 2、编译镜像中，提供镜像名:tag，如下图
 
 
-![](/image/codebuild/customer-image.PNG) 
+![](/image/codebuild/createApp1.PNG) 

@@ -14,15 +14,15 @@
 
 获取图片基本信息：
 
-http://s3.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=imginfo/ns
+http://s3.cn-north-1.jdcloud-oss.com/downloads/example.jpg?x-oss-process=imginfo/ns
 
 返回结果：
-
+```
 {"format":"JPEG","width":350,"height":236,"fileSize":38539,"imgType":6,"orientation":1}
-
+```
 获取图片EXIF信息：
 
-http://s3.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=imgexif
+http://s3.cn-north-1.jdcloud-oss.com/downloads/example.jpg?x-oss-process=imgexif
 
 返回结果：
 ```

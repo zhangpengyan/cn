@@ -18,14 +18,14 @@
 * 使用 Cocoapods 进行包管理的请使用 `pod install` 命令进行安装 需要使用的框架，目标框架会自动引用
     例如：
 
-```shell
-    pod install {framework name}
+```Shell
+pod install {framework name}
 ```
 
 * 使用`swift package manage` 进行包管理的请将引用的包配置在自己的`Package.Swift` 的 `dependencies` 中
 
-```swift
-     dependencies: [
+```Swift
+dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/jdcloud-api/jdcloud-sdk-ios.git", from: "0.0.1"),
     ]
@@ -42,23 +42,24 @@
 
 * 以下为查询用户主机实例列表的调用实例，具体请查看项目Tests目录下的 `VmTest.swift`.
 
-```swift
-        // 京东云官网 申请的 AccessKey 和 SecretAccessKey
-        let credentials = Credential(accessKeyId: "your jdcloud ak", secretAccessKey: "your jdcloud sk");
+```Swift
+// 京东云官网 申请的 AccessKey 和 SecretAccessKey
+let credentials = Credential(accessKeyId: "your jdcloud ak", secretAccessKey: "your jdcloud sk");
         
-        // 初始化调用业务线的客户端
-        let vmClient = VmJDCloudClient(credential: credentials)
+// 初始化调用业务线的客户端
+let vmClient = VmJDCloudClient(credential: credentials)
        
-        // 创建请求参数，具体的请求参数查看 OPEN API 调用文档
-        let describeInstancesRequest = DescribeInstancesRequest(regionId: "cn-north-1");
+// 创建请求参数，具体的请求参数查看 OPEN API 调用文档
+let describeInstancesRequest = DescribeInstancesRequest(regionId: "cn-north-1");
        
-        // 全局 debug 设定 打开后可以看到签名数据 方便调试
-        GlobalConfig.debug = true
+// 全局 debug 设定 打开后可以看到签名数据 方便调试
+GlobalConfig.debug = true
         
-        // 执行请求，因有异常抛出需要自行处理，如果返回结果中有 AnyObject 类型需要 自行使用 SwiftJson 等框架处理resultString ，而requestResponse 中不会包含AnyObject 类型的结果
-        try vmClient.describeInstancesAsync(request: describeInstancesRequest) { (statusCode, requestResponse, error,resultString) in
-            // 回调方法执行自己的业务逻辑
-            print(statusCode)
-            print(requestResponse)
-            print(error)
+// 执行请求，因有异常抛出需要自行处理，如果返回结果中有 AnyObject 类型需要 自行使用 SwiftJson 等框架处理resultString ，而requestResponse 中不会包含AnyObject 类型的结果
+try vmClient.describeInstancesAsync(request: describeInstancesRequest) { (statusCode, requestResponse, error,resultString) in
+// 回调方法执行自己的业务逻辑
+  print(statusCode)
+  print(requestResponse)
+  print(error)
+}
 ```

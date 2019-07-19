@@ -24,8 +24,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances/{instId}/ac
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -34,16 +34,16 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances/{instId}/ac
 ### RdsAccountInfo
 |名称|类型|描述|
 |---|---|---|
-|**accountPrivileges**|RdsAccountPrivilege[]| |
-|**cloudID**|String|所属云提供商ID|
 |**name**|String|账号名|
 |**status**|String|账号状态|
+|**accountPrivileges**|RdsAccountPrivilege[]| |
+|**cloudID**|String|所属云提供商ID|
 ### RdsAccountPrivilege
 |名称|类型|描述|
 |---|---|---|
-|**cloudID**|String|所属云提供商ID|
 |**dbName**|String|数据库名称|
 |**privilege**|String|账号对数据库所具有的权限|
+|**cloudID**|String|所属云提供商ID|
 
 ## 返回码
 |返回码|描述|

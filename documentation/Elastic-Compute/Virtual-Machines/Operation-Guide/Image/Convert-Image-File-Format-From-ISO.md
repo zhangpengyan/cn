@@ -43,17 +43,8 @@ virt-manager
 至此，Centos 7 已经全部安装完毕
 
 ### 3、安装VirtIO驱动程序
-Linux 系统自带 VirtIO 程序，可以通过如下命令确认：
-```
-lsmod |grep virtio
-```
 
-![](../../../../../image/vm/Image-Import-convert-iso13.png)<br>
-Windows系统在virt-manager中选择添加硬件，添加新的网卡和串口的 VirtIO 设备。
-![](../../../../../image/vm/Image-Import-convert-iso14.png)<br>
-![](../../../../../image/vm/Image-Import-convert-iso15.png)<br>
-![](../../../../../image/vm/Image-Import-convert-iso16.png)<br>
-添加完成后开始安装VirtIO驱动，具体操作步骤请参考 安装virtio驱动。
+具体安装方式请参考 [安装virtio驱动](https://docs.jdcloud.com/cn/virtual-machines/install-virtio-driver) 。
 
 ### 4、配置京东云要求的软件环境
 请参照 [私有镜像导入](https://docs.jdcloud.com/cn/virtual-machines/import-private-image) ，检查并配置系统环境，并安装 [官方镜像系统组件](https://docs.jdcloud.com/cn/virtual-machines/default-agent-in-public-image)。

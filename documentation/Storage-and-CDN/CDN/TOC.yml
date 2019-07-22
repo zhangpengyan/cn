@@ -45,7 +45,7 @@
     items: 
       - name: 控制台简介
         href: Operation-Guide/Console-introduction.md  
-      - name: 创建域名
+      - name: 域名管理
         href: Operation-Guide/Create-domain.md
       - name: 访问控制
         href: Operation-Guide/Access-control.md  

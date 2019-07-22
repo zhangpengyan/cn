@@ -1,7 +1,7 @@
 # 镜像自检工具
 针对Linux系统，您可使用京东云提供的镜像自检工具，在从外部环境导出镜像之前，运行自检工具对关键系统配置进行检测，并根据检测报告进行调整。
 
-为尽可能保证导入镜像的可用性和易用性，在导入镜像的过程中，系统会对镜像中的关键配置进行检测，如不符合会导致导入失败。因此，建议您在生产导入镜像之前，参照 [私有镜像导入](https://docs.jdcloud.com/cn/virtual-machines/copy-image) 中的镜像基本要求确认系统配置并使用镜像自检工具对主要配置进行检查。
+为尽可能保证导入镜像的可用性和易用性，在导入镜像的过程中，系统会对镜像中的关键配置进行检测，如不符合会导致导入失败。因此，建议您在生产导入镜像之前，参照 [私有镜像导入](https://docs.jdcloud.com/cn/virtual-machines/import-private-image) 中的镜像基本要求确认系统配置并使用镜像自检工具对主要配置进行检查。
 
 ## 适用系统
 确定支持的操作系统包括：CentOS、Ubuntu、Debian、SLES(SUSE Linux Enterprise Server)、OpenSUSE、RedHat等Linux发行版本。
@@ -35,7 +35,7 @@ sudo ./jcs-image-tool
 |shadow     |  文件权限root可读写     | 无法写入密码、密钥、自定义数据     |保证root用户有读写权限
 | diskUsage     | 磁盘使用率不大于98%     | 实例启动后如果有其他任务占用系统空间，可能导致空间不足     |使用导入镜像创建实例时设置足够大的磁盘容量，以保证服务运行正常。
 | qemu-guest-agent	     | 未安装qemu-guest-agent     |  可能导致重要系统组件JCS-Agent无法正常运行    |卸载qemu-guest-agent
-| lvm     |未使用LVM      | 无法正常启动实例     |未使用LVM  
+| lvm     |未使用LVM      | 无法正常启动实例     |不使用LVM  
 | partition     | 采用MBR分区     | 无法正常启动实例     |采用MBR分区
 |  diskCharacterCheck    |正确配置fstab  | 无法正常启动实例     | 使用/dev/vda或者uuid的形式配置自动挂载
 | network     | 未启用NetworkManager	     |可能与network服务冲突导致网络不可用      |关闭或删除NetworkManager

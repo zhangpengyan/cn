@@ -1,7 +1,7 @@
 # 转换镜像格式
 导入镜像的格式支持QCOW2、RAW、VHD和VMDK，如果您的镜像文件为其他格式，需要在导入前将镜像转换为以上四种格式中的任意一种。
 
-在导出镜像之前，请参照 [私有镜像导入](https://docs.jdcloud.com/cn/virtual-machines/create-private-image) 并使用[镜像自检工具](https://docs.jdcloud.com/cn/virtual-machines/image-check-tool)，确保当前系统配置符合京东云镜像要求。
+在导出镜像之前，请参照 [私有镜像导入](https://docs.jdcloud.com/cn/virtual-machines/import-private-image) 并使用[镜像自检工具](https://docs.jdcloud.com/cn/virtual-machines/image-check-tool)，确保当前系统配置符合京东云镜像要求。
 
 ## Linux系统
 Linux系统可使用qemu-img进行系统盘镜像的导出及格式转换。支持互相转换的格式包括：raw、qcow2、qcow、cow、vmdk、cloop。
@@ -14,7 +14,6 @@ Linux系统可使用qemu-img进行系统盘镜像的导出及格式转换。支�
 qemu-img convert -O qcow2 /dev/vda /mnt/vdb/image_out.qcow2
 ```
 其中：
-* -f 用来指定源镜像文件格式（示例中：raw）
 * -O 用来指定目标镜像格式（示例中：qcow2）、导出为镜像的源磁盘（示例中：/dev/vda）、目标镜像文件名及存放路径（示例中：/mnt/vdb/image_out.qcow2）
 
 3、如果本地远程连接工具使用的是Xshell，可以安装lrzsz，将文件压缩后（压缩后文件须小于4GB），下载至Xshell中设置的目录中。
@@ -40,17 +39,17 @@ qemu-img info image_out.qcow2
 ```
 
 ## Windows系统
-Windows系统可使用微软官方提供的Disk2vhd（https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd）导出VHD格式的镜像，如果镜像文件为其他格式可以使用qemu-img（for windows）进行格式转换。
+Windows系统可使用微软官方提供的 [Disk2vhd](https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd) 导出VHD格式的镜像，如果镜像文件为其他格式可以使用qemu-img（for windows）进行格式转换。
 
 ### 导出系统盘为镜像文件
-1、前往下载并安装Disk2vhd（https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd）
+1、前往下载并安装 [Disk2vhd](https://docs.microsoft.com/en-us/sysinternals/downloads/disk2vhd)
 
 2、解压后执行disk2vhd.exe，显示如下界面。指定存放路径及文件名称，勾选系统盘，并取消勾选“use Vhdx”，随后点击【Create】即可导出格式为VHD的系统盘镜像。
 
 ![](../../../../../image/vm/Image-Import-convert2.png)<br>
 
 ### 转换镜像文件格式
-1、前往并下载qemu-img（https://cloudbase.it/qemu-img-windows/）
+1、前往并下载 [qemu-img-windows](https://cloudbase.it/qemu-img-windows/)
 
 2、将解压后的文件（包括.exe文件和.dll文件）放置在与镜像文件相同的文件夹内
 

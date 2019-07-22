@@ -115,6 +115,18 @@ items:
             href: Operation-Guide/Image/Default-Agent-in-Public-Image.md            
           - name: 制作私有镜像
             href: Operation-Guide/Image/Create-Private-Image.md
+          - name: 导入镜像
+            items:
+              - name: 导入私有镜像
+                href: Operation-Guide/Image/Import-Private-Image.md
+              - name: 安装virtio驱动
+                href: Operation-Guide/Image/Install-Virtio-Driver.md
+              - name: 镜像自检工具
+                href: Operation-Guide/Image/Image-Check-Tool.md
+              - name: 转换镜像格式
+                href: Operation-Guide/Image/Convert-Image-File-Format.md
+              - name: ISO格式镜像转换
+                href: Operation-Guide/Image/Convert-Image-File-Format-From-ISO.md
           - name: 共享私有镜像
             href: Operation-Guide/Image/Share-Image.md
           - name: 取消共享私有镜像

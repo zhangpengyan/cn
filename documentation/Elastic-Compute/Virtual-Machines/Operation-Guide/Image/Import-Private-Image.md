@@ -2,10 +2,11 @@
 ## 功能概述
 
 私有镜像导入是指，将您在本地或其他云环境下所用服务器的系统盘以镜像的形式保存并导入到京东云环境，以便快速实现京东云上的业务部署。<br>
+
 导入镜像使用说明：<br>
 * 导入镜像当前仅支持导入系统盘镜像；
-* 导入后的镜像将以“云硬盘系统盘镜像”格式作为私有镜像使用，同时会自动生成一个与导入镜像关联的快照；
 * 导入镜像在使用方式上与通过“制作镜像”创建的私有镜像无异，但某些功能（诸如设置密码密钥、主机安全监控等）由于依赖镜像中的官方组件，因此是否支持取决于您在导入镜像之前是否进行了对应组件的安装。关于官方组件的介绍请参见 [官方镜像系统组件](https://docs.jdcloud.com/cn/virtual-machines/default-agent-in-public-image)；
+* 导入后的镜像将以“云硬盘系统盘镜像”格式作为私有镜像使用，同时会自动生成一个与导入镜像关联的快照；
 * “云硬盘系统盘”镜像可用来创建系统盘是云硬盘的主机，无法将镜像转换为“本地盘系统盘”镜像。关于“本地盘系统盘”镜像和“云硬盘系统盘”镜像的区别请参见 [镜像类型](https://docs.jdcloud.com/cn/virtual-machines/image-type)。
 
 ## 镜像基本要求<br>
@@ -44,15 +45,15 @@
 ![](../../../../../image/vm/Image-Import-Image-Overview.png)<br>
 ### 1、准备镜像文件
 为保证导入镜像的可用性，请务必在导入前参照上述京东云镜像制作要求进行镜像配置检测，确认导入镜像符合京东云规范后再行操作导入。<br>
-同时为了保证导入镜像在京东云环境下可以获得修改密码、获得监控数据、安全扫描检测等功能，建议您在导出镜像之前进行重要系统组件的安装。系统组件功能及安装方法请参见：[官方镜像系统组件](https://docs.jdcloud.com/cn/virtual-machines/default-agent-in-public-image) <br>
+同时为了保证导入镜像在京东云环境下可以获得修改密码、上报监控数据、安全扫描检测等功能，建议您在导出镜像之前进行重要系统组件的安装。系统组件功能及安装方法请参见：[官方镜像系统组件](https://docs.jdcloud.com/cn/virtual-machines/default-agent-in-public-image) <br>
 Linux镜像可使用我们提供的镜像自检工具完成重要系统配置的自检，使用方法请参见：[镜像自检工具](Image-Check-Tool.md)
 
 ### 2、准备镜像文件
 支持RAW、VHD、QCOW2、VMDK四种格式的镜像文件导入，请在生成镜像文件时指定正确的文件格式。<br>
-不支持iso镜像格式，请通过使用VirtualBox、virt-manager 等工具制作成指定格式的镜像再行导入。操作指导请参见：[镜像格式转换](Convert-Image-File-Format.md) [ISO格式转换](Convert-Image-File-Format-From-ISO.md)
+不支持iso镜像格式，请通过使用VirtualBox、virt-manager 等工具制作成指定格式的镜像再行导入。操作指导请参见：[转换镜像格式](Convert-Image-File-Format.md) [ISO格式镜像转换](Convert-Image-File-Format-From-ISO.md)
 
 ### 3、上传镜像文件
-操作导入镜像之前，需要确保已 [开通对象存储服务](https://docs.jdcloud.com/cn/object-storage-service/sign-up-service-2) 、[创建存储空间（Bucket）](https://docs.jdcloud.com/cn/object-storage-service/create-bucket-2)，然后将镜像文件上传至与期望导入镜像同地域的存储空间中，并获取文件下载链接。<br>
+操作导入镜像之前，需要确保已 [开通对象存储服务](https://docs.jdcloud.com/cn/object-storage-service/sign-up-service-2) 、[创建存储空间（Bucket）](https://docs.jdcloud.com/cn/object-storage-service/create-bucket-2)，然后将镜像文件上传至与期望导入镜像**相同地域**的存储空间中，并获取文件下载链接。<br>
 如果存储空间访问权限为“公有读写”或者“公有读私有写”，可直接点击“复制”图标获取外链。<br>
 ![](../../../../../image/vm/Image-Import-Image-Step1.png)
 
@@ -61,6 +62,7 @@ Linux镜像可使用我们提供的镜像自检工具完成重要系统配置的
 
 ### 4、导入镜像
 由于目前导入镜像功能未提供控制台操作入口，因此，完成以上几步操作后，请参照openAPI文档，使用CLI或SDK完成导入。接口文档见：[镜像导入](https://docs.jdcloud.com/cn/virtual-machines/api/importimage?content=API)<br>
+
 导入接口参数说明如下：
 
 | 参数                  | 类型      |是否必填     | 说明 |
@@ -73,7 +75,7 @@ Linux镜像可使用我们提供的镜像自检工具完成重要系统配置的
 | systemDiskSizeGB   |  int   |是  |  指定使用镜像创建系统盘的容量，范围[40,500]，请确保该参数不小于镜像的virtual size，否则校验阶段会报错影响导入
 | imageUrl   | string    |是   |和导入镜像同地区的镜像文件地址（OSS object外链地址），如文件所属地域与接口region不一致会影响导入
 | imageName   |  string    |是  |自定义的镜像名称
-| imageDescription   |  string    |否  |自定义的镜像描述
+| description   |  string    |否  |自定义的镜像描述
 | forceImport | string |否  |  是否不做镜像检测强制导入镜像，为避免导入后镜像不可用建议保持默认默认值。默认值：false。
 | clientToken |  string    |否  |用于保证请求的幂等性。由客户端生成，长度不能超过64个字符
 

@@ -63,6 +63,10 @@
             href: Image/describeImages.md            
           - name: describeImage
             href: Image/describeImage.md
+          - name: imageTasks
+            href: Image/imageTasks.md
+          - name: importImage
+            href: Image/importImage.md
           - name: modifyImageAttribute
             href: Image/modifyImageAttribute.md
           - name: shareImage

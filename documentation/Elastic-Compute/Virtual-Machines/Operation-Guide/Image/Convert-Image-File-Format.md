@@ -8,6 +8,7 @@ Linux系统可使用qemu-img进行系统盘镜像的导出及格式转换。支�
 
 ### 导出系统盘为镜像文件
 1、执行 `yum install qemu-img` （CentOS）或 `apt-get install qemu-utils` （Ubuntu）安装qemu-img。也可前往 https://pkgs.org/download/qemu-img 下载安装包。
+
 2、执行下述指令可将指定磁盘整体导出为镜像并存储在指定目录下。
 ```
 qemu-img convert -O qcow2 /dev/vda /mnt/vdb/image_out.qcow2
@@ -60,6 +61,7 @@ Windows系统可使用微软官方提供的Disk2vhd（https://docs.microsoft.com
 其中：
 * -f 用来指定源镜像文件格式（示例中：raw）
 * -O 用来指定目标镜像格式（示例中：qcow2）、源镜像文件名（示例中：image.raw）、目标镜像文件名（示例中：image_out.qcow2）
+
 4、执行下述指令可查看生成的镜像信息。
 ```
 .\qemu-img.exe info image_out.qcow2

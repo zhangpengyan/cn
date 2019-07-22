@@ -8,9 +8,9 @@ grep -i virtio /boot/config-$(uname -r)
 ```
 
 ![](../../../../../image/vm/Image-Import-Virtio00.png)<br>
-* 如果参数 CONFIG_VIRTIO_BLK 及 CONFIG_VIRTIO_NET 取值为 y，表示驱动已编译进了内核，无须执行下述操作，可导入。
-* 如果参数 CONFIG_VIRTIO_BLK 及 CONFIG_VIRTIO_NET 取值为 m，表示驱动已编译成内核模块，请执行下述操作“②”,确认initramfs（或initrd）文件中是否包含virtio_blk驱动，若无则需要重新制作文件。
-* 如果在输出信息中没有找到 VIRTIO_BLK 及 VIRTIO_NET 的信息，表示该操作系统没有安装 virtio 相关驱动，需要编译安装virtio驱动，见请执行下述“③”。
+* 如果参数 `CONFIG_VIRTIO_BLK` 及 `CONFIG_VIRTIO_NET` 取值为 y，表示驱动已编译进了内核，无须执行下述操作，可导入。
+* 如果参数 `CONFIG_VIRTIO_BLK` 及 `CONFIG_VIRTIO_NET` 取值为 m，表示驱动已编译成内核模块，请执行下述操作“②”,确认initramfs（或initrd）文件中是否包含virtio_blk驱动，若无则需要重新制作文件。
+* 如果在输出信息中没有找到 `VIRTIO_BLK` 及 `VIRTIO_NET` 的信息，表示该操作系统没有安装 virtio 相关驱动，需要编译安装virtio驱动，见请执行下述“③”。
 
 ② 执行以下指令确认 virtio 驱动是否包含在临时文件系统 initramfs 或者 initrd 中(Ubuntu系统请将initramfs替换为initrd)：<br>
 ```
@@ -18,14 +18,14 @@ lsinitrd /boot/initramfs-$(uname -r).img | grep virtio
 ```
 
 ![](../../../../../image/vm/Image-Import-Virtio01.png)<br>
-如果initramfs已经包含了virtio_blk驱动，以及其所依赖的virtio.ko、virtio_pci.ko 和 virtio_ring.ko，则无须执行下述操作。<br>
+如果initramfs已经包含了`virtio_blk`驱动，以及其所依赖的`virtio.ko`、`virtio_pci.ko` 和 `virtio_ring.ko`，则无须执行下述操作。<br>
 如果initramfs未找到 virtio 相关信息，则需要修复临时文件系统：<br>
-A.CentOS 7/6
+A. CentOS 7/6
 ```
 cp /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
 mkinitrd -f --with=virtio_blk --with=virtio_pci /boot/initramfs-$(uname -r).img $(uname -r)
 ```
-B.Ubuntu
+B. Ubuntu
 ```
 echo -e "virtio_pci\nvirtio_blk" >> /etc/initramfs-tools/modules
 update-initramfs  -u
@@ -103,9 +103,10 @@ find /lib/modules/"$(uname -r)"/ -name "virtio.*" | grep -E "virtio.*"
 ⑧ 重启系统。<br>
 ⑨ 打开“设备管理器”，并检查我们安装的三个驱动程序的版本号：在我们文档的例子里，目标版本号是以13700结尾的数字字符串。<br>
 ![](../../../../../image/vm/Image-Import-Virtio5.png)<br>
-⑩ 清理配置信息，此步骤极为重要，只要运行一个Ｗindows自带的命令。打开命令行窗口或powershell运行窗口，执行如下命令：
+⑩ 清理配置信息，此步骤极为重要。打开命令行窗口或powershell运行窗口，执行如下命令：
 ```
 c:\windows\system32\Sysprep\sysprep.exe /generalize /oobe /shutdown
 ```
-执行完该命令会弹出对话框，等待直到完成，系统会自动关机,完成升级Virtio驱动的全部流程。
+执行完该命令会弹出对话框，等待直到完成，系统会自动关机，完成升级Virtio驱动的全部流程。
+
 需要特别注意的是，在卸载和安装后都要重启系统以保证更新驱动生效。

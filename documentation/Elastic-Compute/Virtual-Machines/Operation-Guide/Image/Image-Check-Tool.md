@@ -16,6 +16,7 @@ sudo ./jcs-image-tool
 ```
 
 4、等待检测结果。
+
 ![](../../../../../image/vm/Image-Import-checktool1.png)
 
 5、检测完成后会在运行目录内自动生成检测报告，并以具体时间结尾以作标识，如：image_check_report_2019-03-26_16:02:03。查看检测报告可以了解未通过检测项的原因。

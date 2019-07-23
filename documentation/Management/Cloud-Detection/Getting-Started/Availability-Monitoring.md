@@ -25,7 +25,7 @@
  - 返回：pong  代表jcmagent安装成。  
  
  示例如下：  
- ![安装Agent](../../../../../image/Cloud-Detection/install-new2.png)  
+ ![安装Agent](../../../../image/Cloud-Detection/install-new2.png)  
  
 
    

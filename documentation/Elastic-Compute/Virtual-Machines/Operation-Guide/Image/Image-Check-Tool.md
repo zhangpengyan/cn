@@ -8,8 +8,8 @@
 
 ## 使用说明
 1、登录您希望制作并导出镜像的服务器。<br>
-2、下载镜像自检工具。<br>
-3、在下载自检工具的目录内，赋予检测工具执行权限，随后以root账户执行检测。 https://iaas-cns-download.oss.cn-north-1.jcloudcs.com/jcs-image-tool <br>
+2、下载镜像自检工具：https://iaas-cns-download.oss.cn-north-1.jcloudcs.com/jcs-image-tool <br>
+3、在下载目录内，赋予检测工具执行权限，随后以root账户执行检测。 
 ```
 chmod +x jcs-image-tool
 sudo ./jcs-image-tool

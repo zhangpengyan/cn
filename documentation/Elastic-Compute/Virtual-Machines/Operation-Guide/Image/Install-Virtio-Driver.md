@@ -86,7 +86,7 @@ find /lib/modules/"$(uname -r)"/ -name "virtio.*" | grep -E "virtio.*"
 ```
 
 ## Windows系统
-① 前往下载iso格式的virtio软件包（以virtio-win-0.1.137.iso为例），iso文件里面包含了各种设备驱动，如网卡驱动（NetKVM), 磁盘驱动（virtsor)等。https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html <br>
+① 前往[下载iso格式的virtio软件包](https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html)（以virtio-win-0.1.137.iso为例），iso文件里面包含了各种设备驱动，如网卡驱动（NetKVM), 磁盘驱动（virtsor)等。 <br>
 
 ② 将virtio-win-0.1.137.iso文件拷贝到Windows虚机里面的某个目录下，可以通过远程连接共享文件夹等方式，将ios文件拷贝到虚机里。<br>
 

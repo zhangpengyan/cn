@@ -87,9 +87,12 @@ find /lib/modules/"$(uname -r)"/ -name "virtio.*" | grep -E "virtio.*"
 
 ## Windows系统
 ① 前往下载iso格式的virtio软件包（以virtio-win-0.1.137.iso为例），iso文件里面包含了各种设备驱动，如网卡驱动（NetKVM), 磁盘驱动（virtsor)等。https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html <br>
+
 ② 将virtio-win-0.1.137.iso文件拷贝到Windows虚机里面的某个目录下，可以通过远程连接共享文件夹等方式，将ios文件拷贝到虚机里。<br>
+
 ③ 双击iso文件，Windows会自动将其挂载到DVD设备上用于读取数据，下图中右侧的文件夹就是iso软件包里的内容，包括各种设备的驱动程序，如NetKVM对应的就是网卡驱动。<br>
 ![](../../../../../image/vm/Image-Import-Virtio3.png)<br>
+
 ④ 从控制面板里，找到并打开“设备管理器”窗口，只需要安装以下三个设置的驱动程序：
 * 存储控制器－Red Hat VirtIO SCSI controller
 * 网络适配器－Red Hat VirtIO Ethernet Adpater
@@ -97,12 +100,18 @@ find /lib/modules/"$(uname -r)"/ -name "virtio.*" | grep -E "virtio.*"
 
 打开设备管理器。会发现有三个打着黄色感叹号的设备没有安装驱动程序，一个SCSI Controller设备，一个网卡和一个PCI简单通信设备，如下图所示。<br>
 ![](../../../../../image/vm/Image-Import-Virtio4.png)<br>
+
 ⑤ 首先安装存储控制器驱动，右键点击选择“更新驱动程序软件”，在出现的窗口点击“浏览计算机以查找驱动程序软件”，并在弹出的窗口中定位到DVD驱动器里的“viostor“目录中的2k12R2/amd64/文件夹（Windows Server 2012R2）。点击确定按钮后，再点击下一步，直到按指示完成该驱动安装。系统如果提示重启，请选择稍后重启。待完全安装完三个驱动以后再考虑重启操作。<br>
+
 ⑥ 安装网卡驱动，右键点击选择“更新驱动程序软件”，在出现的窗口点击“浏览计算机以查找驱动程序软件”，并在弹出的窗口中定位到DVD驱动器里的NetKVM/2k12R2/amd64/文件夹，点击确定，按照提示完成按照。<br>
+
 ⑦ 安装串口驱动，右键点击选择“更新驱动程序软件”，在出现的窗口点击“浏览计算机以查找驱动程序软件”，并在弹出的窗口中定位到DVD驱动器里的vioserial/2k12R2/amd64/文件夹，点击确定，按照提示完成按照。<br>
+
 ⑧ 重启系统。<br>
+
 ⑨ 打开“设备管理器”，并检查我们安装的三个驱动程序的版本号：在我们文档的例子里，目标版本号是以13700结尾的数字字符串。<br>
 ![](../../../../../image/vm/Image-Import-Virtio5.png)<br>
+
 ⑩ 清理配置信息，此步骤极为重要。打开命令行窗口或powershell运行窗口，执行如下命令：
 ```
 c:\windows\system32\Sysprep\sysprep.exe /generalize /oobe /shutdown

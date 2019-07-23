@@ -31,6 +31,8 @@ items:
       href: pod/startPod.md
     - name: 停止 Pod
       href: pod/stopPod.md
+    - name: 重置 Pod 中容器镜像
+      href: pod/rebuildPod.md
   - name: 容器
     items:
     - name: 查询 Pod 中的某个容器详情

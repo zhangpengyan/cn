@@ -23,7 +23,6 @@
   curl http://localhost:1236/ping
   ```
   - 返回：pong  代表jcmagent安装成。  
- 
- 示例如下：  
- ![安装Agent](../../../../../image/Cloud-Detection/install-new2.png)  
-注：如果安装失败，1-3分钟后重新执行安装命令。多次失败，请联系客服。
+  示例如下：  
+ ![安装Agent](../../../../../image/Cloud-Detection/install-new2.png)    
+ 注：如果安装失败，1-3分钟后重新执行安装命令。多次失败，请联系客服。

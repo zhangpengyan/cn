@@ -9,7 +9,7 @@
 DELETE
 
 ## 请求地址
-https://nc.jdcloud-api.com/v1/regions/{regionId}/secrets/{name}
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/secrets/{name}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

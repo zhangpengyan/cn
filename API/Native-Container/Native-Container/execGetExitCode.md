@@ -1,24 +1,25 @@
-# describeQuota
+# execGetExitCode
 
 
 ## 描述
-查询资源的配额，支持：原生容器 pod 和 secret.
+获取exec退出码
 
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/quotas
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}:execGetExitCode
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |Region ID|
+|**containerId**|String|True| |Container ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**resourceType**|String|True| |resourceType - 资源类型，支持 [container, pod, secret]<br>|
+|**execId**|String|True| |exec ID|
 
 
 ## 返回参数
@@ -30,13 +31,7 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/quotas
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**quota**|Quota| |
-### Quota
-|名称|类型|描述|
-|---|---|---|
-|**resourceType**|String|类型|
-|**limit**|Integer|配额|
-|**used**|Integer|已使用的数目|
+|**exitCode**|Integer| |
 
 ## 返回码
 |返回码|描述|

@@ -10,7 +10,7 @@
 GET
 
 ## 请求地址
-https://nc.jdcloud-api.com/v1/regions/{regionId}/secrets
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/secrets
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -45,7 +45,7 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/secrets
 |名称|类型|描述|
 |---|---|---|
 |**name**|String|机密数据名称|
-|**type**|String|私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型|
+|**secretType**|String|私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型|
 |**createdAt**|String|创建时间|
 |**data**|DockerRegistryData|机密的数据|
 ### DockerRegistryData

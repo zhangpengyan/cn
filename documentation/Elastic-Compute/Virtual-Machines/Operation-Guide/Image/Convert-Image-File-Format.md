@@ -26,7 +26,7 @@ sz image_out.tar.gz
 ![](../../../../../image/vm/Image-Import-convert1.png)<br>
 
 ### 转换镜像文件格式
-1、如果镜像文件格式不在京东云支持的格式之内，可以使用qemu-img执行下述指令可进行指定镜像文件的格式转换。
+如果镜像文件格式不在京东云支持的格式之内，可以使用qemu-img执行下述指令可进行指定镜像文件的格式转换。
 ```
 qemu-img convert -f raw -O qcow2 image.raw image_out.qcow2
 ```

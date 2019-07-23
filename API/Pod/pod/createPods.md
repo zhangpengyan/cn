@@ -96,7 +96,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**subnetId**|String|True| |子网ID|
-|**az**|String|False| |可用区，用户的默认可用区|
+|**az**|String|False| |可用区，用户的默认可用区，该参数无效，不建议使用|
 |**networkInterfaceName**|String|False| |网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。|
 |**primaryIpAddress**|String|False| |网卡主IP，如果不指定，会自动从子网中分配|
 |**secondaryIpAddresses**|String[]|False| |SecondaryIp列表|
@@ -146,6 +146,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**diskType**|String|False| |云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1|
 |**sizeGB**|Integer|False| |云盘size,单位 GB,要求|
 |**fsType**|String|False| |指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
+|**iops**|Integer|False| |云盘的 iops 值，目前只有 ssd.io1 类型有效|
 |**autoDelete**|Boolean|False| |是否随pod删除。默认：true|
 ### ResourceRequestsSpec
 |名称|类型|是否必需|默认值|描述|
@@ -209,6 +210,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**sizeGB**|Integer|False| |云盘size,单位 GB,要求|
 |**fsType**|String|True| |指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
 |**formatVolume**|Boolean|False| |随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true|
+|**iops**|Integer|False| |云盘的 iops 值，目前只有 ssd.io1 类型有效|
 |**autoDelete**|Boolean|False| |是否随pod删除。默认：true|
 ### HostAlias
 |名称|类型|是否必需|默认值|描述|

@@ -5,7 +5,7 @@
 pod 状态必须为 stopped、running 或 error状态。 <br>
 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。<br>
 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-
+<br>敏感操作，可开启<a href="https://docs.jdcloud.com/cn/security-operation-protection/operation-protection">MFA操作保护</a>
 
 ## 请求方式
 DELETE

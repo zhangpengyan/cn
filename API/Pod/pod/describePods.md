@@ -22,7 +22,13 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**pageNumber**|Integer|False| |页码；默认为1|
 |**pageSize**|Integer|False| |分页大小；默认为20；取值范围[10, 100]|
 |**filters**|Filter[]|False| |podId - pod ID，精确匹配，支持多个<br>privateIpAddress - 主网卡IP地址，模糊匹配，支持单个<br>az - 可用区，精确匹配，支持多个<br>vpcId - 私有网络ID，精确匹配，支持多个<br>phase - pod 状态，精确匹配，支持多个<br>name - 实例名称，模糊匹配，支持单个<br>subnetId - 镜像ID，模糊匹配，支持单个<br>|
+|**tags**|TagFilter[]|False| |Tag筛选条件|
 
+### TagFilter
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**key**|String|False| |Tag键|
+|**values**|String[]|False| |Tag值|
 ### Filter
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -55,7 +61,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**vpcId**|String|主网卡所属vpcId|
 |**subnetId**|String|主网卡所属子网的ID|
 |**privateIpAddress**|String|主网卡主IP地址|
-|**dnsConfig**|DnsConfig|pod内容器的/etc/resolv.conf配置|
+|**dnsConfig**|DnsConfig|pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置|
 |**logConfig**|LogConfig|容器日志配置信息；默认会在本地分配10MB的存储空间|
 |**hostAliases**|HostAlias[]|pod内容器的/etc/hosts配置|
 |**volumes**|Volume[]|属于Pod的volume列表，提供挂载到containers上。|
@@ -63,6 +69,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**podStatus**|PodStatus|pod状态信息|
 |**elasticIp**|ElasticIp|主网卡主IP关联的弹性IP规格|
 |**primaryNetworkInterface**|NetworkInterfaceAttachment|主网卡配置信息|
+|**tags**|Tag[]| |
 |**charge**|Charge|计费配置；如不指定，默认计费类型是后付费-按使用时常付费|
 |**createTime**|String|Pod创建时间|
 ### Charge
@@ -73,6 +80,11 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**chargeStartTime**|String|计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|
 |**chargeRetireTime**|String|预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
+### Tag
+|名称|类型|描述|
+|---|---|---|
+|**key**|String|Tag键|
+|**value**|String|Tag值|
 ### NetworkInterfaceAttachment
 |名称|类型|描述|
 |---|---|---|
@@ -190,6 +202,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**diskType**|String|云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1|
 |**sizeGB**|Integer|云盘size,单位 GB,要求|
 |**fsType**|String|指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
+|**iops**|Integer|云盘的 iops 值，目前只有 ssd.io1 类型有效|
 |**autoDelete**|Boolean|是否随pod删除。默认：true|
 ### ResourceRequestsSpec
 |名称|类型|描述|
@@ -253,6 +266,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods
 |**sizeGB**|Integer|云盘size,单位 GB,要求|
 |**fsType**|String|指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
 |**formatVolume**|Boolean|随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true|
+|**iops**|Integer|云盘的 iops 值，目前只有 ssd.io1 类型有效|
 |**autoDelete**|Boolean|是否随pod删除。默认：true|
 ### HostAlias
 |名称|类型|描述|

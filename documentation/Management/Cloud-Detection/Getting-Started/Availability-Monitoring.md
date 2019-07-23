@@ -12,16 +12,21 @@
    ```
    注： ak\sk内容填写须符合yaml语法（键值对之间必须要有空格），否则会读取ak\sk失败。如: ak:(空格)xxxxxx
 
-2.根据云主机所在的地域，复制安装命令至云主机。  
+2.复制安装命令至云主机。  
+   ```
+   curl -fsSL http://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install | bash -s jcmagent
+   ```  
 
-地域 | 安装命令
-------------|---------------------
-华北-北京          | `wget -c http://devops-hb.oss-internal.cn-north-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.403.a81f9eb.20181127121007.bin -O installer && sh installer -- -a jcmagent /usr/local/share/jdcloud/ifrit && rm -f installer`  
-华东-上海          | `wget -c http://devops-hd.oss-internal.cn-east-2.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.403.a81f9eb.20181127121007.bin -O installer && sh installer -- -a jcmagent /usr/local/share/jdcloud/ifrit && rm -f installer`  
-华东-宿迁         | `wget -c http://devops-sq.oss-internal.cn-east-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.403.a81f9eb.20181127121007.bin -O installer && sh installer -- -a jcmagent /usr/local/share/jdcloud/ifrit && rm -f installer` 
-华南-广州               | `wget -c http://devops.oss-internal.cn-south-1.jcloudcs.com/ifrit/ifrit-agent-external-v0.01.403.a81f9eb.20181127121007.bin -O installer && sh installer -- -a jcmagent /usr/local/share/jdcloud/ifrit && rm -f installer`  
-
-3.执行回车键，执行安装操作。等待1-3分钟，监控插件安装完成，可使用ps –ef | grep jcmagent 命令确认jcmagent进程，确保监控插件安装成功。  
+3.敲击回车键，执行安装操作。等待1-3分钟，执行以下命令验证jcmagent是否安装成功。  
+ - 验证命令：
+  ```
+  curl http://localhost:1236/ping
+  ```
+ - 返回：pong  代表jcmagent安装成。  
+ 
+ 示例如下：  
+ ![安装Agent](../../../../image/Cloud-Detection/install-new2.png)  
+ 
 
    
 

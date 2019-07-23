@@ -52,9 +52,9 @@ redis 2.8提供多组监控组，您可以任意筛选切换监控组，详情�
 
 除基础监控组外，其它监控组均为特定类型的数据或者特定功能的监控指标，指标分为如下两类：
 
-* 命令使用次数指标： 例如Keys监控组中的del、dump、exists指标监控的是DEL、DUMP、EXISTS命令的使用次数。
+* 命令使用次数指标： 例如：Keys监控组中的del、dump、exists命令的使用次数。
 
-* 命令响应时间指标：例如Keys监控组中的del_avg_rt、dump_avg_rt、exists_avg_rt等以avg_rt结尾的指标监控的是DEL、DUMP、EXISTS命令在一个监控时间段中的平均响应时间。
+* 命令响应时间指标：例如Keys监控组中的ddel、dump、exists命令在一个监控时间段中的平均响应时间。
 
 ### redis 4.0 监控项
 

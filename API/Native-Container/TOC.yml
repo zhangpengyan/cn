@@ -29,7 +29,7 @@
             href: Native-Container/startContainer.md
           - name: 停止原生容器
             href: Native-Container/stopContainer.md
-          - name: 重置原生容器
+          - name: 重置原生容器镜像
             href: Native-Container/rebuildContainer.md
           - name: 创建exec
             href: Native-Container/execCreate.md

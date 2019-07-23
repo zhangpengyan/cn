@@ -40,7 +40,7 @@ virt-manager
 ![](../../../../../image/vm/Image-Import-convert-iso11.png)<br>
 设置用户密码与用户，完成安装，随后点击“reboot”重启系统。重启系统后，我们进入了刚刚安装的 CentOS 系统中，选择第一个启动选项。
 ![](../../../../../image/vm/Image-Import-convert-iso12.png)<br>
-至此，Centos 7 已经全部安装完毕
+至此，Centos 7 已经全部安装完毕。
 
 ### 3、安装VirtIO驱动程序
 

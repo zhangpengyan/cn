@@ -34,4 +34,4 @@
 
 更加详细的监控指标数据，请单击页面右侧“设置报警规则”跳转至至云监控菜单，单击“监控信息”tab页查看。
 
-![监控图](../image/Redis/monitoring1.PNG)
+![监控图](https://github.com/jdcloudcom/cn/blob/redis-1/image/Redis/monitoring1.PNG)

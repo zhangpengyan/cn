@@ -23,13 +23,13 @@ redis 2.8提供多组监控组，您可以任意筛选切换监控组。
 
 | 监控组       | 说明                                                         |
 | ------------ | ------------------------------------------------------------ |
-| 基础监控组   | 实例信息等基本监控信息，包含内存使用情况、内网进出流量、QPS等 |
-| Keys监控组   | 使用键值相关命令的监控信息，例如del、dump等命令的调用次数    |
-| String监控组 | 使用string数据类型相关命令的监控信息，例如append、bitcount等命令的调用次数 |
-| Hashes监控组 | 使用hash数据类型相关命令的监控信息，例如hdel、hexists等命令的调用次数 |
-| Lists监控组  | 使用list数据类型相关命令的监控信息，例如lindex、linsert等命令的调用次数 |
-| Sets监控组   | 使用set数据类型相关命令的监控信息，例如sadd、scard等命令的调用次数 |
-| Zset监控组   | 使用zset数据类型相关命令的监控信息，例如zadd、zcard等命令的调用次数 |
+| 基础监控组   | 实例信息等基本监控信息，例如：内存使用情况、内网进出流量、QPS等 |
+| Keys监控组   | 使用键值相关命令的监控信息，例如：del、dump等命令的调用次数    |
+| String监控组 | 使用string数据类型相关命令的监控信息，例如：append、bitcount等命令的调用次数 |
+| Hashes监控组 | 使用hash数据类型相关命令的监控信息，例如：hdel、hexists等命令的调用次数 |
+| Lists监控组  | 使用list数据类型相关命令的监控信息，例如：lindex、linsert等命令的调用次数 |
+| Sets监控组   | 使用set数据类型相关命令的监控信息，例如：sadd、scard等命令的调用次数 |
+| Zset监控组   | 使用zset数据类型相关命令的监控信息，例如：zadd、zcard等命令的调用次数 |
 
 #### 基础监控组监控项
 
@@ -38,9 +38,9 @@ redis 2.8提供多组监控组，您可以任意筛选切换监控组。
 
 除基础监控组外，其它监控组包含的都是有关特定类型的数据或者特定功能的监控指标，这些监控组中的指标分为如下两类：
 
-命令使用次数的指标： 例如Keys监控组中的del、dump、exists指标监控的是DEL、DUMP、EXISTS命令的使用次数。
+* 命令使用次数的指标： 例如Keys监控组中的del、dump、exists指标监控的是DEL、DUMP、EXISTS命令的使用次数。
 
-命令响应时间指标：例如Keys监控组中的del_avg_rt、dump_avg_rt、exists_avg_rt等以avg_rt结尾的指标监控的是DEL、DUMP、EXISTS命令在一个监控时间段中的平均响应时间。
+* 命令响应时间指标：例如Keys监控组中的del_avg_rt、dump_avg_rt、exists_avg_rt等以avg_rt结尾的指标监控的是DEL、DUMP、EXISTS命令在一个监控时间段中的平均响应时间。
 
 ### redis 4.0 监控项
 

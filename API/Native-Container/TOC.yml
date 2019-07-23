@@ -29,6 +29,14 @@
             href: Native-Container/startContainer.md
           - name: 停止原生容器
             href: Native-Container/stopContainer.md
+          - name: 重置原生容器镜像
+            href: Native-Container/rebuildContainer.md
+          - name: 创建exec
+            href: Native-Container/execCreate.md
+          - name: 获取exec退出码
+            href: Native-Container/execGetExitCode.md
+          - name: 调整TTY大小
+            href: Native-Container/resizeTTY.md
       - name: 配额
         items:
           - name: 查询原生容器相关配额

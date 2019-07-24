@@ -18,7 +18,7 @@
 
 ⑤.单击编辑，自定义自动备份的周期和时间。
 
- ![备份1](https://github.com/jdcloudcom/cn/blob/edit/image/Redis/backup1.png)
+ ![备份1](https://github.com/jdcloudcom/cn/blob/redis-1/image/Redis/backup.PNG)
 
 注意：默认备份数据的保留时间是7天，不可修改。
 

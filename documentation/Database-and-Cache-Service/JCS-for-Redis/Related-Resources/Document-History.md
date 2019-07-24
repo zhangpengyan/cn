@@ -3,5 +3,5 @@
 
 | 发布日期    |  版本说明     |
 | -----------| ------------------ |
-| 2019-07-18 | redis 2.8 丰富监控项，新增Keys、String、Hashes、Lists、Sets、Zset监控组。 |
-| 2019-01-24 | redis 4.0 开放公测 |
+| 2019-07-18 | redis 2.8版丰富监控项，新增Keys、String、Hashes、Lists、Sets、Zset监控组。 |
+| 2019-01-24 | redis 4.0版 开放公测 |

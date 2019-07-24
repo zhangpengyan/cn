@@ -4,7 +4,7 @@
 
 - step1：下载安装c/c++连接redis的c客户端
 
-```C
+```
  git clone https://github.com/redis/hiredis.git 
  cd hiredis 
  make 

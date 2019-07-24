@@ -1,12 +1,7 @@
 # 查看端口
 
-- 菜单路径
-    
-    `交换网络 > 端口 > POP端口` 
+在列表页可以查看端口的状态
 
-- 端口展示
+点击端口名称连接，可以进入端口详情页面，查看更详细的信息
 
-    显示用户名下所有购买端口信息。
-    
-
-**截图待补充**
+![端口详情](https://github.com/jdcloudcom/cn/blob/cn-ecn/image/Hyper-Converged-IDC/Exhange-Network/端口详情.png)

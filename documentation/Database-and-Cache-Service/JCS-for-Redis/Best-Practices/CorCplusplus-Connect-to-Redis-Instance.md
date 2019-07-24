@@ -106,7 +106,7 @@ step3：编译
 
 step4：运行测试用例
 
-```
+```Shell
 ./example jredis-cn-north-1-prod-redis-xxxxxxxxxx.jdcloud.com 6379 password
 AUTH: OK
 PING: PONG

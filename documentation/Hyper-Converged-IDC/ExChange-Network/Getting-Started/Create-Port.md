@@ -29,3 +29,7 @@
   端口名称：指端口的别名，用户可以自定义设置，设置完成后可以通过端口名称进行列表筛选。同一用户名下，相同类型的端口名称不能重复
 
 ![创建页面](https://github.com/jdcloudcom/cn/blob/cn-ecn/image/Hyper-Converged-IDC/Exhange-Network/pop端口配置3.png)
+
+- 点击立即购买按钮，跳转订单确认页
+  
+  按照京东云统一的订单计费流程支付成功后，跳转回控制台列表页面

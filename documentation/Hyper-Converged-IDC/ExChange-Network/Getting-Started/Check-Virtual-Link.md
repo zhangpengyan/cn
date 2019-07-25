@@ -6,5 +6,5 @@
 
 - 云专线创建成功后开始计费
 
-
+![云专线详情](https://github.com/jdcloudcom/cn/blob/cn-ecn/image/Hyper-Converged-IDC/Exhange-Network/云专线详情.png)
 

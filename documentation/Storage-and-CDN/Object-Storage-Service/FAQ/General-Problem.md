@@ -12,7 +12,7 @@ OSS提供简单的 Web 服务接口，可用于存储和提取任意数量的数
 
 ### 如何开始使用OSS？
 
-使用OSS，需要先注册京东云账号。如果还没有京东云账号，请进入[京东云注册页面](https://accounts.jdcloud.com/p/regPage?source=jdcloud&ReturnUrl=https%3a%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttps%3a%2f%2fwww.jdcloud.com)  按提示进行注册。注册完成后，可参考[OSS入门指南-开通OSS服务](https://docs.jdcloud.com/cn/object-storage-service/sign-up-service-1)。
+使用OSS，需要先注册京东云账号。如果还没有京东云账号，请进入[京东云注册页面](https://user.jdcloud.com/register)  按提示进行注册。注册完成后，可参考[OSS入门指南-开通OSS服务](https://docs.jdcloud.com/cn/object-storage-service/sign-up-service-1)。
 
 ### OSS提供哪些存储类别?
 

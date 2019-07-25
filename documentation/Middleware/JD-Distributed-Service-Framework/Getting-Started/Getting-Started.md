@@ -17,7 +17,7 @@
 
 ###  第1步：开通服务
 #### 注册账号
-注册京东云账户 若您已有京东云账号，可跳过本步骤进行后续设置。 若您还未注册京东云账号，可在京东云官网进行注册，请参考 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud&ReturnUrl=https%3a%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttps%3a%2f%2fwww.jdcloud.com)。
+注册京东云账户 若您已有京东云账号，可跳过本步骤进行后续设置。 若您还未注册京东云账号，可在京东云官网进行注册，请参考 [注册](https://user.jdcloud.com/register)。
 
 #### 认证账号
 为了正常使用本服务，您还需要对您的账号进行认证。

@@ -83,12 +83,16 @@
        items:
          -  name: 部署Deployment
             href: Best-Practices/Deploy-Applications/Deploy-Deployment.md
-         -  name: 部署StorageClass
-            href: Best-Practices/Deploy-Applications/Deploy-StorageClass.md
-         -  name: 部署持久化存储
-            href: Best-Practices/Deploy-Applications/Deploy-PV.md
          -  name: 部署Service
             href: Best-Practices/Deploy-Applications/Deploy-Service.md
+     - name: Volumes
+       items:
+         -  name: 使用云硬盘作为Volume
+            items:
+             -  name: 部署StorageClass
+                href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-StorageClass.md
+             -  name: 部署持久化存储
+                href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-PV.md
      - name: Ingress
        items:
          -  name: 部署 Nginx-ingress controller

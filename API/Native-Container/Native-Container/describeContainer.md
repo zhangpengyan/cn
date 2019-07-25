@@ -9,7 +9,7 @@
 GET
 
 ## 请求地址
-https://nc.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -57,6 +57,7 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}
 |**primaryNetworkInterface**|InstanceNetworkInterfaceAttachment|主网卡信息|
 |**secondaryNetworkInterfaces**|InstanceNetworkInterfaceAttachment[]|弹性网卡信息|
 |**logConfiguration**|LogConfiguration|容器日志配置信息|
+|**tags**|Tag[]| |
 |**charge**|Charge|计费配置信息|
 |**launchTime**|String|创建时间|
 |**reason**|String|容器终止原因|
@@ -69,6 +70,11 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}
 |**chargeStartTime**|String|计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|
 |**chargeRetireTime**|String|预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
+### Tag
+|名称|类型|描述|
+|---|---|---|
+|**key**|String|Tag键|
+|**value**|String|Tag值|
 ### LogConfiguration
 |名称|类型|描述|
 |---|---|---|
@@ -127,6 +133,7 @@ https://nc.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}
 |**description**|String|硬盘描述|
 |**diskType**|String|磁盘类型，取值为 ssd, premium-hdd 之一|
 |**diskSize**|Integer|磁盘大小（GiB）|
+|**iops**|Integer|用户指定购买的iops值，目前只支持 ssd.io1 类型云盘|
 |**status**|String|云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_creating、error_deleting、error_restoring、error_extending 之一|
 |**createTime**|String|创建时间|
 ### EnvVar

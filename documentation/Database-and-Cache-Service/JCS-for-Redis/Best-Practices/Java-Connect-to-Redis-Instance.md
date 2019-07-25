@@ -3,7 +3,7 @@
 
 - step2：编写测试用例
 
-```
+```Java
 package com.jd.jmiss;
 import redis.clients.jedis.Jedis;
 public class JedisTester {
@@ -42,7 +42,7 @@ public static void main(String[] args) {
 
 - step1: 引入maven依赖
 
-```
+```XML
 <dependencies>
 <dependency>
    <groupId>redis.clients</groupId>
@@ -63,7 +63,7 @@ public static void main(String[] args) {
 - step2：配置Spring元素
 
 
-```
+```XML
 <beans>
 <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
     <!-- <property name="maxActive" value="${redis.pool.maxTotal}" />-->
@@ -124,7 +124,7 @@ redis.pool.testWhileIdle=true
 - step4:定义 redis value对象 这里需实现序列化
 
 
-```
+```Java
 class JMiss implements Serializable {
 private String time;
 
@@ -161,7 +161,7 @@ public String toString() {
 - step5:定义JMiss控制器类
 
 
-```
+```Java
 public class JMissProcessor {
 
 private RedisTemplate<String, JMiss> redisTemplate;
@@ -186,7 +186,7 @@ public JMiss getJMiss(String key){
 - step6:调用示例代码
 
 
-```
+```Java
 public class JedisTester {
 
 public static void main(String [] args){

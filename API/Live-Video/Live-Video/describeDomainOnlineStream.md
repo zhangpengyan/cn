@@ -32,12 +32,8 @@ https://live.jdcloud-api.com/v1/describeDomainOnlineStream
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**dataList**|PublishOnlineStreamResult[]| |
-### PublishOnlineStreamResult
-|名称|类型|描述|
-|---|---|---|
-|**total**|Integer|返回的记录数<br>|
 |**streamList**|PublishOnlineStreamResultData[]| |
+|**total**|Integer|流数量|
 ### PublishOnlineStreamResultData
 |名称|类型|描述|
 |---|---|---|
@@ -68,7 +64,6 @@ https://live.jdcloud-api.com/v1/describeDomainOnlineStream
 GET
 ```
 https://live.jdcloud-api.com/v1/describeDomainOnlineStream?domainName=yourdomain&appName=yourapp&streamName=yourstream&startTime=2018-10-21T10:00:00Z&&endTime=2018-10-22T10:00:00Z
-
 ```
 
 ## 返回示例

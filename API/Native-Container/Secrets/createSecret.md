@@ -9,7 +9,7 @@
 POST
 
 ## 请求地址
-https://nc.jdcloud-api.com/v1/regions/{regionId}/secrets
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/secrets
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

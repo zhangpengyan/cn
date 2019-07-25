@@ -39,6 +39,15 @@
 
 ![视频信息-Web播放器代码.png](../../../../image/Video-on-Demand/视频信息-Web播放器代码.png)
 
-    
-
+**播放器代码参数可参考下表**
+	
+|参数名|参数说明|取值说明|
+|-|-|-|
+|autoplay|自动播放设置|true：自动播放    false：不自动播放|
+|controls|显示控制条|true：显示   false：不显示|
+|loop|是否循环播放|true：循环播放  false：不循环播放|
+|aspectRatio|视频显示宽高比|取值为字符串，如“16:9” 、“4:3”|
+|muted|静音设置|true：静音  false：非静音|
+|width|播放器宽度|取值：字符串或数字，单位像素（px），比如： width:300 or width:'300px'|
+|height|播放器高度|取值：字符串或数字，单位像素（px），比如： height:300 or height:'300px'|
     

@@ -18,7 +18,7 @@
 
 ⑤.单击编辑，自定义自动备份的周期和时间。
 
- ![备份1](https://github.com/jdcloudcom/cn/blob/edit/image/Redis/backup1.png)
+ ![备份1](https://github.com/jdcloudcom/cn/blob/redis-1/image/Redis/backup.PNG)
 
 注意：默认备份数据的保留时间是7天，不可修改。
 
@@ -32,12 +32,14 @@
  
 ## 3.备份下载
 
-用户在备份恢复标签页默认看到备份数据列表，对应要下载的备份数据行右边操作列中点击“下载”，即有弹框提示下载链接，用户可根据自身情况下载到本地。
+用户在“备份数据”标签页即可查看已备份数据列表，勾选需下载的备份数据，点击“下载”，即有弹框提示下载链接，您可下载到本地指定路径。
 
-![备份3](https://github.com/jdcloudcom/cn/blob/edit/image/Redis/backup3.png)
+说明：可复制的各节点“下载地址”为智能解析地址（有效时长1小时），可根据网络环境解析下载（注：若采用内网下载，云主机与数据库需在同一地域）。
+
+![备份3](https://github.com/jdcloudcom/cn/blob/redis-1/image/Redis/backupdownload.PNG)
 
 ## 4.备份恢复
 
-用户在备份恢复标签页默认看到备份数据列表，对应要恢复的备份数据行右边操作列中点击“数据恢复”，即有弹框提示恢复确认，点击确认后数据开始恢复。
+用户在“备份数据”标签页即可查看已备份数据列表，对要恢复的备份数据点击“数据恢复”，即有弹框提示恢复确认，点击确认后数据开始恢复。
 
  ![备份4](https://github.com/jdcloudcom/cn/blob/edit/image/Redis/backup4.png)

@@ -6,5 +6,5 @@
 
 云簇超融合部署架构如下图：
 
-![1564059349356](C:\Users\liyunye3\AppData\Roaming\Typora\typora-user-images\1564059349356.png)
+![]()
 

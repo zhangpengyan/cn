@@ -9,7 +9,9 @@ API 网关（API Gateway），是API托管服务。 提供API的全生命周期�
 ## 常用操作
 
 - 快速上手
-	- [快速发布和调用一个API应用](../Getting-Started/example_console.md)
+	- [使用签名密钥的方式构建API](../Getting-Started/example_SignatureKey.md)
+	- [使用Function函数构建API](../Getting-Started/example_function.md)
+	- [使用订阅密钥的方式构建API](../Getting-Started/example_subscriptionKey.md)
 
 - 分组管理
 	- [创建API分组](../Operation-Guide/Create-APIGroup/Create-APIGroup.md)

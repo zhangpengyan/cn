@@ -6,5 +6,5 @@
 
 云簇敏捷版的架构如下图：
 
-![1564122183696](assets/1564122183696.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/1564122183696.png)
 

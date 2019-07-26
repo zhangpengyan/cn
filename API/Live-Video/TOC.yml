@@ -171,6 +171,16 @@ items:
         href: Live-Video/describeCustomLiveStreamWatermarkConfig.md
       - name: 查询水印模板绑定
         href: Live-Video/describeWatermarkBinding.md
+  - name: 直播回看
+    items:
+      - name: 添加回看域名
+        href: Live-Video/addLiveRestartDomain.md
+      - name: 开启回看服务
+        href: Live-Video/openLiveRestart.md
+      - name: 关闭回看服务
+        href: Live-Video/closeLiveRestart.md
+      - name: 查询回看配置
+        href: Live-Video/describeLiveRestartConfigs.md
   - name: 数据统计
     items:
       - name: 查询直播录制时长数据

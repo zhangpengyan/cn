@@ -14,7 +14,7 @@
 
 图：监控概览页面
 
-![Operation-Maintenance-And-Monitoring-1](assets/Operation-Maintenance-And-Monitoring-1.png)
+![Operation-Maintenance-And-Monitoring-1](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-1.png)
 
 在此页面，可以查看全部节点在线状态、平台CPU、内存、磁盘的使用情况。
 
@@ -26,7 +26,7 @@
 
 图：物理节点监控页面
 
-![Operation-Maintenance-And-Monitoring-2](assets/Operation-Maintenance-And-Monitoring-2.png)
+![Operation-Maintenance-And-Monitoring-2](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-2.png)
 
 
 
@@ -36,7 +36,7 @@
 
 图：控制服务监控页面
 
-![Operation-Maintenance-And-Monitoring-3](assets/Operation-Maintenance-And-Monitoring-3.png)
+![Operation-Maintenance-And-Monitoring-3](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-3.png)
 
 在此页面，可以查看每个控制服务的监控详情。
 
@@ -50,7 +50,7 @@
 
 图：实例列表页面
 
-![Operation-Maintenance-And-Monitoring-4](assets/Operation-Maintenance-And-Monitoring-4.png)
+![Operation-Maintenance-And-Monitoring-4](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-4.png)
 
 在此页面，可以对虚拟资产实例进行远程连接、编辑、创建镜像、热迁移、重启实例、挂起实例、删除操作。
 
@@ -62,19 +62,19 @@
 
 图：实例列表页面
 
-![Operation-Maintenance-And-Monitoring-5](assets/Operation-Maintenance-And-Monitoring-5.png)
+![Operation-Maintenance-And-Monitoring-5](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-5.png)
 
 在此页面，可以看到实例vm的主机名称为computer-1，点击右侧操作列的“热迁移”按钮，弹出热迁移页面，如图：热迁移页面所示。
 
 图：热迁移页面
 
-![Operation-Maintenance-And-Monitoring-6](assets/Operation-Maintenance-And-Monitoring-6.png)
+![Operation-Maintenance-And-Monitoring-6](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-6.png)
 
 在此页面，选择热迁移的目的主机，点击“确定”按钮，弹出迁移成功提示，则在实例列表页中，可以看到新主机信息，如图：实例列表页面所示。
 
 图：实例列表页面
 
-![Operation-Maintenance-And-Monitoring-7](assets/Operation-Maintenance-And-Monitoring-7.png)
+![Operation-Maintenance-And-Monitoring-7](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-7.png)
 
 在此页面，可以看到实例vm，由主机computer-1热迁移到主机computer-2，即您已完成热迁移操作。
 
@@ -88,7 +88,7 @@
 
 图：主机列表页面
 
-![Operation-Maintenance-And-Monitoring-8](assets/Operation-Maintenance-And-Monitoring-8.png)
+![Operation-Maintenance-And-Monitoring-8](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-8.png)
 
 在此页面，可以对主机节点进行开启服务、关闭服务操作，如果关闭了服务，原有运行的云主机不会受到影响，新的云主机将会被调度到其他主机节点上。
 
@@ -100,7 +100,7 @@
 
 图：主机集合与可用域列表页面
 
-![Operation-Maintenance-And-Monitoring-9](assets/Operation-Maintenance-And-Monitoring-9.png)
+![Operation-Maintenance-And-Monitoring-9](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-9.png)
 
 通过标签切换管理主机集合、可用域，下面介绍如何创建主机集合。
 
@@ -108,25 +108,25 @@
 
 图：创建主机集合页面
 
-![Operation-Maintenance-And-Monitoring-10](assets/Operation-Maintenance-And-Monitoring-10.png)
+![Operation-Maintenance-And-Monitoring-10](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-10.png)
 
 在此页面输入主机集合名称、可用域名称，点击“确定”按钮，弹出“创建成功”提示，您可以在主机集合列表页面中看到您所创建的主机集合和可用域，如图：主机集合列表页面所示。
 
 图：主机集合列表页面
 
-![Operation-Maintenance-And-Monitoring-11](assets/Operation-Maintenance-And-Monitoring-11.png)
+![Operation-Maintenance-And-Monitoring-11](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-11.png)
 
 在此页面，点击操作列的“添加主机”操作项，弹出添加主机页面，如图：添加主机页面所示。
 
 图：添加主机页面
 
-![Operation-Maintenance-And-Monitoring-12](assets/Operation-Maintenance-And-Monitoring-12.png)
+![Operation-Maintenance-And-Monitoring-12](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-12.png)
 
 在此页面，选中添加的主机信息，点击“确定”按钮，弹出添加成功提示，则在主机集合与可用域列表页中，可以看到添加的主机信息，如图：主机集合列表页面所示。
 
 图：主机集合列表页面
 
-![Operation-Maintenance-And-Monitoring-13](assets/Operation-Maintenance-And-Monitoring-13.png)
+![Operation-Maintenance-And-Monitoring-13](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-13.png)
 
 在此页面，还可以对主机集合执行编辑、移除主机、删除操作。
 
@@ -138,4 +138,4 @@
 
 图：可用域列表页面
 
-![Operation-Maintenance-And-Monitoring-14](assets/Operation-Maintenance-And-Monitoring-14.png)
+![Operation-Maintenance-And-Monitoring-14](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Operation-Maintenance-And-Monitoring-14.png)

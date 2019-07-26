@@ -16,5 +16,5 @@
 * 实现平台上层业务系统的高可用性，具备故障恢复和容灾能力。
 * 面向应用服务商提供定制化集成解决方案，将应用开发商与云簇平台全面集成一体化交付。
 
-![jdstack-agilityapplication-scenarios](assets/jdstack-agilityapplication-scenarios.png)
+![jdstack-agilityapplication-scenarios](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/jdstack-agilityapplication-scenarios.png)
 

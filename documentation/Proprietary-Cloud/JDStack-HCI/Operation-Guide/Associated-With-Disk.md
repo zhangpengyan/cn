@@ -6,19 +6,19 @@
 
 图：云硬盘列表页面
 
-![Associated-With-Disk-1](assets/Associated-With-Disk-1.png)
+![Associated-With-Disk-1](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-1.png)
 
 在此页面，点击“创建”按钮，弹出创建云硬盘页面，如图：创建云硬盘页面所示。
 
 图：创建云硬盘页面
 
-![Associated-With-Disk-2](assets/Associated-With-Disk-2.png)
+![Associated-With-Disk-2](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-2.png)
 
 在此页面选择可用域、选择硬盘类型、选择硬盘容量，输入名称，点击“立即创建”按钮，弹出创建成功提示后，您可以在云硬盘列表页面中看到您所创建的云硬盘，如图：云硬盘列表页面所示。
 
 图：云硬盘列表页面
 
-![Associated-With-Disk-3](assets/Associated-With-Disk-3.png)
+![Associated-With-Disk-3](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-3.png)
 
 
 
@@ -28,13 +28,13 @@
 
 图：挂载云硬盘页面
 
-![Associated-With-Disk-4](assets/Associated-With-Disk-4.png)
+![Associated-With-Disk-4](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-4.png)
 
 在此页面选择挂载的实例名称，点击“确定”按钮，弹出挂载成功提示，则在云硬盘列表页中，可以看到挂载信息，如图：云硬盘列表页面所示。
 
 图：云硬盘列表页面
 
-![Associated-With-Disk-5](assets/Associated-With-Disk-5.png)
+![Associated-With-Disk-5](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-5.png)
 
 
 
@@ -46,13 +46,13 @@
 
 图：云硬盘列表页面
 
-![Associated-With-Disk-6](assets/Associated-With-Disk-6.png)
+![Associated-With-Disk-6](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-6.png)
 
 在此页面，点击操作列的“创建快照”按钮，弹出“创建快照”页面，如图：创建快照页面所示。
 
 图：创建快照页面
 
-![Associated-With-Disk-7](assets/Associated-With-Disk-7.png)
+![Associated-With-Disk-7](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-7.png)
 
 在此页面，输入快照名称，点击“确定”按钮，弹出创建成功提示，则在云硬盘快照列表页中，可以看到新建快照信息。
 
@@ -60,6 +60,6 @@
 
 图：云硬盘快照列表页面
 
-![Associated-With-Disk-8](assets/Associated-With-Disk-8.png)
+![Associated-With-Disk-8](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Disk-8.png)
 
 在此页面，点击操作列的”操作”按钮，弹出下来弹框，点击相应操作执行编辑、创建云硬盘、删除操作。

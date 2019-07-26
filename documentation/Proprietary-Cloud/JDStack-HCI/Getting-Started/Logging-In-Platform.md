@@ -4,6 +4,6 @@
 
 图：云簇平台登录页面
 
-![Logging-In-Platform](assets/Logging-In-Platform.png)                                        
+![Logging-In-Platform](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Logging-In-Platform.png)                                        
 
 在此页面，输入系统管理员的用户名、密码，点击“登录”按钮，进入云簇平台。

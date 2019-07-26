@@ -17,17 +17,36 @@
 
 | 模块名称                  | 描述                  | 
 | :-------------------:| :-------------------: | 
-| kube-apiserver                 | $100                 | 
-| kube-proxy-master                 | $10                  | 
-| kube-scheduler                 | $1                   | 
-| kube-controller-manager                   | $1                   | 
-| scheduler-extender                  | $1                   | 
-| etcd                  | $1                   | 
-| dockerd                 | $1                   | 
-| kubelet                 | $1                   | 
+| kube-apiserver                 | Kubernetes API server                 | 
+| kube-proxy-master                 |  Master节点上的网络代理服务                | 
+| kube-scheduler                 | Kubernetes调度器                   | 
+| kube-controller-manager                   | 管理控制器                  | 
+| scheduler-extender                  |  调度器扩展                 | 
+| etcd                  | 提供Kubernetes元数据存储                   | 
+| dockerd                 | docker daemon                   | 
+| kubelet                 | 管理节点上的容器的服务                   | 
 
 
 ### 日志Metadata含义
+| 字段名                  | 含义                  | 
+| :-------------------:| :-------------------: | 
+| cluster_id             | 集群id                  |
+| region_id                  | 地域id                  |
+| source                  | 日志文件名称                  |
+| stream                  | 输出设备                  |
+| severity                  | 日志级别                  |
+| time                 | 日志时间戳                  |
+| file                 | 采集日志的模块名称                  |
+| originalMsg                  | 日志原文                  |
+| appName                  | 应用标识                  |
+| container_image                  | 容器镜像                  |
+| container_name                  | 容器名称                  |
+| host                  | 主机名                  |
+| namespace_name                  | 命名空间名称                  |
+| pod_id                  | pod id                  |
+| pod_name                  | pod名称                  |
+
+
 
 ## 用户日志
 集群创建完成后，您可以在控制台关闭或重新开启集群监控。集群监控关闭后，Workload自定义监控数据不再更新，基础监控数据不受影响。  

@@ -16,6 +16,7 @@ v1
 |**deleteCacheInstance**|DELETE|删除按配置计费、或包年包月已到期的缓存Redis实例，包年包月未到期不可删除。<br>只有处于运行running或者错误error状态才可以删除，其余状态不可以删除。<br>白名单用户不能删除包年包月已到期的缓存Redis实例。<br>|
 |**describeCacheInstance**|GET|查询缓存Redis实例的详细信息|
 |**describeCacheInstances**|GET|查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤|
+|**describeClusterInfo**|GET|查询Redis实例的内部集群信息|
 |**describeInstanceClass**|GET|查询某区域下的缓存Redis实例规格列表|
 |**describeUserQuota**|GET|查询账户的缓存Redis配额信息|
 |**modifyCacheInstanceAttribute**|PATCH|修改缓存Redis实例的资源名称或描述，二者至少选一|

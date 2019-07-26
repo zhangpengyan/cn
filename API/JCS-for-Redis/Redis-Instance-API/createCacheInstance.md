@@ -42,8 +42,8 @@ https://redis.jdcloud-api.com/v1/regions/{regionId}/cacheInstance
 ### AzIdSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**master**|String|False| |缓存Redis主实例所在区域可用区ID|
-|**slave**|String|False| |缓存Redis从实例所在区域可用区ID|
+|**master**|String|True| |缓存Redis主实例所在的可用区ID|
+|**slave**|String|True| |缓存Redis从实例所在的可用区ID|
 
 ## 返回参数
 |名称|类型|描述|

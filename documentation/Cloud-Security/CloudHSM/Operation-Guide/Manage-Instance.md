@@ -17,3 +17,5 @@
 在控制台，您可以对数据加密服务实例进行安全管理
 
 [操作步骤](Whilte-List.md)
+
+![安全管理入口](/image/CloudHSM/Console/安全管理入口.png)

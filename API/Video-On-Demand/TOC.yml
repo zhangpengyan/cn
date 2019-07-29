@@ -81,7 +81,7 @@ items:
               href: Transcode-Task/submitTranscodeJob.md
             - name: 批量提交转码作业
               href: Transcode-Task/batchSubmitTranscodeJobs.md
-    - name: 系统设置
+    - name: 全局设置
       items:
         - name: 域名配置
           items:

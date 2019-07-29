@@ -2,5 +2,5 @@
 
 1. 在数据加密服务控制台中，点击需要续费的加密服务实例的“续费”按钮
 
-![控制台选择续费](/image/CloudHSH/Renew/控制台选择续费.png)
+![控制台选择续费](/image/CloudHSM/Renew/控制台选择续费.png)
 

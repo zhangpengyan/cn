@@ -4,3 +4,12 @@
 
 ![控制台选择续费](/image/CloudHSM/Renew/控制台选择续费.png)
 
+2. 在弹出来的续费确认页，选择需要的续费时长
+
+![选择续费时长)(/image/CloudHSM/Renew/选择续费时长.png)
+
+3. 选择适合的支付方式
+
+![确认支付)(/image/CloudHSM/Renew/确认支付.png)
+
+4. 支付成功后，您的加密服务实例将自动延长有效期

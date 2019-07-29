@@ -29,3 +29,9 @@
 使用厂商提供的管理软件对数据加密服务实例进行管理
 
 [操作步骤](../Operation-Guide/Tass-Instance.md)
+
+## 加密服务示例密钥管理
+
+使用厂商提供的管理软件对数据加密服务实例进行密钥管理
+
+[操作步骤](../Operation-Guide/Tass-Keys.md)

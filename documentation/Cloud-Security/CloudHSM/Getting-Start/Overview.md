@@ -8,7 +8,7 @@
 
 添加公测表格并等待审核
 
-[申请公测表格](/image/CloudHSM/GettingStart/申请公测表格.png)
+![申请公测表格](/image/CloudHSM/GettingStart/申请公测表格.png)
 
 ## 购买实例
 

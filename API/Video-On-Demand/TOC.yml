@@ -98,7 +98,7 @@ items:
             - name: 停用域名
               href: Domain/disableDomain.md
             - name: 设置默认域名
-              href: setDefaultDomain.md
+              href: Domain/setDefaultDomain.md
             - name: 设置域名访问头
               href: Domain/setHeader.md
             - name: 查询域名访问头列表

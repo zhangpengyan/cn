@@ -15,14 +15,14 @@ v1
 |**batchDeleteVideos**|POST|批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。|
 |**batchSubmitTranscodeJobs**|POST|批量提交转码作业|
 |**batchUpdateVideos**|POST|批量修改视频信息|
-|**createCategory**|POST|添加分类<br>|
+|**createCategory**|POST|添加分类|
 |**createDomain**|POST|添加域名|
 |**createImageUploadTask**|POST|获取图片上传地址和凭证|
 |**createTranscodeTemplate**|POST|创建转码模板|
 |**createVideoUploadTask**|POST|获取视频上传地址和凭证|
 |**createWatermark**|POST|添加水印|
 |**deleteCategory**|DELETE|删除分类|
-|**deleteDomain**|DELETE|删除域名，执行该操作之前，需确保域名已被停用。<br>|
+|**deleteDomain**|DELETE|删除域名，执行该操作之前，需确保域名已被停用。|
 |**deleteHeader**|POST|删除域名访问头参数|
 |**deleteNotifyConfigs**|DELETE|删除回调配置|
 |**deleteTranscodeTemplate**|DELETE|删除转码模板|
@@ -41,6 +41,7 @@ v1
 |**getVideo**|GET|查询单个视频信息|
 |**getVideoPlayInfo**|GET|获取视频播放信息|
 |**getWatermark**|GET|查询水印|
+|**listAllCategories**|GET|查询所有分类|
 |**listCategories**|GET|查询分类列表，按照分页方式，返回分类列表信息<br>|
 |**listDomains**|GET|查询域名列表|
 |**listHeaders**|GET|查询域名访问头参数列表|

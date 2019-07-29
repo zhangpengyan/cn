@@ -2,13 +2,10 @@
 
 
 ## 描述
-查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
-- source 模板来源。枚举值，取值范围为：
-  - system 系统预置
-  - custom 用户自建
-- templateType 模板类型。枚举值，取值范围：
-  - jdchd 京享超清
-  - jdchs 极速转码
+查询转码模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - source[eq] 按模板来源精确查询
+  - templateType[eq] 按模板类型精确查询
 
 
 ## 请求方式
@@ -77,8 +74,8 @@ https://vod.jdcloud-api.com/v1/transcodeTemplates
 |**codec**|String|视频编码。取值范围：h265、h264|
 |**bitrate**|Integer|视频码率。取值范围 [128、10000]，单位为 Kbps|
 |**fps**|Integer|视频帧率。取值范围为 [1、60]，单位为 fps|
-|**width**|Integer|视频输出宽度。取值范围 [128，4096]，取值需为2的倍数|
-|**height**|Integer|视频输出高度。取值范围 [128，4096]，取值需为2的倍数|
+|**width**|Integer|视频输出宽度。取值范围 [128，4096] 整数。<br>当值为空时，若 height 也为空，则 width 和 height 与原视频保持一致；若 height 不为空，则 width 按照原视频的分辨率等比缩放。<br>|
+|**height**|Integer|视频输出高度。取值范围 [128，4096] 整数。<br>当值为空时，若 width 也为空，则 width 和 height 与原视频保持一致；若 width 不为空，则 height 按照原视频的分辨率等比缩放。<br>|
 
 ## 返回码
 |返回码|描述|

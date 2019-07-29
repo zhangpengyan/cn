@@ -27,6 +27,8 @@ items:
         href: Pricing/Purchase-Process.md
       - name: 续费流程
         href: Pricing/Renew-Process.md
+  - name: 快速入门
+    href: Getting-Start/Overview.md
   - name: 操作指南
     items:
       - name: 控制台操作

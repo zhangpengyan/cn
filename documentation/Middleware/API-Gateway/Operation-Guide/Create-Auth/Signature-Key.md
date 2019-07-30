@@ -31,4 +31,4 @@
 
   ![访问授权](../../../../../image/Internet-Middleware/API-Gateway/Auth-sigkey-3.png)
   
-- 接下来用户可以使用SDK的方法实现对API分组内API的访问。
+- 接下来用户即可使用SDK的方法实现对API分组内API的访问。

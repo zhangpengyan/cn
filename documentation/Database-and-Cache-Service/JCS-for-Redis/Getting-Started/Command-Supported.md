@@ -78,15 +78,16 @@ MEMORY stats 1，表示查看1号分片的内存统计信息，不指定则默�
 
 ## 集群实例不支持的命令
 
-| Key( 键 ) | String( 字符串 ) | List（列表） | Set （集合） | SortedSet （有序集合） | Server （服务器） | Transaction( 事务 ) |
-|:---------:|:----------------:|-------------:|--------------|------------------------|-------------------|---------------------|
-| RENAME    |       BITOP      |    RPOPLPUSH | SDIFF        | ZUNIONSTORE            | SLOWLOG           | DISCARD             |
-| RENAMENX  |      MSETNX      |              | SDIFFSTORE   | ZINTERSTORE            | CONFIG REWRITE    | EXEC                |
-| OBJECT    |                  |              | SINTER       |                        | CONFIG RESETSTAT  | MULTI               |
-|           |                  |              | SINTERSTORE  |                        | COMMAND COUNT     | UNWATCH             |
-|           |                  |              | SMOVE        |                        | COMMAND GETKEYS   | WATCH               |
-|           |                  |              | SUNION       |                        | COMMAND INFO      |                     |
-|           |                  |              | SUNIONSTORE  |                        |                   |                     |
+| Key( 键 ) | String( 字符串 ) | List（列表） | Set （集合） | SortedSet （有序集合） | Server （服务器） | Transaction( 事务 ) | Pub/Sub（发布/订阅） |
+| :-------: | :--------------: | -----------: | ------------ | ---------------------- | ----------------- | ------------------- | -------------------- |
+|  RENAME   |      BITOP       |    RPOPLPUSH | SDIFF        | ZUNIONSTORE            | SLOWLOG           | DISCARD             | PSUBSCRIBE           |
+| RENAMENX  |      MSETNX      |              | SDIFFSTORE   | ZINTERSTORE            | CONFIG REWRITE    | EXEC                | PUBLISH              |
+|  OBJECT   |                  |              | SINTER       |                        | CONFIG RESETSTAT  | MULTI               | PUBSUB               |
+|           |                  |              | SINTERSTORE  |                        | COMMAND COUNT     | UNWATCH             | PUNSUBSCRIBE         |
+|           |                  |              | SMOVE        |                        | COMMAND GETKEYS   | WATCH               | SUBSCRIBE            |
+|           |                  |              | SUNION       |                        | COMMAND INFO      |                     | UNSUBSCRIBE          |
+|           |                  |              | SUNIONSTORE  |                        |                   |                     |                      |
+
 	
 - Redis2.8版本主从支持事务，集群不支持；Redis4.0主从集群都支持。事务中不支持的命令: SCRIPT *、INFO、SLOWLOG、LATENCY、EVAL、FLUSHALL、SCAN、AUTH、EVALSHA、DBSIZE、CONFIG、FLUSHDB、RANDOMKEY、PING
 
@@ -97,14 +98,14 @@ MEMORY stats 1，表示查看1号分片的内存统计信息，不指定则默�
    
 ## 暂未开放的命令
 
-|  Key(键)  | List（列表） | Server（服务器） | Pub/Sub（发布/订阅） |  Cluster(集群) | Connection(连接) |
-|:---------:|:------------:|:----------------:|:--------------------:|:-------------:|:----------------:|
-|  MIGRATE  |     BLPOP    |       TIME       |      PSUBSCRIBE      |  READWRITE   |      SWAPDB      |
-|    WAIT   |     BRPOP    |      MONITOR     |        PUBLISH       |   READONLY   |                  |
-|           |  BRPOPLPUSH  |   BGREWRITEAOF   |        PUBSUB        |  CLUSTER *   |                  |
-|           |              |      BGSAVE      |     PUNSUBSCRIBE     |              |                  |
-|           |              |    CONFIG SET    |       SUBSCRIBE      |              |                  |
-|           |              |      COMMAND     |      UNSUBSCRIBE     |              |                  |
+|  Key(键)  | List（列表） | Server（服务器） |  Cluster(集群) | Connection(连接) |
+|:---------:|:------------:|:----------------:|:-------------:|:----------------:|
+|  MIGRATE  |     BLPOP    |       TIME       |  READWRITE   |      SWAPDB      |
+|    WAIT   |     BRPOP    |      MONITOR     |      READONLY   |                  |
+|           |  BRPOPLPUSH  |   BGREWRITEAOF   |      CLUSTER *   |                  |
+|           |              |      BGSAVE      |                |                  |
+|           |              |    CONFIG SET    |               |                  |
+|           |              |      COMMAND     |                 |                  |
 |           |              |   DEBUG OBJECT   |                      |              |                  |
 |           |              |       DEBUG      |                      |              |                  |
 |           |              |  DEBUG SEGFAULT  |                      |              |                  |

@@ -60,10 +60,13 @@
 
 **创建负载均衡实例**
 
-打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡，进入负载均衡列表页，点击 **创建** ，如下图：<br/>
+打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡，进入负载均衡实例列表页，点击 **创建** ，如下图：<br/>
+![LB列表](https:///Cloud-Physical-Server/CPS-VPC-033.png)
 
 根据需求选择 **地域** ，**网络部分**--网络类型（支持公网类型），IP版本（目前支持IPv4），私网网络，绑定的服务器类型（支持云物理服务器），**基本信息**--输入实例名称，描述，**带宽**--勾选弹性公网IP，选择带宽计费模式，线路类型，带宽上限，也支持暂不购买（待实例创建完成后在绑定IP），**购买量**--选择购买时长，点击 **确定** ，即可创建1个负载均衡。
-![创建LB](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+![创建LB1](https:/oud-Physical-Server/CPS-VPC-033.png)
+
+![创建LB2](https://github.com/jdcrged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
 
 **负载均衡实例管理**
 
@@ -72,29 +75,67 @@
 3.**绑定/解绑弹性公网IP**，若负载均衡提供外网服务，需要绑定弹性公网IP；若不需要也可解绑弹性公网IP<br/>
 4.**续费**，支持负载均衡单独续费，也支持负载均衡和EIP关联续费<br/>
 5.点击“**ID/实例名称**”,跳转到实例详情页，如下图<br/>
-![LB详情页](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+![LB详情页](https://github.com/jdcloudcom/onverged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
 
 **监听器管理**
 
-![创建监听器](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡->实例详情，选择监听器tab页，进入监听器列表页，点击 **创建监听器** ，如下图：<br/>
 
-![监听器列表](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+![监听器列表页](https://github.com/jdcloue/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
 
-![监听器详情页](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+根据需求选择，<br/>
+**基本配置**--<br/>
+名称：所输入的监听器名称（同一用户下负载均衡实例名称不能重复）；<br/>
+监听协议：支持四层TCP和UDP协议；<br/>
+端口：监听规则创建后，协议和端口不允许修改。负载均衡对外提供的端口，通常TCP使用80；<br/>
+会话保持：四层协议会话保持默认关闭；<br/>
+调度算法：若会话保持关闭，支持加权轮询、加权最小连接数；若会话保持开启，支持源IP。**加权轮询**：加权轮询会将访问请求依序分发后端服务器，权重值越高的后端服务器，被轮询到的次数（概率）也越高。**加权最小连接数**：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。**源IP**：基于源IP地址的一致性hash，相同的源地址会调度到相同的后端服务器。<br/>
+获取真实IP：协议为UDP时，不显示该字段；协议为TCP时，默认为关闭，如果开启需要用户设置：通过yum源安装。<br/>
 
+![创建监听器-基本信息1](https://github.com/jdcerged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+**健康检查**--负载均衡实例可以定期向后端服务器发送 Ping、尝试连接或发送请求来测试后端服务器运行的状况<br/>
+健康检查：默认开启，若关闭，以下字段均不显示；<br/>
+响应超时时间：健康检查响应的最大超时时间，如后端云服务器在相应时间内没有正确响应，则判定为健康检查失败。限制：2~60s。响应超时时间必须小于健康检查间隔。默认值是3。<br/>
+健康检查间隔：进行健康检查的时间间隔。限制：5~300s，默认值是5。<br/>
+健康阈值：表示后端实例从失败到成功的连接健康次数。限制：1~10次，默认值是3。<br/>
+不健康阈值：表示后端实例从成功到失败的连接健康检查失败次数。限制：1~10次，默认值是3。<br/>
+健康检查IP：100.64.0.0/10<br/>
+
+![创建监听器-健康检查2](https://github.cd-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+**后端服务器**--<br/>
+选择虚拟服务器组，若没有已创建的服务器组，点击**添加服务器器组**即可创建。
+
+完成以上步骤，点击**确定**，监听器即可创建成功。
+
+打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡->实例详情，选择监听器tab页，进入监听器列表页，点击 **监听器名称**，进入监听器详情页 ，如下图：<br/>
+
+![监听器详情页](https://github.co-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+**监听器支持操作**<br/>
+1.编辑：监听端口及协议不可修改，其余字段可以修改<br/>
+2.开启/关闭：支持开启和关闭状态切换。 <br/>
+3.删除：删除监听器后，响应的后端服务器也将与此监听器解除绑定关系。<br/>
 
 **虚拟服务器组管理**
 
-![创建监听器](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡->实例详情，选择虚拟服务器组tab页，进入虚拟服务器组列表页，点击 **添加虚拟服务器组** ，如下图：<br/>
 
-![监听器详情页](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+![服务器组列表](https://github.cocal-Server/CPS-VPC-033.png)
+
+选择**虚拟服务器组名称**（虚拟服务器组名称不能重复）、选择实例（非必填），点击**确定**，虚拟服务器组即创建完成。<br/>
+
+![创建组](https://github.com/jdcloudcom/cn/blob/cn-cloud-physier/CPS-VPC-033.png)
+
+点击**虚拟服务器组**名称，进入虚拟服务器组详情页，如下图：<br/>
+
+![组详情页](https://github.com/jdcloudcom/cn/blob/cn-clical-Server/CPS-VPC-033.png)
 
 
-
-
-
-
-
+**虚拟机服务器组支持操作**<br/>
+1.编辑：支持编辑操作。<br/>
+2.删除：虚拟服务器组删除条件：不与任何监听器绑定。<br/>
 
 
 

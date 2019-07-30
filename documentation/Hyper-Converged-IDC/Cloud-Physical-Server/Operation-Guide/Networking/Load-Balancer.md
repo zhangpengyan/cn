@@ -62,14 +62,32 @@
 
 打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡，进入负载均衡列表页，点击 **创建** ，如下图：<br/>
 
-根据需求选择 **地域** ，网络部分--网络类型（支持公网类型），IP版本（目前支持IPv4），私网网络，绑定的服务器类型（支持云物理服务器），基本信息--输入实例名称，描述，带宽--勾选弹性公网IP，选择带宽计费模式，线路类型，带宽上限，也支持暂不购买（待实例创建完成后在绑定IP），购买量--选择购买时长，点击 **确定** ，即可创建1个负载均衡。
+根据需求选择 **地域** ，**网络部分**--网络类型（支持公网类型），IP版本（目前支持IPv4），私网网络，绑定的服务器类型（支持云物理服务器），**基本信息**--输入实例名称，描述，**带宽**--勾选弹性公网IP，选择带宽计费模式，线路类型，带宽上限，也支持暂不购买（待实例创建完成后在绑定IP），**购买量**--选择购买时长，点击 **确定** ，即可创建1个负载均衡。
 ![创建LB](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
 
 **负载均衡实例管理**
 
+1.**添加监听**，点击“添加监听”跳转到监听器页面<br/>
+2.**开启/关闭**，可启动、停止负载均衡（若未负载均衡未绑定EIP，“开启”按钮置灰不可点击）<br/>
+3.**绑定/解绑弹性公网IP**，若负载均衡提供外网服务，需要绑定弹性公网IP；若不需要也可解绑弹性公网IP<br/>
+4.**续费**，支持负载均衡单独续费，也支持负载均衡和EIP关联续费<br/>
+5.点击“**ID/实例名称**”,跳转到实例详情页，如下图<br/>
+![LB详情页](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
 **监听器管理**
 
+![创建监听器](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+![监听器列表](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+![监听器详情页](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+
 **虚拟服务器组管理**
+
+![创建监听器](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+
+![监听器详情页](https://github.com/jdcloudcom/cn/blob/cn-cloud-physical-server-latest/image/Hyper-Converged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
 
 
 

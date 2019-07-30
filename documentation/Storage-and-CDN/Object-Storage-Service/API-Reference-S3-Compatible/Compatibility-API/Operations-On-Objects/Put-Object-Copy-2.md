@@ -22,7 +22,7 @@ Date: <date>
 名称|描述|必须
 ---|---|---
 x-amz-copy-source|源Bucket和源Object名称，通过"/"分隔。<br>Type: String<br>Default: None<br>字符串必须使用URL编码|是
-x-amz-storage-class|如果没有指定该header，存储类型默认为Standard标准存储。<br>Type: Enum<br>Default: STANDARD<br>Valid Values: STANDARD、GLACIER、REDUCED_REDUNDANCY|否
+x-amz-storage-class|如果没有指定该header，存储类型默认为Standard标准存储。<br>Type: Enum<br>Default: STANDARD<br>Valid Values: STANDARD、GLACIER、REDUCED_REDUNDANCY、STANDARD_IA|否
 
 ### 请求元素
 无请求元素

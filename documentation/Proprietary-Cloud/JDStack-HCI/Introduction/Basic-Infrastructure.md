@@ -6,5 +6,5 @@
 
 云簇超融合部署架构如下图：
 
-![]()
+![Basic-Infrastructure](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Basic-Infrastructure.jpg)
 

@@ -20,7 +20,7 @@ API的访问授权提供"免鉴权"和"授权访问"两种模式。
 京东云API网关支持签名密钥的授权类型。API网关针对此授权类型采用了特殊的签名算法，因此具有极高的安全性，授权完成后用户可使用SDK对API进行调用。
 详情请见[签名密钥](https://docs.jdcloud.com/cn/api-gateway/signature-key?SOP=JDCloud)。
 
-### （3）京东云用户签名Access Key/Access Key Secret
+### （3）京东云用户签名Access Key
 
 京东云API网关支持京东云用户签名的授权类型。该授权类型的密钥来源于用户在京东云的账户管理中所创建的Access Key， 授权完成后用户可使用SDK对API进行调用。API网关则可对其进行后端签名校验。
 详情请见[京东云用户签名Access Key](https://docs.jdcloud.com/cn/api-gateway/jd-cloud-user-signature?SOP=JDCloud)。

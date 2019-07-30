@@ -46,6 +46,10 @@ items:
     href: Cloud-Database-MongoDB-Service-Cause.md
   - name: 云数据库MongoDB服务等级协议（SLA）
     href: Cloud-Database-MongoDB-Service-Level-Agreement-SLA.md
+  - name: 云数据库InfluxDB服务条款
+    href: JCS-For-InfluxDB-Terms-Of-Service.md
+  - name: 云数据库InfluxDB服务等级协议（SLA）
+    href: JCS-For-InfluxDB-Level-Agreement-SLA.md
   - name: 云主机安全服务协议
     href: Cloud-Host-Security-Service-Clause.md
   - name: 云硬盘服务协议

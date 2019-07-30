@@ -61,12 +61,12 @@
 **创建负载均衡实例**
 
 打开控制台，在左侧导航栏依次点击云物理服务器->负载均衡，进入负载均衡实例列表页，点击 **创建** ，如下图：<br/>
-![LB列表](https:///Cloud-Physical-Server/CPS-VPC-033.png)
+![LB列表](../../Image/lblist.png)
 
 根据需求选择 **地域** ，**网络部分**--网络类型（支持公网类型），IP版本（目前支持IPv4），私网网络，绑定的服务器类型（支持云物理服务器），**基本信息**--输入实例名称，描述，**带宽**--勾选弹性公网IP，选择带宽计费模式，线路类型，带宽上限，也支持暂不购买（待实例创建完成后在绑定IP），**购买量**--选择购买时长，点击 **确定** ，即可创建1个负载均衡。
-![创建LB1](https:/oud-Physical-Server/CPS-VPC-033.png)
+![创建LB1](../../Image/create%20lb1.png)
 
-![创建LB2](https://github.com/jdcrged-IDC/Cloud-Physical-Server/CPS-VPC-033.png)
+![创建LB2](../../Image/create%20lb2.png)
 
 **负载均衡实例管理**
 

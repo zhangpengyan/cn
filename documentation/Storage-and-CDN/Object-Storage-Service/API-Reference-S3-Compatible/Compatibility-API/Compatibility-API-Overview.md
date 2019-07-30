@@ -37,6 +37,8 @@
 |PUT Bucket lifecycle|设置Bucket的生命周期规则|未支持：Transition、AbortIncompleteMultipartUpload<br>兼容：[PUT Bucket lifecycle](./Operations-On-Bucket/Put-Bucket-Lifecycle.md)|[PUT Bucket lifecycle](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketPUTlifecycle.html)|
 |GET Bucket lifecycle|设置Bucket的生命周期规则|兼容：[GET Bucket lifecycle](./Operations-On-Bucket/Get-Bucket-Lifecycle.md)|[GET Bucket lifecycle](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketGETlifecycle.html)|
 |DELETE Bucket lifecycle|删除Bucket的生命周期规则|兼容：[DELETE Bucket lifecycle](./Operations-On-Bucket/Delete-Bucket-Lifecycle.md)|[DELETE Bucket lifecycle](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketDELETElifecycle.html)|
+Put Bucket tagging|设置Bucket的标签|兼容：[Put Bucket tagging](./Operations-On-Bucket/Put-Bucket-Tagging.md)|[Put Bucket tagging](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketPUTtagging.html)|
+Get Bucket tagging|获取Bucket的标签|兼容：[Get Bucket tagging](./Operations-On-Bucket/Get-Bucket-Tagging.md)|[Get Bucket tagging](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketGETtagging.html)
 
 # 关于 Object 操作 
 

@@ -7,6 +7,7 @@
 京东云账户管理>Access Key管理
 
 ## 操作步骤：
+
 ### （1）	登录京东云，进入Access Key管理。 
 
   ![访问授权](../../../../../image/Internet-Middleware/API-Gateway/Auth-JDUser-1.png)
@@ -24,7 +25,7 @@
 
   ![访问授权](../../../../../image/Internet-Middleware/API-Gateway/Auth-JDUser-3.png)
   
-- 在“基本信息”部分选择授权类型“京东云用户签名”。用户标识部分可选择“自有Access Key”或“平台用户Access Key”，用户需要从对应的密钥列表中选择当前用户所创建的Access Key ID或输入其他用户的Access Key ID进行密钥的搜索选择。
+- 在“基本信息”部分选择授权类型“京东云用户签名”。用户标识部分可选择“自有Access Key”或“平台用户Access Key”，用户需要从对应的密钥列表中选择当前用户所创建  的Access Key ID或输入其他用户的Access Key ID进行密钥的搜索选择。
 
 - 京东云用户Access Key选择完成后，在“绑定分组”部分选择对应的可绑定分组进行绑定，点击“确定”。至此，京东云用户签名的Access Key与API分组之间的授权过程已经完成。
 

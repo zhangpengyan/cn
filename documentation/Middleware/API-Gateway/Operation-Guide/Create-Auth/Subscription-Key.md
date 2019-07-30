@@ -33,5 +33,5 @@ API网关支持订阅密钥的授权类型。用户除了选择利用SDK的方�
   ![访问授权](../../../../../image/Internet-Middleware/API-Gateway/Auth-subkey-3.png)
   
 - 接下来用户可以用两种方法实现对API分组内API的访问：
-  1.	在header中传递jdcloud-apim-subscription-key。
-  2.	使用SDK进行调用。
+  1.在header中传递jdcloud-apim-subscription-key。
+  2.使用SDK进行调用。

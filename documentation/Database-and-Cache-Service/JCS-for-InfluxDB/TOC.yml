@@ -73,6 +73,7 @@
       href: User-Agreements/SLA.md           
       status: 0       
   - name: 相关资源
+    status: 0 
     items:
     - name: 文档历史记录
       href: Related-Resources/Document-History.md

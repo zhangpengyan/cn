@@ -74,7 +74,14 @@ items:
     - name: 访问授权
       items:
         - name: API的访问授权
-          herf: Operation-Guide/Create-Auth/Create-Auth.md  
+          herf: Operation-Guide/Create-Auth/Create-Auth.md
+        - name: 订阅密钥
+          herf: Operation-Guide/Create-Auth/Subscription-Key.md
+        - name: 签名密钥
+          herf: Operation-Guide/Create-Auth/Signature-Key.md
+        - name: 京东云用户签名Access Key
+          herf: Operation-Guide/Create-Auth/JD-Cloud-User-Signature.md.md
+      
     - name: 后端签名
       items:
         - name: 后端签名

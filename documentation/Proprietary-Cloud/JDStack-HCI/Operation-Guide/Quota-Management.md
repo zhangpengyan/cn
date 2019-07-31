@@ -10,13 +10,13 @@
 
 图：配额管理页面
 
-![Quota-Management-1](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Quota-Management-1.png)
+![Quota-Management-1](../../../../image/JDStack-HCI/Quota-Management-1.png)
 
 在此页面，点击“编辑”按钮，显示该组织的配额编辑页面，如图：配额编辑页面所示。
 
 图：配额编辑页面
 
-![Quota-Management-2](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Quota-Management-2.png)
+![Quota-Management-2](../../../../image/JDStack-HCI/Quota-Management-2.png)
 
 在此页面，系统会默认显示推荐配额，您可以编辑当前组织的配额，系统会提示剩余可分配配额量，点击“保存”按钮，页面提示设置成功，则表示您设置的配额已生效。
 
@@ -28,4 +28,4 @@
 
 图：节点配额页面
 
-![Quota-Management-3](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Quota-Management-3.png)
+![Quota-Management-3](../../../../image/JDStack-HCI/Quota-Management-3.png)

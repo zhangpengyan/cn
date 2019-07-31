@@ -1,20 +1,18 @@
-# deleteWebRule
+# describeWebRuleBlackListGeoAreas
 
 
 ## 描述
-删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 ',' 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+查询网站类转发规则 Geo 模式的黑名单可设置区域编码
 
 ## 请求方式
-DELETE
+GET
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/describeWebRuleBlackListGeoAreas
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |区域 ID, 高防不区分区域, 传 cn-north-1 即可|
-|**instanceId**|String|True| |高防实例 Id|
-|**webRuleId**|String|True| |网站规则 Id|
 
 ## 请求参数
 无
@@ -41,8 +39,13 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|删除网站类规则结果, 0: 删除失败, 1: 删除成功|
-|**message**|String|删除失败时给出具体原因|
+|**dataList**|Country[]| |
+### Country
+|名称|类型|描述|
+|---|---|---|
+|**label**|String|国家或地区名称|
+|**value**|String|国家或地区编码|
+|**children**|Country[]| |
 
 ## 返回码
 |返回码|描述|

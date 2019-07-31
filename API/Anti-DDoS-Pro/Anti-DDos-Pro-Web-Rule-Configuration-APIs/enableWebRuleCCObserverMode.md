@@ -1,14 +1,14 @@
-# deleteWebRule
+# enableWebRuleCCObserverMode
 
 
 ## 描述
-删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 ',' 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+开启网站类规则 CC 观察者模式, 观察模式下, CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 ',' 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
 
 ## 请求方式
-DELETE
+POST
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}:enableCCObserverMode
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -41,8 +41,8 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|删除网站类规则结果, 0: 删除失败, 1: 删除成功|
-|**message**|String|删除失败时给出具体原因|
+|**code**|Integer|0: 开启 CC 观察者模式失败, 1: 开启 CC 观察者模式成功|
+|**message**|String|开启 CC 观察者模式失败时给出具体原因|
 
 ## 返回码
 |返回码|描述|

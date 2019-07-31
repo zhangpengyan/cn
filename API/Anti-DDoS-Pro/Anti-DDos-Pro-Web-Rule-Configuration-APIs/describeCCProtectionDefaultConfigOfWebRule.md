@@ -1,14 +1,14 @@
-# deleteWebRule
+# describeCCProtectionDefaultConfigOfWebRule
 
 
 ## 描述
-删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 ',' 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+查询网站类规则的 CC 防护默认配置
 
 ## 请求方式
-DELETE
+GET
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}:ccProtectionDefaultConfig
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -41,8 +41,15 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|删除网站类规则结果, 0: 删除失败, 1: 删除成功|
-|**message**|String|删除失败时给出具体原因|
+|**data**|CCProtectionDefaultConfig| |
+### CCProtectionDefaultConfig
+|名称|类型|描述|
+|---|---|---|
+|**ccThreshold**|Long|HTTP 请求数阈值|
+|**hostQps**|Long|Host 的防护阈值|
+|**hostUrlQps**|Long|Host + Url 的防护阈值|
+|**ipHostQps**|Long|每个源 IP 对 Host 的防护阈值|
+|**ipHostUrlQps**|Long|每个源 IP 对 Host + Url 的防护阈值|
 
 ## 返回码
 |返回码|描述|

@@ -1,14 +1,14 @@
-# deleteWebRule
+# describeWebRuleBlackListUsage
 
 
 ## 描述
-删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 ',' 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+查询网站类防护规则的黑名单用量信息
 
 ## 请求方式
-DELETE
+GET
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webRules/{webRuleId}:describeWebRuleBlackListUsage
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -41,8 +41,10 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|删除网站类规则结果, 0: 删除失败, 1: 删除成功|
-|**message**|String|删除失败时给出具体原因|
+|**allocatedNum**|Integer|已配置的黑名单规则数量|
+|**activeNum**|Integer|开启的黑名单规则数量|
+|**surplusAllocateNum**|Integer|还可添加的黑名单规则数量|
+|**maxAllocateNum**|Integer|最多可添加的黑名单规则数量|
 
 ## 返回码
 |返回码|描述|

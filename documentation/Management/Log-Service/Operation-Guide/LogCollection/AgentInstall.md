@@ -13,7 +13,7 @@ ak: xxxxxxx(填写YourAccessKeyID)       sk: xxxxxxx(填写YourAccessKeySecret)
 
 3.敲击回车键，执行安装操作。   
  	
- ![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogCollection/logs-agent-install-1.png)
+ ![image](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogCollection/logs-agent-install-1.png)
   
 4.等待1-3分钟，执行以下命令验证agent是否安装成功。
 
@@ -21,6 +21,6 @@ ak: xxxxxxx(填写YourAccessKeyID)       sk: xxxxxxx(填写YourAccessKeySecret)
 
 5.进程存在则说明安装成功。 示例如下： 
 
- ![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogCollection/logs-agent-install-2.png)
+ ![image](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogCollection/logs-agent-install-2.png)
 
 **注：如果安装失败，1-3分钟后重新执行安装命令。多次失败，请联系客服。**

@@ -47,6 +47,10 @@ items:
       items:
         - name: 云产品日志采集
           href: Operation-Guide/LogCollection/CloudResource.md
+        - name: 业务应用日志采集
+          href: Operation-Guide/LogCollection/CustomLog.md
+        - name: Agent安装教程
+          href: Operation-Guide/LogCollection/AgentInstall.md
     - name: 日志管理
       items:
         - name: 日志集管理
@@ -72,9 +76,11 @@ items:
 - name: 常见问题
   href: FAQ/FAQ.md
 - name: 文档历史记录
-  href: Related-Resources/Document-History.md  
-- name: 服务条款         
-  status: 0      
+  href: Related-Resources/Document-History.md 
+- name: 用户协议
+  items:
+    - name: 服务条款
+      href: User-Agreement/Product-Terms-Of-Service.md        
 - name: SLA         
   status: 0       
 - name: 备案         

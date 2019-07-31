@@ -1,14 +1,14 @@
-# describeVpcIpList
+# describeCpsIpList
 
 
 ## 描述
-查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
+查询用户可设置为网站类规则回源 IP 的京东云云物理服务器公网 IP 资源
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/describeVpcIpList
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/cpsIpResources
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -42,15 +42,14 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/describeVpcIpList
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**dataList**|VpcIpResource[]| |
+|**dataList**|CpsIpResource[]| |
 |**currentCount**|Integer|当前页数量|
 |**totalCount**|Integer|总数|
 |**totalPage**|Integer|总页数|
-### VpcIpResource
+### CpsIpResource
 |名称|类型|描述|
 |---|---|---|
-|**ip**|String|云内 IP 地址|
-|**binded**|Boolean|是否绑定|
+|**ip**|String|云物理服务器公网 IP 地址|
 |**resourceType**|Integer|公网 IP 类型或绑定资源类型. <br>- 0: 未知类型<br>- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)<br>- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)<br>- 11: 弹性公网 IP, 绑定了云主机<br>- 12: 弹性公网 IP, 绑定了负载均衡<br>- 13: 弹性公网 IP, 绑定了原生容器实例<br>- 14: 弹性公网 IP, 绑定了原生容器 Pod<br>- 2: 云物理服务器公网 IP|
 
 ## 返回码

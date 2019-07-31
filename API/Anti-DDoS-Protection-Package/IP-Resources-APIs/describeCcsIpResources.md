@@ -1,14 +1,14 @@
-# describeCpsIpResources
+# describeCcsIpResources
 
 
 ## 描述
-查询 DDoS 防护包可防护的云物理服务器公网 IP(包括云物理服务器弹性公网 IP 及云物理服务器基础网络实例的公网 IP)
+查询 DDoS 防护包可防护的托管区公网 IP
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://antipro.jdcloud-api.com/v1/regions/{regionId}/cpsIpResources
+https://antipro.jdcloud-api.com/v1/regions/{regionId}/ccsIpResources
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -44,7 +44,7 @@ https://antipro.jdcloud-api.com/v1/regions/{regionId}/cpsIpResources
 |---|---|---|
 |**dataList**|IpResource[]| |
 |**currentCount**|Integer|当前页数量|
-|**totalCount**|Integer|实例总数|
+|**totalCount**|Integer|总数|
 |**totalPage**|Integer|总页数|
 ### IpResource
 |名称|类型|描述|

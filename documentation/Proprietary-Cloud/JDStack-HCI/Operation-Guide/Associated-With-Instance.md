@@ -6,7 +6,7 @@
 
 图：重启云主机页面
 
-![Associated-With-Instance-1](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Instance-1.png)
+![Associated-With-Instance-1](../../../../image/JDStack-HCI/Associated-With-Instance-1.png)
 
 在此页面点击“确定”按钮，弹出成功提示，云主机状态显示运行中表示重启完成。
 
@@ -18,7 +18,7 @@
 
 图：重置密码页面
 
-![Associated-With-Instance-2](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Instance-2.png)
+![Associated-With-Instance-2](../../../../image/JDStack-HCI/Associated-With-Instance-2.png)
 
 在此页面点击“确定”按钮，弹出成功提示，表示重置密码完成。
 
@@ -30,10 +30,10 @@
 
 图：创建镜像页面
 
-![Associated-With-Instance-3](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Instance-3.png)
+![Associated-With-Instance-3](../../../../image/JDStack-HCI/Associated-With-Instance-3.png)
 
 在此页面输入镜像名称，点击“确定”按钮，弹出成功提示，表示创建镜像完成。您可以访问左侧导航栏，点击基础云>计算资源>镜像菜单，进入镜像列表页面，切换至私有镜像tab页，如图：私有镜像列表页所示。
 
 图：私有镜像列表页
 
-![Associated-With-Instance-4](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Associated-With-Instance-4.png)
+![Associated-With-Instance-4](../../../../image/JDStack-HCI/Associated-With-Instance-4.png)

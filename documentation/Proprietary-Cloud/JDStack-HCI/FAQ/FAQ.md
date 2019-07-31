@@ -26,7 +26,7 @@
 
 **Q：如何利用负载均衡进行流量分发？**
 
-平台当前支持负载均衡对其所在子网中的不同云主机进行流量分发，需要先创建一个负载均衡并在其中创建监听器，再创建资源池并选择云主机加入，具体操作指南参考[负载均衡](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Operation-Guide/LBaaS.md)。
+平台当前支持负载均衡对其所在子网中的不同云主机进行流量分发，需要先创建一个负载均衡并在其中创建监听器，再创建资源池并选择云主机加入，具体操作指南参考[负载均衡](../Operation-Guide/LBaaS.md)。
 
 **Q：网络中如何进行DNS配置？**
 

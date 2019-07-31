@@ -46,6 +46,10 @@ items:
     href: Cloud-Database-MongoDB-Service-Cause.md
   - name: 云数据库MongoDB服务等级协议（SLA）
     href: Cloud-Database-MongoDB-Service-Level-Agreement-SLA.md
+  - name: 云数据库InfluxDB服务条款
+    href: JCS-For-InfluxDB-Terms-Of-Service.md
+  - name: 云数据库InfluxDB服务等级协议（SLA）
+    href: JCS-For-InfluxDB-Level-Agreement-SLA.md
   - name: 云主机安全服务协议
     href: Cloud-Host-Security-Service-Clause.md
   - name: 云硬盘服务协议
@@ -126,3 +130,5 @@ items:
     href: Rich-Media-SMS-Terms-Of-Service.md
   - name: 富媒体短信服务等级协议（SLA）
     href: Rich-Media-SMS-Terms-Of-Service-SLA.md
+  - name: 日志服务服务条款
+    href: Log-Service-Terms-Of-Service.md

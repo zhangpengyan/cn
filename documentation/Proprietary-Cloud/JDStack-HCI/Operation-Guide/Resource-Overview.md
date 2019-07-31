@@ -4,6 +4,6 @@
 
 图：概览页面
 
-![Resource-Overview](https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/image/JDStack-HCI/Resource-Overview.png)
+![Resource-Overview](../../../../image/JDStack-HCI/Resource-Overview.png)
 
 在此页面可以查看用户的资源使用情况。

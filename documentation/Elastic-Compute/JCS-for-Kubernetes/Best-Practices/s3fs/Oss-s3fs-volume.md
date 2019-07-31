@@ -26,7 +26,7 @@ S3fs是基于FUSE的文件系统，允许Linux 挂载Bucket在本地文件系统
         Access_Key_ID:Access_Key_Secret     #Access_Key_ID、Access_Key_Secret请分别使用具有指定对象存储Bucket访问权限的Access Key内容替换；
     ```
 
-2. 使用Daemonset方式创建具有s3fs文件系统的Pod，在允许使用对象存储Bucket的工作节点上部署Daemonset，本例将Daemonset部署到集群的全部工作节点上，：
+2. 使用Daemonset方式创建具有s3fs文件系统的Pod，在允许使用对象存储Bucket的工作节点上部署Daemonset，本例将Daemonset部署到集群的全部工作节点上：
 
   * 执行如下命令创建Daemonset对象:
 

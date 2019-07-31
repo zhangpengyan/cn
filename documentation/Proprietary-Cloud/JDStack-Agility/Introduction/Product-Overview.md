@@ -26,7 +26,7 @@
 
 ## 相关参考
 
-[基础架构](../../Basic-Infrastructure.md)
+[基础架构](../../../../Basic-Infrastructure.md)
 
 [产品功能](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Introduction/Features.md>)
 

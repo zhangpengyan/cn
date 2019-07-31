@@ -9,7 +9,9 @@
         href: Introduction/Basic-Infrastructure.md
       - name: 应用场景
         href: Introduction/Application-Scenarios.md
-  - name: 操作手册
+      - name: 态势感知专有云
+        href: Introduction/Product-Overview.md
+- name: 操作手册
     items:
       - name: 威胁概览
         href: Operation-Guide/Threat-Overview.md

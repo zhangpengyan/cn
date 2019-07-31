@@ -1,14 +1,14 @@
-# switchForwardRuleProtect
+# enableWhiteListRuleOfForwardRule
 
 
 ## 描述
-非网站类规则切换成防御状态
+开启转发规则的白名单规则
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forwardRules/{forwardRuleId}:protect
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forwardRules/{forwardRuleId}:enableWhiteListRuleOfForwardRule
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -41,8 +41,8 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forw
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|0: 切换失败, 1: 切换成功|
-|**message**|String|切换失败时给出具体原因|
+|**code**|Integer|开启结果, 0: 开启失败, 1: 开启成功|
+|**message**|String|开启失败时给出具体原因|
 
 ## 返回码
 |返回码|描述|

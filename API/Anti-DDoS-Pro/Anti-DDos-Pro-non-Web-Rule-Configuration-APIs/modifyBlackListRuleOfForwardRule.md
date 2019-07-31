@@ -1,14 +1,14 @@
-# switchForwardRuleProtect
+# modifyBlackListRuleOfForwardRule
 
 
 ## 描述
-非网站类规则切换成防御状态
+修改转发规则的黑名单规则
 
 ## 请求方式
-POST
+PATCH
 
 ## 请求地址
-https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forwardRules/{forwardRuleId}:protect
+https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forwardRules/{forwardRuleId}/forwardBlackListRule
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -17,8 +17,14 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forw
 |**forwardRuleId**|String|True| |转发规则 Id|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**modifySpec**|ModifyBlackListRuleOfForwardRuleSpec|True| |修改转发规则的黑名单规则请求参数|
 
+### ModifyBlackListRuleOfForwardRuleSpec
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**ipSetId**|String|True| |待引用的 IP 黑白名单 Id|
 
 ## 返回参数
 |名称|类型|描述|
@@ -41,8 +47,8 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/forw
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|0: 切换失败, 1: 切换成功|
-|**message**|String|切换失败时给出具体原因|
+|**code**|Integer|修改结果, 0: 修改失败, 1: 修改成功|
+|**message**|String|修改失败时给出具体原因|
 
 ## 返回码
 |返回码|描述|

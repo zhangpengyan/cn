@@ -26,17 +26,18 @@
 
 ## 相关参考
 
-[基础架构](../Introduction/Basic-Infrastructure.md)
+[基础架构](Basic-Infrastructure.md)
 
-[产品功能](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Introduction/Features.md>)
 
-[产品优势](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Introduction/Benefits.md>)
+[产品功能](Features.md)
 
-[应用场景](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Introduction/Application-Scenarios.md>)
+[产品优势](Benefits.md)
 
-[角色权限](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Getting-Started/Role-Permission.md>)
+[应用场景](Application-Scenarios.md)
 
-[创建网络](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Getting-Started/Create-Network.md>)
+[角色权限](../Getting-Started/Role-Permission.md)
 
-[创建云主机](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/documentation/Proprietary-Cloud/JDStack-Agility/Getting-Started/Create-Instance.md>)
+[创建网络](../Getting-Started/Create-Network.md)
+
+[创建云主机](../Getting-Started/Create-Instance.md)
 

@@ -24,19 +24,19 @@
 
 图：负载均衡列表页面
 
-![LBaaS-1](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-1.png)
+![LBaaS-1](../../../../image/JDStack-Agility/LBaaS-1.png)
 
 在此页面，点击“创建”按钮，弹出创建负载均衡页面，如图：创建负载均衡页面所示。
 
 图：创建负载均衡页面
 
-![LBaaS-2](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-2.png)
+![LBaaS-2](../../../../image/JDStack-Agility/LBaaS-2.png)
 
 在此页面输入名称、选择网络、子网、点击“确定”按钮，弹出“创建成功”提示，您可以在负载均衡列表页面中看到您创建的负载均衡信息，如图：负载均衡列表页面所示。
 
 图：负载均衡列表页面
 
-![LBaaS-3](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-3.png)
+![LBaaS-3](../../../../image/JDStack-Agility/LBaaS-3.png)
 
 在此页面点击操作列的”操作”按钮，弹出下来弹框，点击相应操作执行编辑、创建监听器、删除操作。
 
@@ -50,13 +50,13 @@
 
 图：创建监听器页面
 
-![LBaaS-4](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-4.png)
+![LBaaS-4](../../../../image/JDStack-Agility/LBaaS-4.png)
 
 在此页面输入名称、选择协议、连接限制、输入端口号，点击“确定”按钮，弹出“创建成功”提示，您可以在负载均衡详情页面中看到您创建的监听器信息，如图：负载均衡监听器详情页面所示。
 
 图：负载均衡监听器详情页面
 
-![LBaaS-5](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-5.png)
+![LBaaS-5](../../../../image/JDStack-Agility/LBaaS-5.png)
 
 注意：同一负载均衡下的监听端口不可重复，监听器创建后监听协议、端口不允许修改。
 
@@ -68,13 +68,13 @@
 
 图：资源池列表页面
 
-![LBaaS-6](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-6.png)
+![LBaaS-6](../../../../image/JDStack-Agility/LBaaS-6.png)
 
 在此页面，点击“创建”按钮，弹出创建资源池页面，如图：创建资源池页面所示。
 
 图：创建资源池页面
 
-![LBaaS-7](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-7.png)
+![LBaaS-7](../../../../image/JDStack-Agility/LBaaS-7.png)
 
 
 
@@ -82,7 +82,7 @@
 
 图：资源池列表页面
 
-![LBaaS-8](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-8.png)
+![LBaaS-8](../../../../image/JDStack-Agility/LBaaS-8.png)
 
 
 
@@ -92,13 +92,13 @@
 
 图：添加云主机页面
 
-![LBaaS-9](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-9.png)
+![LBaaS-9](../../../../image/JDStack-Agility/LBaaS-9.png)
 
 在此页面输入名称、选择网络、子网、云主机、输入端口号、权重、点击“确定”按钮，弹出“添加成功”提示，您可以在资源池主机列表详情页面中看到您创建的资源池信息，如图：资源池主机列表详情页面所示。
 
 图：资源池主机列表详情页面
 
-![LBaaS-10](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-10.png)
+![LBaaS-10](../../../../image/JDStack-Agility/LBaaS-10.png)
 
 参考以上添加云主机的操作方法，依次添加负载均衡服务后端需要挂载的云主机。
 
@@ -110,6 +110,6 @@
 
 图：编辑权重页面
 
-![LBaaS-11](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/LBaaS-11.png)
+![LBaaS-11](../../../../image/JDStack-Agility/LBaaS-11.png)
 
 在此页面输入修改权重值、点击“确定”按钮，弹出“编辑成功”提示，您可以在资源池主机列表详情页面中看到您编辑的权重信息。

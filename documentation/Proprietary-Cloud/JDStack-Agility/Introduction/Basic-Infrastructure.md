@@ -6,5 +6,5 @@
 
 云簇敏捷版的架构如下图：
 
-![Basic-Infrastructure](https://github.com/jdcloudcom/cn/blob/cn-jdstack-agility/image/JDStack-Agility/Basic-Infrastructure.jpg)
+![Basic-Infrastructure](../../../../image/JDStack-Agility/Basic-Infrastructure.jpg)
 

@@ -1,15 +1,14 @@
-# describeCpsIpResources
+# describeCcsIpResources
 
 
 ## 描述
-查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
-
+查询基础防护已防护的托管区 IP 的安全信息
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://baseanti.jdcloud-api.com/v1/regions/{regionId}/cpsIpResources
+https://baseanti.jdcloud-api.com/v1/regions/{regionId}/ccsIpResources
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

@@ -26,7 +26,7 @@ items:
     - name: 安全事件
       href: Operation-Guide/Security-Incidents.md
     - name: 系统后门
-      href: Operation-Guide/Rootkit-Detection.md
+      href: Operation-Guide/Rookit-Detection.md      
     - name: 可疑操作
       href: Operation-Guide/Suspicious-Operation.md
     - name: 合规基线

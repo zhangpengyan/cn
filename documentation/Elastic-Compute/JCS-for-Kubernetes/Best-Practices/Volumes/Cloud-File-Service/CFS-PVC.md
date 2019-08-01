@@ -171,7 +171,7 @@ spec:
 * 您可以执行如下命令下载实例Yaml文件：
 
 `
-wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/CFS/read-data-from-pvc.txt
+wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/CFS/read-data-from-pvc.yml
 `
 
 * 创建Pod前，请根据PVC的定义修改Yaml文件中对应参数值。

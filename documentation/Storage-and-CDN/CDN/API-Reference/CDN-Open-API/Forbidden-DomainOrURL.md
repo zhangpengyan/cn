@@ -30,7 +30,20 @@ http://opencdn.jcloud.com/api/forbiddenCdnDomainOrUrl
 
 - #### 请求示例
 ##### curl请求示例：
-
+```
+curl -X POST \
+  http://10.226.151.195:8080/api/forbiddenCdnDomainOrUrl \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username": "test_user",
+    "reason": "test_user",
+    "forbiddenType": "url",
+    "signature": "d00f58f89e8cd55dc080aec0d8051845",
+    "forbiddenUrl": "/test",
+    "domain": "www.a.com",
+    "linkOther": "n"
+}'
+```
 
 
 * json格式

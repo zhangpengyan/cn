@@ -80,6 +80,10 @@ items:
     href: Cloud-Physics-Server-Service-Level-Protocol-SLA.md
   - name: 物理云公网IP服务协议
     href: Elastic-IP-For-Physical-Cloud-Terms-Of-Service.md
+  - name: 物理云负载均衡服务条款
+    href: Physical-Cloud-Load-Balancer-Service-Clause.md 
+  - name: 物理云负载均衡服务等级协议（SLA）
+    href: Physical-Cloud-Load-Balancer-Level-Agreement-SLA.md    
   - name: 分布式云物理服务器服务条款
     href: Distributed-Cloud-Physical-Server-Service-Clause.md
   - name: 分布式云物理服务器服务等级协议（SLA）

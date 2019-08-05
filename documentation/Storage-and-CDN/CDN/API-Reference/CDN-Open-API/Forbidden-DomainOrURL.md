@@ -32,7 +32,7 @@ http://opencdn.jcloud.com/api/forbiddenCdnDomainOrUrl
 ##### curl请求示例：
 ```
 curl -X POST \
-  http://10.226.151.195:8080/api/forbiddenCdnDomainOrUrl \
+  http://opencdn.jcloud.com/api/forbiddenCdnDomainOrUrl \
   -H 'Content-Type: application/json' \
   -d '{
     "username": "test_user",

@@ -5,7 +5,7 @@
 
 1.在京东云云主机上已经部署了用户自己的业务应用。
 
-2.已经在对应的云主机上安装了日志采集agent。Agent安装教程。
+2.已经在对应的云主机上安装了日志采集agent。[Agent安装教程](https://docs.jdcloud.com/cn/log-service/agentinstall)。
 
 3.已经创建了对应的日志集和日志主题
 

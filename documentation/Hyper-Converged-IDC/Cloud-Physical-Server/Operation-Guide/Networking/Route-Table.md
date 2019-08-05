@@ -45,10 +45,10 @@
 **路由表列表**
 
 打开控制台，在左侧导航栏依次点击云物理服务器->路由表，进入路由表列表页，如下图：<br/>
-![路由列表](../../Image/route%20table%20list.png)
+![路由列表](../../Image/route-table-list.png)
 
 点击**路由表名称**，查看路由表详情和路由策略，如下图：<br/>
-![路由策略](../../Image/route%20table%20describe.png)
+![路由策略](../../Image/route-table-describe.png)
 
 
 

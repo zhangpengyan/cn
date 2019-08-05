@@ -24,11 +24,12 @@
 
 
 ### 4. 调用示例
-- - -
+-
 ##### 请求地址
 http://opencdn.jcloud.com/api/forbiddenCdnDomainOrUrl
 
 ##### 请求示例
+##### curl请求示例：
 
 
 ```html

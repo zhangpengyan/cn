@@ -14,4 +14,5 @@
 - 每个Segment节点会包含数个 Primary Segment 和 Mirror Segment 。
 - 规格的存储空间为用户可用的存储空间，即Primary Segment占用的存储空间。
 - Segment节点的总存储空间为规格展示的2倍，用于存储Primary Segment 和 Mirror Segment 的数据。
+- 控制台可选择2-8个Segment节点，如需要更多节点，可提交工单开通。
 

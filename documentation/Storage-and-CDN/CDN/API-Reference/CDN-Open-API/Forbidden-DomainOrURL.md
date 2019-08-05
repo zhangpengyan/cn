@@ -32,10 +32,10 @@ http://opencdn.jcloud.com/api/forbiddenCdnDomainOrUrl
 ##### curl请求示例：
 
 
-```html
+
 * json格式
 
-```json
+```
 {
     "username" :"test_user",
     "signature" :"d00f58f89e8cd55dc080aec0d8051845",
@@ -51,7 +51,7 @@ http://opencdn.jcloud.com/api/forbiddenCdnDomainOrUrl
 
 * json格式
 
-```json
+```
 {
     "status": 0,
     "msg": "成功",

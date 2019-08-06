@@ -8,7 +8,7 @@
 
 ###  npm 引入
 
-开发前需先安装环境依赖： [npm 地址](https://www.npmjs.com/package/cos-nodejs-sdk-v5)。
+开发前需先安装环境依赖：[npm 地址](https://www.npmjs.com/)。
 
 ### SDK 获取
 

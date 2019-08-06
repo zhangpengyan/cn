@@ -1,1 +1,1 @@
-![1565078746572](C:\Users\fengdanyang\AppData\Roaming\Typora\typora-user-images\1565078746572.png)
+![image](https://github.com/jdcloudcom/cn/blob/baishi/image/whitepaper/%E8%BF%81%E7%A7%BB%E7%9B%AE%E5%BD%95.png)

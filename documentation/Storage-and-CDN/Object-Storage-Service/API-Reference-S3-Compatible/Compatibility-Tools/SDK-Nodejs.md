@@ -87,7 +87,7 @@ s3.config.update({
 
 ```JavaScript
 
-// Creat  client
+// Create Client
 var AWS = require('aws-sdk');
 // Import the AWS SDK only for S3
 var s3 = new AWS.S3({apiVersion: '2006-03-01'});
@@ -100,8 +100,7 @@ s3.config.update({
 })
 
 
-// Creat Bucket
-
+// Create Bucket
 var newBuket = {
   Bucket: 'myAPPname'
 }

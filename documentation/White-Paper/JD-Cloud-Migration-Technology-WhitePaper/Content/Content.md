@@ -1,5 +1,4 @@
-![Image text](https://github.com/jdcloudcom/cn/blob/baishi/image/whitepaper/%E8%BF%81%E7%A7%BB%E7%9B%AE%E5%BD%95.png)
-
+# 目录
 
 ### 1 概述
 
@@ -44,8 +43,3 @@
 ### 5 总结 
 
 ### 6 引用
-
-
-### 1 概述
-
-<font color=#008000>1.1 京东云介绍</font>

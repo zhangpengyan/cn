@@ -1,7 +1,7 @@
 # 畅捷通T+在京东云上的最佳实践
 下图是一个畅捷通T+在京东云上的部署案例，此部署案例中，T+部署采用应用服务器与数据库服务器分离部署的方式，满足在客户端较多，较大并发的需求。如果客户端有限，也可以采用单台全部部署的方式，那么可以节省一台主机。
 
-![Deployment](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-12.png)
+![deployment](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-12.png)
 
 ## 1.网络最佳实践
 ### · 私有网络VPN设计
@@ -21,7 +21,7 @@ VPC是云上的私有网络，为客户的应用提供一个独立的私有网�
 
 - 弹性IP绑定到新主机，应用恢复访问。 
 
-![framework](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-13.png)
+![availability](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-13.png)
 
 ## 3.可扩展性最佳实践  
 - 应用和数据库分离部署。为了应付客户端较多、并发连接较多的情况，可以将应用服务器和数据库服务器分离部署，充分发挥不同角色服务器的性能。 
@@ -50,7 +50,7 @@ VPC是云上的私有网络，为客户的应用提供一个独立的私有网�
 4. 将数据恢复到灾难恢复地域的应用中。 
 5. （可选）对于需要域名访问的应用，更改DNS即可的指向IP即可。 
 
-![framework](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-14.png)
+![cross-region recovery](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-14.png)
 
 ### 5.2 将本地或其他云上部署的应用恢复到京东云 
 客户也可以将京东云作为部署在本地或其他云的T+生产环境的灾难恢复平台。这种场景里，生产环境仍然部署到客户的本地数据中心，而灾备恢复环境部署在京东云。如果生产环境出现故障，那么可以在京东云上恢复应用，并且提供服务。这个方案需要京东云企业助手的应用灾难恢复功能。如下图所示。 
@@ -61,4 +61,4 @@ VPC是云上的私有网络，为客户的应用提供一个独立的私有网�
 4. 将备份的数据恢复到应用应用中，应用恢复正常运行。 
 5. （可选）对于需要域名访问的应用，更改DNS即可的指向IP即可。 
 
-![framework](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-15.png)
+![local recovery](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-15.png)

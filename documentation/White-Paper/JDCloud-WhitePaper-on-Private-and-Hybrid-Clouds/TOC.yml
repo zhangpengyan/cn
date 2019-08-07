@@ -4,7 +4,7 @@ items:
 
 - name: 私有云和混合云白皮书简介
   href: Introduction/Overview.md
-- name: 私有云和混合云白皮书优势
+- name: 私有云和混合云优势
   href: Advantage/Point.md
 - name: 私有云和混合云白皮书目录
   href: Content/Content.md

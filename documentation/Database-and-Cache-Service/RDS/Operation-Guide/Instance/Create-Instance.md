@@ -19,7 +19,7 @@
 - 数据库类型：目前支持 MySQL，SQL Server，Percona, MariaDB, PostgreSQL 五种数据库类型，不同地域支持的数据库类型不同，具体以控制台为准。
 - 版本：指的是数据库类型的版本，不同地域支持的版本不同，具体以控制台为准。
 - 存储类型：不同的存储类对应的实例规格的最大IOPS不同, 请参考 [MySQL 产品规格](../../Introduction/Specifications/MySQL-Specifications.md)。
-- 规格：实例的CPU和内存，不同的规格对应不同的最大连接数和最大IOPS；关于规格的详细说明，请参考 [MySQL 产品规格](../.../Introduction/Specifications/MySQL-Specifications.md)。
+- 规格：实例的CPU和内存，不同的规格对应不同的最大连接数和最大IOPS；关于规格的详细说明，请参考 [MySQL 产品规格](../../Introduction/Specifications/MySQL-Specifications.md)。
 - 存储空间：该存储空间包括数据空间、系统文件空间以及日志文件空间。
 - 私有网络：只支持在私有网络中创建。如果用户没有私有网络及子网，可以通过【新建私有网络】和【新建子网】的链接创建私有网络和子网。创建完成后，点击【刷新】，就可以看到新创建的私有网络和子网了。
    - 在选择私有网络的时候，请确保需要连接数据库实例的云主机和数据库实例在同一个私有网络内。

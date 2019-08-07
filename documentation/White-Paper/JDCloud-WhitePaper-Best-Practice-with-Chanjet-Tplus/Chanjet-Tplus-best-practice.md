@@ -1,7 +1,7 @@
 # 畅捷通T+在京东云上的最佳实践
 下图是一个畅捷通T+在京东云上的部署案例，此部署案例中，T+部署采用应用服务器与数据库服务器分离部署的方式，满足在客户端较多，较大并发的需求。如果客户端有限，也可以采用单台全部部署的方式，那么可以节省一台主机。
 
-![framework](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-12.png)
+![Deployment](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-12.png)
 
 ## 1.网络最佳实践
 ### · 私有网络VPN设计

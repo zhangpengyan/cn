@@ -10,15 +10,19 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 * nfs-client-provisioner在集群中以deployment的方式运行, 副本数为1；
 
-* nfs-client-provisioner自身作为外部Provisioner在集群中运行，nfs-client-provisioner yaml文件中的PROVISIONER_NAME必须与StorageClass中provisioner相同；
+* nfs-client-provisioner自身作为外部Provisioner在集群中运行；
 
-* 用户使用nfs-client-provisioner服务关联的StorageClass创建PVC时, nfs-client-provisioner在cfs文件系统中创建子目录, 初始化并创建PV
+* 使用nfs-client-provisioner定义Storage Class时， Storage Class中的provisioner必须与nfs-client-provisioner 中定义的PROVISIONER_NAME相同；
+
+* 用户使用nfs-client-provisioner服务关联的StorageClass创建PVC时, nfs-client-provisioner在cfs文件系统中创建子目录, 初始化并创建PV；
 
 * nfs-client-provisioner在NFS服务器上提供PV的命名格式：${namespace}-${pvcName}-${pvName}；
 
-* PV被删除后, nfs-client-provisioner会对pv子目录进行归档或者删除操作
+* PV被删除后, nfs-client-provisioner会对pv子目录进行归档或者删除操作；
   
-* nfs-client-provisioner在NFS服务器上回收PV的命名格式：archieved-${namespace}-${pvcName}-${pvName} 
+* nfs-client-provisioner在NFS服务器上回收PV的命名格式：archieved-${namespace}-${pvcName}-${pvName} ；
+
+* 每个nfs-client-provisioner deployment对应一个CFS 文件存储，如需在集群中关联多个CFS文件存储，请参考示例部署多个nfs-client-provisioner deployment。
 
 ## 二、连接到集群
 
@@ -26,7 +30,7 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 ## 三、部署nfs-client-provisioner
 
-nfs-client-provisioner在集群中以deployment的方式运行，并且nfs-client-provisioner创建PV、PVC时需要访问kube-api，如果您的集群启用了RBAC因此需要获取相应的访问权限。详细部署说明参考下文。
+nfs-client-provisioner在集群中以deployment的方式运行，并且nfs-client-provisioner创建PV、PVC时需要访问kube-api，如果您的集群启用了RBAC，则必须授权provisioner。详细部署说明参考下文。
 
 1. 创建Service Account，Yam文件下载及说明如下：
 
@@ -193,7 +197,7 @@ apiVersion: extensions/v1beta1
 metadata:
   name: nfs-client-provisioner
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: Recreate
   template:
@@ -227,6 +231,7 @@ spec:
 `
 kubectl create -f Deploy.yml
 `
+
 四、验证nfs-client-provisioner运行状态
 
 在集群中查看nfs-client-provisioner Deployment的运行状态，所有Pod处于running状态并且运行的副本数与期望副本数一致时，则表示nfs-client-provisioner运行成功。
@@ -234,5 +239,5 @@ kubectl create -f Deploy.yml
 ```
 kubectl get deployment
 NAME                     DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-nfs-client-provisioner   2         2         2            2           42m
+nfs-client-provisioner   1         1         1            1           42m
 ```

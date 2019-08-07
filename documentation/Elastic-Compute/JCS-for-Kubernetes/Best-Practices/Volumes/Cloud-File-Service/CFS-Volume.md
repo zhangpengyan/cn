@@ -13,7 +13,11 @@
 
 2. 文件存储支持通过挂载目标的IP地址挂载文件存储，您可以在文件存储详情页查询挂载目标的IP地址，详情参考[文件存储信息](https://docs.jdcloud.com/cn/cloud-file-service/file-system-detail)。
 
-## 二、Pod通过NFS Volume方式使用CFS文件存储
+## 二、连接到集群
+
+ Kubernetes 命令行客户端 kubectl可以让您从客户端计算机连接到 Kubernetes 集群，实现应用部署。详情参考使用Kubectl客户端[连接到Kubernetes集群](https://docs.jdcloud.com/cn/jcs-for-kubernetes/connect-to-cluster)。
+
+## 三、Pod通过NFS Volume方式使用CFS文件存储
     
 1. 新建一个Pod，将第一部分创建的CFS文件存储通过NFS Volume方式挂载到Pod，并在CFS目录下写入文件。Pod YAML文件说明如下：
 ```
@@ -49,23 +53,18 @@ spec:
 `
 wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/CFS/write-data-to-cfs.yml
 `
-* 为Kubernetes集群创建CFS时，请将CFS的[挂载目标](https://docs.jdcloud.com/cn/cloud-file-service/creating-mount-target)添加到Kubernetes集群的Node子网中；
 * 创建Pod前，请根据文件存储信息修改Yaml文件中对应参数值。
 
-2. 使用Kubectl客户端[连接到Kubernetes集群](https://docs.jdcloud.com/cn/jcs-for-kubernetes/connect-to-cluster)后，执行如下命令创建Pod：
-
+2. 执行如下命令，创建Pod并确定Pod运行状态
 ```
 kubectl create -f write-data-to-cfs.yml       # 文件名称write-data-to-cfs.yml可使用本地目录保存的文件替换
-```
 
-3. 执行如下命令，确定Pod运行状态
-```
 kubectl get pods
 NAME                READY   STATUS    RESTARTS   AGE
 write-data-to-cfs   1/1     Running   0          3m1s
 ```
 
-4. 执行如下命令进入Pod，查看/mnt/cfs-write/hello.log文件中保存的内容：
+3. 执行如下命令进入Pod，查看/mnt/cfs-write/hello.log文件中保存的内容：
 ```
 kubectl exec -it write-data-to-cfs /bin/sh
 / # cat /mnt/cfs-write/hello.log
@@ -83,14 +82,14 @@ kubectl exec -it write-data-to-cfs /bin/sh
 
 ```
 
-5. 执行如下命令删除Pod
+4. 执行如下命令删除Pod
 
 ```
 kubectl delete pod write-data-to-cfs
 pod "write-data-to-cfs" deleted
 ```
 
-## 三、验证CFS文件存储中被持久化保存的数据
+## 四、验证CFS文件存储中被持久化保存的数据
 
 1. 重新创建一个Pod，将第一部分创建的CFS文件存储通过NFS Volume方式挂载到Pod，并验证CFS目录下的文件内容。Pod Yaml文件说明如下：
 ```
@@ -130,8 +129,14 @@ wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/CFS/read-data-from-cfs.yml
 
 * 创建Pod前，请根据文件存储信息修改Yaml文件中对应参数值。
 
-2. 创建Pod，并验证Pod处于运行状态时，执行如下命令进入Pod，查看/mnt/cfs-read目录下的文件内容
+2. 创建Pod，验证Pod处于运行状态时，执行如下命令进入Pod，查看/mnt/cfs-read目录下的文件内容
 ```
+kubectl create -f read-data-from-cfs.yml       # 文件名称read-data-from-cfs.yml可使用本地目录保存的文件替换
+
+kubectl get pods
+NAME                READY   STATUS    RESTARTS   AGE
+read-data-from-cfs  1/1     Running   0          15s
+
 kubectl exec -it read-data-from-cfs /bin/sh
 / # cat /mnt/cfs-read/hello.log
 输出示例如下：

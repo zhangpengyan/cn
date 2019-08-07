@@ -12,7 +12,7 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 ## 三、动态创建PV
 
-StorageClass为PVC提供动态发现、绑定PV的配置。因此创建一个使用nfs-client-provisioner的Storage Class，并在创建PV时显示指定对应的StorageClassName，就可以基于CFS云文件存储在Kubernetes集群中动态创建NFS类型的PV。
+StorageClass为PVC提供动态发现、绑定PV的配置。因此创建一个使用nfs-client-provisioner的Storage Class，并在创建PVC时显示指定对应的StorageClassName，就可以基于CFS云文件存储在Kubernetes集群中动态创建NFS类型的PV。
 
 1. 创建Storage Class，Yam文件下载及说明如下：
 
@@ -41,11 +41,11 @@ kubectl create -f storageClass-With-jdcloud-cfs.yml
 
 * 查看Storage Class状态
 
-`
+```
 kubectl get storageClass auto-cfs-storage
 NAME               PROVISIONER   AGE
 auto-cfs-storage   jdcloud-cfs   5m15s
-`
+```
 
 2. 创建PVC，Yaml文件下载及说明如下：
 
@@ -126,7 +126,7 @@ Message:
 Source:
     Type:      NFS (an NFS mount that lasts the lifetime of a pod)
     Server:    10.XX.XX.11      #CFS文件存储中对应的挂载目标IP地址
-    Path:      /cfs/default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7      # NFS Server中由nfs-client-provisioner自动创建的挂载目录
+    Path:      /cfs/default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7      # NFS Server中由nfs-client-provisioner自动创建的子目录
     ReadOnly:  false
 Events:        <none>
 ```
@@ -151,7 +151,7 @@ mount -t nfs 172.XX.XX.10:/cfs /cfs     #将nfs 172.XX.XX.10:/cfs挂载到云主
 cd /cfs       #进入云主机上的cfs目录
 
 ls -a       # 查看cfs目录中的内容
-default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7        #ls输出内容，验证cfs目录下新增了与PV Source.Path一致的目录
+default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7        #ls输出内容，验证cfs目录下新增了子目录，子目录名称与PV Source.Path一致的目录
 
 ```
 * 更多详情参考云文件服务[挂载文件存储](https://docs.jdcloud.com/cn/cloud-file-service/mount-file-system)。
@@ -216,17 +216,17 @@ helloworld
 cd /cfs       #进入云主机上的cfs目录
 
 ls -a       # 查看cfs目录中的内容
-default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7        #ls输出内容，验证cfs目录下新增了与PV Source.Path一致的目录
+default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7        #ls输出内容，验证cfs目录下新增了子目录，子目录名称与PV Source.Path一致的目录
 
 cat default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7/SUCCESS
-helloworld        #与PV Source.Path一致的目录下，查看新增文件SUCCESS的内容
+helloworld        #与PV Source.Path一致的子目录下，查看新增文件SUCCESS的内容
 ```
 3. 删除pod pod-touch-cfs
 
-`
+```
 kubectl delete pod pod-touch-cfs
 pod "pod-touch-cfs" deleted
-`
+```
 
 
 4. 重新创建一个Pod，并在Pod中挂载上述PVC，Pod  YAML下载及说明如下：
@@ -265,10 +265,10 @@ spec:
 
 * 使用Yaml文件创建Pod
 
-`
+```
 kubectl create -f verify-pv-cfs.yml
 pod/verify-pv-cfs created
-`
+```
 
 * 查看Pod运行状态
 
@@ -287,11 +287,14 @@ kubectl exec -it verify-pv-cfs /bin/sh
 / # cat /mnt/cfs/SUCCESS
 helloworld
 ```
+
 5. 删除pod verify-pv-cfs
 
-`
+```
 kubectl delete pod verify-pv-cfs
 pod "verify-pv-cfs" deleted
+```
+
 ## 五、删除PVC，验证CFS 云文件存储对应目录的回收策略
 
 1. 删除PVC auto-pv-with-nfs-client-provisioner，运行如下命令：
@@ -318,5 +321,5 @@ Error from server (NotFound): persistentvolumes "pvc-c44da35f-b8bc-11e9-b6cc-fa1
 cd /cfs       #进入云主机上的cfs目录
 
 ls -a       # 查看cfs目录中的内容
-输出内容说明：输出内容为空，则表明PVC、PV被删除后，CFS文件存储中由nfs-client-provisioner自动创建的目录及文件内容已被成功回收
+输出内容说明：输出内容为空，则表明PVC、PV被删除后，CFS文件存储中由nfs-client-provisioner自动创建的子目录及文件内容已被成功回收
 ```

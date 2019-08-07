@@ -1,6 +1,6 @@
 # 通过静态PV的方式使用京东云文件服务
 
-PV是Kubernetes集群中的资源，是Volume类的卷插件，用于描述持久化存储数据卷，具有独立于使用PV的Pod的生命周期。[京东云文件服务](https://docs.jdcloud.com/cn/cloud-file-service/product-overview)支持NFS协议，因此可以在Kubernetes集群中可以使用nfs类型的PV定义。
+PV是Kubernetes集群中的资源，是Volume类的卷插件，用于描述持久化存储数据卷，具有独立于使用PV的Pod的生命周期。[京东云文件服务](https://docs.jdcloud.com/cn/cloud-file-service/product-overview)支持NFS协议，因此可以在Kubernetes集群中使用nfs类型的PV定义。
 
 PV支持两种配置方式：
 * 静态：由集群管理员创建，具有capacity、accessMode、类型等实际存储细节，可直接被使用；
@@ -14,7 +14,7 @@ PV支持两种配置方式：
 
 * PVC：Persistent Volume Claim，描述持久化存储卷请求声明；
 
-* SC: Storage Class, 提供描述存储“class（类）”的方法，为PVC提供动态创建PV的存储配置；与PVC具有相同StorageClassName的PV才可以被绑定到PVC；
+* SC: Storage Class, 提供描述存储“class（类）”的方法，为PVC提供动态创建/绑定PV的存储配置；与PVC具有相同StorageClassName的PV才可以被绑定到PVC；
   
 ## 一、创建CFS文件存储
 
@@ -210,9 +210,9 @@ spec:
     - /bin/sh
     args:
     - -c
-    - 'while true; do ls -l /mnt/cfs/; sleep 2; done'
+    - 'while true; do ls -l /mnt/cfs-read/; sleep 2; done'
     volumeMounts:
-    - mountPath: "/mnt/cfs"
+    - mountPath: "/mnt/cfs-read"
       name: cfs-pv001
   volumes:
   - name: cfs-pv001
@@ -222,7 +222,7 @@ spec:
 ```     
 **参数说明：**
 
-* 上述YAML文件将PVC挂载到Pod的/mnt/cfs目录
+* 上述YAML文件将PVC挂载到Pod的/mnt/cfs-read目录
 * 您可以执行如下命令下载示例Yaml文件：
 
 `

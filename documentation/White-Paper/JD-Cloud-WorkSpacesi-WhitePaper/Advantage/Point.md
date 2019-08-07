@@ -9,7 +9,10 @@
 京东云云桌面具有以下五大优势：
 
 
+
 ![云桌面优势](https://github.com/jdcloudcom/cn/blob/baishi/image/whitepaper/%E4%BA%91%E6%A1%8C%E9%9D%A2.png)
+
+
 
 
 - **顶级合作伙伴。**京东云与世界顶级桌面技术提供商**Citrix**公司强强联合，在各自优势技术基础上共同打造出具有行业领先水平的云桌面平台，在云桌面技术上创新突破。

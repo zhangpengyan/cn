@@ -4,6 +4,8 @@ items:
 
 - name: 云桌面白皮书简介
   href: Introduction/Overview.md
+- name: 云桌面白皮书优势
+  href: Advantage/Point.md
 - name: 云桌面白皮书目录
   href: Content/Content.md
 - name: 云桌面白皮书下载链接

@@ -1,8 +1,9 @@
+
 ### 京东云五大优势：
 
 
 
-![私有云和混合云的优势](D:\fengdanyang\Desktop\whitepaper\私有和混合.png)
+![私有云和混合云的优势](https://github.com/jdcloudcom/cn/blob/baishi/image/whitepaper/%E7%A7%81%E6%9C%89%E5%92%8C%E6%B7%B7%E5%90%88.png)
 
 **高端的技术人才队伍**
 

@@ -13,8 +13,8 @@
 
 畅捷通T+企业服务信息页 
 
-[http://www.cotong.com/products/products3/20150930/61.html] (http://www.cotong.com/products/products3/20150930/61.html)
+http://www.cotong.com/products/products3/20150930/61.html
 
 畅捷通T+文档 
 
-[http://software.chanjet.com/rj-Tg.html] (http://software.chanjet.com/rj-Tg.html)
+http://software.chanjet.com/rj-Tg.html

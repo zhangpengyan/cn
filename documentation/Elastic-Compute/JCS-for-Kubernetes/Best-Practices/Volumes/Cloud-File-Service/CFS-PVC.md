@@ -1,4 +1,4 @@
-# 通过PV的方式使用京东云文件服务
+# 通过静态PV的方式使用京东云文件服务
 
 PV是Kubernetes集群中的资源，是Volume类的卷插件，用于描述持久化存储数据卷，具有独立于使用PV的Pod的生命周期。[京东云文件服务](https://docs.jdcloud.com/cn/cloud-file-service/product-overview)支持NFS协议，因此可以在Kubernetes集群中可以使用nfs类型的PV定义。
 

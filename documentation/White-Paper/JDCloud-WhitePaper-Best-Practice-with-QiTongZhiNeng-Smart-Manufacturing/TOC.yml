@@ -1,23 +1,22 @@
-name: 数据安全白皮书
-href: 
+name: 七通智能制造云在京东云上的最佳实践
+href:
 items:
-- name: 概要
-  href: Introduction/Overview.md
-- name: 京东云数据安全观
-  href: Data-security-concepts/data-security-concepts.md
-- name: 云端数据保护职责
-  href: Data-proteciton-responsibilities/Data-proteciton-responsibilities.md
-- name: 京东云数据安全实践
-  items:
-    - name: 京东云数据安全保护体系
-      href: Data-security-practices/Data-security-protection-system.md
-    - name: 网络与基础设施保障
-      href: Data-security-practices/Network-and-infrastructure-support.md
-    - name: 身份与访问控制
-      href: Data-security-practices/Identity-and-access-control.md
-    - name: 数据全生命周期安全保障
-      href: Data-security-practices/Data-life-cycle.md
-    - name: 安全运营保障
-      href: Data-security-practices/Security-Operation.md
-- name: 下载链接
-  href: Download-Link/Related-Resources.md
+  - name: 摘要
+    href: Overview.md
+  - name: 在京东云上运行 Q7-Cloud 的好处
+    href: Q7-Cloud-Benefits.md
+  - name: 京东云基础介绍
+    href: JDCloud-Introduction.md
+  - name: Q7-Cloud 应用介绍
+    href: Q7-Cloud-Appliction-Introduction.md
+  - name: Q7-Cloud 在京东云上的最佳实践
+    href: Q7-CLoud-Best-Practices-on-JDCloud.md
+  - name: 京东云安全模型
+    href: Security-Model.md
+  - name: 结论
+    href: Conclusion.md
+  - name: 文档作者
+    href: Authors.md
+  - name: 参考
+    href: Reference.md
+    

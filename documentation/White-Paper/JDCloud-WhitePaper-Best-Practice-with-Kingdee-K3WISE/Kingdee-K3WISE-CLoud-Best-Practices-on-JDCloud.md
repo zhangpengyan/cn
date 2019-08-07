@@ -29,7 +29,7 @@ VPC是云上的私有网络，为客户的应用提供一个独立的私有网�
 
 
 ![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-K3WISE/K3WISE4.png)
-
+                
 ## 可扩展性最佳实践
 
 金蝶K3WISE软件本身为成长型企业打造，支持多种部署方案，单机全量部署或应用与数据库分离部署一般即可满足企业的并发性能要求和扩展性要求，如客户端更多，可采用多应用服务器的部署模式。

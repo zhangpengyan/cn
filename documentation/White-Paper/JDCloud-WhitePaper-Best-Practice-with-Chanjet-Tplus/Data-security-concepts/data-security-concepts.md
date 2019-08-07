@@ -8,7 +8,7 @@
 
 京东云数据安全框架如下图所示：
 
-![framework](../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-3.png)
+![framework](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-3.png)
  
 京东云数据安全是以“让云端数据更安全”为目标的安全体系构建的方法论及实践，核心内容包括：
 

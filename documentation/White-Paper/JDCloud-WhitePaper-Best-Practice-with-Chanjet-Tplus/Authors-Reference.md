@@ -1,8 +1,8 @@
-# 8.文档作者
+# 文档作者
 高  增   京东云解决方案架构师 
 
 杨彬彬   上海企通网络科技有限公司副总经理 
-# 9.参考
+# 参考
 京东云云主机文档 
 
 [https://docs.jdcloud.com/cn/virtual-machines/product-overview](https://docs.jdcloud.com/cn/virtual-machines/product-overview) 

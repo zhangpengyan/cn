@@ -5,3 +5,4 @@
 
 万象平台的数据产品丰富，覆盖品类数据多样，目前拥有的数据类型主要包括金融、征信、电商、质检、海关、运营商等领域权威、全面数据，未来会引入各类政府开放的数据，让京东万象平台大数据供需生态更加丰富。
 
+![WX](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/1.png)

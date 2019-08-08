@@ -2,7 +2,7 @@ name: 京东云云桌面白皮书
 href: 
 items:
 
-- name: 云桌面白皮书概要
+- name: 概要
   href: Introduction/Overview.md
 - name: 云桌面优势
   href: Advantage/Point.md

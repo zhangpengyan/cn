@@ -1,4 +1,4 @@
-# 连接数据库
+# 连接实例
 
 云数据库 Greenplum 基于Greenplum 5.19提供服务，完全兼容 PostgreSQL 8.3 的消息协议，可以直接使用支持 PostgreSQL 8.3 消息协议的工具，例如 libpq、JDBC、ODBC、psycopg2、pgadmin III 等。
 

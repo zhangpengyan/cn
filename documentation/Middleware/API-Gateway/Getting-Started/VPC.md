@@ -16,7 +16,7 @@
 
 ![配置VPC代理](../../../../image/Internet-Middleware/API-Gateway/VPC-1.png)
 
-更多创建微服务网关的资料参考 [微服务网关](https://docs.jdcloud.com/cn/jd-distributed-service-framework/product-overview) 产品。
+更多创建微服务网关的资料参考 [微服务网关](../JD-Distributed-Service-Framework/Introduction/Product-Overview.md) 产品。
 
 ### 配置API网关分组
 （1）在控制台  互联网中间件-》API网关里创建一个新的API分组，例如vpctest，简单起见访问授权这里选择 免鉴权。（线上实际API请务必开启访问授权。）

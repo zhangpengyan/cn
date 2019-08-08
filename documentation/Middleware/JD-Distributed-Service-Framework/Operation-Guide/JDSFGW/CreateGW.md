@@ -74,7 +74,7 @@
 
 -  有两处入口提供绑定：
 
-       -  1、在API网关产品里进行绑定。可在创建的API分组列表页中，点击相应的分组信息的“绑定“操作。点击后将跳转至微服务网关列表页。
+       -  1、在API网关产品里进行绑定。可在API分组列表页中分组信息中点击“绑定“操作。
 
        -  2、在微服务网关产品里进行绑定。
 
@@ -149,7 +149,7 @@
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-fb-jdsf.png)
 	
 
-
+DEMO范例可参考： [最佳实践](../../Getting-Started/GW_VPC.md)  
 
 
 

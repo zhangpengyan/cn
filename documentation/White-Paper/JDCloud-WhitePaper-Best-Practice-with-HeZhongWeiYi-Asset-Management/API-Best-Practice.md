@@ -22,7 +22,7 @@
 
 本案例中，将内部调用的API发布到万象平台上变为通用业务逻辑API，不但可以为A企业使用，而且可以为B企业及其他第三方调用。 
 
-![Call Model](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/4.png)
+![Call Model](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/4.png)
 
 ### 2.2 参数说明概览 
 

@@ -7,4 +7,6 @@
 功能模块二：合同管理同步，ERP到CRM，单向同步，接口提供方ERP(webapi)，接口 调用方 CRM。包含合同明细、开票信息、实际回款、回款节点。 
 
 功能模块三：客户管理，联系人管理，在 CRM 中录入信息，CRM将信息同步到ERP，单向同步，接口提供方ERP(webapi)，接口调用方CRM。 
+
+![API Introduction](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/2.png)
  

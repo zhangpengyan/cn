@@ -48,7 +48,7 @@ items:
     href: Cloud-Database-MongoDB-Service-Level-Agreement-SLA.md
   - name: 云数据库InfluxDB服务条款
     href: JCS-For-InfluxDB-Terms-Of-Service.md
-  - name: 云数据库Greenplum服务等级协议（SLA）
+  - name: 云数据库InflxDB服务等级协议（SLA）
     href: JCS-For-InfluxDB-Level-Agreement-SLA.md
   - name: 云数据库Greenplum服务条款
     href: JCS-For-Greenplum-Terms-Of-Service.md  

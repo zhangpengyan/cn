@@ -8,7 +8,7 @@
 
 京东云数据安全框架如下图所示：
 
-![framework](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-3.png)
+![framework](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-3.png)
 
 ## 2.云主机
 云主机(Virtual Machines, VM)是京东云提供的一种基础计算服务单元，提供处理能力可弹性伸缩的计算服务。京东云提供超大内存云主机，独享1464GB DDR4内存，满足对数据交换速度和内存容量有极高要求的大型业务部署场景。支持官方镜像，客户私有镜像/共享镜像，和云市场第三方镜像等丰富镜像来源。

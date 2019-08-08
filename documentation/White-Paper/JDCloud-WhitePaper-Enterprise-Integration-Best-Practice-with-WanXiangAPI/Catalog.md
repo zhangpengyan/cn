@@ -25,5 +25,7 @@
 8. 参考
 
 
+
+
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/JD-Cloud-Logo.png)
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/HZ-UNION-Logo.png)

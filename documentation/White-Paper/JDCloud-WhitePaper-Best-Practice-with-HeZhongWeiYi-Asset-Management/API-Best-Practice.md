@@ -46,20 +46,20 @@
 
 进入网络设置，输入目标基础url，点击"保存"按钮。 
 
-![Network Setting](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6.png)
+![Network Setting](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/7.png)
  
 **3. 接口设置页面** 
 
-![Interface Setting](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/7.png)
+![Interface Setting](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/8.png)
 
 **4. 编辑接口参数** 
 
-![Edit Interface](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/8.png)
+![Edit Interface](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/9.png)
 
 **5. 接口测试** 
 
 对接口信息录入后进行自测 
 
-![Interface Test](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/9.png)
+![Interface Test](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/10.png)
 
 点击图上的接口测试工具，进入接口测试页面 

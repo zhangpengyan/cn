@@ -6,7 +6,7 @@
 
 云用户基于京东云提供的服务构建云端应用系统，并运用京东云安全的云产品和安全服务以及安全生态第三方安全产品保护自己的业务系统。云用户负责对在云平台上使用的网络、系 统、应用、管理、数据、安全等服务的定制配置、自行部署及运维运营。云用户负责安全的使用云平台，确保业务的安全设计、数据保护、认证加密等必要的安全措施和功能实现，管理好账号密码和人员授权，安全的开发应用、运营业务。 
 
-![security model](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-16.png)
+![security model](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-16.png)
 
 ## 6.2 访问控制 
 访问控制(Identity and Access Management, IAM)是京东云提供的一项用户身份管理与资源访问控制服务。用户可以通过使用 IAM 创建、管理子用户，并控制这些子用户访问京东云资源的操作权限。使用访问控制，主账号可以向他人授权管理账户中的资源，而不必共享账户密码或访问秘钥，按需为用户分配所需的最小权限，从而降低企业信息安全风险。 

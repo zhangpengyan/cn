@@ -82,7 +82,7 @@ VPC是云上的私有网络，为客户的应用提供一个独立的私有网�
 4. 将备份的数据恢复到应用应用中，应用恢复正常运行。 
 5. （可选）对于需要域名访问的应用，更改 DNS 即可的指向 IP 即可。
 
-![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-KIS/KIS.png)
+![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-KIS/KIS4.png)
 
 
 

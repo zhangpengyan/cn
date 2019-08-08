@@ -1,6 +1,6 @@
-# 5	应用集成 API 在万象的最佳实践
+# 应用集成 API 在万象的最佳实践
 
-## 5.1 整体架构 
+## 1 整体架构 
 万象平台作为中间层，可以帮助企业实现应用的快速集成，并且减少了集成的复杂度。 
 
 下图中包含几个模块。 
@@ -15,9 +15,9 @@
 
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Appliction-Integration-API-Best-Practices.png)
 
-## 5.2 业务逻辑
+## 2 业务逻辑
 
-### 5.2.1 调用模型
+### 2.1 调用模型
 
 本次最佳实践集成的双方是 CRM 和 ERP 系统，通过万象将各自 API 暴露在万象平台上， 即可以实现双方的对接，又可以提供第三方对接的能力。本案例将业务涉及的的物料、部门、员工、组织机构、客户、联系人、合同管理、应收款管理在 CRM 和 ERP 系统之间做数据集成。涉及的接口以标准的 WebAPI 方式提供双方接口，自动实现 ERP 的基础数据同步功能。
 
@@ -26,7 +26,7 @@
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Call-Model.png)
 
 
-### 5.2.2	参数说明概览
+### 2.2	参数说明概览
 
 下图为本案例中数据同步的相关字段截图，接口参数梳理清晰后，在万象平台录入 API 及参数即可。
 
@@ -37,7 +37,7 @@
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Interface-Call-Sample.jpg)
 
 
-### 5.2.3	万象平台配置样例 
+### 2.3	万象平台配置样例 
 
 1. 新建 API。 
 弹出新建数据页面，输入相关数据信息

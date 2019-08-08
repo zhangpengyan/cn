@@ -1,6 +1,7 @@
 # 合众唯一企业应用集成 API 在万象的最佳实践
 
-
+![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/JD-Cloud-Logo.png)
+![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/HZ-UNION-Logo.png)
 
 ## 法律声明
 
@@ -8,8 +9,7 @@
 由于产品版本升级、调整或其他康因，本文档内容有可能变更。京东云保留在没有任何
 通知或者提示下对本文档的内容进行修改的权利。 
 
-![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/JD-Cloud-Logo.png)
-![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/HZ-UNION-Logo.png)
+
 
 ## 目录
 

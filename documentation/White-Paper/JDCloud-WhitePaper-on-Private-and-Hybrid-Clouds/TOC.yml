@@ -4,9 +4,15 @@ items:
 
 - name: 私有云和混合云白皮书简介
   href: Introduction/Overview.md
-- name: 私有云和混合云白皮书目录
-  href: Content/Content.md
 - name: 私有云和混合云平台优势
   href: Advantage/Point.md
+- name: 私有云
+  href: Target1/Target1.md
+- name: 专有云
+  href: Target2/Target2.md
+- name: 专属云
+  href: Target3/Target3.md
+- name: 混合云
+  href: Target4/Target4.md
 - name: 私有云和混合云白皮书下载链接
   href: Download-Link/Related-Resources.md

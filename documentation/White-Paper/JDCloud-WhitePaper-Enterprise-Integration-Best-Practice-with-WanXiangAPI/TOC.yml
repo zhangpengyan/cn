@@ -10,7 +10,7 @@ items:
 - name: 万象平台介绍
   href: Wanxiang-Introduction.md
 - name: 应用集成 API 功能介绍
-  href: Introduction.md
+  href: API-Introduction.md
 - name: 应用集成 API 在万象的最佳实践
   href: Best-Practices.md
 - name: 结论

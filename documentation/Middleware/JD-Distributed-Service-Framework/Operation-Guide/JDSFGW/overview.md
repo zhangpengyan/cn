@@ -23,14 +23,14 @@
 
 - 通过API网关，将微服务应用发布到公网并提供调用。
 
-可以将微服务网关服务，做为API网关API分组的后端服务；当API分组在部署环境中发布成功后，用户即可通过API网关调用微服务网关，进而调用VPC内应用服务。
+可以将微服务网关服务，做为API网关API分组的后端服务；当API分组在部署环境中发布成功后，用户即可通过API网关调用微服务网关，进而调用VPC内应用服务。微服务网关完成服务发现、负载均衡和熔断降级。
 
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/st-wffwg.png)
 
 
 - VPC代理模式。
 
-可将微服务网关看作为VPC代理，通过ip+端口的方式访问VPC内服务。具体调用方式，请参考用例：使用API网关开放VPC内的接口
+可将微服务网关看作为VPC代理，将部署在vpc内的任何服务通过ip+端口的方式直接通过API网关暴露给公网，无需公网IP和公网直接暴露。具体调用方式，请参考用例：使用API网关开放VPC内的接口
 
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/st-vpc.png)
  

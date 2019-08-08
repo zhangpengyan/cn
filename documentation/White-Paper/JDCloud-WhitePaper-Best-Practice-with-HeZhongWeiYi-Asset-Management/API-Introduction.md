@@ -8,5 +8,5 @@
 
 功能模块三：客户管理，联系人管理，在 CRM 中录入信息，CRM将信息同步到ERP，单向同步，接口提供方ERP(webapi)，接口调用方CRM。 
 
-![API Introduction](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/2.png)
+![API Introduction](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/2.png)
  

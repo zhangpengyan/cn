@@ -36,27 +36,27 @@
 
 ### 2.3 万象平台配置样例 
 
-#### 1. 新建API
+**1. 新建API**
 
 弹出新建数据页面，输入相关数据信息。
 
 ![Create API](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6.png)
 
-#### 2. 网络设置
+**2. 网络设置**
 
 进入网络设置，输入目标基础url，点击"保存"按钮。 
 
 ![Network Setting](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6.png)
  
-#### 3. 接口设置页面 
+**3. 接口设置页面** 
 
 ![Interface Setting](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/7.png)
 
-#### 4. 编辑接口参数 
+**4. 编辑接口参数** 
 
 ![Edit Interface](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/8.png)
 
-#### 5. 接口测试 
+**5. 接口测试** 
 
 对接口信息录入后进行自测 
 

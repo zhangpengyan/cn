@@ -1,6 +1,8 @@
 name: 企业应用集成API在万象的最佳实践
 href: 
 items:
+- name: 白皮书目录
+  href: Catalog.md
 - name: 1 摘要
   href: Overview.md
 - name: 2 将应用 API 发布到万象平台上的好处

@@ -12,7 +12,7 @@
 
 4. 第三方通用SaaS服务。通用SaaS服务主要指提供通用数据信息的SaaS服务，如天气信息、身份认证信息、短信服务等等常规普遍服务。
 
-![Frame](../../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/3.png)
+![Frame]../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/3.png)
 
 ## 2 业务逻辑 
 

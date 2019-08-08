@@ -1,7 +1,7 @@
 name: 京东云游戏白皮书
 href: 
 items:
-- name: 游戏白皮书概要
+- name: 概要
   href: Introduction/Overview.md
 - name: 京东云支撑游戏行业的优势
   href: Advantage/Point.md

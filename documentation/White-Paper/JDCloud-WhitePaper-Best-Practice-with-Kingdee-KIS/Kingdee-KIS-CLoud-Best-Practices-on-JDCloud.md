@@ -2,7 +2,7 @@
 
 下图是一个金蝶KIS在京东云上的部署案例。此部署案例中，金蝶KIS部署采用应用服务器与数据库服务器分离部署的方式。如果客户端有限，也可以采用单台全部部署的方式，那么可以节省一台主机。
 
-![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-KIS/KIS1.jpg)
+![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-KIS/KIS1.png)
 
 ## 网络规划最佳实践
 
@@ -30,7 +30,7 @@ VPC是云上的私有网络，为客户的应用提供一个独立的私有网�
 - 弹性IP绑定到新主机，应用恢复访问。
 
 
-![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-KIS/KIS2)
+![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Kingdee-KIS/KIS2.png)
 
 ## 可扩展性最佳实践
 

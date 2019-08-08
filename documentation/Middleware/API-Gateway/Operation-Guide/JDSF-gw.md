@@ -17,11 +17,13 @@
 
 ![新建微服务API分组](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-1.png)
    
+   
 #### 4. 点击确定，提示创建成功，在API分组列表页中点击“绑定”按钮。若还未创建微服务网关服务，则需要先在“微服务平台”创建微服务网关服务（详情请见[微服务网关](https://jdsf-console.jdcloud.com/gateway?regionId=cn-north-1)）。若已创建微服务网关服务，则可选择一个微服务网关，对目标API分组及其所属区域、发布环境进行绑定。
 
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-2.png)
 
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-3.png)
+
 
 #### 5. 绑定成功后，可以在API网关对微服务API分组进行发布，后端服务即为微服务网关服务。
 
@@ -35,15 +37,18 @@
 
 #### 7. 接下来进行访问授权过程。用户需要先获取自己或其他用户的[订阅密钥](https://apigateway-console.jdcloud.com/subscriptionKey)、[签名密钥](https://apigateway-console.jdcloud.com/accessSecretKey)或[京东云用户Access Key](https://uc.jdcloud.com/account/accesskey)相关信息，再在API网关的[访问授权](https://apigateway-console.jdcloud.com/authorizationList)模块中绑定对应的微服务API分组。
 
+
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-7.png)
+
 
 #### 8. 针对该微服务API分组，在“更多“中选择“生成SDK和文档”，进行SDK和文档生成及下载。
 
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-8.png)
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-9.png)
 
+
 #### 9. 接下来即可使用SDK对微服务API分组进行访问。
-(1)通过Java SDK调用，示例如下：
+(1)通过Java SDK调用，Java SDK示例如下：
 
  ```Java
  import com.google.api.client.http.HttpResponse;
@@ -72,7 +77,7 @@ headers.put("header1", "headerValue1");
 Map
 ```
 
-(2)通过Python SDK调用，示例如下：
+(2)通过Python SDK调用，Python SDK示例如下：
 
 ```Python
 

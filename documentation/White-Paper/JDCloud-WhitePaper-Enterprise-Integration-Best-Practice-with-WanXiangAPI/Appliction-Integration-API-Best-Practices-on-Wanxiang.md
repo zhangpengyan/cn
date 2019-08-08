@@ -17,7 +17,7 @@
 
 ## 5.2 业务逻辑
 
-### 5.2.1	调用模型
+### 5.2.1 调用模型
 
 本次最佳实践集成的双方是 CRM 和 ERP 系统，通过万象将各自 API 暴露在万象平台上， 即可以实现双方的对接，又可以提供第三方对接的能力。本案例将业务涉及的的物料、部门、员工、组织机构、客户、联系人、合同管理、应收款管理在 CRM 和 ERP 系统之间做数据集成。涉及的接口以标准的 WebAPI 方式提供双方接口，自动实现 ERP 的基础数据同步功能。
 
@@ -40,20 +40,25 @@
 ### 5.2.3	万象平台配置样例 
 
 1. 新建 API。 
-弹出新建数据页面，输入相关数据信息 
+弹出新建数据页面，输入相关数据信息
+
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Create-API.jpg)
 
 2. 网络设置进入网络设置，输入目标基础 url，点击"保存"按钮。
+
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/EnterURL-ClickSave.jpg)
 
-3. 接口设置页面 
+3. 接口设置页面
+
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Interface-Setting-Page.jpg)
 
 4. 编辑接口参数
+
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Modify-Interface-Parameters.jpg)
 
 5. 接口测试 
-对接口信息录入后进行自测 
+对接口信息录入后进行自测
+
 ![image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Enterprise-Integration-Best-Practice-with-WanXiangAPI/Interface-Testing.jpg)
 
 点击图上的接口测试工具，进入接口测试页面

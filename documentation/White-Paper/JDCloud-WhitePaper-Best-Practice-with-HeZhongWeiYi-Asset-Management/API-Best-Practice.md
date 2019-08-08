@@ -28,11 +28,11 @@
 
 下图为本案例中数据同步的相关字段截图，接口参数梳理清晰后，在万象平台录入 API 及参数即可。 
 
-![Parameter Intro](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/4.png)
+![Parameter Intro](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/5.png)
 
 接口调用样例 
 
-![Call Interface](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/5.png)
+![Call Interface](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6.png)
 
 ### 2.3 万象平台配置样例 
 
@@ -40,26 +40,26 @@
 
 弹出新建数据页面，输入相关数据信息。
 
-![Create API](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6.png)
+![Create API](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/7.png)
 
 **2. 网络设置**
 
 进入网络设置，输入目标基础url，点击"保存"按钮。 
 
-![Network Setting](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/7.png)
+![Network Setting](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/8.png)
  
 **3. 接口设置页面** 
 
-![Interface Setting](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/8.png)
+![Interface Setting](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/9.png)
 
 **4. 编辑接口参数** 
 
-![Edit Interface](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/9.png)
+![Edit Interface](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/10.png)
 
 **5. 接口测试** 
 
 对接口信息录入后进行自测 
 
-![Interface Test](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/10.png)
+![Interface Test](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/11.png)
 
 点击图上的接口测试工具，进入接口测试页面 

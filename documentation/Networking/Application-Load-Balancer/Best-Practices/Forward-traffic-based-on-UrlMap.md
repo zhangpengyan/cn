@@ -59,7 +59,7 @@
 
 - 至此，已创建完成基于HTTP协议的监听器，可在监听器列表查看。
 
-  ![ALB监听器列表页](../../../../image/Networking/ALB/ALB-104.png)
+  ![ALB监听器列表页](../../../../image/Networking/ALB/ALB-urlmap6.png)
 
 ### 添加一个转发规则组
 

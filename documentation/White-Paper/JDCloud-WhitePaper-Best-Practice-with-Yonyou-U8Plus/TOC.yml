@@ -1,6 +1,8 @@
 name: 用友U8+在京东云上的最佳实践
 href:
 items:
+  - name: 白皮书目录
+    href: Catalog.md
   - name: 摘要
     href: Overview.md
   - name: 在京东云上运行用友 U8+的好处

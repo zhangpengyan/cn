@@ -13,21 +13,28 @@
 
 ## 配置VPC代理
 在控制台  互联网中间件-》微服务平台产品的微服务网关菜单里，创建网关服务，名称例如apigwtest，创建方式选 VPC代理，转发地址配置后端服务地址，如本例中为10.0.0.6
-<br>![VPC代理](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/createVPC.png)<br/>
 
-更多创建微服务网关的资料参考 [微服务网关](https://docs.jdcloud.com/cn/jd-distributed-service-framework/product-overview) 产品
+![VPC代理](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/createVPC.png)
+
+
+更多创建微服务网关的资料参考 [微服务网关](../Operation-Guide/JDSFGW/overview.md) 产品
+
 
 ## 配置API网关分组
+
 在控制台  互联网中间件-》API网关里创建一个新的API分组，例如vpctest，简单起见访问授权这里选择 免鉴权。（线上实际API请务必开启访问授权。）
 
 点管理API，新建一个API，例如叫apitest，路径为本demo中的/client/test，其他字段留空，点确定。
 
 然后去发布。点发布，发布为选线上，后端服务选VPC代理，在微服务网关下拉框中选择上一步建的apigwtest，确定。
+
 <br>![发布API](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/pubAPI.png)<br/>
 
-更多创建API的资料参考 [API网关](https://docs.jdcloud.com/cn/api-gateway/product-overview) 产品
+更多创建API的资料参考 [API网关](../../../API-Gateway/Introduction/Product-Overview.md)   产品
+
 
 点调试api，发送请求们可以在响应中看到VPC中的服务的响应。
+
 <br>![调试API](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/testAPI.png)<br/>
 
 ## 补充说明
@@ -58,4 +65,4 @@ VPC内的地址可以是服务进程的地址，Nginx等负载均衡软件的地
 
 使用资源信息页的负载均衡Vip即可访问服务，将此地址配置在VPC代理即可通过API网关访问。
     
-更多创建内网负载均衡的资料参考 [应用负载均衡](https://docs.jdcloud.com/cn/application-load-balancer/product-overview) 产品
+更多创建内网负载均衡的资料参考 [应用负载均衡](../../../Networking/Application-Load-Balancer/Introduction/Overview.md) 产品

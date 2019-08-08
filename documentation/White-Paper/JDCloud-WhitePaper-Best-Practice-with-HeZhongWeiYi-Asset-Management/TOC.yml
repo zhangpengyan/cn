@@ -1,23 +1,17 @@
-name: 合众唯一资产管理在京东云上的最佳实践
+name: 合众唯一企业应用集成API在万象的最佳实践 
 href: 
 items:
-- name: 概要
-  href: Introduction/Overview.md
-- name: 京东云数据安全观
-  href: Data-security-concepts/data-security-concepts.md
-- name: 云端数据保护职责
-  href: Data-proteciton-responsibilities/Data-proteciton-responsibilities.md
-- name: 京东云数据安全实践
-  items:
-    - name: 京东云数据安全保护体系
-      href: Data-security-practices/Data-security-protection-system.md
-    - name: 网络与基础设施保障
-      href: Data-security-practices/Network-and-infrastructure-support.md
-    - name: 身份与访问控制
-      href: Data-security-practices/Identity-and-access-control.md
-    - name: 数据全生命周期安全保障
-      href: Data-security-practices/Data-life-cycle.md
-    - name: 安全运营保障
-      href: Data-security-practices/Security-Operation.md
-- name: 下载链接
-  href: Download-Link/Related-Resources.md
+- name: 摘要
+  href: Abstract.md
+- name: 将应用API发布到万象平台上的好处
+  href: HeZhongWeiYi-Benefit.md
+- name: 万象平台介绍
+  href: WX-Introduction.md
+- name: 应用集成API功能介绍 
+  href: API-Introduction.md
+- name: 应用集成API在万象的最佳实践
+  href: API-Best-Practice.md
+- name: 结论
+  href: Conclusion.md
+- name: 文档作者与参考
+  href: Authors-Reference.md

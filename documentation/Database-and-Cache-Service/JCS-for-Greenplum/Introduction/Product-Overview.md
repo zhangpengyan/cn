@@ -11,5 +11,5 @@
 
 ## 支持版本
 
-目前版本为Greenplum 5.19，其对应的PostgreSQL为8.2.23。
+目前版本为Greenplum 5.19，其对应的PostgreSQL为8.3.23。
 

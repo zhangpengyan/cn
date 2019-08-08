@@ -25,7 +25,7 @@
     items:
       - name: 创建实例
         href: Getting-Started/Create-Instance.md
-      - name: 设置白名单
+      - name: 连接实例
         href: Getting-Started/Connect-Instance.md
   - name: 操作指南
     items:

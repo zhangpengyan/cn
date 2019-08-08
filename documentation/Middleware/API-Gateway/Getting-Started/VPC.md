@@ -27,7 +27,7 @@
 
 ![配置API分组](../../../../image/Internet-Middleware/API-Gateway/VPC-2.png)
 
-（4）更多创建API的资料参考 [API网关](../../../../Introduction/Product-Overview.md) 产品。
+（4）更多创建API的资料参考 [API网关](../../../../Product-Overview.md) 产品。
 
 （5）点调试api，发送请求们可以在响应中看到VPC中的服务的响应。
 

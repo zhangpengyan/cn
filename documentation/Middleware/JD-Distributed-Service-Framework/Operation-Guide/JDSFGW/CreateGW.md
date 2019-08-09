@@ -124,6 +124,8 @@
 
 -  需要指定VPC的网络信息。在调用时需要注意同一VPC内才可相互调用。
 
+-  目前暂不支持代理后端是私有证书的 https  web 服务
+
 
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-create-2vpc.png)
  

@@ -1,14 +1,14 @@
-# describeSubnets
+# queryServerGroups
 
 
 ## 描述
-查询子网列表
+查询虚拟服务器组列表
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/subnets
+https://cps.jdcloud-api.com/v1/regions/{regionId}/serverGroups
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,10 +19,9 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/subnets
 |---|---|---|---|---|
 |**pageNumber**|Integer|False|1|页码；默认为1|
 |**pageSize**|Integer|False|20|分页大小；默认为20；取值范围[20, 100]|
-|**az**|String|False| |可用区，精确匹配|
-|**name**|String|False| |子网名称|
-|**vpcId**|String|False| |私有网络ID，精确匹配|
-|**filters**|Filter[]|False| |subnetId - 子网ID，精确匹配，支持多个<br>|
+|**name**|String|False| |名称|
+|**loadBalancerId**|String|False| |负载均衡ID|
+|**filters**|Filter[]|False| |serverGroupId   - 虚拟服务器组ID，精确匹配，支持多个<br>|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|
@@ -40,25 +39,16 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/subnets
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**subnets**|Subnet[]| |
+|**servers**|ServerGroup[]| |
 |**pageNumber**|Integer|页码；默认为1|
 |**pageSize**|Integer|分页大小；默认为20；取值范围[20, 100]|
 |**totalCount**|Integer|查询结果总数|
-### Subnet
+### ServerGroup
 |名称|类型|描述|
 |---|---|---|
-|**region**|String|地域代码, 如cn-east-1|
-|**az**|String|可用区, 如cn-east-1a|
-|**subnetId**|String|子网ID|
-|**name**|String|子网名称|
-|**cidr**|String|子网CIDR|
-|**vpcId**|String|私有网络Id|
-|**vpcName**|String|私有网络名称|
-|**availableIpCount**|Integer|可用ip数量|
-|**totalIpCount**|Integer|总ip数量|
-|**networkType**|String|网络类型|
-|**description**|String|描述|
-|**createTime**|String|创建时间|
+|**loadBalancerId**|String|负载均衡ID|
+|**serverGroupId**|String|虚拟服务器组ID|
+|**name**|String|虚拟服务器组名称|
 
 ## 返回码
 |返回码|描述|

@@ -1,20 +1,18 @@
-# describeRegiones
+# queryCPSLBRegions
 
 
 ## 描述
-查询云物理服务器地域列表
+查询负载均衡地域列表
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions
+https://cps.jdcloud-api.com/v1/cpslbRegions
 
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**networkType**|String|False| |网络类型basic/vpc, 默认basic|
+无
 
 
 ## 返回参数

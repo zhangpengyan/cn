@@ -19,6 +19,7 @@
 |文件系统|* xfs、ext3、ext4|
 |分区|* MBR分区|
 |虚拟化驱动|* 仅支持KVM虚拟化，需要安装virtio驱动|
+|启动方式|* 仅支持BIOS，暂不支持UEFI方式
 |网络|* 暂不支持Ipv6地址|
 |系统基本环境 |* 关闭防火墙，放行TCP 22端口<br>* 开启DHCP服务<br>* 确保系统盘有剩余空间<br>* 确保文件系统完整|
 |系统配置|* /etc/fstab 如有配置自动挂载，请删除<br>* /etc/udev/rules.d如有70-persistent-net.rules配置，请删除<br>* 请勿修改 /etc/shadow为 只读<br>* 请勿修改 /etc/selinux/config 开启 SELinux<br>* 请勿修改/etc/grub/grub.cfg<br>* 请勿修改 /boot/grub/menu.lst
@@ -34,6 +35,7 @@
 |文件系统|* NTFS|
 |分区|* MBR分区|
 |虚拟化驱动|* 仅支持KVM虚拟化，需要安装virtio驱动|
+|启动方式|* 仅支持BIOS，暂不支持UEFI方式
 |网络|* 暂不支持Ipv6地址|
 |系统基本环境 |* 关闭防火墙，放行RDP 3389端口<br>* 确保系统盘有剩余空间<br>* 确保文件系统完整|
 |系统配置|* 请勿修改关键系统文件|
@@ -44,7 +46,7 @@
 
 ![](../../../../../image/vm/Image-Import-Image-Overview.png)<br>
 ### 1、准备镜像文件
-为保证导入镜像的可用性，请务必在导入前参照上述京东云镜像制作要求进行镜像配置检测，确认导入镜像符合京东云规范后再行操作导入。<br>
+为保证导入镜像的可用性，请务必在导入前参照上述京东云镜像制作要求进行镜像配置检测，尤其是启动方式、分区及 [virtio安装](https://docs.jdcloud.com/cn/virtual-machines/install-virtio-driver) 等影响启动的关键配置，确认导入镜像符合京东云规范后再行操作导入。<br>
 同时为了保证导入镜像在京东云环境下可以获得修改密码、上报监控数据、安全扫描检测等功能，建议您在导出镜像之前进行重要系统组件的安装。系统组件功能及安装方法请参见：[官方镜像系统组件](https://docs.jdcloud.com/cn/virtual-machines/default-agent-in-public-image) <br>
 Linux镜像可使用我们提供的镜像自检工具完成重要系统配置的自检，使用方法请参见：[镜像自检工具](Image-Check-Tool.md)
 

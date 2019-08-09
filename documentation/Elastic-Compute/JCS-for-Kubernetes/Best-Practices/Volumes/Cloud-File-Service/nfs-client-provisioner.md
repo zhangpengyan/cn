@@ -4,7 +4,7 @@ Kubernetes集群中NFS类型的存储没有内置 Provisioner。但是您可以�
 
 Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server为Kubernetes集群提供持久化存储，并且支持动态创建PV。但是nfs-client-provisioner本身不提供NFS，需要现有的NFS服务器提供存储。
 
-本文将以京东云云文件服务作为NFS服务器，提供nfs-client-provisioner部署过程说明。
+本文将以京东云云文件服务（CFS）作为NFS服务器，提供nfs-client-provisioner部署过程说明。
 
 ## 一、部署说明
 
@@ -20,7 +20,7 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 * PV被删除后, nfs-client-provisioner会对pv子目录进行归档或者删除操作；
   
-* nfs-client-provisioner在NFS服务器上回收PV的命名格式：archieved-${namespace}-${pvcName}-${pvName} ；
+* nfs-client-provisioner在NFS服务器上归档PV的命名格式：archieved-${namespace}-${pvcName}-${pvName} ；
 
 * 每个nfs-client-provisioner deployment对应一个CFS 文件存储，如需在集群中关联多个CFS文件存储，请参考示例部署多个nfs-client-provisioner deployment。
 
@@ -30,7 +30,7 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 ## 三、部署nfs-client-provisioner
 
-nfs-client-provisioner在集群中以deployment的方式运行，并且nfs-client-provisioner创建PV、PVC时需要访问kube-api，如果您的集群启用了RBAC，则必须授权provisioner。详细部署说明参考下文。
+nfs-client-provisioner在集群中以deployment的方式运行，并且nfs-client-provisioner需要访问kube-api获取PVC对象的变化，如果您的集群启用了RBAC，则必须授权provisioner。详细部署说明参考下文。
 
 1. 创建Service Account，Yam文件下载及说明如下：
 

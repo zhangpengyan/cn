@@ -117,10 +117,10 @@ if __name__=="__main__":
     url = '/todo/api/v1/tasks/createTask/json' # 请求路径：不要包含query参数，例如 /test?queryParam1=value1&queryParam2=value2，只传/test
     method = 'POST' # 请求方式，大写
     header = dict()
-    header['jdcloud-apim-subscription-key'] = "aaa"
+    header['header1'] = "headerValue1" # header
     parameter = dict()
-    parameter['queryParam'] = 'this is query param'
-    body = {"description": "1234567890", "title": "title"}
+    parameter['queryParam'] = 'this is query param' # query参数，可以为空
+    body = {"description": "1234567890", "title": "title"} # 请求体，可以为空
     request = SimpleRequest(url, method, parameter, body, header)
 
     resp = client.send(request)

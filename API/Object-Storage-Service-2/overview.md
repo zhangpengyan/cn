@@ -14,4 +14,6 @@ v1
 |---|---|---|
 |**deleteBackSourceConfiguration**|DELETE|删除回源配置|
 |**getBackSourceConfiguration**|GET|获取回源配置|
+|**getSingleBucketCapacity**|POST|根据type获取指定bucket用量数据|
 |**putBackSourceConfiguration**|PUT|添加修改回源配置|
+

@@ -19,3 +19,4 @@ v1
 |**listBuckets**|GET|列出当前用户的所有bucket(oss)</br>|
 |**putBackSourceConfiguration**|PUT|添加修改回源配置(ossopenapi)|
 |**putBucket**|PUT|创建bucket(oss)</br>|
+|**getSingleBucketCapacity**|POST|根据type获取指定bucket用量数据(ossopenapi)|

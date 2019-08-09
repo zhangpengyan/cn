@@ -2,7 +2,8 @@
 
 
 ## 描述
-修改容器的 名称 和 描述。
+修改容器的 名称 和 描述。<br>
+name 和 description 必须要指定一个
 
 
 ## 请求方式
@@ -20,7 +21,7 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers/{contai
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**name**|String|False| |容器名称|
-|**description**|String|False| |容器描述；和description必须要指定一个|
+|**description**|String|False| |容器描述|
 
 
 ## 返回参数

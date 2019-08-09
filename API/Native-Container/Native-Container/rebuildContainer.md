@@ -28,13 +28,13 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers/{contai
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**image**|String|False| |镜像名称 </br> 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 </br> </br> repository长度最大256个字符，tag最大128个字符，registry最大255个字符 </br> 下载镜像超时时间：10分钟|
-|**secret**|String|False| |secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret|
-|**command**|String[]|False| |容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT|
-|**args**|String[]|False| |容器执行命令的参数，如果不指定默认是docker镜像的CMD|
+|**image**|String|True| |镜像名称 </br> 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 </br> </br> repository长度最大256个字符，tag最大128个字符，registry最大255个字符 </br> 下载镜像超时时间：10分钟|
+|**secret**|String|False| |镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret|
+|**command**|String[]|False| |容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]|
+|**args**|String[]|False| |容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]|
 |**tty**|Boolean|False| |容器是否分配tty。默认不分配|
-|**workingDir**|String|False| |容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径|
-|**envs**|EnvVar[]|False| |容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；</br> 最大10对|
+|**workingDir**|String|False| |容器的工作目录。如果不指定，默认是根目录（/），必须是绝对路径。字符长度范围：[0-1024]|
+|**envs**|EnvVar[]|False| |容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；</br> 最大100对|
 
 ### EnvVar
 |名称|类型|是否必需|默认值|描述|

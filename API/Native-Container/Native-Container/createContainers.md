@@ -2,59 +2,65 @@
 
 
 ## 描述
-创建一台或多台指定配置容器。
+创建一台或多台指定配置容器
 - 创建容器需要通过实名认证
 - 镜像
-    - 容器的镜像通过镜像名称来确定
-    - nginx:tag 或 mysql/mysql-server:tag 这样命名的镜像表示 docker hub 官方镜像
-    - container-registry/image:tag 这样命名的镜像表示私有仓储的镜像
-    - 私有仓储必须兼容 docker registry 认证机制，并通过 secret 来保存机密信息
-- hostname 规范
-    - 支持两种方式：以标签方式书写或以完整主机名方式书写
-    - 标签规范
-        - 0-9，a-z(不分大小写)和 -（减号），其他的都是无效的字符串
-        - 不能以减号开始，也不能以减号结尾
-        - 最小1个字符，最大63个字符
-    - 完整的主机名由一系列标签与点连接组成
-        - 标签与标签之间使用“.”(点)进行连接
-        - 不能以“.”(点)开始，也不能以“.”(点)结尾
-        - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
+  - 容器的镜像通过镜像名称来确定
+  - nginx:tag, mysql/mysql-server:tag这样命名的镜像表示docker hub官方镜像
+  - container-registry/image:tag这样命名的镜像表示私有仓储的镜像
+  - 私有仓储必须兼容docker registry认证机制，并通过secret来保存机密信息
+- hostname规范
+  - 支持两种方式：以标签方式书写或以完整主机名方式书写
+  - 标签规范
+    - 0-9，a-z(不分大小写)和-（减号），其他的都是无效的字符串
+    - 不能以减号开始，也不能以减号结尾
+    - 最小1个字符，最大63个字符
+  - 完整的主机名由一系列标签与点连接组成
+    - 标签与标签之间使用“.”(点)进行连接
+    - 不能以“.”(点)开始，也不能以“.”(点)结尾
+    - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
+  - 正则表达式
+    - `^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$`
 - 网络配置
-    - 指定主网卡配置信息
-        - 必须指定一个子网
-        - 一台云主机创建时必须指定一个安全组，至多指定 5 个安全组
-        - 可以指定 elasticIp 规格来约束创建的弹性 IP，带宽取值范围 [1-200]Mbps，步进 1Mbps
-        - 可以指定网卡的主 IP(primaryIpAddress)，该 IP 需要在子网 IP 范围内且未被占用，指定子网 IP 时 maxCount 只能为1
-        - 安全组 securityGroup 需与子网 Subnet 在同一个私有网络 VPC 内
-        - 主网卡 deviceIndex 设置为 1
+  - 指定主网卡配置信息
+    - 必须指定vpcId、subnetId、securityGroupIds
+    - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
+    - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
+    - 可以指定希望的辅助IP个数(secondaryIpAddressCount)让系统自动创建内网IP
+    - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
+    - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
+    - 每个容器至多指定5个安全组
+    - 主网卡deviceIndex设置为0
 - 存储
-    - volume 分为 root volume 和 data volume，root volume 的挂载目录是 /，data volume 的挂载目录可以随意指定
-    - volume 的底层存储介质当前只支持 cloud 类别，也就是云硬盘
-    - 系统盘
-        - 云硬盘类型可以选择 ssd、premium-hdd
-        - 磁盘大小
-            - ssd：范围 [10, 100]GB，步长为 10G
-            - premium-hdd：范围 [20, 1000]GB，步长为 10G
-        - 自动删除
-            - 云盘默认跟随容器实例自动删除，如果是包年包月的数据盘或共享型数据盘，此参数不生效
-        - 可以选择已存在的云硬盘
-    - 数据盘
-        - 云硬盘类型可以选择 ssd、premium-hdd
-        - 磁盘大小
-            - ssd：范围[20,1000]GB，步长为10G
-            - premium-hdd：范围[20,3000]GB，步长为10G
-        - 自动删除
-            - 默认自动删除
-        - 可以选择已存在的云硬盘
-        - 单个容器最多可以挂载 7 个 data volume
-- 计费
-  - 弹性IP的计费模式，如果选择按用量类型可以单独设置，其它计费模式都以主机为准
-  - 云硬盘的计费模式以主机为准
+  - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
+  - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
+  - 云盘类型为 ssd.io1 时，用户可以指定 iops，其他类型云盘无效，对已经存在的云盘无效，具体规则如下
+    - 步长 10
+    - 范围 [200，min(32000，size*50)]
+    - 默认值 size*30
+  - root volume
+  - root volume只能是cloud类别
+    - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+    - 磁盘大小
+      - 所有类型：范围[10,100]GB，步长为10G
+    - 自动删除
+      - 默认自动删除
+    - 可以选择已存在的云硬盘
+  - data volume
+    - data volume当前只能选择cloud类别
+    - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+    - 磁盘大小
+      - 所有类型：范围[20,4000]GB，步长为10G
+    - 自动删除
+      - 默认自动删除
+    - 可以选择已存在的云硬盘
+    - 可以从快照创建磁盘
+    - 单个容器可以挂载7个data volume
 - 容器日志
-    - 默认在本地分配10MB的存储空间，自动 rotate
+  - default：默认在本地分配10MB的存储空间，自动rotate
 - 其他
-    - 创建完成后，容器状态为running
-    - maxCount 为最大努力，不保证一定能达到 maxCount
+  - 创建完成后，容器状态为running
+  - maxCount为最大努力，不保证一定能达到maxCount
 
 
 ## 请求方式
@@ -70,8 +76,9 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**containerSpec**|ContainerSpec|False| |创建容器规格|
-|**maxCount**|Integer|False| |购买实例数量；取值范围：[1,100]|
+|**containerSpec**|ContainerSpec|True| |创建容器规格|
+|**maxCount**|Integer|True| |购买实例数量；取值范围：[1,100]|
+|**clientToken**|String|False| |保证请求幂等性|
 
 ### ContainerSpec
 |名称|类型|是否必需|默认值|描述|
@@ -79,13 +86,13 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers
 |**instanceType**|String|True| |实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)|
 |**az**|String|True| |容器所属可用区|
 |**name**|String|True| |容器名称|
-|**hostAliases**|HostAlias[]|False| |域名和IP映射的信息；</br> 最大10个alias|
+|**hostAliases**|HostAliasSpec[]|False| |域名和IP映射的信息；</br> 最大10个alias|
 |**hostname**|String|False| |主机名，规范请参考说明文档；默认容器ID|
 |**command**|String[]|False| |容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT|
 |**args**|String[]|False| |容器执行命令的参数，如果不指定默认是docker镜像的CMD|
-|**envs**|EnvVar[]|False| |容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；</br> 最大10对|
-|**image**|String|True| |镜像名称 </br> 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 </br> </br> repository长度最大256个字符，tag最大128个字符，registry最大255个字符 </br> 下载镜像超时时间：10分钟|
-|**secret**|String|False| |secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret|
+|**envs**|EnvVar[]|False| |容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；</br> 最大100对|
+|**image**|String|True| |镜像名称 </br> 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 </br> </br> repository长度最大256个字符，tag最大128个字符，registry最大255个字符|
+|**secret**|String|False| |镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret|
 |**tty**|Boolean|False| |容器是否分配tty。默认不分配|
 |**workingDir**|String|False| |容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径|
 |**rootVolume**|VolumeMountSpec|True| |根Volume信息|
@@ -105,12 +112,6 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**logDriver**|String|False| |日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate|
-|**options**|LogOption|False| |日志Driver的配置选项|
-### LogOption
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**key**|String|False| | |
-|**value**|String|False| | |
 ### ContainerNetworkInterfaceAttachmentSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -121,28 +122,28 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**subnetId**|String|True| |子网ID|
-|**az**|String|True| |可用区，用户的默认可用区|
+|**az**|String|True| |可用区，用户的默认可用区，暂不支持|
 |**primaryIpAddress**|String|False| |网卡主IP|
 |**secondaryIpAddresses**|String[]|False| |SecondaryIp列表|
 |**secondaryIpCount**|Integer|False| |自动分配的SecondaryIp数量|
-|**securityGroups**|String[]|False| |安全组ID列表|
-|**sanityCheck**|Boolean|False| |PortSecurity，取值为0或者1，默认为1|
+|**securityGroups**|String[]|False| |要绑定的安全组ID列表，最多指定5个安全组|
+|**sanityCheck**|Boolean|False| |源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能|
 |**description**|String|False| |描述|
 ### ElasticIpSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**bandwidthMbps**|Integer|False| |弹性公网IP的限速 单位：MB|
-|**provider**|String|False| |IP服务商，取值为bgp或no_bg|
+|**bandwidthMbps**|Integer|True| |弹性公网IP的限速 单位：MB|
+|**provider**|String|False| |IP服务商，取值为bgp或no_bgp|
 |**chargeSpec**|ChargeSpec|False| |计费配置|
 ### VolumeMountSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**category**|String|True| |磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型|
+|**category**|String|True| |磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型|
 |**autoDelete**|Boolean|False| |自动删除，删除容器时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景|
 |**mountPath**|String|False| |容器内的挂载目录；root volume不需要指定，挂载目录是（/）；data volume必须指定；必须是绝对路径，不能包含(:)|
 |**readOnly**|Boolean|False| |只读，默认false；只针对data volume有效；root volume为false，也就是可读可写|
 |**cloudDiskSpec**|DiskSpec|False| |云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统|
-|**cloudDiskId**|String|False| |云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType|
+|**cloudDiskId**|String|False| |云硬盘ID，使用已有的云硬盘，必须同时指定fsType|
 |**fsType**|String|False| |指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
 |**formatVolume**|Boolean|False| |随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true|
 ### DiskSpec
@@ -163,7 +164,7 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers
 |---|---|---|---|---|
 |**name**|String|True| |环境变量名称|
 |**value**|String|False| |环境变量的值|
-### HostAlias
+### HostAliasSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**hostnames**|String[]|True| |域名列表|

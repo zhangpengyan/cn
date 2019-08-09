@@ -168,6 +168,8 @@ nginx-ingress   1         1         1            1           64m
 
 ![](../../../../../images/Elastic-Compute/JCS-for-Kubernetes/check_backend_server.png)
 
+**备注**：更多详情参考[应用负载均衡帮助文档](https://docs.jdcloud.com/cn/application-load-balancer/features)。
+
 # 二、验证nginx-ingress
 
 ## 2.1 部署应用服务

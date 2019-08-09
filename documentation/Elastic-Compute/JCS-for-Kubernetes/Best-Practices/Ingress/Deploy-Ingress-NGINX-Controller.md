@@ -144,7 +144,7 @@ Ingress controller负责实现Ingress。Ingress controller在Kubernetes集群中
 三、参考链接
 完成Nginx-ingress Controller部署后，您可以在Kubernetes集群中部署Ingress Resource，京东云提供了如下基于Nginx-ingress Controller的部署方案，详情参考如下文档。
 1. [部署http/https类型的Ingress Resource](https://docs.jdcloud.com/cn/jcs-for-kubernetes/Deploy-Ingress-Resource)；
-2. [基于京东云ALB实现客户端源IP透传](https://docs.jdcloud.com/cn/jcs-for-kubernetes/nginx-ingress-source-ip)
+2. [基于京东云ALB实现客户端源IP透传](https://docs.jdcloud.com/cn/jcs-for-kubernetes/nginx-ingress-source-ip)。
     
     
 

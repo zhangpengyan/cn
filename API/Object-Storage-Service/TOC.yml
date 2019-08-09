@@ -21,3 +21,5 @@
         href: OSS-APIs/getBackSourceConfiguration.md
       - name: deleteBackSourceConfiguration
         href: OSS-APIs/deleteBackSourceConfiguration.md
+      - name: getSingleBucketCapacity
+        href: OSS-APIs/getSingleBucketCapacity.md

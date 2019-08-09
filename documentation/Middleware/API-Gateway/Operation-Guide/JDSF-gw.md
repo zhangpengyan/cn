@@ -35,7 +35,7 @@
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-6.png)
 
 
-#### 7. 接下来进行访问授权过程。用户需要先获取自己创建的[订阅密钥](https://apigateway-console.jdcloud.com/subscriptionKey)、[签名密钥](https://apigateway-console.jdcloud.com/accessSecretKey)或[京东云用户Access Key](https://uc.jdcloud.com/account/accesskey)相关信息，再在API网关的[访问授权](https://apigateway-console.jdcloud.com/authorizationList)模块中绑定对应的微服务API分组。为其他用户进行API网关签名授权和京东云用户签名授权与此过程类似。
+#### 7. 接下来进行访问授权过程。您需要先创建[订阅密钥](https://apigateway-console.jdcloud.com/subscriptionKey)、[签名密钥](https://apigateway-console.jdcloud.com/accessSecretKey)或[京东云用户Access Key](https://uc.jdcloud.com/account/accesskey)，再在API网关的[访问授权](https://apigateway-console.jdcloud.com/authorizationList)模块中选择已创建的密钥，绑定对应的微服务API分组。当您为其他用户进行API网关签名授权和京东云用户签名授权与此过程类似。
 
 
 ![微服务网关](../../../../image/Internet-Middleware/API-Gateway/jdsf-gw-7.png)

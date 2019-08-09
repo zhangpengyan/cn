@@ -1,16 +1,14 @@
-# describeElasticIps
+# queryLoadBalancers
 
 
 ## 描述
-查询弹性公网IP列表<br/>
-支持分页查询，默认每页20条<br/>
-
+查询负载均衡实例列表
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps
+https://cps.jdcloud-api.com/v1/regions/{regionId}/slbs
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -21,8 +19,11 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps
 |---|---|---|---|---|
 |**pageNumber**|Integer|False|1|页码；默认为1|
 |**pageSize**|Integer|False|20|分页大小；默认为20；取值范围[20, 100]|
-|**status**|String|False| |弹性公网IP状态，取值范围：associate、disassociate|
-|**filters**|Filter[]|False| |elasticIpId - 弹性公网IPID，精确匹配，支持多个<br/><br>elasticIp - 弹性公网IP，精确匹配，支持多个<br>|
+|**status**|String|False| |状态|
+|**name**|String|False| |名称|
+|**vpcId**|String|False| |私有网络ID，精确匹配|
+|**bindEip**|Boolean|False| |是否绑定eip|
+|**filters**|Filter[]|False| |loadBalancerId - 负载均衡实例ID，精确匹配，支持多个<br>|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|
@@ -40,23 +41,26 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**elasticIps**|ElasticIp[]| |
+|**loadBalancers**|LoadBalancer[]| |
 |**pageNumber**|Integer|页码；默认为1|
 |**pageSize**|Integer|分页大小；默认为20；取值范围[20, 100]|
 |**totalCount**|Integer|查询结果总数|
-### ElasticIp
+### LoadBalancer
 |名称|类型|描述|
 |---|---|---|
-|**region**|String|地域代码, 如cn-north-1|
+|**loadBalancerId**|String|负载均衡实例ID|
+|**region**|String|地域，如cn-east-1|
+|**ipAddressType**|String|IP版本，取值ipv4|
+|**netType**|String|网络类型，取值public|
+|**vpcId**|String|私有网络ID|
 |**elasticIpId**|String|弹性公网IPID|
-|**elasticIp**|String|弹性公网IP|
-|**bandwidth**|Integer|带宽, 单位Mbps|
-|**lineType**|String|链路类型|
-|**status**|String|状态|
-|**instanceType**|String|实例类型|
-|**instanceId**|String|实例ID|
+|**publicIp**|String|公网IP|
+|**bandwidth**|Integer|带宽|
+|**status**|String|状态，取值active|inactive|
+|**name**|String|名称|
+|**description**|String|描述|
 |**createTime**|String|创建时间|
-|**charge**|Charge|计费信息|
+|**charge**|Charge|计费配置|
 ### Charge
 |名称|类型|描述|
 |---|---|---|

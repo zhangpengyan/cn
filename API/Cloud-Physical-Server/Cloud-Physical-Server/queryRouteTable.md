@@ -1,26 +1,22 @@
-# modifyVpc
+# queryRouteTable
 
 
 ## 描述
-修改私有网络
-
+查询路由表详情
 
 ## 请求方式
-POST
+GET
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/vpcs/{vpcId}
+https://cps.jdcloud-api.com/v1/regions/{regionId}/routeTables/{routeTableId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
-|**vpcId**|String|True| |私有网络ID|
+|**routeTableId**|String|True| |路由表ID|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**name**|String|False| |名称|
-|**description**|String|False| |描述|
+无
 
 
 ## 返回参数
@@ -32,16 +28,22 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/vpcs/{vpcId}
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**vpc**|Vpc|私有网络详细信息|
-### Vpc
+|**routeTable**|RouteTable|路由表详细信息|
+### RouteTable
 |名称|类型|描述|
 |---|---|---|
-|**region**|String|地域代码, 如cn-north-1|
+|**routeTableId**|String|路由表ID|
+|**region**|String|地域|
 |**vpcId**|String|私有网络ID|
-|**name**|String|私有网络名称|
-|**cidr**|String|私有网络CIDR|
-|**description**|String|描述|
+|**name**|String|名称|
 |**createTime**|String|创建时间|
+|**routes**|Route[]|路由规则|
+### Route
+|名称|类型|描述|
+|---|---|---|
+|**destinationCidr**|String|目标网段|
+|**nextHopType**|String|下一跳类型|
+|**nextHop**|String|下一跳|
 
 ## 返回码
 |返回码|描述|

@@ -1,15 +1,14 @@
-# applyElasticIps
+# createLoadBalancer
 
 
 ## 描述
-申请弹性公网IP
-
+创建负载均衡实例
 
 ## 请求方式
 PUT
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps
+https://cps.jdcloud-api.com/v1/regions/{regionId}/slbs
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,13 +18,18 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**clientToken**|String|False| |由客户端生成，用于保证请求的幂等性，长度不能超过36个字符；<br/><br>如果多个请求使用了相同的clientToken，只会执行第一个请求，之后的请求直接返回第一个请求的结果<br/><br>|
-|**elasticIpSpec**|ElasticIpSpec|True| |弹性公网IP配置|
+|**loadBalancerSpec**|LoadBalancerSpec|True| |负载均衡配置|
 
-### ElasticIpSpec
+### LoadBalancerSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**bandwidth**|Integer|True| |带宽, 范围[1,200] 单位Mbps|
-|**count**|Integer|True| |购买数量|
+|**netType**|String|True| |网络类型，取值public|
+|**ipAddressType**|String|True| |负载均衡实例的IP版本，取值ipv4|
+|**vpcId**|String|True| |私有网络ID|
+|**name**|String|True| |名称|
+|**description**|String|False| |描述|
+|**applyElasticIp**|Boolean|True| |是否申请弹性公网Ip|
+|**bandwidth**|Integer|True| |带宽|
 |**charge**|ChargeSpec|True| |计费配置|
 ### ChargeSpec
 |名称|类型|是否必需|默认值|描述|
@@ -43,7 +47,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/elasticIps
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**elasticIpIds**|String[]|弹性公网IPID|
+|**loadBalancerId**|String|负载均衡实例ID|
 
 ## 返回码
 |返回码|描述|

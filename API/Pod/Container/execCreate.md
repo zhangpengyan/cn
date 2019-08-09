@@ -1,14 +1,15 @@
-# execGetExitCode
+# execCreate
 
 
 ## 描述
-获取exec退出码
+创建 exec
+
 
 ## 请求方式
-GET
+POST
 
 ## 请求地址
-https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:execGetExitCode
+https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:execCreate
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,7 +20,8 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{conta
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**execId**|String|False| | |
+|**command**|String[]|True| |执行的命令|
+|**tty**|Boolean|False| |执行命令是否分配tty。默认不分配|
 
 
 ## 返回参数
@@ -31,7 +33,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{conta
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**execCode**|Integer|退出码|
+|**execId**|String|exec id|
 
 ## 返回码
 |返回码|描述|

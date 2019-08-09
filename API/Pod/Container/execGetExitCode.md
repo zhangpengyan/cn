@@ -1,14 +1,14 @@
-# execStart
+# execGetExitCode
 
 
 ## 描述
-执行exec，此接口需要升级Http协议到WebSocket
+获取exec退出码
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:execStart
+https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:execGetExitCode
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,14 +19,19 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{conta
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**execId**|String|False| | |
+|**execId**|String|True| | |
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
+|**result**|Result| |
 |**requestId**|String| |
 
+### Result
+|名称|类型|描述|
+|---|---|---|
+|**execCode**|Integer|exec命令执行的退出码|
 
 ## 返回码
 |返回码|描述|

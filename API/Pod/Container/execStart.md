@@ -1,14 +1,14 @@
-# resizeTTY
+# execStart
 
 
 ## 描述
-设置TTY大小
+执行exec，此接口需要升级Http协议到WebSocket
 
 ## 请求方式
-POST
+GET
 
 ## 请求地址
-https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:resizeTTY
+https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:execStart
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,9 +19,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{conta
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**height**|Integer|False| |tty row，取值范围：[10, 2000]|
-|**width**|Integer|False| |tty column，取值范围：[10, 1000]|
-|**execId**|String|False| |tty column，取值范围：[10, 1000]|
+|**execId**|String|True| | |
 
 
 ## 返回参数

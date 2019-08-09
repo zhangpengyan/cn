@@ -1,15 +1,14 @@
-# attach
+# resizeTTY
 
 
 ## 描述
-查询单个容器日志
-
+设置TTY大小
 
 ## 请求方式
-GET
+POST
 
 ## 请求地址
-https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:attach
+https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:resizeTTY
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -18,7 +17,11 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{conta
 |**containerName**|String|True| |container name|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**height**|Integer|True| |tty row，取值范围：[10, 2000]|
+|**width**|Integer|True| |tty column，取值范围：[10, 1000]|
+|**execId**|String|False| |exec ID|
 
 
 ## 返回参数

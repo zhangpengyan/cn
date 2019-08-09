@@ -1,15 +1,15 @@
-# execCreate
+# attach
 
 
 ## 描述
-创建 exec
+将容器连接到本地标准输入输出
 
 
 ## 请求方式
-POST
+GET
 
 ## 请求地址
-https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:execCreate
+https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{containerName}:attach
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -18,22 +18,14 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}/containers/{conta
 |**containerName**|String|True| |container name|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**command**|String[]|False| |执行的命令|
-|**tty**|Boolean|False| |执行命令是否分配tty。默认不分配|
+无
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|Result| |
 |**requestId**|String| |
 
-### Result
-|名称|类型|描述|
-|---|---|---|
-|**execId**|String|退出码|
 
 ## 返回码
 |返回码|描述|

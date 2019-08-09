@@ -51,7 +51,7 @@
 (1)通过Java SDK调用，Java SDK示例如下：
 
  ```Java
- import com.google.api.client.http.HttpResponse;
+import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpResponseException;
 import com.google.api.client.util.Maps;
 import com.jdcloud.sdk.http.Protocol;
@@ -60,21 +60,35 @@ import net.jdcloud.Abs.client.JdcloudSDKClient;
 
 
 /**
-* Demo
-*/
+ * Demo
+ */
 public class Main {
 
-public static void main(String[] args) throws UnsupportedEncodingException, HttpResponseException {
-String assessKey = "ak";//免鉴权时传空
-String secretKey = "sk";//免鉴权时传空
-String host = "w22bzgeav4by.cn-north-1.jdcloud-api.net";// 域名：不要添加http://或https://
-// String host = "w22bzgeav4by-test.cn-north-1.jdcloud-api.net"; // 测试环境地址
-// String host = "w22bzgeav4by-preview.cn-north-1.jdcloud-api.net"; // 预发环境地址
-String path = "/v1/test";// 请求路径：不要包含query参数，例如 /test?queryParam1=value1&queryParam2=value2，只传/test
-String method = "POST";// 请求方式，大写
-Map<String, String> headers = Maps.newHashMap();// header
-headers.put("header1", "headerValue1");
-Map
+    public static void main(String[] args) throws UnsupportedEncodingException, HttpResponseException {
+        String assessKey = "ak";//免鉴权时传空
+        String secretKey = "sk";//免鉴权时传空
+        String host = "w22bzgeav4by.cn-north-1.jdcloud-api.net";// 域名：不要添加http://或https://
+    // String host = "w22bzgeav4by-test.cn-north-1.jdcloud-api.net"; // 测试环境地址
+    // String host = "w22bzgeav4by-preview.cn-north-1.jdcloud-api.net"; // 预发环境地址
+        String path = "/v1/test";// 请求路径：不要包含query参数，例如 /test?queryParam1=value1&queryParam2=value2，只传/test
+        String method = "POST";// 请求方式，大写
+        Map<String, String> headers = Maps.newHashMap();// header
+        headers.put("header1", "headerValue1");
+        Map<String, Object> queryMap = Maps.newHashMap();// query参数，可以为空
+        queryMap.put("key1", "value1");
+        String body = "{\"title\":\"qq\",\"description\":\"222\"}";// 请求体，可以为空
+        try {
+            HttpResponse httpResponse = JdcloudSDKClient.execute(assessKey, secretKey, Protocol.HTTP, host, path, method, headers,
+                    queryMap, body);
+            System.out.println(BinaryUtils.toByteArray(httpResponse.getContent()));
+        } catch (HttpResponseException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
 ```
 
 (2)通过Python SDK调用，Python SDK示例如下：

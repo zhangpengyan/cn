@@ -12,8 +12,8 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |区域 Id|
-|**instanceId**|Long|True| |高防实例 Id|
+|**regionId**|String|True| |区域 ID, 高防不区分区域, 传 cn-north-1 即可|
+|**instanceId**|String|True| |高防实例 Id|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
@@ -25,20 +25,20 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 |---|---|---|---|---|
 |**domain**|String|True| |子域名|
 |**protocol**|WebRuleProtocol|True| |协议: http, https 至少一个为 true|
-|**port**|Integer[]|False| |HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个|
-|**httpsPort**|Integer[]|False| |HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个|
-|**originType**|String|True| |回源类型：A或者CNAME|
-|**originAddr**|OriginAddrItem[]|False| |originType 为 A 时，需要设置该字段|
-|**onlineAddr**|String[]|False| |备用的回源地址列表，可以配置为一个域名或者多个 ip 地址|
-|**originDomain**|String|False| |回源域名,originType为CNAME时需要指定该字段|
-|**algorithm**|String|True| |转发规则：wrr->带权重的轮询，rr->不带权重的轮询|
-|**forceJump**|Integer|False| |是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性<br>  - 0 不开启强制跳转<br>  - 1 开启强制跳转<br>|
-|**customPortStatus**|Integer|False| |是否为自定义端口号，0为默认 1为自定义|
-|**httpOrigin**|Integer|False| |是否开启http回源, 当勾选HTTPS时可以配置该属性<br>  - 0 不开启<br>  - 1 开启<br>|
-|**webSocketStatus**|Integer|True| |是否开启 WebSocket, 0 为不开启, 1 为开启|
+|**port**|Integer[]|False| |HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个|
+|**httpsPort**|Integer[]|False| |HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个|
+|**originType**|String|True| |回源类型：A 或者 CNAME|
+|**originAddr**|OriginAddrItem[]|False| |originType 为 A 时, 需要设置该字段|
+|**onlineAddr**|String[]|False| |备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址|
+|**originDomain**|String|False| |回源域名, originType 为 CNAME 时需要指定该字段|
+|**algorithm**|String|True| |转发规则. <br>- wrr: 带权重的轮询<br>- rr:  不带权重的轮询<br>- sh:  源地址hash|
+|**forceJump**|Integer|False| |是否开启 HTTPS 强制跳转, protocol.http 和 protocol.https 都为 true 时此参数生效. <br>- 0: 不开启强制跳转. <br>- 1: 开启强制跳转|
+|**customPortStatus**|Integer|False| |是否为自定义端口号. 0: 默认<br>- 1: 自定义|
+|**httpOrigin**|Integer|False| |是否开启 HTTP 回源, protocol.https 为 true 时此参数生效. <br>- 0: 不开启. <br>- 1: 开启|
+|**webSocketStatus**|Integer|True| |是否开启 WebSocket.<br>- 0: 不开启<br>- 1: 开启|
 |**httpsCertContent**|String|False| |证书内容|
 |**httpsRsaKey**|String|False| |证书私钥|
-|**certId**|Long|False| |证书 Id<br>  - 如果传 certId, 请确认已经上传了相应的证书<br>  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书|
+|**certId**|String|False| |证书 Id. <br>- 如果传 certId, 请确认已经上传了相应的证书<br>- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书|
 ### OriginAddrItem
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -61,9 +61,14 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/webR
 ### Error
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|请求错误状态码|
-|**status**|String|请求错误状态码|
-|**message**|String|请求错误提示|
+|**err**|Err| |
+### Err
+|名称|类型|描述|
+|---|---|---|
+|**code**|Long|同http code|
+|**details**|Object| |
+|**message**|String| |
+|**status**|String|具体错误|
 ### Result
 |名称|类型|描述|
 |---|---|---|

@@ -224,7 +224,7 @@ g.n1.8xlarge|32|128|4 |	 |
 
 ## GPU型
 
-GPU型当前提供GPU标准型，为您提供高性能的一够计算资源。每一个vCPU都对应一个Intel Xeon处理器的超线程核。
+GPU型当前提供GPU标准型，为您提供高性能的异构计算资源。每一个vCPU都对应一个Intel Xeon处理器的超线程核。
 
 <div id="user-content-6"></div>
 ### GPU标准型

@@ -1,0 +1,72 @@
+  name: 云簇超融合
+  href: 
+  items:
+  - name: 产品简介
+    items:
+      - name: 产品概述
+        href: Introduction/Product-Overview.md
+      - name: 核心概念
+        href: Introduction/Core-Concepts.md
+        status: 0
+      - name: 基础架构
+        href: Introduction/Basic-Infrastructure.md
+      - name: 产品优势
+        href: Introduction/Benefits.md
+      - name: 产品功能
+        href: Introduction/Features.md
+      - name: 限制说明
+        href: Introduction/Restrictions.md
+        status: 0
+      - name: 应用场景 
+        href: Introduction/Application-Scenarios.md    
+  - name: 入门指南
+    items:
+      - name: 概述
+        href: Getting-Started/Getting-Started-Overview.md
+      - name: 登录平台
+        href: Getting-Started/Logging-In-Platform.md
+      - name: 角色权限
+        href: Getting-Started/Role-Permission.md
+      - name: 创建网络
+        href: Getting-Started/Create-Network.md
+      - name: 创建路由
+        href: Getting-Started/Create-Router.md
+      - name: 创建云主机
+        href: Getting-Started/Create-Instance.md
+      - name: 分配浮动IP
+        href: Getting-Started/Allocate-Floating-IP.md
+  - name: 操作指南
+    items:
+      - name: 用户自服务
+        items:
+          - name: 资源概览
+            href: Operation-Guide/Resource-Overview.md
+          - name: 云主机相关
+            href: Operation-Guide/Associated-With-Instance.md
+          - name: 云硬盘相关
+            href: Operation-Guide/Associated-With-Disk.md
+          - name: 网络相关
+            href: Operation-Guide/Associated-With-Network.md
+          - name: 负载均衡
+            href: Operation-Guide/LBaaS.md
+      - name: 后台管理
+        items:
+          - name: 概述
+            href: Operation-Guide/Background-Management.md
+          - name: 组织用户管理
+            href: Operation-Guide/Organizations-And-Users-Management.md
+          - name: 配额管理
+            href: Operation-Guide/Quota-Management.md
+      - name: 运维管理
+        items:
+          - name: 运维监控
+            href: Operation-Guide/Operation-Maintenance-And-Monitoring.md           
+  - name: 常见问题
+    items:
+      - name: FAQ
+        href: FAQ/FAQ.md
+  - name: 相关资源
+    items:
+    - name: 文档历史记录
+      href: Related-Resources/Document-History.md
+

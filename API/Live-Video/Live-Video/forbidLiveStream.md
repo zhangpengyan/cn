@@ -17,6 +17,7 @@ https://live.jdcloud-api.com/v1/streams:forbid
 |**publishDomain**|String|True| |推流域名|
 |**appName**|String|True| |应用名称|
 |**streamName**|String|True| |流名称|
+|**forbidTime**|Long|False| |禁流时长,单位:s 0表示永久禁流;大于0为限时禁流,超过时长自动解禁|
 
 
 ## 返回参数

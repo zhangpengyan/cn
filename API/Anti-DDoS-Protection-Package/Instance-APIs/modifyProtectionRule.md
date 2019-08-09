@@ -12,7 +12,7 @@ https://antipro.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:mod
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |地域编码|
+|**regionId**|String|True| |地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海|
 |**instanceId**|String|True| |防护包实例 Id|
 
 ## 请求参数
@@ -34,7 +34,9 @@ https://antipro.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:mod
 |**dstNewConnLimitValue**|Long|False| |目的新建连接速率, 修改实例防护规则或自定义 IP 防护规则时必传|
 |**datagramRangeMin**|Long|False| |报文最小长度, 取值范围 [1, datagramRangeMax)|
 |**datagramRangeMax**|Long|False| |报文最大长度, 取值范围 (datagramRangeMin, 1518]|
-|**geoBlackList**|String[]|False| |geo 拦截地域编码列表. 查询 <a href="http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas">describeGeoAreas</a> 接口获取可设置的地域编码列表|
+|**geoBlackList**|String[]|False| |geo 拦截地域编码列表. 查询 <a href='http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas'>describeGeoAreas</a> 接口获取可设置的地域编码列表|
+|**ipBlackList**|String[]|False| |IP 黑名单列表|
+|**ipWhiteList**|String[]|False| |IP 白名单列表|
 
 ## 返回参数
 |名称|类型|描述|

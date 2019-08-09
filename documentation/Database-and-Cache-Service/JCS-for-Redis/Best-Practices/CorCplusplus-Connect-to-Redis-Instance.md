@@ -4,7 +4,7 @@
 
 - step1：下载安装c/c++连接redis的c客户端
 
-```
+```Shell
  git clone https://github.com/redis/hiredis.git 
  cd hiredis 
  make 
@@ -14,7 +14,7 @@
 
 - step2：编写测试代码
 
-```
+```C
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
@@ -106,7 +106,7 @@ step3：编译
 
 step4：运行测试用例
 
-```
+```Shell
 ./example jredis-cn-north-1-prod-redis-xxxxxxxxxx.jdcloud.com 6379 password
 AUTH: OK
 PING: PONG

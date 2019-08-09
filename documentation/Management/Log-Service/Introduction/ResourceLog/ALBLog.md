@@ -5,7 +5,7 @@
 ### 字段说明
 日志字段(7层) | 字段描述 | 字段类型 | 字段值说明
 -- | -- | -- | --
-timestamp  | 时间戳 | time | 精确到毫秒，eg：2018-12-20T02:59:40.001
+timestamp  | 时间戳 | time | 精确到毫秒，eg：2018-12-20T02:59:40.001Z
 alb_id | 负载均衡ID | string | alb-[0-9][a-z]{10} , eg: alb-gmjnqw8bnh
 client_ip | 客户端ip | string | eg：192.168.10.1
 client_port | 客户端端口 | int | 1-65535，eg：50398

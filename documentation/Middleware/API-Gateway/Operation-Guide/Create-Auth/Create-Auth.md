@@ -1,53 +1,35 @@
 # API的访问授权
 
-API的访问授权过程，即API提供方给API调用方授权应用的过程。授权过程分为两部分：
+API的访问授权提供"免鉴权"和"授权访问"两种模式。
 
-* API调用方创建和提供 **访问密钥** 。访问密钥（APIKey/APISecret）代表请求者的身份。
+"免鉴权"模式即当 API 网关在收到匿名请求时，也可以通过认证授权。"授权访问"模式即API提供方给API调用方授权应用的过程，授权过程分为两部分：
+#### （1）API调用方创建和提供密钥 。密钥代表请求者的身份。
+#### （2）API提供方将API分组授权给API调用方，供其使用。
+当API提供方的客户或提供方自身需要测试调用 API 时，都需要作为请求者的身份创建密钥，然后由API提供方在“访问授权”模块中，将API分组授权给API调用者使用。
+其中授权访问模式可支持三种授权类型：订阅密钥、API网关签名、京东云用户签名。
 
-* API提供方授权API分组给API调用方使用。
+## 三种授权类型的简介如下:
 
-当API提供方的客户或者自己需要测试调用 API 时，都需要创建 访问密钥 作为请求者的身份，然后由API提供方在访问授权中，授权API分组给 API调用者使用。
+### （1）订阅密钥
 
+京东云API网关支持订阅密钥的授权类型。用户除了选择利用SDK的方式对API进行访问， 还可以通过在header中传递订阅密钥（jdcloud-apim-subscription-key）来实现API的授权访问。使用订阅密钥进行授权访问的成本很低且方便快捷，同时也能保障一定的安全性，因此非常适合想快速进行API调用的用户。
+详情请见[订阅密钥](https://docs.jdcloud.com/cn/api-gateway/subscription-key?SOP=JDCloud)。
 
-## 操作步骤
-### API调用者创建和提供 **访问密钥** 
-#### STEP1: 点击左侧菜单 **访问密钥**  进入访问密钥列表页
+### （2）API网关签名密钥
 
-![访问密钥列表页](../../../../../image/Internet-Middleware/API-Gateway/fwmy-list.png)
+京东云API网关支持签名密钥的授权类型。API网关针对此授权类型采用了特殊的签名算法，因此具有极高的安全性，授权完成后用户可使用SDK对API进行调用。
+详情请见[签名密钥](https://docs.jdcloud.com/cn/api-gateway/signature-key?SOP=JDCloud)。
 
-#### STEP2: 点击 **创建访问密钥**
+### （3）京东云用户签名Access Key
 
-![创建访问密钥](../../../../../image/Internet-Middleware/API-Gateway/fwmy-add.png)
-
-* 密钥创建成功后，系统会自动生成访问密钥ID、APIKey、APISecret。
-
-* API调用者需要将 **访问密钥ID** 告知API提供者，由API提供者进行访问授权。
-
-
-### API提供者授权API分组给API调用者使用
-
-#### STEP1: API提供者获取API调用者的访问密钥ID。
-
-API调用者可在访问密钥详情页找到访问密钥ID，并将该ID告诉API提供者。
-
-
-![访问密钥详情页](../../../../../image/Internet-Middleware/API-Gateway/fwmy-xqy.png)
- 
+京东云API网关支持京东云用户签名的授权类型。该授权类型的密钥来源于用户在京东云的账户管理中所创建的Access Key， 授权完成后用户可使用SDK对API进行调用。API网关则可对其进行后端签名校验。
+详情请见[京东云用户签名Access Key](https://docs.jdcloud.com/cn/api-gateway/jd-cloud-user-signature?SOP=JDCloud)。
  
 
  
-#### STEP2: API提供者创建1个授权。
-
-首先进入左侧菜单的 **访问授权** 列表页
-
-![访问授权页](../../../../../image/Internet-Middleware/API-Gateway/fwsq-list.png)
-
-然后点击 **创建授权**，在授权信息中，填入API调用者提供的访问密钥ID。
 
 
-#### STEP3: API提供者绑定授权给API分组
 
-密钥创建成功后，点击 **绑定**进行授权分组的绑定关系。
 
 
 

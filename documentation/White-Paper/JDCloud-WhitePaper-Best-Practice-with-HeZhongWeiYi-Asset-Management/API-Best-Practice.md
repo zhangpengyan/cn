@@ -1,65 +1,65 @@
-# 应用集成API在万象的最佳实践 
+# 合众数字化资产管理系统在京东云上的最佳实践 
+下图是一个合众数字化资产管理系统在京东云上的部署案例，此部署案例中，合众数字化资 产管理系统部署采用单服务器部署模式，也可将数据库分离部署，有助于提升应用的可用性。
 
-## 1 整体架构 
+![deployment](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6f783991a9ac3c0b94f85406b377e76b20190731151307828-12.png)
 
-万象平台作为中间层，可以帮助企业实现应用的快速集成，并且减少了集成的复杂度。下图中包含几个模块。
+## 1.网络最佳实践
+### · 私有网络VPC设计
+VPC是云上的私有网络，为客户的应用提供一个独立的隔离的私有网络环境。客户在京东云上部署合众数字化资产管理系统时，需要规划一个独立的私有网络。与其他客户进行网络隔离。 
+### · 子网设计
+对于合众数字化资产管理系统的部署，可以建立1个子网，用于合众数字化资产管理系统的单台部署。 
+### · 弹性 IP 设计
+弹性IP设计。弹性IP可以让客户的应用实例和广域网联通，供客户远程访问应用。应用部署到京东云上时，需要为应用申请一个弹性IP。 
+### · 安全组设计
+安全组用于云主机实例的安全防护。为了安全起见，安全组应只允许必需的端口访问通过。安全组开发的端口需查询应用的端口矩阵。
 
-1. 万象平台。万象平台在此处充当API网关的作用，用于连接为各个应用系统封装API，并形成统一的api端点。 
+## 2.可用性最佳实践 
+京东云的多可用区特性具备故障隔离的功能，结合多可用区机制、镜像机制及数据库的高可用性机制可以实现应用的高可用。 
 
-2. 企业应用模块。企业应用模块一般部署到客户的数据中心或云上的私有网络中，有防火墙或者安全组负责边界防护。企业应用间相互会有调用关系，用于完成一些业务逻辑。 
+- 数据库主从高可用部署。将部署数据库的云主机分布到不同的AZ，并将其安装的数据库配置成主从模式。数据库前端部署负载均衡，实现数据库访问的负载均衡及高可用。
 
-3. 第三方企业SaaS服务。第三方企业SaaS服务主要是指提供ERP、CRM等企业管理软件服务的公司，也提供标准的API供第三方调用。 
+- 将应用服务器创建镜像。将应用服务器创建镜像，镜像保存到region的对象存储中，当可用区出现问题时，可在别的可用区将应用服务器基于镜像恢复，保证应用的继续可用。 
 
-4. 第三方通用SaaS服务。通用SaaS服务主要指提供通用数据信息的SaaS服务，如天气信息、身份认证信息、短信服务等等常规普遍服务。
+![availability](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/c45bc229377e930f81255bd20dffe86a20190731144209494-14.png)
 
-![Frame](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/3.png)
+## 3.可扩展性最佳实践  
+合众数字化资产管理系统软件本支持单机部署、应用服务器与数据库分离部署等多种部署方案。
 
-## 2 业务逻辑 
+- 应用和数据库分离部署。为了安全性及扩展性考虑，可以将应用服务器和数据库服务器分离部署，数据库采用主从式、一主多从式等多种部署方案，提升应用性能。  
 
-### 2.1 调用模型 
+- 纵向扩展。为了满足性能的要求，可以提升服务器的规格，让应用的业务处理能力更强， 用户体检更好。例如开始可以选择2C4G的 c.n2.large 的规格类型，随着业务的快速发 展可将规格类型变为4C8G的c.n2.xlarge。关于京东云主机规格的类型可以参考[京东云主机帮助文档](https://docs.jdcloud.com/cn/virtual-machines/instance-type-family)。
 
-本次最佳实践集成的双方是CRM和ERP系统，通过万象将各自API暴露在万象平台 上， 即可以实现双方的对接，又可以提供第三方对接的能力。本案例将业务涉及的的物料、部门、员工、组织机构、客户、联系人、合同管理、应收款管理在CRM和ERP系统之间做数据集成。涉及的接口以标准的WebAPI方式提供双方接口，自动实现ERP的基础数据同步功能。
+## 4.安全性最佳实践 
+将合众数字化资产管理系统部署到京东云上，安全性主要从云平台的管理和应用相关的云资源2个维度考虑。
 
-本案例中，将内部调用的API发布到万象平台上变为通用业务逻辑API，不但可以为A企业使用，而且可以为B企业及其他第三方调用。 
+- 云平台管理安全实践。 
+1. 账户安全。日常操作京东云不使用根账户，根账户要启用多因素认证，保证账户登录安全。日常的京东云操作要使用子账户。不要将账户的用户名和密码明文保存等等。
+2. AK/SK 安全。如果没有API对接需求，不需要启用AK/SK机制。 
+3. 访问控制安全。要设置访问权限设置，要为子账户设置合理的访问权限。 
 
-![Call Model](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/4.png)
+- 应用资源配置最佳实践 
+1. 网络安全。可按照应用所需的最小端口矩阵，开放安全组、NACL端口，合理的规划设置子网。网络相关的最佳实践可参考[京东云私有网络操作指南](https://docs.jdcloud.com/cn/virtual-private-cloud/security-group-configuration)。 
+2. 主机安全。要为应用所在的主机安装杀毒软件，防止主机中毒。 
+3. 应用安全。要及时为应用所需的中间件更新补丁，防止应用本身的安全漏洞。详情请参考[京东云机安全文档](https://docs.jdcloud.com/cn/endpoint-security/product-overview)。 
 
-### 2.2 参数说明概览 
+## 5.灾难恢复最佳实践 
+### 5.1 京东云上的跨地域灾难恢复 
+尽管单个地域利用多可用区实现的高可用对大部分的应用已经足够了，但是一些客户可能仍想考虑多个地域的灾难恢复方案，这主要取决于业务的需求。跨地域的灾难恢复如下图所示，可以通过如下步骤实现：  
+1. 将生产环境的应用服务器和数据库服务器备份到本地域对象存储空间。 
+2. 开启对象存储的跨地域复制功能，定期从生产环境所在的地域向灾难恢复地域同步数据。
+3. 一旦生产环境发生灾难需要恢复业务时，在灾难恢复地域使用企业助手快速部署应用环境。 
+4. 将数据恢复到灾难恢复地域的应用中。 
+5. （可选）对于需要域名访问的应用，更改DNS即可的指向IP即可。 
 
-下图为本案例中数据同步的相关字段截图，接口参数梳理清晰后，在万象平台录入 API 及参数即可。 
+![cross-region recovery](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/c45bc229377e930f81255bd20dffe86a20190731144209494-15.png)
 
-![Parameter Intro](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/5.png)
+### 5.2 将本地或其他云上部署的应用恢复到京东云 
+客户也可以将京东云作为部署在本地或其他云的合众数字化资产管理系统生产环境的灾难恢复平台。这种场景里，生产环境仍然部署到客户的本地数据中心，而灾备恢复环境部署在京东云。如果生产环境出现故障，那么可以在京东云上恢复应用，并且提供服务。这个方案需要京东云企业助手的应用灾难恢复功能。如下图所示
 
-接口调用样例 
+1. 利用京东云企业助手将应用应用数据备份到企业在京东云账号下的对象存储中 
+2. 一旦企业数据中心发生故障，启动灾难恢复作业 
+3. 使用京东云企业助手在京东云上一键恢复应用 
+4. 将备份的数据恢复到应用应用中，应用恢复正常运行。 
+5. （可选）对于需要域名访问的应用，更改DNS即可的指向IP即可。 
 
-![Call Interface](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/6.png)
-
-### 2.3 万象平台配置样例 
-
-**1. 新建API**
-
-弹出新建数据页面，输入相关数据信息。
-
-![Create API](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/7.png)
-
-**2. 网络设置**
-
-进入网络设置，输入目标基础url，点击"保存"按钮。 
-
-![Network Setting](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/8.png)
- 
-**3. 接口设置页面** 
-
-![Interface Setting](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/9.png)
-
-**4. 编辑接口参数** 
-
-![Edit Interface](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/10.png)
-
-**5. 接口测试** 
-
-对接口信息录入后进行自测 
-
-![Interface Test](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/11.png)
-
-点击图上的接口测试工具，进入接口测试页面 
+![local recovery](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-HeZhongWeiYi-Asset-Management/c45bc229377e930f81255bd20dffe86a20190731144209494-16.png)

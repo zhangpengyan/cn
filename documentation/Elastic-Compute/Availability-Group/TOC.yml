@@ -1,61 +1,61 @@
-  name: Availability Group
+  name: 高可用组
   href: 
   items:
-  - name: Introduction
+  - name: 产品简介
     items:
-    - name: Product Overview
+    - name: 产品概述
       href: Introduction/Product-Overview.md
-    - name: Core Concept
+    - name: 核心概念
       href: Introduction/Core-Concepts.md
-    - name: Benefits
+    - name: 产品优势
       href: Introduction/Benefits.md
-    - name: Features
+    - name: 产品功能
       href: Introduction/Features.md
-    - name: Restrictions 
+    - name: 限制说明
       href: Introduction/Restrictions.md
-    - name: Application Scenarios 
+    - name: 应用场景
       href: Introduction/Scenarios.md    
-  - name: Pricing
+  - name: 产品定价
     items:
-    - name: Billing Overview
+    - name: 计费概述
       href: Pricing/Billing-Overview.md
-  - name: Getting Started
+  - name: 入门指南
     href: Getting-Start.md
-  - name: Operation Guide
+  - name: 操作指南
     items:
-    - name: Create Availability Group
+    - name: 创建高可用组
       href: /Operation-Guide/Create-AG.md
-    - name: Modify Instance Template
+    - name: 修改实例模板
       href: /Operation-Guide/Modify-Instance-Template.md
-    - name: Auto Scaling
+    - name: 自动伸缩
       items:
-      - name: Auto-Scaling Overview
+      - name: 自动伸缩概述
         href: /Operation-Guide/Auto-Scaling/Auto-Scaling-Overview.md
-      - name: Enable Auto-Scaling
+      - name: 开启自动伸缩
         href: /Operation-Guide/Auto-Scaling/Enable-AS.md
-      - name: Disable Auto-Scaling
+      - name: 关闭自动伸缩
         href: /Operation-Guide/Auto-Scaling/Disable-AS.md
-      - name: Modify Auto-Scaling
+      - name: 修改自动伸缩
         href: /Operation-Guide/Auto-Scaling/Modify-AS-Attributes.md
-      - name: Create Auto-Scaling Policy
+      - name: 创建自动伸缩策略
         href: /Operation-Guide/Auto-Scaling/Create-AS-Policy.md
-      - name: Enable Auto-Scaling Policy
+      - name: 启用自动伸缩策略
         href: /Operation-Guide/Auto-Scaling/Enable-AS-Policy.md
-      - name: Disable Auto-Scaling Policy
+      - name: 禁用自动伸缩策略
         href: /Operation-Guide/Auto-Scaling/Disable-AS-Policy.md
-    - name:  Manually Add Instances
+    - name:  手动添加实例
       href: /Operation-Guide/Add-Instance-Manually.md
-    - name: Manually Remove Instances
+    - name: 手动移除实例
       href: /Operation-Guide/Remove-Instance-Manually.md
-    - name: Delete Availability Group
+    - name: 删除高可用组
       href: /Operation-Guide/Delete-AG.md
   - name: Best Practices
     items:
-    - name: Optimal Configuration
+    - name: 最佳配置
       href: Best-Practices/Recommended-Configuration.md
-    - name: Configure self-starting
+    - name: 配置开机自启动
       href: Best-Practices/Configure-Self-Starting.md
-    - name: Set fixed  IP
+    - name: 设置固定出口IP
       href: Best-Practices/Set-Fixed-Outbound-IP.md
   - name: Tutorial
     status: 0

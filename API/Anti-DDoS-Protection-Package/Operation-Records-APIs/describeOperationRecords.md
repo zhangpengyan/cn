@@ -18,7 +18,7 @@ https://antipro.jdcloud-api.com/v1/operationRecords
 |**pageSize**|Integer|False|10|分页大小|
 |**startTime**|String|True| |开始时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ|
 |**endTime**|String|True| |结束时间, UTC 时间, 格式：yyyy-MM-dd'T'HH:mm:ssZ|
-|**action**|Integer|False| |操作类型, 默认查全部.<br>- 0: 全部<br>- 1: 套餐变更<br>- 2: 防护规则变更<br>- 3: 防护对象变更<br>- 4: IP 地址变更<br>- 5: 防护包名称变更<br>|
+|**action**|Integer|False| |操作类型, 默认查全部. <br>- 0: 全部<br>- 1: 套餐变更<br>- 2: 防护规则变更<br>- 3: 防护对象变更<br>- 4: IP 地址变更<br>- 5: 防护包名称变更|
 |**name**|String|False| |防护包名称, 支持模糊匹配|
 
 
@@ -52,7 +52,7 @@ https://antipro.jdcloud-api.com/v1/operationRecords
 |---|---|---|
 |**time**|String|操作时间|
 |**name**|String|防护包名称|
-|**action**|Integer|操作类型:  1：套餐变更, 2：防护规则变更, 3：防护对象变更, 4：IP 地址变更, 5：防护包名称变更|
+|**action**|Integer|操作类型.<br>- 1: 套餐变更<br>- 2: 防护规则变更<br>- 3: 防护对象变更<br>- 4: IP 地址变更<br>- 5: 防护包名称变更|
 |**info**|String|操作详情|
 |**operator**|String|操作人|
 

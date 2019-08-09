@@ -9,7 +9,7 @@
 GET
 
 ## 请求地址
-https://nc.jdcloud-api.com/v1/regions/{regionId}/quotas
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/quotas
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

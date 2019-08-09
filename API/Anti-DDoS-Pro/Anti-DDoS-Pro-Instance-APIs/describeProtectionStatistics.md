@@ -12,7 +12,7 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/describeProtectionStatistic
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |Region ID|
+|**regionId**|String|True| |区域 ID, 高防不区分区域, 传 cn-north-1 即可|
 
 ## 请求参数
 无
@@ -28,9 +28,14 @@ https://ipanti.jdcloud-api.com/v1/regions/{regionId}/describeProtectionStatistic
 ### Error
 |名称|类型|描述|
 |---|---|---|
-|**code**|Integer|请求错误状态码|
-|**status**|String|请求错误状态码|
-|**message**|String|请求错误提示|
+|**err**|Err| |
+### Err
+|名称|类型|描述|
+|---|---|---|
+|**code**|Long|同http code|
+|**details**|Object| |
+|**message**|String| |
+|**status**|String|具体错误|
 ### Result
 |名称|类型|描述|
 |---|---|---|

@@ -35,14 +35,14 @@
         href: Pricing/Renewal-Process.md
   - name: 入门指南
     items:
+      - name: 入门指南概述
+        href: Getting-Started/Getting-Started-Overview.md
       - name: 创建实例
         href: Getting-Started/Create-Instance.md
       - name: 连接实例
         href: Getting-Started/Connect-Instances.md
       - name: 命令支持
         href: Getting-Started/Command-Supported.md
-      - name: 入门指南概述
-        href: Getting-Started/Getting-Started-Overview.md
   - name: 操作指南
     items:
       - name: 登录账号
@@ -71,45 +71,25 @@
         href: Operation-Guide/Data-Migration.md   
   - name: 最佳实践
     items:
-    - name: C/C++连接Redis实例
-      href: Best-Practices/CorCplusplus-Connect-to-Redis-Instance.md
-    - name: Golang连接Redis实例
-      href: Best-Practices/Golang-Connect-to-Redis-Instance.md
-    - name: Java连接Redis实例
-      href: Best-Practices/Java-Connect-to-Redis-Instance.md
-    - name: Node.js连接Redis实例
-      href: Best-Practices/Node.js-Connect-to-Redis-Instance.md
-    - name: PHP连接Redis实例
-      href: Best-Practices/PHP-Connect-to-Redis-Instance.md
-    - name: Python连接Redis实例
-      href: Best-Practices/Python-Connect-to-Redis-Instance.md
-    - name: 公网连接Redis实例
-      href: Best-Practices/Public-Network-Connect-to-Redis-Instance.md
-  - name: 教程
-    items:
-    status: 0
-  - name: 问题排查
-    items:
-    status: 0      
+      - name: C/C++连接Redis实例
+        href: Best-Practices/CorCplusplus-Connect-to-Redis-Instance.md
+      - name: Golang连接Redis实例
+        href: Best-Practices/Golang-Connect-to-Redis-Instance.md
+      - name: Java连接Redis实例
+        href: Best-Practices/Java-Connect-to-Redis-Instance.md
+      - name: Node.js连接Redis实例
+        href: Best-Practices/Node.js-Connect-to-Redis-Instance.md
+      - name: PHP连接Redis实例
+        href: Best-Practices/PHP-Connect-to-Redis-Instance.md
+      - name: Python连接Redis实例
+        href: Best-Practices/Python-Connect-to-Redis-Instance.md
+      - name: 公网连接Redis实例
+        href: Best-Practices/Public-Network-Connect-to-Redis-Instance.md    
   - name: 常见问题
-    href: FAQ/FAQ.md
-  - name: 用户协议
-    status: 0
+    href: FAQ/FAQ.md     
+  - name: 相关资源      
     items:
-    - name: 服务条款
-      href: User-Agreements/Product-Terms-of-Service.md           
-      status: 0      
-    - name: SLA
-      href: User-Agreements/SLA.md           
-      status: 0       
-  - name: 相关资源
-    status: 0       
-    items:
-    - name: 文档历史记录
-      href: Related-Resources/Document-History.md   
-    - name: 备案
-      href: Related-Resources/Filing.md           
-      status: 0        
-    - name: 词汇表
-      href: Related-Resources/Glossary.md           
-      status: 0
+       - name: 文档发布历史
+         href: Related-Resources/Document-History.md 
+       - name: 服务条款
+         href: Related-Resources/Product-Service-Agreement.md

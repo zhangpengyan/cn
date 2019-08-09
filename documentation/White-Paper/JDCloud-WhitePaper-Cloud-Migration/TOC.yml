@@ -1,0 +1,16 @@
+name: 云迁移技术白皮书
+href: 
+items:
+
+- name: 概要
+  href: Introduction/Overview.md
+- name: 云迁移优势
+  href: Advantage/Point.md
+- name: 云迁移目标
+  href: Target/Target.md
+- name: 云迁移方法论
+  href: Method/Method.md
+- name: 云迁移流程
+  href: Flow/Flow.md
+- name: 云迁移白皮书下载链接
+  href: Download-Link/Related-Resources.md

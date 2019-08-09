@@ -19,7 +19,7 @@
 
 函数（Function）是调度与运行的基本单位，是一段代码的处理逻辑。您需要根据Function提供的函数接口形式编写代码，并将代码以函数的形式部署到函数服务。
 
-函数创建详细信息请参阅[函数构建](../Operation-Guide/buildfunction/config-function.md)。
+函数创建详细信息请参阅[函数构建](../Operation-Guide/buildfunction/function-overview.md)。
 
  
 ## 触发函数

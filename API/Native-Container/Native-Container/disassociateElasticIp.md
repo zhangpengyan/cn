@@ -9,7 +9,7 @@
 POST
 
 ## 请求地址
-https://nc.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}:disassociateElasticIp
+https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/containers/{containerId}:disassociateElasticIp
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

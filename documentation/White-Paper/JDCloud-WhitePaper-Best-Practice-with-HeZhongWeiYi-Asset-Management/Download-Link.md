@@ -6,15 +6,14 @@
 
 ## 参考
 
-合众数字化资产管理系统解决方案信息页
-http://www.hz-union.com/index.asp
-京东云云主机文档
-https://docs.jdcloud.com/cn/virtual-machines/product-overview
-京东云私有网络产品文档
-https://docs.jdcloud.com/cn/virtual-private-cloud/product-overview
-京东云可信中心
-https://www.jdcloud.com/cn/service/trustedCenter
-京东云对象存储产品文档
-https://docs.jdcloud.com/cn/object-storage-service/product-overview
-京东云网络负载均衡产品文档
-https://docs.jdcloud.com/cn/network-load-balancer/product-overview
+合众数字化资产管理系统解决方案信息页  http://www.hz-union.com/index.asp
+
+京东云云主机文档 https://docs.jdcloud.com/cn/virtual-machines/product-overview 
+
+京东云私有网络产品文档 https://docs.jdcloud.com/cn/virtual-private-cloud/product-overview
+
+京东云可信中心https://www.jdcloud.com/cn/service/trustedCenter
+
+京东云对象存储产品文档 https://docs.jdcloud.com/cn/object-storage-service/product-overview
+
+京东云网络负载均衡产品文档 https://docs.jdcloud.com/cn/network-load-balancer/product-overview

@@ -12,7 +12,7 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 ## 三、动态创建PV
 
-StorageClass为PVC提供动态发现、绑定PV的配置。因此创建一个使用nfs-client-provisioner的Storage Class，并在创建PVC时显示指定对应的StorageClassName，就可以基于CFS云文件存储在Kubernetes集群中动态创建NFS类型的PV。
+StorageClass为PVC提供动态发现、绑定PV的配置。因此创建一个使用nfs-client-provisioner的Storage Class，并在创建PVC时显式指定对应的StorageClassName，就可以基于CFS云文件存储在Kubernetes集群中动态创建NFS类型的PV。
 
 1. 创建Storage Class，Yam文件下载及说明如下：
 

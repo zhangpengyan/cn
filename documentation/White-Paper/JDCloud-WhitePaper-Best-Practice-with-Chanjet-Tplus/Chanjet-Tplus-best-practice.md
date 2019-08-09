@@ -4,7 +4,7 @@
 ![deployment](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-Chanjet-Tplus/6f783991a9ac3c0b94f85406b377e76b20190731151307828-12.png)
 
 ## 1.网络最佳实践
-### · 私有网络VPN设计
+### · 私有网络VPC设计
 VPC是云上的私有网络，为客户的应用提供一个独立的私有网络环境。客户在京东云上部署T+时，需要规划一个独立的私有网络。与其它客户进行网络隔离。
 ### · 子网设计
 对于T+的部署，可以建立1个或2个子网，用于T+的单台部署或应用与数据库的分离部署。 

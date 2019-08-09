@@ -80,7 +80,7 @@ Q7-Cloud 支持单机全量部署、应用与数据库分离部署、多服务�
 4. 将备份的数据恢复到应用应用中，应用恢复正常运行。 
 5. （可选）对于需要域名访问的应用，更改 DNS 即可的指向 IP 即可。
 
-![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-QiTongZhiNeng-Smart-Manufacturing/Q7-Cloud-Case-Study-Recovery2.jpg)
+![Image](../../../image/JDCloud-WhitePaper/JDCloud-WhitePaper-Best-Practice-with-QiTongZhiNeng-Smart-Manufacturing/Q7-Cloud-Case-Study-Recovery2.png)
 
 
 

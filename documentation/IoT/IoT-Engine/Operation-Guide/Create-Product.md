@@ -10,7 +10,7 @@
 2. 左侧导航栏选中 **管理** -> **产品**， 单击 **创建产品**。
 3. 按照页面提示填写信息，然后点击 **确认**
 
-[image](../../../../image/IoT/IoT-Engine/CreateProduct.png)
+![image](../../../../image/IoT/IoT-Engine/CreateProduct.png)
 
 **页面参数设置如下：**
 

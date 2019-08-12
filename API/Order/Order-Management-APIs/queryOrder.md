@@ -12,8 +12,8 @@ https://order.jdcloud-api.com/v2/regions/{regionId}/order/{orderNumber}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |Region ID|
-|**orderNumber**|String|True| |orderNumber ID|
+|**regionId**|String|True| |地域编码|
+|**orderNumber**|String|True| |订单编号|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

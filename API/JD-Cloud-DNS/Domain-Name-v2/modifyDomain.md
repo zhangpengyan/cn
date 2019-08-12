@@ -1,14 +1,14 @@
-# createMonitor
+# modifyDomain
 
 
 ## 描述
-添加子域名的监控项，默认把子域名的所有监控项都添加上监控
+修改主域名
 
 ## 请求方式
-POST
+PUT
 
 ## 请求地址
-https://domainservice.jdcloud-api.com/v2/regions/{regionId}/domain/{domainId}/monitor
+https://domainservice.jdcloud-api.com/v2/regions/{regionId}/domain/{domainId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -18,7 +18,7 @@ https://domainservice.jdcloud-api.com/v2/regions/{regionId}/domain/{domainId}/mo
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**subDomainName**|String|True| |子域名|
+|**domainName**|String|True| |需要修改的主域名，请使用describeDomains接口获取|
 
 
 ## 返回参数

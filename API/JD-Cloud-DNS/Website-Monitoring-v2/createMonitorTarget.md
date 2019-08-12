@@ -1,14 +1,14 @@
-# createMonitor
+# createMonitorTarget
 
 
 ## 描述
-添加子域名的监控项，默认把子域名的所有监控项都添加上监控
+添加子域名的某些特定监控对象为监控项
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://domainservice.jdcloud-api.com/v2/regions/{regionId}/domain/{domainId}/monitor
+https://domainservice.jdcloud-api.com/v2/regions/{regionId}/domain/{domainId}/monitorTarget
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -19,6 +19,7 @@ https://domainservice.jdcloud-api.com/v2/regions/{regionId}/domain/{domainId}/mo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**subDomainName**|String|True| |子域名|
+|**targets**|String[]|True| |子域名可用监控对象的数组|
 
 
 ## 返回参数

@@ -76,7 +76,9 @@ items:
         - name: 操作列表相关的接口            
           items:
             - name: describeActionLog
-              href: Operation-Log-v2/describeActionLog.md  
+              href: Operation-Log-v2/describeActionLog.md
+    - name: V2与V1接口的区别
+      href: diffV1V2_external.md
     - name: V1的接口
       items:
         - name: 域名相关的接口

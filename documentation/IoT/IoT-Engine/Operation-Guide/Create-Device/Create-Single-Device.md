@@ -9,7 +9,7 @@
 3. 点击页面上方的 **添加设备**
 4. 在添加设备的对话框中，输入设备的相关信息，点击 **确认** 
 
-![CreateSingleDevice](../../../../image/IoT/IoT-Engine/CreateSingleDevice.png)
+![CreateSingleDevice](../../../../../image/IoT/IoT-Engine/CreateSingleDevice.png)
 
 **页面参数设置如下：**
 

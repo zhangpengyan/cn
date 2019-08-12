@@ -36,7 +36,7 @@ items:
   - name: 容器
     items:
     - name: 查询 Pod 中的一个容器详情
-      href: Container/decribeContainer.md
+      href: Container/describeContainer.md
     - name: attach 到 Pod 内的一个容器
       href: Container/attach.md
     - name: 创建 exec

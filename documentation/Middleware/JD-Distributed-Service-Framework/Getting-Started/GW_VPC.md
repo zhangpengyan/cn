@@ -5,7 +5,7 @@
 假设服务在VPC内的地址为10.0.0.6/client/test，
 
     # curl 10.0.0.6/client/test
-    test<------server------>test
+    server successed!
     
 需要将此服务直接发布到API网关上，分如下两步完成：
 

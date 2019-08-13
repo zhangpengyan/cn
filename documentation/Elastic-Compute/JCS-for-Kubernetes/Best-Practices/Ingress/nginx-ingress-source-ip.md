@@ -33,6 +33,7 @@ kubectl apply -f common/default-server-secret.yaml
 ```
 kubectl apply -f common/nginx-config.yaml
 ```
+
 **说明:** 目前提供的config map中的data为空，您可以按需添加自定义配置。
 
 4. 为第1步中创建的service account配置RBAC：

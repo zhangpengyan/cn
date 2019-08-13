@@ -30,7 +30,7 @@
 
 <br>![发布API](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/pubAPI.png)<br/>
 
-更多创建API的资料参考 [API网关](../../../API-Gateway/Introduction/Product-Overview.md)   产品
+更多创建API的资料参考 [API网关](../../API-Gateway/Introduction/Product-Overview.md)   产品
 
 
 点调试api，发送请求们可以在响应中看到VPC中的服务的响应。

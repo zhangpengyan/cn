@@ -47,6 +47,8 @@
             href: Operation-Guide/Cluster/Delete-Cluster.md
           - name: 集群监控
             href: Operation-Guide/Cluster/Cluster-Monitor.md
+          - name: 集群日志
+            href: Operation-Guide/Cluster/Cluster-Logging.md
       - name: 工作节点组
         items:
           - name: 工作节点组概述

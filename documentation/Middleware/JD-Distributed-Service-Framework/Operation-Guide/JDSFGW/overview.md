@@ -15,8 +15,6 @@
 
 
 ## 应用场景
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/st-yycj.png)
-
 
 京东云微服务网关，帮助用户不必暴露服务，即可实现微服务应用的外部调用。目前已提供以下两种调用方式：
 

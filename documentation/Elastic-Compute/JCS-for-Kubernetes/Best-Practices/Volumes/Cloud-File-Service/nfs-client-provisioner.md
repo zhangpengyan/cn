@@ -32,6 +32,14 @@ Nfs-client-provisioner是一个开源的NFS 外部Provisioner，利用NFS Server
 
 nfs-client-provisioner在集群中以deployment的方式运行，并且nfs-client-provisioner需要访问kube-api获取PVC对象的变化，如果您的集群启用了RBAC，则必须授权provisioner。详细部署说明参考下文。
 
+**说明**： 您需要在集群的Node节点上安装nfs驱动。驱动安装过程参考[挂载文件存储](https://docs.jdcloud.com/cn/cloud-file-service/mount-file-system)
+
+```
+#在Node节点的终端下，运行如下命令:
+
+sudo yum install –y nfs-utils
+```
+
 1. 创建Service Account，Yam文件下载及说明如下：
 
 * 下载Yaml文件：

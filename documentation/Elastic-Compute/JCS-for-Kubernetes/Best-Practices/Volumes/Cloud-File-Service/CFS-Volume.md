@@ -18,6 +18,14 @@
  Kubernetes 命令行客户端 kubectl可以让您从客户端计算机连接到 Kubernetes 集群，实现应用部署。详情参考使用Kubectl客户端[连接到Kubernetes集群](https://docs.jdcloud.com/cn/jcs-for-kubernetes/connect-to-cluster)。
 
 ## 三、Pod通过NFS Volume方式使用CFS文件存储
+
+**说明**： 您需要在集群的Node节点上安装nfs驱动。驱动安装过程参考[挂载文件存储](https://docs.jdcloud.com/cn/cloud-file-service/mount-file-system)
+
+```
+#在Node节点的终端下，运行如下命令:
+
+sudo yum install –y nfs-utils
+```
     
 1. 新建一个Pod，将第一部分创建的CFS文件存储通过NFS Volume方式挂载到Pod，并在CFS目录下写入文件。Pod YAML文件说明如下：
 ```

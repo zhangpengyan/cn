@@ -12,7 +12,7 @@
 
 应用业务逻辑、SDK、HAL的关系如下图所示：
 
- ![SDK产品框架](../../../image/IoT/IoT-DeviceSDK/产品框架.png)
+ ![SDK产品框架](../../../../image/IoT/IoT-DeviceSDK/产品框架.png)
 
 应用只需关心使用SDK API组合业务逻辑，无需关心通信细节，HAL层需要用户根据自身的OS和设备信息进行适配，SDK提供了linux的HAL层适配。
 

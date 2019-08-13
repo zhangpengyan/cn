@@ -33,14 +33,17 @@ kubectl apply -f common/default-server-secret.yaml
 ```
 kubectl apply -f common/nginx-config.yaml
 ```
+
 **说明:** 目前提供的config map中的data为空，您可以按需添加自定义配置。
 
 4. 为第1步中创建的service account配置RBAC：
+
 ```
 kubectl apply -f rbac/rbac.yaml
 ```
 
 5. 为nginx-ingress controller创建NodePort类型的service:
+
 ```
 # 修改Service Yaml文件
 
@@ -285,6 +288,7 @@ bash-3.2#
 ## 3.1 部署echoserver应用
 
 1. Yaml文件说明如下：
+
 ```
 cat echo-server.yaml
 
@@ -425,7 +429,7 @@ x-forwarded-port=80
 x-forwarded-proto=http
 x-real-ip=172.16.32.4
 BODY:
--no body in request-[root@succ-test ~]#
+-no body in request-
 ```
 
 2. echoserver返回`x-forwarded-for=14.ab.cd.240, 172.16.32.4`, 第一个IP即为待验证的客户端公网IP.
@@ -488,7 +492,7 @@ x-forwarded-port=80
 x-forwarded-proto=http
 x-real-ip=172.16.32.3
 BODY:
--no body in request-[root@succ-test ~]#
+-no body in request-
 ```
 
 # 五、关联LoadBalancer Service 的Ingress开启IP透传功能
@@ -531,6 +535,7 @@ spec:
 ## 5.3 修改ingress的ConfigMap
 
 编辑nginx-ingress/nginx-config ConfigMap 增加如下信息:
+
 ```
 data:
   proxy-protocol: "True"
@@ -566,7 +571,7 @@ x-forwarded-port=80
 x-forwarded-proto=http
 x-real-ip=14.119.106.240
 BODY:
--no body in request-[root@succ-test ~]#
+-no body in request-
 ```
 
 2. echoserver返回的信息`x-forwarded-for=14.ab.cd.240` 与客户端IP相同, 说明客户端源IP已透传到后段；

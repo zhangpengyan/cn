@@ -98,6 +98,7 @@ spec:
           serviceName: servicetest-jdcloud
           servicePort: 60000
 ```
+
 * 执行如下命令，将上述ingress resource部署到集群中：
 
 `

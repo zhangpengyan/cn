@@ -61,4 +61,4 @@ VPC内的地址可以是服务进程的地址，Nginx等负载均衡软件的地
 
 （9）使用资源信息页的负载均衡Vip即可访问服务，将此地址配置在VPC代理即可通过API网关访问。
     
-更多创建内网负载均衡的资料参考 [应用负载均衡](../../../Networking/Application-Load-Balancer/Introduction/Overview.md) 产品。
+更多创建内网负载均衡的资料参考 [应用负载均衡](https://docs.jdcloud.com/cn/application-load-balancer/product-overview) 产品。

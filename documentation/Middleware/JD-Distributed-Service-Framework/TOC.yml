@@ -41,6 +41,8 @@ items:
       herf: Getting-Started/Getting-Started.md
     - name: 入门示例
       herf: Getting-Started/Basic-Example.md
+    - name: 使用API网关开放VPC内的接口
+      herf: Getting-Started/GW_VPC.md
 - name: 操作指南
   items:
     - name: 注册中心
@@ -84,7 +86,14 @@ items:
           herf: Operation-Guide/Analysis-Service/Update-Analysis-Service.md
         - name: 删除服务
           herf: Operation-Guide/Analysis-Service/del-Analysis-Service.md
-    
+    - name: 微服务网关
+      items:
+        - name: 概述
+          herf: Operation-Guide/JDSFGW/overview.md
+        - name: 创建服务
+          herf: Operation-Guide/JDSFGW/CreateGW.md
+        - name: 查看服务
+          herf: Operation-Guide/JDSFGW/ViewGW.md   
 - name: 常见问题
   herf: FAQ/faq.md
 

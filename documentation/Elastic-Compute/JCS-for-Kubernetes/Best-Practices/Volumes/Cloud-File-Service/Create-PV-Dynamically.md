@@ -139,12 +139,14 @@ Events:        <none>
 `
 sudo yum install –y nfs-utils
 `
+
 * 在云主机上将CFS文件存储挂载到cfs目录下，运行如下命令：
 
 ```
 mkdir /cfs      #在云主机上创建一个新目录
 mount -t nfs 172.XX.XX.10:/cfs /cfs     #将nfs 172.XX.XX.10:/cfs挂载到云主机的cfs目录上，其中172.XX.XX.10请使用云文件存储的挂载目标IP替换
 ```
+
 * 挂载成功后，在云主机的cfs目录下查看云文件存储中与PV关联的目录，运行如下命令：
 
 ```
@@ -154,6 +156,7 @@ ls -a       # 查看cfs目录中的内容
 default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7        #ls输出内容，验证cfs目录下新增了子目录，子目录名称与PV Source.Path一致的目录
 
 ```
+
 * 更多详情参考云文件服务[挂载文件存储](https://docs.jdcloud.com/cn/cloud-file-service/mount-file-system)。
 
 ## 四、创建Pod，使用第三步中创建的PVC

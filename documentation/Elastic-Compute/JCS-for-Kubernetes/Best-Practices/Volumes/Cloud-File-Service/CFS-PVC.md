@@ -8,7 +8,7 @@ PV支持两种配置方式：
 
 本文将提供在Kubernetes集群中以静态配置PV的方式使用京东云文件服务的操作步骤和应用示例。
 
-**专有名词：**
+**专有名词**：
 
 * PV：Persistent Volume，描述持久化存储数据卷；
 
@@ -37,7 +37,7 @@ metadata:
   name: manual-cfs-storage
 provisioner: kubernetes.io/no-provisioner       # nfs没有内部的provisioner
 ```
-**参数说明：**
+**参数说明**：
 
 * 您可以执行如下命令下载示例Yaml文件：
 
@@ -79,7 +79,7 @@ spec:
     server: 172.**.**.10        #请使用文件存储的挂载目标IP地址替换
 
 ```     
-**参数说明：**
+**参数说明**：
 
 * 您可以执行如下命令下载示例Yaml文件：
 
@@ -115,7 +115,7 @@ spec:
   storageClassName: manual-cfs-storage          #请与PV Yaml文件中使用的StorageClassClass保持一致
 
 ```
-**参数说明：**
+**参数说明**：
 
 * 您可以执行如下命令下载示例Yaml文件：
 
@@ -162,7 +162,7 @@ spec:
       claimName: cfs-pvc001
 
 ```     
-**参数说明：**
+**参数说明**：
 
 * 上述YAML文件将PVC挂载到Pod的/mnt/cfs目录；
 * 您可以执行如下命令下载示例Yaml文件：
@@ -220,7 +220,7 @@ spec:
       claimName: cfs-pvc001
 
 ```     
-**参数说明：**
+**参数说明**：
 
 * 上述YAML文件将PVC挂载到Pod的/mnt/cfs-read目录
 * 您可以执行如下命令下载示例Yaml文件：

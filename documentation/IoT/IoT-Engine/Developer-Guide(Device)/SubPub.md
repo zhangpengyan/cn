@@ -84,7 +84,7 @@ iot_mqtt_subscribe_router(handle,MQTT_SUB_TYPE_PROPERTY_REPLY,MP_PRODUCT_KEY, SM
 ```
 cJSON * data = iot_mqtt_build_device_shadow_update_json(rep_json,ts);
 
-​ iot_mqtt_publish_router(handle,MQTT_PUB_TYPE_DEVICE_UPDATE_SHADOW,SMP_PRODUCT_KEY,SMP_DEVICE_ID,data;
+iot_mqtt_publish_router(handle,MQTT_PUB_TYPE_DEVICE_UPDATE_SHADOW,SMP_PRODUCT_KEY,SMP_DEVICE_ID,data;
 ```
 
 目前支持的订阅topic类型 
@@ -136,8 +136,10 @@ typedef enum {
 设备端需要使用此方法订阅hub的影子，及时响应hub的命令
 
 1)订阅服务Topic：
+```
 
- `iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_SERVICE, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL);`
+ iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_SERVICE, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL);
+```
 
  Handle为mqtt的客户端，iot_subscribe_reply为注册的回调方法。
 
@@ -176,8 +178,9 @@ c）设备根据服务名和入参处理完逻辑后，将服务的出参封装�
 设备如果有事件需要通知hub，可以通过此方法发送
 
 1) 订阅属性回复Topic：
-
+```
 iot_mqtt_subscribe_router(handle,QTT_SUB_TYPE_PROPERTY_REPLY, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL)
+```
 
 2) 上报本地数据：
 
@@ -212,9 +215,9 @@ c）iot_subscribe_reply会收到hub收到属性上报的响应。
 设备如果有事件需要通知hub，可以通过此方法发送
 
 1) 订阅事件上报回复Topic：         
-
-`iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_EVENT_REPLY, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL)`
-
+```
+iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_EVENT_REPLY, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL)
+```
 2) 上报设备事件：
 
 a) 请求数据格式：
@@ -250,9 +253,9 @@ c）iot_subscribe_reply会收到hub收到事件上报的响应。
 设备需要同步hub的影子状态，可以调用此方法
 
 1) 订阅影子回复Topic：
-
-`iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_GET_SHADOW_REPLY, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL)`
-
+```
+iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_GET_SHADOW_REPLY, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL)
+```
 2) 请求获取影子：
 
 a) 请求数据格式：
@@ -356,9 +359,9 @@ timestamp": 1451649600512 //期望值的更新时间戳，精确到毫秒
 设备端需要使用此方法订阅hub的影子，及时响应hub的命令
 
 1) 订阅影子Topic：
-
-`iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_SHADOW_UPDATE, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL);`
-
+```
+iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_SHADOW_UPDATE, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL);
+```
 2) 响应影子下发：
 
 a）iot_subscribe_reply会收到hub下发的影子，回调方法会获取到mqtt的信息。
@@ -398,9 +401,9 @@ iot_mqtt_build_shadow_update_reply_json方法，再调用iot_mqtt_publish_router
 ## 取消订阅
 
 取消订阅Topic：
-
-`int iot_mqtt_unsubscribe(void *handle, const char *topic_filter);`
-
+```
+int iot_mqtt_unsubscribe(void *handle, const char *topic_filter);
+```
 接口说明：取消订阅的topic
 
 返回值：成功返回packetid，否则返回iot_err_t中的错误类型

@@ -44,7 +44,8 @@ spec:
       path: /cfs			#请使用挂载目标支持的目录替换，默认挂载到/cfs目录
       server: 10.**.**.11		#请使用文件存储的挂载目标IP地址替换
       readOnly: false
-```     
+```   
+
 **参数说明**：
 
 * 上述YAML文件将CFS挂载目标的"/cfs"目录挂载到Pod的/mnt/cfs-write目录；
@@ -118,6 +119,7 @@ spec:
       server: 10.**.**.11		          #CFS文件存储的挂载目标IP地址，请与第二步测试中使用的挂载目标IP地址保持一致
       readOnly: true
 ```     
+
 **参数说明**：
 
 * 上述YAML文件将CFS挂载目标的"/cfs"目录挂载到Pod的/mnt/cfs-read目录；

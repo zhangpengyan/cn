@@ -33,6 +33,7 @@ provisioner: jdcloud-cfs        #nfs-client-provisioner deployment env中定义�
 parameters:
   archiveOnDelete: "false"          #archiveOnDelete定义为false时，删除NFS Server中对应的目录，为true则保留；
 ```
+
 * 使用Yaml文件创建Storage Class：
 
 `
@@ -70,6 +71,7 @@ spec:
     requests:
       storage: 1Mi      #NFS Server中对应的挂载目录大小；目前CFS文件存储不限制挂载目录的容量；storage不超过文件存储最大容量限制即可
 ```
+
 * 使用Yaml文件创建PVC：
 
 `
@@ -195,6 +197,7 @@ spec:
       persistentVolumeClaim:
         claimName: auto-pv-with-nfs-client-provisioner          #指定与云文件存储建立绑定关系的PVC 名称
 ```
+
 * 使用Yaml文件创建Pod：
 
 `
@@ -213,6 +216,7 @@ kubectl exec -it pod-touch-cfs /bin/sh
 / # cat /mnt/SUCCESS
 helloworld
 ```
+
 2. 重新登录第三步中Nat子网中的云主机，查看云主机/cfs目录下，与PV建立绑定关系的云文件存储目录下新增的文件内容，运行如下命令：
 
 ```
@@ -224,13 +228,13 @@ default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e22
 cat default-auto-pv-with-nfs-client-provisioner-pvc-c44da35f-b8bc-11e9-b6cc-fa163e229fe7/SUCCESS
 helloworld        #与PV Source.Path一致的子目录下，查看新增文件SUCCESS的内容
 ```
+
 3. 删除pod pod-touch-cfs
 
 ```
 kubectl delete pod pod-touch-cfs
 pod "pod-touch-cfs" deleted
 ```
-
 
 4. 重新创建一个Pod，并在Pod中挂载上述PVC，Pod  YAML下载及说明如下：
 

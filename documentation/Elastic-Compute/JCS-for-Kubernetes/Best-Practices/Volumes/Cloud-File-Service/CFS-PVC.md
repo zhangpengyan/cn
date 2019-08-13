@@ -37,6 +37,7 @@ metadata:
   name: manual-cfs-storage
 provisioner: kubernetes.io/no-provisioner       # nfs没有内部的provisioner
 ```
+
 **参数说明**：
 
 * 您可以执行如下命令下载示例Yaml文件：
@@ -78,7 +79,8 @@ spec:
     path: /cfs          #请使用挂载目标支持的目录替换，默认挂载到/cfs目录
     server: 172.**.**.10        #请使用文件存储的挂载目标IP地址替换
 
-```     
+```   
+
 **参数说明**：
 
 * 您可以执行如下命令下载示例Yaml文件：
@@ -115,6 +117,7 @@ spec:
   storageClassName: manual-cfs-storage          #请与PV Yaml文件中使用的StorageClassClass保持一致
 
 ```
+
 **参数说明**：
 
 * 您可以执行如下命令下载示例Yaml文件：
@@ -161,7 +164,8 @@ spec:
     persistentVolumeClaim:
       claimName: cfs-pvc001
 
-```     
+```  
+
 **参数说明**：
 
 * 上述YAML文件将PVC挂载到Pod的/mnt/cfs目录；
@@ -219,7 +223,8 @@ spec:
     persistentVolumeClaim:
       claimName: cfs-pvc001
 
-```     
+```   
+  
 **参数说明**：
 
 * 上述YAML文件将PVC挂载到Pod的/mnt/cfs-read目录

@@ -48,6 +48,7 @@ apiVersion: v1
 metadata:
   name: nfs-client-provisioner
 ```
+
 * 使用Yaml文件创建Service Account：
 
 `
@@ -89,6 +90,7 @@ rules:
     resources: ["events"]
     verbs: ["create", "update", "patch"]
 ```
+
 * 使用Yaml文件创建Cluster Role：
 
 `
@@ -119,6 +121,7 @@ roleRef:
   name: nfs-client-provisioner-runner
   apiGroup: rbac.authorization.k8s.io
 ```
+
 * 使用Yaml文件创建Cluster Role：
 
 `
@@ -145,6 +148,7 @@ rules:
     resources: ["endpoints"]
     verbs: ["get", "list", "watch", "create", "update", "patch"]
 ```
+
 * 使用Yaml文件创建Cluster Role：
 
 `
@@ -175,6 +179,7 @@ roleRef:
   name: leader-locking-nfs-client-provisioner
   apiGroup: rbac.authorization.k8s.io
 ```
+
 * 使用Yaml文件创建Cluster Role：
 
 `
@@ -226,6 +231,7 @@ spec:
             server: 172.**.**.10			#请使用文件存储的挂载目标IP地址替换
             path: /cfs			#请使用挂载目标支持的目录替换，默认挂载到/cfs目录
 ```
+
 * 使用Yaml文件创建Deployment：
 
 `

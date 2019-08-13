@@ -3,7 +3,9 @@
 PV是Kubernetes集群中的资源，是Volume类的卷插件，用于描述持久化存储数据卷，具有独立于使用PV的Pod的生命周期。[京东云文件服务](https://docs.jdcloud.com/cn/cloud-file-service/product-overview)支持NFS协议，因此可以在Kubernetes集群中使用nfs类型的PV定义。
 
 PV支持两种配置方式：
+
 * 静态：由集群管理员创建，具有capacity、accessMode、类型等实际存储细节，可直接被使用；
+
 * 动态：当静态创建的PV都不匹配用户定义的PersistentVolumeClaim 时，集群会尝试动态地为 PVC 创建Volume。Volume的配置基于 StorageClasses定义；PVC将根据storageClassName字段发现PV。
 
 本文将提供在Kubernetes集群中以静态配置PV的方式使用京东云文件服务的操作步骤和应用示例。
@@ -61,6 +63,7 @@ manual-cfs-storage   kubernetes.io/no-provisioner   33m
 ```
 
 3. 新建一个NFS类型的PV，并关联上一步中创建的Storage Classs 配置，PV YAML文件说明如下：
+
 ```
 apiVersion: v1
 kind: PersistentVolume
@@ -103,6 +106,7 @@ cfs-pv001   1Gi        RWO            Recycle          Available           manua
 ```
 
 5. 定义一个PVC，将上一步创建的PV绑定到该PVC，PVC YAML文件说明如下：
+
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -140,7 +144,9 @@ NAME         STATUS   VOLUME      CAPACITY   ACCESS MODES   STORAGECLASS        
 cfs-pvc001   Bound    cfs-pv001   1Gi        RWO            manual-cfs-storage   14s
 
 ```
+
 7. 创建一个Pod，将Bound状态的PVC挂载到Pod。Pod Yaml文件说明如下：
+
 ```
 kind: Pod
 apiVersion: v1
@@ -178,6 +184,7 @@ wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/CFS/Pod-With-PVC-Mounted.y
 * 创建Pod前，请根据PVC的定义修改Yaml文件中对应参数值。
 
 8. 创建Pod，并验证Pod处于运行状态时，执行如下命令进入Pod，查看/mnt/cfs-read目录下的文件内容
+
 ```
 kubectl create -f Pod-With-PVC-Mounted.yml
 pod/cfs-pod001 created
@@ -191,6 +198,7 @@ kubectl exec -it cfs-pod001 /bin/sh
 Hello CFS
 
 ```
+
 9. 执行如下命令删除Pod
 
 ```
@@ -224,7 +232,7 @@ spec:
       claimName: cfs-pvc001
 
 ```   
-  
+
 **参数说明**：
 
 * 上述YAML文件将PVC挂载到Pod的/mnt/cfs-read目录
@@ -237,6 +245,7 @@ wget https://kubernetes.s3.cn-north-1.jdcloud-oss.com/CFS/read-data-from-pvc.yml
 * 创建Pod前，请根据PVC的定义修改Yaml文件中对应参数值。
 
 11. 创建Pod，并验证Pod处于运行状态时，执行如下命令进入Pod，查看/mnt/cfs目录下的文件内容
+
 ```
 kubectl create -f read-data-from-pvc.yml
 pod/cfs-pod002 created
@@ -251,6 +260,7 @@ kubectl exec -it cfs-pod002 /bin/sh
 Hello CFS
 
 ```
+
 12. 通过第11步的验证即可发现，名称为cfs-pod001的Pod在CFS中写入的文件hello.txt被持久化保存到CFS文件存储，并且可以被名称为cfs-pod002的Pod共享。
 
 13. 执行如下命令删除Pod

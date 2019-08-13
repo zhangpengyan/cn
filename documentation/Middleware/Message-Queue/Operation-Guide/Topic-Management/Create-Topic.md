@@ -15,7 +15,7 @@
 ### 1.Topic管理页面点击“新建”按钮
 
 从控制台左侧菜单中，找到互联网中间件-消息队列 JCQ-Topic管理页面，点击新建
- ![创建topic步骤1](../../../../../edit/image/Internet-Middleware/Message-Queue/创建topic-01.PNG)
+ ![创建topic步骤1](../../../../../image/Internet-Middleware/Message-Queue/创建topic-01.PNG)
 
 ### 2.填写完Topic信息，点击“创建”按钮
 

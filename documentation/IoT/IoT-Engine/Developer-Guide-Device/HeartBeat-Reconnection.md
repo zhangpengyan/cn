@@ -58,4 +58,10 @@ If(Res){
 
 }
 ```
-
+## 相关参考
+- [快速接入设备](../Developer-Guide-Device/DeviceEasyLink.md)
+- [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
+- [建立连接](../Developer-Guide-Device/EstablishConnection.md)
+- [订阅发布消息](../Developer-Guide-Device/SubPub.md)
+- [相关API](../Developer-Guide-Device/API.md)
+- [术语表](../Developer-Guide-Device/Glossary.md)

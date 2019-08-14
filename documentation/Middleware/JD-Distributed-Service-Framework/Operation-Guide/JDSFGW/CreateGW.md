@@ -119,8 +119,10 @@
 
 
 #####   STEP5：调用。
-<br>
-<br>
+
+
+
+
 ######   VPC内调用方式
 
 1、打开微服务网关服务的API分组基本信息tab签页，可见VPC内调用路径规则。例如：
@@ -143,10 +145,11 @@ curl -X GET http://jdsf-mgw-126aemarp4s1s-nlb.jvessel-open-hb.jdcloud.com:8080/j
 | jdsf-server  | 即{serviceName}内容，为您的注册中心中已经存在且能被正常访问的应用  | 
 | server/get   | 即{path}内容，为应用的路径  | 
 
-<br>
-<br>
-<br>
-<br>
+
+
+
+
+
 ######   公网调用方式
 
 1、首先保证API分组已经被发布到环境中。那么即可从API分组的部署环境中得到外网调用路径。
@@ -191,9 +194,10 @@ curl -X GET http://w27vqwu8gkzy-preview.cn-north-1.jdcloud-api.net/jdsf-server/s
 
 
 
-<br>
-<br>
-<br>
+
+
+
+
 
 ####    通过API网关发布VPC代理服务步骤
 
@@ -248,8 +252,10 @@ DEMO范例可参考： [最佳实践](../../Getting-Started/GW_VPC.md)
 
 
 #####   STEP4：调用。
-<br>
-<br>
+
+
+
+
 ######   VPC内调用方式
 
 1、打开微服务网关服务的API分组基本信息tab签页，可见VPC内调用路径规则。
@@ -272,8 +278,11 @@ curl -X GET http://jdsf-mgw-l6mnhdd1zpc-nlb.jvessel-open-sh.jdcloud.com:8080/10.
 | jdsf-server  | 即{serviceName}内容，为您的注册中心中已经存在且能被正常访问的应用  | 
 | server/get   | 即{path}内容，为应用的路径  | 
 
-<br>
-<br>
+
+
+
+
+
 ######   通过API网关的调用方式
 
 1、首先保证API分组已经被发布到环境中。那么即可从API分组的部署环境中得到外网调用路径。

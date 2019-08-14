@@ -65,16 +65,6 @@
         href: Developer-Guide-Device/HeartBeat-Reconnection.md
       - name: 补助API
         href: Developer-Guide-Device/API.md     
-- name: 常见问题
-    href: FAQ/FAQ.md
-  - name: 用户协议
-    status: 0
-    items:
-    - name: 服务条款
-      href: User-Agreements/Product-Terms-of-Service.md             
-    - name: SLA
-      href: User-Agreements/SLA.md           
-      status: 0       
   - name: 相关资源
     items:
     - name: 文档历史记录

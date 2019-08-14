@@ -60,4 +60,13 @@ SDK 路径结构如下列表，每个路径是一个模块，在其下可以单�
 
 ├─ ReadMe                    -- 编译说明     
 
-​                                                  
+
+## 相关参考
+
+- [SDK简介](../Developer-Guide-Device/Introduction.md)
+- [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
+- [建立连接](../Developer-Guide-Device/EstablishConnection.md)
+- [订阅发布消息](../Developer-Guide-Device/SubPub.md)
+- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [相关API](../Developer-Guide-Device/API.md)
+- [术语表](../Developer-Guide-Device/Glossary.md)

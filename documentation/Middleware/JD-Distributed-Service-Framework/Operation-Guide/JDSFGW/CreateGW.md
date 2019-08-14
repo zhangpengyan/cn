@@ -1,5 +1,5 @@
 #   创建服务
-目前，微服务网关服务支持两种调用方式：通过API网关进行外部调用、通过VPC代理模式进行VPC应用间的调用。本文将介绍如何基于   [京东云API网关](../../../API-Gateway/Introduction/Product-Overview.md)  和 京东云微服务平台的微服务网关， 搭建应用的微服务网关。
+目前，微服务网关服务支持两种调用方式：通过API网关进行外部调用、通过VPC代理模式进行应用间的调用。本文将介绍如何基于   [京东云API网关](../../../API-Gateway/Introduction/Product-Overview.md)  和 京东云微服务平台的微服务网关， 搭建应用的微服务网关。
 
 ## 操作场景
 如果用户正在实施微服务转型，并在京东云微服务平台上已经创建了一组微服务应用。那么，可以按照如下流程创建一组微服务网关服务，来提供外部请求与各个微服务之间的调用服务。
@@ -248,8 +248,6 @@ curl -X GET http://w27vqwu8gkzy-preview.cn-north-1.jdcloud-api.net/jdsf-server/s
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-fb-jdsf.png)
 	
 
-DEMO范例可参考： [最佳实践](../../Getting-Started/GW_VPC.md)  
-
 
 #####   STEP4：调用。
 
@@ -316,6 +314,9 @@ curl -X GET http://jdsf-mgw-l6mnhdd1zpc-nlb.jvessel-open-sh.jdcloud.com:8080/10.
 curl -X GET http://w2xmjqwbx62p-test.cn-north-1.jdcloud-api.net/server/get
 ```    
  
+
+
+-   以上内容还可参考DEMO范例： [最佳实践](../../Getting-Started/GW_VPC.md)  
 
 
 

@@ -29,31 +29,43 @@
         href: Pricing/Purchase-Process.md 
   - name: 入门指南
     items:
-      - name: 创建实例
-        href: Getting-Started/Create-Instance.md
-      - name: 实例列表
-        href: Getting-Started/List-Instance.md
-      - name: 删除实例
-        href: Getting-Started/Delete-Instance.md
+      - name: 创建产品与设备
+        href: Getting-Started/Create-Product-and-Device.md
+      - name: 定义物模型
+        href: Getting-Started/Product_Model.md
   - name: 操作指南
     items:
-      - name: 设备注册
-        items:
-          - name: 添加设备
-            href: Operation-Guide/Device-Registration/Add-Devices.md
-      - name: 规则引擎
-        items:
-          - name: 添加规则
-            href: Operation-Guide/Rule-Engine/Add-Rules.md            
-  - name: 最佳实践
+      - name: 创建产品
+        href: Operation-Guide/Create-Product.md
+      - name: 添加单个设备
+        href: Operation-Guide/Create-Device/Create-Single-Device.md
+      - name: 批量添加设备
+        href: Operation-Guide/Create-Device/Create-Batch-Devices.md
+      - name: 设备管理
+        href: Operation-Guide/Create-Device/Manage-Devices.md
+      - name: 产品物模型介绍
+        href: Operation-Guide/Thing-Model/Thing-Model-Introduction.md       
+      - name: 新增物模型
+        href: Operation-Guide/Thing-Model/Create-Thing-Model.md    
+      - name: 创建规则引擎
+        href: Operation-Guide/Rule-Engine/Add-Rules.md
+  - name: 设备开发指南
     items:
-    - name: 设计物模型
-      href: Best-Practices/Design-OM.md
-  - name: 问题排查
-    items:
-    - name: 设备无法接入物联网中心服务问题
-      href: Troubleshooting/Device-Connection.md     
-  - name: 常见问题
+      - name: Device SDK 介绍
+        href: Developer-Guide-Device/Introduction.md
+      - name: 快速接入设备
+        href: Developer-Guide-Device/DeviceEasyLink.md       
+      - name: 设备鉴权
+        href: Developer-Guide-Device/AuthenticateDevices.md   
+      - name: 建立连接
+        href: Developer-Guide-Device/EstablishConnection.md
+      - name: 订阅和发布
+        href: Developer-Guide-Device/SubPub.md
+      - name: 心跳和网络重连
+        href: Developer-Guide-Device/HeartBeat-Reconnection.md
+      - name: 补助API
+        href: Developer-Guide-Device/API.md     
+- name: 常见问题
     href: FAQ/FAQ.md
   - name: 用户协议
     status: 0
@@ -67,9 +79,4 @@
     items:
     - name: 文档历史记录
       href: Related-Resources/Document-History.md   
-    - name: 备案
-      href: Related-Resources/Filing.md           
-      status: 0        
-    - name: 词汇表
-      href: Related-Resources/Glossary.md           
-      status: 0
+

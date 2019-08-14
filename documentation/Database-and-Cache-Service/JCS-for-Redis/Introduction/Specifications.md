@@ -1,6 +1,8 @@
 # 产品规格
 
-- 主从版
+## 主从版
+
+### Redis 2.8
 
 规格|规格代码|说明
 :---|:--|:---
@@ -12,7 +14,19 @@
 32G主从版|redis.m1.2xlarge.basic|	主从实例，可选
 64G主从版|redis.m1.4xlarge.basic	|主从实例，可选
 
-- 集群版
+### Redis 4.0
+
+规格|规格代码|说明
+:---|:--|:---
+1G主从版|redis.m.micro.basic|主从实例，可选
+2G主从版|redis.m.small.basic	|主从实例，可选
+4G主从版|redis.m.medium.basic|	主从实例，可选
+8G主从版|redis.m.large.basic	|主从实例，可选
+16G主从版|redis.m.xlarge.basic|	主从实例，可选
+32G主从版|redis.m.2xlarge.basic|	主从实例，可选
+64G主从版|redis.m.4xlarge.basic	|主从实例，可选
+
+## 集群版
 
 集群版规格|Proxy 个数|分片服务器个数|单个分片服务器内存大小(GB)
 :---|:--|:--|:---
@@ -23,7 +37,7 @@
 256G集群版|16|16|16
 512G集群版|32|32|16
 
-
+### Redis 2.8
 集群版规格|规格代码|说明
 :---|:--|:---
 16G集群版|redis.c1.small.basic|高性能集群实例，可选
@@ -32,3 +46,14 @@
 128G集群版|redis.c1.xlarge.basic|高性能集群实例，可选
 256G集群版|redis.c1.2xlarge.basic|高性能集群实例，可选
 512G集群版|redis.c1.4xlarge.basic|高性能集群实例，可选 ，提工单申请
+
+
+### Redis 4.0
+集群版规格|规格代码|说明
+:---|:--|:---
+16G集群版|redis.c.small.basic|高性能集群实例，可选
+32G集群版|redis.c.medium.basic|高性能集群实例，可选
+64G集群版|redis.c.large.basic|高性能集群实例，可选
+128G集群版|redis.c.xlarge.basic|高性能集群实例，可选
+256G集群版|redis.c.2xlarge.basic|高性能集群实例，可选
+512G集群版|redis.c.4xlarge.basic|高性能集群实例，可选 ，提工单申请

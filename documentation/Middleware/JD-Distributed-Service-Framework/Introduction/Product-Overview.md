@@ -24,7 +24,7 @@
 	- [删除分析服务](../Operation-Guide/Analysis-Service/del-Analysis-Service.md)
 	- [修改服务](../Operation-Guide/Analysis-Service/Update-Analysis-Service.md)
 - 微服务网关
-	- [微服务网关介绍](../JDSFGW/overview.md)
+	- [微服务网关介绍](../Operation-Guide/JDSFGW/overview.md)
 	- [使用API网关开放VPC内的接口](../JDSFGW/Getting-Started/GW_VPC.md)
 	- [新建微服务网关](../Operation-Guide/JDSFGW/CreateGW.md)
 

@@ -63,7 +63,7 @@
         href: Developer-Guide-Device/SubPub.md
       - name: 心跳和网络重连
         href: Developer-Guide-Device/HeartBeat-Reconnection.md
-      - name: 补助API
+      - name: 辅助API
         href: Developer-Guide-Device/API.md     
   - name: 相关资源
     items:

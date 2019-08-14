@@ -4,5 +4,5 @@
 
 数据加密服务初始状态是不允许任何访问的，您需要手动将访问此加密实例的IP地址通过白名单设置访问权限。
 
-![IP白名单管理](/image/CloudHSM/Console/IP白名单管理.png)
+![IP白名单管理](/image/HSM/Console/IP白名单管理.png)
 

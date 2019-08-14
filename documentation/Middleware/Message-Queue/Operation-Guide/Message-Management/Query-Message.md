@@ -26,6 +26,7 @@
 ![查询3](../../../../../image/Internet-Middleware/Message-Queue/查询-03.png)
 输入或选取想要查询的topic名称,输入用户自己定义的Business ID，点击搜索。  
 可以点击某条message的操作，查看消息详情或者消息轨迹。
+
 规则：
 - 消息properties中包含Business ID的消息才能在按Business ID中查询出来。
 - 按Business ID查询最多返回256条包含指定Business ID 的消息，建议消息生产者Business ID设置尽可能全局唯一，否则可能出现无法返回全集的情况。

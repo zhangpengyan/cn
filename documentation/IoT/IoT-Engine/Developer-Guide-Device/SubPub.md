@@ -425,3 +425,11 @@ hal_snprintf(topic,CONFIG_MQTT_TOPIC_MAXLEN,fmt,meta_info->product_key,meta_info
 iot_mqtt_unsubscribe(handle, topic)；
 ```
 
+## 相关参考
+
+- [快速接入设备](../Developer-Guide-Device/DeviceEasyLink.md)
+- [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
+- [建立连接](../Developer-Guide-Device/EstablishConnection.md)
+- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [相关API](../Developer-Guide-Device/API.md)
+- [术语表](../Developer-Guide-Device/Glossary.md)

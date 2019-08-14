@@ -64,7 +64,9 @@
       - name: 心跳和网络重连
         href: Developer-Guide-Device/HeartBeat-Reconnection.md
       - name: 辅助API
-        href: Developer-Guide-Device/API.md     
+        href: Developer-Guide-Device/API.md  
+      - name: 术语表
+        href: Developer-Guide-Device/Glossary.md 
   - name: 相关资源
     items:
     - name: 文档历史记录

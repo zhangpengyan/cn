@@ -6,7 +6,7 @@
 
 在详情页，您可以看到数据加密服务实例的详细信息，以及可以修改实例的名称及描述。
 
-![加密服务实例详情](/image/HSM/Console/加密服务实例详情.png)
+![加密服务实例详情](/image/JDCloudHSM/Console/加密服务实例详情.png)
 
 ## 启动及停止
 
@@ -18,4 +18,4 @@
 
 [操作步骤](Whilte-List.md)
 
-![安全管理入口](/image/HSM/Console/安全管理入口.png)
+![安全管理入口](/image/JDCloudHSM/Console/安全管理入口.png)

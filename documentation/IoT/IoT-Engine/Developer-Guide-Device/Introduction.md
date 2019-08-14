@@ -21,5 +21,15 @@
 
 应用只需关心使用SDK API组合业务逻辑，无需关心通信细节，HAL层需要用户根据自身的OS和设备信息进行适配，SDK提供了linux的HAL层适配。
 
+## 相关参考
+
+- [快速接入设备](../Developer-Guide-Device/DeviceEasyLink.md)
+- [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
+- [建立连接](../Developer-Guide-Device/EstablishConnection.md)
+- [订阅发布消息](../Developer-Guide-Device/SubPub.md)
+- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [相关API](../Developer-Guide-Device/API.md)
+- [术语表](../Developer-Guide-Device/Glossary.md)
+
 
 

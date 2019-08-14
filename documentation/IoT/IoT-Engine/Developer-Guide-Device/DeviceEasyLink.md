@@ -3,6 +3,7 @@
 用户首次开通服务后，即可进入快速接入设备页面。（您之后也可在左侧菜单栏点击【快速计入设备】菜单，再次进入快速接入设备）
 
 ![快速接入设备首页](../../../../image/IoT/IoT-DeviceSDK/easylink0.png)
+![快速接入设备首页](../../../../image/IoT/IoT-DeviceSDK/easylink0.png)
 
 1. 新建产品和设备
 

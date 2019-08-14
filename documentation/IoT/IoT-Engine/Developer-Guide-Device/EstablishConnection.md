@@ -82,3 +82,11 @@ pclient = iot_mqtt_construct(&mqtt_params);
        iot_mqtt_destroy (pInitParams);
 ```
 
+## 相关参考
+
+- [快速接入设备](../Developer-Guide-Device/DeviceEasyLink.md)
+- [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
+- [订阅发布消息](../Developer-Guide-Device/SubPub.md)
+- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [相关API](../Developer-Guide-Device/API.md)
+- [术语表](../Developer-Guide-Device/Glossary.md)

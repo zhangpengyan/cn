@@ -43,12 +43,12 @@ jdlivekeyexample123 (由用户自行设置)
 2015年10月10日00:00:00，计算出来的秒数为 1444435200
 
 4、服务器会构造一个用于计算 Hashvalue 的签名字符串：
-/publishDomain/sports/football-1444435200-0-0-jdlivekeyexample123
+/cdn.example.com/sports/football-1444435200-0-0-jdlivekeyexample123
 
 5、服务器会根据该签名字符串计算 HashValue
-HashValue=md5sum("/publishDomain /sports/football-1444435200-0-0-jdlivekeyexample123")
-=80cd3862d699b7118eed99103f2a3a4f
+HashValue=md5sum("/cdn.example.com/sports/football-1444435200-0-0-jdlivekeyexample123")
+=f4d138be849cf65efb79260f9d17567d
 
 6、请求时 url 为：
-http:// cdn.example.com/sports/football?auth_key=1444435200-0-0-80cd3862d699b7118eed99103f2a3a4f
-计算出来的 HashValue 与用户请求中带的 md5hash = 80cd3862d699b7118eed99103f2a3a4f 值一致，于是鉴权通过。
+http://cdn.example.com/sports/football?auth_key=1444435200-0-0-f4d138be849cf65efb79260f9d17567d
+计算出来的 HashValue 与用户请求中带的 md5hash = f4d138be849cf65efb79260f9d17567d 值一致，于是鉴权通过。

@@ -32,3 +32,11 @@ Sdk文件hal_os_linux.c中的 _product_key、_ identifier、 _device_secret是�
 
 具体实现可以参照 platform/linux/hal_os_linux.c 的参考实现。
 
+## 相关参考
+
+- [快速接入设备](../Developer-Guide-Device/DeviceEasyLink.md)
+- [建立连接](../Developer-Guide-Device/EstablishConnection.md)
+- [订阅发布消息](../Developer-Guide-Device/SubPub.md)
+- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [相关API](../Developer-Guide-Device/API.md)
+- [术语表](../Developer-Guide-Device/Glossary.md)

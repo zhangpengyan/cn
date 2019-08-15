@@ -143,7 +143,6 @@ Jcloudhids是京东云提供的主机安全核心组件，是“主机安全”�
 Jdog-Monitor是京东云提供的针对核心安全组件的升级插件，可实现安全相关组件的维护和升级。
 
 ### 安装方式
-当前仅提供Linux系统的安装方式。<br>
 **Linux：**<br>
 
 1、下载安装包：（非华北地域主机请绑定公网IP后下载）<br>
@@ -155,3 +154,10 @@ mkdir -p /usr/local/share/jcloud/jdog-monitor
 tar zxvf jdog-op-agent-master-fbe96b07-0306202642.tar -C /usr/local/share/jcloud/jdog-monitor
 /usr/local/share/jcloud/jdog-monitor/scripts/jdog_service install
 ```
+
+**Windows：**<br>
+1、下载安装包：（非华北地域主机请绑定公网IP后下载）<br>
+https://iaas-cns-download.s3.cn-north-1.jdcloud-oss.com/JdogMonitor/jdog-monitor.exe <br>
+
+2、以管理员(administrator)权限运行jdog-monitor.exe 进行安装。
+

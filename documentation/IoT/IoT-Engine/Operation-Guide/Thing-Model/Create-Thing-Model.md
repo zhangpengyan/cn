@@ -13,7 +13,8 @@
 ![Create-Ting-Model](../../../../../image/IoT/IoT-Engine/Ting-Model-Creation.png)
 
 
-6. 设置参数完成后，单击 **确认**。
+6. 设置参数完成后，单击 **确认**，完成单条功能的添加。
+7. 您也可以通过**导入物模型**按钮，上传您编辑好的物模型，批量导入物模型功能。 点击获取[物模型模板](https://pubilc-tm-template.s3.cn-north-1.jdcloud-oss.com/TM-Sample.json)。
 
 
 ## 属性参数设置如下：

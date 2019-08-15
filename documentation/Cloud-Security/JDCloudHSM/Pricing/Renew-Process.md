@@ -2,11 +2,11 @@
 
 1. 在数据加密服务控制台中，点击需要续费的加密服务实例的“续费”按钮
 
-![控制台选择续费](/image/JDCloudHSM/Renew/控制台选择续费.png)
+![控制台选择续费](/image/JDCloudHSM/Renew/控制台选择续费2.png)
 
 2. 在弹出来的续费确认页，选择需要的续费时长
 
-![选择续费时长](/image/JDCloudHSM/Renew/选择续费时长.png)
+![选择续费时长](/image/JDCloudHSM/Renew/选择续费时长2.png)
 
 3. 选择适合的支付方式
 

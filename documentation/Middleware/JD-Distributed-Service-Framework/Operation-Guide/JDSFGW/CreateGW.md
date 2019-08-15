@@ -219,7 +219,7 @@ curl -X GET http://w27vqwu8gkzy-preview.cn-north-1.jdcloud-api.net/jdsf-server/s
  
 创建完成后：
  
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-mic-detail-vpc-1.png.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-mic-detail-vpc-1.png
 
  
  

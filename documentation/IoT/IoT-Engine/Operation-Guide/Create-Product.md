@@ -6,7 +6,7 @@
 
 操作步骤
 
-1. 登入 [物联网引擎控制台](https://iot-console-stag.jdcloud.com/core/)
+1. 登入 [物联网引擎控制台](https://iot-console.jdcloud.com/core/)
 2. 左侧导航栏选中 **管理** -> **产品**， 单击 **创建产品**。
 3. 按照页面提示填写信息，然后点击 **确认**
 

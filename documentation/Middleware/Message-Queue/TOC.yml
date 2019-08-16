@@ -51,8 +51,10 @@
             href: Operation-Guide/Message-Management/Send-Message.md      
           - name: 查询消息
             href: Operation-Guide/Message-Management/Query-Message.md    
+          - name: 消息轨迹
+            href: Operation-Guide/Message-Management/Message-Trace.md
           - name: 重发消息
-            href: Operation-Guide/Message-Management/Redrive-Message.md   
+            href: Operation-Guide/Message-Management/Redrive-Message.md
       - name: 监控报警
         items:
           - name: 查看监控信息

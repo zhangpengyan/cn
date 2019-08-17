@@ -22,44 +22,6 @@
 
    ![快速接入设备第四步](../../../../image/IoT/IoT-DeviceSDK/easylink04.png)
 
-## SDK目录结构
-
-SDK 路径结构如下列表，每个路径是一个模块，在其下可以单独编译生成以路径为名的静态库和动态库，以及用于测试模块的测试程序。生成的所有库文件都会存放在build/lib，生成的可执行文件存放在build/bin，顶层的ReadMe 是基本的编译规则说明
-
- 
-
-├── build                        --  生成编译的目录	
-
-│   ├── lib                      --  生成的库文件
-
-│   └── bin                      --  生成的可执行文件
-
-├── include                    -- 生明的头文件
-
-│   
-
-├── samples                   -- App 
-
-├── platform                  -- HAL相关文件
-
-├── src        
-
-│   ├── auth                   -- 设备认证
-
-│   ├── certs                   -- ca证书
-
-│   ├── cjson           
-
-│   ├── mqtt                   -- mqtt协议
-
-│   └── tls                     -- tls认证
-
-│   ├── utils                   -- 工具
-
-├── toolchain                 -- 交叉编译工具
-
-├─ ReadMe                    -- 编译说明     
-
 
 ## 相关参考
 

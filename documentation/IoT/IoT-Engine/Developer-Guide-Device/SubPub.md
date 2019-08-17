@@ -9,31 +9,27 @@
 接口：
 
 ```
-iot_mqtt_subscribe_router(void *handle,
-
-​                    iot_mqtt_sub_t topic_type,
-
-​                    const char * product_key,
-
-​                    const char * device_id,
-
-​                    iot_mqtt_event_handle_func_fpt topic_handle_func,
-
-​                    void *pcontext);`
+iot_mqtt_subscribe_router(
+    void *handle,
+    iot_mqtt_sub_t topic_type,
+    const char * product_key,
+    const char * device_id,
+    iot_mqtt_event_handle_func_fpt topic_handle_func,
+    void *pcontext);`
 ```
 
 接口说明：订阅需要的topic，并注返回函数
 
-返回值：成功返回packetid，否则返回iot_err_t中的错误类型
+返回值：成功返回packetid，否则返回iot_error_t中的错误类型
 
 参数说明：
 
 | **参数名**        | **参数类型**                   | **必填** | **描述**            |
 | ----------------- | ------------------------------ | -------- | ------------------- |
-| handle            | iot_mc_client_pt               | 是       | Mqt client          |
+| handle            | iot_mc_client_pt               | 是       | MQTT client          |
 | topic_type        | iot_mqtt_sub_t                 | 是       | 需要订阅的topic类型 |
 | product_key       | char*                          | 是       | Product key         |
-| device_id         | char*                          | 是       | Device identity     |
+| device_id         | char*                          | 是       | Device identifier     |
 | topic_handle_func | iot_mqtt_event_handle_func_fpt | 是       | 返回函数            |
 | pcontext          | void*                          | 是       | 通过返回函数返回    |
 
@@ -47,36 +43,32 @@ hal_get_device_id(SMP_DEVICE_ID);
 iot_mqtt_subscribe_router(handle,MQTT_SUB_TYPE_PROPERTY_REPLY,MP_PRODUCT_KEY, SMP_DEVICE_ID, iot_subscribe_reply, NULL);
 ```
 
-​               
 
 ## 发布消息
 
 接口：
 
 ```
-  int32_t iot_mqtt_publish_router(void *handle,
-
-​                            iot_mqtt_pub_t topic_type,
-
-​                            const char * product_key,
-
-​                            const char * device_id,
-
-​                            cJSON *payload)
+int32_t iot_mqtt_publish_router(
+    void *handle,
+    iot_mqtt_pub_t topic_type,
+    const char * product_key,
+    const char * device_id,
+    cJSON *payload)
 ```
 
 接口说明：发布消息
 
-返回值：成功返回packetid，否则返回iot_err_t中的错误类型
+返回值：成功返回packetid，否则返回iot_error_t中的错误类型
 
 参数说明：
 
 | **参数名**  | **参数类型**     | **必填** | **描述**          |
 | ----------- | ---------------- | -------- | ----------------- |
-| handle      | iot_mc_client_pt | 是       | Mqt client        |
+| handle      | iot_mc_client_pt | 是       | MQTT client        |
 | topic_type  | iot_mqtt_pub_t   | 是       | 推送到指定的topic |
 | product_key | char*            | 是       | Product key       |
-| device_id   | char*            | 是       | Device identity   |
+| device_id   | char*            | 是       | Device identifier   |
 | payload     | cjson            | 是       | 推送的消息        |
 
 示例代码：
@@ -91,21 +83,13 @@ iot_mqtt_publish_router(handle,MQTT_PUB_TYPE_DEVICE_UPDATE_SHADOW,SMP_PRODUCT_KE
 
 ```
 typedef enum {                
-
-​    MQTT_SUB_TYPE_PROPERTY_REPLY = 0,        
-
-​    MQTT_SUB_TYPE_EVENT_REPLY,
-
-​    MQTT_SUB_TYPE_SERVICE,
-
-​    MQTT_SUB_TYPE_SHADOW_UPDATE,
-
-​    MQTT_SUB_TYPE_DEVICE_UPDATE_SHADOW_REPLY,
-
-​    MQTT_SUB_TYPE_GET_SHADOW_REPLY,
-
-​    MQTT_SUB_DYNAMIC_AUTH,
-
+    MQTT_SUB_TYPE_PROPERTY_REPLY = 0,
+    MQTT_SUB_TYPE_EVENT_REPLY,
+    MQTT_SUB_TYPE_SERVICE,
+    MQTT_SUB_TYPE_SHADOW_UPDATE,
+    MQTT_SUB_TYPE_DEVICE_UPDATE_SHADOW_REPLY,
+    MQTT_SUB_TYPE_GET_SHADOW_REPLY,
+    MQTT_SUB_DYNAMIC_AUTH,
 } iot_mqtt_sub_t;
 ```
 
@@ -113,19 +97,12 @@ typedef enum {
 
 ```
 typedef enum {
-
-​    MQTT_PUB_TYPE_PROPERTY = 0,
-
-​    MQTT_PUB_TYPE_EVENT,
-
-​    MQTT_PUB_TYPE_SERVICE_REPLY,
-
-​    MQTT_PUB_TYPE_SHADOW_REPLY,
-
-​    MQTT_PUB_TYPE_DEVICE_UPDATE_SHADOW,
-
-​    MQTT_PUB_TYPE_GET_SHADOW,
-
+    MQTT_PUB_TYPE_PROPERTY = 0,
+    MQTT_PUB_TYPE_EVENT,
+    MQTT_PUB_TYPE_SERVICE_REPLY,
+    MQTT_PUB_TYPE_SHADOW_REPLY,
+    MQTT_PUB_TYPE_DEVICE_UPDATE_SHADOW,
+    MQTT_PUB_TYPE_GET_SHADOW,
 } iot_mqtt_pub_t;
 ```
 
@@ -137,8 +114,7 @@ typedef enum {
 
 1)订阅服务Topic：
 ```
-
- iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_SERVICE, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL);
+iot_mqtt_subscribe_router(handle, MQTT_SUB_TYPE_SERVICE, SMP_PRODUCT_KEY, SMP_IDENTIFIER, iot_subscribe_reply, NULL);
 ```
 
  Handle为mqtt的客户端，iot_subscribe_reply为注册的回调方法。
@@ -151,25 +127,16 @@ b) payload中的json格式如下：
 
 ```
 {                                            
-
-"msgId ": "123",
-
-"version": "1.0",
-
-"name": "testService",         
-
-"data ": {                        
-
-"Power": "on",
-
-"WF":23.6
-
-}
-
+    "msgId ": "123",
+    "version": "1.0",
+    "name": "testService",         
+    "data ": {                        
+        "Power": "on",
+        "WF":23.6
+     }
 }                              
 ```
-
-​              
+            
 
 c）设备根据服务名和入参处理完逻辑后，将服务的出参封装成json对象，传给iot_mqtt_build_service_reply_json 方法生成payload，再调用iot_mqtt_publish_router进行回复。
 
@@ -188,21 +155,13 @@ a) 请求数据格式：
 
 ```
 {                                       
-
-"msgId ": "123",
-
-"version": "1.0",
-
-"data ": {
-
-"Power": "on",
-
-"WF":23.6,
-
-},             
-
-"ts":1559805611390
-
+   "msgId ": "123",
+   "version": "1.0",
+   "data ": {
+       "Power": "on",
+       "WF":23.6,
+   },
+   "ts":1559805611390
 }
 ```
 
@@ -224,23 +183,14 @@ a) 请求数据格式：
 
 ```
 {
-
-"msgId ": "123",
-
-"version": "1.0",
-
-"name": "testEvent",
-
-"data ": {
-
-"Power": "on",
-
-"WF":23.6
-
-},
-
-"ts":1559805611390
-
+    "msgId ": "123",
+    "version": "1.0",
+    "name": "testEvent",
+    "data ": {
+        "Power": "on", 
+        "WF":23.6
+    },
+    "ts":1559805611390
 }
 ```
 
@@ -262,15 +212,10 @@ a) 请求数据格式：
 
 ```
 {
-
-"msgId ": "123",
-
-"version": "1.0",
-
-"data ": {
-
-}
-
+    "msgId ": "123",
+    "version": "1.0",
+    "data ": {
+    }
 }                                       
 ```
 
@@ -280,75 +225,40 @@ c）iot_subscribe_reply会收到hub返回的影子值格式如下。
 
 ```
 {                                  
-
-"msgId ": "123",
-
-"code": 200,
-
-"data": {
-
-"state":{
-
-"desired": {//期望值
-
-"Power": "on",//属性期望值,无期望值时为null
-
-"WF": 23.6
-
-},
-
-"reported": {//当前值
-
-"Power": "off",
-
-"WF": 11
-
-}
-
-},
-
-"metadata": {
-
-"reported": {
-
-"Power": {         
-
-"timestamp": 1451649600512 //当前值的更新时间戳，精确到毫秒
-
-},
-
-"WF": {   
-
-"timestamp": 1451649600512 //当前值的更新时间戳，精确到毫秒
-
-}                
-
-},
-
-"desired": {
-
-"Power": {
-
-timestamp": 1451649600512 //期望值的更新时间戳，精确到毫秒
-
-},
-
-"WF": {
-
-"timestamp": 1451649600512 //期望值的更新时间戳，精确到毫秒
-
-}
-
-}
-
-},
-
-"version": 3,//影子版本号
-
-"timestamp": 1451649600512 //影子最后更新时间戳，精确到毫秒
-
-}                         
-
+    "msgId ": "123",
+    "code": 200,
+    "data": {
+        "state":{
+            "desired": {//期望值
+                "Power": "on",//属性期望值,无期望值时为null
+                "WF": 23.6
+            },
+            "reported": {//当前值
+                "Power": "off",
+                "WF": 11
+            }
+        },
+        "metadata": {
+            "reported": {
+                "Power": {
+                    "timestamp": 1451649600512 //当前值的更新时间戳，精确到毫秒
+                },
+                "WF": {
+                    "timestamp": 1451649600512 //当前值的更新时间戳，精确到毫秒
+                }
+            }, 
+            "desired": {
+                "Power": {
+                    timestamp": 1451649600512 //期望值的更新时间戳，精确到毫秒
+                },
+                "WF": {
+                    "timestamp": 1451649600512 //期望值的更新时间戳，精确到毫秒
+                }
+            }
+        },
+        "version": 3,//影子版本号
+        "timestamp": 1451649600512 //影子最后更新时间戳，精确到毫秒
+    }
 }
 ```
 
@@ -370,27 +280,16 @@ b) 影子下发数据格式：
 
 ```
 {
-
-"msgId ": "123",
-
-"version": "1.0",
-
-"data ": {
-
-"desired": {//云端下发的属性期望值
-
-"Power": "on",
-
-"WF": 23.6
-
-},
-
-"version": 2,//当前版本，整数递增
-
-"timestamp": 1561107827//下发时间，精确到毫秒
-
-}
-
+    "msgId ": "123",
+    "version": "1.0",
+    "data ": {
+        "desired": {//云端下发的属性期望值
+            "Power": "on",
+            "WF": 23.6
+        },
+        "version": 2,//当前版本，整数递增
+        "timestamp": 1561107827//下发时间，精确到毫秒
+    }
 }
 ```
 
@@ -406,13 +305,13 @@ int iot_mqtt_unsubscribe(void *handle, const char *topic_filter);
 ```
 接口说明：取消订阅的topic
 
-返回值：成功返回packetid，否则返回iot_err_t中的错误类型
+返回值：成功返回packetid，否则返回iot_error_t中的错误类型
 
 参数说明：
 
 | **参数名**   | **参数类型**     | **必填** | **描述**        |
 | ------------ | ---------------- | -------- | --------------- |
-| handle       | iot_mc_client_pt | 是       | Mqt   client    |
+| handle       | iot_mc_client_pt | 是       | MQTT   client    |
 | topic_filter | char*            | 是       | 需要取消的topic |
 
 示例代码：

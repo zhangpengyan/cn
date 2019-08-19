@@ -61,7 +61,7 @@
         href: Developer-Guide-Device/EstablishConnection.md
       - name: 订阅和发布
         href: Developer-Guide-Device/SubPub.md
-      - name: 心跳和网络重连
+      - name: 网络连接和心跳
         href: Developer-Guide-Device/HeartBeat-Reconnection.md
       - name: 辅助API
         href: Developer-Guide-Device/API.md  

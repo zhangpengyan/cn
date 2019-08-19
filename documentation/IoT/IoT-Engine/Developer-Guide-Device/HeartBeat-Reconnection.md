@@ -47,15 +47,10 @@
 
 ```
 Res = iot_mqtt_check_state_normal(handle);
-
 If(Res){                       
-
 // MQTT client in normal state
-
 }else{
-
 //MQTT client in abnormal state
-
 }
 ```
 ## 相关参考

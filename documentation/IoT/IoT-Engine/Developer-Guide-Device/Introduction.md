@@ -27,7 +27,7 @@
 - [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
 - [建立连接](../Developer-Guide-Device/EstablishConnection.md)
 - [订阅发布消息](../Developer-Guide-Device/SubPub.md)
-- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [网络连接和心跳](../Developer-Guide-Device/HeartBeat-Reconnection.md)
 - [相关API](../Developer-Guide-Device/API.md)
 - [术语表](../Developer-Guide-Device/Glossary.md)
 

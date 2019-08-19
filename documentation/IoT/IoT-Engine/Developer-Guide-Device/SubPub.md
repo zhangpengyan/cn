@@ -37,9 +37,7 @@ iot_mqtt_subscribe_router(
 
 ```
 hal_get_product_key(SMP_PRODUCT_KEY);
-
 hal_get_device_id(SMP_DEVICE_ID);
-
 iot_mqtt_subscribe_router(handle,MQTT_SUB_TYPE_PROPERTY_REPLY,MP_PRODUCT_KEY, SMP_DEVICE_ID, iot_subscribe_reply, NULL);
 ```
 
@@ -75,7 +73,6 @@ int32_t iot_mqtt_publish_router(
 
 ```
 cJSON * data = iot_mqtt_build_device_shadow_update_json(rep_json,ts);
-
 iot_mqtt_publish_router(handle,MQTT_PUB_TYPE_DEVICE_UPDATE_SHADOW,SMP_PRODUCT_KEY,SMP_DEVICE_ID,data;
 ```
 
@@ -318,9 +315,7 @@ int iot_mqtt_unsubscribe(void *handle, const char *topic_filter);
 
 ```
 char *fmt = get_mqtt_sub_format(MQTT_SUB_TYPE_PROPERTY_REPLY);
-
 hal_snprintf(topic,CONFIG_MQTT_TOPIC_MAXLEN,fmt,meta_info->product_key,meta_info->device_name);
-
 iot_mqtt_unsubscribe(handle, topic)；
 ```
 

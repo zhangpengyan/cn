@@ -8,7 +8,7 @@
 
    填入产品名称和设备名称，默认系统会自动为产品添加switch和message这两条属性，稍后，您可以在产品详情中，修改编辑产品物模型定义。
 
-      ![快速接入设备第一步](../../../../image/IoT/IoT-DeviceSDK/easylink01.png)
+   ![快速接入设备第一步](../../../../image/IoT/IoT-DeviceSDK/easylink01.png)
 
 2. 记录设备的配置信息及接入域名，并下载SDK开发包。
 
@@ -29,6 +29,6 @@
 - [设备鉴权](../Developer-Guide-Device/AuthenticateDevices.md)
 - [建立连接](../Developer-Guide-Device/EstablishConnection.md)
 - [订阅发布消息](../Developer-Guide-Device/SubPub.md)
-- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [网络连接和心跳](../Developer-Guide-Device/HeartBeat-Reconnection.md)
 - [相关API](../Developer-Guide-Device/API.md)
 - [术语表](../Developer-Guide-Device/Glossary.md)

@@ -45,6 +45,6 @@ SDK包含了这些 HAL APIs 的简单实现文件（hal_os_linux.c），其中 `
 - [快速接入设备](../Developer-Guide-Device/DeviceEasyLink.md)
 - [建立连接](../Developer-Guide-Device/EstablishConnection.md)
 - [订阅发布消息](../Developer-Guide-Device/SubPub.md)
-- [心跳及重连](../Developer-Guide-Device/HeartBeat-Reconnection.md)
+- [网络连接和心跳](../Developer-Guide-Device/HeartBeat-Reconnection.md)
 - [相关API](../Developer-Guide-Device/API.md)
 - [术语表](../Developer-Guide-Device/Glossary.md)

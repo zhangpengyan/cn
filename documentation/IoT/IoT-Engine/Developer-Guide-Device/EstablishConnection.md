@@ -65,7 +65,7 @@ pclient = iot_mqtt_construct(&mqtt_params);
  示例代码：
 
 ```
-       iot_mqtt_destroy (pInitParams);
+iot_mqtt_destroy (pInitParams);
 ```
 
 ## 相关参考

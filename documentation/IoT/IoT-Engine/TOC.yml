@@ -48,7 +48,7 @@
       - name: 新增物模型
         href: Operation-Guide/Thing-Model/Create-Thing-Model.md    
       - name: 创建规则引擎
-        href: Operation-Guide/Rule-Engine/Add-Rules.md
+        href: Operation-Guide/Rule-Engine/Create-Rule.md
   - name: 设备开发指南
     items:
       - name: Device SDK 介绍

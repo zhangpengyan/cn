@@ -9,15 +9,6 @@
 tel: 400 615 1212<br />
 服务时间: 7*24小时支持<br /><br />
 
-![image](../../../image/contactus/工单.png)
-
-[工单](https://ticket.jdcloud.com/myorder/submit)<br />
-服务时间: 7*24小时支持<br /><br />
-
-![image](../../../image/contactus/jimi.png)
-
-智能客服JIMI<br />
-服务时间: 7*24小时支持<br /><br />
 
 ![image](../../../image/contactus/邮箱.png)
 
@@ -27,10 +18,21 @@ mail:jdcloud@jd.com<br />
 
 ![image](../../../image/contactus/微信.png)
 
-京东云微信服务号<br />
-wechat: jdcloud<br />
-服务时间: 7*24小时支持
+
+京东云微信服务号ID: jdcloud<br />
+服务时间: 7*24小时支持<br /><br />
+
+![image](../../../image/contactus/jimi.png)
+
+智能客服JIMI<br />
+服务时间: 7*24小时支持<br /><br />
+
+![image](../../../image/contactus/工单.png)
+
+提交[工单](https://ticket.jdcloud.com/myorder/submit)<br />
+服务时间: 7*24小时支持<br /><br />
 
 ![image](../../../image/contactus/微博.png)
-官网微博: [京东云](https://weibo.com/jingdongyun)
-服务时间: 7*24小时支持
+
+官网微博: [京东云](https://weibo.com/jingdongyun)<br />
+服务时间: 7*24小时支持<br /><br />

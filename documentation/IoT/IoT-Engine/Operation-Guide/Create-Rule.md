@@ -8,7 +8,7 @@
 2. 左侧到导航选择 **管理** -> **规则引擎**
 3. 点击页面上方的 **创建规则引擎**
 
-[create-rule](../../../../image/IoT/IoT-Engine/Create_Rule.png)
+![create-rule](../../../../image/IoT/IoT-Engine/Create_Rule.png)
 
 ## 数据转发
 

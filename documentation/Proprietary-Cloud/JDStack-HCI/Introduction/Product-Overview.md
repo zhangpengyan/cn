@@ -32,16 +32,16 @@
 
 ## 相关参考
 
-[基础架构](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Introduction/Basic-Infrastructure.md>)
+[基础架构](Basic-Infrastructure.md)
 
-[产品功能](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Introduction/Features.md>)
+[产品功能](Features.md)
 
-[产品优势](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Introduction/Benefits.md>)
+[产品优势](Benefits.md)
 
-[应用场景](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Introduction/Application-Scenarios.md>)
+[应用场景](Application-Scenarios.md)
 
-[角色权限](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Getting-Started/Role-Permission.md>)
+[角色权限](../Getting-Started/Role-Permission.md)
 
-[创建网络](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Getting-Started/Create-Network.md>)
+[创建网络](../Getting-Started/Create-Network.md)
 
-[创建云主机](<https://github.com/jdcloudcom/cn/blob/cn-jdstack-hci/documentation/Proprietary-Cloud/JDStack-HCI/Getting-Started/Create-Instance.md>)
+[创建云主机](../Getting-Started/Create-Instance.md)

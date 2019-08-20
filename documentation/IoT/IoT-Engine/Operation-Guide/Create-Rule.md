@@ -76,7 +76,22 @@ return {
 1. 进入 **消息队列 JCQ** -> **Topic管理页**
 2. 点击目标 Topic 名称进入该 Topic 详情页。 若Topic管理页没有创建好的Topic，则点击 **新建按钮** ，创建Topic。
 
-AK/SK信息：
-1. 
+AK/SK信息在 Access Key 管理页 可以创建/获取。
+
 ![scrpit](../../../../image/IoT/IoT-Engine/Add-Action-FW-JCQ.png)
+点击 **确定** ，转发列表中即可看到该JCQ动作。同时可对其进行编辑和删除。
+
+
+### 2.2.3 转发到ES
+
+转发ES需填写京东云ES内网接入点、京东云ES Index和京东云ES Type 等信息
+
+获取云搜索 Elasticsearch的参数信息：
+1. 进入 **云搜索 Elasticsearch** -> **集群管理页** ，
+2. 点击目标集群Elasticsearch名称进入该Elasticsearch基本信息页。若Elasticsearch集群管理页没有创建好的Elasticsearch集群，则点击创建按钮，创建集群。
+
+AK/SK信息在 Access Key 管理页 可以创建/获取。
+![scrpit](../../../../image/IoT/IoT-Engine/Add-Action-FW-ES.png)
+
+点击 **确定** ，转发列表中即可看到该ES动作。同时可对其进行编辑和删除。
 

@@ -4,5 +4,5 @@
 
 ## 入口：[产品介绍页](https://www.jdcloud.com/products/iot-engine)
 1. 登录京东云官网[https://www.jdcloud.com/](https://www.jdcloud.com/)。
-2. 选择“产品>物联网引擎”。
+2. 选择“产品>企业应用>物联网>物联网引擎”。
 3. 弹出物联网引擎的产品介绍页，点击**立即购买**。

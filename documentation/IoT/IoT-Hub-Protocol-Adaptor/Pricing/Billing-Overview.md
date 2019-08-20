@@ -12,5 +12,5 @@
 
 ## 相关参考
 
-- [物联网中心 服务计费规则](../../IoT-Hub/Pricing/Billing-Rules.md)
-- [物联网中心 服务价格总览](../../IoT-Hub/Pricing/Price-Overview.md)
+- [物联网协议适配计费规则](../../IoT-Hub-Protocol-Adaptor/Pricing/Billing-Rules.md)
+- [物联网协议适配价格总览](../../IoT-Hub-Protocol-Adaptor/Pricing/Price-Overview.md)

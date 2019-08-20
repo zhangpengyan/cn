@@ -8,7 +8,7 @@
 2. 点击 **添加功能**
 3. 将开关定义为属性。完成后单击确认。
 
-(../../../../image/IoT/IoT-Engine/Ting-Model-Creation.png)
+![添加物模型](../../../../image/IoT/IoT-Engine/Ting-Model-Creation.png)
 
 
 

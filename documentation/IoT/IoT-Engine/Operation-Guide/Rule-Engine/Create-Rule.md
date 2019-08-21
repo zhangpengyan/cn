@@ -8,7 +8,7 @@
 2. 左侧到导航选择 **管理** -> **规则引擎**
 3. 点击页面上方的 **创建规则引擎**
 
-![create-rule](../../../../image/IoT/IoT-Engine/Create_Rule.png)
+![create-rule](../../../../../image/IoT/IoT-Engine/Create_Rule.png)
 
 ## 数据转发
 
@@ -18,12 +18,12 @@
 
 1. 点击页面上的 **编写脚本**，进行处理规则引擎转发的规则逻辑编写
 
-![scrpit](../../../../image/IoT/IoT-Engine/Script-ProcessData.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Script-ProcessData.png)
 
 - 脚本所用的为 JavaScript 语言
 - 所有的数据都会经过 脚本 进行处理，然后进行数据转发
 
-![scrpit](../../../../image/IoT/IoT-Engine/Rule-Script.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Rule-Script.png)
 
 脚本样例如下：
 
@@ -54,19 +54,19 @@ return {
 - 用户可以点击 **测试脚本**
 - **结果输出** 显示经过脚本过滤的数据
 
-![scrpit](../../../../image/IoT/IoT-Engine/Script-Testing.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Script-Testing.png)
 
 ## 2.2 转发数据/添加动作
 
 - 点击 **添加动作** ，出现添加动作弹窗，添加操作有三种方式，分别是转发到另一个Topic，转发到JCQ，转发到ES
 
-![scrpit](../../../../image/IoT/IoT-Engine/Add-Action.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Add-Action.png)
 
 ### 2.2.1 转发到另一个Topic
 
 - 选择必选项产品、设备和输入自定义topic名称。若产品没有可选项，请先到产品页创建产品，然后去设备页为所属产品添加设备；若设备没有可选项，请到设备页为所属产品添加设备。
 
-![scrpit](../../../../image/IoT/IoT-Engine/Add-Action-FW-Topic.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Add-Action-FW-Topic.png)
 
 - 点击 **确定** ，转发列表中即可看到该MQTT操作类型。同时可以对其进行编辑和删除。
 
@@ -80,7 +80,7 @@ return {
 
 AK/SK信息在 Access Key 管理页 可以创建/获取。
 
-![scrpit](../../../../image/IoT/IoT-Engine/Add-Action-FW-JCQ.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Add-Action-FW-JCQ.png)
 点击 **确定** ，转发列表中即可看到该JCQ动作。同时可对其进行编辑和删除。
 
 
@@ -93,7 +93,7 @@ AK/SK信息在 Access Key 管理页 可以创建/获取。
 2. 点击目标集群Elasticsearch名称进入该Elasticsearch基本信息页。若Elasticsearch集群管理页没有创建好的Elasticsearch集群，则点击创建按钮，创建集群。
 
 AK/SK信息在 Access Key 管理页 可以创建/获取。
-![scrpit](../../../../image/IoT/IoT-Engine/Add-Action-FW-ES.png)
+![scrpit](../../../../../image/IoT/IoT-Engine/Add-Action-FW-ES.png)
 
 点击 **确定** ，转发列表中即可看到该ES动作。同时可对其进行编辑和删除。
 

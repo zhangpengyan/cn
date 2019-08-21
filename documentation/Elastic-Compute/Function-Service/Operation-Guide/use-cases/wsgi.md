@@ -1,10 +1,10 @@
-# Python WSGI Web 框架服务迁移至函数服务
+# Python WSGI Web 服务迁移至函数服务
 
 ## 什么是WSGI
 WSGI的全称是 Web Server Gateway Interface，译为Web服务器网关接口。具体来说，WSGI是一个规范，定义了Web服务器如何与Python应用程序进行交互，使得使用 Python写的Web应用程序可以和Web服务器对接起来。最新官方版本在Python的[PEP-3333](https://www.python.org/dev/peps/pep-3333)中定义。
 
 ## 函数服务与WSGI
-用户的application函数可以完全自行实现，也可以给予WSGI的web框架进行函数开发。
+用户的application函数可以完全自行实现，也可以基于WSGI的web框架进行函数开发。
 目前，很多Frameworks是基于WSGI协议，比较常见的如Flask、Django等，具体可参考[Frameworks that run on WSGI](https://wsgi.readthedocs.io/en/latest/frameworks.html)
 
 ### 函数服务部署无框架函数

@@ -50,6 +50,9 @@ https://elite.cn-south-1.jdcloud-api.com/v1/regions/{regionId}/listSaleService
 |---|---|---|
 |**deliverNumber**|String|交付单号|
 |**orderNumber**|String|订单号|
+|**buyerPin**|String|购买人|
+|**mappingCode**|String|映射编号|
+|**supportAutoDeliver**|Integer|是否支持自动交付：0表示不支持，1表示支持|
 |**productId**|Integer|产品ID|
 |**skuId**|Integer|sku ID|
 |**skuName**|String|sku名称|

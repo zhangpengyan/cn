@@ -57,3 +57,15 @@ def main_handler(event, context):
 ```Python
 import boto3
 ```
+
+## 支持WSGI接口协议
+Python Web Server Gateway Interface (简称：WSGI），函数服务Python接口已兼容WSGI，您在Django、Flask框架下的已有服务代码，可快速迁移至京东云函数服务。
+
+函数服务内置了API网关触发器事件到WSGI接口的转换库jdcloud_wsgi_wrapper，其中的函数wsgi_run，用于将API网关的event事件转换为WSGI函数格式:
+
+```Python
+from jdcloud_wsgi_wrapper import wsgi_run
+def handler(event, context):
+    result = wsgi_run(event, context, application)
+    return result
+```

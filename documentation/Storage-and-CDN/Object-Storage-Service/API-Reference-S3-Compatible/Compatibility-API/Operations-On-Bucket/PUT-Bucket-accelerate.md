@@ -31,7 +31,7 @@ Authorization: authorization string
 名称|描述|必须
 ---|---|---
 AccelerateConfiguration|加速状态设置的集合。<br>类型：Container<br>子标签: Status|是
-Status|加速状态<br>Type: Enum<br>有效值: Enabled | Suspended<br>父标签: AccelerateConfiguration|是
+Status|加速状态<br>Type: Enum<br>有效值: Enabled、Suspended<br>父标签: AccelerateConfiguration|是
 
 ## 响应
 ### 响应Header
@@ -43,6 +43,7 @@ Status|加速状态<br>Type: Enum<br>有效值: Enabled | Suspended<br>父标签
 HTTP Status Code|Error Code|Error Meaasge|描述
 -|-|-|-
 400|MalformedXML|The XML you provided was not well-formed or did not validate against our published schema|请求XML不合法
+403|AccessForbidden|put accelerate failed, please open cdn service first|未开通CDN服务
 
 ## 示例
 ### 请求示例

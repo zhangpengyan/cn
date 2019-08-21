@@ -5,8 +5,8 @@
 
 ## 前提条件
 - 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud%26ReturnUrl=%2f%2fuc.jdcloud.com%2fpassport%2fcomplete%3freturnUrl%3dhttp%3A%2F%2Fuc.jdcloud.com%2Fredirect%2FloginRouter%3FreturnUrl%3Dhttps%253A%252F%252Fwww.jdcloud.com%252Fhelp%252Fdetail%252F734%252FisCatalog%252F1)，或 [实名认证](https://uc.jdcloud.com/account/certify)。
--已开通购买物联网引擎服务，并在物联网引擎中注册了JT/T 808类型的设备。 
--已创建物联网协议适配服务实例。
+- 已开通购买物联网引擎服务，并在物联网引擎中注册了JT/T 808类型的设备。 
+- 已创建物联网协议适配服务实例。
 
 
 ## 操作步骤

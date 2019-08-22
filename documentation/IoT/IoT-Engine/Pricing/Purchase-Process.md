@@ -7,4 +7,4 @@
 2. 选择“产品>企业应用>物联网>物联网引擎”。
 3. 弹出物联网引擎的产品介绍页，点击**立即购买**。
 
-![IoT-Engine-Product](../../../../IoT-Engine-Product-Page.png)
+![IoT-Engine-Product](../../../../image/IoT/IoT-Engine/IoT-Engine-Product-Page.png)

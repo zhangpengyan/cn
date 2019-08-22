@@ -131,7 +131,7 @@ def handler(event, context):
 
 ```
 
-#### step3：创建函数并触发器配置
+#### step3：创建函数并配置触发器验证
 1.在京东云函数服务控制台创建函数，上传code.zip代码包，入口函数为index.handler。
 ![创建函数](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-1.png) 
 

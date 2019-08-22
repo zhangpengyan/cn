@@ -1,6 +1,6 @@
 # 公测申请流程
 
-本文介绍物联网中心服务实例的购买入口。
+本文介绍物联网中心服务申请公测的方式。
 
 ## 入口：[产品介绍页](https://www.jdcloud.com/products/iot-hub)
 1. 登录京东云官网[https://www.jdcloud.com/](https://www.jdcloud.com/)。

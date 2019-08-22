@@ -99,6 +99,8 @@
        href: Best-Practices/using_kibana.md
      - name: 性能指标
        href: Best-Practices/performance.md
+     - name: 监控告警配置建议
+       href: Best-Practices/automonitor.md
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 相关资源

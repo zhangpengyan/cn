@@ -29,13 +29,13 @@
 
 ```
 function Filter(msg, metadata, msgType) {  		
-	if(metadata.devcieName=='TestDevice'){
-return { 							
-    msg: msg,
-    metadata: metadata,
-    msgType: msgType
-}
-}
+   if(metadata.devcieName=='TestDevice'){
+      return { 							
+        msg: msg,
+        metadata: metadata,
+        msgType: msgType
+      }
+    }
 }									
 
 ```

@@ -16,7 +16,6 @@
 - 快速上手
 	- [创建实例](../Getting-Started/Create-Instance.md)
 	- [实例列表](../Getting-Started/List-Instance.md)
-	- [删除实例](../Getting-Started/Delete-Instance.md)
 - 实例配置
 	- [设置服务](../Operation-Guide/Instance-Configuration/Instance-Configuration.md)
 

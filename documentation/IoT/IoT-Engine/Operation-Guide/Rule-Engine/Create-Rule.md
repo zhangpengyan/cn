@@ -31,9 +31,9 @@
 function Filter(msg, metadata, msgType) {  		
 	if(metadata.devcieName=='TestDevice'){
 return { 							
-    		msg: msg,
-    		metadata: metadata,
-   			msgType: msgType
+    msg: msg,
+    metadata: metadata,
+    msgType: msgType
 }
 }
 }									

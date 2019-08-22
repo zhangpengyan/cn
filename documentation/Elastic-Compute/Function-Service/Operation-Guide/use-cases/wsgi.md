@@ -135,7 +135,14 @@ def handler(event, context):
 1.在京东云函数服务控制台创建函数，上传code.zip代码包，入口函数为index.handler。
 ![创建函数](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-1.png) 
 
-2.配置API网关触发器
+2.配置测试事件进行控制台测试，符合代码预期后，配置API网关触发器，验证触发器执行结果，配置步骤及方法请参见[如何使用API网关触发器](../apig-case.md) 。
+![apigw触发器](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-3.png) 
+
+在浏览器中打开链接，返回执行结果如下：
+![验证触发器执行](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-2.png) 
+
+
+
 
 
 

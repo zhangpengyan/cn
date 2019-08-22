@@ -79,13 +79,17 @@ code.zip作为程序包上传置函数服务中，其中包括：
 * 依赖库：bs4 soupsieve
 
 #### step2：django代码迁移
-在工程目录下执行以下文件pack.sh
-1.修改project为django project名称
-2.LIBPATH为virtualenv的路径下的依赖包目录
+在工程目录下执行以下文件pack.sh，其中：
+
+1.修改project为django project名称；
+
+2.LIBPATH为virtualenv的路径下的依赖包目录。
 
 pack.sh完成以下工作：
-1.生成index.py，作为函数服务的入口函数
-2.将代码和依赖包打包成code.zip，作为上传到函数服务的代码包
+
+1.生成index.py，作为函数服务的入口函数；
+
+2.将代码和依赖包打包成code.zip，作为上传到函数服务的代码包。
 
 ```shell
 #!/bin/bash

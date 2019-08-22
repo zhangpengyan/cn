@@ -1,6 +1,6 @@
 # 创建实例
 
-您可以通过 物联网中心服务 控制台或 API 快速创建 物联网中心服务 ，关于实例的计费说明请参见“[价格总览](../Pricing/Billing-Overview.md)”、“[计费规则](../Pricing/Billing-Rules.md)”。
+您可以通过 物联网中心服务 控制台或 API 快速创建 物联网中心服务 ，关于实例的计费说明请参见“[价格总览](../Pricing/Billing-Overview.md)”。
 
 本文介绍通过控制台如何创建 物联网中心服务 实例。
 

@@ -144,7 +144,7 @@ def handler(event, context):
 在浏览器中打开链接，返回执行结果如下：
 ![验证触发器执行](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-2.png) 
 
-以上，快速完成代码迁移与验证。
+以上，快速完成代码迁移与验证。同理，可从flask框架迁移服务代码至函数服务，只需将服务代码及依赖打包上传至函数服务，修改入口函数完成API网关的event事件转换为WSGI函数格式，参考step2中的index.py函数，即可轻松完成服务迁移。
 
 
 

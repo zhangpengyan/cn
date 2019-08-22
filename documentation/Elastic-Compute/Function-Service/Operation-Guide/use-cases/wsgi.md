@@ -75,9 +75,8 @@ soupsieve==1.9.2
 ```
 code.zip作为程序包上传置函数服务中，其中包括：
 
-源码：test.py
-
-依赖库：bs4 soupsieve
+* 源码：test.py
+* 依赖库：bs4 soupsieve
 
 #### step2：django代码迁移
 在工程目录下执行以下文件pack.sh
@@ -141,8 +140,7 @@ def handler(event, context):
 在浏览器中打开链接，返回执行结果如下：
 ![验证触发器执行](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-2.png) 
 
-
-
+以上，快速完成代码迁移与验证。
 
 
 

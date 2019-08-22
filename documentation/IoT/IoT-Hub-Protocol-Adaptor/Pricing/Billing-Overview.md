@@ -12,5 +12,5 @@
 
 ## 相关参考
 
-- [物联网协议适配计费规则](../../IoT-Hub-Protocol-Adaptor/Pricing/Billing-Rules.md)
-- [物联网协议适配价格总览](../../IoT-Hub-Protocol-Adaptor/Pricing/Price-Overview.md)
+- [物联网协议适配计费规则](Billing-Rules.md)
+- [物联网协议适配价格总览](Price-Overview.md)

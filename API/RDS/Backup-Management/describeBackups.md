@@ -50,7 +50,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/backups
 |**backupMode**|String|备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**backupUnit**|String|备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- **SQL Server支持**<br>- **MySQL不支持**|
 |**backupFiles**|String[]|备份文件列表<br>- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:<br>（1）全备：数据库名+.bak<br>（2）增量：数据库名+.diff<br>- **MySQL不支持**|
-|**backupSizeByte**|Integer|整个备份集大小，单位：Byte|
+|**backupSizeByte**|Long|整个备份集大小，单位：Byte|
 
 ## 返回码
 |返回码|描述|

@@ -1,14 +1,14 @@
-# modifyInstanceSpec
+# alterTableWithOnlineDDL
 
 
 ## 描述
-实例扩容，支持升级实例的CPU，内存及磁盘。
+通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:modifyInstanceSpec
+https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:alterTableWithOnlineDDL
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -18,19 +18,14 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:modifyI
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**newInstanceClass**|String|True| |扩容后实例规格|
-|**newInstanceStorageGB**|Integer|True| |扩容后实例磁盘大小|
+|**database**|String|True| |DDL命令修改的库名|
+|**table**|String|True| |DDL命令修改的表名|
+|**command**|String|True| |需要执行的的DDL命令|
 
 
 ## 返回参数
-|名称|类型|描述|
-|---|---|---|
-|**result**|Result| |
+无
 
-### Result
-|名称|类型|描述|
-|---|---|---|
-|**orderId**|String|生成的订单号|
 
 ## 返回码
 |返回码|描述|

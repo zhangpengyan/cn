@@ -4,7 +4,7 @@
 
 ## 业务架构
 业务架构如下图：
-![](../../../../image/IoT/IoT-Hub-Protocol-Adaptor/iotpa-000.png)
+![](../../../../image/IoT/IoT-Hub-Protocol-Adaptor/GW-A.png)
 
 
 |名称|描述|

@@ -24,7 +24,10 @@
 
 
 
-边界网关(BGW，Border Gateway)：承载VPC与外部设备/环境进行通信的网关，目前已承载的功能为专线服务，边界网关会自动关联到该用户同地域下的全部VPC。（？？）
+边界网关(BGW，Border Gateway)：承载VPC之间、VPC与外部设备/环境进行通信的网关，目前已承载的功能为专线服务、VPN连接、VPC接口。
+
+
+VPC接口(VPC Attachment)：京东云VPC与边界网关之间的互联接口。
 
 
 

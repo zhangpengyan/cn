@@ -22,7 +22,7 @@
           - name: revokePrivilege
             herf: Account-Management/revokePrivilege.md
           - name: createSuperAccount
-          	herf: Account-Management/createSuperAccount.md
+            herf: Account-Management/createSuperAccount.md
 
       - name: 审计管理
         items:
@@ -158,11 +158,11 @@
             herf: Instance-Management/restoreInstance.md
 
       - name: 日志管理
-      	items:
-      	  - name: describeLogs
-      	  	herf: LOG/describeLogs.md
-      	  - name: updateLogDownloadURLInternal
-      	  	herf: LOG/updateLogDownloadURLInternal.md
+        items:
+          - name: describeLogs
+            herf: LOG/describeLogs.md
+          - name: updateLogDownloadURLInternal
+            herf: LOG/updateLogDownloadURLInternal.md
 
       - name: 参数组管理
         items:
@@ -217,11 +217,11 @@
             herf: SQL-Interception/enableIntercept.md
 
       - name: 透明数据加密
-      	items:
-      	  - name: describeTde
-      	  	herf: TDE/describeTde.md
-      	  - name: enableTde
-      	  	herf: TDE/enableTde.md
+        items:
+          - name: describeTde
+            herf: TDE/describeTde.md
+          - name: enableTde
+            herf: TDE/enableTde.md
             
       - name: 白名单
         items:

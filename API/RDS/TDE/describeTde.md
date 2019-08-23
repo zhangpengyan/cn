@@ -1,14 +1,14 @@
-# modifyInstanceSpec
+# describeTde
 
 
 ## 描述
-实例扩容，支持升级实例的CPU，内存及磁盘。
+查看当前实例是否开启TDE
 
 ## 请求方式
-POST
+GET
 
 ## 请求地址
-https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:modifyInstanceSpec
+https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}/tde
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -16,10 +16,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:modifyI
 |**instanceId**|String|True| |RDS 实例ID，唯一标识一个RDS实例|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**newInstanceClass**|String|True| |扩容后实例规格|
-|**newInstanceStorageGB**|Integer|True| |扩容后实例磁盘大小|
+无
 
 
 ## 返回参数
@@ -30,7 +27,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:modifyI
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**orderId**|String|生成的订单号|
+|**status**|String|当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending|
 
 ## 返回码
 |返回码|描述|

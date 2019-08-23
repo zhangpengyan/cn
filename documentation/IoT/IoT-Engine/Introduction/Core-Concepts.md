@@ -30,6 +30,7 @@
 | Identifier	| 设备的全局唯一标识，用于信息签名 |
 | 一型一密 | 设备通过ProductKey、ProductSecret和DeviceName动态获取Identifier和DeviceSecret进行验证连接。 |
 | 一机一密 | 设备通过ProductKey、Identifier、DeviceSecret进行验证连接 |
+| 三元组 | 设备的ProductKey、Identifier、DeviceSecret称为三元组 |
 
 
 ## 相关参考

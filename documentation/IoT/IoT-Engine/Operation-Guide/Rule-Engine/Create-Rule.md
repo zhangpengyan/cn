@@ -29,7 +29,7 @@
 
 ```
 function Filter(msg, metadata, msgType) {  		
-   if(metadata.devcieName=='TestDevice'){
+   if(metadata.deviceName=='TestDevice'){
       return { 							
         msg: msg,
         metadata: metadata,

@@ -1,0 +1,13 @@
+name: 京东云游戏白皮书
+href: 
+items:
+- name: 概要
+  href: Introduction/Overview.md
+- name: 京东云支撑游戏行业的优势
+  href: Advantage/Point.md
+- name: 游戏行业技术解决方案
+  href: Target/Target.md
+- name: 京东游戏生态
+  href: Game/Game.md	
+- name: 游戏白皮书下载链接
+  href: Download-Link/Related-Resources.md

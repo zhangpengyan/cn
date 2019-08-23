@@ -4,7 +4,7 @@
 ## 描述
 重装云物理服务器，只能重装stopped状态的服务器<br/>
 - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表
-
+<br>敏感操作，可开启<a href="https://docs.jdcloud.com/cn/security-operation-protection/operation-protection">MFA操作保护</a>
 
 ## 请求方式
 PUT

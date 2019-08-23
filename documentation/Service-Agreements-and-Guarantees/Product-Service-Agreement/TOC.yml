@@ -50,6 +50,10 @@ items:
     href: JCS-For-InfluxDB-Terms-Of-Service.md
   - name: 云数据库InfluxDB服务等级协议（SLA）
     href: JCS-For-InfluxDB-Level-Agreement-SLA.md
+  - name: 云数据库Greenplum服务条款
+    href: JCS-For-Greenplum-Terms-Of-Service.md  
+  - name: 云数据库Greenplum服务等级协议（SLA）
+    href: JCS-For-Greenplum-Level-Agreement-SLA.md
   - name: 云主机安全服务协议
     href: Cloud-Host-Security-Service-Clause.md
   - name: 云硬盘服务协议
@@ -80,6 +84,10 @@ items:
     href: Cloud-Physics-Server-Service-Level-Protocol-SLA.md
   - name: 物理云公网IP服务协议
     href: Elastic-IP-For-Physical-Cloud-Terms-Of-Service.md
+  - name: 物理云负载均衡服务条款
+    href: Physical-Cloud-Load-Balancer-Service-Clause.md 
+  - name: 物理云负载均衡服务等级协议（SLA）
+    href: Physical-Cloud-Load-Balancer-Level-Agreement-SLA.md    
   - name: 分布式云物理服务器服务条款
     href: Distributed-Cloud-Physical-Server-Service-Clause.md
   - name: 分布式云物理服务器服务等级协议（SLA）
@@ -119,9 +127,15 @@ items:
   - name: 智臻链BaaS平台服务条款
     href: JD-Blockchain-Open-Platform.md
   - name: 物联网中心服务条款
-    href: IoT-Hub.md
+    href: IoT-Hub-Terms-Of-Service.md    
   - name: 物联网协议适配服务条款
-    href: IoT-Hub-Protocol-Adaptor.md
+    href: IoT-Protocol-Adaptor-Terms-Of-Service.md   
+  - name: 物联网协议适配服务等级协议(SLA)
+    href: IoT-Protocol-Adaptor-Level-Agreements-SLA.md
+  - name: 物联网引擎服务条款
+    href: IoT-Engine-Terms-Of-Service.md 
+  - name: 物联网引擎服务等级协议(SLA)
+    href: IoT-Engine-Level-Agreements-SLA.md
   - name: 云文件服务协议
     href: Cloud-File-Service-terms-of-service.md
   - name: 云文件服务等级服务协议（SLA）
@@ -132,3 +146,7 @@ items:
     href: Rich-Media-SMS-Terms-Of-Service-SLA.md
   - name: 日志服务服务条款
     href: Log-Service-Terms-Of-Service.md
+  - name: 数据加密服务服务条款
+    href: JDCloudHSM-Terms-Of-Service.md
+  - name: 数据加密服务等级协议（SLA）
+    href: JDCloudHSM-Level-Agreements-SLA.md

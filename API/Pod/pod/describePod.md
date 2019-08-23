@@ -44,7 +44,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 |**vpcId**|String|主网卡所属vpcId|
 |**subnetId**|String|主网卡所属子网的ID|
 |**privateIpAddress**|String|主网卡主IP地址|
-|**dnsConfig**|DnsConfig|pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置|
+|**dnsConfig**|DnsConfig|pod内容器的/etc/resolv.conf配置|
 |**logConfig**|LogConfig|容器日志配置信息；默认会在本地分配10MB的存储空间|
 |**hostAliases**|HostAlias[]|pod内容器的/etc/hosts配置|
 |**volumes**|Volume[]|属于Pod的volume列表，提供挂载到containers上。|
@@ -71,7 +71,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 ### NetworkInterfaceAttachment
 |名称|类型|描述|
 |---|---|---|
-|**autoDelete**|Boolean|指明删除pod时是否删除网卡，默认True；当前只能是True|
+|**autoDelete**|Boolean|指明删除pod时是否删除网卡。|
 |**deviceIndex**|Integer|设备Index，目前pod只支持一个网卡，所以只能设置为1|
 |**attachStatus**|String|绑定状态|
 |**attachTime**|String|绑定时间|
@@ -82,6 +82,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 |**networkInterfaceId**|String|弹性网卡ID|
 |**macAddress**|String|以太网地址|
 |**vpcId**|String|虚拟网络ID|
+|**subnetId**|String|子网ID|
 |**description**|String|描述|
 |**securityGroups**|SecurityGroupSimple[]|安全组列表|
 |**sanityCheck**|Boolean|源和目标IP地址校验，取值为0或者1|
@@ -91,7 +92,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 |名称|类型|描述|
 |---|---|---|
 |**privateIpAddress**|String|私有IP的IPV4地址|
-|**elasticIpId**|String|私有IP的IPV4地址|
+|**elasticIpId**|String|弹性IP ID|
 |**elasticIpAddress**|String|弹性IP实例地址|
 ### SecurityGroupSimple
 |名称|类型|描述|
@@ -109,33 +110,33 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 |**phase**|String|pod当前状态|
 |**reason**|String|（简要）pod处于当前状态的原因|
 |**message**|String|pod处于当前状态原因的详细信息|
-|**podIP**|String|IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.|
-|**conditions**|PodCondition[]|Current service state of pod.|
+|**podIP**|String|分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。|
+|**conditions**|PodCondition[]|目前pod的状态。|
 |**startTime**|String|Pod生命周期开始的时间。|
 ### PodCondition
 |名称|类型|描述|
 |---|---|---|
-|**lastProbeTime**|String|Last time we probed the condition.|
-|**lastTransitionTime**|String|Last time the condition transitioned from one status to another.|
-|**reason**|String|Unique, one-word, CamelCase reason for the condition's last transition.|
+|**lastProbeTime**|String|最后一次探测状态的时间|
+|**lastTransitionTime**|String|最后一次改变状态的时间|
+|**reason**|String|最后一次状态改变的简要原因|
 |**status**|String|Status is the status of the condition. Can be True, False, Unknown.|
-|**message**|String|Human-readable message indicating details about last transition.|
-|**conditionType**|String|Type is the type of the condition. Currently only Ready.|
+|**message**|String|最后一次状态改变的信息|
+|**conditionType**|String|状态的条件。目前仅限 Ready.|
 ### Container
 |名称|类型|描述|
 |---|---|---|
 |**name**|String|容器名称|
-|**command**|String[]|容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。|
-|**args**|String[]|容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。|
-|**env**|EnvSpec[]|容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]|
-|**image**|String|镜像名称 </br> 容器镜像名字。 nginx:latest。长度范围：[1-500] 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 </br> 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 </br>|
-|**secret**|String|镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像|
-|**tty**|Boolean|容器是否分配tty。默认不分配|
-|**workingDir**|String|容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]|
-|**livenessProbe**|ProbeSpec|容器存活探针配置|
-|**readinessProbe**|ProbeSpec|容器服务就绪探针配置|
-|**resources**|ResourceRequestsSpec|容器计算资源配置|
-|**systemDisk**|CloudDiskSpec|容器计算资源配置|
+|**command**|String[]|容器执行的命令。|
+|**args**|String[]|容器执行命令的参数。|
+|**env**|Env[]|容器执行的环境变量。|
+|**image**|String|容器镜像名称。|
+|**secret**|String|容器镜像仓库认证信息。|
+|**tty**|Boolean|容器是否分配tty。|
+|**workingDir**|String|容器的工作目录。|
+|**livenessProbe**|Probe|容器存活探针配置|
+|**readinessProbe**|Probe|容器服务就绪探针配置|
+|**resources**|ResourceRequests|容器计算资源配置|
+|**systemDisk**|CloudDisk|容器计算资源配置|
 |**volumeMounts**|VolumeMount[]|容器计算资源配置|
 |**containerStatus**|ContainerStatus|容器状态信息|
 ### ContainerStatus
@@ -149,9 +150,9 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 ### ContainerState
 |名称|类型|描述|
 |---|---|---|
-|**running**|ContainerStateRunning|容器running的详细信息|
-|**terminated**|ContainerStateTerminated|容器Terminated的详细信息|
-|**waiting**|ContainerStateWaiting|容器waiting的详细信息|
+|**running**|ContainerStateRunning|容器运行的详细信息|
+|**terminated**|ContainerStateTerminated|容器终止的详细信息|
+|**waiting**|ContainerStateWaiting|容器等待的详细信息|
 ### ContainerStateWaiting
 |名称|类型|描述|
 |---|---|---|
@@ -160,11 +161,11 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 ### ContainerStateTerminated
 |名称|类型|描述|
 |---|---|---|
-|**signal**|Integer|容器被termination的信号。|
-|**exitCode**|Integer|容器被termination的退出码。|
-|**reason**|String|（简要）容器被termination的原因。|
-|**message**|String|容器被termination的详细信息。|
-|**finishedAt**|String|容器被termination的时间。|
+|**signal**|Integer|容器被终止的信号。|
+|**exitCode**|Integer|容器被终止的退出码。|
+|**reason**|String|（简要）容器被终止的原因。|
+|**message**|String|容器被终止的详细信息。|
+|**finishedAt**|String|容器被终止的时间。|
 |**startedAt**|String|容器开始执行的时间。|
 ### ContainerStateRunning
 |名称|类型|描述|
@@ -173,79 +174,77 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 ### VolumeMount
 |名称|类型|描述|
 |---|---|---|
-|**name**|String|必须使用pod volume名称|
-|**mountPath**|String|容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录("/")。长度范围：[1-1024]|
-|**readOnly**|Boolean|是否以只读方式挂载。默认 读写模式|
-### CloudDiskSpec
+|**name**|String|挂载的云盘在pod中的名称。|
+|**mountPath**|String|容器内挂载点。|
+|**readOnly**|Boolean|是否以只读方式挂载。|
+### CloudDisk
 |名称|类型|描述|
 |---|---|---|
-|**volumeId**|String|云盘id，使用已有云盘|
-|**name**|String|云盘名称|
-|**snapshot**|String|云盘快照id，根据云盘快照创建云盘。|
-|**diskType**|String|云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1|
-|**sizeGB**|Integer|云盘size,单位 GB,要求|
-|**fsType**|String|指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
-|**iops**|Integer|云盘的 iops 值，目前只有 ssd.io1 类型有效|
-|**autoDelete**|Boolean|是否随pod删除。默认：true|
-### ResourceRequestsSpec
+|**volumeId**|String|云盘ID。|
+|**snapshotId**|String|云盘快照ID。|
+|**diskType**|String|云盘类型：hdd.std1,ssd.gp1,ssd.io1。|
+|**sizeGB**|Integer|云盘size,单位 GB。|
+|**fsType**|String|指定volume文件系统类型，目前支持[xfs, ext4]。|
+|**iops**|Integer|云盘的 iops 值，目前只有 ssd.io1 类型有效。|
+|**autoDelete**|Boolean|是否随pod删除。|
+### ResourceRequests
 |名称|类型|描述|
 |---|---|---|
-|**requests**|RequestSpec|容器必需的计算资源|
-|**limits**|RequestSpec|容器使用计算资源上限|
-### RequestSpec
+|**requests**|Request|容器必需的计算资源|
+|**limits**|Request|容器使用计算资源上限|
+### Request
 |名称|类型|描述|
 |---|---|---|
 |**cpu**|String|容器必需的计算资源|
 |**memoryMB**|String|容器使用计算资源上限|
-### ProbeSpec
+### Probe
 |名称|类型|描述|
 |---|---|---|
-|**initialDelaySeconds**|Integer|容器启动多长时间后，触发探针。默认值：10秒；范围:[0-300]|
-|**periodSeconds**|Integer|探测的时间间隔。默认值 10秒，范围:[1-300]|
-|**timeoutSeconds**|Integer|探测的超时时间。默认值 1秒；范围:[1-300]|
-|**failureThreshold**|Integer|在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10|
-|**successThreshold**|Integer|在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10|
+|**initialDelaySeconds**|Integer|容器启动多久后触发探针。|
+|**periodSeconds**|Integer|探测的时间间隔。|
+|**timeoutSeconds**|Integer|探测的超时时间。|
+|**failureThreshold**|Integer|在成功状态后，连续探活失败的次数，认为探活失败。|
+|**successThreshold**|Integer|在失败状态后，连续探活成功的次数，认为探活成功。|
 |**exec**|Exec|在容器内执行指定命令；如果命令退出时返回码为 0 则认为诊断成功。|
-|**httpGet**|Hg|对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。<br><br>如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 <br>|
-|**tcpSocket**|TcpSocketSpec|对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。|
-### TcpSocketSpec
+|**httpGet**|Hg|对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于 200 且小于 400，则认为诊断成功。|
+|**tcpSocket**|TcpSocket|对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则认为诊断成功。|
+### TcpSocket
 |名称|类型|描述|
 |---|---|---|
-|**port**|Integer|范围：[1-65535]|
+|**port**|Integer|端口号，范围：[1-65535]|
 ### Hg
 |名称|类型|描述|
 |---|---|---|
-|**scheme**|String|默认值： http；可选值 http, https|
-|**host**|String|连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式|
-|**port**|Integer|范围：[1-65535]|
-|**path**|String|HTTP的路径。范围：[1-256]|
-|**httpHeader**|Hh[]|对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。<br><br>如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 |
+|**scheme**|String|默认值：http。|
+|**host**|String|连接到pod的host信息。|
+|**port**|Integer|端口号。|
+|**path**|String|HTTP的路径。|
+|**httpHeader**|Hh[]|自定义Http headers|
 ### Hh
 |名称|类型|描述|
 |---|---|---|
-|**name**|String|http header key，需满足http的规则|
-|**value**|String|容器探活方式|
+|**name**|String|http header 键|
+|**value**|String|http header 值|
 ### Exec
 |名称|类型|描述|
 |---|---|---|
-|**command**|String[]|执行的命令,总长度256个字符。 s|
-### EnvSpec
+|**command**|String[]|执行的命令。|
+### Env
 |名称|类型|描述|
 |---|---|---|
-|**name**|String|环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线()，正则为`[a-zA-Z0-9]*$`。|
-|**value**|String|环境变量取值。范围：[0-1024]|
+|**name**|String|环境变量名称（ASCII）。|
+|**value**|String|环境变量取值。|
 ### Volume
 |名称|类型|描述|
 |---|---|---|
-|**name**|String|volume名字，必须是DNS_LABEL，在一个Pod是唯一的。|
+|**name**|String|volume名字，在一个Pod唯一。|
 |**jdcloudDisk**|JDCloudVolumeSource|提供给Pod的cloud disk.|
 ### JDCloudVolumeSource
 |名称|类型|描述|
 |---|---|---|
 |**volumeId**|String|云盘id，使用已有云盘|
-|**name**|String|云盘名称|
-|**snapshot**|String|云盘快照id，根据云盘快照创建云盘。|
-|**diskType**|String|云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1|
+|**snapshotId**|String|云盘快照id，根据云盘快照创建云盘。|
+|**diskType**|String|云盘类型：hdd.std1,ssd.gp1,ssd.io1|
 |**sizeGB**|Integer|云盘size,单位 GB,要求|
 |**fsType**|String|指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs|
 |**formatVolume**|Boolean|随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true|
@@ -254,18 +253,18 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}
 ### HostAlias
 |名称|类型|描述|
 |---|---|---|
-|**hostnames**|String[]|域名列表。<br><br>eg  ["foo.local", "bar.local"]。长度范围 1-10; 元素符合hostname命名规范。<br>|
-|**ip**|String|ipv4信息；eg "127.0.0.1"|
+|**hostnames**|String[]|域名列表。<br>|
+|**ip**|String|ipv4地址。|
 ### LogConfig
 |名称|类型|描述|
 |---|---|---|
-|**logDriver**|String|日志Driver名称，目前只支持默认为每一个容器在本地分配10MB的存储空间，自动rotate。默认值：default。|
+|**logDriver**|String|日志Driver名称。|
 ### DnsConfig
 |名称|类型|描述|
 |---|---|---|
-|**nameservers**|String[]|DNS服务器IP地址列表，重复的将会被移除。<br><br>eg ["8.8.8.8", "4.2.2.2"]。列表长度：[0-20]，元素符合IPv4格式。<br>|
-|**searches**|String[]|DNS搜索域列表，用于主机名查找。<br><br>eg ["ns1.svc.cluster.local", "my.dns.search.suffix"]。列表长度：[0-6]，列表中所有字符总长度不超过256个。<br>|
-|**options**|PodDnsConfigOption[]|DNS解析器选项列表。<br><br>eg  ["ndots":"2", "edns0":""]。列表长度：[0-10]|
+|**nameservers**|String[]|DNS服务器IP地址列表。<br>|
+|**searches**|String[]|DNS搜索域列表，用于主机名查找。<br>|
+|**options**|PodDnsConfigOption[]|DNS解析器选项列表。|
 ### PodDnsConfigOption
 |名称|类型|描述|
 |---|---|---|

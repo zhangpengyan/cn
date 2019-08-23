@@ -2,7 +2,7 @@
 
 
 ## 描述
-对单台云物理服务器执行关机操作，只能停止running状态的服务器
+对单台云物理服务器执行关机操作，只能停止running状态的服务器<br>敏感操作，可开启<a href="https://docs.jdcloud.com/cn/security-operation-protection/operation-protection">MFA操作保护</a>
 
 ## 请求方式
 PUT

@@ -19,7 +19,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances
 |---|---|---|---|---|
 |**pageNumber**|Integer|False| |显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;|
 |**pageSize**|Integer|False| |每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口|
-|**filters**|Filter[]|False| |过滤参数，多个过滤参数之间的关系为“与”(and)<br>支持以下属性的过滤：<br>instanceId, 支持operator选项：eq<br>instanceName, 支持operator选项：eq<br>engine, 支持operator选项：eq<br>engineVersion, 支持operator选项：eq<br>instanceStatus, 支持operator选项：eq<br>chargeMode, 支持operator选项：eq<br>|
+|**filters**|Filter[]|False| |过滤参数，多个过滤参数之间的关系为“与”(and)<br>支持以下属性的过滤：<br>instanceId, 支持operator选项：eq<br>instanceName, 支持operator选项：eq<br>engine, 支持operator选项：eq<br>engineVersion, 支持operator选项：eq<br>instanceStatus, 支持operator选项：eq<br>chargeMode, 支持operator选项：eq<br>vpcId, 支持operator选项：eq<br>|
 |**tagFilters**|TagFilter[]|False| |资源标签|
 
 ### TagFilter
@@ -62,6 +62,7 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances
 |**subnetId**|String|子网的ID|
 |**instanceStatus**|String|实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**createTime**|String|实例创建时间|
+|**backupSynchronicity**|BackupSynchronicityAbstract[]|实例跨地域备份服务开启相关信息|
 |**charge**|Charge|计费配置|
 |**tags**|Tag[]|标签信息|
 |**sourceInstanceId**|String|MySQL只读实例对应的主实例ID|
@@ -78,6 +79,11 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances
 |**chargeStartTime**|String|计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
 |**chargeExpiredTime**|String|过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空|
 |**chargeRetireTime**|String|预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ|
+### BackupSynchronicityAbstract
+|名称|类型|描述|
+|---|---|---|
+|**serviceId**|String|跨地域备份同步服务ID|
+|**destRegion**|String|备份同步的目标地域|
 
 ## 返回码
 |返回码|描述|

@@ -43,6 +43,8 @@ items:
       herf: Getting-Started/example_function.md
     - name: 使用订阅密钥的方式构建API
       herf: Getting-Started/example_subscriptionKey.md
+    - name: 使用API网关开放VPC内的接口
+      herf: Getting-Started/VPC.md
 - name: 操作指南
   items:
     - name: API分组管理
@@ -81,7 +83,10 @@ items:
           herf: Operation-Guide/Create-Auth/Signature-Key.md
         - name: 京东云用户签名Access Key
           herf: Operation-Guide/Create-Auth/JD-Cloud-User-Signature.md
-      
+    - name: 微服务网关
+      items:
+        - name: 微服务网关
+          herf: Operation-Guide/JDSF-gw.md  
     - name: 后端签名
       items:
         - name: 后端签名

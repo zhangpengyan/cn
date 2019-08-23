@@ -31,7 +31,7 @@ reclaimPolicy: Retain
 2、reclaimPolicy：由 storage class 动态创建的 Persistent Volume 会在的 reclaimPolicy 字段中指定回收策略，可以是 Delete 或者 Retain。如果 storageClass 对象被创建时没有指定 reclaimPolicy ，它将默认为 Delete。
 
 3、parameters  
-  - type：设置参数值为ssd或premium-hdd，分别对应京东云的SSD云盘和高效云盘；
+  - type：设置参数值为ssd.gp1、ssd.io1或hdd.std1，分别对应京东云的通用型SSD云盘、性能型SSD云盘和容量型HDD云盘；
   - fstype：设置文件系统类型，可选参数值为xfs和ext4，如未指定fstype，将使用ext4作为默认的文件系统类型；例如：fstype=ext4；
   - zones：根据集群所在的地域设置云硬盘所在的可用区；在支持单可用区的地域，您可以不设置该参数；在支持多可用区的地域，您可以选择某一可用区或选择全部可用区（参数值之间使用","分隔），例如：zones=cn-north-1a, cn-north-1b，选择全部可用区时，新建的云硬盘将根据名称hash算法，被随机分配到某一可用区； 地域与可用区的对应关系参考下表：  
 

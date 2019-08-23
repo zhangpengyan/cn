@@ -4,13 +4,9 @@
   - name: 接口概览
     href: overview.md
   - name: 更新历史
-    href: changelog.md
+    href: ChangeLog.md
   - name: 接口信息
     items:
-      - name: 数据管理相关API
-        items:
-          - name: getPackageId
-            href: DMP-APIs/getPackageId.md
       - name: 大屏数据查询接口
         items:
           - name: getLargeScreenData

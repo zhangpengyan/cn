@@ -1,5 +1,7 @@
 # ISO格式镜像转换
-iso是光盘镜像格式，无法直接使用创建虚拟机，下文将介绍如何使用virt-manager使用iso镜像创建虚拟机并制作虚拟机镜像。
+iso是光盘镜像格式，无法直接使用创建虚拟机，下文将介绍如何在Linux系统下使用virt-manager以及Windows系统下使用VMware Workstation，使用iso镜像创建虚拟机并导出为虚拟机镜像。
+
+## Linux环境下使用virt-manager制作镜像
 
 ### 1、安装并运行virt-manager
 准备一台支持虚拟化技术的Linux系统主机（物理机或虚拟机均可），执行下述指令进行安装。
@@ -53,3 +55,19 @@ virt-manager
 打开 virt-manager，并打开硬件配置页面，打开有灯泡显示的图标，然后选择左侧的磁盘选项，右侧“Source path”即为镜像文件路径。
 
 ![](../../../../../image/vm/Image-Import-convert-iso17.png)<br>
+
+## Windows环境下使用VMware Workstation制作镜像
+
+### 1、安装并运行VMware Workstation
+
+安装前请确保用当前笔记本/服务器开启了虚拟化配置，可在开机时进入BIOS界面，在Configuration中确认虚拟化配置是否为enabled。
+前往[vmware官网](https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0)下载并安装VMware Workstation。
+
+### 2、使用VMware Workstation创建虚拟机
+点击“创建新的虚拟机”，在安装来源环节选择本地iso镜像文件（此例中使用windows server 2016镜像）。
+
+产品密钥用于正版激活，可暂不输入，主机名称可以输入Administrator也可新建用户，随后输入密码。
+
+磁盘容量将决定后续导出镜像时的文件系统大小，间接决定了导入京东云环境时所指定的磁盘容量（导入镜像磁盘容量须不小于文件系统容量），请根据当前iso镜像文件所需空间合理设置。
+
+确认配置后点击“完成”开始创建。

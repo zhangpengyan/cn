@@ -47,6 +47,12 @@
     items:
       - name: 使用须知
         href: Operation-Guide/Terms-and-Conditions.md
+      - name: 实例
+        items:
+          - name: 重置密码
+            href: Operation-Guide/Instance/Reset-Password.md
+          - name: 自定义数据
+            href: Operation-Guide/Instance/User-Data.md
       - name: 网络
         items:
           - name: 私有网络

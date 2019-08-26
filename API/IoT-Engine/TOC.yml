@@ -45,3 +45,4 @@ items:
             href: DeviceInfo/updateDevice.md
           - name: updateThingShadow
             href: DeviceInfo/updateThingShadow.md 
+

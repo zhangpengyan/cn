@@ -18,7 +18,15 @@ items:
           - name: listProducts
             href: Role-Management/listProducts.md
           - name: updateProduct
-            href: Role-Management/updateProduct.md            
+            href: Role-Management/updateProduct.md
+      - name: 产品物模型接口
+        items:
+          - name: exportThingModel
+            href: ProductAbility/exportThingModel.md
+          - name: importThingModel
+            href: ProductAbility/importThingModel.md
+          - name: listProductAbilities
+            href: ProductAbility/listProductAbilities.md
       - name: 设备接口
         items:
           - name: addDevice.md
@@ -37,11 +45,3 @@ items:
             href: DeviceInfo/updateDevice.md
           - name: updateThingShadow
             href: DeviceInfo/updateThingShadow.md 
-      - name: 产品物模型接口
-        items:
-          - name: exportThingModel
-            href: ProductAbility/exportThingModel.md
-          - name: importThingModel
-            href: ProductAbility/importThingModel.md
-          - name: listProductAbilities
-            href: ProductAbility/listProductAbilities.md

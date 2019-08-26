@@ -29,7 +29,7 @@ items:
             href: ProductAbility/listProductAbilities.md
       - name: 设备接口
         items:
-          - name: addDevice.md
+          - name: addDevice
             href: DeviceInfo/addDevice.md
           - name: describeThingShadow
             href: DeviceInfo/describeThingShadow.md

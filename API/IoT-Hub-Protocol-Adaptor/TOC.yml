@@ -1,0 +1,24 @@
+name: 物联网协议适配
+href: 
+items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 查询实例接口
+        items:
+          - name: describeInstance
+            href: iotcloudgatewayInstances/describeInstance.md
+          - name: describeInstances
+            href: iotcloudgatewayInstances/describeInstances.md
+          - name: queryInstanceExposeDomain
+            href: iotcloudgatewayInstances/queryInstanceExposeDomain.md
+          - name: queryInstanceStatus
+            href: iotcloudgatewayInstances/queryInstanceStatus.md
+    
+      - name: 设备接口
+        items:
+          - name: deviceControl
+            href: iotcloudgatewayInstances/deviceControl.md

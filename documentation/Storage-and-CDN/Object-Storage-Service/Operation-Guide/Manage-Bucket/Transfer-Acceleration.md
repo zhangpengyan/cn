@@ -32,11 +32,9 @@
 
 1.登入控制台->对象存储->空间管理->进入某个Bucket->空间设置->传输加速，在该页面下可以查看当前Bucket的传输加速设置。
 
-![accelerate-1](../../../../../image/Object-Storage-Service/OSS-105.png)
+![accelerate-1](../../../../../image/Object-Storage-Service/OSS-164.png)
 
 2.点击开启后，您可以查看该Bucket的加速域名。
-
-![accelerate-2](../../../../../image/Object-Storage-Service/OSS-106.png)
 
 3.如需设置特殊加速规则，请前往CDN控制台设置，请参考[CDN控制台概览](https://docs.jdcloud.com/cn/cdn/console-introduction)。
 

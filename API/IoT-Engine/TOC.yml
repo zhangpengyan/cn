@@ -37,7 +37,7 @@ items:
             href: DeviceInfo/updateDevice.md
           - name: updateThingShadow
             href: DeviceInfo/updateThingShadow.md 
-      - name: 产品物模型
+      - name: 产品物模型接口
         items:
           - name: exportThingModel
             href: ProductAbility/exportThingModel.md

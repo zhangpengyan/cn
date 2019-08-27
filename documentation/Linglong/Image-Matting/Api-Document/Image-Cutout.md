@@ -1,13 +1,13 @@
-# 风格识别
+# 智能抠图
 
 
 ## 接口描述
-风格识别服务是京东羚珑提供的读取图片信息，实现按照风格进行智能归类管理的功能。根据预测模型，可从图片信息识别出风格特征元素，自动判别图片设计风格。
+智能抠图服务是京东羚珑提供的为图片主体抠除背景的智能服务。基于机器学习、图像智能识别技术，可大幅度提升图像处理效率，降低人工成本。
 
 ## 请求说明
 
 ### 1.请求地址
-http://wrux15ktnn7j-test.cn-south-1.jdcloud-api.net/api/predict/
+http://w56a7ihx5ukj.cn-south-1.jdcloud-api.net/api/cutout/
 
 ### 2.请求方式
 POST
@@ -46,7 +46,7 @@ result参数信息
 |status|string | 0 | 返回结果，0表示成功；非0为对应错误号，参见错误码-业务级错误码|
 |requestid|string | 6979e9bd79b944b49e0d6e74079d5098 | 请求id |
 |message|string | success | 结果状态，成功为 success |
-|styles| array | [ ... ] | 处理后的结果 |
+|cutout_image_url|string | http://example.com/xxx.png | 处理后的图片地址 |
 
 ### 2. 返回示例
 ```js
@@ -56,21 +56,8 @@ result参数信息
   "result": {
     "status": 0,
     "message": "OK",
-    "requestId": "aa4899f4-db4c-4b09-8aaa-5ecd175e204e",
-    "styles": [
-      {
-        "probability": 0.5523,
-        "className": "粉嫩柔美"
-      },
-      {
-        "probability": 0.3799,
-        "className": "清新淡雅"
-      },
-      {
-        "probability": 0.0279,
-        "className": "简约中性"
-      }
-    ]
+    "cutout_image_url": "http://example.com/d2efdefffea41a18.png",
+    "requestId": "aa4899f4-db4c-4b09-8aaa-5ecd175e204e"
   }
 }
 ```

@@ -1,13 +1,12 @@
-# 智能抠图
-
+# 智能配色
 
 ## 接口描述
-智能抠图服务是京东羚珑提供的为图片主体抠除背景的智能服务。基于机器学习、图像智能识别技术，可大幅度提升图像处理效率，降低人工成本。
+智能配色服务是京东羚珑提供的由单个配色方案智能延展为多个配色结果的实用功能。基于图像智能识别技术，实现像素级别的颜色替换，快速衍生多样的设计风格。
 
 ## 请求说明
 
 ### 1.请求地址
-http://wrux15ktnn7j-test.cn-south-1.jdcloud-api.net/api/cutout/
+http://w56a7ihx5ukj.cn-south-1.jdcloud-api.net/api/fill-image-color/
 
 ### 2.请求方式
 POST
@@ -34,7 +33,7 @@ POST
 
 |名称|类型|示例值|描述|
 |---|---|---|---|
-|code|string | 1001 | 参见<a target="_blank" href="">错误码</a>-系统级错误码|
+|code|string | 1001 | 参见<a target="_blank" href="/cn/linglong/Error-Codes">错误码</a>-系统级错误码|
 |msg|string | 查询成功 | 参见<a target="_blank" href="">错误码</a>-系统级错误码|
 |result|object | {...} | 结果 |
 
@@ -46,7 +45,7 @@ result参数信息
 |status|string | 0 | 返回结果，0表示成功；非0为对应错误号，参见错误码-业务级错误码|
 |requestid|string | 6979e9bd79b944b49e0d6e74079d5098 | 请求id |
 |message|string | success | 结果状态，成功为 success |
-|cutout_image_url|string | http://example.com/xxx.png | 处理后的图片地址 |
+|colored_urls|array | [...] | 处理后的图片地址 |
 
 ### 2. 返回示例
 ```js
@@ -56,8 +55,12 @@ result参数信息
   "result": {
     "status": 0,
     "message": "OK",
-    "cutout_image_url": "http://example.com/d2efdefffea41a18.png",
-    "requestId": "aa4899f4-db4c-4b09-8aaa-5ecd175e204e"
+    "requestId": "aa4899f4-db4c-4b09-8aaa-5ecd175e204e",
+    "colored_urls": [
+      "http://example.com/1.png",
+      "http://example.com/2.png",
+      "http://example.com/3.png",
+    ],
   }
 }
 ```

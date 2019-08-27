@@ -1,12 +1,13 @@
-# 智能配色
+# 风格识别
+
 
 ## 接口描述
-智能配色服务是京东羚珑提供的由单个配色方案智能延展为多个配色结果的实用功能。基于图像智能识别技术，实现像素级别的颜色替换，快速衍生多样的设计风格。
+风格识别服务是京东羚珑提供的读取图片信息，实现按照风格进行智能归类管理的功能。根据预测模型，可从图片信息识别出风格特征元素，自动判别图片设计风格。
 
 ## 请求说明
 
 ### 1.请求地址
-http://wrux15ktnn7j-test.cn-south-1.jdcloud-api.net/api/colors/
+http://w56a7ihx5ukj.cn-south-1.jdcloud-api.net/api/predict-style
 
 ### 2.请求方式
 POST
@@ -33,7 +34,7 @@ POST
 
 |名称|类型|示例值|描述|
 |---|---|---|---|
-|code|string | 1001 | 参见<a target="_blank" href="/cn/linglong/Error-Codes">错误码</a>-系统级错误码|
+|code|string | 1001 | 参见<a target="_blank" href="">错误码</a>-系统级错误码|
 |msg|string | 查询成功 | 参见<a target="_blank" href="">错误码</a>-系统级错误码|
 |result|object | {...} | 结果 |
 
@@ -45,7 +46,7 @@ result参数信息
 |status|string | 0 | 返回结果，0表示成功；非0为对应错误号，参见错误码-业务级错误码|
 |requestid|string | 6979e9bd79b944b49e0d6e74079d5098 | 请求id |
 |message|string | success | 结果状态，成功为 success |
-|colored_urls|array | [...] | 处理后的图片地址 |
+|styles| array | [ ... ] | 处理后的结果 |
 
 ### 2. 返回示例
 ```js
@@ -55,12 +56,21 @@ result参数信息
   "result": {
     "status": 0,
     "message": "OK",
-    "requestId": "aa4899f4-db4c-4b09-8aaa-5ecd175e204e"
-    "colored_urls": [
-      "http://example.com/1.png",
-      "http://example.com/2.png",
-      "http://example.com/3.png",
-    ],
+    "requestId": "aa4899f4-db4c-4b09-8aaa-5ecd175e204e",
+    "styles": [
+      {
+        "probability": 0.5523,
+        "className": "粉嫩柔美"
+      },
+      {
+        "probability": 0.3799,
+        "className": "清新淡雅"
+      },
+      {
+        "probability": 0.0279,
+        "className": "简约中性"
+      }
+    ]
   }
 }
 ```

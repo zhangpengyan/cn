@@ -1,8 +1,8 @@
-# JCLOUD iotcloudgateway API
+# 物联网协议适配
 
 
 ## 简介
-API related to iotcloudgateway
+API related to IoT Hub Protocol Adaptor
 
 
 ### 版本

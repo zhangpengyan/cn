@@ -142,6 +142,7 @@ def handler(event, context):
 ![apigw触发器](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-3.png) 
 
 在浏览器中打开链接，返回执行结果如下：
+
 ![验证触发器执行](https://github.com/jdcloudcom/cn/blob/function3/image/Elastic-Compute/functionservice/apigw%E8%A7%A6%E5%8F%91%E5%99%A8-wsgi-2.png) 
 
 以上，快速完成代码迁移与验证。

@@ -55,7 +55,7 @@ def handler(event, context):
 在使用virtualenv的开发环境中，使用pip freeze 查看代码的依赖，将依赖包和源代码一起打包。
 这里使用引入beatifulsoup库的代码作为示例，具体操作如下：
 
-```shell
+```Shell
 ➜  dev$ mkdir venv-test
 ➜  dev$ cd venv-test
 ➜  venv-test$ virtualenv --no-site-packages venv
@@ -91,7 +91,7 @@ pack.sh完成以下工作：
 
 2.将代码和依赖包打包成code.zip，作为上传到函数服务的代码包。
 
-```shell
+```Shell
 #!/bin/bash
 export PROJECT=mysite
 export LIBPATH=venv/lib/python3.7/site-packages

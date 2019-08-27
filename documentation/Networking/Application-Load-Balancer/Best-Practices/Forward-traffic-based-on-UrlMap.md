@@ -21,11 +21,11 @@
 
 请按如下步骤配置应用负载均衡基于访问请求的域名和URL路径将流量转发给不同的后端服务：
 
-[创建一个七层监听器](forward-traffic-based-on-urlMap#user-content-1)
+[创建一个七层监听器](forward-traffic-based-on-urlmap#user-content-1)
 
-[添加一个转发规则组](forward-traffic-based-on-urlMap#user-content-2)
+[添加一个转发规则组](forward-traffic-based-on-urlmap#user-content-2)
 
-[监听器关联转发规则组](forward-traffic-based-on-urlMap#user-content-3)
+[监听器关联转发规则组](forward-traffic-based-on-urlmap#user-content-3)
 
 ### 创建一个七层监听器
 <div id="user-content-1"></div>

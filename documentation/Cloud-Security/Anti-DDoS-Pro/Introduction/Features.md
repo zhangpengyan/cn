@@ -35,5 +35,5 @@ IP高防提供大容量的DDoS攻击防护，有效对抗大流量型各种DDoS�
 |协议漏洞威胁防护|IP Spoofing；LAND攻击；Fraggle攻击；Smurf攻击；Winnuke攻击；Ping of Death攻击；Tear Drop攻击； IP Option控制攻击；IP分片控制报文攻击；TCP标记合法性检查攻击；超大ICMP控制报文攻击；ICMP重定向控制报文攻击；ICMP不可达控制报文攻击|
 |扫描窥探威胁防护|端口扫描攻击；地址扫描攻击；TRACERT控制报文攻击；IP源站选路选项攻击；IP时间戳选项攻击；IP路由记录选项攻击等|
 |传输层威胁防护|SYN flood攻击；ACK flood攻击；SYN-ACK flood攻击；FIN/RST flood攻击；TCP fragment flood攻击；UDP flood攻击；UDP fragment flood攻击；ICMP flood等|
-|应用型威胁防护|HTTP get /font 攻击；CC 攻击；HTTP slow header/post攻击；HTTPS flood攻击；SSL DoS/DDoS攻击；TCP连接耗尽攻击；Sockstress攻击；TCP重传攻击；TCP空连接攻击；SIP flood等|
+|应用型威胁防护|HTTP get /post 攻击；CC 攻击；HTTP slow header/post攻击；HTTPS flood攻击；SSL DoS/DDoS攻击；TCP连接耗尽攻击；Sockstress攻击；TCP重传攻击；TCP空连接攻击；SIP flood等|
 

@@ -18,16 +18,16 @@
 * 使用 Cocoapods 进行包管理的请使用 `pod install` 命令进行安装 需要使用的框架，目标框架会自动引用
     例如：
 
-```shell
-    pod install {framework name}
+```Shell
+pod install {framework name}
 ```
 
 * 使用`swift package manage` 进行包管理的请将引用的包配置在自己的`Package.Swift` 的 `dependencies` 中
 
-```swift
-     dependencies: [
+```Swift
+dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/jdcloud-api/jdcloud-sdk-ios.git", from: "0.0.1"),
+        .package(url: "https://github.com/jdcloud-api/jdcloud-sdk-ios.git", from: "0.0.11"),
     ]
 ```
 
@@ -42,23 +42,35 @@
 
 * 以下为查询用户主机实例列表的调用实例，具体请查看项目Tests目录下的 `VmTest.swift`.
 
-```swift
-        // 京东云官网 申请的 AccessKey 和 SecretAccessKey
-        let credentials = Credential(accessKeyId: "your jdcloud ak", secretAccessKey: "your jdcloud sk");
+```Swift
+// 京东云官网 申请的 AccessKey 和 SecretAccessKey
+let credentials = Credential(accessKeyId: "your jdcloud ak", secretAccessKey: "your jdcloud sk");
         
-        // 初始化调用业务线的客户端
-        let vmClient = VmJDCloudClient(credential: credentials)
+// 初始化调用业务线的客户端
+let vmClient = VmJDCloudClient(credential: credentials)
        
-        // 创建请求参数，具体的请求参数查看 OPEN API 调用文档
-        let describeInstancesRequest = DescribeInstancesRequest(regionId: "cn-north-1");
+// 创建请求参数，具体的请求参数查看 OPEN API 调用文档
+let describeInstancesRequest = DescribeInstancesRequest(regionId: "cn-north-1");
        
-        // 全局 debug 设定 打开后可以看到签名数据 方便调试
-        GlobalConfig.debug = true
+// 全局 debug 设定 打开后可以看到签名数据 方便调试
+GlobalConfig.debug = true
         
-        // 执行请求，因有异常抛出需要自行处理，如果返回结果中有 AnyObject 类型需要 自行使用 SwiftJson 等框架处理resultString ，而requestResponse 中不会包含AnyObject 类型的结果
-        try vmClient.describeInstancesAsync(request: describeInstancesRequest) { (statusCode, requestResponse, error,resultString) in
-            // 回调方法执行自己的业务逻辑
-            print(statusCode)
-            print(requestResponse)
-            print(error)
+// 执行请求，因有异常抛出需要自行处理，如果返回结果中有 AnyObject 类型需要 自行使用 SwiftJson 等框架处理resultString ，而requestResponse 中不会包含AnyObject 类型的结果
+try vmClient.describeInstancesAsync(request: describeInstancesRequest) { (statusCode, requestResponse, error,resultString) in
+// 回调方法执行自己的业务逻辑
+  print(statusCode)
+  print(requestResponse)
+  print(error)
+}
 ```
+
+**注意：**
+
+- 京东云并没有提供其他下载方式，请务必使用上述官方下载方式！
+
+- version 的版本号需要使用京东云产品提供的最新版本号。例如：示例中VM所使用的最新版本号可到官方提供的API  [更新历史](../../API/Virtual-Machines/ChangeLog.md)  中查询到。
+
+- 每支云产品都有自己的Client，当调用该产品API时，需使用该产品的Client。例如：使用云主机的VmClient只能调用云主机（Vm）的接口；使用高可用组的AgClient只能调用高可用组（Ag）的接口。
+
+
+ 

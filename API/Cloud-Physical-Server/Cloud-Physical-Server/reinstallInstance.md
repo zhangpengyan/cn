@@ -4,7 +4,7 @@
 ## 描述
 重装云物理服务器，只能重装stopped状态的服务器<br/>
 - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表
-
+<br>敏感操作，可开启<a href="https://docs.jdcloud.com/cn/security-operation-protection/operation-protection">MFA操作保护</a>
 
 ## 请求方式
 PUT
@@ -34,14 +34,6 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:reinsta
 |**dataRaidTypeId**|String|True| |数据盘RAID类型ID|
 |**password**|String|True| |密码|
 |**hostname**|String|False| |主机名|
-|**softwares**|Software[]|False| | |
-### Software
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**name**|String|False| |软件包名称|
-|**version**|String|False| |软件包版本|
-|**osTypeId**|String|False| |操作系统系统类型ID|
-|**description**|String|False| |软件包描述|
 
 ## 返回参数
 |名称|类型|描述|

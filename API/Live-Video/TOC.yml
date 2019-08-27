@@ -38,10 +38,14 @@ items:
         href: Live-Video/forbidLiveStream.md
       - name: 恢复直播流推送
         href: Live-Video/resumeLiveStream.md
+      - name: 中断直播流推送
+        href: Live-Video/interruptLiveStream.md
       - name: 查看域名下实时推流信息
         href: Live-Video/describeLiveStreamOnlineList.md
       - name: 查看域名下历史推流记录
         href: Live-Video/describeLiveStreamPublishList.md
+      - name: 查询实时流信息
+        href: Live-Video/describeLiveStreamInfo.md
   - name: 状态通知
     items:
       - name: 设置直播流状态通知
@@ -87,8 +91,12 @@ items:
         href: Live-Video/describeCustomLiveStreamTranscodeTemplate.md
       - name: 查询用户自定义转码模板列表
         href: Live-Video/describeCustomLiveStreamTranscodeTemplates.md
+      - name: 查询系统默认转码模板列表
+        href: Live-Video/describeSystemLiveStreamTranscodeTemplates.md
       - name: 查询转码模板配置
         href: Live-Video/describeLiveStreamTranscodeConfig.md
+      - name: 查询转码模板绑定
+        href: Live-Video/describeTranscodeBinding.md
   - name: 直播录制
     items:
       - name: 添加录制模板
@@ -107,6 +115,8 @@ items:
         href: Live-Video/deleteLiveStreamDomainRecord.md
       - name: 查询录制配置
         href: Live-Video/describeCustomLiveStreamRecordConfig.md
+      - name: 查询录制模板绑定
+        href: Live-Video/describeRecordBinding.md
       - name: 设置录制回调通知
         href: Live-Video/setLiveStreamRecordNotifyConfig.md
       - name: 查询录制回调配置
@@ -131,6 +141,8 @@ items:
         href: Live-Video/addLiveStreamDomainSnapshot.md
       - name: 查询直播截图配置
         href: Live-Video/describeCustomLiveStreamSnapshotConfig.md
+      - name: 查询截图模板绑定
+        href: Live-Video/describeSnapshotBinding.md
       - name: 删除域名截图配置
         href: Live-Video/deleteLiveStreamDomainSnapshot.md
       - name: 设置截图回调通知
@@ -157,26 +169,80 @@ items:
         href: Live-Video/deleteLiveStreamDomainWatermark.md
       - name: 查询水印配置
         href: Live-Video/describeCustomLiveStreamWatermarkConfig.md
-  - name: 资源监控
+      - name: 查询水印模板绑定
+        href: Live-Video/describeWatermarkBinding.md
+  - name: 直播回看
+    items:
+      - name: 添加回看域名
+        href: Live-Video/addLiveRestartDomain.md
+      - name: 开启回看服务
+        href: Live-Video/openLiveRestart.md
+      - name: 关闭回看服务
+        href: Live-Video/closeLiveRestart.md
+      - name: 查询回看配置
+        href: Live-Video/describeLiveRestartConfigs.md
+  - name: 数据统计
     items:
       - name: 查询直播录制时长数据
         status: 0
         href: Live-Video/describeLiveRecordData.md
-      - name: 查询直播截图张数数据
+      - name: 查询推流监控数据
+        href: Live-Video/describePublishStreamInfoData.md
+      - name: 查询直播流历史在线人数
+        href: Live-Video/describeLiveStreamHistoryUserNum.md
+      - name: 查询直播推流数
+        href: Live-Video/describeLivePublishStreamNum.md
+      - name: 查询转码时长
+        href: Live-Video/describeLiveTranscodingDurationData.md
+      - name: 查询播放带宽
+        href: Live-Video/describeLiveStreamBandwidthData.md
+      - name: 查询播放流量
+        href: Live-Video/describeLiveStreamTrafficData.md
+      - name: 查询流分组统计数据
+        href: Live-Video/describeLiveStatisticGroupByStream.md
+      - name: 查询地域分组统计数据
+        href: Live-Video/describeLiveStatisticGroupByArea.md
+      - name: 查询地域/运营商分组统计数据
+        href: Live-Video/describeLiveStatisticGroupByAreaIsp.md
+      - name: 查询在线流列表
+        href: Live-Video/describeDomainOnlineStream.md
+      - name: 查询直播截图张数
         href: Live-Video/describeLiveSnapshotData.md
-      - name: 查询直播鉴黄张数数据
+      - name: 查询直播鉴黄张数
+        status: 0
         href: Live-Video/describeLivePornData.md
+      - name: 查询播放URL排行
+        href: Live-Video/describeUrlRanking.md
+
   - name: 鉴权相关
     items:
-      - name: 鉴权规则
-        href: Authentication/Url.md
-      - name: 查询播放鉴权KEY
-        href: Live-Video/describeLivePlayAuthKey.md
-      - name: 设置播放鉴权KEY
-        href: Live-Video/setLivePlayAuthKey.md
-#  - name: 直播审核
-#    href: Loading.md
+      - name: 直播推流鉴权
+        items:
+          - name: 推流鉴权规则
+            href: Authentication/PublishUrl.md
+          - name: 设置推流鉴权KEY
+            status: 0
+            href: Authentication/PublishUrl.md
+          - name: 查询推流鉴权KEY
+            status: 0
+            href: Authentication/PublishUrl.md
+      - name: 直播播放鉴权
+        items:
+          - name: 播放鉴权规则
+            href: Authentication/PlayUrl.md
+          - name: 设置播放鉴权KEY
+            href: Live-Video/setLivePlayAuthKey.md
+          - name: 查询播放鉴权KEY
+            href: Live-Video/describeLivePlayAuthKey.md
+  - name: 日志下载
+    href: Live-Video/describeDomainsLog.md
   - name: SDK调用方式
     href: Example/SDK-Java.md
+  - name: 参考文档
+    items:
+      - name: 地域简称参照表
+        href: Reference/Region.md
+      - name: 运营商简称参照表
+        href: Reference/Operator.md
 
 

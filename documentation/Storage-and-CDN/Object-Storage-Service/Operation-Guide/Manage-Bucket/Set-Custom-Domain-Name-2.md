@@ -13,17 +13,17 @@
 ## 应用场景
 
 例如，当用户需要将网站中的文件迁移到OSS，并且不想修改网页的代码，即保持网站的链接不变，CNAME功能特别适合这种场景。
-例如用户A的网站域名为www.example.com，网站文件为abc.html，网站链接为：http://www.example.com/abc.html。
+例如用户A的网站域名为www.example.com ，网站文件为abc.html，网站链接为：http://www.example.com/abc.html 。
 
 流程如下：
 
  1.在OSS上创建一个Bucket，命名为example，并上传abc.html网站文件到该存储空间中。
  
- 2.OSS控制台，将www.example.com这个自定义的域名绑定在已创建存储空间上。
+ 2.OSS控制台，将www.example.com 这个自定义的域名绑定在已创建存储空间上。
  
- 3.在域名服务器上，添加CNAME规则，将www.example.com映射成存储空间域名。
+ 3.在域名服务器上，添加CNAME规则，将www.example.com 映射成存储空间域名。
  
- 4.http://www.example.com/abc.html请求到达OSS后，OSS会找到www.example.com和存储空间域名（example.oss.cn-north-1.jcloudcs.com）的映射，转换变成访问桶的abc.html文件。即对http://www.example.com/abc.html的访问，经过OSS处理后，实际上访问的是http:// example.oss.cn-north-1.jcloudcs.com /abc.html。
+ 4.http://www.example.com/abc.html 请求到达OSS后，OSS会找到www.example.com 和存储空间域名（example.s3.cn-north-1.jdcloud-oss.com）的映射，转换变成访问桶的abc.html文件。即对http://www.example.com/abc.html 的访问，经过OSS处理后，实际上访问的是http://example.s3.cn-north-1.jdcloud-oss.com/abc.html 。
  
 ## 自定义域名优势
 
@@ -33,14 +33,14 @@
 ## 控制台：自定义域名 
 在OSS Bucket上传对象后，可获取对象的地址，包含两个部分：OSS域名地址+对象文件名，OSS 访问域名格式如下：
 
-```<BucketName>.<Endpoint>```
+```
+<BucketName>.<Endpoint>
+```
 [外网域名- endpoint ](../../API-Reference-S3-Compatible/Regions-And-Endpoints.md)
-
-
 
 自定义域名绑定成功后，OSS中存储文件的访问地址可使用自定义域名。例如，您的存储空间example位于华北-北京，对象文件名称为test.jpg，绑定的自定义域名为hello-world.com，则该对象访问地址为：
 
-* 未绑定之前：example.oss.cn-north-1.jcloudcs.com /test.jpg
+* 未绑定之前：example.s3.cn-north-1.jdcloud-oss.com /test.jpg
 * 绑定成功后：hello-world.com/test.jpg
   您可以通过控制台将自定义域名绑定到OSS外网域名上实现自定义域名访问存储空间下的文件。
 
@@ -73,7 +73,6 @@
 登录京东云云解析DNS 控制台进入域名解析列表页面。
 单击目标域名或右侧的解析按钮进入域名解析页面。
 单击添加解析后，打开添加解析页面。
-在记录类型下拉列表中，选择CNAME；在记录值框中，填写对应的存储空间外网域名（即Bucket域名，如BucketName.oss.cn-north-1.jcloudcs.com）。
+在记录类型下拉列表中，选择CNAME；在记录值框中，填写对应的存储空间外网域名（即Bucket域名，如BucketName.s3.cn-north-1.jdcloud-oss.com）。
 单击确认，域名解析完成。
 具体参考[京东云云解析DNS-添加解析记录](https://docs.jdcloud.com/cn/jd-cloud-dns/domain-record-add)
-

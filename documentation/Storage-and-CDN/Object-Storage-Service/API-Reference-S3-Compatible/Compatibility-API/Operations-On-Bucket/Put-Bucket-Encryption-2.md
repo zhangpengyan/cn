@@ -4,9 +4,9 @@
  
 ## 请求语法
  
-```
-GET /eric-jdcloud/?encryption  HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com
+```HTTP
+PUT /?encryption  HTTP/1.1
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 06 Sep 2018 12:00:00 GMT
 Authorization: authorization string  (使用签名版本4)
 Content-Length:  length 
@@ -25,13 +25,13 @@ default encryption configuration in the request body
 ###  请求体
 加密方式信息存在request body中，以xml的形式展现。下面的例子展示了设置bucket默认为SSE-KMS。
 
-```
+```XML
 <ServerSideEncryptionConfiguration>
   <Rule>
     <ApplyServerSideEncryptionByDefault>
             <SSEAlgorithm>aws:kms</SSEAlgorithm>
     </ApplyServerSideEncryptionByDefault>
-</Rule>
+  </Rule>
 </ServerSideEncryptionConfiguration>
 
 ```
@@ -62,9 +62,9 @@ default encryption configuration in the request body
 ## 示例：
 
 请求示例：
-  ```
+```HTTP
 PUT /?encryption HTTP/1.1
-Host: examplebucket.s3.amazonaws.com
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 06 Sep 2017 12:00:00 GMT
 Authorization: authorization string
 Content-Length: length
@@ -80,7 +80,7 @@ Content-Length: length
   ```
  返回示例：
  
-   ```
+```HTTP
 HTTP/1.1 200 OK
 Server: JDCloudOSS
 Date: Wed, 14 Nov 2018 03:50:29 GMT
@@ -88,8 +88,7 @@ Content-Length: 0
 Connection: keep-alive
 x-req-id: A8D4BE3AD5D9B626
 x-amz-request-id: A8D4BE3AD5D9B626
-
-  ```
+```
   
  
   

@@ -24,8 +24,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}/versions
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -34,29 +34,35 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}/versions
 ### DeploymentApplyInfo
 |名称|类型|描述|
 |---|---|---|
-|**applyTime**|String|应用时间|
-|**comment**|String|备注信息|
-|**content**|DeploymentResourcesInfo| |
 |**id**|String|ID|
+|**comment**|String|备注信息|
+|**applyTime**|String|应用时间|
 |**version**|String|版本|
+|**content**|DeploymentResourcesInfo| |
 ### DeploymentResourcesInfo
 |名称|类型|描述|
 |---|---|---|
-|**diskAttachment**|Object| |
-|**disks**|Object| |
-|**eipAssociate**|Object| |
-|**eips**|Object| |
-|**httpListeners**|Object| |
-|**keypairs**|Object| |
-|**netInterfaceAttachment**|Object| |
-|**networkInterfaces**|Object| |
-|**securityGroups**|Object| |
-|**slbs**|Object| |
-|**subnets**|Object| |
-|**variables**|Object| |
 |**vms**|Object| |
+|**eips**|Object| |
+|**subnets**|Object| |
+|**networkInterfaces**|Object| |
+|**slbs**|Object| |
+|**securityGroups**|Object| |
+|**securityGroupRules**|Object| |
+|**keypairs**|Object| |
+|**disks**|Object| |
 |**vpcs**|Object| |
 |**vserverGroups**|Object| |
+|**httpListeners**|Object| |
+|**diskAttachment**|Object| |
+|**netInterfaceAttachment**|Object| |
+|**eipAssociate**|Object| |
+|**rds**|Object| |
+|**rdsDatabase**|Object| |
+|**rdsAccount**|Object| |
+|**rdsAccountGrant**|Object| |
+|**bucket**|Object| |
+|**variables**|Object| |
 
 ## 返回码
 |返回码|描述|

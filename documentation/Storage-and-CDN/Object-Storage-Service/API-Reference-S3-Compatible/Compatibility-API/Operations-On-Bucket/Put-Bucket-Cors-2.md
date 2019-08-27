@@ -1,4 +1,4 @@
-# Put Bucket Cors
+# Put Bucket CORS
 
 ## 描述
 为指定Bucket添加cors配置。如果配置存在，OSS将会替换它，仅Bukcet的Owner可操作。您可以在Bucket上设置此配置，以便存储桶可以为跨域访问提供服务。
@@ -6,7 +6,7 @@
 cors规则以XML文本形式展示，包含来源和HTTP方法。该文本最大64KB。例如，Bucket的cors配置有以下两个规则：
 * 第一条CORSRule允许来自https://www.example.com 的跨域PUT、POST、DELETE请求。该规则还允许通过Access-Control-Request-Headers发起OPTIONS预请求，因此，为了响应OPTIONS预请求，OSS将会返回所有的请求Header。
 * 第二条CORSRule允许所有跨域的GET请求，"*"通配符指所有来源。
-```
+```XML
 <CORSConfiguration>
  <CORSRule>
    <AllowedOrigin>http://www.example.com</AllowedOrigin>
@@ -24,7 +24,7 @@ cors规则以XML文本形式展示，包含来源和HTTP方法。该文本最大
 </CORSConfiguration>
 ```
 cors配置还允许其他可选参数，如下所示：
-```
+```XML
 <CORSConfiguration>
  <CORSRule>
    <AllowedOrigin>http://www.example.com</AllowedOrigin>
@@ -47,9 +47,9 @@ CORSRule包括以下附加可选参数：
 
 ## 请求
 ### 语法
-```
+```HTTP
 PUT /?cors HTTP/1.1
-Host: <Bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Content-Length: <length>
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
@@ -106,9 +106,9 @@ ExposeHeader|暴露给浏览器的header列表，即用户从应用程序中访�
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 PUT /?cors HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 x-amz-date: Tue, 21 Aug 2012 17:54:50 GMT
 Content-MD5: 8dYiLewFWZyGgV2Q5FNI4W==
 Authorization: authorization string
@@ -134,7 +134,7 @@ Content-Length: 216
 ```
 
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: BDC4B83DF5096BBE
 Date: Tue, 21 Aug 2012 17:54:50 GMT

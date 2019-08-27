@@ -4,9 +4,9 @@
  
 ## 请求语法
  
-```
-GET /eric-jdcloud/?encryption  HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com
+```HTTP
+GET /?encryption  HTTP/1.1
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 06 Sep 2018 12:00:00 GMT
 Authorization: authorization string  (使用签名版本4)
 Content-Length:  0
@@ -44,7 +44,7 @@ Content-Length:  0
   无特殊错误。
   
 ### 返回示例：
-  ```
+```HTTP
 HTTP/1.1 200 OK
 Server: JDCloudOSS
 Date: Wed, 14 Nov 2018 03:50:32 GMT
@@ -64,6 +64,6 @@ x-amz-request-id: 9DFB131D1820AD65
      </Rule>
 </ServerSideEncryptionConfiguration>
 
-  ```
+```
  
   

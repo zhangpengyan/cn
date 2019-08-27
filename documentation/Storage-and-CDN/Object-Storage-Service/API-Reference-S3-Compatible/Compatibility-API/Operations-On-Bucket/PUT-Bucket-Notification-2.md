@@ -4,16 +4,16 @@
 OSS支持[回调通知](https://docs.jdcloud.com/cn/object-storage-service/callback-notification-2)功能，您可以指定某些资源发生相关操作时及时进行消息通知。OSS回调通知是异步进行的，不影响OSS操作。
 
 您可通过PUT Bucket notification指定某个Bucket创建或更改回调通知配置。回调通知配置(NotificationConfiguration)为XML格式，默认情况下，您的Bucket未配置回调通知，所以回调通知配置(NotificationConfiguration)为空，您可以通过添加空的NotificationConfiguration来关闭回调通知。
-```
+```XML
 <NotificationConfiguration>
 </NotificationConfiguration>
 ```
 
 ## 请求
 ### 语法
-```
+```HTTP
 PUT /?notification HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version 4))
 
@@ -83,9 +83,9 @@ HTTP 403 Forbidden|AccessDenied|您不是该Bucket的拥有者
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 PUT /?notification HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> 
 
@@ -110,7 +110,7 @@ Authorization: <authorization string>
 </NotificationConfiguration>
 ```
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: BB1BA8E12D6A80B7
 Date: Mon, 13 Oct 2014 22:58:44 GMT

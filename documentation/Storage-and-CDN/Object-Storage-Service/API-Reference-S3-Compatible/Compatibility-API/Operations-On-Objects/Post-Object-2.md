@@ -9,7 +9,7 @@ PostObject使用HTML表单上传文件到指定bucket。
 
 ```
 POST / HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com
+Host: <bucket>.s3.<region>.jdcloud-oss.com
 Content-Length: length
 Content-Type: multipart/form-data; boundary=your_boundary
  
@@ -65,10 +65,10 @@ Header特别提示:
 |success_action_redirect|字符串|当上传成功时client跳转地址，如果success_action_redirect没有被指定，或者指定了但是OSS没有解析成功，那么OSS将按照success_action_status的设置进行返回（默认返回204）如果上传文件失败，那么OSS将会返回error并不做跳转,<br>默认值：无|否|
 |success_action_status|字符串|指定了上传文件成功时返回的状态码，前提是success_action_redirect 没有被指定，如果值为200或204，OSS返回内容为空。如果值为201，则返回的状态码为201，http body 内容为xml格式的object相关信息<br>默认值：204<br>有效值：200，201，204（默认）|否|
 |x-amz-algorithm|字符串|签名算法，值为：AWS4-HMAC-SHA256<br>默认值：无<br>仅支持AWS4-HMAC-SHA256|对于需要签名的请求来说是必须的|
-|x-amz-credential|字符串|如果使用S3 API，则格式为：<your-access-key-id>/<date>/<region>/s3/aws4_request例子：AKIAIOSFODNN7EXAMPLEYYYYYYYYYYYY/20180601/cn-north-1/s3/aws4_request<br>默认值：无|对于需要签名的请求来说是必须的|
+|x-amz-credential|字符串|如果使用S3 API，则格式为：\<your-access-key-id\>/\<date\>/\<region\>/s3/aws4_request例子：AKIAIOSFODNN7EXAMPLEYYYYYYYYYYYY/20180601/cn-north-1/s3/aws4_request<br>默认值：无|对于需要签名的请求来说是必须的|
 |x-amz-date|字符串|ISO8601时间格式，例如：20180601T000000Z，policy中x-amz-date属性的值应该与它相同。注意，此时计算签名的时间为20180601<br>默认值：无|对于需要签名的请求来说是必须的|
 |x-amz-signature|字符串|签名字符串<br>默认值：无|对于需要签名的请求来说是必须的|
-|x-amz-storage-class|字符串|Object的存储类型<br> 默认值：STANDARD（标准存储）<br>有效值：STANDARD（标准存储）和REDUCED_REDUNDANCY（低冗余存储）|否|
+|x-amz-storage-class|字符串|Object的存储类型<br> 默认值：STANDARD（标准存储）<br>有效值：STANDARD（标准存储）、GLACIER（归档存储）、REDUCED_REDUNDANCY（低冗余存储）、STANDARD_IA（低频存储）|否|
 |file|字符串|文件或文本内容，此属性必须放在form最后，否则file后的属性将被忽略，不支持多个文件同时上传<br>默认值：无|是|
  
 #### 响应
@@ -114,7 +114,7 @@ Header特别提示:
 
 ```
 POST / HTTP/1.1
-Host: testBucket.s3. cn-north-1.jcloudcs.com
+Host: testBucket.s3.cn-north-1.jdcloud-oss.com
 Content-Length: length
 Content-Type: multipart/form-data; boundary=123456789000
 --123456789000
@@ -153,7 +153,7 @@ Upload to OSS
   <Bucket>testBucket</Bucket>
   <Key>test.txt</Key>
   <ETag>"1b6be8aac90401fe1cd5e4dd1c4b138f"</ETag>
-  <Location>http://s3.cn-north-1.jcloudcs.com/testBucket/test.txt</Location>
+  <Location>http://s3.cn-north-1.jdcloud-oss.com/testBucket/test.txt</Location>
 </PostResponse>
 ```
 
@@ -263,7 +263,7 @@ Conditions是一个列表，可以用于指定Post请求的表单域的合法值
   </head>
   <body>
 
-  <form action="http://<your bucket>.s3.<region>.jcloudcs.com/" method="post" enctype="multipart/form-data">
+  <form action="http://<your bucket>.s3.<region>.jdcloud-oss.com/" method="post" enctype="multipart/form-data">
     // Key to upload: 
     <input type="input"  name="key" value="<your objectKey>" />
     Content-Type: 
@@ -276,7 +276,7 @@ Conditions是一个列表，可以用于指定Post请求的表单域的合法值
     // File: 
     <input type="file"   name="file" /> 
     <!-- The elements after this will be ignored -->
-    <input type="submit" name="submit" value="Upload to Amazon S3" />
+    <input type="submit" name="submit" value="Upload to JDcloud OSS" />
   </form>
   
 </html>

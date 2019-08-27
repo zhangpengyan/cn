@@ -1,108 +1,81 @@
 # Linux分区、格式化和创建文件系统
 
-<br>
+以Centos操作系统为例，数据盘分区、格式化及创建文件系统的操作如下：
 
-##  使用脚本完成数据盘的分区、格式化及挂载
-<br>
+1. 在控制台完成挂载后，您在云主机中就可以看到一块未经分区、格式化的磁盘，您可以通过如下命令来查看磁盘分区信息：
 
-在Linux系统下您可以使用京东云提供的脚本检测是否有尚未分区的数据盘，自动完成数据盘的格式化并挂载，省去了您输入复杂的命令和步骤。
+   `lsblk`
 
-<p><a title="挂载脚本.zip" href="https://docs-downloads.oss.cn-north-1.jcloudcs.com/auto_fdisk%25281%2529.sh" target="_self"><span style="color: rgb(0, 0, 0); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 14px;">挂载脚本.zip</span></a>
-</p>
-<br>
-您可以通过如下两种方式使用该脚本：
+   如下图所示，未经分区、格式化的磁盘设备是/dev/vdb，**lsblk** 的输出从完整的设备路径中去掉了 `/dev/` 前缀。如果设备/dev/vdb已有分区，将会如/dev/vda一样列出其分区：/dev/vda1。
+   
+   ![lsblk](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/lsblk.PNG)
 
-1.不带任何参数：该脚本会自动将您所有未分区的设备进行分区、格式化、挂载（默认挂载点为jddata1、jddata2……jddatan）操作，并在/etc/fstab文件中通过UUID的方式实现云硬盘自动挂载
+2. 新创建的云盘需要在其上创建文件系统后才能够挂载并使用它们。在此之前可以通过输入以下命令来确认设备是否包含文件系统，以设备/dev/vdb为例：
 
-</p>
-<pre class="brush:as3;toolbar:false;">
-sh auto_fdisk.sh</pre>
-<p>
+   `file -s /dev/vdb`
 
-2.带设备名（如/dev/vdc等）、挂载点、文件系统参数：该脚本会根据您输入参数自动完成分区、格式化、挂载操作。
+   当该设备无文件系统时如下图所示：
 
-</p>
-<pre class="brush:as3;toolbar:false;">
-sh auto_fdisk.sh /dev/vdb jddata1 ext4</pre>
-<p>
+   ![vdb_nonfs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/vdb_nonfs.PNG)
 
-**注意：**
+   如果该设备已有文件系统，系统输出入下图所示（设备/dev/vdb包含XFS格式的文件系统）：
 
-1.由于相关操作可能会导致数据丢失。 所以，执行操作之前，请务必确保已经通过快照等手段对数据进行有效备份，或明确相关数据丢失无影响；
+   ![vdb_fsexs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/vdb_fsexs.PNG)
 
-2.本脚本仅适用于未分区且未挂载的云硬盘，对于硬盘已经分区或挂载的硬盘，不会进行操作；
+   **注意：**如果您的云盘是通过快照创建的，此云盘可能已包含文件系统和数据，此时无需重新创建文件系统即可挂载，重新创建文件系统将覆盖原盘数据。如果确认无需创建文件系统，请跳过此步，直接执行第X步进行挂载。
 
-3.本脚本默认为硬盘创建一个分区，且不可修改；
+3. 如果确认需要在此设备上创建新的文件系统，请输入mkfs -t 命令，以在/dev/vdb设备上创建XFS格式的文件系统为例：
 
-4.本脚本会将磁盘的UUID和挂载信息写入/etc/fstab文件实现云硬盘自动挂载，如您需要卸载云硬盘，请将/etc/fstab对应的信息删除，否则可能造成云主机无法正常启动。
+   `mkfs -t xfs /dev/vdb`
 
+   操作成功后入下图所示：
 
-## 手动完成数据盘的分区、格式化及挂载
+   ![mkfs](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/mkfs.PNG)
 
-如您需要手动进行分区、格式化并创建文件系统，我们以Centos操作系统为例，说明如下：
+4. 使用mount命令将该设备挂载到指定目录，以将/dev/vdb挂载到/mnt目录为例：
 
-1.在控制台完成挂载后，您在云主机中就可以看到一块未经分区、格式化的磁盘，您可以通过如下命令来查看磁盘分区信息：
+   `sudo mount /dev/vdb /mnt`
 
-```
-fdisk -l
-```
+   执行成功后，系统无提示信息。可以通过输入 `df -h` 命令检查挂载情况。如下图所示，设备/dev/vdb已挂载成功。
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_001.png)
+   ![mounted](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/mounted.PNG)
 
-2.您可以通过如下命令完成分区，/dev/vdb请您修改为需要分区的设备名
+   如果希望将设备挂载在其他目录，也可以先通过输入mkdir 命令创建挂载目录，以目录名为/mypoint为例：
 
-```
-fdisk /dev/vdb
+   `sudo mkdir /mypoint`
 
-```
+   然后以/mypoint 替换mount命令中的/mnt，`sudo mount /dev/vdb /mypoint`即可。
 
-输入命令后，依次输入 n, p, 1, 以及 两次回车，然后是 wq，完成保存。 这样再次通过 fdisk -l 查看时，你可以看到新建的分区/dev/vdb1
+   
+## 重启后自动挂载
 
+云主机在每次重启时都需要重新挂载云硬盘，未避免每次云主机重启时都手动挂载与硬盘，可以通过在/etc/fstab文件中为设备添加条目来实现云主机重启后对云硬盘的自动挂载。
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_002.png)
+1. （可选）备份/etc/fstab文件，以便对此文件误操作后恢复。
 
-注：如您创建的硬盘容量大于2T，请不要使用分区或参考如下步骤使用parted分区：
+   `sudo cp /etc/fstab /etc/fstab.bak`
 
-1）创建分区表，选择GPT格式：
+2. 输入`blkid`命令查找此设备的UUID。
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_003.png)
+   ![check_uuid](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/check_uuid.PNG)
 
-2）创建分区
+3. 使用vim或其他文本编辑器打开/etc/fstab文件，以下以使用vim为例：
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_004.jpg)
+   `vim /etc/fstab`
 
-3）再次运行fdisk -l命令，确认分区
+4. 在fstab中添加一行新的条目，分别加入希望重启后自动挂载的设备的UUID，当前挂载目录，文件系统和挂载选项。
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_005.jpg)
+   `UUID=e4abe4f9-4c65-4ce7-b8b1-171b7ab93f39 /mnt xfs defaults,nofail 0 2`
 
-3.之后您需要对分区后的硬盘进行格式化，命令如下
+   ![fstab](../../../../../../image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/fstab.PNG)
 
-```
-mkfs -t ext4 /dev/vdb1
-```
+   **注意：**
 
+   建议如上述示例一样，在挂载选项中加入 **nofail**，即允许该实例在挂载此设备过程中即时出现错误也可正常启动。否则可能会造成此实例重启或通过此实例创建的镜像再创建主机时，在此UUID的设备不存在（比如卸载了此云硬盘）的情况下，实例无法正常启动。
 
+5. （可选）如果要检查fstab文件编辑的有效性，可以通过`umount /mnt`命令卸载已挂载的设备，然后输入：
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_006.png)
+   `mount -a`
 
-
-备注：本示例创建了ext4格式的文件系统，您也可以选择创建其他文件系统。为了从文件系统层面保证数据的完整性和可用性，不建议使用ext2等不提供jounral机制的格式。
-
-4.在mnt目录下创建vdb1目录，并将磁盘挂载到该目录下，方便管理
-
-
-```
-mkdir -p /mnt/vdb1 && mount -t ext4 /dev/vdb1 /mnt/vdb1
-```
-
-5.查看磁盘的UUID
-
-```
-blkid /dev/vdb1
-```
-6.写入/etc/fstab文件实现云硬盘挂载
-![](https://github.com/jdcloudcom/cn/blob/edit/image/Elastic-Compute/CloudDisk/cloud-disk/parted-format/parted_007.png)
-
-
-**请注意，若系统为Centos 7以上，写入fstab时必须使用nofail参数，否则若对当前云主机制作私有镜像，基于该私有镜像创建的新云主机将无法正常启动。**
+   此命令将按照fstab文件中的挂载信息自动进行设备挂载，如果系统没有产生错误信息则fstab文件编辑成功。
 

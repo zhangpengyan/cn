@@ -26,7 +26,7 @@
 
 **准备条件**
 
-1.在test-cors存储桶中上传文件cors.html，文件内容为“请求成功”。 点击“获取地址”，可以看到cors.html这个object的访问地址: http://test-cors.oss.cn-east-1.jcloudcs.com/cors.html 。
+1.在test-cors存储桶中上传文件cors.html，文件内容为“请求成功”。 点击“获取地址”，可以看到cors.html这个object的访问地址: http://test-cors.s3.cn-east-1.jdcloud-oss.com/cors.html 。
 
 2.关闭浏览器cache功能，防止因为浏览器缓存了服务器上次返回的header内容导致和CORS的要求不匹配，影响请求结果，这里我们以chrome浏览器为例, 打开“开发者工具”，勾选“Disable cache”。
 
@@ -38,7 +38,7 @@
 
 使用curl访问cors.html文件，显示文件内容“请求成功”，确定该object可正常访问。
 ```
-curl http://test-cors.oss.cn-east-1.jcloudcs.com/cors.html
+curl http://test-cors.s3.cn-east-1.jdcloud-oss.com/cors.html
 ```
 ![](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-084.jpg)
 
@@ -48,7 +48,7 @@ curl http://test-cors.oss.cn-east-1.jcloudcs.com/cors.html
 
 首先写一个简单的HTML文件，将以下代码复制到本地保存成HTML文件，并将该网页托管在云主机上，云主机的IP地址为47.104.98.151，所以该网页地址为http://47.104.98.151/cors-test.html （测试地址不支持访问，如需访问，请自行配置）
 
-```
+```HTML
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +68,7 @@ function loadXMLDoc() {
               document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
         }
         
-        xmlhttp.open("GET","http://test-cors.oss.cn-east-1.jcloudcs.com/cors.html",true);
+        xmlhttp.open("GET","http://test-cors.s3.cn-east-1.jdcloud-oss.com/cors.html",true);
         xmlhttp.setRequestHeader('test','GET');
         xmlhttp.send("");
 }

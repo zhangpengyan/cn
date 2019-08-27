@@ -12,12 +12,12 @@ files:
     destination: /home/config
 hooks:
    AfterInstall:
-     - location: /opt/Control/Test1.sh
+     - command: /opt/Control/Test1.sh
        timeout: 100
        runas: root
-     - location: /opt/Control/Test2.sh
+     - command: /opt/Control/Test2.sh
        timeout: 100
-permisssions: 
+permissions: 
   - object: /home/config/soft
     pattern: "**"
     except: [function.php]
@@ -36,13 +36,13 @@ env:
 
 source：
 
-- 支持文件和目录，若为文件，那么将复制指定文件；若为目录，那么将复制目录内的文件（不包括本目录）；若为一个单斜杠（/），则将复制所有文件。
+- 支持文件和目录，若为文件，那么将复制（mv）指定文件；若为目录，那么将复制（mv）目录内的文件（不包括本目录）；若为一个单斜杠（/），则将复制（mv）所有文件。
 - 相对路径：从代码包的根目录开始
 
 
 destination：
 
-- 复制source中的内容到此位置
+- 复制（mv）source中的内容到此位置
 - 绝对路径
 
 
@@ -108,9 +108,9 @@ folder1/file3.txt
 
 **2）hooks（非必须）**
 
-location：
+command：
 
-- 脚本的位置，为绝对路径
+- 命令或脚本的位置，为绝对路径
 - 必须
 
 timeout：
@@ -147,12 +147,12 @@ runas：
 
 | 环境变量      |   解释 |
 | :--------: | :--------:|
-|  APP_ID | 应用ID，可在部署应用页面查看 |
-| APP_NAME | 应用名称，可在部署应用页面查看 |
-| GROUP_ID | 部署组ID，可在应用详情页查看 |
-| GROUP_NAME | 部署组名称，可在应用详情页查看 |
-| DEPLOY_ID | 部署任务ID，可在部署历史页查看 |
-
+|  JDCLOUD_CODEDEPLOY_APP_ID | 应用ID，可在部署应用页面查看 |
+| JDCLOUD_CODEDEPLOY_APP_NAME | 应用名称，可在部署应用页面查看 |
+| JDCLOUD_CODEDEPLOY_GROUP_ID | 部署组ID，可在应用详情页查看 |
+| JDCLOUD_CODEDEPLOY_GROUP_NAME | 部署组名称，可在应用详情页查看 |
+| JDCLOUD_CODEDEPLOY_DEPLOY_ID | 部署任务ID，可在部署历史页查看 |
+| JDCLOUD_CODEDEPLOY_LIFECYCLE_EVENT | 工作流关键字 |
 
 
 **示例**
@@ -160,30 +160,30 @@ runas：
 ```
 hooks:
   AfterInstall:
-    - location: /home/bin/stop.sh
+    - command: /home/bin/stop.sh
       timeout: 100
       runas: hadoop
-    - location: /home/bin/stop2.sh
+    - command: /home/bin/stop2.sh
       timeout: 100
       runas: root
   ApplicationStart:
-    - location: /home/bin/start.sh
+    - command: /home/bin/start.sh
       timeout: 100
       runas: root
   BeforeInstall:
-    - location: /home/bin/config.sh
+    - command: /home/bin/config.sh
       timeout: 10
 ```
 将在部署过程中，将在工作流中的对应如下操作：
 
 - 执行部署前置脚本：以root用户执行/home/bin/config.sh，超时时间为10s
 - 执行启动脚本：以root用户执行/home/bin/start.sh，超时时间为100s
-- 执行部署后置脚本：以hadoop用户执行/home/bin/stop.sh，超时时间为100s，接下来以root用户执行/home/bin/stop2.sh，超时时间为100s。两个location间由上至下顺序执行
+- 执行部署后置脚本：以hadoop用户执行/home/bin/stop.sh，超时时间为100s，接下来以root用户执行/home/bin/stop2.sh，超时时间为100s。两个command间由上至下顺序执行
 
 
 建议在hooks脚本中，设置 set -e
 
-**3）permisssions（非必须）**
+**3）permissions（非必须）**
 
 object: 
 
@@ -224,7 +224,7 @@ type:
 **示例**
 
 ```
-permisssions:
+permissions:
   - object: /opt/soft
     pattern: "*bin*"
     except: [sbin/start]
@@ -241,6 +241,17 @@ permisssions:
 **4）env（非必须）**
 
 在工作流中执行hooks里的相关脚本时的环境变量
+
+以 key: value 的方式，指明环境变量
+
+**示例**
+
+```
+env:  
+  php_path: /home/config/soft/php/bin
+
+```
+
 
 
 

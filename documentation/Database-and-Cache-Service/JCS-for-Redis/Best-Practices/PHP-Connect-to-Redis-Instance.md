@@ -3,7 +3,7 @@
 
 - step2：编写测试用例
 
-```
+```PHP
 <?php
   /* 这里替换为连接的实例host和port */
   $host = "jredis-cn-north-1-prod-redis-xxxxxxxxxx.jdcloud.com";

@@ -123,7 +123,7 @@
 
 #### 1.	解压下载的Java SDK。
 
-#### 2.	切换到PetStore目录下，编辑Demo.java文件。（[项目下载地址](https://docs-downloads.oss.cn-north-1.jcloudcs.com/PetStoreTest_javaSDK.zip)）
+#### 2.	切换到PetStore目录下，编辑Demo.java文件。（[项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/PetStoreTest_javaSDK_jdcloud.zip)）
 
 - accessKeyId为查看密钥详细信息时的APIKey；
 - secretAccessKey为查看密钥详细信息时的APISecret；
@@ -193,7 +193,7 @@ public class Demo {
 
 #### 1.	解压下载的Python SDK，执行setup.py文件。
 
-#### 2.	切换到PetStore目录下，新建PetStoreTest.py文件。（[项目下载地址](https://docs-downloads.oss.cn-north-1.jcloudcs.com/PetStoreTest_pythonSDK.zip)）
+#### 2.	切换到PetStore目录下，新建PetStoreTest.py文件。（[项目下载地址](https://apigateway.oss.cn-north-1.jcloudcs.com/demo/PetStoreTest_pythonSDK_jdcloud.zip)）
 
 ```
 # coding=utf8

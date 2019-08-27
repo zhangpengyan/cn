@@ -16,7 +16,7 @@
 | DISCARD | 消息丢弃, 不进行重发。消费失败，但是不用再重发 |
 
 ## 示例代码
-```java
+```Java
 package com.jcloud.jcq.sdk.demo;
 
 import com.jcloud.jcq.common.filter.FilterExpression;

@@ -6,7 +6,7 @@
 
 - step2：编写测试用例
 
-```
+```Go
 package main
  import (
      "fmt"

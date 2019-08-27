@@ -9,7 +9,7 @@
 ### 语法
 ```
 PUT /destinationObject HTTP/1.1
-Host: <destinationBucket>.s3.<region>.jcloudcs.com 
+Host: <destinationBucket>.s3.<region>.jdcloud-oss.com 
 x-amz-copy-source: /source_bucket/sourceObject
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 Date: <date>
@@ -22,7 +22,7 @@ Date: <date>
 名称|描述|必须
 ---|---|---
 x-amz-copy-source|源Bucket和源Object名称，通过"/"分隔。<br>Type: String<br>Default: None<br>字符串必须使用URL编码|是
-x-amz-storage-class|如果没有指定该header，存储类型默认为Standard标准存储。<br>Type: Enum<br>Default: STANDARD<br>Valid Values: STANDARD、REDUCED_REDUNDANCY|否
+x-amz-storage-class|如果没有指定该header，存储类型默认为Standard标准存储。<br>Type: Enum<br>Default: STANDARD<br>Valid Values: STANDARD、GLACIER、REDUCED_REDUNDANCY、STANDARD_IA|否
 
 ### 请求元素
 无请求元素
@@ -33,7 +33,7 @@ x-amz-storage-class|如果没有指定该header，存储类型默认为Standard�
 
 名称|描述
 ---|---
-x-amz-storage-class|object存储类型信息。<br>Type: String<br>Default: None
+x-amz-storage-class|提供Object的存储类型信息。非标准存储情况下，OSS将会返回该Header
 
 ### 响应元素
 
@@ -47,7 +47,7 @@ LastModified|返回Object的最后修改时间。<br>Type: String<br>Ancestor: C
 ### 请求示例
 ```
 PUT /my-second-image.jpg HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: oss-example.s3.<region>.jdcloud-oss.com
 Date: Wed, 28 Oct 2009 22:32:00 GMT
 x-amz-copy-source: /bucket/my-image.jpg
 Authorization: <authorization string>

@@ -1,14 +1,15 @@
 # 大数据量处理
 ## 导入数据
 如果有 Unique Key 并且业务端可以保证数据中没有冲突，可以在 Session 内打开这个开关：
-```
+```SQL
 SET @@session.tidb_skip_constraint_check=1;
 ```
 
 另外为了提高写入性能，可以对 TiKV 的参数进行调优。
 请特别注意这个参数：
 
-```[raftstore]
+```Shell
+[raftstore]
 # 默认为 true，表示强制将数据刷到磁盘上。如果是非金融安全级别的业务场景，建议设置成 false，
 # 以便获得更高的性能。
 sync-log = true
@@ -28,7 +29,7 @@ sync-log = true
 在删除大量数据的时候，建议使用 Delete * from t where xx limit 5000; 这样的方案，通过循环来删除，用 Affected Rows == 0 作为循环结束条件，这样避免遇到事务大小的限制。
 
 如果一次删除的数据量非常大，这种循环的方式会越来越慢，因为每次删除都是从前向后遍历，前面的删除之后，短时间内会残留不少删除标记(后续会被 gc 掉)，影响后面的 Delete 语句。如果有可能，建议把 Where 条件细化。举个例子，假设要删除 2017-05-26 当天的所有数据，那么可以这样做：
-```
+```SQL
 for i from 0 to 23:
     while affected_rows > 0:
 	delete * from t where insert_time >= i:00:00 and insert_time < (i+1):00:00 limit 5000;

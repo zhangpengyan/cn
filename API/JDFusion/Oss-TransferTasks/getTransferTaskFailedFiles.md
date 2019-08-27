@@ -16,21 +16,19 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks/{id}/fa
 |**regionId**|String|True| |地域ID|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**x-jdcloud-fusion-cloudid**|String|True| |云注册信息ID|
+无
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**bucket**|TransferTaskFailedDetailInfo| |
+|**task**|TransferTaskFailedDetailInfo| |
 ### TransferTaskFailedDetailInfo
 |名称|类型|描述|
 |---|---|---|

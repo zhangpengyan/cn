@@ -17,17 +17,17 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/vpc_eips
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**authorization**|String|True| |获取方式请参考签名算法指导文档|
-|**x-jdcloud-date**|String|True| |获取方式请参考签名算法指导文档|
-|**x-jdcloud-fusion-cloudid**|String|False| |云注册信息ID|
 |**x-jdcloud-nonce**|String|True| |获取方式请参考签名算法指导文档|
+|**x-jdcloud-date**|String|True| |获取方式请参考签名算法指导文档|
+|**authorization**|String|True| |获取方式请参考签名算法指导文档|
+|**x-jdcloud-fusion-cloudid**|String|False| |云注册信息ID|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -36,14 +36,14 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/vpc_eips
 ### EipAddress
 |名称|类型|描述|
 |---|---|---|
-|**allocationTime**|String|EIP的创建时间|
-|**bandwidth**|String|EIP的带宽峰值，单位为Mbps|
 |**cloudID**|String|云注册信息ID|
-|**id**|String|公网IP ID|
-|**instanceId**|String|当前绑定的实例ID|
-|**instanceType**|String|当前绑定的实例类型|
 |**ipAddress**|String|公网IP地址|
+|**id**|String|公网IP ID|
 |**status**|String|状态|
+|**instanceType**|String|当前绑定的实例类型|
+|**instanceId**|String|当前绑定的实例ID|
+|**bandwidth**|String|EIP的带宽峰值，单位为Mbps|
+|**allocationTime**|String|EIP的创建时间|
 
 ## 返回码
 |返回码|描述|

@@ -27,5 +27,4 @@ b. 云物理服务器的确认方式：
 # 相关参考
 - [什么是DDoS基础防护](../Introduction/Product-Overview.md)
 - [功能特性](../Introduction/Features.md)
-- [应用场景](../Introduction/Application-Scenarios.md)
 - [基础架构](../Introduction/Basic-Infrastructure.md)

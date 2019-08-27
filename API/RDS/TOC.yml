@@ -21,6 +21,8 @@
             herf: Account-Management/resetPassword.md
           - name: revokePrivilege
             herf: Account-Management/revokePrivilege.md
+          - name: createSuperAccount
+            herf: Account-Management/createSuperAccount.md
 
       - name: 审计管理
         items:
@@ -89,6 +91,8 @@
             herf: Cross-region-synchronization-service/deleteBackupSynchronicity.md
           - name: describeBackupSynchronicities
             herf: Cross-region-synchronization-service/describeBackupSynchronicities.md
+          - name: createInstanceByTimeInCrossRegion
+            herf: Cross-region-synchronization-service/createInstanceByTimeInCrossRegion.md
 
       - name: 数据库管理
         items:
@@ -118,6 +122,8 @@
             herf: Instance-Management/createInstanceByTime.md
           - name: createInstanceFromBackup
             herf: Instance-Management/createInstanceFromBackup.md
+          - name: createROInstance
+            herf: Instance-Management/createROInstance.md
           - name: deleteInstance
             herf: Instance-Management/deleteInstance.md
           - name: describeBackupPolicy
@@ -150,6 +156,13 @@
             herf: Instance-Management/rebootInstance.md
           - name: restoreInstance
             herf: Instance-Management/restoreInstance.md
+
+      - name: 日志管理
+        items:
+          - name: describeLogs
+            herf: LOG/describeLogs.md
+          - name: updateLogDownloadURLInternal
+            herf: LOG/updateLogDownloadURLInternal.md
 
       - name: 参数组管理
         items:
@@ -202,6 +215,13 @@
             herf: SQL-Interception/disableIntercept.md
           - name: enableIntercept
             herf: SQL-Interception/enableIntercept.md
+
+      - name: 透明数据加密
+        items:
+          - name: describeTde
+            herf: TDE/describeTde.md
+          - name: enableTde
+            herf: TDE/enableTde.md
             
       - name: 白名单
         items:

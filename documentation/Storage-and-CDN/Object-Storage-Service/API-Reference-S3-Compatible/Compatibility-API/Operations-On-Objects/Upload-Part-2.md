@@ -13,7 +13,7 @@
 ### 语法
 ```
 PUT /ObjectName?partNumber=PartNumber&uploadId=UploadId HTTP/1.1
-Host: <Bucket>.s3.<region>.jcloudcs.com 
+Host: <Bucket>.s3.<region>.jdcloud-oss.com
 Date: <date>
 Content-Length: <Size>
 Authorization: <authorization string>
@@ -58,7 +58,7 @@ NoSuchUpload|指定的分片上传不存在。Upload ID可能是无效的。|404
 ### 请求示例
 ```
 PUT /my-movie.m2ts?partNumber=1&uploadId=VCVsb2FkIElEIGZvciBlbZZpbmcncyBteS1tb3ZpZS5tMnRzIHVwbG9hZR HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: oss-example.s3.<region>.jdcloud-oss.com
 Date:  Mon, 1 Nov 2010 20:34:56 GMT
 Content-Length: 10485760
 Content-MD5: pUNXr/BjKK5G2UKvaRRrOA==

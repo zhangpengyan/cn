@@ -3,7 +3,16 @@
 
 ## 函数运行时
 
-公测期间，函数服务支持Python运行时，Python 3.6语言，详情请参考[函数编程模型](../Operation-Guide/buildfunction/programming-model/basic-concept.md)。
+您可以使用函数服务支持的开发语言（见表1）编写函数代码。
+
+| 运行时类型 | 运行时版本 | 文档链接 |
+| ---------- | -------- | -------- |
+| Python 2.7  | Python 2.7 版本 | [python runtime](../Operation-Guide/buildfunction/runtime/python.md) |  
+| Python 3.6   | Python 3.6 版本 | [python runtime](../Operation-Guide/buildfunction/runtime/python.md) | 
+| Python 3.7   | Python 3.7 版本 | [python runtime](../Operation-Guide/buildfunction/runtime/python.md) | 
+| NodeJS 6    | NodeJS 6.17 版本 | [nodejs runtime](../Operation-Guide/buildfunction/runtime/nodejs.md) | 
+| NodeJS 8    | NodeJS 8.16 版本 | [nodejs runtime](../Operation-Guide/buildfunction/runtime/nodejs.md) | 
+
 
 ## 函数支持多种代码上传方式
 
@@ -11,9 +20,9 @@
 
 ## 函数支持多种触发器类型
 
-公测期间，函数服务支持的触发器类型及调用方式见表1：
+公测期间，函数服务支持的触发器类型及调用方式见表2：
 
-表1：Function支持触发器信息
+表2：Function支持触发器信息
 
 | 触发器     | 函数调用方式 | 参考       |
 | ---------- | ------------ | ---------- |

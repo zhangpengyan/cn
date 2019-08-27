@@ -3,49 +3,142 @@
   items:
   - name: 接口概览
     href: overview.md
-
   - name: 更新历史
     herf: ChangeLog.md
-
-  - name: 云物理服务器相关接口
+  - name: 接口信息
     items:
-      - name: describeOS
-        href: Cloud-Physical-Server/describeOS.md
-      - name: describeInstanceName
-        href: Cloud-Physical-Server/describeInstanceName.md
-      - name: createInstances
-        href: Cloud-Physical-Server/createInstances.md
-      - name: modifyInstance
-        href: Cloud-Physical-Server/modifyInstance.md
-      - name: describeDeviceTypes
-        href: Cloud-Physical-Server/describeDeviceTypes.md  
-      - name: describeDeviceRaids
-        href: Cloud-Physical-Server/describeDeviceRaids.md
-      - name: describeInstanceRaid
-        href: Cloud-Physical-Server/describeInstanceRaid.md
-      - name: describeInstanceStatus
-        href: Cloud-Physical-Server/describeInstanceStatus.md
-      - name: restartInstance
-        href: Cloud-Physical-Server/restartInstance.md  
-      - name: stopInstance
-        href: Cloud-Physical-Server/stopInstance.md
-      - name: startInstance
-        href: Cloud-Physical-Server/startInstance.md
-      - name: reinstallInstance
-        href: Cloud-Physical-Server/reinstallInstance.md
-      - name: describeInstance
-        href: Cloud-Physical-Server/describeInstance.md
-      - name: modifyBandwidth
-        href: Cloud-Physical-Server/modifyBandwidth.md
-      - name: describeInstances
-        href: Cloud-Physical-Server/describeInstances.md
-      - name: describeRegiones
-        href: Cloud-Physical-Server/describeRegiones.md
-      - name: describeSubnet
-        href: Cloud-Physical-Server/describeSubnet.md
-      
-      
-      
-      
-      
-        
+      - name: 云物理服务器相关接口
+        items:
+          - name: describeOS
+            href: Cloud-Physical-Server/describeOS.md
+          - name: describeInstanceName
+            href: Cloud-Physical-Server/describeInstanceName.md
+          - name: createInstances
+            href: Cloud-Physical-Server/createInstances.md
+          - name: modifyInstance
+            href: Cloud-Physical-Server/modifyInstance.md
+          - name: describeDeviceTypes
+            href: Cloud-Physical-Server/describeDeviceTypes.md  
+          - name: describeDeviceRaids
+            href: Cloud-Physical-Server/describeDeviceRaids.md
+          - name: describeInstanceRaid
+            href: Cloud-Physical-Server/describeInstanceRaid.md
+          - name: describeInstanceStatus
+            href: Cloud-Physical-Server/describeInstanceStatus.md
+          - name: restartInstance
+            href: Cloud-Physical-Server/restartInstance.md  
+          - name: stopInstance
+            href: Cloud-Physical-Server/stopInstance.md
+          - name: startInstance
+            href: Cloud-Physical-Server/startInstance.md
+          - name: reinstallInstance
+            href: Cloud-Physical-Server/reinstallInstance.md
+          - name: describeInstance
+            href: Cloud-Physical-Server/describeInstance.md
+          - name: modifyBandwidth
+            href: Cloud-Physical-Server/modifyBandwidth.md
+          - name: describeInstances
+            href: Cloud-Physical-Server/describeInstances.md
+          - name: associateElasticIp
+            href: Cloud-Physical-Server/associateElasticIp.md
+          - name: disassociateElasticIp
+            href: Cloud-Physical-Server/disassociateElasticIp.md
+      - name: 地域相关接口
+        items:
+          - name: describeRegiones
+            href: Cloud-Physical-Server/describeRegiones.md
+          - name: queryCPSLBRegions
+            href: Cloud-Physical-Server/queryCPSLBRegions.md
+      - name: 弹性公网IP相关接口
+        items:
+          - name: describeElasticIps
+            href: Cloud-Physical-Server/describeElasticIps.md
+          - name: applyElasticIps
+            href: Cloud-Physical-Server/applyElasticIps.md
+          - name: describeElasticIp
+            href: Cloud-Physical-Server/describeElasticIp.md
+          - name: modifyElasticIpBandwidth
+            href: Cloud-Physical-Server/modifyElasticIpBandwidth.md
+      - name: 子网相关接口
+        items:
+          - name: describeBasicSubnet
+            href: Cloud-Physical-Server/describeBasicSubnet.md
+          - name: describeSubnets
+            href: Cloud-Physical-Server/describeSubnets.md
+          - name: createSubnet
+            href: Cloud-Physical-Server/createSubnet.md
+          - name: describeSubnet
+            href: Cloud-Physical-Server/describeSubnet.md
+          - name: modifySubnet
+            href: Cloud-Physical-Server/modifySubnet.md
+          - name: deleteSubnet
+            href: Cloud-Physical-Server/deleteSubnet.md
+      - name: 私有网络相关接口
+        items:
+          - name: describeVpc
+            href: Cloud-Physical-Server/describeVpc.md
+          - name: modifyVpc
+            href: Cloud-Physical-Server/modifyVpc.md
+          - name: deleteVpc
+            href: Cloud-Physical-Server/deleteVpc.md
+          - name: describeVpcs
+            href: Cloud-Physical-Server/describeVpcs.md
+          - name: createVpc
+            href: Cloud-Physical-Server/createVpc.md
+      - name: 路由表相关接口
+        items:
+          - name: queryRouteTables
+            href: Cloud-Physical-Server/queryRouteTables.md
+          - name: queryRouteTable
+            href: Cloud-Physical-Server/queryRouteTable.md
+      - name: 负载均衡相关接口
+        items:
+          - name: createLoadBalancer
+            href: Cloud-Physical-Server/createLoadBalancer.md
+          - name: queryLoadBalancers
+            href: Cloud-Physical-Server/queryLoadBalancers.md
+          - name: queryLoadBalancer
+            href: Cloud-Physical-Server/queryLoadBalancer.md
+          - name: modifyLoadBalancer
+            href: Cloud-Physical-Server/modifyLoadBalancer.md
+          - name: startLoadBalancer
+            href: Cloud-Physical-Server/startLoadBalancer.md
+          - name: stopLoadBalancer
+            href: Cloud-Physical-Server/stopLoadBalancer.md
+          - name: associateElasticIpLB
+            href: Cloud-Physical-Server/associateElasticIpLB.md
+          - name: disassociateElasticIpLB
+            href: Cloud-Physical-Server/disassociateElasticIpLB.md
+          - name: createListener
+            href: Cloud-Physical-Server/createListener.md
+          - name: queryListeners
+            href: Cloud-Physical-Server/queryListeners.md
+          - name: queryListener
+            href: Cloud-Physical-Server/queryListener.md
+          - name: modifyListener
+            href: Cloud-Physical-Server/modifyListener.md
+          - name: deleteListener
+            href: Cloud-Physical-Server/deleteListener.md
+          - name: startListener
+            href: Cloud-Physical-Server/startListener.md
+          - name: stopListener
+            href: Cloud-Physical-Server/stopListener.md
+          - name: createServerGroup
+            href: Cloud-Physical-Server/createServerGroup.md
+          - name: queryServerGroups
+            href: Cloud-Physical-Server/queryServerGroups.md
+          - name: queryServerGroup
+            href: Cloud-Physical-Server/queryServerGroup.md
+          - name: modifyServerGroup
+            href: Cloud-Physical-Server/modifyServerGroup.md
+          - name: deleteServerGroup
+            href: Cloud-Physical-Server/deleteServerGroup.md
+          - name: addServers
+            href: Cloud-Physical-Server/addServers.md
+          - name: queryServers
+            href: Cloud-Physical-Server/queryServers.md
+          - name: modifyServer
+            href: Cloud-Physical-Server/modifyServer.md
+          - name: removeServer
+            href: Cloud-Physical-Server/removeServer.md
+    

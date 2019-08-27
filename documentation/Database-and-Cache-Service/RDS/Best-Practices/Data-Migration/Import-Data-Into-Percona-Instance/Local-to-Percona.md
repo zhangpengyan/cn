@@ -9,7 +9,7 @@
 ## 操作步骤
 1. 创建云数据库 Percona，具体的创建步骤请参考 [创建云数据库 RDS 实例](../../../Operation-Guide/Instance/Create-Instance.md)。
 2. 通过控制台进行库的创建，确保本地自建的 Percona 中需要导出的库名在云数据库 Percona 中同样的创建了一遍，具体的创建步骤请参考 [创建库](../../../Operation-Guide/Database-Management/Create-Database.md)。
-3. 通过控制台进行数据库账号的创建，也可以使用创建云数据库 Percona 的时候的账号，然后赋予这个账号在第 2 步操作中新建的库的 ***读写*** 权限，具体的创建步骤请参考 [创建账号](../../../Operation-Guide/Account/Create-Account.md)。
+3. 通过控制台进行数据库账号的创建，也可以使用创建云数据库 Percona 的时候的账号，然后赋予这个账号在第 2 步操作中新建的库的 ***读写*** 权限，具体的创建步骤请参考 [创建账号](../../../Operation-Guide/Account/Create-Account/Percona-Create-Account.md)。
 4. 完成云数据库 Percona 创建和初始化工作之后，开始从本地自建的 Percona 进行数据导出到本地的操作，执行命令
 
     ```
@@ -22,7 +22,7 @@
     ```
     
 5. 完成本地自建的 Percona 数据导出到本地之后，接下来就开始创建云主机了。
-6. 创建云主机，具体的创建步骤请参考 [创建云主机](https://www.jdcloud.com/help/detail/303/isCatalog/1)，创建云主机时候需要注意以下几点
+6. 创建云主机，具体的创建步骤请参考 [创建实例](https://docs.jdcloud.com/virtual-machines/create-instance)，创建云主机时候需要注意以下几点
     * 请确保云主机和第 1 步创建的云数据库 Percona 在同一个 ***私有网络*** 内。
     * 新建的云主机需要带一个 ***公网 IP***，提供公网访问能力，否则没办法上传本地的数据文件到云主机上。
     * 请确保云主机所在子网的 ***网络 ACL*** 是允许本地 ssh 连接到云主机上的。

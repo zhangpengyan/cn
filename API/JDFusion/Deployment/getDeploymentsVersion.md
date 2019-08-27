@@ -13,8 +13,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}/versions
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**id**|String|True| |deployment ID|
-|**regionId**|String|True| |地域ID|
 |**version_id**|String|True| |application ID|
+|**regionId**|String|True| |地域ID|
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
@@ -25,8 +25,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}/versions
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -35,38 +35,45 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/deployments/{id}/versions
 ### DeploymentInfo
 |名称|类型|描述|
 |---|---|---|
-|**content**|DeploymentResourcesInfo| |
 |**info**|DeploymentBaseInfo| |
+|**content**|DeploymentResourcesInfo| |
 ### DeploymentResourcesInfo
 |名称|类型|描述|
 |---|---|---|
-|**diskAttachment**|Object| |
-|**disks**|Object| |
-|**eipAssociate**|Object| |
-|**eips**|Object| |
-|**httpListeners**|Object| |
-|**keypairs**|Object| |
-|**netInterfaceAttachment**|Object| |
-|**networkInterfaces**|Object| |
-|**securityGroups**|Object| |
-|**slbs**|Object| |
-|**subnets**|Object| |
-|**variables**|Object| |
 |**vms**|Object| |
+|**eips**|Object| |
+|**subnets**|Object| |
+|**networkInterfaces**|Object| |
+|**slbs**|Object| |
+|**securityGroups**|Object| |
+|**securityGroupRules**|Object| |
+|**keypairs**|Object| |
+|**disks**|Object| |
 |**vpcs**|Object| |
 |**vserverGroups**|Object| |
+|**httpListeners**|Object| |
+|**diskAttachment**|Object| |
+|**netInterfaceAttachment**|Object| |
+|**eipAssociate**|Object| |
+|**rds**|Object| |
+|**rdsDatabase**|Object| |
+|**rdsAccount**|Object| |
+|**rdsAccountGrant**|Object| |
+|**bucket**|Object| |
+|**variables**|Object| |
 ### DeploymentBaseInfo
 |名称|类型|描述|
 |---|---|---|
 |**cloudId**|String|云ID|
-|**createdTime**|String|创建时间|
-|**description**|String|描述|
+|**version**|String|版本|
+|**readOnly**|Integer|是否只读 0：否 1：是|
 |**id**|String|ID|
 |**name**|String|名称|
-|**readOnly**|Integer|是否只读 0：否 1：是|
-|**updatedTime**|String|更新时间|
+|**description**|String|描述|
 |**userId**|String|用户ID|
-|**version**|String|版本|
+|**createdTime**|String|创建时间|
+|**updatedTime**|String|更新时间|
+|**lastOperation**|String|最近一次操作|
 
 ## 返回码
 |返回码|描述|

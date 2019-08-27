@@ -5,9 +5,9 @@
 
 ## 请求
 ### 语法
-```
+```HTTP
 GET /?acl HTTP/1.1
-Host: <bucket>.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -37,14 +37,14 @@ Permission|指定的权限<br>Type: String<br>Valid Values: FULL_CONTROL、WRITE
 
 ## 示例
 ### 请求示例
-```
+```HTTP
 GET ?acl HTTP/1.1
-Host: oss-example.s3.<region>.jcloudcs.com 
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 28 Oct 2009 22:32:00 GMT
 Authorization: <authorization string>
 ```
 ### 响应示例
-```
+```HTTP
 HTTP/1.1 200 OK
 x-amz-request-id: 318BC8BC148832E5
 Date: Wed, 28 Oct 2009 22:32:00 GMT

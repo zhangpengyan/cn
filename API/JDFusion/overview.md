@@ -25,6 +25,8 @@ v1
 |**createRdsAccounts**|POST|根据给定的信息，创建指定RDS实例的账户|
 |**createRdsDatabase**|POST|根据给定的信息，创建指定RDS实例的数据库|
 |**createRdsInstance**|POST|根据给定的信息，创建RDS实例|
+|**createSecurityGroupsRule**|POST|新增安全组规则|
+|**createTransferTask**|POST|创建任务|
 |**createTransferTask**|POST|创建任务|
 |**createVmInstance**|POST|根据云提供商创建虚拟机|
 |**createVmKeypair**|POST|根据云提供商创建密钥对|
@@ -43,6 +45,8 @@ v1
 |**deleteRdsAccount**|DELETE|删除指定RDS实例上，指定用户名的账号信息|
 |**deleteRdsByInstId**|DELETE|删除指定ID的RDS实例信息|
 |**deleteRdsDatabase**|DELETE|删除指定RDS实例上，指定数据库名的数据库信息|
+|**deleteSecurityGroupsRule**|DELETE|删除安全组规则|
+|**deleteSlbsListener**|DELETE|删除监听器|
 |**deleteTransferTask**|DELETE|根据指定ID删除任务|
 |**deleteVmInstanceById**|DELETE|通过虚拟机id删除虚拟机|
 |**deleteVmKeypairByName**|DELETE|删除密钥对|
@@ -52,6 +56,7 @@ v1
 |**deleteVpcSecurityGroupById**|DELETE|删除安全组|
 |**deleteVpcSlbById**|DELETE|删除SLB|
 |**deleteVpcSubnetById**|DELETE|删除子网|
+|**deleteVserverGroup**|DELETE|删除服务器组|
 |**detachDiskToVmInstanceByDiskId**|PUT|从虚拟机卸载云硬盘|
 |**detachVpcNetworkInterfaceById**|PUT|卸载网卡|
 |**disassociateVpcEipById**|PUT|解绑公网IP|
@@ -69,15 +74,20 @@ v1
 |**getDeploymentVersions**|GET|查询应用记录|
 |**getDeployments**|GET|查询部署信息列表|
 |**getDeploymentsById**|GET|查询部署信息|
+|**getDeploymentsResultsByIdRecord**|GET|查询某一次的历史执行结果（内部使用）|
 |**getDeploymentsVersion**|GET|查询应用记录详细信息|
 |**getDiskById**|GET|根据云提供商查询对应的云硬盘资源信息|
 |**getDisks**|GET|根据云提供商查询对应的云硬盘资源信息|
+|**getLbHttpListener**|GET|根据过滤条件，查监听器列表|
 |**getRdsAccountsByInstId**|GET|根据过滤条件，取得指定RDS实例上的账号信息|
-|**getRdsAccountsByInstIdAndAccountName**|GET|根据过滤条件，取得指定RDS实例上的账号信息|
-|**getRdsByInstId**|GET|根据云提供商查询对应的RDS实例信息|
+|**getRdsAccountsByInstIdAndAccountName**|GET|取得指定RDS实例上的指定账号信息|
+|**getRdsByInstId**|GET|查询指定ID的RDS实例信息|
 |**getRdsDatabaseByInstIdAndDbName**|GET|根据过滤条件，取得指定RDS实例上的数据库信息|
 |**getRdsDatabasesByInstId**|GET|根据过滤条件，取得指定RDS实例上的数据库信息|
 |**getRdsInstances**|GET|根据云提供商查询对应的RDS实例信息|
+|**getRdsSpecification**|GET|根据数据库类型，取得RDS实例的规格|
+|**getRegions**|GET|查询地域列表信息|
+|**getRegionsAvailableZones**|GET|查询可用域列表信息|
 |**getTaskInfoById**|GET|读取指定ID的运行结果和运行状态|
 |**getTaskInfoHistoryById**|GET|读取指定ID的运行结果和运行状态|
 |**getTransferTaskById**|GET|根据指定ID获取任务信息|
@@ -95,7 +105,7 @@ v1
 |**getVpcEips**|GET|根据云提供商查询对应的公网IP资源信息|
 |**getVpcNetworkInterfaceById**|GET|根据云提供商查询对应的网卡资源信息|
 |**getVpcNetworkInterfaces**|GET|根据云提供商查询对应的网卡资源信息|
-|**getVpcSecurityGroupById**|GET|根据云提供商查询对应的安全组资源信息|
+|**getVpcSecurityGroupById**|GET|查询指定的安全组资源信息|
 |**getVpcSecurityGroups**|GET|根据云提供商查询对应的安全组资源信息|
 |**getVpcSlbById**|GET|根据云提供商查询对应的SLB资源信息|
 |**getVpcSlbs**|GET|根据云提供商查询对应的负载均衡资源信息|
@@ -103,17 +113,24 @@ v1
 |**getVpcSubnets**|GET|根据云提供商查询对应的subnet资源信息|
 |**getVpcVServerGroups**|GET|根据过滤条件，取得服务器组的信息|
 |**getVpcs**|GET|查询私有网络资源列表|
+|**getVserverGroupsById**|GET|根据过滤条件，取得服务器组的信息|
 |**grantRdsAccount**|PUT|给RDS账号分配数据库权限|
+|**grantRdsAccountsByTask**|PUT|通过异步任务，给RDS账号分配数据库权限|
 |**rebootVmInstanceById**|PUT|只能重启状态为 运行中（Running）的实例。|
 |**registCloudInfo**|POST|为指定用户关联云|
 |**removeDiskById**|DELETE|删除云硬盘|
 |**reverseDeployment**|POST|根据已有资源反向生成deployment|
-|**revokeRdsAccount**|DELETE|给RDS账号分配数据库权限|
+|**revokeRdsAccount**|DELETE|撤销RDS账号在指定数据库的所有权限|
 |**rollbackDeploymentsVersion**|PUT|应用部署回滚|
 |**startChannel**|PUT|启动数据同步|
+|**startSlb**|PUT|启动负载均衡|
+|**startSlbListener**|PUT|启动监听器|
 |**startTransferTask**|PUT|根据指定ID启动任务|
 |**startVmInstanceById**|PUT|启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。|
 |**stopChannel**|PUT|停止数据同步|
+|**stopSlb**|PUT|停止负载均衡|
+|**stopSlbListener**|PUT|停止监听器|
 |**stopTransferTask**|PUT|根据指定ID停止任务|
 |**stopVmInstanceById**|PUT|停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。|
 |**unregistCloudInfo**|DELETE|获取指定云信息|
+|**validCloudInfo**|GET|验证指定云信息的AK、SK|

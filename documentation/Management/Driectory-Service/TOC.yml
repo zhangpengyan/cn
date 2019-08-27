@@ -32,6 +32,8 @@
          href: Operation-Guide/Add-Users-And-Groups.md
        - name: 删除目录服务
          href: Operation-Guide/Delete-Directory-Service.md
+         name: 手动加入目录服务域控
+         href: Operation-Guide/Join-Windows-Instance.md
   - name: 常见问题
     items:
       - name: 信任关系认证失败

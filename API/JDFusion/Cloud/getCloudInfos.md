@@ -23,8 +23,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/cloud_info
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -34,10 +34,10 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/cloud_info
 |名称|类型|描述|
 |---|---|---|
 |**id**|String| |
-|**info**|Object| |
-|**metadata**|Object| |
 |**name**|String| |
 |**vendor**|String| |
+|**info**|Object| |
+|**metadata**|Object| |
 
 ## 返回码
 |返回码|描述|

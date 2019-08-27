@@ -19,23 +19,23 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/oss_transferTasks/{id}
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**task**|TransferTaskInfo|False| | |
-|**x-jdcloud-fusion-cloudid**|String|True| |云注册信息ID|
 
 ### TransferTaskInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**dstAddress**|TaskAddressInfo|False| | |
 |**name**|String|False| |任务名称|
 |**srcAddress**|TaskAddressInfo|False| | |
+|**dstAddress**|TaskAddressInfo|False| | |
 ### TaskAddressInfo
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**accessKey**|String|False| |源地址的accesskey|
-|**bucket**|String|False| |源地址的Bucket|
-|**endpoint**|String|False| |源地址的Endpoint|
-|**prefix**|String|False| |源地址的Prefix，不能以/开头|
-|**secretKey**|String|False| |源地址的securitykey|
 |**storageType**|String|False| |任务类型:源地址中支持 s3file, aliyunfile，目标现在只支持s3file|
+|**accessKey**|String|False| |源地址的accesskey|
+|**secretKey**|String|False| |源地址的securitykey|
+|**endpoint**|String|False| |源地址的Endpoint|
+|**bucket**|String|False| |源地址的Bucket|
+|**prefix**|String|False| |源地址的Prefix，不能以/开头|
+|**cloudID**|String|False| |云信息ID|
 
 ## 返回参数
 |名称|类型|描述|

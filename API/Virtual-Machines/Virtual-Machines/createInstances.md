@@ -8,17 +8,16 @@
     - 可查询<a href="http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes">DescribeInstanceTypes</a>接口获得指定地域或可用区的规格信息。
     - 不能使用已下线、或已售馨的规格ID
 - 镜像
-    - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
     - Windows Server所有镜像CPU不可选超过64核CPU。
     - 可查询<a href="http://docs.jdcloud.com/virtual-machines/api/describeimages">DescribeImages</a>接口获得指定地域的镜像信息。
     - 选择的镜像必须支持选择的实例规格。可查询<a href="http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints">DescribeImageConstraints</a>接口获得指定镜像的实例规格限制信息。<br>
 - 网络配置
     - 指定主网卡配置信息
         - 必须指定subnetId
-        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-100]Mbps，步进1Mbps
+        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
         - 可以指定主网卡的内网主IP(primaryIpAddress)，此时maxCount只能为1
         - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        - 一台云主机创建时必须指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
+        - 一台云主机创建时必须至少指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
         - 主网卡deviceIndex设置为1
 - 存储
     - 系统盘
@@ -27,17 +26,18 @@
             - local：不能指定大小，默认为40GB
             - cloud：取值范围: 40-500GB，并且不能小于镜像的最小系统盘大小，如果没有指定，默认以镜像中的系统盘大小为准
         - 自动删除
-            - 如果是local，默认自动删除，不能修改此属性
-            - 如果是cloud类型的按配置计费的云硬盘，可以指定为True
+            - 如果是local类型，默认自动删除，不可修改
+            - 如果是cloud类型的按配置计费的云硬盘，默认为True，可修改
+            - 如果是cloud类型的包年包月的云硬盘，默认为False，不可修改
     - 数据盘
         - 磁盘分类，数据盘仅支持cloud
-        - 云硬盘类型可以选择ssd、premium-hdd
+        - 云硬盘类型可以选择ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
             - premium-hdd：范围[20,3000]GB，步长为10G
             - ssd：范围[20,1000]GB，步长为10G
+            - hdd.std1、ssd.gp1、ssd.io1: 范围[20-16000]GB，步长为10GB
         - 自动删除
-            - 默认自动删除，如果是包年包月的数据盘或共享型数据盘，此参数不生效
-            - 可以指定SnapshotId创建云硬盘
+            - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
         - 可以从快照创建磁盘
     - local类型系统的云主机可以挂载8块云硬盘
     - cloud类型系统的云主机可以挂载7块云硬盘
@@ -86,7 +86,16 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances
 |**systemDisk**|InstanceDiskAttachmentSpec|False| |系统盘配置信息|
 |**dataDisks**|InstanceDiskAttachmentSpec[]|False| |数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。|
 |**charge**|ChargeSpec|False| |计费配置<br>云主机不支持按用量方式计费，默认为按配置计费。<br>打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。<br>打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。<br>|
+|**userdata**|Userdata[]|False| |元数据信息，目前只支持传入一个key为"launch-script"，表示首次启动脚本。value为base64格式。<br>launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;<br>launch-script：windows系统支持bat和powershell，编码前须分别以 <cmd></cmd> 和 <powershell></powershell> 作为内容首、尾行。<br>|
 |**description**|String|False| |主机描述，<a href="http://docs.jdcloud.com/virtual-machines/api/general_parameters">参考公共参数规范</a>。|
+|**noPassword**|Boolean|False| |不使用模板中的密码。<br>仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。<br>若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。<br>|
+|**noKeyNames**|Boolean|False| |不使用模板中的密钥。<br>仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。<br>若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。<br>|
+|**noElasticIp**|Boolean|False| |不使用模板中的弹性公网IP。<br>仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。<br>若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。|
+### Userdata
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**key**|String|False| |键|
+|**value**|String|False| |值|
 ### ChargeSpec
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
@@ -99,7 +108,7 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances
 |**diskCategory**|String|False| |磁盘分类，取值为本地盘(local)或者云硬盘(cloud)。<br>系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。<br>数据盘仅支持云硬盘(cloud)。<br>|
 |**autoDelete**|Boolean|False| |是否随云主机一起删除，即删除主机时是否自动删除此磁盘，默认为true，本地盘(local)不能更改此值。<br>如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。<br>如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。<br>|
 |**cloudDiskSpec**|DiskSpec|False| |数据盘配置|
-|**deviceName**|String|False| |数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi|
+|**deviceName**|String|False| |数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm|
 |**noDevice**|Boolean|False| |排除设备，使用此参数noDevice配合deviceName一起使用。<br>创建整机镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。<br>创建模板：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb不参与创建主机。<br>创建主机：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb，或者模板(使用模板创建主机)中的数据盘vdb不参与创建主机。<br>|
 ### DiskSpec
 |名称|类型|是否必需|默认值|描述|
@@ -108,7 +117,8 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances
 |**name**|String|True| |云硬盘名称|
 |**description**|String|False| |云硬盘描述|
 |**diskType**|String|True| |云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一|
-|**diskSizeGB**|Integer|True| |云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G|
+|**diskSizeGB**|Integer|True| |云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G|
+|**iops**|Integer|False| |云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.|
 |**snapshotId**|String|False| |用于创建云硬盘的快照ID|
 |**charge**|ChargeSpec|False| |计费配置；如不指定，默认计费类型是后付费-按使用时常付费|
 |**multiAttachable**|Boolean|False| |云硬盘是否支持一盘多主机挂载，默认为false（不支持）|
@@ -122,7 +132,7 @@ https://vm.jdcloud-api.com/v1/regions/{regionId}/instances
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**subnetId**|String|True| |子网ID|
-|**az**|String|False| |可用区，用户的默认可用区|
+|**az**|String|False| |可用区，用户的默认可用区，该参数无效，不建议使用|
 |**networkInterfaceName**|String|False| |网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。|
 |**primaryIpAddress**|String|False| |网卡主IP，如果不指定，会自动从子网中分配|
 |**secondaryIpAddresses**|String[]|False| |SecondaryIp列表|

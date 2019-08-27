@@ -2,8 +2,9 @@
 
 
 ## 简介
-对象存储API，主要包含查询Bucket列表，创建Bucket, 删除Bucket，查询Bucket是否存在；镜像回源API，主要包含添加镜像回源配置，获取镜像回源配置和删除镜像回源配置。更多API见：https://docs.jdcloud.com/en/object-storage-service/compatibility-api-overview
+对象存储API，主要包含查询Bucket列表，创建Bucket, 删除Bucket，查询Bucket是否存在；镜像回源API，主要包含添加镜像回源配置，获取镜像回源配置和删除镜像回源配置。更多API见：https://docs.jdcloud.com/cn/object-storage-service/compatibility-api-overview
 
+注：以下OpneAPI接口不支持IAM子用户访问，如需使用子用户访问，请使用[兼容S3 API](https://docs.jdcloud.com/cn/object-storage-service/compatibility-api-overview)。
 
 ### 版本
 v1
@@ -19,3 +20,4 @@ v1
 |**listBuckets**|GET|列出当前用户的所有bucket(oss)</br>|
 |**putBackSourceConfiguration**|PUT|添加修改回源配置(ossopenapi)|
 |**putBucket**|PUT|创建bucket(oss)</br>|
+|**getSingleBucketCapacity**|POST|根据type获取指定bucket用量数据(ossopenapi)|

@@ -44,10 +44,10 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/secrets
 ### Secret
 |名称|类型|描述|
 |---|---|---|
-|**name**|String|机密数据名称|
-|**type**|String|私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型|
-|**createdAt**|String|创建时间|
-|**data**|DockerRegistryData|机密的数据|
+|**name**|String|镜像仓库认证信息名称|
+|**type**|String|镜像仓库认证信息类型|
+|**createdAt**|String|镜像仓库认证信息创建时间|
+|**data**|DockerRegistryData|镜像仓库认证信息数据|
 ### DockerRegistryData
 |名称|类型|描述|
 |---|---|---|

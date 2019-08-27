@@ -13,18 +13,13 @@
 
 图片如下：
 
-http://s3.cn-north-1.jcloudcs.com/downloads/example.jpg
-
-http://oss.cn-north-1.jcloudcs.com/downloads/example.jpg
-
+http://s3.cn-north-1.jdcloud-oss.com/downloads/example.jpg
 
 ![识别](https://github.com/jdcloudcom/cn/blob/edit/image/Object-Storage-Service/OSS-065.jpg)
 
 鉴黄处理：
 
-http://s3.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=img/analyse/p
-
-http://oss.cn-north-1.jcloudcs.com/downloads/example.jpg?x-oss-process=img/analyse/p
+http://s3.cn-north-1.jdcloud-oss.com/downloads/example.jpg?x-oss-process=img/analyse/p
 
 返回结果：
 

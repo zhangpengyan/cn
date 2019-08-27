@@ -34,7 +34,7 @@ Sysbench 版本: 1.0.6
 
 测试表结构
 
-``` 
+```SQL
 CREATE TABLE `sbtest` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `k` int(10) unsigned NOT NULL DEFAULT '0',
@@ -47,7 +47,7 @@ CREATE TABLE `sbtest` (
 
 部署方案以及配置参数
 
-``` 
+```Shell
 // TiDB 部署方案
 172.16.20.4    4*tikv    1*tidb    1*sysbench
 172.16.20.6    4*tikv    1*tidb    1*sysbench
@@ -148,7 +148,7 @@ max_connections = 2000
 
 部署方案以及配置参数
 
-```
+```Shell
 // TiDB 部署方案
 172.16.20.3    4*tikv
 172.16.10.2    1*tidb    1*pd     1*sysbench

@@ -119,3 +119,54 @@ JDCLOUD2-HMAC-SHA256 Credential={Access Key}/{Date}/{Region}/{Service}/jdcloud2_
 以curl命令调用方式的例子：
 
 	curl -X GET -H "x-jdcloud-date:20180404T061302Z" -H "x-jdcloud-nonce:ed558a3b-9808-4edb-8597-187bda63a4f2" -H "Authorization:JDCLOUD2-HMAC-SHA256 Credential=C61249XXXXXXXXXXXXXXXXXX/20180404/cn-north-1/monitor/jdcloud2_request, SignedHeaders=content-type;host;x-jdcloud-date;x-jdcloud-nonce, Signature=9b2026198d3acbf99da395e23a994ed369a0d70f5b4a5d7567dd0caf3009656d" -H "Content-Type:application/json" "http://vm.jdcloud-api.com/v1/regions/cn-north-1/metrics/cpu_util/metricData?serviceCode=vm&startTime=2018-04-04T06:01:46Z"
+
+
+## 签名步骤示例 ##
+假设用户签名的输入信息为：
+
+    Access Key：'TESTAK'
+    Access Key Secret：'TESTSK'
+    Date：'20190214T104514Z'
+    Region：'cn-north-1'
+    Service：'test'
+    请求地址和路径：'http://test.jdcloud-api.com/v1/resource:action?p1=p1&p0=p0&o=%&u=u'
+    参与签名的请求头：
+         'x-jdcloud-date' => '20190214T104514Z',
+         'x-jdcloud-nonce' => 'testnonce',
+         'x-my-header' => 'test',
+         'x-my-header_blank' => ' blank'
+    请求地址和路径：'http://test.jdcloud-api.com/v1/resource:action?p1=p1&p0=p0&o=%&u=u'
+    请求体为： 'body data'
+   
+步骤1的结果应该为：
+
+    POST
+    /v1/resource%3Aaction
+    o=%25&p0=p0&p1=p1&u=u
+    x-jdcloud-date:20190214T104514Z
+    x-jdcloud-nonce:testnonce
+    x-my-header:test
+    x-my-header_blank:blank
+    
+    x-jdcloud-date;x-jdcloud-nonce;x-my-header;x-my-header_blank
+    e51832a118eeff7ad976d635b7d04538e362e4c21bd0f6253580b0a83a209074
+    
+步骤2的结果应该为：
+
+    JDCLOUD2-HMAC-SHA256
+    20190214T104514Z
+    20190214/cn-north-1/test/jdcloud2_request
+    fb2e317056269590681d091f8eb22272967c0b922b2deda887312215ea4eed4c
+    
+步骤3的结果应该为：
+
+    （注意：kDate、kRegion、kService、kSigning应该是二进制格式的结果，下面展示的是转化为16进制字符串展示后的结果。这个只是为了页面展示目的，实际签名过程中，16进制的转化结果绝对不要作为下一步的输入，请使用原始二进制格式数据。）
+	kDate = dbbdee87f18afeedd6456923587f5323b90c3a77fbc6e381b243c90c672d5daf
+	kRegion = 78e1da51757851329da8e31a6bad9f509c4816cacb8d5b2b9d171e49498ce4b6
+	kService = 44050ec21c8e839f36ff5b2d44ec4a5876f4ffd6ef9a7a692a3eba40396bdb68
+	kSigning = a4e50bcb6001be0008696b173c30172b5ce22a77db00d21c6a9d69de2ba33b7d
+
+    signResult = 2a98f83c074e7bee260bfc8ef64f009c07595bd93f7f0c3f4e156bf6479ed9bf
+步骤4的结果应该为：
+
+    JDCLOUD2-HMAC-SHA256 Credential=TESTAK/20190214/cn-north-1/test/jdcloud2_request, SignedHeaders=x-jdcloud-date;x-jdcloud-nonce;x-my-header;x-my-header_blank, Signature=2a98f83c074e7bee260bfc8ef64f009c07595bd93f7f0c3f4e156bf6479ed9bf

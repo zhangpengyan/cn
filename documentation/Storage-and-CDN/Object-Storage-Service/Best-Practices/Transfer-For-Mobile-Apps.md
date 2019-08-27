@@ -43,7 +43,7 @@
 
 本示例基于S3 JAVA SDK编写，SDK安装与使用可参考[JAVA SDK安装](../API-Reference-S3-Compatible/Compatibility-Tools/SDK-Java/Installation-S3.md)。
 
-```
+```Java
 import java.net.URL;
 import java.util.Date;
 
@@ -115,7 +115,7 @@ http://testbucket.s3.cn-north-1.jcloudcs.com/testkey
 
 使用Curl命令模拟使用预签名URL上传文件，示例命令如下：
 
-```
+```Shell
 curl -X PUT -T testfile "http://testbucket.s3.cn-north-1.jcloudcs.com/testkey?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190117T044444Z&X-Amz-SignedHeaders=host&X-Amz-Expires=98&X-Amz-Credential=59E6DC72927457BDEBF36A56EE616B07%2F20190117%2Fcn-north-1%2Fs3%2Faws4_request&X-Amz-Signature=a21204debab7c0b0c4ba334e6a9f76d5b6ce3328591acc29890540ddee513dcf" -v
 ```
 
@@ -125,7 +125,7 @@ curl -X PUT -T testfile "http://testbucket.s3.cn-north-1.jcloudcs.com/testkey?X-
 
 您可按照以下示例配置您的应用服务器作为回调服务器，当回调通知触发时，OSS将会向回调URL发起消息通知，事件消息为JSON格式，您可以从事件消息中解析您需要的内容。
 
-```
+```Java
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.*;

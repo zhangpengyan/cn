@@ -24,7 +24,7 @@
 | :------------------- | :-----------|
 |   PIN  |用户PIN | 
 |  https证书               | 您想要支持的自有域名https证书   | 
-| OSS访问域名            | OSS访问域名 ：```<BUCKET_NAME>.s3.<REGION>.jcloudcs.com ```  | 
+| OSS访问域名            | OSS访问域名 ：```<BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com ```  | 
 | 联系电话与邮箱        |  方便证书过期前，及时通知到您   |  
 
 **说明**

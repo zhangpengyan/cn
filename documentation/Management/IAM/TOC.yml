@@ -15,6 +15,16 @@ items:
         href: Introduction/Restrictions.md
       - name: 支持IAM的云产品
         href: Introduction/Support-Services.md
+  - name: 入门指南
+    items:
+      - name: 创建子用户
+        href: Getting-Started/CreateSubuser.md
+      - name: 创建群组（可选）
+        href: Getting-Started/CreateUserGroup.md
+      - name: 创建自定义策略（可选）
+        href: Getting-Started/CreatePolicy.md
+      - name: 创建角色（可选）
+        href: Getting-Started/CreateRole.md
   - name: 操作指南
     items:
       - name: 概览
@@ -25,10 +35,12 @@ items:
             href: Identity-Management/Sub-User.md
           - name: 群组
             href: Identity-Management/Group.md
+          - name: 角色
+            href: Identity-Management/Role.md
       - name: 策略管理
         items:
           - name: 策略管理
-            href: Policy-Managemenent/Policy-Management.md
+            href: Policy-Management/Policy-Management.md 
           - name: 策略语法（v2）
             href: Policy-Management/Policy-Syntax_v2.md
           - name: 策略（v3）
@@ -43,4 +55,17 @@ items:
                 href: Policy-Management/Policy_v3/Resource.md
       - name: 设置
         href: Setting.md        
+      - name: 虚拟 MFA 设备
+        items:
+          - name: 概述
+            href: Virtual-MFA-Device/MFA-Overview.md   
+          - name: MFA 设置
+            href: Virtual-MFA-Device/MFA-Settings.md
+          - name: 登录验证
+            href: Virtual-MFA-Device/Sign-up-Verification.md
+          - name: 第三方应用程序安装及使用指导
+            href: Virtual-MFA-Device/Third-party-Apps.md
   - name: 常见问题
+    items:
+      - name: MFA 登录验证常见问题
+        href: Virtual-MFA-Device/MFA-FAQs.md

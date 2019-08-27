@@ -59,7 +59,7 @@ auto_fdisk.sh /dev/vdb /cache ext4
 
 - 存储网关的缓存目录为`/cache`，其下缓存有您近期访问的数据，该缓存可手动清理。
  
-3.配置完成后即可启动该存储网关上的NFS文件系统，启动脚本路径为`/root/bin/gw `，执行该脚本启动NFS服务。执行命令示例如下：
+3.配置完成后即可启动该存储网关文件共享服务，启动脚本路径为`/root/bin/gw `，执行该脚本启动服务。执行命令示例如下：
 
 ```
 gw start
@@ -73,7 +73,7 @@ gw start
 
 注：127.0.0.1为本地回送地址，即Localhost。
 
-5.存储网关配置文件路径为`/etc/gateway/gw.conf`，相关配置项为accessKeyID、accessKeySecret、endpoint、bucket。也可以通过执行`gw install`来重新配置。重启NFS服务后，新配置项才会生效。重启NFS服务命令示例如下：
+5.存储网关配置文件路径为`/etc/gateway/gw.conf`，相关配置项为accessKeyID、accessKeySecret、endpoint、bucket。也可以通过执行`gw install`来重新配置。重启服务后，新配置项才会生效。重启NFS服务命令示例如下：
 
 ```
 gw restart

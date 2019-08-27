@@ -14,10 +14,10 @@
 ### 在Maven项目中加入依赖项（推荐方式）
 在Maven工程中使用S3 Java SDK，只需在pom.xml中加入相应依赖项即可。以`1.11.490`版本为例，在`<dependencies>`内加入如下内容：
 
-```
-<dependency>  
+```XML
+<dependency>
     <groupId>com.amazonaws</groupId>  
-    <artifactId>aws-java-sdk</artifactId>  
+    <artifactId>aws-java-sdk-s3</artifactId>  
     <version>1.11.490</version>  
 </dependency>
 ```
@@ -30,7 +30,7 @@
 
 1.解压该开发包。
 
-2.将解压后文件夹中的文 aws-java-sdk-<versionId>.jar 以及lib文件夹下的所有文件拷贝到您的项目中。
+2.将解压后文件夹中的 `aws-java-sdk-<versionId>.jar` 以及lib文件夹下的所有文件拷贝到您的项目中。
 
 3.在Eclipse中选择您的工程，右击选择 Properties > Java Build Path > Libraries > Add JARs。
 

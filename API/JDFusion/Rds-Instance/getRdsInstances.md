@@ -23,8 +23,8 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|请求ID|
 |**result**|Result| |
+|**requestId**|String|请求ID|
 
 ### Result
 |名称|类型|描述|
@@ -33,24 +33,24 @@ https://jdfusion.jdcloud-api.com/v1/regions/{regionId}/rds_instances
 ### RdsInstanceDetailInfo
 |名称|类型|描述|
 |---|---|---|
+|**id**|String|RDS实例ID|
+|**name**|String|RDS实例名称|
 |**azs**|String[]|可用区ID|
-|**cloudID**|String|所属云提供商ID|
-|**connectionMode**|String|实例的访问模式|
-|**connectionString**|String|连接地址|
 |**engine**|String|实例引擎类型|
 |**engineVersion**|String|实例引擎版本|
-|**id**|String|RDS实例ID|
-|**instanceCPU**|Integer|CPU核数|
-|**instanceClassType**|String|实例规格|
-|**instanceType**|String|实例类型|
-|**memoryMB**|Double|内存大小，单位MB|
-|**name**|String|RDS实例名称|
-|**payType**|String|付费方式，Postpaid：后付费; Prepaid：预付费|
-|**port**|String|端口|
 |**status**|String|实例状态|
+|**payType**|String|付费方式，Postpaid：后付费; Prepaid：预付费|
 |**storageGB**|Integer|磁盘，单位GB|
-|**subnetId**|String|subnet ID|
+|**memoryMB**|Double|内存大小，单位MB|
+|**instanceType**|String|实例类型|
+|**instanceClassType**|String|实例规格|
+|**connectionMode**|String|实例的访问模式|
+|**connectionString**|String|连接地址|
+|**instanceCPU**|Integer|CPU核数|
+|**port**|String|端口|
 |**vpcId**|String|VPC ID|
+|**subnetId**|String|subnet ID|
+|**cloudID**|String|所属云提供商ID|
 
 ## 返回码
 |返回码|描述|

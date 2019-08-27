@@ -10,9 +10,9 @@
 
 ### 语法
 
-```
+```HTTP
 GET / HTTP/1.1
-Host: s3.<region>.jcloudcs.com 
+Host: s3.<REGION>.jdcloud-oss.com
 Date: <date>
 Authorization: <authorization string> (see Authenticating Requests (AWS Signature Version4))
 ```
@@ -47,15 +47,15 @@ Authorization: <authorization string> (see Authenticating Requests (AWS Signatur
 ## 示例
 
 ### 请求示例
-```
+```HTTP
 GET / HTTP/1.1
-Host: s3.<region>.jcloudcs.com
+Host: <BUCKET_NAME>.s3.<REGION>.jdcloud-oss.com
 Date: Wed, 01 Mar  2006 12:00:00 GMT
 Authorization: <authorization string>
 ```
 
 ### 返回示例
-```
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <ListAllMyBucketsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01">
   <Owner>

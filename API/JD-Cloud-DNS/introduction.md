@@ -17,9 +17,9 @@
 为了使用云解析，您需要进行下面两个基本操作：
 
 1. 添加域名解析
-   您可以使用[添加域名](https://docs.jdcloud.com/cn/jd-cloud-dns/api/adddomain)接口，在京东云云解析平台中添加您的域名。
+   您可以使用[添加域名](./Domain-Name-v2/createDomain.md)接口，在京东云云解析平台中添加您的域名。
 
 2. 添加解析记录
-   添加域名后，您需要使用[添加解析记录](https://docs.jdcloud.com/cn/jd-cloud-dns/api/addrr)接口为您的域名，添加一条解析记录，可指定主机记录、记录类型、TTL、线路类型、记录值。
+   添加域名后，您需要使用[添加解析记录](./Resolution-Record-v2/createResourceRecord.md)接口为您的域名，添加一条解析记录，可指定主机记录、记录类型、TTL、线路类型、记录值。
 
-京东云云解析还提供了更多的接口，方便您的使用，请查看[接口概览](https://docs.jdcloud.com/cn/jd-cloud-dns/api/overview)。
+京东云云解析还提供了更多的接口，方便您的使用，请查看[接口概览](./overview.md)。

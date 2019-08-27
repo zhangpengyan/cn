@@ -57,14 +57,15 @@
 
 ## 4.0新增支持的命令
 
-| Key(键) | Hash(哈希表) | SortedSet（有序集合） | Server（服务器） | Scripting(脚本) | HyperLogLog（HLL） |   Geo(地理位置)   |
-|:-------:|:------------:|:---------------------:|:----------------:|:---------------:|:------------------:|:-----------------:|
-|  OBJECT |    HSTRLEN   |     ZREVRANGEBYLEX    |      DBSIZE      |       EVAL      |        PFADD       |       GEOADD      |
-|  TOUCH  |              |                       |     RANDOMKEY    |     EVALSHA     |       PFCOUNT      |     GEORADIUS     |
-|  UNLINK |              |                       |      MEMORY      |  SCRIPT EXISTS  |       PFMERGE      | GEORADIUSBYMEMBER |
-|  BITOP  |              |                       |      LATENCY     |   SCRIPT FLUSH  |                    |      GEOHASH      |
-|   MOVE  |              |                       |                  |   SCRIPT KILL   |                    |       GEOPOS      |
-|         |              |                       |                  |   SCRIPT LOAD   |                    |      GEODIST      |
+| Key(键) | Hash(哈希表) | SortedSet（有序集合） | Server（服务器） | Scripting(脚本) | HyperLogLog（HLL） |   Geo(地理位置)   | Pub/Sub（发布/订阅） |
+| :-----: | :----------: | :-------------------: | :--------------: | :-------------: | :----------------: | :---------------: | :------------------: |
+| OBJECT  |   HSTRLEN    |    ZREVRANGEBYLEX     |      DBSIZE      |      EVAL       |       PFADD        |      GEOADD       |      PSUBSCRIBE      |
+|  TOUCH  |              |                       |    RANDOMKEY     |     EVALSHA     |      PFCOUNT       |     GEORADIUS     |       PUBLISH        |
+| UNLINK  |              |                       |      MEMORY      |  SCRIPT EXISTS  |      PFMERGE       | GEORADIUSBYMEMBER |        PUBSUB        |
+|  BITOP  |              |                       |     LATENCY      |  SCRIPT FLUSH   |                    |      GEOHASH      |     PUNSUBSCRIBE     |
+|  MOVE   |              |                       |                  |   SCRIPT KILL   |                    |      GEOPOS       |      SUBSCRIBE       |
+|         |              |                       |                  |   SCRIPT LOAD   |                    |      GEODIST      |     UNSUBSCRIBE      |
+
 
 - LATENCY:  集群版的模式下，可以指定shardId。用来获取指定分片的数据，默认返回分片0的数据。
 
@@ -79,14 +80,16 @@ MEMORY stats 1，表示查看1号分片的内存统计信息，不指定则默�
 ## 集群实例不支持的命令
 
 | Key( 键 ) | String( 字符串 ) | List（列表） | Set （集合） | SortedSet （有序集合） | Server （服务器） | Transaction( 事务 ) |
-|:---------:|:----------------:|-------------:|--------------|------------------------|-------------------|---------------------|
-| RENAME    |       BITOP      |    RPOPLPUSH | SDIFF        | ZUNIONSTORE            | SLOWLOG           | DISCARD             |
+| :-------: | :--------------: | -----------: | ------------ | ---------------------- | ----------------- | ------------------- |
+|  RENAME   |      BITOP       |    RPOPLPUSH | SDIFF        | ZUNIONSTORE            | SLOWLOG           | DISCARD             |
 | RENAMENX  |      MSETNX      |              | SDIFFSTORE   | ZINTERSTORE            | CONFIG REWRITE    | EXEC                |
-| OBJECT    |                  |              | SINTER       |                        | CONFIG RESETSTAT  | MULTI               |
+|  OBJECT   |                  |              | SINTER       |                        | CONFIG RESETSTAT  | MULTI               |
 |           |                  |              | SINTERSTORE  |                        | COMMAND COUNT     | UNWATCH             |
 |           |                  |              | SMOVE        |                        | COMMAND GETKEYS   | WATCH               |
 |           |                  |              | SUNION       |                        | COMMAND INFO      |                     |
 |           |                  |              | SUNIONSTORE  |                        |                   |                     |
+
+
 	
 - Redis2.8版本主从支持事务，集群不支持；Redis4.0主从集群都支持。事务中不支持的命令: SCRIPT *、INFO、SLOWLOG、LATENCY、EVAL、FLUSHALL、SCAN、AUTH、EVALSHA、DBSIZE、CONFIG、FLUSHDB、RANDOMKEY、PING
 
@@ -97,14 +100,14 @@ MEMORY stats 1，表示查看1号分片的内存统计信息，不指定则默�
    
 ## 暂未开放的命令
 
-|  Key(键)  | List（列表） | Server（服务器） | Pub/Sub（发布/订阅） |  Cluster(集群) | Connection(连接) |
-|:---------:|:------------:|:----------------:|:--------------------:|:-------------:|:----------------:|
-|  MIGRATE  |     BLPOP    |       TIME       |      PSUBSCRIBE      |  READWRITE   |      SWAPDB      |
-|    WAIT   |     BRPOP    |      MONITOR     |        PUBLISH       |   READONLY   |                  |
-|           |  BRPOPLPUSH  |   BGREWRITEAOF   |        PUBSUB        |  CLUSTER *   |                  |
-|           |              |      BGSAVE      |     PUNSUBSCRIBE     |              |                  |
-|           |              |    CONFIG SET    |       SUBSCRIBE      |              |                  |
-|           |              |      COMMAND     |      UNSUBSCRIBE     |              |                  |
+|  Key(键)  | List（列表） | Server（服务器） |  Cluster(集群) | Connection(连接) |
+|:---------:|:------------:|:----------------:|:-------------:|:----------------:|
+|  MIGRATE  |     BLPOP    |       TIME       |  READWRITE   |      SWAPDB      |
+|    WAIT   |     BRPOP    |      MONITOR     |      READONLY   |                  |
+|           |  BRPOPLPUSH  |   BGREWRITEAOF   |      CLUSTER *   |                  |
+|           |              |      BGSAVE      |                |                  |
+|           |              |    CONFIG SET    |               |                  |
+|           |              |      COMMAND     |                 |                  |
 |           |              |   DEBUG OBJECT   |                      |              |                  |
 |           |              |       DEBUG      |                      |              |                  |
 |           |              |  DEBUG SEGFAULT  |                      |              |                  |

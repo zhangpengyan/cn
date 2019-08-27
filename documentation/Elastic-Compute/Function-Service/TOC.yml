@@ -104,7 +104,9 @@ items:
            - name: OSS触发器示例
              href: Operation-Guide/use-cases/oss-case.md  
            - name: API网关触发器示例
-             href: Operation-Guide/use-cases/apig-case.md          
+             href: Operation-Guide/use-cases/apig-case.md  
+           - name: Python WSGI Web 服务迁移至函数服务
+             href: Operation-Guide/use-cases/wsgi.md
   
   - name: 常见问题
     href: FAQ.md  

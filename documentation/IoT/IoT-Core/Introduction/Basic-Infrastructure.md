@@ -1,10 +1,10 @@
 # 基础架构
 
-物联网引擎（IoT Engine）包含协议引擎、设备管理、设备影子、产品管理、产品物模型、规则引擎、安全保障等主要模块
+物联网引擎（IoT Core）包含协议引擎、设备管理、设备影子、产品管理、产品物模型、规则引擎、安全保障等主要模块
 
 ## 业务架构
 业务架构如下图：
-![](../../../../image/IoT/IoT-Engine/architecture.png)
+![](../../../../image/IoT/IoT-Engine/architecture-core.png)
 
 
 

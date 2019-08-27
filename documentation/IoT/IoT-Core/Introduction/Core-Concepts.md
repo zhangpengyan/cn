@@ -1,5 +1,5 @@
 # 核心概念
-以下是物联网引擎（IoT Engine）帮助文档中使用到的概念及其解释，请参考。
+以下是物联网引擎（IoT Core）帮助文档中使用到的概念及其解释，请参考。
 
 | 概念 | 解释 |
 | :- | :- |
@@ -28,7 +28,7 @@
 | DeviceName	| 设备的名称，通常为设备的mac地址、SN等 |
 | DeviceSecret	| 设备的秘钥，用于信息签名 |
 | Identifier	| 设备的全局唯一标识，用于信息签名 |
-| 一型一密 | 设备通过ProductKey、ProductSecret和DeviceName动态获取Identifier和DeviceSecret进行验证连接。 |
+| 一型一密 | 设备通过ProductKey、ProductSecret 和 DeviceName动态获取Identifier和DeviceSecret进行验证连接。 |
 | 一机一密 | 设备通过ProductKey、Identifier、DeviceSecret进行验证连接 |
 | 三元组 | 设备的ProductKey、Identifier、DeviceSecret称为三元组 |
 

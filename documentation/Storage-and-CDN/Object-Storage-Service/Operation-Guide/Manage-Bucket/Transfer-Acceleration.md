@@ -28,7 +28,7 @@
 
 ## 配置加速
 
-对象存储支持通过控制台配置设置管理传输加速，设置步骤请参考如下内容。如需使用API设置传输加速，请参考[Put Bucket accelerate](../API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/PUT-Bucket-accelerate.md)。
+对象存储支持通过控制台配置设置管理传输加速，设置步骤请参考如下内容。如需使用API设置传输加速，请参考[Put Bucket accelerate](../../API-Reference-S3-Compatible/Compatibility-API/Operations-On-Bucket/PUT-Bucket-accelerate.md)。
 
 1.登入控制台->对象存储->空间管理->进入某个Bucket->空间设置->传输加速，在该页面下可以查看当前Bucket的传输加速设置。
 

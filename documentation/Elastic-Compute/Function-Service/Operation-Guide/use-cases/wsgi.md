@@ -9,7 +9,7 @@ WSGI全称： Web Server Gateway Interface，Web服务器网关接口。WSGI定�
 
 ### 函数服务Python接口支持WSGI
 
-函数服务内置API网关触发器event到WSGI接口的转换库jdcloud_wsgi_wrapper，通过引用jdcloud_wsgi_wrapper中的event格式转换函数wsgi_run，将API网关的event事件转换为WSGI函数格式。
+函数服务内置API网关触发器event到WSGI接口的转换库jdcloud_wsgi_wrapper，通过引用jdcloud_wsgi_wrapper中的wsgi_run函数将API网关的event事件转换为WSGI协议格式，并运行应用程序。
 
 参考以下用户采用application方式或类方式编写函数入口函数：
 

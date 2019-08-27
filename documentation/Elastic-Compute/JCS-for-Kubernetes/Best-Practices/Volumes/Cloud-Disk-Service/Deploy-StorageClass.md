@@ -13,7 +13,9 @@ jdcloud-hdd         kubernetes.io/jdcloud-ebs   39d
 jdcloud-ssd         kubernetes.io/jdcloud-ebs   39d
 
 ```
+
 您也可以创建自定义的Storageclass：
+
 ```
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
@@ -25,7 +27,9 @@ parameters:
   fstype: ext4
 reclaimPolicy: Retain
 ```
+
 **参数说明：**  
+
 1、provisioner：设置参数值[kubernetes.io/jdcloud-ebs](https://kubernetes.io/docs/concepts/storage/storage-classes/)，且不可修改，标识使用京东云云硬盘Provisioner插件创建。
 
 2、reclaimPolicy：由 storage class 动态创建的 Persistent Volume 会在的 reclaimPolicy 字段中指定回收策略，可以是 Delete 或者 Retain。如果 storageClass 对象被创建时没有指定 reclaimPolicy ，它将默认为 Delete。

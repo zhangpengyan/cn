@@ -202,7 +202,7 @@ kubectl create -f deploy-https-ingress-resource.yml
 
 3. 在本地浏览器验证通过Ingress Resource Rule中配置的虚拟主机名访问后段服务：
 
-* 获取Nginx-ingress Controller的外网IP，即Nginx-ingress Controller 关联的LoadBalancer类型Service的External IP，详情参考[Nginx-ingress controller部署](https://docs.jdcloud.com/cn/jcs-for-kubernetes/deploy-ingress-nginx-controller)。
+* 获取Nginx-ingress Controller的外网IP，即Nginx-ingress Controller 关联的LoadBalancer类型Service的External IP，详情参考[Nginx-ingress controller部署](https://docs.jdcloud.com/cn/jcs-for-kubernetes/deploy-ingress-nginx-controller)；
 
 * 在本地服务器的/etc/hosts中增加DNS配置：IP为上一步操作中查询到的LoadBalance类型service的external IP，域名为ingress resource rule中配置的虚拟主机名：nginx-ingress-test.jdcloud；
 

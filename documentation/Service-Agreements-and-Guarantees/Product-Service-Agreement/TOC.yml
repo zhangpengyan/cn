@@ -133,9 +133,9 @@ items:
   - name: 物联网协议适配服务等级协议(SLA)
     href: IoT-Protocol-Adaptor-Level-Agreements-SLA.md
   - name: 物联网引擎服务条款
-    href: IoT-Engine-Terms-Of-Service.md 
+    href: IoT-Core-Terms-Of-Service.md 
   - name: 物联网引擎服务等级协议(SLA)
-    href: IoT-Engine-Level-Agreements-SLA.md
+    href: IoT-Core-Level-Agreements-SLA.md
   - name: 云文件服务协议
     href: Cloud-File-Service-terms-of-service.md
   - name: 云文件服务等级服务协议（SLA）

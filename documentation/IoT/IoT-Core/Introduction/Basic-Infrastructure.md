@@ -4,7 +4,7 @@
 
 ## 业务架构
 业务架构如下图：
-![](../../../../image/IoT/IoT-Engine/architecture.png)
+![](../../../../image/IoT/IoT-Engine/architecture-core.png)
 
 
 

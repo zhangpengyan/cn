@@ -8,6 +8,6 @@
 ### 操作步骤
 进入分布式云物理服务器页面，点击选择实例，点击 **重置密码** 按钮 ，具体如下图：<br/>
 
-![重置密码操作按钮](../../Image/reset-password-list.png)
+![重置密码操作按钮](../../Image/dcps-reset-password-button.png)
 
 ![重置密码弹框](../../Image/reset-password.png)

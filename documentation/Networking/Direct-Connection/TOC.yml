@@ -41,10 +41,14 @@
          href: Getting-Started/Connect-To-The-Same-Account-Or-Region-Hosted-Connetct.md
   - name: 操作指南
     items:
+       - name: 边界网关
+         href: Operation-Guide/Border-Gateway.md
        - name: 专线连接
          href: Operation-Guide/Direct-Connect.md
        - name: 托管连接
          href: Operation-Guide/Hosted-Connect.md
+       - name: VPC接口
+         href: Operation-Guide/VPC-Attachment.md
   - name: 最佳实践
     items:
     status: 0

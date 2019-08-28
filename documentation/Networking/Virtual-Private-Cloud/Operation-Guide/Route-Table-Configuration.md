@@ -3,26 +3,28 @@
 #### **步骤一、创建自定义路由表**
 
 1. 打开控制台，选择 网络 > 私有网络 > 路由表 ，进入路由表列表页；
-2. 选择创建路由表所属地域，点击“创建”按钮，进入路由表创建页面；
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step1.png) 删除
 
-3. 地域选择：在此步骤仍可以选择创建路由表的地域；
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step2.png) 删除
+2. 选择创建路由表所属地域，点击“创建”按钮，进入路由表创建页面；
+
+3. 地域选择：在此步骤仍可以选择创建路由表的地域； 
 
 4. 选择所属私有网络，路由表必须创建在某个私有网络内。
+
 5. 设置路由表名称：名称不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符；
+
 6. 设置路由表描述：描述可以为空，只支持中文、数字、大小写字母、英文下划线“_”，且不能超过256字符；
+
 7. 点击【确定】后即可进入“控制台”查看创建的路由表；
+
 8. 创建路由表后，可进行路由规则配置，也可稍后进入详情页自行配置；
 
 #### **步骤二、关联子网**
 
 1. 打开控制台，选择 网络 > 私有网络 > 路由表 ，进入路由表列表页；
-2. 点击路由表名称进入路由表详情页，点击关联子网页签的“关联子网”按钮：
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step3.png) 删除
+
+2. 在操作栏下点击关联子网，或者点击路由表名称进入路由表详情页、点击关联子网页签的“关联子网”按钮：
 
 3. 在弹出的子网选择页面，选择要关联该路由表的子网，可将该路由表关联至同私有网络下的子网：
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step4.png) 删除
 
 4. 点击【确定】后即可将路由表关联至子网；
 
@@ -40,7 +42,6 @@
   1. 打开控制台，选择 网络 > 私有网络 > 路由表 ，进入路由表列表页；
   
   2. 点击操作列的删除；
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step6.png) 删除
 
   3. 二次确认删除路由表后，即可删除该路由表；
   
@@ -59,7 +60,6 @@
  3. 私有网络内的子网之间进行通信，优先匹配Local路由。
  
  4. 路由表的路由规则匹配顺序为local、路由前缀掩码从长到短的精确匹配、0.0.0.0/0最后匹配。
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step7.png) 删除
 
 
 
@@ -77,7 +77,6 @@
  5. 下一跳类型，支持Internet和云主机作为下一跳，流量若要访问Internet，可选择Internet网关，或自建云主机作为公网网关；
  
  6. 下一跳(地址)，支持Internet和云主机、边界网关、VPC对等连接、NAT网关等作为下一跳地址，可选择某台配置了SNAT功能的云主机作为下一跳的网关。
-![](/image/Networking/Virtual-Private-Cloud/Operation-Guide/Route-Table-Configuration/Step8.png) 删除
 
 
 #### **步骤七、配置路由传播**

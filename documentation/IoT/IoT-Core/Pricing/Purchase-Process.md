@@ -1,6 +1,6 @@
 # 购买流程
 
-本文介绍物联网引擎服务购买入口。
+本文介绍物联网引擎服务购买入口及流程。
 
 ## 入口：[产品介绍页](https://www.jdcloud.com/cn/products/iot-core)
 1. 登录京东云官网[https://www.jdcloud.com/](https://www.jdcloud.com/)。

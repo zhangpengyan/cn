@@ -7,7 +7,7 @@
 ## 请求说明
 
 ### 1.请求地址
-http://w56a7ihx5ukj.cn-south-1.jdcloud-api.net/api/predict-style
+http://wko74nw3nxr2.cn-north-1.jdcloud-api.net/api/predict-style
 
 ### 2.请求方式
 POST

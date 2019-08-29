@@ -41,8 +41,12 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
+| 云硬盘      | jrn:disk:regionId:accountId:snapshots/{snapshotId}<br>jrn:disk:regionId:accountId:disks/{diskId}|
+| 原生容器      | jrn:nativecontainer:regionId:accountId:secrets/{name}<br>jrn:nativecontainer:regionId:accountId:containers/{containerId}|
 | POD        | jrn:pod:regionId:accountId:pods/{podId}<br>jrn:pod:regionId:accountId:pods/{podId}/containers/{containerName}<br/>jrn:pod:regionId:accountId:secrets/{name} |
+|Kubernetes集群  |jrn:kubernetes:regionId:accountId:clusters/{clusterId}<br>jrn:kubernetes:regionId:accountId:clusters/{clusterId}/nodeGroups/{nodeGroupId}|
 |容器镜像仓库       |jrn:containerregistry:regionId:accountId:registries/{registryName}<br>jrn:containerregistry:regionId:accountId:registries/{registryName}/repositories/{repositoryName}|
+|函数服务      |jrn:function:regionId:accpountId:functions/{functionName}|
 
 ### 网络
 
@@ -55,6 +59,10 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
+| 云数据库RDS |jrn:rds:regionId:accountId:instances/{instanceId}<br>jrn:rds:regionId:accountId:instances/{instanceId}/accounts/{accountName}<br>jrn:rds:regionId:accountId:instances/{instanceId}/databases/{dbName}<br>jrn:rds:regionId:accountId:instances/{instanceId}/backups/{backupId}<br>jrn:rds:regionId:accountId:backups/{backupId}<br>jrn:rds:regionId:accountId:instances/{instanceId}/importFiles/{fileName}<br>jrn:rds:regionId:accountId:instances/{instanceId}/binlogs/{binlogBackupId}<br>jrn:rds:regionId:accountId:parameterGroups/{parameterGroupId} |
+| 云数据库MongoDB | jrn:mongodb:regionId:accountId:instances/{instanceId}<br>jrn:mongodb:regionId:accountId:backups/{backupId}<br>jrn:mongodb:regionId:accountId:backupSynchronicities/{serviceId}|
+| 分布式关系型数据库（DRDS） | jrn:drds:regionId:accountId:instances/{instanceId}<br>jrn:drds:regionId:accountId:instances/{instanceId}/task/{taskId}<br>jrn:drds:regionId:accountId:instances/{instanceId}/databases/{databaseName}<br>jrn:drds:regionId:accountId:instances/{instanceId}/accounts/{accountName}|
+| 云缓存Redis | jrn:redis:regionId:accountId:cacheInstance/{cacheInstanceId}|
 | 云缓存Memcached | jrn:memcached:regionId:accountId:instances/{instanceId} |
 
 ### 存储

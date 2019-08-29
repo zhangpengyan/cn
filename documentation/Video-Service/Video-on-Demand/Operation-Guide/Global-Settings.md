@@ -225,13 +225,27 @@ http://cdn.example.com/1592409600/8afb0900782e14c35214ccda534a3679/video/standar
 
 ### 4.3 高级设置
 
-在域名设置界面，点击想要配置的域名，进入域名配置的详细页面，选择高级页面，可看到域名的相关高级设置。目前支持http
+在域名设置界面，点击想要配置的域名，进入域名配置的详细页面，选择高级页面，可看到域名的相关高级设置。目前支持HTTP Header参数设置。
 
-![访问设置-IP黑名单.png](../../../../image/Video-on-Demand/访问设置-IP黑名单.png)
+![域名设置-HTTP-Header设置.png](../../../../image/Video-on-Demand/域名设置-HTTP-Header设置.png)
+
+![域名设置-HTTP-Header设置-2.png](../../../../image/Video-on-Demand/域名设置-HTTP-Header设置-2.png)
 
 ### 4.4 HTTPS证书设置
 
-同样在域名设置界面，点击想要配置的域名，进入域名配置的详细页面，选择高级页面，可看到域名的相关高级设置。
+同样在域名设置界面，点击想要配置的域名，进入域名配置的详细页面，点击HTTPS证书配置页，可对当前域名添加HTTPS证书并对跳转规则做设置。
+
+![https证书配置-1.png](../../../../image/Video-on-Demand/https证书配置-1.png)
+
+![https证书配置-2.png](../../../../image/Video-on-Demand/https证书配置-2.png)
+
+跳转类型说明：
+
+默认表示：客户端协议是HTTP，则到CDN节点的请求协议为HTTP，HTTPS同理。
+
+HTTPS -> HTTP表示：客户端协议是HTTPS，则到CDN节点的请求协议为HTTP。
+
+HTTP -> HTTPS表示：客户端协议是HTTP，则到CDN节点的请求协议为HTTPS。
 
 ## 5.回调设置
 视频点播支持任务完成的消息订阅。客户如需获取视频上传完成、转码完成的消息通知，可在回调设置中设置回调URL及回调事件，相关事件会通过客户填写的URL及时通知到客户。

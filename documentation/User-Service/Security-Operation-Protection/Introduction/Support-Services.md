@@ -5,14 +5,15 @@
 #### 弹性计算
 |  **云产品**  | **接口名称** | **接口描述** |
 | :----------: | :--------------: | :------: |
-| 云主机  |      vm:deleteInstance       |    删除云主机    | 
-|     弹性伸缩  |   autoscaling:deleteAutoscalingGroup     |    删除伸缩组  |  
+| 云主机  |      vm:deleteInstance       |    删除云主机    |  
+|     原生容器  |  nativecontainer:deleteContainer   |   删除容器实例  | 
+|     Pod  |   pod:deletePod    |   删除Pod  | 
 |     容器镜像仓库  |  containerregistry:deleteRegistry   |    删除注册表  |  
 |     容器镜像仓库  | containerregistry:deleteRepository   |  删除镜像仓库  | 
 |     容器镜像仓库  |  containerregistry:deleteImage   |    删除镜像 |  
-|     Pod  |   pod:deletePod    |   删除Pod  | 
 |     Kubernetes集群  |   kubernetes:deleteCluster   |   删除集群| 
 |    Kubernetes集群  |   kubernetes:deleteNodeGroup    |    删除工作节点组 | 
+|     弹性伸缩  |   autoscaling:deleteAutoscalingGroup     |    删除伸缩组  | 
 |    函数服务 |   function:deleteFunction   |    删除函数 | 
 
 #### 数据库与缓存

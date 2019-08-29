@@ -111,7 +111,7 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
-| 云解析DNS|jrn:domainservice:regionId:AccountId:domain/{domainId}<br>jrn:domainservice:regionId:AccountId:domain/{domainId}/monitor/{monitorId}<br>jrn:domainservice:regionId:AccountId:domain/{domainId}/ResourceRecord/{resourceRecordId}|
+| 云解析DNS|jrn:domainservice::accountId:domain/{domainId}<br>jrn:domainservice::AccountId:domain/{domainId}/monitor/{monitorId}<br>jrn:domainservice:accountId:domain/{domainId}/ResourceRecord/{resourceRecordId}|
 | HTTPDNS|* |
 
 ### 视频服务

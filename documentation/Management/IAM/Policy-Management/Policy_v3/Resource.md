@@ -85,12 +85,12 @@ JRN示例：
 | DDoS基础防护      |   jrn:baseanti:regionId:accountId:ipResources/{ip}   |
 |DDoS防护包      |   	jrn:antipro:regionId:accuntId:instances/{instanceId}  |
 |Web应用防火墙     |  jrn:waf:regionId:accountId:wafInstanceIds/{wafInstanceId}   |
-|IP高防    | 	jrn:ipanti:regionId:accooutId:instances/{instanceId} <br>jrn:ipanti:regionId:accooutId:instances/{instanceId}/webRules/{webRuleId}<br>jrn:ipanti:regionId:AccooutId:instances/{instanceId}/ipSets/{ipSetId}<br>jrn:ipanti:regionId:AccooutId:instances/{instanceId}/forwardRules/{forwardRuleId}|
+|IP高防    | 	jrn:ipanti::accooutId:instances/{instanceId} <br>jrn:ipanti::accooutId:instances/{instanceId}/webRules/{webRuleId}<br>jrn:ipanti::AccooutId:instances/{instanceId}/ipSets/{ipSetId}<br>jrn:ipanti::AccooutId:instances/{instanceId}/forwardRules/{forwardRuleId}|
 | 应用安全网关 | jrn:sgw:regionId:accountId:instances/{instanceId} |
 |主机安全    |  *   |
 |态势感知   |   *  |
 | SSL数字证书 |jrn:ssl::accountId:sslCert/{certId}<br>jrn:ssl::accountId:sslRecord/{recordId}|
-|密钥管理服务   |  	jrn:kms:regionId:accountId:key/{keyId}<br>jrn:kms:regionId:accountId:key/{keyId}/version/{version}<br>jrn:kms:regionId:accountId:secret/{secretId}<br>jrn:kms:regionId:accountId:secret/{secretId}/version/{version}|
+|密钥管理服务   |  	jrn:kms::accountId:key/{keyId}<br>jrn:kms::accountId:key/{keyId}/version/{version}<br>jrn:kms::accountId:secret/{secretId}<br>jrn:kms::accountId:secret/{secretId}/version/{version}|
 |网站威胁扫描    |  *   |
 
 ### 管理

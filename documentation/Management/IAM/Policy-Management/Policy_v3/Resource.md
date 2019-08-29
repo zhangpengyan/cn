@@ -46,7 +46,7 @@ JRN示例：
 | POD        | jrn:pod:regionId:accountId:pods/{podId}<br>jrn:pod:regionId:accountId:pods/{podId}/containers/{containerName}<br/>jrn:pod:regionId:accountId:secrets/{name} |
 |Kubernetes集群  |jrn:kubernetes:regionId:accountId:clusters/{clusterId}<br>jrn:kubernetes:regionId:accountId:clusters/{clusterId}/nodeGroups/{nodeGroupId}|
 |容器镜像仓库       |jrn:containerregistry:regionId:accountId:registries/{registryName}<br>jrn:containerregistry:regionId:accountId:registries/{registryName}/repositories/{repositoryName}|
-|函数服务      |jrn:function:regionId:accpountId:functions/{functionName}|
+|函数服务      |jrn:function:regionId:accountId:functions/{functionName}|
 
 ### 网络
 

@@ -37,6 +37,7 @@
     `
     
     输出如下
+
     ```
     
     NAME           STATUS   AGE
@@ -46,6 +47,7 @@
     kube-public    Active   16h
     kube-system    Active   16h
     ```    
+
 5. 等待一段时间后，查看istio-system各主要服务是否已经正常启动；
 
     `
@@ -72,7 +74,8 @@
     istio-tracing-6445d6dbbf-88jx4            1/1     Running     0          9m59s
     prometheus-66f96fdfbc-44htl               1/1     Running     0          10m
     servicegraph-658fd9f76d-jrvdp             1/1     Running     0          10m
-    ```    
+    ```  
+
 **说明：**
 
   istio主要组件说明如下：
@@ -88,6 +91,7 @@
     `
     kubectl delete -f install/kubernetes/istio-demo.yaml
     `
+
 ## 二、示例应用
 
 示例应用是一个线上图书目录系统，显示图书相关信息，包括书名、ISBN、页数等图书详情以及图书预览功能，由四个独立的微服务组成，包括详情（detail）、产品页（productpage）、评价（ratings）、星级展示（reviews）。
@@ -150,6 +154,7 @@
     NAME                   TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                                                                                                                   AGE
     istio-ingressgateway   LoadBalancer   10.0.250.151   114.XXX.XXX.XXX   80:31380/TCP,443:31390/TCP,31400:31400/TCP,15011:30570/TCP,8060:30615/TCP,853:32610/TCP,15030:30259/TCP,15031:31241/TCP   47m
     ```
+    
 4. 使用上一步中集群返回的external-IP和服务名称验证集群中的服务是否运行正常，以productpage微服务为例，执行命令如下：
 
     ```
@@ -198,6 +203,7 @@
         subset: v3
       weight: 50
     ```
+
   * 再次执行如下命令后，刷新上一步中的浏览器地址会发现评价星级始终为红色，原因是对应的yaml文件中的配置，将服务流量全部切换为v3了；
 
     ```

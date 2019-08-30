@@ -8,7 +8,7 @@
 
 暂时只有JAVA SDK收发的消息支持消息轨迹功能，使用HTTP API收发的消息不支持消息轨迹查询
 
-- Java SDK（[版本](https://mvnrepository.com/artifact/com.jdcloud/jcq-java-sdk)）：V1.2.1及以上版本
+- Java SDK（[版本](https://mvnrepository.com/artifact/com.jdcloud/jcq-java-sdk)）：V1.3.0及以上版本
 
 
 

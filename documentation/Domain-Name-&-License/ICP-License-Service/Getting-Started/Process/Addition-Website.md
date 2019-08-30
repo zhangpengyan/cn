@@ -10,7 +10,7 @@
 
 ![img](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190830/image/ICP-License-Service/Addition-Website-cn-2.png)
 
-**二、****填写新增网站信息**
+**二、填写新增网站信息**
 
 1、 点击增加备案
 
@@ -20,7 +20,7 @@
 
 ![img](https://github.com/jdcloudcom/cn/blob/joytaobao-beian-20190830/image/ICP-License-Service/Addition-Website-cn-4.png)
 
-**三、****填写网站信息**
+**三、填写网站信息**
 
 1、根据要求填写网站信息，每个网站只可填写1个域名。
 

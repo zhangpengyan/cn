@@ -10,8 +10,7 @@ DRDS会根据SQL语句中拆分字段的值来判断将SQL语句发往哪个分�
 - 拆分字段：使用哪个字段对表中的数据进行拆分。
 - 拆分函数：使用什么算法对表中的数据进行拆分。
 
-
-下面是创建拆分表的具体语法
+### 语法
 ```SQL
 CREATE TABLE table_name
 (create_definition,...)
@@ -81,3 +80,13 @@ dbpartition by string_hash(name);
  ENGINE=InnoDB DEFAULT CHARSET=utf8
  dbpartition by YYYY(order_date) start('2000') period 2;
  ```
+
+## 删除拆分表
+删除表的语法为标准SQL
+```SQL
+drop table table_name1,table_name2,table_name3, ......
+```
+例如：
+```SQL
+drop table ddl_demo1,ddl_demo2,ddl_demo3, ddl_demo4;
+```

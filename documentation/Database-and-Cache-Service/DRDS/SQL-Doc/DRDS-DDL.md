@@ -12,8 +12,6 @@ DRDS会根据SQL语句中拆分字段的值来判断将SQL语句发往哪个分�
 
 
 下面是创建拆分表的具体语法
-
-**注意 [DRDS Partition Optiosn] 部分的语法必须在放在最后**
 ```SQL
 CREATE TABLE table_name
 (create_definition,...)
@@ -28,7 +26,11 @@ CREATE TABLE table_name
      YYYYMM ([column_name]) START ([start_date]) PERIOD [num]|
      YYYY ([column_name]) START ([start_date]) PERIOD [num]  
 ```
-   
+
+**注意事项 **
+1. [DRDS Partition Optiosn] 部分的语法必须在放在最后
+2. 表的主键必须是拆分字段
+
 ### 拆分函数
 目前DRDS支持以下的拆分函数，函数名不区分大小写
 - INT_MOD(): 对整型字段进行拆分，支持 int，smallint，bigint，tinyint，mediumint
@@ -43,21 +45,25 @@ CREATE TABLE table_name
  ### 示例
  1. 按整型字段拆分
   ```SQL
- create table ddl_demo1(
- id int,
- name varchar(10))
- ENGINE=InnoDB DEFAULT CHARSET=utf8
- dbpartition by int_mod(id);
- ```
+create table ddl_demo1(
+id int,
+name varchar(10) default ‘’,
+dept varchar(10) not null,
+primary key(id))
+ENGINE=InnoDB DEFAULT CHARSET=utf8
+dbpartition by int_mod(id);
+```
  
 2. 按字符字段拆分
   ```SQL
- create table ddl_demo2(
- id int,
- name varchar(10))
- ENGINE=InnoDB DEFAULT CHARSET=utf8
- dbpartition by string_hash(name);
- ```
+create table ddl_demo2(
+id int,
+name varchar(10) default ‘’
+dept varchar(10) not null,
+primary key(name))
+ENGINE=InnoDB DEFAULT CHARSET=utf8
+dbpartition by string_hash(name);
+```
  
  3. 使用YYYYMM函数，数据的起始时间为2019年5月，每3个月的数据放入一个分表中
  ```SQL

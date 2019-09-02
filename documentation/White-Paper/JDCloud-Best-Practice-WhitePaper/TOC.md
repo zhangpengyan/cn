@@ -1,24 +1,18 @@
-name: 用云最佳实践白皮书 
+name: 私有云&混合云白皮书
 href: 
 items:
 
 - name: 概要
   href: Introduction/Overview.md
-- name: 用云最佳实践优势
-  href: Advantage/Advantage.md
-- name: 构建高可用的系统
-  href: Available/Available.md
-- name:构建可扩展的系统
-  href: Expand/Expand.md
-- name:构建高性能系统
-  href: Energy/Energy.md
-- name: 构建高安全性的系统
-  href: Security/Security.md
-- name:构建易运维的系统
-  href: Run/Run.md
-- name:构建高性价比系统
-  href: Value/Value.md
-- name:六高服务
-  href: Six/Six.md
-- name: 用云最佳实践白皮书下载链接
+- name: 私有云和混合云平台优势
+  href: Advantage/Point.md
+- name: 私有云解决方案
+  href: Target1/Target1.md
+- name: 专有云解决方案
+  href: Target2/Target2.md
+- name: 专属云解决方案
+  href: Target3/Target3.md
+- name: 混合云解决方案
+  href: Target4/Target4.md
+- name: 私有云和混合云白皮书下载链接
   href: Download-Link/Related-Resources.md

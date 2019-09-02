@@ -14,8 +14,9 @@
 
 
 ## 可配置的参数
-| 参数                | 参数描述                                   |
-| ------------------- | ------------------------------------------ |
+| 参数                | 参数描述                                   |备注                                 |
+| ------------------- | ------------------------------------------ |------------------------------------------ |
+|PROPERTY_BUSINESS_ID |可以为消息设置业务ID,用户可以根据业务ID查询消息|                               
 | PROPERTY_TAGS       | 可以设置消息的标签（tag），暂时支持一条tag |
 | PROPERTY_DELAY_TIME | 可以设置消息的延迟时间，范围为0-3600秒     |
 
@@ -80,6 +81,9 @@ public class ProducerDemo {
         Message message1 = new Message();
         message1.setTopic(TOPIC);
         message1.setBody(("this is message1 boy").getBytes());
+
+        // 设置message businessID属性, 如有需要
+        message.getProperties().put(MessageConstants.PROPERTY_BUSINESS_ID,"yourBusinessID");
 
         // 设置message tag属性, 如有需要
         message.getProperties().put(MessageConstants.PROPERTY_TAGS, "TAG");

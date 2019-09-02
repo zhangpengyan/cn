@@ -71,6 +71,9 @@ public class GlobalOrderProducerDemo {
         message1.setTopic(TOPIC);
         message1.setBody(("this is message1 boy").getBytes());
 
+        // 设置message businessID属性, 如有需要
+        message.getProperties().put(MessageConstants.PROPERTY_BUSINESS_ID,"yourBusinessID");
+        
         // 设置message tag属性, 如有需要
         message.getProperties().put(MessageConstants.PROPERTY_TAGS, "TAG");
         

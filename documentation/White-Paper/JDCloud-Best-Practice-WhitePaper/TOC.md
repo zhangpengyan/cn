@@ -3,7 +3,7 @@ href:
 items:
 - name: 概要
   href: Introduction/Overview.md
-- name: 优势
+- name: 用云最佳实践优势
   href: Advantage/Advantage.md
 - name: 构建高可用的系统
   href: Available/Available.md
@@ -19,5 +19,5 @@ items:
   href: Value/Value.md
 - name: 六高服务
   href: Six/Six.md
-- name: 下载链接
+- name: 用云最佳实践白皮书下载链接
   href: Download-Link/Related-Resources.md

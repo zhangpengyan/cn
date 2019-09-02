@@ -7,7 +7,7 @@ items:
       href: Introduction/product-overview.md
 - name: 产品定价
   items:
-    - name: 价格总览
+    - name: 计费概述
       href: Pricing/Billing-Overview.md
 - name: 操作指南
   items:
@@ -23,10 +23,6 @@ items:
       href: SDK-Rerference/Call-Methods.md
     - name: SDK使用方法
       href: SDK-Rerference/Environment-Preparation.md
-- name: 相关协议
-  items:
-    - name: 服务协议
-      href: Service-Agreements-and-Guarantees/Linglong-Cutout-Term.md
 - name: 接口文档
   items:
     - name: 接口概述

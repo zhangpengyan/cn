@@ -27,7 +27,7 @@ CREATE TABLE table_name
      YYYY ([column_name]) START ([start_date]) PERIOD [num]  
 ```
 
-**注意事项 **
+**注意事项**
 1. [DRDS Partition Optiosn] 部分的语法必须在放在最后
 2. 表的主键必须是拆分字段
 

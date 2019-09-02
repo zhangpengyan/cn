@@ -10,6 +10,8 @@
 
 - Java SDK（[版本](https://mvnrepository.com/artifact/com.jdcloud/jcq-java-sdk)）：V1.3.0及以上版本
 - 确保Produc和Consumer开启消息轨迹记录，客户端默认配置为关闭
+
+
 设置消息轨迹开启的方法如下：
 
 #### 代码示例

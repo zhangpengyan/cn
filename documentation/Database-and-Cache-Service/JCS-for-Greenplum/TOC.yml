@@ -50,7 +50,11 @@
           - name: 查看监控信息
             href: Operation-Guide/Monitoring/Monitoring.md
           - name: 设置报警规则
-            href: Operation-Guide/Monitoring/Alarm-Rules.md              
+            href: Operation-Guide/Monitoring/Alarm-Rules.md   
+      - name: 数据迁移
+        items:
+          - name: MySQL迁移数据至Greenplum
+            href: Operation-Guide/Data-Migration/mysql2pgsql.md
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 用户协议

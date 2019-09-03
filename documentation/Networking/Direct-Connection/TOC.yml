@@ -19,6 +19,8 @@
             href: Introduction/Features/Hosted-Connect-Features.md
           - name: 边界网关
             href: Introduction/Features/Border-Gateway-Features.md
+          - name: VPC接口
+            href: Introduction/Features/VPC-Interface-Features.md
       - name: 限制说明
         href: Introduction/Restrictions.md
       - name: 应用场景

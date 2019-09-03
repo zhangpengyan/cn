@@ -53,7 +53,7 @@
             href: Operation-Guide/Monitoring/Alarm-Rules.md   
       - name: 数据迁移
         items:
-          - name: MySQL迁移数据至Greenplum
+          - name: MySQL数据迁移至Greenplum
             href: Operation-Guide/Data-Migration/mysql2pgsql.md
   - name: 常见问题
     href: FAQ/FAQ.md

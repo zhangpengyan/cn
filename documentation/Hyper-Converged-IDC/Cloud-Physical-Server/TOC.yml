@@ -116,9 +116,9 @@
       - name: SSH密钥
         items:
           - name: 功能描述
-            href: Operation-Guide/SSH-Key-Pair/Description-Key-Pair.md
+            href: Operation-Guide/SSH-Key-Pair/Description-SSH-Key-Pair.md
           - name: 操作步骤
-            href: Operation-Guide/SSH-Key-Pair/Step-Key-Pair.md
+            href: Operation-Guide/SSH-Key-Pair/Step-SSH-Key-Pair.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

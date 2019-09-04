@@ -36,7 +36,7 @@
 
 ### 3. 网关系统级错误码
 |错误码|HTTP状态码|错误信息|解决方案|
-|:--|:--|:--|:--|:--|
+|:--|:--|:--|:--|
 |ARGUMENT_NOT_SUPPORT|400|参数 argument 不支持|	请检查访问信息|
 |ARGUMENT_NOT_FOUND	|400	|参数 argument 是必填参数	|请检查访问信息|
 |ARGUMENT_WRONG_FORMAT	|400	|	参数 argument 类型应该是 某format	|请检查访问信息|

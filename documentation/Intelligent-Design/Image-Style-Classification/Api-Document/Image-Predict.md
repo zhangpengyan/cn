@@ -33,8 +33,8 @@ POST
 
 |名称|类型|示例值|描述|
 |---|---|---|---|
-|code|string | 1001 | 参见<a target="_blank" href="//docs.jdcloud.com/cn/image-style-classification/error-codes">错误码</a>-系统级错误码|
-|msg|string | 查询成功 | 参见<a target="_blank" href="//docs.jdcloud.com/cn/image-style-classification/error-codes">错误码</a>-系统级错误码|
+|code|string | 1001 | 参见-[系统级错误码](https://docs.jdcloud.com/cn/image-style-classification/error-codes)|
+|msg|string | 查询成功 | 参见-[系统级错误码](https://docs.jdcloud.com/cn/image-style-classification/error-codes)|
 |result|object | {...} | 结果 |
 
 #### （2）业务返回参数

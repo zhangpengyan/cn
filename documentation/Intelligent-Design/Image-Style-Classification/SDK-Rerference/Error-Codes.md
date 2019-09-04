@@ -35,7 +35,7 @@
 |12010|Internal Error|处理错误|
 
 ### 3. 网关系统级错误码
-|错误码|HTTP状态码|错误信息|解决方案
+|错误码|HTTP状态码|错误信息|解决方案|
 |:--|:--|:--|:--|:--|
 |ARGUMENT_NOT_SUPPORT|400|参数 argument 不支持|	请检查访问信息|
 |ARGUMENT_NOT_FOUND	|400	|参数 argument 是必填参数	|请检查访问信息|
@@ -54,7 +54,7 @@
 |FAILED_PRECONDITION	|409	|	多个参数有大小依赖关系	|请检查访问信息|
 |QUOTA_EXCEEDED	|429	|	配额不足	|请检查访问信息，或增加配额|
 |RATE_LIMIT_EXCEEDED	|429	|	请求过频繁	|请稍后重试|
-|CANCELLED	|499	|		取消操作	||
+|CANCELLED	|499	|		取消操作	| |
 |UNKNOWN	|500	|		未知错误		| 请稍后重试 |
 |INTERNAL	|500	|		内部错误		| 请稍后重试 |
 |NOT_IMPLEMENTED	|501	|		目前不支持 method		| 请检查访问信息 |

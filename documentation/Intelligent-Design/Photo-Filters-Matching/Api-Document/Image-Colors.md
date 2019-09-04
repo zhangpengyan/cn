@@ -34,7 +34,7 @@ POST
 |名称|类型|示例值|描述|
 |---|---|---|---|
 |code|string | 1001 | 参见-[系统级错误码](https://docs.jdcloud.com/cn/photo-filters-matching/error-codes)|
-|msg|string | 查询成功 | 参见-[系统级错误码]([系统级错误码](https://docs.jdcloud.com/cn/photo-filters-matching/error-codes))|
+|msg|string | 查询成功 | 参见-[系统级错误码](https://docs.jdcloud.com/cn/photo-filters-matching/error-codes)|
 |result|object | {...} | 结果 |
 
 #### （2）业务返回参数

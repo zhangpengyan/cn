@@ -1,6 +1,6 @@
 # 操作描述方式
 
-操作有service name和具体操作名称组成，各产品线service name请参考[支持IAM的服务](https://docs.jdcloud.com/cn/iam/support-services)
+操作有service name和具体操作名称组成，操作名称即为各产品线的Open API的接口名称，各产品线service name请参考[支持IAM的服务](https://docs.jdcloud.com/cn/iam/support-services)
 
 ```
 所有产品所有操作

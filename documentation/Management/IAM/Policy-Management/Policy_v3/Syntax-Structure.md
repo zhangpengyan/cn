@@ -109,4 +109,3 @@ policy  = {
 <condition_value> = ("string" | "number" |"boolean")
 ```
 
-> Condition的功能持续更新中，敬请期待

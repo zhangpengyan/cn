@@ -20,6 +20,9 @@
  |Jdcloud:RequestTag/tag-key|格式为 "Jdcloud:RequestTag/tag-key":"tag-value"<Br>其中 tag-key 和 tag-value 是标签键值对|字符串运算符|
  
  ## 目前支持指定标签条件键的产品线
+ 
+给资源打上对应的标签后，创建策略时您可以通过指定特定标签条件的方式批量指定资源，而无需逐个输入资源ID。
+
   | 产品线名称  | 资源ID|
 | :-----------------:|:-----------------: |
  |云硬盘|DiskID|

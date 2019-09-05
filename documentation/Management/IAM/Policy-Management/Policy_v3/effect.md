@@ -17,10 +17,8 @@
 
 ## 权限判断规则
 
-### Effect
+#### Effect 包括 allow(允许)和deny(显式拒绝)两种情况
 
-必填项，包括 allow(允许)和deny(显式拒绝)两种情况。详情
-
-当同一操作在策略中既有允许（Allow）又有拒绝（Deny）的时，遵循 Deny 优先的原则，操作将被拒绝。
+> 当同一操作在策略中既有允许（Allow）又有拒绝（Deny）的时，遵循 Deny 优先的原则，操作将被拒绝。
 
 ![权限判断规则](../../../../image/IAM/PolicyManagement/权限判断规则.jpg)

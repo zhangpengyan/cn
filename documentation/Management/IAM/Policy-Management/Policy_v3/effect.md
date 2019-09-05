@@ -17,3 +17,4 @@
 
 ## 权限判断规则
 
+![权限判断规则](../../../../image/IAM/PolicyManagement/权限判断规则.jpg)

@@ -103,6 +103,12 @@
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md
           - name: 操作步骤
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Steps-Adjust-Public-Network-Bandwidth.md
+      - name: SSH密钥
+        items:
+          - name: 功能描述
+            href: Operation-Guide/SSH-Key-Pair/Description-SSH-Key-Pair.md
+          - name: 操作步骤
+            href: Operation-Guide/SSH-Key-Pair/Step-SSH-Key-Pair.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

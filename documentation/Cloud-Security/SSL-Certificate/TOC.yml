@@ -19,7 +19,6 @@ items:
       status: 0
     - name: 限制说明
       href: Introduction/Restrictions.md
-      status: 0
     - name: 应用场景
       href: Introduction/Application-Scenarios.md
 - name: 产品定价

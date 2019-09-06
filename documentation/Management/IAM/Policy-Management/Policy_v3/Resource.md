@@ -26,7 +26,7 @@ jrn:<service_name>:<region>:<accountId>:<resourceType>/<resourceId><subresouceTy
 
 - ` <resourceType>/<resourceId>/<subresouceType>/<subresouceId>` ， Resource Type为产品线Open API中的一级资源，Resource ID为产品线Open API中的一级资源ID，Subresource Type为产品线Open API中的二级资源，Subresouce ID为产品线Open API中二级资源ID，如果后续产品线需要支持三级，四级资源时，则用 / 来进行分隔即可。可用 * 来表示全部资源。
 
-JRN示例：
+**JRN示例：**
 
 | **描述**                                             | **JRN示例**                                                  |
 | :--------------------------------------------------- | :----------------------------------------------------------- |

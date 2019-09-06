@@ -23,7 +23,7 @@ IAM最新版本的策略(policy)，定义一条或多条权限的 JSON 文档，
 
 必填项，描述一条或多条权限的Json信息。该元素包括 action、resource、condition、effect 等多个其他元素的权限或权限集合。一条策略有且仅有一个statement 元素。
 
-### 效力(effect)
+### 权限(effect)
 
 必填项，包括 allow(允许)和deny(显式拒绝)两种情况。[详情](https://docs.jdcloud.com/cn/iam/effect)
 
@@ -31,7 +31,7 @@ IAM最新版本的策略(policy)，定义一条或多条权限的 JSON 文档，
 
 ### 操作(action) 
 
-必填项，为实现京东云控制台和SDK访问的统一，我们将控制台上的每一个操作都具体细化到Open API级别，操作可以分为两大类.[详情](https://docs.jdcloud.com/cn/iam/action)
+必填项，为实现京东云控制台和SDK访问的统一，我们将控制台上的每一个操作都具体细化到Open API级别，操作可以分为两大类。[详情](https://docs.jdcloud.com/cn/iam/action)
 
 - 不能指定资源的操作：如IAM子用户列表（iam:descirbeSubusers），群组列表(iam:describeGroups)，子用户创建(iam:createSubuser)等接口，这些接口在定义上就不允许指定资源进行操作，当您在IAM中创建自定义策略的时候，这些接口不支持对指定资源进行操作。一般列表接口，创建接口，报表接口都不支持对指定资源进行操作授权。
 - 可以指定资源的操作：如IAM子用户详情（iam:describeSubuser），IAM子用户编辑（iam:modifySubuser）等接口，这些接口在定义上支持对指定资源进行操作，当您在IAM中创建自定义策略时，这些接口允许对指定资源进行授权和操作。一般详情，编辑，删除，解绑，绑定等接口都支持对指定资源进行操作授权。

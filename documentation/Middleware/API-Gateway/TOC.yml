@@ -73,6 +73,8 @@ items:
           herf: Operation-Guide/Back-end-Services/Back-end-Services-Mock.md
         - name: 函数后端服务
           herf: Operation-Guide/Back-end-Services/Back-end-Services-Function.md
+        - name: 动态路由
+          herf: Operation-Guide/Back-end-Services/Dynamic-routing.md
     - name: 访问授权
       items:
         - name: API的访问授权
@@ -83,6 +85,8 @@ items:
           herf: Operation-Guide/Create-Auth/Signature-Key.md
         - name: 京东云用户签名Access Key
           herf: Operation-Guide/Create-Auth/JD-Cloud-User-Signature.md
+        - name: 基于用户授权
+          herf: Operation-Guide/Create-Auth/User-based-Auth.md
     - name: 微服务网关
       items:
         - name: 微服务网关

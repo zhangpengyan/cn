@@ -10,13 +10,13 @@
 
 2、选择使用已有密钥，需要将您本地的公钥文件上传到京东云，请确保您本地保存与公钥配对的私钥。<br/>
 
-![SSH密钥列表页](../../Image/linster-list.png)
+![SSH密钥列表页](../../Image/dcps-ssh-list.png)
 
-![创建SSH密钥选择使用已有公钥](../../Image/linster-list.png)
+![创建SSH密钥选择使用已有公钥](../../Image/create-dcps-ssh.png)
 
 3.创建成功后，可以在密钥详情中查看公钥指纹信息。<br/>
 
-![密钥详情页](../../Image/linster-list.png)
+![密钥详情页](../../Image/dcps-ssh-describe.png)
 
 ## 删除密钥
 

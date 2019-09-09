@@ -14,7 +14,7 @@
 
 ![SSH密钥列表页](../../Image/cps-ssh-list.png)
 
-![创建SSH密钥选择使用已有公钥](../../Image/create-cps-ssh.png)
+![创建SSH密钥](../../Image/create-cps-ssh1.png)
 
 3.创建成功后，可以在密钥详情中查看公钥指纹信息。<br/>
 

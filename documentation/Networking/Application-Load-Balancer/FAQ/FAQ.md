@@ -49,7 +49,7 @@ A：应用负载均衡在每个可用区采用高可用架构，默认启用两�
 
 A：当应用负载均衡配置的转发规则的URL路径以'/'结尾，并且相同域名下未配置另外一条相同URL路径前缀但没有'/'的转发规则时，应用负载均衡会对访问没有'/'的URL路径前缀的请求执行301重定向，返回带'/'的URL请求，以实现带'/'和不带'/'的访问请求都可以被应用负载均衡兼容转发。
 
-举例1：应用负载均衡配置了转发规则1(域名:www. bbb. com ，URL路径：/path1/abc/或/path/abc/\*，后端服务：backend)，未配置转发规则2(域名：www. bbb. com ，URL 路径： /path/abc，后端服务：backend)。用户访问 http:// xxx . bbb . com/path1/abc ，应用负载均衡收到访问请求时，会执行301重定向返回http://www. bbb. com/path1/abc/ ，访问流量将匹配转发规则1分发给backend处理。
+举例1：应用负载均衡配置了转发规则1(域名:aaa. bbb. com ，URL路径：/path1/abc/或/path/abc/\*，后端服务：backend)，未配置转发规则2(域名：aaa. bbb. com ，URL 路径： /path/abc，后端服务：backend)。用户访问 http:// aaa. bbb . com/path1/abc ，应用负载均衡收到访问请求时，会执行301重定向返回http:// aaa. bbb. com/path1/abc/ ，访问流量将匹配转发规则1分发给backend处理。
 
-如用户不想应用负载均衡执行301重定向，可配置转发规则2（域名：www. bbb. com ，URL路径：/path1/abc，后端服务：backend），通过该转发规则明确指定访问请求http:// www. bbb. com/path1/abc 的转发行为。
+如用户不想应用负载均衡执行301重定向，可配置转发规则2（域名：aaa. bbb. com ，URL路径：/path1/abc，后端服务：backend），通过该转发规则明确指定访问请求http:// aaa. bbb. com/path1/abc 的转发行为。
 

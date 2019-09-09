@@ -43,7 +43,7 @@ API网关支持动态路由功能。使用动态路由功能时，您可以自�
  ![API列表](../../../../../image/Internet-Middleware/API-Gateway/Dynamic-Routing-7.png)
  
 
-8. 如果在创建API分组时选择了免鉴权模式，则可以使用Postman进行对分组的访问。如果在创建API分组时选择了访问授权模式，则下一步进行访问授权过程。您需要先创建自己的[订阅密钥](https://apigateway-console.jdcloud.com/subscriptionKey)、[签名密钥](https://apigateway-console.jdcloud.com/accessSecretKey)或[京东云用户Access Key](https://uc.jdcloud.com/account/accesskey)，再在API网关的[访问授权](https://apigateway-console.jdcloud.com/authorizationList)模块中选择已创建的密钥，绑定对应的微服务API分组。当您为其他用户进行API网关签名授权和京东云用户签名授权与此过程类似。
+8. 如果在创建API分组时选择了免鉴权模式，则可以使用Postman进行对分组的访问。如果在创建API分组时选择了访问授权模式，则下一步进行访问授权过程。您需要先创建自己的[订阅密钥](https://apigateway-console.jdcloud.com/subscriptionKey)、[签名密钥](https://apigateway-console.jdcloud.com/accessSecretKey)或[京东云用户Access Key](https://uc.jdcloud.com/account/accesskey)，再在API网关的[访问授权](https://apigateway-console.jdcloud.com/authorizationList)模块中选择已创建的密钥，绑定对应的通用API分组。当您为其他用户进行API网关签名授权和京东云用户签名授权与此过程类似。
 
  ![API列表](../../../../../image/Internet-Middleware/API-Gateway/Dynamic-Routing-8.png)
  

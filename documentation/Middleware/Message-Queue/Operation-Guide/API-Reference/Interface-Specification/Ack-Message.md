@@ -17,7 +17,7 @@ POST {Http接入点}/v1/ack HTTP/1.1
 | :-------------- | :------- | :------- | :--------------------------------------- |
 | topic           | string   | Required |                                          |
 | consumerGroupId | string   | Required |                                          |
-| ackAction       | string   | Required | SUCCESS, CONSUME_FAILED, RESEND, DISCARD |
+| ackAction       | string   | Required | 1. SUCCESS:消费成功 <br/>2. CONSUME_FAILED:消费失败,服务端会进行重新推送<br/> 3. RESEND:立即重发<br/> 4. DISCARD:丢弃消息，服务端不会进行重试 |
 | ackIndex        | int64    | Required |                                          |
 
 - Response Body

@@ -2,8 +2,8 @@
 
 
 ## 描述
-资源标签解绑。<br/>
-注意cdn资源解绑标签时url中regionId必须指定为cn-all。
+你可以使用该接口解绑资源标签<br/>
+
 
 
 ## 请求方式
@@ -15,6 +15,9 @@ https://resource-tag.jdcloud-api.com/v1/regions/{regionId}/tags:unTagResources
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |Region ID|
+
+说明：解绑cdn的资源时，url中regionId需指定为cn-all
+
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

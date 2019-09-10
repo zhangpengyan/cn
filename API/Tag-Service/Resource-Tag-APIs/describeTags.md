@@ -2,9 +2,8 @@
 
 
 ## 描述
-获取资源标签。<br/>
-注意查询cdn资源的标签时url中regionId必须指定为cn-all。<br/>
-注意查询不限制地域时url中regionId必须指定为all-region。
+你可以通过该接口查询所有的标签<br/>
+
 
 
 ## 请求方式
@@ -16,6 +15,8 @@ https://resource-tag.jdcloud-api.com/v1/regions/{regionId}/describeTags
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |Region ID|
+
+说明：查询cdn的资源时，url中regionId需指定为cn-all。查询所有地域的标签时，url中regionId需指定为all-region。
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

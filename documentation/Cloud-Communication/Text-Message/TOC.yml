@@ -24,9 +24,7 @@ items:
     - name: 短信签名
       href: Operation-Guide/signature.md
     - name: 短信模板
-      href: Operation-Guide/content.md
-    - name: 发送短信
-      href: Operation-Guide/send.md
+      href: Operation-Guide/content.md    
     - name: 统计分析
       href: Operation-Guide/stat.md
 - name: SDK参考

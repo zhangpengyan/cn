@@ -2,8 +2,7 @@
 
 
 ## 描述
-根据标签查找资源。 <br/>
-若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
+你可以使用该接口按标签查询对应的资源id <br/>
 
 
 ## 请求方式
@@ -15,6 +14,8 @@ https://resource-tag.jdcloud-api.com/v1/regions/{regionId}/queryResource
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |Region ID|
+
+说明：查询cdn的资源时，url中regionId需指定为cn-all
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

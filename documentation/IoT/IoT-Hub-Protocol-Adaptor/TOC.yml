@@ -38,7 +38,9 @@
       - name: 实例配置
         items:
           - name: 实例配置
-            href: Operation-Guide/Instance-Configuration/Instance-Configuration.md            
+            href: Operation-Guide/Instance-Configuration/Instance-Configuration.md
+          - name: 添加子设备
+            href: Operation-Guide/Instance-Configuration/Add-SubDevices.md 
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 相关资源

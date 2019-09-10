@@ -2,9 +2,8 @@
 
 
 ## 描述
-获得资源与对应标签列表详情，不含资源名称和可用区。<br/>
-注意查询cdn的资源时url中regionId必须指定为cn-all。<br/>
-该接口目前不支持分页功能。
+你可以使用该接口按资源id查询标签与资源的绑定关系<br/>
+该接口目前不支持分页功能
 
 
 ## 请求方式
@@ -16,6 +15,8 @@ https://resource-tag.jdcloud-api.com/v1/regions/{regionId}/tags:describeResource
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**regionId**|String|True| |Region ID|
+
+说明：查询cdn的资源时，url中regionId需指定为cn-all
 
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|

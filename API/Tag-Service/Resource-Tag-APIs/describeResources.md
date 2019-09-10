@@ -28,8 +28,7 @@ https://resource-tag.jdcloud-api.com/v1/regions/{regionId}/tags:describeResource
 |**serviceCodes**|String[]|False| |产品线名称列表<br>标签系统支持的产品线名称如下<br>- vm               disk        sqlserver  es          mongodb               ip<br>- memcached        redis       drds       rds         database              db_ro<br>- percona          percona_ro  mariadb    mariadb_ro  pg                    cdn<br>- nativecontainer  pod         zfs        jqs         kubernetesNodegroup   jcq<br>|
 |**resourceIds**|String[]|False| |资源id列表|
 |**tagFilters**|TagFilter[]|False| |标签过滤列表|
-|**orderCondition**|String|False| |排序依据|
-|**descOrAsc**|String|False|DESC|排序方向, 取值为ASC, DESC|
+
 
 ### TagFilter
 |名称|类型|是否必需|默认值|描述|

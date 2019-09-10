@@ -62,7 +62,6 @@ https://billing.jdcloud-api.com/v1/regions/{regionId}/billDetail:list
 |**cashCouponPayFee**|Number|代金券支付金额|
 |**balancePayFee**|Number|余额支付金额|
 |**cashPayFee**|Number|现金支付金额|
-|**arrearFee**|Number|欠费金额|
 ### Pagination
 |名称|类型|描述|
 |---|---|---|

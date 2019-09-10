@@ -3,7 +3,6 @@
 
 ## 描述
 你可以使用该接口按资源id查询标签与资源的绑定关系<br/>
-该接口目前不支持分页功能
 
 
 ## 请求方式
@@ -31,8 +30,7 @@ https://resource-tag.jdcloud-api.com/v1/regions/{regionId}/tags:describeResource
 |**tagFilters**|TagFilter[]|False| |标签过滤列表|
 |**orderCondition**|String|False| |排序依据|
 |**descOrAsc**|String|False|DESC|排序方向, 取值为ASC, DESC|
-|**pageSize**|Integer|False| |每页记录数|
-|**currentPage**|Integer|False| |当前页码|
+
 ### TagFilter
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|

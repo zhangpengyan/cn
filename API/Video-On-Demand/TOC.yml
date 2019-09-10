@@ -82,7 +82,7 @@ items:
           - name: 查询质检模板列表
             href: Quality-Detection-Template/listQualityDetectionTemplates.md
           - name: 创建质检模板
-            href: TranQuality-Detectionscode-Template/createQualityDetectionTemplate.md
+            href: Quality-Detection-Template/createQualityDetectionTemplate.md
           - name: 查询质检模板
             href: Quality-Detection-Template/getQualityDetectionTemplate.md
           - name: 修改质检模板

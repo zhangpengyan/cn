@@ -1,0 +1,22 @@
+name: 企业应用集成API在万象的最佳实践
+href: 
+items:
+- name: 白皮书目录
+  href: Catalog.md
+- name: 1 摘要
+  href: Overview.md
+- name: 2 将应用 API 发布到万象平台上的好处
+  href: Benefits.md
+- name: 3 万象平台介绍
+  href: Wanxiang-Introduction.md
+- name: 4 应用集成 API 功能介绍
+  href: API-Introduction.md
+- name: 5 应用集成 API 在万象的最佳实践
+  href: Best-Practices.md
+- name: 6 结论
+  href: Conclusion.md
+- name: 7 文档作者
+  href: Authors.md
+- name: 8 下载链接及参考
+  href: Reference.md
+  

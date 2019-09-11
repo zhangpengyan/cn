@@ -15,6 +15,16 @@ items:
         href: Introduction/Restrictions.md
       - name: 支持IAM的云产品
         href: Introduction/Support-Services.md
+  - name: 入门指南
+    items:
+      - name: 创建子用户
+        href: Getting-Started/CreateSubuser.md
+      - name: 创建群组（可选）
+        href: Getting-Started/CreateUserGroup.md
+      - name: 创建自定义策略（可选）
+        href: Getting-Started/CreatePolicy.md
+      - name: 创建角色（可选）
+        href: Getting-Started/CreateRole.md
   - name: 操作指南
     items:
       - name: 概览
@@ -25,6 +35,8 @@ items:
             href: Identity-Management/Sub-User.md
           - name: 群组
             href: Identity-Management/Group.md
+          - name: 角色
+            href: Identity-Management/Role.md
       - name: 策略管理
         items:
           - name: 策略管理
@@ -37,10 +49,14 @@ items:
                 href: Policy-Management/Policy_v3/Elements.md
               - name: 语法结构
                 href: Policy-Management/Policy_v3/Syntax-Structure.md
+              - name: IAM权限判断规则
+                href: Policy-Management/Policy_v3/effect.md
               - name: 操作描述方式
                 href: Policy-Management/Policy_v3/Action.md
               - name: 资源描述方式
                 href: Policy-Management/Policy_v3/Resource.md
+              - name: 条件描述方式
+                href: Policy-Management/Policy_v3/Condition.md
       - name: 设置
         href: Setting.md        
       - name: 虚拟 MFA 设备

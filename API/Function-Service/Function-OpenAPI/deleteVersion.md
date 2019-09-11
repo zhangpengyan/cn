@@ -13,8 +13,8 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions/{functionName}/
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**functionName**|String|True| |函数名称|
-|**regionId**|String|True| |Region ID|
 |**versionName**|String|True| |版本名称|
+|**regionId**|String|True| |Region ID|
 
 ## 请求参数
 无

@@ -1,6 +1,6 @@
 # 基础架构
 
-物联网中心服务（IoT Hub Service）包含协议引擎、设备管理、Edge模块管理、数据管理四个主要模块。
+物联网中心（IoT Hub）包含协议引擎、设备管理、Edge模块管理、数据管理四个主要模块。
 
 ## 业务架构
 业务架构如下图：
@@ -18,6 +18,4 @@
 
 - [产品优势](../Introduction/Benefits.md)
 - [产品功能](../Introduction/Features.md)
-- [价格总览](../Pricing/Price-Overview.md)
-- [计费规则](../Pricing/Billing-Rules.md)
 - [创建实例](../Getting-Started/Create-Instance.md)

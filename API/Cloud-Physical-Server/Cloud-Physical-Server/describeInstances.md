@@ -3,7 +3,7 @@
 
 ## 描述
 批量查询云物理服务器详细信息<br/>
-支持分页查询，默认每页10条<br/>
+支持分页查询，默认每页20条<br/>
 
 
 ## 请求方式
@@ -20,13 +20,14 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
 |**pageNumber**|Integer|False|1|页码；默认为1|
-|**pageSize**|Integer|False|10|分页大小；默认为10；取值范围[10, 100]|
+|**pageSize**|Integer|False|20|分页大小；默认为20；取值范围[20, 100]|
 |**az**|String|False| |可用区，精确匹配|
 |**name**|String|False| |云物理服务器名称，支持模糊匹配|
-|**networkType**|String|False| |网络类型，精确匹配，目前只支持basic|
+|**networkType**|String|False| |网络类型，精确匹配，支持basic，vpc|
 |**deviceType**|String|False| |实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型|
-|**status**|String|False| |云物理服务器状态，参考云物理服务器状态|
-|**filters**|Filter[]|False| |instanceId - 云物理服务器ID，精确匹配，支持多个<br>|
+|**subnetId**|String|False| |子网ID|
+|**enableInternet**|String|False| |是否启用外网, yes/no|
+|**filters**|Filter[]|False| |instanceId - 云物理服务器ID，精确匹配，支持多个<br/><br>privateIp - 云物理服务器内网IP，精确匹配，支持多个<br/><br>status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个<br>|
 
 ### Filter
 |名称|类型|是否必需|默认值|描述|
@@ -46,7 +47,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |---|---|---|
 |**instances**|Instance[]| |
 |**pageNumber**|Integer|页码；默认为1|
-|**pageSize**|Integer|分页大小；默认为10；取值范围[10, 100]|
+|**pageSize**|Integer|分页大小；默认为20；取值范围[20, 100]|
 |**totalCount**|Integer|查询结果总数|
 ### Instance
 |名称|类型|描述|
@@ -61,7 +62,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**enableInternet**|String|是否启用外网, 如 yes/no|
 |**enableIpv6**|String|是否启用IPv6, 如 yes/no|
 |**bandwidth**|Integer|带宽, 单位Mbps|
-|**imageType**|String|镜像类型, 如 standard/standard_app|
+|**imageType**|String|镜像类型, 如 standard|
 |**osTypeId**|String|操作系统类型ID|
 |**osName**|String|操作系统名称|
 |**osType**|String|操作系统类型, 如 ubuntu/centos|
@@ -70,10 +71,14 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**sysRaidType**|String|系统盘RAID类型, 如 NORAID, RAID0, RAID1|
 |**dataRaidTypeId**|String|数据盘RAID类型ID|
 |**dataRaidType**|String|数据盘RAID类型, 如 NORAID, RAID0, RAID1|
-|**networkType**|String|网络类型, 如 basic|
-|**lineType**|String|外网链路类型, 如 bgp|
+|**networkType**|String|网络类型, 如 basic, vpc|
+|**vpcId**|String|私有网络ID|
+|**vpcName**|String|私有网络名称|
 |**subnetId**|String|子网编号|
+|**subnetName**|String|子网名称|
 |**privateIp**|String|内网IP|
+|**lineType**|String|外网链路类型, 如 bgp|
+|**elasticIpId**|String|弹性公网IPID|
 |**publicIp**|String|公网IP|
 |**publicIpv6**|String|公网IPv6|
 |**charge**|Charge|计费信息|

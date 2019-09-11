@@ -22,8 +22,8 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions/{functionName}/
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**requestId**|String|本次请求Id|
 |**result**|Result|查询版本列表返回值|
+|**requestId**|String|本次请求Id|
 
 ### Result
 |名称|类型|描述|
@@ -32,14 +32,14 @@ https://function.jdcloud-api.com/v1/regions/{regionId}/functions/{functionName}/
 ### FunctionSpec
 |名称|类型|描述|
 |---|---|---|
-|**createTime**|String|函数创建时间|
-|**description**|String|函数描述|
-|**downloadUrl**|String|代码包下载的url地址|
 |**functionId**|String|函数Id|
 |**name**|String|函数名称|
+|**description**|String|函数描述|
 |**runtime**|String|函数运行环境，目前有python3|
+|**createTime**|String|函数创建时间|
 |**updateTime**|String|函数最后更新时间|
 |**version**|String|函数版本名称|
+|**downloadUrl**|String|代码包下载的url地址|
 
 ## 返回码
 |返回码|描述|

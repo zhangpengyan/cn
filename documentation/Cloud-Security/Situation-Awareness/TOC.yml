@@ -9,6 +9,8 @@
         href: Introduction/Basic-Infrastructure.md
       - name: 应用场景
         href: Introduction/Application-Scenarios.md
+      - name: 态势感知专有云
+        href: Introduction/Private-Cloud-Overview.md
   - name: 操作手册
     items:
       - name: 威胁概览
@@ -21,6 +23,10 @@
         href: Operation-Guide/Configuration-Change.md         
       - name: 安全大屏
         href: Operation-Guide/Security-Bigscreen.md     
+      - name: 资产指纹
+        href: Operation-Guide/Asset-Print.md   
+      - name: 云产品基线
+        href: Operation-Guide/Cloudbaseline.md      
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: 版本更新

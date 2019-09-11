@@ -8,7 +8,7 @@ git clone https://github.com/NodeRedis/node_redisnpm install redis
 
 - step2：调用示例代码
 
-```
+```JavaScript
 //连接redis
 var redis = require("redis"),
   port = 6379,

@@ -4,11 +4,11 @@
 
 登录直播控制台，进入“域名管理”页面，选择要查看播放地址的一组域名，点击右侧的“管理”进入域名“基本信息”页面
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E6%8E%A8%E6%B5%81%E5%9C%B0%E5%9D%80-%E8%8E%B7%E5%8F%96%E6%8E%A8%E6%B5%81%E5%9C%B0%E5%9D%80.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/6%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81.png)
 
 在“播放信息”一栏可以查看和复制播放地址，播放地址是按一定规则拼接，其中应用名“APPName”和流名“StreamName”用户推流时自定义，应用名（APPName）、流名（StreamName）目前仅支持英文、数字、“-”、"_",长度需要在1-50字符之间，客户需要根据想要观看的推流时定义的应用名和流名按规则拼接出播放地址
 
-![](https://github.com/jdcloudcom/cn/blob/edit/image/live-video/%E5%9F%9F%E5%90%8D%E7%AE%A1%E7%90%86-%E8%8E%B7%E5%8F%96%E6%92%AD%E6%94%BE%E5%9C%B0%E5%9D%80.png)
+![](https://github.com/jdcloudcom/cn/blob/cn-Live-Video/image/live-video/8%E7%9B%B4%E6%92%AD%E6%92%AD%E6%94%BE.png)
 
 ## **2.播放地址说明**
 

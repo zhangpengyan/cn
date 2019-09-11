@@ -53,6 +53,8 @@
             href: Operation-Guide/NodeGroup/Nodegroup-Overview.md
           - name: 创建工作节点组
             href: Operation-Guide/NodeGroup/Create-NodeGroup.md
+          - name: 添加GPU工作节点组
+            href: Operation-Guide/NodeGroup/Add-GPU.md  
           - name: 工作节点组伸缩
             href: Operation-Guide/NodeGroup/Telescopic-NodeGroup.md
           - name: 删除工作节点组
@@ -81,12 +83,34 @@
        items:
          -  name: 部署Deployment
             href: Best-Practices/Deploy-Applications/Deploy-Deployment.md
-         -  name: 部署StorageClass
-            href: Best-Practices/Deploy-Applications/Deploy-StorageClass.md
-         -  name: 部署持久化存储
-            href: Best-Practices/Deploy-Applications/Deploy-PV.md
          -  name: 部署Service
             href: Best-Practices/Deploy-Applications/Deploy-Service.md
+     - name: 使用云硬盘作为Volume
+       items:
+        -  name: 部署StorageClass
+           href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-StorageClass.md
+        -  name: 部署持久化存储
+           href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-PV.md
+     -  name: 使用CFS云文件服务作为Volume
+        items:
+         -  name: 定义nfs类型的Volume
+            href: Best-Practices/Volumes/Cloud-File-Service/CFS-Volume.md
+         -  name: 通过静态PV的方式使用京东云文件服务
+            href: Best-Practices/Volumes/Cloud-File-Service/CFS-PVC.md
+         -  name: 部署nfs-client-provisioner
+            href: Best-Practices/Volumes/Cloud-File-Service/nfs-client-provisioner.md
+         -  name: 使用nfs-client-provisioner动态创建PV
+            href: Best-Practices/Volumes/Cloud-File-Service/Create-PV-Dynamically.md
+     - name: Ingress
+       items:
+         -  name: 部署 Nginx-ingress controller
+            href: Best-Practices/Ingress/Deploy-Ingress-NGINX-Controller.md
+         -  name: 使用开源nginx-ingress controller定义ingress resource
+            href: Best-Practices/Ingress/Deploy-Ingress-Resource.md
+         -  name: 基于京东云ALB实现客户端源IP透传
+            href: Best-Practices/Ingress/nginx-ingress-source-ip.md
+         -  name: 自建CA证书和私钥
+            href: Best-Practices/Ingress/deploy-CA-SSL.md
      - name: 创建原生容器Pod
        items:
          - name: 部署Virtual-Kubelet
@@ -95,6 +119,16 @@
            href: Best-Practices/Create-Pod/Create-Pod-InKubernetes.md
      - name: 部署Helm
        href: Best-Practices/Deploy-Helm.md
+     - name: 在Kubernetes集群上运行Istio
+       href: Best-Practices/Deploy-istio.md
+     - name: 部署自定义版本的NVIDIA GPU驱动
+       href: Best-Practices/Custom-GPU-driver.md
+     - name: 使用对象存储Bucket作为共享存储
+       items:
+         - name: 在Kubernetes集群中挂载对象存储Bucket
+           href: Best-Practices/s3fs/Oss-s3fs-volume.md
+         - name: 构建s3fs自定义镜像
+           href: Best-Practices/s3fs/s3fs-custom-image.md
   - name: 常见问题
     href: Common-Problem.md
   - name: 相关资源

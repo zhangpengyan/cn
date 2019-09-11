@@ -2,10 +2,15 @@
 集群创建成功后，单击集群名称进入集群详情页，可以查看关于集群运行的详细监控信息，辅助集群运维监管。也可由“云监控-资源监控-Elasticsearch监控”进入查看。</br>
 ### 操作步骤
 1.访问[云搜索Elasticsearch控制台](https://es-console.jdcloud.com/clusters)，即进入集群列表页面。</br>
+
 2.在集群列表页面，点击集群名称，进入详情页面。</br>
+
 3.在详情页面，点击【集群监控】进入监控页面。</br>
+
 4.监控时段可选择据当前时间“1小时”、“6小时”、“12小时”进行选择，也可由日历时间段自主选择。</br>
+
 5.单击右上方“设置报警规则”，单击跳转至云监控页面进行报警规则的设置。</br>
+
 ![查询1](https://github.com/jdcloudcom/cn/blob/Elasticsearch/image/Internet-Middleware/JCS%20for%20Elasticsearch/监控ES.png)
  
 监控指标包括：集群健康状态、集群查询QPS、集群写入QPS、节点CPU使用率、节点磁盘使用率、节点HeapMemory使用率。</br>

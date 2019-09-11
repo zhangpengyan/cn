@@ -1,4 +1,4 @@
-name: 分布式服务框架
+name: 微服务平台
 href:
 items:
 - name: 产品简介
@@ -41,6 +41,8 @@ items:
       herf: Getting-Started/Getting-Started.md
     - name: 入门示例
       herf: Getting-Started/Basic-Example.md
+    - name: 使用API网关开放VPC内的接口
+      herf: Getting-Started/GW_VPC.md
 - name: 操作指南
   items:
     - name: 注册中心
@@ -49,7 +51,7 @@ items:
           herf: Operation-Guide/Cluster/Create-Cluster.md
         - name: 查看注册中心信息
           herf: Operation-Guide/Cluster/Cluster-Detail.md
-        - name: 扩缩容
+        - name: 扩容
           herf: Operation-Guide/Cluster/Expansion-Cluster.md
         - name: 删除注册中心
           herf: Operation-Guide/Cluster/Delete-Cluster.md
@@ -84,7 +86,14 @@ items:
           herf: Operation-Guide/Analysis-Service/Update-Analysis-Service.md
         - name: 删除服务
           herf: Operation-Guide/Analysis-Service/del-Analysis-Service.md
-    
+    - name: 微服务网关
+      items:
+        - name: 概述
+          herf: Operation-Guide/JDSFGW/overview.md
+        - name: 创建服务
+          herf: Operation-Guide/JDSFGW/CreateGW.md
+        - name: 查看服务
+          herf: Operation-Guide/JDSFGW/ViewGW.md   
 - name: 常见问题
   herf: FAQ/faq.md
 

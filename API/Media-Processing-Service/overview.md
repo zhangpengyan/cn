@@ -17,3 +17,6 @@ v1
 |**getThumbnailTask**|GET|根据任务ID获取截图任务。|
 |**listThumbnailTask**|GET|查询截图任务，返回满足查询条件的任务列表。|
 |**setNotification**|PUT|设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x\-jdcloud\-message\-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验|
+|**setStyleDelimiter**|PUT|设置样式分隔符。|
+|**getStyleDelimiter**|GET|获取bucket的图片样式分隔符配置。|
+|**deleteStyleDelimiter**|DELETE|删除bucket的图片样式分隔符配置。|

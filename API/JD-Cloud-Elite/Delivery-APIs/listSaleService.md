@@ -50,6 +50,9 @@ https://elite.cn-south-1.jdcloud-api.com/v1/regions/{regionId}/listSaleService
 |---|---|---|
 |**deliverNumber**|String|交付单号|
 |**orderNumber**|String|订单号|
+|**buyerPin**|String|购买人|
+|**mappingCode**|String|映射编号|
+|**supportAutoDeliver**|Integer|是否支持自动交付：0表示不支持，1表示支持|
 |**productId**|Integer|产品ID|
 |**skuId**|Integer|sku ID|
 |**skuName**|String|sku名称|
@@ -65,6 +68,19 @@ https://elite.cn-south-1.jdcloud-api.com/v1/regions/{regionId}/listSaleService
 |**failureDt**|String|服务过期时间，格式：yyyy-MM-dd HH:mm:ss|
 |**extraInfo**|String|商品属性|
 |**remark**|String|交付单备注|
+|**orderTotalFee**|String|订单金额|
+|**orderActualFee**|String|订单实付金额|
+|**paymentDt**|String|订单支付时间|
+|**extraChargeInfo**|String|额外计费项信息|
+|**orderItemExtraChargeInfos**|OrderItemExtraChargeInfo[]|额外计费详情信息|
+### OrderItemExtraChargeInfo
+|名称|类型|描述|
+|---|---|---|
+|**name**|String|购买用户pin|
+|**unit**|String|单位|
+|**buyNum**|Integer|购买数量|
+|**sellingPrice**|String|销售价格|
+|**settlementPrice**|String|结算价格|
 
 ## 返回码
 |返回码|描述|

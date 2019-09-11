@@ -3,9 +3,9 @@
 您可以通过京东云控制台快速了解操作审计服务。通过控制台，您可以查看近90天内的操作记录。
 
 ## 注册与登录
-如果您还没完成京东云账户的注册，请先[注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud)，注册完成后您需要进行实名认证，具体操作可参考[实名认证指引](https://docs.jdcloud.com/cn/real-name-verification/real-name-verification)。
+如果您还没完成京东云账户的注册，请先[注册](https://user.jdcloud.com/register)，注册完成后您需要进行实名认证，具体操作可参考[实名认证指引](https://docs.jdcloud.com/cn/real-name-verification/real-name-verification)。
 
-如果您已注册京东云账户，并进行了实名认证，可直接[登录京东云](https://uc.jdcloud.com)。
+如果您已注册京东云账户，并进行了实名认证，可直接[登录京东云](https://uc.jdcloud.com/login?returnUrl=https%3A%2F%2Fwww.jdcloud.com%2Fcn%2F)。
 
 单击【产品】>【管理】>【操作审计】，进入操作审计页面。
 

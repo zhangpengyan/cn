@@ -28,7 +28,7 @@
 
 8. 配置实例存储：
   * 云主机系统盘：支持本地盘及云硬盘，其中本地盘免费40GB，且容量不可变更。云硬盘支持40GB~500GB。                   
-  * 云主机数据盘：若系统盘为本地盘则支持挂载8块数据盘，若系统盘为云硬盘则支持挂载7块云硬盘作数据盘。可选通用型SSD云盘、性能型SSD云盘、容量型HDD云盘、SSD云盘及高效云盘（其中前三类当前仅在华东-上海地域提供，后两类仅在华北-北京、华东-宿迁及华南-广州地域提供）。云硬盘挂载到云主机后，需要进入云主机操作系统挂载云硬盘。          
+  * 云主机数据盘：若系统盘为本地盘则支持挂载8块数据盘，若系统盘为云硬盘则支持挂载7块云硬盘作数据盘。可选通用型SSD云盘、性能型SSD云盘及 容量型HDD云盘。云硬盘挂载到云主机后，需要进入云主机操作系统挂载云硬盘。          
    
      您可以随实例创建指定类型和容量的空盘，也可以基于已有云硬盘快照创建数据盘。关于数据盘设备名分配规则请查阅[设备名分配规则](../Operation-Guide/Storage/Assign-Device-Name.md)。  
      
@@ -56,9 +56,12 @@
 ![](../../../../image/vm/Getting-Start-Linux-Create-IP.png)
 
 11. 设置实例名称、描述：
-您需要设置创建的主机名，名称不可为空，只支持中文、数字、大小写字母、英文下划线“ _ ”及中划线“ - ”，且不能超过32字符，如果为批量创建购买，名称以“xxx1”、“xxx2”依次显示。同时支持为实例添加描述，描述允许为空，若添加长度不能超过256字符。
+您需要设置创建的主机名，名称不可为空，只支持中文、数字、大小写字母、英文下划线“ _ ”、中划线“ - ”及点“.”，且不能超过128字符，如果为批量创建购买，名称以“xxx1”、“xxx2”依次显示。同时支持为实例添加描述，描述允许为空，若添加长度不能超过256字符。
 ![](../../../../image/vm/Getting-Start-Linux-Create-information.png)
 
+    * hostname默认配置规则：
+      暂不支持在主机创建时自定义hostname，系统会在实例名称命名符合 RFC-952 和 RFC-1123 规则的前提下，取主机名称来设置hostname。若实例名称不符合规范，则系统会对部分字符进行转换，转换后若符合规范则截短（linux不超过63个字符，windows不超过15个字符）后配置hostname，否则会以默认hostname来配置，默认形式为“server-<*instance-id*>”。
+      
 12. 设置密码：
 可以选择“立即设置”密码，也可以选择“暂不设置”（系统会以短信和邮件方式发送默认密码），密码除了用于SSH登录实例时的密码，也是控制台通过VNC登录实例的密码。                
 ![](../../../../image/vm/Getting-Start-Windows-Create-login.png)
@@ -104,4 +107,4 @@
   [10]: ./images/Getting-Start-Linux-Create-information.png "Getting-Start-Linux-Create-information.png"
   [11]: ./images/Getting-Start-Windows-Create-login.png "Getting-Start-Windows-Create-login.png"
   [12]: ./images/Getting-Start-Linux-Create-Region.png "Getting-Start-Linux-Create-Region.png"
-  [13]: ./images/Getting-Start-Linux-Create-Region.png "Getting-Start-Linux-Create-Region.png"f
+  [13]: ./images/Getting-Start-Linux-Create-Region.png "Getting-Start-Linux-Create-Region.png"

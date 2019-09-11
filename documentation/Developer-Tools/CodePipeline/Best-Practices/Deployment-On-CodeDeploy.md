@@ -1,7 +1,7 @@
 
 ## 构建并部署到云部署
 
-本文档以构建一个java项目并部署到京东云-云部署为例说明如何使用 流水线。
+本文档以构建一个java项目并部署到京东云-云部署为例说明如何使用流水线。
 
 基本操作流程如下：
 
@@ -80,7 +80,7 @@
 
 2. 配置源代码
 
-  阶段名默认为 源代码，添加源代码子操作。原子操作中选择京东云-代码托管，选择示例代码JDCloud-Codebuild/hello-java。
+  阶段名默认为 源代码，添加源代码操作。操作中选择京东云-代码托管，选择示例代码JDCloud-Codebuild/hello-java。
   
    ![](/image/codepipeline/source-best2.PNG)
 
@@ -120,7 +120,7 @@
 -  部署命令：提供部署命令，选择 输入部署操作命令，在yaml中贴如下命令：
 
  ```
- files:
+files:
   - source: /
     destination: /home/demo
 hooks:
@@ -128,7 +128,7 @@ hooks:
     - command: /home/demo/bin/start.sh
       timeout: 10
       runas: root
-permisssions: {}
+permisssions: []
 env: {}
  ```
 

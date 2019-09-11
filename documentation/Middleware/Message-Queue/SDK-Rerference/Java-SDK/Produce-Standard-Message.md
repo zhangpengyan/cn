@@ -14,10 +14,12 @@
 
 
 ## 可配置的参数
-| 参数                | 参数描述                                   |
-| ------------------- | ------------------------------------------ |
-| PROPERTY_TAGS       | 可以设置消息的标签（tag），暂时支持一条tag |
-| PROPERTY_DELAY_TIME | 可以设置消息的延迟时间，范围为0-3600秒     |
+| 参数                | 参数描述                                   |备注                                       |
+| ------------------- | ------------------------------------------ |------------------------------------------ |
+| PROPERTY_BUSINESS_ID|可以为消息设置业务ID,用户可以根据业务ID查询消息|长度最长为128个字符                       |
+| PROPERTY_TAGS       | 可以设置消息的标签（tag）                  |暂时支持一条tag                             |
+| PROPERTY_DELAY_TIME | 可以设置消息的延迟时间                     |范围为0-3600秒                              |
+| PROPERTY_RETRY_TIMES| 可以设置客户端消息重试次数                 |与服务端重试次数无关，默认为2次，即加上第一次发送总共发送3次消息到服务端|
 
 ## 代码示例
 ```Java
@@ -64,6 +66,7 @@ public class ProducerDemo {
 
     public static void main(String[] args) throws Exception {
         // 创建普通消息producer
+        // 如果使用角色登陆将获取的STStoken作为UserCredential参数即可
         UserCredential userCredential = new UserCredential(ACCESS_KEY, SECRET_KEY);
         ProducerConfig producerConfig = ProducerConfig.builder()
                 .metaServerAddress(META_SERVER_ADDRESS)
@@ -80,6 +83,9 @@ public class ProducerDemo {
         Message message1 = new Message();
         message1.setTopic(TOPIC);
         message1.setBody(("this is message1 boy").getBytes());
+
+        // 设置message businessID属性, 如有需要
+        message.getProperties().put(MessageConstants.PROPERTY_BUSINESS_ID,"yourBusinessID");
 
         // 设置message tag属性, 如有需要
         message.getProperties().put(MessageConstants.PROPERTY_TAGS, "TAG");

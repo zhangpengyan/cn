@@ -17,6 +17,7 @@
 | HTTP_FORBIDDEN   | 403 |  没有对资源 resource 的 permission 权限  |    请在相关系统或需联系相关管理员开权限     |
 | RESOURCE_NOT_EXIST   | 404 |  资源 resource 不存在  |     请检查访问信息    |
 | NOT_FOUND   | 404 |  找不到 resource   |     请检查访问信息    |
+| Request Timeout   | 408 |  请求超时   |     请检查连接信息    |
 | ABORTED   | 409 |  当前无法对 resource 进行操作  |    请检查访问信息     |
 | ALREADY_EXISTS   | 409 |  resource 已存在  |     请检查访问信息    |
 | CONFLICT   | 409 |  两种资源归属的父资源不一致  |    请检查访问信息     |

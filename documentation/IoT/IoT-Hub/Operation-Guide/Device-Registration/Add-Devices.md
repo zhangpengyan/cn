@@ -20,7 +20,7 @@
 
 
 5. 在弹出的添加设备页面里点击“下载物模型模板”。
-6. 请在您的本机上编辑物模型模版，生成您需要接入设备的物模型文件。你可以参考附件的温湿度传感器的物模型示例来编辑您自己的物模型文件。[温湿度传感器物模型示例](../../../../../image/IoT/IoT-Hub/TempHumiditySensor-OM.json)
+6. 请在您的本机上编辑物模型模版，生成您需要接入设备的物模型文件。你可以参考附件的温湿度传感器的物模型示例来编辑您自己的物模型文件。[温湿度传感器物模型示例](https://docs-iot-downloads.s3.cn-north-1.jdcloud-oss.com/TempHumiditySensor-OM.json?AWSAccessKeyId=9B860A13DA12A42DCB34BE2ECBE4384D&Expires=1616583586&Signature=xGDR%2FHppBwW7iHtpoOViVXyJhgs%3D)
 7. 编辑物模型完成后，点击“上传物模型”按钮，上传您的物模型。
 8. 在弹出的添加设备页面里点击“下载设备登记模板”。
 9. 请在您的本机上编辑设备登记模板，生成您需要接入的设备登记文件。
@@ -32,5 +32,4 @@
 ## 相关参考
 - [设计物模型](../../Best-Practices/Design-OM.md)
 - [实例列表](../../Getting-Started/List-Instance.md)
-- [计费规则](../../Pricing/Billing-Rules.md)
 

@@ -113,6 +113,12 @@
             href: Operation-Guide/Monitoring/Hardware-Monitoring.md
           - name: 性能监控
             href: Operation-Guide/Monitoring/Monitoring-Overview.md
+      - name: SSH密钥
+        items:
+          - name: 概述
+            href: Operation-Guide/SSH-Key-Pair/Description-SSH-Key-Pair.md
+          - name: 操作步骤
+            href: Operation-Guide/SSH-Key-Pair/Step-SSH-Key-Pair.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

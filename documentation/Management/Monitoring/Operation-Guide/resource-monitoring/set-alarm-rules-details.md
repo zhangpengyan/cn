@@ -26,7 +26,7 @@
    - 报警回调：当资源发生告警时，京东云主动回调您配置的URL信息和POST参数信息。  
 ![通知策略](../../../../../image/Cloud-Monitor/6-tzcl.png)  
 
-![报警回调](../../../../../image/Cloud-Monitor6-tzcl-hd.png)
+![报警回调](../../../../../image/Cloud-Monitor/6-tzcl-hd.png)
 5. 点击页面底部的“完成创建”，则支持添加报警规则，点击“取消”按钮， 放弃本次操作。
 
 

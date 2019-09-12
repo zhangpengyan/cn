@@ -1,4 +1,4 @@
 # 费用标签
 
 在费用标签页面中展示了你所有拥有的“标签键”，你可以在此页面中批量或单独对标签键进行标签费用属性的绑定与解绑。
-![cost-tag](../../../../image/Tag/costTag/cost-tag.png)
+![costtag](../../../../image/Tag/costTag/costtag.png)

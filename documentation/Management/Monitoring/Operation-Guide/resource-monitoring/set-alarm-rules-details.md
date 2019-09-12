@@ -1,40 +1,37 @@
-## 对资源设置监控报警
-### 增加报警规则
-1.登录京东云控制台，点击管理->云监控->资源监控菜单，选择待查看的资源类型，进入资源的监控列表。点击操作列的“报警规则”。
- 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/edit/image/Cloud-Monitor/yunziyuan/4.%E8%B5%84%E6%BA%90%E7%9B%91%E6%8E%A7.png)
-   
-2.进入监控详情的报警规则页面，点击“新增报警规则”，可以创建报警规则。
+# 添加报警规则
+**批量设置报警**
+1. 登录京东云控制台，点击管理->云监控->资源监控，以资源云主机为例，四级菜单选中“云主机”，进入云主机监控列表。  
+![云主机监控](../../../../../image/Cloud-Monitor/1-zylb.png)
+2. 选中需要批量设置报警的云主机，点击表格下方的“设置报警”按钮，进入添加报警规则页面。  
+![云主机监控](../../../../../image/Cloud-Monitor/2-plsz.png)  
+![设置报警规则](../../../../../image/Cloud-Monitor/3-szbj.png)  
 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/Monitoring-cn/image/Cloud-Monitor/dashboard/AlarmRuleList_Resource.png)
+3. 按照以下步骤配置信息  
+   1）基本信息：设置规则名称，确认资源类型和已选中的实例信息。  
+   2）触发条件：支持自定义添加，也支持绑定已有的模板信息。
+   - 自定义添加：选择监控项、统计周期、统计方法、计算方式、阈值、持续周期，同时可根据需求配置报警级别。  若需配置多个触发条件，点击“添加触发条件”按钮即可配置。
+ ![报警历史](../../../../../image/Cloud-Monitor/4-zdytj.png)    
+![报警级别](../../../../../image/Cloud-Monitor/4-zdytj-1.png) 
+![报警级别](../../../../../image/Cloud-Monitor/4-zdytj-2.png)
+   - 使用模板：切换至“使用模板”选项，点击下拉框，选择需要使用的模板，若需详细了解模板的详情信息，可点击“查看模板”字样，打开模板详情。  
+![报警级别](../../../../../image/Cloud-Monitor/5-symb.png)  
 
-3.输入监控项、统计周期、统计方法、计算方式、阈值、持续周期，根据业务需求也可设置分级报警（分为一般、严重、紧急），点击“下一步”添加报警规则及联系人，点击“下一步”，点击“完成”即可。 
 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/cn-cloudmonitor/image/Cloud-Monitor/%E8%AE%BE%E7%BD%AE%E6%8A%A5%E8%AD%A6%E8%A7%84%E5%88%99.png)
+   3）通知策略信息配置如下：  
+   - 通知周期：表示如果资源一直处于告警状态，未恢复正常，间隔多久发一下已通知。提供5分钟、10分钟、15分钟、30分钟、1小时、3小时、6小时、12小时和24小时几种选项。
+   - 有效时段：报警短信和邮件信息仅在指定时间范围内发送，默认是全天都发送。
+   - 通知条件：提供“报警”和“恢复正常”两种场景，默认仅报警状态发送，必须要指定通知条件。
+   - 接收渠道：提供“短信”和“邮件”两种选型，默认都发送，可根据需要选择。  
+   - 通知对象：支持选择联系人或联系组。添加联系人和联系组击选择框底部的“账户管理-联系人管理”进入用户中心进行配置。  
+   - 报警回调：当资源发生告警时，京东云主动回调您配置的URL信息和POST参数信息。  
+![通知策略](../../../../../image/Cloud-Monitor/6-tzcl)  
 
-4.添加成功后，可在报警规则列表中，可查看到设置的规则信息。 
+![报警回调](../../../../../image/Cloud-Monitor6-tzcl-hd)
+5. 点击页面底部的“完成创建”，则支持添加报警规则，点击“取消”按钮， 放弃本次操作。
 
-### 修改/删除/禁用报警规则
-1.登录京东云控制台，点击管理->云监控->资源监控菜单，选择待查看的资源类型，在资源列表中点击“报警规则”，进入监控详情的报警规则页面，进入资源的监控列表。
 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/Monitoring-cn/image/Cloud-Monitor/dashboard/AlarmRuleList_Resource.png)
 
-2.点击操作列更多操作下的“修改”按钮，可根据需要修改监控项、统计周期、统计方法、计算方式、阈值、持续周期、报警联系人信息。  
-3.点击操作列更多操作下的“删除”按钮，即可删除。  
-4.点击操作列更多操作下的“禁用”按钮，即可禁用规则。
+**特定资源配置报警**
 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/edit/image/Cloud-Monitor/yunziyuan/6.%E8%B5%84%E6%BA%90%E7%9B%91%E6%8E%A7.png)
 
-### 管理报警联系人/组
-登录京东云账号后，在页面右上侧查看账户信息下拉框，点击账号管理-联系人管理，可在此页面查看并管理联系人及联系组。
-
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/edit/image/Cloud-Monitor/yunziyuan/7.%E8%B5%84%E6%BA%90%E7%9B%91%E6%8E%A7.png)
-
-### 添加/使用报警模板
-1.在设置报警规则页面，根据需要设置监控项、统计周期、统计方法、计算方式、阈值、持续周期，完成后勾选“保存为新的报警规则模板”将该规则保存为模板。
-
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/edit/image/Cloud-Monitor/yunziyuan/8.%E8%B5%84%E6%BA%90%E7%9B%91%E6%8E%A7.png)
-
-2.已有报警模板后，可在新增报警规则页面，勾选“使用已有的报警规则模板”选择已有模板进行使用。
- 
-![image](https://raw.githubusercontent.com/jdcloudcom/cn/edit/image/Cloud-Monitor/yunziyuan/9.%E8%B5%84%E6%BA%90%E7%9B%91%E6%8E%A7.png)
+**基于标签添加报警**  

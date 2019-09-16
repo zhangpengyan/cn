@@ -10,3 +10,5 @@
 
 专有安全产品部署示意图如下所示：
 
+![图 3 专有云安全架构](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/Proprietary-Cloud-Security-Architectur.jpg)
+

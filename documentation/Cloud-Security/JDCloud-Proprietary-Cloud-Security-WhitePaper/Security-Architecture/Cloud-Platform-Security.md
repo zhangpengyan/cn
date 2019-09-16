@@ -106,6 +106,8 @@
 
 云产品SDL安全开发流程如下图所示：
 
+![图 5 云产品SDL](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/Security-Development-Lifecycle.jpg)
+
 如上图所示，整个云产品安全生命周期分为七个阶段：培训阶段、分析阶段、设计阶段、开发阶段、验证阶段、发布阶段、事件响应阶段。
 
 - 培训阶段 : 开发团队的所有成员都接受相应的安全培训，了解相关的安全知识，培训对象包括开发人员、测试人员、项目经理、产品经理等。

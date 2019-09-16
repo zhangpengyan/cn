@@ -11,3 +11,5 @@
 其次，JDStack专有云平台可提供丰富的产品类型，供用户根据业务场景自由选择。可以帮助不同规模、不同使用场景的用户轻松搭建专有云平台，并根据典型客户的需求场景，提供了不同产品。如，针对政府客户及大型企业客户提供包含所有云产品的全栈专有云平台；面向有数据计算与分析场景的客户，提供包含离线计算、实时计算、数字大屏等产品的大数据专有云平台；面向中小型企业的轻量级开发场景， 提供容器平台、DevOps等产品及面向安全防护、流量接入、网络互联等诸多应用场景。
 
 JDStack专有云平台架构如下图所示：
+
+![图 1 专有云平台架构](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/JDStack-Platform-Architectur.jpg)

@@ -6,9 +6,11 @@
 
 专有云安全架构如下图所示：
 
+![图 3 专有云安全架构](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/Proprietary-Cloud-Security-Architectur.jpg)
+
 专有云的安全产品为云平台及用户提供从网络--系统--应用--数据--管理综合防护及安全运维运营管理能力。
 
 专有安全产品部署示意图如下所示：
 
-![图 3 专有云安全架构](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/Proprietary-Cloud-Security-Architectur.jpg)
+![图 3 专有云安全产品部署](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/Security-Product-Deployment.jpg)
 

@@ -3,22 +3,22 @@
 
 ## 默认报警模板  
 1.	进入京东云控制台-云监控菜单-报警管理-报警模板，点击“默认报警模板”标签，即可进入默认报警模板列表面。  
-![系统模板](../../../../image/Cloud-Monitor/9-mb-xt.png)  
+![系统模板](../../../../../image/Cloud-Monitor/9-mb-xt.png)  
 
 2.	点击列表中的“查看”，可以查看默认报警模板的详情信息。  
-![模板详情](../../../../image/Cloud-Monitor/9-mb-xq.png)
+![模板详情](../../../../../image/Cloud-Monitor/9-mb-xq.png)
 
 ## 自定义报警模板  
 1.	进入京东云控制台-云监控菜单-报警管理-报警模板，点击“自定义报警模板”标签，即可进入自定义报警模板列表页面。  
-![自定义模板](../../../../image/Cloud-Monitor/9-mb-zdy.png)  
+![自定义模板](../../../../../image/Cloud-Monitor/9-mb-zdy.png)  
 2.	点击“添加报警模板”，填写报警模板名称、选择资源类型、填写模板描述信息及该模板的触发条件，点击“完成创建”，即可保存新模板的创建。  
-![添加报警模板](../../../../image/Cloud-Monitor/9-mb-zdy-tj.png)  
+![添加报警模板](../../../../../image/Cloud-Monitor/9-mb-zdy-tj.png)  
 
 3. 点击“查看”，即可查看自定义报警模板详情。  
-![模板详情](../../../../image/Cloud-Monitor/9-mb-zdy-xq.png)
+![模板详情](../../../../../image/Cloud-Monitor/9-mb-zdy-xq.png)
 
 4. 点击“删除”，确认删除当前选中的自定义报警规则模板，即可删除。  
-![删除模板](../../../../image/Cloud-Monitor/9-mb-zdy-sc.png)
+![删除模板](../../../../../image/Cloud-Monitor/9-mb-zdy-sc.png)
 注： 已关联报警规则的报警模板不允许删除。
 
 

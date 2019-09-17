@@ -23,11 +23,11 @@ py-mysql2pgsql是一个开源的数据迁移工具 ，支持将MySQL中的表迁
    可能发生的错误处理：
 
    - Error: pg_config executable not found.
-     - ```sudo yum install postgresql-devel```
-     - ```whereis pg_config```
+     - sudo yum install postgresql-devel
+     - whereis pg_config
      - 加入PATH环境变量
    - EnvironmentError: mysql_config not found.
-     - ```yum install python-devel mysql-devel```
+     - yum install python-devel mysql-devel
 
 3. 官方依赖说明
 
@@ -43,7 +43,7 @@ py-mysql2pgsql是一个开源的数据迁移工具 ，支持将MySQL中的表迁
 
 2. 首次使用：
 
-   执行```py-mysql2pgsql```命令，获取配置文件模板。
+   执行py-mysql2pgsql命令，获取配置文件模板。
 
 3. 编辑配置文件
 
@@ -104,15 +104,15 @@ py-mysql2pgsql是一个开源的数据迁移工具 ，支持将MySQL中的表迁
 
    - only_tables、exclude_tables
 
-     只导入指定表、除了指定表都导入，唯一需要注意的是，table名前的"-"不可省略，会造成意料之外的导入。
+     只导入指定表、除了指定表都导入，唯一需要注意的是，table名前的"-"不可省略，否则会造成意料之外的导入。
 
    - supress_data
 
-     只导入表，不到如数据
+     只导入表，不导入数据。
 
    - supress_ddl
 
-     只导入数据，前提需要自己创建好表结构
+     只导入数据，前提是需要自己创建好表结构。
 
 4. 执行指令
 

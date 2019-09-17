@@ -26,7 +26,7 @@ jrn:<service_name>:<region>:<accountId>:<resourceType>/<resourceId><subresouceTy
 
 - ` <resourceType>/<resourceId>/<subresouceType>/<subresouceId>` ， Resource Type为产品线Open API中的一级资源，Resource ID为产品线Open API中的一级资源ID，Subresource Type为产品线Open API中的二级资源，Subresouce ID为产品线Open API中二级资源ID，如果后续产品线需要支持三级，四级资源时，则用 / 来进行分隔即可。可用 * 来表示全部资源。
 
-JRN示例：
+**JRN示例：**
 
 | **描述**                                             | **JRN示例**                                                  |
 | :--------------------------------------------------- | :----------------------------------------------------------- |
@@ -43,7 +43,7 @@ JRN示例：
 | :---------: | :---------------------------------------------------------- |
 | 云硬盘      | jrn:disk:regionId:accountId:snapshots/{snapshotId}<br>jrn:disk:regionId:accountId:disks/{diskId}|
 | 原生容器      | jrn:nativecontainer:regionId:accountId:secrets/{name}<br>jrn:nativecontainer:regionId:accountId:containers/{containerId}|
-| POD        | jrn:pod:regionId:accountId:pods/{podId}<br>jrn:pod:regionId:accountId:pods/{podId}/containers/{containerName}<br/>jrn:pod:regionId:accountId:secrets/{name} |
+| POD        | jrn:pod:regionId:accountId:pods/{podId}<br>jrn:pod:regionId:accountId:pods/{podId}/containers/{containerName}<br>jrn:pod:regionId:accountId:secrets/{name} |
 |Kubernetes集群  |jrn:kubernetes:regionId:accountId:clusters/{clusterId}<br>jrn:kubernetes:regionId:accountId:clusters/{clusterId}/nodeGroups/{nodeGroupId}|
 |容器镜像仓库       |jrn:containerregistry:regionId:accountId:registries/{registryName}<br>jrn:containerregistry:regionId:accountId:registries/{registryName}/repositories/{repositoryName}|
 |函数服务      |jrn:function:regionId:accountId:functions/{functionName}|

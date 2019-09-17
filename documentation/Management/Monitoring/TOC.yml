@@ -61,9 +61,9 @@ items:
           href: Operation-Guide/resource-monitoring/view-resource-rules.md     
         - name: 添加报警规则
           href: Operation-Guide/resource-monitoring/set-alarm-rules-details.md
-		    - name: 管理报警规则
+        - name: 管理报警规则
           href: Operation-Guide/resource-monitoring/resource-rules.md  
-		    - name: 报警模板
+        - name: 报警模板
           href: Operation-Guide/resource-monitoring/alarm-template.md
     - name: 自定义监控 
       items:

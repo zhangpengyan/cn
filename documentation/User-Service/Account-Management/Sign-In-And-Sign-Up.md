@@ -47,4 +47,4 @@
 
 ![](../../../image/User/Account-Mgmt/log4.png)
 
-京东登录规则与京东商城相同，如果在京东登录过程中遇到问题，请参考![《京东云新账号简介》](https://docs.jdcloud.com/cn/account-management/what-is-jdcloud-account)或联系客服（400-615-1212）进行账号升级。升级后即可直接使用京东云登录。
+京东登录规则与京东商城相同，如果在京东登录过程中遇到问题，请参考[《京东云新账号简介》](https://docs.jdcloud.com/cn/account-management/what-is-jdcloud-account)或联系客服（400-615-1212）进行账号升级。升级后即可直接使用京东云登录。

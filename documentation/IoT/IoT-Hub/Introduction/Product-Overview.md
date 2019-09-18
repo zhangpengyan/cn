@@ -20,4 +20,5 @@
 
 
 ## 计费
-	物联网中心（IoT Hub）支持按用量计费类型。计费项包括设备发送接收的消息数量。详细说明请参见“[计费概述](../Pricing/Billing-Overview.md)”。
+
+  物联网中心（IoT Hub）支持按用量计费类型。计费项包括设备发送接收的消息数量。详细说明请参见“[计费概述](../Pricing/Billing-Overview.md)”。

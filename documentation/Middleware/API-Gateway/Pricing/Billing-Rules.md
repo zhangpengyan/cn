@@ -6,10 +6,13 @@
     
 HTTP类型|源|目的|流量类型
 :---|:---|:---|:---
-x-jdcloud-algorithm | String | 是 | 用于创建请求签名的哈希算法，目前只支持 `JDCLOUD2-HMAC-SHA256`
-x-jdcloud-date | String | 是 | 签名请求的日期和时间，遵循ISO8601标准，使用UTC时间，格式为YYYYMMDDTHHmmssZ。日期必须与`authorization`请求头中使用的日期相匹配。例如： `20180707T150456Z`
-x-jdcloud-nonce | String | 是 | 随机生成的字符串，需要保证一段时间内的唯一性
-x-jdcloud-security-token | String | 否 | 如果用户开启了mfa操作保护，该API接口又是需要保护的接口，调用时需要传此参数
+HTTP请求 | 客户端、浏览器、SDK | API网关 | 流入流量
+HTTP请求 | API网关 | 后端服务 | 流出流量
+HTTP请求 | 后端服务 | API网关 | 流入流量
+HTTP请求 | API网关 | 客户端、浏览器、SDK | 流出流量
+
+
+### 流量流入及流出关系 ###
 
 
 

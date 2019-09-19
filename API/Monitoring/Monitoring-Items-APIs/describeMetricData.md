@@ -18,8 +18,8 @@ https://monitor.jdcloud-api.com/v2/regions/{regionId}/metrics/{metric}/metricDat
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**aggrType**|String|False| |聚合方式，可选值参考:sum、avg、min、max|
-|**downSampleType**|String|False| |采样方式，可选值参考：sum、avg、last、min、max|
+|**aggrType**|String|False| |聚合方式，用于不同时间轴上的聚合。如balance产品同一个resourceId下存在port=80和port=8080等多种维度。可选值参考:sum、avg、min、max|
+|**downSampleType**|String|False| |采样方式，用于在时间轴维度上将聚合周期内的数据聚合为一个点。可选值参考：sum(聚合周期内的数据求和)、avg(求平均)、last(最新值)、min(最小值)、max(最大值)|
 |**startTime**|String|False| |查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）|
 |**endTime**|String|False| |查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）|
 |**timeInterval**|String|False| |时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h|

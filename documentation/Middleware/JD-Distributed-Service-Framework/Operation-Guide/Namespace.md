@@ -16,7 +16,7 @@
 3、	设置服务信息，单击立即购买按钮，完成创建。创建完成后，将同步为该命名空间生成注册中心，管理该命名空间下的所有服务的注册发现。
 
 
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/np-create-1.png)
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/np-create-1.png)
 
 ### 删除
 

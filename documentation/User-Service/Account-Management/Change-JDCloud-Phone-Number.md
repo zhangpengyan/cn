@@ -8,27 +8,34 @@
 ## 首次绑定手机、邮箱
 
 注册京东云账号时，需要填写一个有效的手机号，注册后账号即与该手机绑定。
-注册成功后，京东云会引导您绑定一个邮箱，如果当时未进行操作，后续可以在 “账户管理-安全设置” 页面绑定邮箱，如图一。填写邮箱后，京东云会发送验证邮件，验证完成后账号即与该邮箱绑定，未验证时该邮箱处于 “未校验” 状态，不能用于身份验证和接收消息，如图二-图三。
+
+注册成功后，京东云会引导您填写一个邮箱，如果当时未进行操作，后续可以在 “账户管理-安全设置” 页面绑定邮箱，如图一。填写邮箱后，京东云会发送验证邮件，验证完成后账号即与该邮箱绑定，未验证时该邮箱处于 “未校验” 状态，不能用于身份验证和接收消息，如图二-图三。
 
 图一：在安全设置页面添加邮箱
 
-![](../../../image/User/Account%20Management/Change%20your%20phone%20number/email1.png)
+![](../../../image/User/Account-Mgmt/email1.png)
 
 图二：未校验的邮箱不能用于身份验证和接收消息
 
-![](../../../image/User/Account%20Management/Change%20your%20phone%20number/email2.png)
+![](../../../image/User/Account-Mgmt/email2.png)
 
 图三：对邮箱进行校验，或更改一个邮箱
 
-![](../../../image/User/Account%20Management/Change%20your%20phone%20number/email3.png)
+![](../../../image/User/Account-Mgmt/email3.png)
+
+## 查看绑定手机、邮箱
+
+在 “账户管理-安全设置” 页面可以查看账号绑定的手机和邮箱，以及该账号是否能通过手机、邮箱进行登录：
+
+图标 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/可用于验证.png) 代表该手机或该邮箱可用于身份验证（未验证的邮箱不能用于身份验证）</br>
+图标 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/可用于登录.png) 代表该手机或该邮箱可用于账号登录
+
 
 ## 更改绑定手机、邮箱
 
-如果账号管理人员手机换号或发生人员变动，需要及时更新账号的绑定手机，方式如下：
+如果账号管理人员手机换号，或发生人员变动，需要及时更新账号的绑定手机或邮箱。方式如下：
 
-第一步：在账户管理中心，选择安全设置，查看当前账号的绑定手机</br>
-图标 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/可用于验证.png) 代表该手机或该邮箱可用于身份验证（未验证的邮箱不能用于身份验证）</br>
-图标 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/可用于登录.png) 代表该手机或该邮箱可用于账号登录
+第一步：在账户管理中心，选择安全设置，查看当前账号的绑定手机
 
 ![](../../../image/User/Account%20Management/Change%20your%20phone%20number/新安全设置.png)
 

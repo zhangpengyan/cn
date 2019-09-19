@@ -10,7 +10,7 @@ CloudBerry主要功能包括：支持AK/SK登录，管理Bucket、管理Object�
 
 ## 使用CloudBerry接入OSS
 
-CloudBerry下载地址：http://www.cloudberrylab.com/download-thanks.aspx?prod=cbes3free
+下载[CloudBerry安装包](https://downloads.s3.cn-north-1.jdcloud-oss.com/CloudBerryExplorerSetup_v5.9.1.192_netv4.0_c421412.exe)
 
 使用 CloudBerry 之前，您需要事先在京东云中注册账号，并开通京东云对象存储服务（OSS）。
 

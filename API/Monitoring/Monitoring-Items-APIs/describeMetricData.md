@@ -26,7 +26,7 @@ https://monitor.jdcloud-api.com/v2/regions/{regionId}/metrics/{metric}/metricDat
 |**tags**|TagFilter[]|False| |监控指标数据的维度信息,根据tags来筛选指标数据不同的维度|
 |**groupBy**|Boolean|False| |是否对查询的tags分组|
 |**rate**|Boolean|False| |是否求速率|
-|**serviceCode**|String|False| |资源的类型，取值vm, lb, ip, database 等,<a href="https://docs.jdcloud.com/cn/monitoring/api/describeservices?content=API&SOP=JDCloud">describeServices</a>：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值|
+|**serviceCode**|String|False| |资源的类型，取值vm, lb, ip, database 等,<a href="https://docs.jdcloud.com/cn/monitoring/api/describeservices?content=API&SOP=JDCloud">describeServices</a>：查询己接入云监控的产品线列表|
 |**dimension**|String|False| |资源的维度|
 |**resourceId**|String|True| |资源的uuid|
 

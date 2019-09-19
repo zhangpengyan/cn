@@ -1,0 +1,23 @@
+  name: 标签管理
+  href: 
+  items:
+  - name: 接口概览
+    href: overview.md
+  - name: 更新历史
+    href: ChangeLog.md
+  - name: 接口信息
+    items:
+      - name: 标签编辑
+        items:
+          - name: tagResources
+            href: Tag-Service/tagResources.md
+          - name: untagResources
+            href: Tag-Service/untagResources.md  
+      - name: 标签查询
+        items:
+          - name: describeTags
+            href: Tag-Service/describeTags.md
+          - name: describeResources
+            href: Tag-Service/describeResources.md  
+          - name: queryResource
+            href: Tag-Service/queryResource.md  

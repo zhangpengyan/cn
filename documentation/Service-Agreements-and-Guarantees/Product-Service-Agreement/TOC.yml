@@ -144,6 +144,10 @@ items:
     href: Rich-Media-SMS-Terms-Of-Service.md
   - name: 富媒体短信服务等级协议（SLA）
     href: Rich-Media-SMS-Terms-Of-Service-SLA.md
+  - name: 文本短信服务条款
+    href: Text-Message-Term-Terms-Of-Service.md
+  - name: 文本短信服务等级协议（SLA）
+    href: Text-Message-Level-Agreement-SLA.md
   - name: 日志服务服务条款
     href: Log-Service-Terms-Of-Service.md
   - name: 数据加密服务服务条款

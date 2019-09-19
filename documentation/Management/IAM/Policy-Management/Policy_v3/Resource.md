@@ -26,7 +26,7 @@ jrn:<service_name>:<region>:<accountId>:<resourceType>/<resourceId><subresouceTy
 
 - ` <resourceType>/<resourceId>/<subresouceType>/<subresouceId>` ， Resource Type为产品线Open API中的一级资源，Resource ID为产品线Open API中的一级资源ID，Subresource Type为产品线Open API中的二级资源，Subresouce ID为产品线Open API中二级资源ID，如果后续产品线需要支持三级，四级资源时，则用 / 来进行分隔即可。可用 * 来表示全部资源。
 
-JRN示例：
+**JRN示例：**
 
 | **描述**                                             | **JRN示例**                                                  |
 | :--------------------------------------------------- | :----------------------------------------------------------- |
@@ -41,8 +41,12 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
-| POD        | jrn:pod:regionId:accountId:pods/{podId}<br>jrn:pod:regionId:accountId:pods/{podId}/containers/{containerName}<br/>jrn:pod:regionId:accountId:secrets/{name} |
+| 云硬盘      | jrn:disk:regionId:accountId:snapshots/{snapshotId}<br>jrn:disk:regionId:accountId:disks/{diskId}|
+| 原生容器      | jrn:nativecontainer:regionId:accountId:secrets/{name}<br>jrn:nativecontainer:regionId:accountId:containers/{containerId}|
+| POD        | jrn:pod:regionId:accountId:pods/{podId}<br>jrn:pod:regionId:accountId:pods/{podId}/containers/{containerName}<br>jrn:pod:regionId:accountId:secrets/{name} |
+|Kubernetes集群  |jrn:kubernetes:regionId:accountId:clusters/{clusterId}<br>jrn:kubernetes:regionId:accountId:clusters/{clusterId}/nodeGroups/{nodeGroupId}|
 |容器镜像仓库       |jrn:containerregistry:regionId:accountId:registries/{registryName}<br>jrn:containerregistry:regionId:accountId:registries/{registryName}/repositories/{repositoryName}|
+|函数服务      |jrn:function:regionId:accountId:functions/{functionName}|
 
 ### 网络
 
@@ -55,6 +59,10 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
+| 云数据库RDS |jrn:rds:regionId:accountId:instances/{instanceId}<br>jrn:rds:regionId:accountId:instances/{instanceId}/accounts/{accountName}<br>jrn:rds:regionId:accountId:instances/{instanceId}/databases/{dbName}<br>jrn:rds:regionId:accountId:instances/{instanceId}/backups/{backupId}<br>jrn:rds:regionId:accountId:backups/{backupId}<br>jrn:rds:regionId:accountId:instances/{instanceId}/importFiles/{fileName}<br>jrn:rds:regionId:accountId:instances/{instanceId}/binlogs/{binlogBackupId}<br>jrn:rds:regionId:accountId:parameterGroups/{parameterGroupId} |
+| 云数据库MongoDB | jrn:mongodb:regionId:accountId:instances/{instanceId}<br>jrn:mongodb:regionId:accountId:backups/{backupId}<br>jrn:mongodb:regionId:accountId:backupSynchronicities/{serviceId}|
+| 分布式关系型数据库（DRDS） | jrn:drds:regionId:accountId:instances/{instanceId}<br>jrn:drds:regionId:accountId:instances/{instanceId}/task/{taskId}<br>jrn:drds:regionId:accountId:instances/{instanceId}/databases/{databaseName}<br>jrn:drds:regionId:accountId:instances/{instanceId}/accounts/{accountName}|
+| 云缓存Redis | jrn:redis:regionId:accountId:cacheInstance/{cacheInstanceId}|
 | 云缓存Memcached | jrn:memcached:regionId:accountId:instances/{instanceId} |
 
 ### 存储
@@ -62,6 +70,7 @@ JRN示例：
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
 | 对象存储     | jrn:oss:regionId:accountId:{BucketName} <br> jrn:oss:regionId:accountId:{BucketName}/{ObjectName}|
+| 云文件服务    | jrn:zfs:regionId:accountId:fileSystems/{fileSystemId} <br> jrn:zfs:regionId:accountId:fileSystems/{fileSystemId}/mountTargets/{mountTargetId}|
 
 ### 边缘与加速
 
@@ -73,21 +82,98 @@ JRN示例：
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
-| DDoS         |   jrn:baseanti:regionId:accountId:ipResources/{ip}   |
+| DDoS基础防护      |   jrn:baseanti:regionId:accountId:ipResources/{ip}   |
+|DDoS防护包      |   	jrn:antipro:regionId:accuntId:instances/{instanceId}  |
+|Web应用防火墙     |  jrn:waf:regionId:accountId:wafInstanceIds/{wafInstanceId}   |
+|IP高防    | 	jrn:ipanti::accooutId:instances/{instanceId} <br>jrn:ipanti::accooutId:instances/{instanceId}/webRules/{webRuleId}<br>jrn:ipanti::AccooutId:instances/{instanceId}/ipSets/{ipSetId}<br>jrn:ipanti::AccooutId:instances/{instanceId}/forwardRules/{forwardRuleId}|
 | 应用安全网关 | jrn:sgw:regionId:accountId:instances/{instanceId} |
+|主机安全    |  *   |
+|态势感知   |   *  |
 | SSL数字证书 |jrn:ssl::accountId:sslCert/{certId}<br>jrn:ssl::accountId:sslRecord/{recordId}|
+|密钥管理服务   |  	jrn:kms::accountId:key/{keyId}<br>jrn:kms::accountId:key/{keyId}/version/{version}<br>jrn:kms::accountId:secret/{secretId}<br>jrn:kms::accountId:secret/{secretId}/version/{version}|
+|网站威胁扫描    |  *   |
 
 ### 管理
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
-| 目录服务        |   jrn:directoryservice:regionId:accountId:directory/{directoryId}   |
+| 云监控 |* |
+| 资源编排|jrn:jdro:regionId:accountId:stacks/{stackId}|
+| 目录服务        |jrn:directoryservice:regionId:accountId:directory/{directoryId}   |
+| 日志服务|jrn:logs:regionId:accountId:logsets/{logsetUID}<br>jrn:logs:regionId:accountId:logsets/{logsetUID}/logtopics/{logtopicUID}<br>jrn:logs:regionId:accountId:logsets/{logsetUID}/logtopics/{logtopicUID}//shippers/{shipperUID}<br>jrn:logs:regionId:accountId:logsets/{logsetUID}/logtopics/{logtopicUID}/collectinfos/{collectInfoUID}|
+| 操作审计|* |
+| 访问控制|jrn:iam::accountId:group/{groupName} <br>jrn:iam::accountId:policy/{policyName}<br>jrn:iam::accountId:role/{roleName}<br>jrn:iam::accountId:subUser/{subUser}|
 | 安全令牌服务 | jrn:iam::accountId:role/{roleName}|
+| 续费管理|* |
+| 标签管理|* |
+
+### 域名与备案
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 云解析DNS|jrn:domainservice::accountId:domain/{domainId}<br>jrn:domainservice::AccountId:domain/{domainId}/monitor/{monitorId}<br>jrn:domainservice:accountId:domain/{domainId}/ResourceRecord/{resourceRecordId}|
+| HTTPDNS|* |
+
+### 视频服务
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 视频点播|* |
+| 视频直播|* |
+
+### 大数据与分析
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 数据工厂2.0|* |
 
 ### 互联网中间件
 
 | 产品线名称 |                           JRN示例                            |
 | :---------: | :---------------------------------------------------------- |
 | 消息队列JCQ      | jrn:jcq:regionId:accountId:/topics/{topicName<br>jrn:jcq:regionId:accountId:/topics/{topicName}/subscriptions/{consumerGroupId} |
+| API网关 | jrn:apigateway:regionId:accountId:accessAuths/{accessAuthId} <br>jrn:apigateway:regionId:accountId:accessKeys/{accessKeyId}<br>jrn:apigateway:regionId:accountId:apiGroups/{apiGroupId}<br>jrn:apigateway:regionId:accountId:apiGroups/{apiGroupId}/deployments/{deploymentId}<br>jrn:apigateway:regionId:accountId:apiGroups/{apiGroupId}/revision/{revisionId}<br>jrn:apigateway:regionId:accountId:rateLimitPolicies/{policyId}<br>jrn:apigateway:regionId:accountId:subscriptionKeys/{subscriptionKeyId}|
 | 云搜索Elasticsearch  |  ``jrn:es:regionId:accountId:instances/{instanceId}`` |
-| 分布式服务框架 | jrn:jdsf:regionId:accountId:registries/{registryId}<br>jrn:jdsf:regionId:accountId:registries/{registryId}/services/{serviceName}<br>jrn:jdsf:regionId:accountId:registries/{registryId}/services/{serviceName}/instances/{instanceId}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}/services/{serviceName}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}/tracings/{traceId}<br>jrn:jdsf:regionId:accountId:appconfig/{appConfigId}<br>jrn:jdsf:regionId:accountId:appconfig/{appConfigId}/versions/{appConfigVersionId}/publishes/{appConfigPublishVersionId}<br>jrn:jdsf:regionId:accountId:deployapps/{appId} |
+| 队列服务 |jrn:jqs:regionId:accountId:queue/{queueId}  |
+| 微服务平台 | jrn:jdsf:regionId:accountId:registries/{registryId}<br>jrn:jdsf:regionId:accountId:registries/{registryId}/services/{serviceName}<br>jrn:jdsf:regionId:accountId:registries/{registryId}/services/{serviceName}/instances/{instanceId}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}/services/{serviceName}<br>jrn:jdsf:regionId:accountId:traces/{instanceId}/tracings/{traceId}<br>jrn:jdsf:regionId:accountId:appconfig/{appConfigId}<br>jrn:jdsf:regionId:accountId:appconfig/{appConfigId}/versions/{appConfigVersionId}/publishes/{appConfigPublishVersionId}<br>jrn:jdsf:regionId:accountId:deployapps/{appId} |
+
+### 超融合数据中心
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 云物理服务器|jrn:cps:regionId:accountId:instances/{instanceId} |
+| 云托管服务|* |
+
+### 费用中心
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 订单管理|* |
+| 发票管理|* |
+| 消费管理|* |
+| 消费预测|* |
+| 结算管理|* |
+| 资金管理|* |
+
+### 渠道管理
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 渠道管理|* |
+
+
+### 开发者工具
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 代码托管|* |
+| 云编译|	jrn:compile:regionId:accountId:jobs/{id}<br>jrn:compile:regionId:accountId:jobs/{id}/builds/{id}<br>jrn:compile:regionId:accountId:repos/{name}<br>jrn:compile:regionId:accountId:repos/{name}/hooks/{id}<br>jrn:compile:regionId:accountId:codes/{type}<br>jrn:compile:regionId:accountId:codes/{type}/accessToken/{accessToken}<br>jrn:compile:regionId:accountId:codes/{type}/branches/{branchName}|
+| 云部署|jrn:deploy:regionId:accoutId:app/{appId} <br>jrn:deploy:regionId:accoutId:app/{appId}/group/{groupId}<br>jrn:deploy:regionId:accoutId:app/{appId}/group/{groupId}/deploy/{deployId}<br>jrn:deploy:regionId:accoutId:app/{appId}/milestone/{milestoneId} |
+| 流水线|jrn:pipeline:regionId:accoutId:pipeline/{uuid}<br>jrn:pipeline:regionId:accoutId:pipeline/{uuid}/instance/{instanceUuid}<br>jrn:pipeline:regionId:accoutId:pipeline/{uuid}/instance/{instanceUuid}/actions/{actionUuid}|
+
+### 物联网
+
+| 产品线名称 |                           JRN示例                            |
+| :---------: | :---------------------------------------------------------- |
+| 物联网引擎|* |
+| 物联网协议适配|*	|

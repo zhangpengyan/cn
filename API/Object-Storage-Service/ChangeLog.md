@@ -8,8 +8,9 @@ oss API版本：0.2.2
 | 2018-04-12  | 0.2.1 | API帮助修改为中文 | API帮助修改为中文
 | 2018-04-20  | 0.2.2 | 修改部分描述 | fix some describe message issue, and change a filed in ListBucketResult form CreateDate to createDate
 
-ossopenapi API版本：0.4.5
+ossopenapi API版本：0.8.0
 
 |    发布时间      |  版本号    | 更新       | 说明
 | ---------------| -----------|-----------|---------|
 | 2018-12-25  | 0.4.5 | 添加镜像回源api | 添加镜像回源api
+| 2019-07-30  | 0.8.0 | 将Single Bucket用量查询接口对外开放 | 将Single Bucket用量查询接口对外开放

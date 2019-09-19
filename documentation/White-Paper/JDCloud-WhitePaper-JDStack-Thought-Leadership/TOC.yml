@@ -1,0 +1,18 @@
+name: 京东云专有云思想领导力白皮书
+items:
+  - name: 摘要
+    href: Overview.md
+  - name: 背景及未来趋势
+    href: Background-and-future-trends.md
+  - name: 专有云平台是数字化转型的有效手段
+    href: digital-transformation.md
+  - name: 传统专有云平台面临严峻挑战
+    href: Challenges.md
+  - name: 政府和企业需要新一代专有云平台
+    href: platform.md
+  - name: 战略建议
+    href: Strategic-recommendations.md
+  - name: 参考
+    href: Reference.md
+     
+    

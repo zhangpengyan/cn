@@ -31,3 +31,15 @@
         items:
           - name: jdxReportOrder
             href: JDX-Order-APIs/jdxReportOrder.md
+      - name: api下单与支付            
+        items:
+          - name: jdxCreateOrder
+            href: JDX-Order-APIs/jdxCreateOrder.md
+      - name: 输出商品            
+        items:
+          - name: jdxQueryProduct
+            href: JDX-Product-APIs/jdxQueryProduct.md
+      - name: 查询交付信息            
+        items:
+          - name: jdxQueryDeliveryInfo
+            href: JDX-Delivery-APIs/jdxQueryDeliveryInfo.md            

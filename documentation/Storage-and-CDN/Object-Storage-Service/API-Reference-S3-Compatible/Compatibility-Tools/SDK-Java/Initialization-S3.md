@@ -10,7 +10,7 @@
 
 要接入京东云OSS，需要拥有一对有效的Access Key(包括AccessKeyId和AccessKeySecretID)进行签名认证。可以通过如下步骤获得：
 
-[注册京东云账号](https://uc.jdcloud.com/reg?returnUrl=http%3A%2F%2Fwww.jdcloud.com%2Findex)
+[注册京东云账号](https://user.jdcloud.com/register)
 
 [申请AccessKey](https://uc.jdcloud.com/accesskey/index)
 

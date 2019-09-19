@@ -9,7 +9,7 @@
 
 
 ## 前提条件
-- 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://accounts.jdcloud.com/p/regPage?source=jdcloud)。
+- 已注册京东云账号，并完成实名认证。如果还没有账号请 [注册](https://user.jdcloud.com/register)。
 
 
 ## 操作步骤

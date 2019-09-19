@@ -12,7 +12,7 @@ https://antipro.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:des
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |地域编码|
+|**regionId**|String|True| |地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海|
 |**instanceId**|String|True| |防护包实例 Id|
 
 ## 请求参数
@@ -46,7 +46,7 @@ https://antipro.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:des
 ### ProtectionRule
 |名称|类型|描述|
 |---|---|---|
-|**type**|Integer|防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则|
+|**type**|Integer|防护规则类型. <br>- 0: 默认防护包规则<br>- 1: IP 自定义规则|
 |**cleanThresholdBps**|Long|清洗触发值 bps|
 |**cleanThresholdPps**|Long|清洗触发值 pps|
 |**spoofIpEnable**|Integer|虚假源开启|
@@ -57,6 +57,8 @@ https://antipro.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:des
 |**datagramRangeMin**|Long|报文最小长度|
 |**datagramRangeMax**|Long|报文最大长度|
 |**geoBlackList**|GeoBlack[]|geo 拦截地域列表|
+|**ipBlackList**|String[]|IP 黑名单列表|
+|**ipWhiteList**|String[]|IP 白名单列表|
 ### GeoBlack
 |名称|类型|描述|
 |---|---|---|

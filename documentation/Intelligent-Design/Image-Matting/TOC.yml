@@ -1,0 +1,31 @@
+name: 智能抠图
+href:
+items:
+- name: 产品简介
+  items:
+    - name: 产品概述
+      href: Introduction/product-overview.md
+- name: 产品定价
+  items:
+    - name: 计费概述
+      href: Pricing/Billing-Overview.md
+- name: 操作指南
+  items:
+    - name: 如何开通
+      href: Operation-Guide/start.md
+- name: 开发指南
+  items:
+    - name: 获取AK/SK
+      href: SDK-Rerference/Authentication-Keys.md
+    - name: 签名算法
+      href: SDK-Rerference/Authorization-Rules.md
+    - name: 调用方法
+      href: SDK-Rerference/Call-Methods.md
+    - name: SDK使用方法
+      href: SDK-Rerference/Environment-Preparation.md
+- name: 接口文档
+  items:
+    - name: 接口概述
+      href: Api-Document/Image-Cutout.md
+    - name: 错误码
+      href: SDK-Rerference/Error-Codes.md

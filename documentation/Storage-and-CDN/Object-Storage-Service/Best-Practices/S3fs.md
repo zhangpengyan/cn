@@ -22,10 +22,6 @@ sudo apt-get install automake autotools-dev fuse g++ git libcurl4-openssl-dev li
 
 **2.安装**
 
-支持通过以下两种方式安装：
-
-2.1编译安装：
-
 ```
 git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 cd s3fs-fuse
@@ -33,19 +29,6 @@ cd s3fs-fuse
 ./configure
 make
 sudo make install
-```
-
-2.2packages安装：
-
-CentOS：
-```
-sudo yum install epel-release
-sudo yum install s3fs-fuse
-```
-
-Ubuntu:
-```
-sudo apt-get install s3fs
 ```
 
 **3.创建密码文件**
@@ -90,7 +73,7 @@ df -h
 
 **Tips：**
 
-1.如果您使用的CentOS 6，请参考以下步骤安装依赖：
+1.如果您使用的CentOS 6，请参考以下步骤安装fuse依赖：
 
 ```
 yum install automake gcc-c++ git libcurl-devel libxml2-devel make openssl-devel
@@ -134,3 +117,5 @@ sudo s3fs bucketname /new -o passwd_file=~/.passwd-s3fs -o url="https://s3.cn-no
 - 对于已经通过`s3fs`命令挂载的目录，需要先`umount`，然后再次执行`s3fs`命令才能生效。
 
 5.如果您在使用S3fs挂载Bucket之前开启了静态网站托管，会导致挂载失败；如果您使用S3fs挂载Bucket之后开启了静态网站托管，会导致文件操作失效。
+
+6.如需使用Debug模式，请挂载时指定参数`-o dbglevel=dbg -f -o curldbg`

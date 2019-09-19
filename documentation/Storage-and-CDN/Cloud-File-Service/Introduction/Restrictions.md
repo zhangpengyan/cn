@@ -4,7 +4,7 @@
 
 云文件存储目前支持NFS v4.1和NFS v4.0协议，适用于linux云主机，兼容的京东云官方镜像版本包括：
 
-- CentOS 6.9 64位及以上版本，其中：CentOS 7.3及以上版本支持NFSv4.1协议，CentOS 6.9 至CentOS 7.2版本支持NFSv4.0协议。
+- CentOS 6.9 64位及以上版本，其中：CentOS 7.3及以上版本支持NFSv4.0和NFSv4.1协议，CentOS 6.9 至CentOS 7.2版本支持NFSv4.0协议。
 - Ubuntu 14.04 64位 和 Ubuntu 16.04 64位
 
 
@@ -13,22 +13,22 @@
 
 | **资源**                 | **限制**                 |
 | ------------------------ | ------------------------ |
-| 文件存储数               | 华南-广州 及 华北-北京 -  不超过5个 |
+| 文件存储数               |华北-北京 -  不超过5个 （可工单申请提升最大容量）|
 | 每个文件存储的挂载目标数 | 不超过1个                |
 | 每个文件存储的VPC数      | 不超过1个                |
-| 每个文件存储最大容量     | 公测期间不超过1T          |
-
+| 每个文件存储最大容量     | 不超过512GB（可工单申请提升最大容量）          |
+| 每个文件存储最大文件数     | 不超过100万个 （可工单申请提升最大文件数）          |
 
 
 ## 单个文件大小限制
 
-产品公测期间，支持单个文件大小最大为140G。产品正式发布后，支持最大8T的单个文件。
+支持单个文件大小最大为140GB。
 
 
 
 ## 对NFS协议的支持
 
-- 文件存储支持NFS v4.1和NFS v4.0版本协议，暂不支持NFS v2和NFS v3。
+- 文件存储支持NFS v4.1、NFS v4.0和NFS v3版本协议，暂不支持NFS v2。
 
 
 - NFSv4.1 和 NFSv4.0版本协议的以下功能暂不支持：
@@ -69,3 +69,5 @@
   - 使用 CREATE 操作时不支持的文件类型：块储存设备 (NF4BLK)、字符设备 (NF4CHR)、属性目录 (NF4ATTRDIR) 和命名属性 (NF4NAMEDATTR)。
 
   - 不支持的属性：FATTR4_ARCHIVE、FATTR4_FILES_AVAIL、FATTR4_FILES_FREE、FATTR4_FS_LOCATIONS、FATTR4_MIMETYPE、FATTR4_QUOTA_AVAIL_HARD、FATTR4_QUOTA_AVAIL_SOFT、FATTR4_QUOTA_USED、FATTR4_TIME_BACKUP 和 FATTR4_ACL，如果尝试设置这些属性，将导致向客户端发回 NFS4RR_ATTRNOTSUPP错误。
+  
+  

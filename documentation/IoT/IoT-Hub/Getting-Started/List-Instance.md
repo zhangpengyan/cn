@@ -1,6 +1,6 @@
 # 实例列表
 
-您可以通过 物联网中心服务 控制台或 API 查看 物联网中心实例 ，关于实例的计费说明请参见“[价格总览](../Pricing/Billing-Overview.md)”、“[计费规则](../Pricing/Billing-Rules.md)”。
+您可以通过 物联网中心服务 控制台或 API 查看 物联网中心实例 ，关于实例的计费说明请参见“[价格总览](../Pricing/Billing-Overview.md)”。
 
 本文介绍通过控制台如何查看 物联网中心服务 实例列表。
 
@@ -18,7 +18,6 @@
     ![实例列表](../../../../image/IoT/IoT-Hub/iothub-003.png)
 	
 
-## 相关参考
-- [计费规则](../Pricing/Billing-Rules.md)
+
 
 

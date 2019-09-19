@@ -32,17 +32,20 @@ https://live.jdcloud-api.com/v1/liveRestart:configs
 |**pageSize**|Integer|每页数量|
 |**totalCount**|Integer|查询总数|
 |**restartConfigs**|RestartConfig[]|域名集合|
+
 ### RestartConfig
 |名称|类型|描述|
 |---|---|---|
 |**publishDomains**|RestartPublishDomain[]|推流域名集合|
 |**playDomains**|RestartPlayDomain[]|播放域名集合|
+
 ### RestartPlayDomain
 |名称|类型|描述|
 |---|---|---|
 |**playDomain**|String|播放域名|
 |**restartStatus**|String|直播回看状态:<br>  on: 开启<br>  off: 关闭<br>|
 |**playType**|String|播放域名类型:<br>  normal: 普通播放域名(时移播放域名)<br>  restart: 回看播放域名|
+
 ### RestartPublishDomain
 |名称|类型|描述|
 |---|---|---|

@@ -8,7 +8,11 @@
 
 1）进入对应的日志集，在需要转储的日志主题后方的“管理”中点击“转储配置”，进入转储配置页面。
 
+![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogTransfer/logtransfer1.png)
+
 2）转储信息配置
+
+![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogTransfer/logtransfer2.png)
 
 点击“新建转储任务”，填写转储任务名称，不为空，且只允许中文，数字，大小写字母，英文下划线“_”及中划线“-”，不超过32字符。
 
@@ -31,7 +35,11 @@
 
 进入转储配置页面，选择需要停止的转储任务，点击后方的停止转储，即可停止转储日志数据。
 
+![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogTransfer/logtransfer3.png)
+
 点击日志服务左侧菜单的“日志转储专利”，选择需要转储的日志集，日志主题，以及转储任务，点击“停止转储”，即可停止转储日志数据。
+
+![](https://raw.githubusercontent.com/jdcloudcom/cn/zhangwenjie-only/image/LogService/LogTransfer/logtransfer4.png)
 
 ## 二、日志转储管理
 

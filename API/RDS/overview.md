@@ -12,6 +12,7 @@ v1
 ## API
 |接口名称|请求方式|功能描述|
 |---|---|---|
+|**alterTableWithOnlineDDL**|POST|通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放|
 |**clearBinlogs**|POST|清理本地的binlog并释放空间。 系统只会清理已经备份到存储的binlog，不会影响MySQL实例的备份恢复<br>- 仅支持MySQL|
 |**copyParameterGroup**|POST|拷贝参数组<br>- 仅支持MySQL|
 |**createAccount**|POST|创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。<br>为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。|
@@ -25,6 +26,7 @@ v1
 |**createInstanceFromBackup**|POST|根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。<br>例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致|
 |**createParameterGroup**|POST|创建一个参数组<br>- 仅支持MySQL|
 |**createROInstance**|POST|创建MySQL的只读实例<br>- 仅支持MySQL|
+|**createSuperAccount**|POST|创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。<br>为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。|
 |**deleteAccount**|DELETE|删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例|
 |**deleteAudit**|DELETE|关闭数据库审计。关闭数据库审计后，以前生成的审计结果文件并不会被立即删除。审计结果文件会过期后由系统自动删除，过期时间缺省为6个月<br>- 仅支持SQL Server|
 |**deleteBackup**|DELETE|删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。|
@@ -56,6 +58,7 @@ v1
 |**describeIntercept**|GET|查看当前实例已开启的安全模式。如果开启数据库的高安全模式，会返回配置信息<br>- 仅支持MySQL|
 |**describeInterceptResult**|GET|查看开启高安全模式后，当前实例的 SQL 拦截记录<br>- 仅支持MySQL|
 |**describeLatestRestoreTime**|GET|获取SQL Server实例按时间点恢复/创建时，可恢复到的最后的一个时间点<br>- 仅支持SQL Server|
+|**describeLogs**|GET|获取 PostgreSQL 的日志文件列表|
 |**describeParameterGroupAttachedInstances**|GET|查看参数组绑定的云数据库实例<br>- 仅支持MySQL|
 |**describeParameterGroupParameters**|GET|查看参数组的参数<br>- 仅支持MySQL|
 |**describeParameterGroups**|GET|获取当前账号下所有的参数组列表<br>- 仅支持MySQL|
@@ -64,6 +67,7 @@ v1
 |**describeQueryPerformance**|GET|根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。<br>- 仅支持SQL Server|
 |**describeSlowLogAttributes**|GET|查询MySQL实例的慢日志的详细信息。<br>- 仅支持MySQL|
 |**describeSlowLogs**|GET|查询MySQL实例的慢日志的概要信息。<br>- 仅支持MySQL|
+|**describeTde**|GET|查看当前实例是否开启TDE|
 |**describeWhiteList**|GET|查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。|
 |**disableAudit**|POST|仅支持MySQL实例关闭数据库审计|
 |**disableIntercept**|POST|关闭数据库的高安全模式<br>- 仅支持MySQL|
@@ -71,6 +75,7 @@ v1
 |**enableAudit**|POST|仅支持MySQL实例开启数据库审计|
 |**enableIntercept**|POST|开启数据库的高安全模式<br>- 仅支持MySQL|
 |**enableInternetAccess**|POST|开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例|
+|**enableTde**|POST|开启数据库的TDE功能|
 |**exchangeInstanceDns**|POST|交换两个实例的域名，包括内网域名和外网域名。如果一个实例有外网域名，一个没有，则不允许交换。<br>- 仅支持SQL Server|
 |**failoverInstance**|POST|对RDS实例进行主备切换。<br>注意：如果实例正在进行备份，那么主备切换将会终止备份操作。可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时进行主备切换，建议切换完成 后，手工进行一次实例的全备<br>对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。<br>- 仅支持SQL Server|
 |**getUploadKey**|POST|获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云<br>- 仅支持SQL Server|
@@ -79,7 +84,7 @@ v1
 |**modifyBackupPolicy**|POST|修改RDS实例备份策略，目前仅支持用户修改“自动备份开始时间窗口”这个参数，其他参数暂不开放修改|
 |**modifyConnectionMode**|POST|修改MySQL实例的连接模式：标准模式(standard) 和高安全模式(security).<br>- **标准模式**：响应时间短，但没有 SQL 审计和拦截的能力。<br>- **高安全模式**：具备一定的 SQL注入拦截能力（通过分析表达式、关键系统函数等来实现防御 SQL 注入攻击），并可开启 SQL 审计，但会增加一定的响应时间。<br>- 仅支持MySQL|
 |**modifyInstanceName**|POST|修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)|
-|**modifyInstanceSpec**|POST|实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配<br>- 仅支持MySQL|
+|**modifyInstanceSpec**|POST|实例扩容，支持升级实例的CPU，内存及磁盘。|
 |**modifyParameterGroup**|PUT|修改RDS实例的参数组<br>- 仅支持MySQL|
 |**modifyParameterGroupAttribute**|PUT|修改参数组名称，描述<br>- 仅支持MySQL|
 |**modifyParameterGroupParameters**|PUT|修改参数组的参数<br>- 仅支持MySQL|
@@ -90,6 +95,7 @@ v1
 |**restoreDatabaseFromBackup**|POST|从备份中恢复单个数据库，支持从其他实例（但必须是同一个账号下的实例）备份中恢复。例如可以从生产环境的数据库实例的备份恢复到测试环境的数据库中。<br>- 仅支持SQL Server|
 |**restoreDatabaseFromFile**|POST|从用户通过单库上云工具上传到云上的备份文件中恢复单个数据库<br>- 仅支持SQL Server|
 |**restoreDatabaseFromOSS**|POST|从上传到OSS的备份文件中恢复单个数据库<br>- 仅支持SQL Server|
-|**restoreInstance**|POST|使用实例的全量备份覆盖恢复当前实例<br>- 仅支持MySQL|
+|**restoreInstance**|POST|使用实例的全量备份覆盖恢复当前实例|
 |**revokePrivilege**|POST|取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限|
 |**setImportFileShared**|POST|设置或取消上传文件是否共享给同一账号下的其他实例。缺省情况下，文件仅在上传的实例上可见并可导入，其他实例不可见不可导入。如果需要该文件在其他实例上也可导入，可将此文件设置为共享<br>- 仅支持SQL Server|
+|**updateLogDownloadURLInternal**|POST|设置日志文件的下载链接过期时间，重新生成 PostgreSQL 的日志文件下载地址|

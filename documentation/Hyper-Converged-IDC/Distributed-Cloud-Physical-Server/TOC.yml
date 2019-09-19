@@ -47,6 +47,12 @@
     items:
       - name: 使用须知
         href: Operation-Guide/Terms-and-Conditions.md
+      - name: 实例
+        items:
+          - name: 重置密码
+            href: Operation-Guide/Instance/Reset-Password.md
+          - name: 自定义数据
+            href: Operation-Guide/Instance/User-Data.md
       - name: 网络
         items:
           - name: 私有网络
@@ -97,6 +103,12 @@
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Description-Adjust-Public-Network-Bandwidth.md
           - name: 操作步骤
             href: Operation-Guide/Adjust-Public-Network-Bandwidth/Steps-Adjust-Public-Network-Bandwidth.md
+      - name: SSH密钥
+        items:
+          - name: 概述
+            href: Operation-Guide/SSH-Key-Pair/Description-SSH-Key-Pair.md
+          - name: 操作步骤
+            href: Operation-Guide/SSH-Key-Pair/Step-SSH-Key-Pair.md
   - name: 最佳实践
     items:
     - name: NAT网关网络安全方案

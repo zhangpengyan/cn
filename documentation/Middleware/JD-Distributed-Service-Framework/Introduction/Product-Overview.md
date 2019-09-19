@@ -23,6 +23,12 @@
 	- [新建分析服务](../Operation-Guide/Analysis-Service/Create-Analysis-Service.md)
 	- [删除分析服务](../Operation-Guide/Analysis-Service/del-Analysis-Service.md)
 	- [修改服务](../Operation-Guide/Analysis-Service/Update-Analysis-Service.md)
+- 微服务网关
+	- [微服务网关介绍](../Operation-Guide/JDSFGW/overview.md)
+	- [使用API网关开放VPC内的接口](../Getting-Started/GW_VPC.md)
+	- [新建服务](../Operation-Guide/JDSFGW/CreateGW.md)
+
+
 
 
 
@@ -31,3 +37,13 @@
 
 详细说明请参见：[计费说明](../Pricing/Billing-Overview.md)。
 
+
+## 支持的地域和可用区列表
+|地域|地域标示|可用区|可用区标示|
+|---|---|---|---|
+|华北-北京|cn-north-1|可用区A|cn-north-1a|
+|华北-北京|cn-north-1|可用区B|cn-north-1b|
+|华北-北京|cn-north-1|可用区C|cn-north-1c|
+|华东-上海|cn-east-2|可用区A|cn-east-2a|
+|华东-上海|cn-east-2|可用区B|cn-east-2b|
+|华东-上海|cn-east-2|可用区C|cn-east-2c|

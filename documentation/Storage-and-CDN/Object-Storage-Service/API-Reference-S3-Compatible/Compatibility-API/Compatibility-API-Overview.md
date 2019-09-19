@@ -39,8 +39,8 @@
 |DELETE Bucket lifecycle|删除Bucket的生命周期规则|兼容：[DELETE Bucket lifecycle](./Operations-On-Bucket/Delete-Bucket-Lifecycle.md)|[DELETE Bucket lifecycle](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketDELETElifecycle.html)|
 |Put Bucket tagging|设置Bucket的标签|兼容：[Put Bucket tagging](./Operations-On-Bucket/Put-Bucket-Tagging.md)|[Put Bucket tagging](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketPUTtagging.html)|
 |Get Bucket tagging|获取Bucket的标签|兼容：[Get Bucket tagging](./Operations-On-Bucket/Get-Bucket-Tagging.md)|[Get Bucket tagging](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/API/RESTBucketGETtagging.html)|
-|Put Bucket accelerate|设置Bucket传输加速配置|兼容：[Put Bucket tagging](./Operations-On-Bucket/Put-Bucket-accelerate.md)|[Put Bucket accelerate](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTaccelerate.html)|
-|Get Bucket accelerate|获取Bucket传输加速配置|兼容：[Get Bucket tagging](./Operations-On-Bucket/Get-Bucket-Tagging.md)|[Get Bucket tagging](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETaccelerate.html)|
+|Put Bucket accelerate|设置Bucket传输加速配置|兼容：[Put Bucket accelerate](./Operations-On-Bucket/PUT-Bucket-accelerate.md)|[Put Bucket accelerate](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTaccelerate.html)|
+|Get Bucket accelerate|获取Bucket传输加速配置|兼容：[Get Bucket accelerate](./Operations-On-Bucket/GET-Bucket-accelerate.md)|[Get Bucket accelerate](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETaccelerate.html)|
 
 # 关于 Object 操作 
 

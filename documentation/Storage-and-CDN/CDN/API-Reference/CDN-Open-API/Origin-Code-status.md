@@ -17,7 +17,7 @@
 
 | **名称**         | **描述**               |
 | -------------- | -------------------- |
-| status      | 结果状态 0，刷新成功，其他失败            |
+| status      | 结果状态 0，成功，其他失败            |
 | msg | 提示信息                   |
 | data | 返回数据   |
 
@@ -28,7 +28,7 @@
 ```html
 http://opencdn.jcloud.com/api/origin
 {
-	"username" :"jcloud_test",
+	"username" :"test_user",
 	"signature" :"d847267fc702273abf394dd0c3128d64",
 	"domain" :"www.a.com,www.b.com",
 	"start_time" :"2016-12-14 07:00",

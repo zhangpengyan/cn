@@ -1,6 +1,6 @@
 # 管理绑定手机或邮箱
 
-*如果您使用的是京东账号，请参考 [《京东账号管理》](../../../documentation/User-Service/Account-Management/Check-Your-Account.md) 进行操作。
+（如果您使用的是京东账号，请参考 [《京东账号管理》](../../../documentation/User-Service/Account-Management/Check-Your-Account.md) 进行操作。）
 
 账号绑定的手机和邮箱是验证账号操作人身份的安全工具。当发生敏感或异常操作时，通过对手机或邮箱进行验证，可以保障账号安全。
 手机和邮箱也是接收京东云重要通知的主要方式，如资源到期释放、监控告警等消息。同时，对于在京东云只有一个账号的用户，可以使用账号绑定的手机或邮箱进行登录。

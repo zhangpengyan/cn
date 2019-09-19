@@ -1,32 +1,35 @@
-# enableAlarm
+# enableAlarms
 
 
 ## 描述
-启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+启用、禁用规则
 
 ## 请求方式
 POST
 
 ## 请求地址
-https://monitor.jdcloud-api.com/v1/regions/{regionId}/alarms/{alarmId}/enable
+https://monitor.jdcloud-api.com/v2/groupAlarms:switch
 
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**regionId**|String|True| |地域 Id|
-|**alarmId**|String|True| |规则id|
 
 ## 请求参数
-无
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**alarmIds**|String[]|True| |告警规则的ID列表|
+|**state**|Long|False| |启用:1,禁用0,|
 
 
 ## 返回参数
 |名称|类型|描述|
 |---|---|---|
-|**result**|Object| |
+|**result**|Result| |
 |**requestId**|String|请求的标识id|
 
+### Result
+|名称|类型|描述|
+|---|---|---|
+|**success**|Boolean| |
 
 ## 返回码
 |返回码|描述|
 |---|---|
-|**200**|OK|
+|**200**|启用、禁用规则|

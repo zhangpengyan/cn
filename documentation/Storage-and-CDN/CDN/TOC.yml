@@ -127,6 +127,8 @@
             href: API-Reference/CDN-Open-API/Area-isp-detail-statistics.md
           - name: 回源带宽统计
             href: API-Reference/CDN-Open-API/Back-to-source-bandwidth.md
+          - name: 回源统计
+            href: API-Reference/CDN-Open-API/Origin-Code-status.md
           - name: 状态码详情
             href: API-Reference/CDN-Open-API/Code-status.md
           - name: 获取所有运营商区域信息

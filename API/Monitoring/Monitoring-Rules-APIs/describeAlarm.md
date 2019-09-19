@@ -1,35 +1,22 @@
-# describeAlarms
+# describeAlarm
 
 
 ## 描述
-查询规则列表
+查询规则详情
 
 ## 请求方式
 GET
 
 ## 请求地址
-https://monitor.jdcloud-api.com/v2/groupAlarms
+https://monitor.jdcloud-api.com/v2/groupAlarms/{alarmId}
 
+|名称|类型|是否必需|默认值|描述|
+|---|---|---|---|---|
+|**alarmId**|String|True| |规则id|
 
 ## 请求参数
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**pageNumber**|Long|False| |当前所在页，默认为1|
-|**pageSize**|Long|False| |页面大小，默认为20；取值范围[1, 100]|
-|**serviceCode**|String|False| |产品线标识，同一个产品线下可能存在多个product，如(redis下有redis2.8cluster、redis4.0)|
-|**product**|String|False| |产品标识，如redis下分多个产品(redis2.8cluster、redis4.0)。同时指定serviceCode与product时，product优先生效|
-|**dimension**|String|False| |产品下的维度标识，指定dimension时必须指定product|
-|**ruleName**|String|False| |规则名称|
-|**ruleType**|Long|False| |规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控|
-|**enabled**|Long|False| |规则状态：1为启用，0为禁用|
-|**ruleStatus**|Long|False| |资源的规则状态  2：报警、4：数据不足|
-|**filters**|Filter[]|False| |服务码或资源Id列表<br>products - 产品product，精确匹配，支持多个<br>resourceIds - 资源Id，精确匹配，支持多个（必须指定serviceCode、product或dimension，否则该参数不生效）<br>alarmIds - 规则id，精确匹配，支持多个|
+无
 
-### Filter
-|名称|类型|是否必需|默认值|描述|
-|---|---|---|---|---|
-|**name**|String|False| | |
-|**values**|String[]|False| | |
 
 ## 返回参数
 |名称|类型|描述|
@@ -40,21 +27,15 @@ https://monitor.jdcloud-api.com/v2/groupAlarms
 ### Result
 |名称|类型|描述|
 |---|---|---|
-|**alarmList**|DescribeGroupAlarm[]|规则列表|
-|**numberPages**|Long|总页数|
-|**numberRecords**|Long|总记录数|
-|**pageNumber**|Long|当前页码|
-|**pageSize**|Long|分页大小|
-### DescribeGroupAlarm
-|名称|类型|描述|
-|---|---|---|
 |**alarmId**|String|报警规则ID|
 |**alarmStatus**|Long|规则状态，当一个规则下同时存在报警、数据不足、正常的资源时，规则状态按 报警>数据不足>正常的优先级展示<br>监控项状态：-1 未启用 1正常，2告警，4数据不足|
 |**alarmStatusList**|Long[]|规则的状态列表,可能同时存在多个：1正常，2告警，4数据不足|
+|**baseContact**|BaseContact[]|告警通知联系人|
 |**createTime**|String|创建时间|
 |**dimension**|String|资源维度|
 |**dimensionName**|String|资源维度名称|
 |**enabled**|Long|是否启用, 1表示启用规则，0表示禁用规则，默认为1|
+|**noticeOption**|NoticeOption[]|通知策略|
 |**product**|String|资源类型|
 |**productName**|String|资源类型名称|
 |**resourceOption**|ResourceOption| |
@@ -63,6 +44,14 @@ https://monitor.jdcloud-api.com/v2/groupAlarms
 |**ruleType**|String|规则类型, 默认为resourceMonitor|
 |**ruleVersion**|String|规则版本  v1  v2|
 |**tags**|Object|资源维度，指定监控数据实例的维度标签,如resourceId=id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)|
+|**webHookOption**|WebHookOption| |
+### WebHookOption
+|名称|类型|描述|
+|---|---|---|
+|**webHookContent**|String|回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook|
+|**webHookProtocol**|String|webHook协议|
+|**webHookSecret**|String|回调secret，用户请求签名，防伪造|
+|**webHookUrl**|String|回调url|
 ### RuleOptionDetail
 |名称|类型|描述|
 |---|---|---|
@@ -111,8 +100,21 @@ https://monitor.jdcloud-api.com/v2/groupAlarms
 |---|---|---|
 |**region**|String|资源所属的region|
 |**resourceId**|String|资源id|
+### NoticeOption
+|名称|类型|描述|
+|---|---|---|
+|**effectiveIntervalEnd**|String|生效截止时间，默认值:23:59|
+|**effectiveIntervalStart**|String|生效起始时间，默认值:00:00|
+|**noticeCondition**|Long[]|通知条件 1-告警 2-数据不足3-告警恢复|
+|**noticePeriod**|Long|通知沉默周期,单位:分钟，默认值：24小时,目前支持的取值“24小时、12小时、6小时、3小时、1小时、30分钟、15分钟、10分钟、5分钟”|
+|**noticeWay**|Long[]|通知方法    1-短信 2-邮件|
+### BaseContact
+|名称|类型|描述|
+|---|---|---|
+|**referenceId**|Long|联系人id。  注：ReferenceType=2时，联系人id请填0|
+|**referenceType**|Long|联系人id类型：0,联系人分组id;1,联系人id，2，pin帐号主联系人|
 
 ## 返回码
 |返回码|描述|
 |---|---|
-|**200**|查询规则列表|
+|**200**|删除规则返回结果|

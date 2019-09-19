@@ -11,6 +11,10 @@ OpenAPI服务的地址和路径格式一般为：
 
 	https://{product}.jdcloud-api.com/{API版本号}/regions/{地域ID}/{资源名称}/{资源ID(可选)}/{子资源名称(可选)}/{子资源ID(可选)}{:自定义动作(可选)}
 
+
+## 从VPC内直接调用的地址 ##  
+	https://{product}.internal.{regionId}.jdcloud-api.com/{API版本号}/regions/{地域ID}/{资源名称}/{资源ID(可选)}/{子资源名称(可选)}/{子资源ID(可选)}{:自定义动作(可选)}
+
 具体每个接口的地址及路径请参考具体API文档请求地址章节。
 
 HTTP请求头中需要包含公共请求头，请参考公共请求头。

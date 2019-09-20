@@ -56,9 +56,9 @@ HTTP服务位置|HTTP地址|流量类型|流量计费
 
 更多详情请参见：
 
-* [后付费计费说明](../../../Finance/Billing/Billing-method/Postpay.md)。
+* [后付费计费说明](../../../Finance/Billing/Billing-method/Postpay.md)
 
-* [消费总览](../../../Finance/Billing/Bill/Purchases-overview.md)。	
+* [消费总览](../../../Finance/Billing/Bill/Purchases-overview.md)
 
 * [计费方式说明](../../../Finance/Billing/Billing-rule/Pay-As-You-Go.md)
 

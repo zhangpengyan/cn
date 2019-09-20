@@ -45,16 +45,16 @@ items:
       herf: Getting-Started/GW_VPC.md
 - name: 操作指南
   items:
-    - name: 注册中心
+    - name: 命名空间
+      herf: Operation-Guide/Namespace.md
+    - name: 资源管理
       items:
-        - name: 创建注册中心
-          herf: Operation-Guide/Cluster/Create-Cluster.md
-        - name: 查看注册中心信息
-          herf: Operation-Guide/Cluster/Cluster-Detail.md
-        - name: 扩容
-          herf: Operation-Guide/Cluster/Expansion-Cluster.md
-        - name: 删除注册中心
-          herf: Operation-Guide/Cluster/Delete-Cluster.md
+        - name: 资源池管理
+          herf: Operation-Guide/Resource-Manage/Resource-List.md
+        - name: 注册中心
+          herf: Operation-Guide/Resource-Manage/Cluster.md
+        - name: 微服务网关
+          herf: Operation-Guide/Resource-Manage/JDSFGW.md
     - name: 服务管理
       items:
         - name: 服务管理列表

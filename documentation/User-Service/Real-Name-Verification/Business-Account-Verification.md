@@ -19,7 +19,7 @@
  - 有限责任公司，请选择企业；
  - 个体工商户，请选择个体工商户。
  
-![](../../../image/User/newrealname/1.%E9%80%89%E6%8B%A9%E8%AE%A4%E8%AF%81%E7%B1%BB%E5%9E%8B.png)
+![](../../../image/User/quickrealname/%E4%B8%BB%E4%BD%93%E9%80%89%E6%8B%A9.png)
 
 ## 2. 填写企业名称和企业银行对公账户信息
 

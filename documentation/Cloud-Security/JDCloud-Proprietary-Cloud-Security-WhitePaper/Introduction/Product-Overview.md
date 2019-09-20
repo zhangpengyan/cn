@@ -13,3 +13,5 @@
 JDStack专有云平台架构如下图所示：
 
 ![图 1 专有云平台架构](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/JDStack-Platform-Architectur.jpg)
+
+

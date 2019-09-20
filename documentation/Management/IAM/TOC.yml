@@ -49,10 +49,14 @@ items:
                 href: Policy-Management/Policy_v3/Elements.md
               - name: 语法结构
                 href: Policy-Management/Policy_v3/Syntax-Structure.md
+              - name: IAM权限判断规则
+                href: Policy-Management/Policy_v3/effect.md
               - name: 操作描述方式
                 href: Policy-Management/Policy_v3/Action.md
               - name: 资源描述方式
                 href: Policy-Management/Policy_v3/Resource.md
+              - name: 条件描述方式
+                href: Policy-Management/Policy_v3/Condition.md
       - name: 设置
         href: Setting.md        
       - name: 虚拟 MFA 设备

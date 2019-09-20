@@ -14,7 +14,7 @@
 
 ## 初始化数据
 
-开放者从控制台获取到设备3件套后，将信息写入存储系统或 HAL 文件后，即可从设备 app 调用`iot_mqtt_construct()`来建立连接。
+开发者从控制台获取到设备3件套后，将信息写入存储系统或 HAL 文件后，即可从设备 app 调用`iot_mqtt_construct()`来建立连接。
 
  ![设备连接](../../../../image/IoT/IoT-DeviceSDK/Connection1.png)
 

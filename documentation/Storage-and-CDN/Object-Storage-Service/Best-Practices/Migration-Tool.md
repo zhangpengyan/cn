@@ -1,4 +1,4 @@
-# 数据迁移工具 Osstransfer --（公测）
+# 数据迁移工具 Osstransfer
 
 ## 功能说明
 
@@ -7,7 +7,7 @@ Osstransfer工具可以将本地、其它对象存储的数据迁移到OSS，它
 
 -   支持丰富的数据源：
     * 本地数据：将本地存储的数据迁移到 OSS；
-    * 其他对象存储:目前支持 AWS S3，阿里云 OSS，腾讯云COS,百度BOS，华为 OBS存储迁移至京东云OSS，后续会不断扩展;
+    * 其他对象存储:目前支持 AWS S3，阿里云 OSS，腾讯云COS,百度BOS，华为 OBS,七牛云存储等迁移至京东云OSS，后续会不断扩展;
     * URL 列表：根据指定的 URL 下载列表进行下载迁移到 京东云OSS;
     * Bucket 相互复制：京东云OSS的 Bucket 数据相互复制, 支持跨账号跨地域及同区域的数据复制。
 -   支持断点续传；
@@ -30,7 +30,7 @@ Osstransfer工具可以将本地、其它对象存储的数据迁移到OSS，它
 
 ### 1.获取工具
 
-下载链接：[OssMigration](https://downloads.oss.cn-north-1.jcloudcs.com/transfer-tools-java-1.0.0.jar)
+下载链接：[transfer-tools](https://downloads.oss.cn-north-1.jcloudcs.com/transfer-tools-java-1.0.0.jar)
 
 ### 2.获取配置文件
 

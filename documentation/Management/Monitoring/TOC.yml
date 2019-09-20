@@ -27,14 +27,12 @@ items:
   items:
     - name: 入门指南概述
       href: Getting-Started/getting-started-overview.md
-    - name: 查看资源监控图表
-      href: Getting-Started/view-cloud-resource-monitoring-chart.md
-    - name: 报警管理
+    - name: 资源监控
       items:
-        - name: 报警模板
-          href: Getting-Started/Alarm-Management/Rule-Template.md
-        - name: 设置报警规则
-          href: Getting-Started/Alarm-Management/set-alarm-rules.md
+        - name: 查看监控图表
+          href: Getting-Started/View-monitoring-cahrt.md
+        - name: 添加报警规则
+          href: Getting-Started/CreateRule.md 
     - name: 使用Dashboard
       href: Getting-Started/use-dashboard.md
     - name: 使用自定义监控
@@ -55,12 +53,18 @@ items:
           href: Operation-Guide/dashboard/monitoring-chart-management.md
     - name: 云资源监控
       items:
-        - name: 资源监控
+        - name: 资源监控概述
           href: Operation-Guide/resource-monitoring/resource-monitoring-overview.md
-        - name: 查看资源监控图表
+        - name: 查看监控图表
           href: Operation-Guide/resource-monitoring/view-resource-monitoring-chart-details.md
-        - name: 对资源设置监控报警
+        - name: 查看报警规则
+          href: Operation-Guide/resource-monitoring/view-resource-rules.md     
+        - name: 添加报警规则
           href: Operation-Guide/resource-monitoring/set-alarm-rules-details.md
+        - name: 管理报警规则
+          href: Operation-Guide/resource-monitoring/resource-rules.md  
+        - name: 报警模板
+          href: Operation-Guide/resource-monitoring/alarm-template.md
     - name: 自定义监控 
       items:
         - name: 自定义监控概述

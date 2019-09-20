@@ -71,12 +71,30 @@ items:
             href: Watermark/updateWatermark.md
           - name: 删除水印
             href: Watermark/deleteWatermark.md
-      - name: 提交作业
+      - name: 视频转码
         items:
           - name: 提交转码作业
             href: Transcode-Task/submitTranscodeJob.md
           - name: 批量提交转码作业
             href: Transcode-Task/batchSubmitTranscodeJobs.md
+      - name: 质检模板管理
+        items:
+          - name: 查询质检模板列表
+            href: Quality-Detection-Template/listQualityDetectionTemplates.md
+          - name: 创建质检模板
+            href: Quality-Detection-Template/createQualityDetectionTemplate.md
+          - name: 查询质检模板
+            href: Quality-Detection-Template/getQualityDetectionTemplate.md
+          - name: 修改质检模板
+            href: Quality-Detection-Template/updateQualityDetectionTemplate.md
+          - name: 删除质检模板
+            href: Quality-Detection-Template/deleteQualityDetectionTemplate.md
+      - name: 质量检测
+        items:
+          - name: 提交质检作业
+            href: Quality-Detection/submitQualityDetectionJob.md
+          - name: 批量提交质检作业
+            href: Quality-Detection/batchSubmitQualityDetectionJobs.md
       - name: 域名配置
         items:
           - name: 添加域名
@@ -111,4 +129,8 @@ items:
             href: Domain/setIPRule.md
           - name: 查询域名IP黑名单规则
             href: Domain/getIPRule.md
+          - name: 设置域名SSL配置
+            href: Domain/setHttpSsl.md
+          - name: 查询域名SSL配置
+            href: Domain/getHttpSsl.md
 

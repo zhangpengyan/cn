@@ -12,7 +12,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/slbs/{loadBalancerId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**regionId**|String|True| |地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域|
 |**loadBalancerId**|String|True| |负载均衡实例ID|
 
 ## 请求参数

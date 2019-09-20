@@ -26,7 +26,6 @@ items:
       herf: Pricing/Billing-Rules.md
     - name: 购买流程
       herf: Pricing/Purchase-Process.md 
-      status: 0 
 - name: 入门指南
   items:
     - name: 概述

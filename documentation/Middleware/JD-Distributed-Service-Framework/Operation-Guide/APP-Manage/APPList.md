@@ -62,7 +62,7 @@
 
 - 如果已经创建了相应的部署组，则可直接配置好部署来源、选择部署组后，即可发起部署。
 
-- 如果还未创建部署组，可点击“新建部署组”，先新建部署组后再部署。关于部署组内容，可查看  [部署组](../../../../Developer-Tools/CodeDeploy/Operation-Guide/Deploy-Group.md)  章节。
+- 如果还未创建部署组，可点击“新建部署组”，先新建部署组后再部署。关于部署组内容，可查看  [部署组](../Deploy-Group.md)   章节。
 
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-fqbs.png)
 
@@ -90,7 +90,7 @@
 
 2、 当需要从部署组中移除实例时，可至部署组详情页中选择删除 
 
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-xj.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-edit.png)
 
 
 ### 程序包管理
@@ -108,6 +108,6 @@
 
 ### 部署组
 
-该节内容，可查看 [部署组](../../../../Developer-Tools/CodeDeploy/Operation-Guide/Deploy-Group.md)  章节。
+该节内容，可查看 [部署组](../Deploy-Group.md)  章节。
 
 

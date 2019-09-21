@@ -11,6 +11,12 @@
 
 ## 操作步骤
 
+应用的操作流程如下：
+
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-flow.png)
+
+
+
 ### 创建应用
 
 1、	登录微服务平台控制台。在左侧导航栏点击应用管理，进入应用列表页。
@@ -26,9 +32,8 @@
 
 ![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-create-1.png)
 
-### 删除应用
 
-### 删除
+### 删除应用
 
 1、登录微服务平台控制台。	在左侧导航栏点击应用管理，进入应用列表页。
 
@@ -45,3 +50,56 @@
 
 
 ![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-del-1.png)
+
+
+### 部署应用
+
+1、 登录微服务平台控制台。	在左侧导航栏点击应用管理，进入应用列表页。
+
+2、对于需要部署的应用，点击操作列的发起部署。
+
+- 如果已经创建了相应的部署组，则可直接配置好部署来源、选择部署组后，即可发起部署。
+
+- 如果还未创建部署组，可点击“新建部署组”，先新建部署组后再部署。关于部署组内容，可查看部署组章节。
+
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-fqbs.png)
+
+
+3、实施部署。
+
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/bsz-xj.png)
+
+**说明：**
+
+- 部署完成后，可进行回滚、重新部署操作。
+
+- 用户还可查看每个实例的部署信息。
+
+- 删除时，用户可以选择，是否同时删除程序包。默认勾选同时删除。
+
+
+### 实例部署信息
+
+用户可查看当前应用，通过哪些部署组，被部署至哪些实例上；并可对每个实例上的应用，进行起停操作。
+
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-slbsxx.png)
+
+
+### 程序包管理
+
+程序包管理中上传的是，当前应用在部署中所使用的程序包。
+
+
+
+### 部署历史
+
+该节内容，可查看部署组章节。
+
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-history-list.png)
+
+
+### 部署组
+
+该节内容，可查看部署组章节。
+
+

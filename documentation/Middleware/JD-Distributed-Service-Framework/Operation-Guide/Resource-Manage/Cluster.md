@@ -9,6 +9,7 @@
 
 ### 调整配置
 1、登录微服务平台控制台。在左侧导航栏点击资源管理，进入注册中心列表页。
+ ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/zczx-list.png)
 
 2、选择需要调整配置的注册中心，进入调整配置页。
 
@@ -21,4 +22,5 @@
   ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/zczx-yyks.png)
 
 
-
+### 监控
+可对当前注册中心的状态、服务实例情况、发布情况等信息进行监控，并配置报警规则。

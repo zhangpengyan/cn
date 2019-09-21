@@ -108,7 +108,7 @@ API网关的API分组、微服务网关服务、注册中心、应用之间的�
 
 -  注册中心下有哪些应用会通过微服务网关提供服务，也需要进行指定选择。在创建服务时可先不填；在创建服务成功后，可随时按照需要进行应用更新。
 
- ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-create-1.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/jdsfgw-create-1.png)
 
 
 ######  STEP2:创建API分组。其中API分组类型选择“微服务API分组”。
@@ -175,9 +175,9 @@ API网关的API分组、微服务网关服务、注册中心、应用之间的�
 
 
 ######   STEP5：调用。
-调用方式分为两种：VPC内调用和公网调用。分别介绍如下：
+调用方式分为两种：VPC内调用、 通过API网关的调用方式，分别介绍如下：
 
-#######   VPC内调用方式
+######   VPC内调用方式
 
 1、打开微服务网关服务的API分组基本信息tab签页，可见VPC内调用路径规则。例如：
 
@@ -201,7 +201,7 @@ curl -X GET http://jdsf-mgw-126aemarp4s1s-nlb.jvessel-open-hb.jdcloud.com:8080/j
 
 
 
-#######   公网调用方式
+######   公网调用方式
 
 1、首先保证API分组已经被发布到环境中。那么即可从API分组的部署环境中得到外网调用路径。
 
@@ -301,9 +301,9 @@ curl -X GET http://w27vqwu8gkzy-preview.cn-north-1.jdcloud-api.net/jdsf-server/s
 
 
 ######   STEP4：调用。
+调用方式分为两种：VPC内调用、 通过API网关的调用方式，分别介绍如下：
 
-
-#######   VPC内调用方式
+######  VPC内调用方式
 
 1、打开微服务网关服务的API分组基本信息tab签页，可见VPC内调用路径规则。
 
@@ -328,7 +328,7 @@ curl -X GET http://jdsf-mgw-l6mnhdd1zpc-nlb.jvessel-open-sh.jdcloud.com:8080/10.
 
 
 
-#######   通过API网关的调用方式
+######   通过API网关的调用方式
 
 1、首先保证API分组已经被发布到环境中。那么即可从API分组的部署环境中得到外网调用路径。
 

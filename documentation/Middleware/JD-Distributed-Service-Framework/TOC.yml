@@ -31,6 +31,8 @@ items:
       herf: Getting-Started/Basic-Example.md
     - name: 使用API网关开放VPC内的接口
       herf: Getting-Started/GW_VPC.md
+    - name: 微服务平台插件说明
+      herf: Getting-Started/JDSF-Plugin.md
 - name: 操作指南
   items:
     - name: 命名空间
@@ -51,7 +53,7 @@ items:
           herf: Operation-Guide/APP-Manage/Config-Manage.md
         - name: 服务鉴权
           herf: Operation-Guide/APP-Manage/Service-Assignuse.md 
-       - name: 运维管理
+     - name: 运维管理
       items:
         - name: 调用链分析服务
           herf: Operation-Guide/DevOps/Analysis-Service.md       

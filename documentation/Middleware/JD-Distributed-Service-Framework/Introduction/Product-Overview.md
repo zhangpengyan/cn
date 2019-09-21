@@ -12,7 +12,7 @@
 
 - 命名空间
 	- [命名空间](../Operation-Guide/Namespace.md)	
-- 资源管理管理
+- 资源管理
 	- [资源池管理](../Operation-Guide/Resource-Manage/Resource-List.md)
 	- [注册中心](../Operation-Guide/Resource-Manage/Cluster.md)
 	- [微服务网关](../Operation-Guide/Resource-Manage/JDSFGW.md)

@@ -13,7 +13,7 @@
 
 应用的操作流程如下：
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-flow.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-flow.png)
 
 
 
@@ -30,7 +30,7 @@
 -  Java运行环境目前支持OpenJDK1.7、OpenJDK1.8。
 
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-create-1.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-create-1.png)
 
 
 ### 删除应用
@@ -49,7 +49,7 @@
 - 用户需在删除数据前，自行做好数据备份工作。
 
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-del-1.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-del-1.png)
 
 
 ### 部署应用
@@ -62,12 +62,12 @@
 
 - 如果还未创建部署组，可点击“新建部署组”，先新建部署组后再部署。关于部署组内容，可查看部署组章节。
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-fqbs.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-fqbs.png)
 
 
 3、实施部署。
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/bsz-xj.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/bsz-xj.png)
 
 **说明：**
 
@@ -82,7 +82,7 @@
 
 用户可查看当前应用，通过哪些部署组，被部署至哪些实例上；并可对每个实例上的应用，进行起停操作。
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-slbsxx.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-slbsxx.png)
 
 
 ### 程序包管理
@@ -95,7 +95,7 @@
 
 该节内容，可查看部署组章节。在删除部署组的同时，用户可选择是否同步删除部署历史；删除前用户需自行备份。
 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-history-list.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-history-list.png)
 
 
 ### 部署组

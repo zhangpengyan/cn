@@ -39,5 +39,5 @@
 |  服务依赖图谱  | 根据调用链数据分析出服务间的调用角色和流程，帮助用户了解服务间的调用路径、服务的性能和状态统计，为用户进行问题的定位、排查以及优化提供数据支持。 |
 
 ## 相关资源对应关系
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/table-jq.png)
+![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/struct-region-np-cluster-app.png)
 

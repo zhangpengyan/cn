@@ -127,7 +127,9 @@ items:
   - name: 智臻链BaaS平台服务条款
     href: JD-Blockchain-Open-Platform.md
   - name: 物联网中心服务条款
-    href: IoT-Hub-Terms-Of-Service.md    
+    href: IoT-Hub-Terms-Of-Service.md   
+  - name: 物联网中心服务等级协议（SLA）
+    href: IoT-Hub-Level-Agreements-SLA.md    
   - name: 物联网协议适配服务条款
     href: IoT-Protocol-Adaptor-Terms-Of-Service.md   
   - name: 物联网协议适配服务等级协议(SLA)

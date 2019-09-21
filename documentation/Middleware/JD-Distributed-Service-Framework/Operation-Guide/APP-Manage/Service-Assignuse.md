@@ -1,6 +1,13 @@
 #  服务治理
 服务是微服务治理的基本单元。在微服务平台中，当应用被部署完成，注册中心完成服务的注册和发现后，该服务将出现在服务治理的列表中。用户可进行的服务治理，包括服务鉴权和路由策略两部分。
 
+**说明：**
+
+-  请提前参考： [微服务平台 spring cloud 插件说明](../../Getting-Started/JDSF-Plugin.md)
+
+## 鉴权规则
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/table-jq.png)
+
 
 ## 操作步骤
 
@@ -30,7 +37,16 @@
 
 **说明：**
 -  一个服务允许配置多条鉴权规则。当多条鉴权规则同时启用时，规则间是逻辑或（OR）关系，即请求只需满足任意一条鉴权规则，即通过规则。
+-  用户可直接切换鉴权方式：进行黑白名单互切。
 
 
 ### 创建服务鉴权规则
+1、点击新建规则。
+
+2、设置基本信息，单击确定，完成创建。
+
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/ser-ffjq-add)
+
+
+
 

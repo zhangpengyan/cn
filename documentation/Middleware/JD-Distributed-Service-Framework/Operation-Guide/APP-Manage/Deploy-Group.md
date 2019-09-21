@@ -32,6 +32,7 @@
 
 2、当在部署目标中，移除实例后实施生效；且移除后，其它部署组才可再次使用该移除的实例。
 
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-edit.png)
 
 
 ### 删除部署组

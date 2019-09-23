@@ -39,7 +39,7 @@
 
 企业信息提交审核后，系统将在 1 ~ 10 分钟内完成企业信息审核。
 
-![](../../../image/User/quickrealname/%E5%AE%A1%E6%A0%B8%E4%B8%AD.png)
+![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%972.png)
 
 ## 5. 资料审核通过，打款验证
 

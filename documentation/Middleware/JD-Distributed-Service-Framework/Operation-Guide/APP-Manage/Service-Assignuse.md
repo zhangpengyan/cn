@@ -45,7 +45,7 @@
 
 2、设置基本信息，单击确定，完成创建。
 
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/ser-ffjq-add)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/ser-ffjq-add.png)
 
 
 

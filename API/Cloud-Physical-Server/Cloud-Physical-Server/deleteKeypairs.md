@@ -1,19 +1,19 @@
-# deleteListener
+# deleteKeypairs
 
 
 ## 描述
-删除监听器
+删除密钥对
 
 ## 请求方式
 DELETE
 
 ## 请求地址
-https://cps.jdcloud-api.com/v1/regions/{regionId}/listeners/{listenerId}
+https://cps.jdcloud-api.com/v1/regions/{regionId}/keypairs/{keypairId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域|
-|**listenerId**|String|True| |监听器ID|
+|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**keypairId**|String|True| |密钥对ID|
 
 ## 请求参数
 无

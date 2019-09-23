@@ -57,8 +57,10 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**bandwidth**|Integer|False| |外网带宽, 范围[1,200] 单位Mbps|
 |**name**|String|True| |云物理服务器名称|
 |**description**|String|False| |云物理服务器描述|
-|**password**|String|True| |密码|
+|**password**|String|False| |密码，不传值会随机生成密码|
 |**count**|Integer|True| |购买数量|
+|**userData**|String|False| |可执行脚本Base64编码后的内容，支持shell和python脚本|
+|**keypairId**|String|False| |密钥对id|
 |**charge**|ChargeSpec|True| |计费配置|
 ### ChargeSpec
 |名称|类型|是否必需|默认值|描述|

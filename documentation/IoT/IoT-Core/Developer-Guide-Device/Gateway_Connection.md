@@ -20,3 +20,72 @@
 ## 子设备激活：
 子设备需要在后台配置托普关系，子设备可多次获取DS/ID，子设备需先解除和网关的依赖关系，才可关联其他网关。解除依赖后，原网关清楚对子设备的控制能力。
 
+
+10.1	创建新设备
+- Int iot_gateway_construct(iot_dev_type_t dev_type, iot_dev_auth_info_t *meta_info);
+-	接口说明：创建一个新设备，包括网关和子设备类型。
+-	返回值：成功返回设备ID，失败返回FAIL_RETURN
+-	参数说明：
+
+|参数名|	参数类型|	必填|	描述|
+|:-:|:-:|:-:|:-:|
+|dev_type|	iot_dev_type_t|	是|	需要创建的设备类型|
+|meta_info|	iot_dev_auth_info_t| 	是	|设备的验证信息|
+
+
+10.2	开启设备连接网络和主题订阅
+-	int iot_gateway_connect(int devid);
+-	接口说明：指定设备开启网络连接。
+-	返回值：成功返回SUCCESS_RETURN，失败返回FAIL_RETURN
+-	参数说明：
+
+|参数名|	参数类型|	必填|	描述 |
+|:-:|:-:|:-:|:-:|
+|devid|	int |	是 |	需要连接网络的设备ID |
+
+
+10.3	接收网络信息和分发事件
+-	void iot_gateway_yield(int timeout_ms);
+-	接口说明：接收云端事件，分发事件到注册的方法。
+-	返回值：void
+-	参数说明：
+
+|参数名|	参数类型|	必填	|描述|
+|:-:|:-:|:-:|:-:|
+|timeout_ms|	int|	是|	接收网数据的超时时间|
+
+
+
+
+10.4	关闭网络连接和回收设备资源
+-	int iot_gateway_destroy(int devid);
+-	接口说明：关闭指定设备网络连接和回收设备资源。
+-	返回值：成功返回SUCCESS_RETURN，失败返回FAIL_RETURN
+-	参数说明：
+
+|参数名	|参数类型|	必填|	描述|
+|:-:|:-:|:-:|:-:|
+|devid|	int|	是|	指定设备id|
+
+
+10.5	发送数据到云端
+-	int iot_gateway_report(int devid, iot_msg_type_t msg_type, unsigned char *payload,
+                          int payload_len);
+-	接口说明：发送数据到云端。
+-	返回值：成功返回信息id，失败返回FAIL_RETURN
+-	参数说明：
+
+|参数名|	参数类型|	必填	|描述|
+|:-:|:-:|:-:|:-:|
+|devid|	int|	是|	指定设备id|
+|msg_type|	iot_msg_type_t	|是	|消息类型|
+|payload|	Unsigned char*|	是	|消息体|
+|Payload_len|	int|	是|	消息体长度|
+
+
+
+10.6	发送数据到云端
+-	uint32_t iot_gateway_generate_msgid();
+-	接口说明：生成消息id。
+-	返回值：成功消息id，失败返回-1
+

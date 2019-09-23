@@ -79,9 +79,9 @@ items:
   - name: 应用安全网关服务等级协议（SLA）
     href: Application-Of-Secure-Gateway-Service-Level-Protocol-SLA.md
   - name: API网关服务条款
-    href: IoT-Link-Terms-Of-Service.md
+    href: Api-Gateway-Terms-Of-Service
   - name: API网关服务等级协议（SLA）
-    href: IoT-Link-Level-Agreements-SLA.md  
+    href: Api-Gateway-Level-Agreements-SLA
   - name: 云物理服务器服务协议
     href: Cloud-Physics-Server-Service-Clause.md
   - name: 云物理服务器服务等级协议（SLA）

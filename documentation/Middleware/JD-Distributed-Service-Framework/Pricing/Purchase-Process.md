@@ -4,7 +4,7 @@
 
 ####   第1步：用户申请公测。
 在产品页点击申请公测。
-  ![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/gcsq.png)
+  ![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/gcsq-new.png)
 
 ####   第2步：运营审批。
 运营人员审批加入公测名单，用户会收到已开通的通知（邮件或短信）；

@@ -33,7 +33,7 @@
 
 点击“下一步”，在弹窗中确认企业名称和企业银行对公账户信息无误后点击“提交”。
 
-![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%971.png)
+![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%972.png)
 
 ## 4. 资料提交审核
 

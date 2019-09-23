@@ -1,0 +1,24 @@
+  name: 物联网设备 SDK
+  href: 
+  items:
+  - name: Device SDK 介绍
+    href: Developer-Guide-Device/Introduction.md
+  - name: 快速接入设备
+    href: Developer-Guide-Device/DeviceEasyLink.md       
+  - name: 设备鉴权
+    href: Developer-Guide-Device/AuthenticateDevices.md   
+  - name: 建立连接
+    href: Developer-Guide-Device/EstablishConnection.md
+  - name: 订阅和发布
+    href: Developer-Guide-Device/SubPub.md
+  - name: 网络连接和心跳
+    href: Developer-Guide-Device/HeartBeat-Reconnection.md
+  - name: 辅助API
+    href: Developer-Guide-Device/API.md  
+  - name: 网关功能
+    href: Developer-Guide-Device/Gateway_Connection.md         
+  - name: 术语表
+    href: Developer-Guide-Device/Glossary.md 
+  - name: Device SDK 下载
+    href: Developer-Guide-Device/Device-SDK-Download-Link.md
+

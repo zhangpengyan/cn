@@ -33,4 +33,4 @@ SIM卡的运营商类型等属性不会影响单价
 
 4、套餐内流量包预付费，超套流量后付费
 
-![共享流量月功能费](../../../../image/Query-Card-Service/flowLiquidBath2.png)
+![共享流量月功能费](../../../../image/Query-Card-Service/flowLiquidBath.png2.png)

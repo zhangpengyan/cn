@@ -10,6 +10,7 @@
 - 网关设备：拥有管理子设备，代理子设备连接云端的能力
 - 子设备：不可直接连接云端需要通过代理连接云端的设备
 
+![image](../../../../image/IoT/IoT-DeviceSDK/Gateway-Topology.png)
 
 ## 子设备发送和接收
 
@@ -22,6 +23,10 @@
 
 子设备需要在后台配置托普关系，子设备可多次获取DS/ID，子设备需先解除和网关的依赖关系，才可关联其他网关。解除依赖后，原网关清楚对子设备的控制能力。
 
+![image](../../../../image/IoT/IoT-DeviceSDK/Device_Activation.PNG)
+
+网关功能架构图：
+![image](../../../../image/IoT/IoT-DeviceSDK/DeviceGateway.PNG)
 
 ## 创建新设备
 

@@ -1,15 +1,13 @@
 # 服务使用概述
 
 
-京东云微服务平台已经提供的功能包括以下：注册中心、服务管理、调用链分析服务、配置管理、微服务网关。 控制台使用流程如下：
- 
-![](../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/struct-sylc.png)
+京东云微服务平台已经提供的功能包括以下：注册中心、服务管理、调用链分析服务、配置管理、微服务网关。 
 
 **说明：**
 
 -   创建微服务组件时会占用用户VPC子网中的内网IP资源，请保留足够子网IP资源，建议除云主机外请最少保留15个。
 
--   在开始使用本产品服务前，请先保证您已在京东云上 创建私有网络。请参考：[创建私有网络](https://docs.jdcloud.com/cn/virtual-private-cloud/vpc-configuration)
+-   在开始使用本产品服务前，请先保证您已在京东云上 创建私有网络。请参考：[创建私有网络](../../../Networking/Virtual-Private-Cloud/Introduction/Product-Overview.md)
 
 -   注册中心与调用链分析服务相互独立，您可以按需购买您需要的功能。
 

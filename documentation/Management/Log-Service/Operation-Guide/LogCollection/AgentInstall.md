@@ -3,8 +3,12 @@
 选择需要采集业务应用日志的云主机（仅支持Linux类主机），登录该云主机。
 1. 配置credential文件     
 - 创建 ~/.jdcloud/logs_credentials.yml 文件     
-- 编缉并保存logs_credentials.yml文件，文件内容为：        
-ak: xxxxxxx(填写YourAccessKeyID)       sk: xxxxxxx(填写YourAccessKeySecret)         
+- 编缉并保存logs_credentials.yml文件，文件内容为： 
+
+ak: xxxxxxx(填写YourAccessKeyID)
+
+sk: xxxxxxx(填写YourAccessKeySecret)   
+
 **注： ak（键值对之间必须要有空格），否则会读取ak。如: ak:(空格)xxxxxx**
 
 2.复制安装命令至云主机。  

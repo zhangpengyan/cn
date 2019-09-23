@@ -85,18 +85,32 @@
             href: Best-Practices/Deploy-Applications/Deploy-Deployment.md
          -  name: 部署Service
             href: Best-Practices/Deploy-Applications/Deploy-Service.md
-     - name: Volumes
+     - name: 使用云硬盘作为Volume
        items:
-         -  name: 使用云硬盘作为Volume
-            items:
-             -  name: 部署StorageClass
-                href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-StorageClass.md
-             -  name: 部署持久化存储
-                href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-PV.md
+        -  name: 部署StorageClass
+           href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-StorageClass.md
+        -  name: 部署持久化存储
+           href: Best-Practices/Volumes/Cloud-Disk-Service/Deploy-PV.md
+     -  name: 使用CFS云文件服务作为Volume
+        items:
+         -  name: 定义nfs类型的Volume
+            href: Best-Practices/Volumes/Cloud-File-Service/CFS-Volume.md
+         -  name: 通过静态PV的方式使用京东云文件服务
+            href: Best-Practices/Volumes/Cloud-File-Service/CFS-PVC.md
+         -  name: 部署nfs-client-provisioner
+            href: Best-Practices/Volumes/Cloud-File-Service/nfs-client-provisioner.md
+         -  name: 使用nfs-client-provisioner动态创建PV
+            href: Best-Practices/Volumes/Cloud-File-Service/Create-PV-Dynamically.md
      - name: Ingress
        items:
          -  name: 部署 Nginx-ingress controller
             href: Best-Practices/Ingress/Deploy-Ingress-NGINX-Controller.md
+         -  name: 使用开源nginx-ingress controller定义ingress resource
+            href: Best-Practices/Ingress/Deploy-Ingress-Resource.md
+         -  name: 基于京东云ALB实现客户端源IP透传
+            href: Best-Practices/Ingress/nginx-ingress-source-ip.md
+         -  name: 自建CA证书和私钥
+            href: Best-Practices/Ingress/deploy-CA-SSL.md
      - name: 创建原生容器Pod
        items:
          - name: 部署Virtual-Kubelet

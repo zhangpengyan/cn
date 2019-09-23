@@ -1,0 +1,14 @@
+name: 京东云云桌面白皮书
+href: 
+items:
+
+- name: 概要
+  href: Introduction/Overview.md
+- name: 云桌面优势
+  href: Advantage/Point.md
+- name: 云桌面基础技术
+  href: Base/Base.md
+- name: 云桌面安全技术
+  href: Security/Security.md
+- name: 云桌面白皮书下载链接
+  href: Download-Link/Related-Resources.md

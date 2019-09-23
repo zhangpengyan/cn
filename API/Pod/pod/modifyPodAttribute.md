@@ -2,7 +2,7 @@
 
 
 ## 描述
-修改 pod 的 名称 和 描述。
+修改 pod 的描述。
 
 
 ## 请求方式
@@ -19,7 +19,7 @@ https://pod.jdcloud-api.com/v1/regions/{regionId}/pods/{podId}:modifyPodAttribut
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**description**|String|False| |pod name 和 description 必须要指定一个|
+|**description**|String|False| |修改后的描述|
 
 
 ## 返回参数

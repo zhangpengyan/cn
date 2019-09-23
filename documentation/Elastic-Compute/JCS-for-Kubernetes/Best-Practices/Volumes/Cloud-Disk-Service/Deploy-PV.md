@@ -6,6 +6,7 @@
 ## 一、使用京东云云硬盘定义静态存储
     
 **1. 创建PV**
+
 ```
 kind: PersistentVolume
 apiVersion: v1
@@ -23,6 +24,7 @@ spec:
     volumeID: vol-ogcbkdjg7x      #云硬盘ID请使用与kubernetes集群同地域的且状态为可用的云硬盘ID替换
     fsType: xfs
 ```     
+
 **参数说明：**
 
 1、如您需要在京东云Kubernetes集群服务中使用京东云云硬盘作为持久化存储，请在PersistentVolume定义时，指定插件jdcloudElasticBlockStore；  
@@ -35,8 +37,6 @@ spec:
 
 |StorageClass type | 云硬盘类型   |容量范围  |步长|
 | ------ | ------ | ------ |------ |
-|	ssd|SSD云盘  | [20-1000]GiB  |10GiB |
-|premium-hdd	|高效云盘 | [20-3000]GiB  |10GiB|
 |hdd.std1	|容量型hdd | [20-16000]GiB  |10GiB|
 |ssd.gp1	|通用型ssd | [20-16000]GiB  |10GiB|
 |ssd.io1	|性能型ssd | [20-16000]GiB  |10GiB|
@@ -84,7 +84,9 @@ spec:
     matchLabels:
       type: jdcloud-ebs
 ```
+
 **3. 创建Pod**
+
 ```
 kind: Pod
 apiVersion: v1
@@ -108,6 +110,7 @@ spec:
 ```
 
 **4. 您也可以直接创建使用静态存储的pod**
+
 ```
 kind: Pod
 apiVersion: v1
@@ -131,7 +134,6 @@ spec:
           name: pv-static
 ```
 
-
 ## 二、使用京东云云硬盘定义动态存储
 
 当集群中的静态 PV 都不匹配新建的 PersistentVolumeClaim 时，集群可能会尝试动态地为 PVC 创建卷。
@@ -147,6 +149,7 @@ spec:
 |ssd.io1	|性能型ssd | [20-16000]GiB  |10GiB| 
 
 2、创建PVC
+
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -160,24 +163,29 @@ spec:
     requests:
       storage: 20Gi
 ```  
+
 3、查看集群的PVC  
 
 `kubectl get pvc`  
 
 输出:  
+
 ```
 NAME                                         STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 pvc1                                         Bound     pvc-73d8538b-ebd6-11e8-a857-fa163eeab14b   20Gi       RWO            jdcloud-ssd    18s
 ```  
+
 4、查看集群的PV  
 
 `kubectl get pv`  
 
 输出：  
+
 ```
 NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                                                STORAGECLASS   REASON    AGE
 pvc-73d8538b-ebd6-11e8-a857-fa163eeab14b   20Gi       RWO            Delete           Bound     default/pvc1                                         jdcloud-ssd              2m
 ```  
+
 **注**：基于StorageClass jdcloud-ssd，为PVC创建了卷。一旦 PV 和 PVC 绑定后，PersistentVolumeClaim 绑定是排他性的，不管它们是如何绑定的。 PVC 跟 PV 绑定是一对一的映射。
 
  

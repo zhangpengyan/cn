@@ -1,0 +1,47 @@
+name: 京东云专有云安全白皮书
+href: 
+items:
+- name: 京东云专有云介绍
+  items:
+    - name: 专有云简介
+      href: Introduction/Product-Overview.md
+    - name: 专有云安全需求
+      href: Introduction/Security-requirements.md
+- name: 安全合规/隐私保护/权责归属
+  items:
+    - name: 安全合规
+      href: Compliance-Privacy-Responsibilities/Compliance.md
+    - name: 隐私保护
+      href: Compliance-Privacy-Responsibilities/Privacy.md
+    - name: 权责归属
+      href: Compliance-Privacy-Responsibilities/Responsibilities.md
+- name: 专有云安全架构
+  items:
+    - name: 专有云安全架构概述
+      href: Security-Architecture/Overview.md
+    - name: 云平台安全
+      href: Security-Architecture/Cloud-Platform-Security.md
+    - name: 云用户安全
+      href: Security-Architecture/Cloud-User-Security.md
+- name: 专有云云产品安全
+  items:
+    - name: 计算
+      href: Cloud-Product-Security/Computing.md
+    - name: 网络
+      href: Cloud-Product-Security/Network.md 
+    - name: 存储
+      href: Cloud-Product-Security/Storage.md
+    - name: 云数据库与缓存
+      href: Cloud-Product-Security/Cloud-Databases-and-Caches.md
+    - name: 管理
+      href: Cloud-Product-Security/Management.md
+    - name: 大数据与分析
+      href: Cloud-Product-Security/Big-Data-and-Analysis.md
+    - name: 互联网中间件
+      href: Cloud-Product-Security/Internet-Middleware.md
+    - name: 专有云NF1
+      href: Cloud-Product-Security/Proprietary-Cloud-NF1.md
+- name: 专有云安全产品服务
+  href: Cloud-Security-Product-Service.md	  
+- name: 下载链接
+  href: Download-Link/Related-Resources.md

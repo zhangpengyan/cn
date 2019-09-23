@@ -10,7 +10,6 @@
 -  当客户端通过API网关调用时，API网关将按照API调用次数收取费用。详细收费规则可参考API网关产品计费说明  。
 
 
-
 更多计费详情请参见：
 
 * [预付费计费说明](../../../Finance/Billing/Billing-method/Prepay.md)。		

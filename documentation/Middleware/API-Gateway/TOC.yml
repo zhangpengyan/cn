@@ -22,17 +22,10 @@ items:
       herf: Introduction/Application-Scenarios.md    
 - name: 产品定价
   items:
-    - name: 计费概述
-      herf: Pricing/Billing-Overview.md
     - name: 计费规则
       herf: Pricing/Billing-Rules.md
-    - name: 价格总览
-      herf: Pricing/Price-Overview.md
     - name: 购买流程
       herf: Pricing/Purchase-Process.md 
-    - name: 续费流程
-      herf: Pricing/Renew-Process.md
-      status: 0 
 - name: 入门指南
   items:
     - name: 概述
@@ -43,6 +36,8 @@ items:
       herf: Getting-Started/example_function.md
     - name: 使用订阅密钥的方式构建API
       herf: Getting-Started/example_subscriptionKey.md
+    - name: 使用API网关开放VPC内的接口
+      herf: Getting-Started/VPC.md
 - name: 操作指南
   items:
     - name: API分组管理
@@ -71,6 +66,8 @@ items:
           herf: Operation-Guide/Back-end-Services/Back-end-Services-Mock.md
         - name: 函数后端服务
           herf: Operation-Guide/Back-end-Services/Back-end-Services-Function.md
+        - name: 动态路由
+          herf: Operation-Guide/Back-end-Services/Dynamic-routing.md
     - name: 访问授权
       items:
         - name: API的访问授权
@@ -81,7 +78,12 @@ items:
           herf: Operation-Guide/Create-Auth/Signature-Key.md
         - name: 京东云用户签名Access Key
           herf: Operation-Guide/Create-Auth/JD-Cloud-User-Signature.md
-      
+        - name: 基于用户授权
+          herf: Operation-Guide/Create-Auth/User-based-Auth.md
+    - name: 微服务网关
+      items:
+        - name: 微服务网关
+          herf: Operation-Guide/JDSF-gw.md  
     - name: 后端签名
       items:
         - name: 后端签名

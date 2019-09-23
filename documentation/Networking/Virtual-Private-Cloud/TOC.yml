@@ -63,8 +63,8 @@
          href: Getting-Started/Subnet-Based-Policy-Routing-Management.md
        - name: VPC对等连接
          href: Getting-Started/VPC-Peering.md
-       - name: 边界网关连通私有网络
-         href: Getting-Started/Border-Gateway-Connects-VPC.md
+       - name: 边界网关连通多VPC
+         href: Getting-Started/Multiple-VPCs-Interconnection.md
        - name: NAT实例网关
          href: Getting-Started/NAT-Instance-Gateway.md
        - name: VPN镜像网关

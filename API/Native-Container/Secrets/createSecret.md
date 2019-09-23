@@ -2,7 +2,7 @@
 
 
 ## 描述
-创建一个 secret，用于存放镜像仓库机密相关信息。
+创建一个 secret，用于存放镜像仓库认证信息。
 
 
 ## 请求方式
@@ -18,9 +18,9 @@ https://nativecontainer.jdcloud-api.com/v1/regions/{regionId}/secrets
 ## 请求参数
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**name**|String|True| |机密数据名称，不能重复<br>|
-|**secretType**|String|True| |机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。<br>|
-|**data**|DockerRegistryData|False| |机密的数据。<br><br>key 的有效字符包括字母、数字、-、_和.； <br><br>value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; <br><br>必须包含server、username、password 字段，email 字段是可选的。<br><br>|
+|**name**|String|True| |镜像仓库认证信息名称，不能重复<br>|
+|**secretType**|String|True| |镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。<br>|
+|**data**|DockerRegistryData|True| |镜像仓库认证信息数据。<br><br>必须包含server、username、password 字段，email 字段是可选的。<br><br>|
 
 ### DockerRegistryData
 |名称|类型|是否必需|默认值|描述|

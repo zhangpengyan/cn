@@ -6,9 +6,11 @@
 提示：当选择生产顺序消息时，使用者只能启动一个Producer进程，更多的Producer请求会被服务端拒绝。[为了保证到达服务端的消息真正有序]
 
 ## 可配置参数
-| 参数          | 参数描述                                   |
-| ------------- | ------------------------------------------ |
-| PROPERTY_TAGS | 可以设置消息的标签（tag），暂时支持一条tag |
+| 参数                | 参数描述                                   |备注                                       |
+| ------------------- | ------------------------------------------ |------------------------------------------ |
+| PROPERTY_BUSINESS_ID|可以为消息设置业务ID,用户可以根据业务ID查询消息|长度最长为128个字符                       |
+| PROPERTY_TAGS       | 可以设置消息的标签（tag）                  |暂时支持一条tag                             |
+| PROPERTY_RETRY_TIMES| 可以设置客户端消息重试次数                 |与服务端重试次数无关，默认为2次，即加上第一次发送总共发送3次消息到服务端|
 
 ## 代码示例
 ```Java
@@ -69,6 +71,9 @@ public class GlobalOrderProducerDemo {
         message1.setTopic(TOPIC);
         message1.setBody(("this is message1 boy").getBytes());
 
+        // 设置message businessID属性, 如有需要
+        message.getProperties().put(MessageConstants.PROPERTY_BUSINESS_ID,"yourBusinessID");
+        
         // 设置message tag属性, 如有需要
         message.getProperties().put(MessageConstants.PROPERTY_TAGS, "TAG");
         

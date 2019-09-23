@@ -35,29 +35,33 @@ items:
       href: pod/rebuildPod.md
   - name: 容器
     items:
-    - name: 查询 Pod 中的某个容器详情
-      href: Native-Container/decribeContainer.md
-    - name: attach 到一个 Pod 内的容器
-      href: Native-Container/attach.md
+    - name: 查询 Pod 中的一个容器详情
+      href: Container/describeContainer.md
+    - name: attach 到 Pod 内的一个容器
+      href: Container/attach.md
     - name: 创建 exec
-      href: Native-Container/execCreate.md
+      href: Container/execCreate.md
     - name: 获取 exec 退出码
-      href: Native-Container/execGetExitCode.md
+      href: Container/execGetExitCode.md
     - name: 执行 exec
-      href: Native-Container/execStart.md
+      href: Container/execStart.md
     - name: 重置 TTY 大小
-      href: Native-Container/resizeTTY.md
+      href: Container/resizeTTY.md
   - name: 配额
     items:
     - name: 查询 Pod 配额
       href: Quota/describeQuota.md
-  - name: secret
+  - name: 镜像仓库认证信息
     items:
-    - name: 创建 secret
+    - name: 创建镜像仓库认证信息
       href: Secrets/createSecret.md
-    - name: 删除 secret
+    - name: 删除镜像仓库认证信息
       href: Secrets/deleteSecret.md
-    - name: 查询 secret 详情
+    - name: 查询镜像仓库认证信息详情
       href: Secrets/describeSecret.md
-    - name: 查询 secret 列表
+    - name: 查询镜像仓库认证信息列表
       href: Secrets/describeSecrets.md
+  - name: 规格类型
+    items:
+    - name: 查询实例类型
+      href: Instance-Type/describeInstanceTypes.md

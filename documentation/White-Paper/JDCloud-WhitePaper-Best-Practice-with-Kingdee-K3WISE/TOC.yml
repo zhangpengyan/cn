@@ -1,0 +1,19 @@
+name: 金蝶 K3WISE 在京东云上的最佳实践
+items:
+  - name: 摘要
+    href: Overview.md
+  - name: 在京东云上运行金蝶K3WISE的好处
+    href: Kingdee-K3WISE-Cloud-Benefits.md
+  - name: 京东云基础介绍
+    href: JDCloud-Introduction.md
+  - name: 金蝶K3WISE在京东云上的最佳实践
+    href: Kingdee-K3WISE-CLoud-Best-Practices.md
+  - name: 京东云安全模型
+    href: Security-Model.md
+  - name: 结论
+    href: Conclusion.md
+  - name: 文档作者
+    href: Authors.md
+  - name: 下载链接及参考
+    href: Reference.md
+    

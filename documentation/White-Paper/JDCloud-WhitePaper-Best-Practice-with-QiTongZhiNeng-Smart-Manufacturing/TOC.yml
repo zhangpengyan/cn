@@ -1,0 +1,22 @@
+name: 七通智能制造云在京东云上的最佳实践
+href:
+items:
+  - name: 摘要
+    href: Overview.md
+  - name: 在京东云上运行 Q7-Cloud 的好处
+    href: Benefits.md
+  - name: 京东云基础介绍
+    href: JDCloud-Introduction.md
+  - name: Q7-Cloud 应用介绍
+    href: Introduction.md
+  - name: Q7-Cloud 在京东云上的最佳实践
+    href: Best-Practices.md
+  - name: 京东云安全模型
+    href: Security-Model.md
+  - name: 结论
+    href: Conclusion.md
+  - name: 文档作者
+    href: Authors.md
+  - name: 下载链接及参考
+    href: Reference.md
+    

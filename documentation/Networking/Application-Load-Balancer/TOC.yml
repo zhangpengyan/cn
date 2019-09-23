@@ -59,6 +59,8 @@
         href: Operation-Guide/Backend-Management.md
       - name: 虚拟服务器组管理
         href: Operation-Guide/TargetGroup-Management.md
+      - name: 转发规则组管理
+        href: Operation-Guide/UrlMap-Management.md      
       - name: 配置访问日志
         href: Operation-Guide/Access-Log.md
       - name: 监控服务
@@ -81,6 +83,8 @@
       href: Best-Practices/AG-as-backend-server.md
     - name: 公网负载均衡和私网负载均衡转换
       href: Best-Practices/Switch-between-Internal-and-External-ALB.md
+    - name: 基于域名和URL路径转发流量
+      href: Best-Practices/Forward-traffic-based-on-UrlMap.md
   - name: 常见问题
     href: FAQ/FAQ.md
   - name: API参考

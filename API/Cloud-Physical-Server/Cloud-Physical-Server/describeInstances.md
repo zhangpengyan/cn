@@ -26,6 +26,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**networkType**|String|False| |网络类型，精确匹配，支持basic，vpc|
 |**deviceType**|String|False| |实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型|
 |**subnetId**|String|False| |子网ID|
+|**keypairId**|String|False| |密钥对ID|
 |**enableInternet**|String|False| |是否启用外网, yes/no|
 |**filters**|Filter[]|False| |instanceId - 云物理服务器ID，精确匹配，支持多个<br/><br>privateIp - 云物理服务器内网IP，精确匹配，支持多个<br/><br>status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个<br>|
 
@@ -81,6 +82,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances
 |**elasticIpId**|String|弹性公网IPID|
 |**publicIp**|String|公网IP|
 |**publicIpv6**|String|公网IPv6|
+|**keypairId**|String|密钥对id|
+|**agentStatus**|String|agent状态|
 |**charge**|Charge|计费信息|
 ### Charge
 |名称|类型|描述|

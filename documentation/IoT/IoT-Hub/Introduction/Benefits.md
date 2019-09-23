@@ -1,9 +1,5 @@
 # 产品优势
 
-## 数据隐私
-
-实例部署在用户自定义的VPC私有网络内，多个租户之间的数据相互隔离，保护了用户数据隐私。
-
 ## 应用安全
 
 实例部署在用户自定义的VPC私有网络内，在应用层直接进行网络隔离保护，确保应用安全。
@@ -18,5 +14,4 @@
 ## 相关参考
 
 - [产品概述](../Introduction/Product-Overview.md)
-- [价格总览](../Pricing/Price-Overview.md)
 - [创建实例](../Getting-Started/Create-Instance.md)

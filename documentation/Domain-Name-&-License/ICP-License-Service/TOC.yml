@@ -6,7 +6,11 @@
       - name: 备案介绍
         href: Getting-Started/Introduction.md
       - name: 备案流程
-        href: Getting-Started/Process.md
+        items:
+          - name: 新增备案
+            href: Getting-Started/Process/Addition-Filing.md
+          - name: 新增网站（有主体）
+            href: Getting-Started/Process/Addition-Website.md      
       - name: 管局规则
         items:
           - name: 安徽
@@ -91,6 +95,8 @@
         href: Loading/Website-verification-information.md
       - name: 核验单样例
         href: Loading/Verification-sample.md
+      - name: 互联网信息服务备案承诺书
+        href: Loading/Internet-Information-Service-Filing-Commitment.md
       - name: 常用资料下载
         items:
         - name: 各省备案授权书

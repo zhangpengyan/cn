@@ -1,12 +1,14 @@
-# 设置登录密码（新版账号适用）
+# 修改登录密码
 
-<small>本文针对新版京东云账号。如果您使用的是京东账号，请前往 “[我的京东](https://home.jd.com/)” 进行操作。</small>
+（如果您使用的是京东账号，请前往 “[我的京东](https://home.jd.com/)” 进行操作。）
 
 您可以在 “账户管理 - 安全设置” 页面修改登录密码。
-![](../../../image/User/Account%20Management/Set%20User%20Password/setpwd.PNG)
 
-进行密码修改前，需要先完成身份验证。请选择一种身份验证方式。
-![](../../../image/User/Account%20Management/Set%20User%20Password/step1.png)
+![](../../../image/User/Account-Mgmt/safe6.png)
+
+进行密码修改前，需要先完成身份验证。请选择一种身份验证方式（手机或邮箱）。
+
+![](../../../image/User/Account-Mgmt/pwd1.png)
 
 身份验证通过后，即可设置新密码。新密码必须同时满足以下条件：
 
@@ -18,7 +20,8 @@
 
 4. 不能与历史四次密码相同
 
-![](../../../image/User/Account%20Management/Set%20User%20Password/step2.png)
+![](../../../image/User/Account-Mgmt/pwd2.png)
 
 完成设置后，新密码立即生效。
-![](../../../image/User/Account%20Management/Set%20User%20Password/step3.PNG)
+
+![](../../../image/User/Account-Mgmt/pwd3.png)

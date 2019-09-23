@@ -36,11 +36,11 @@ Ubuntu系统运行如下命令：
 
 **CentOS 6.9至CentOS 7.2版本运行以下命令：**
 
-`sudo mount -t nfs,nfsvers=4.0 10.0.0.30:/cfs nfs`
+`sudo mount -t nfs,nfsvers=4.0, -o lookupcache=none 10.0.0.30:/cfs nfs`
 
 CentOS 7.3及以上版本运行以下命令：
 
-`sudo mount -t nfs 10.0.0.30:/cfs nfs`
+`sudo mount -t nfs -o lookupcache=none 10.0.0.30:/cfs nfs`
 
 在Ubuntu系统的终端下，运行如下命令：
 

@@ -46,19 +46,19 @@ https://rds.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 |**azId**|String[]|可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)|
 |**vpcId**|String|VPC的ID|
 |**subnetId**|String|子网的ID|
-|**parameterGroupId**|String|参数组的ID|
-|**parameterGroupName**|String|参数组的名称|
-|**parameterStatus**|String|参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
+|**parameterGroupId**|String|参数组的ID<br>- 仅支持MySQL|
+|**parameterGroupName**|String|参数组的名称<br>- 仅支持MySQL|
+|**parameterStatus**|String|参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- 仅支持MySQL|
 |**internalDomainName**|String|实例内网域名|
 |**publicDomainName**|String|实例公网域名|
 |**instancePort**|String|应用访问端口|
-|**connectionMode**|String|访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
-|**auditStatus**|String|审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
+|**connectionMode**|String|访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- 仅支持MySQL|
+|**auditStatus**|String|审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)<br>- 仅支持MySQL|
 |**instanceStatus**|String|实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)|
 |**createTime**|String|实例创建时间|
 |**charge**|Charge|计费配置|
-|**sourceInstanceId**|String|MySQL只读实例对应的主实例ID|
-|**roInstanceIds**|String[]|只读实例ID列表|
+|**sourceInstanceId**|String|MySQL只读实例对应的主实例ID<br>- 仅支持MySQL|
+|**roInstanceIds**|String[]|只读实例ID列表<br>- 仅支持MySQL|
 |**primaryNode**|DBInstanceNode|高可用集群中主节点的信息<br>- 仅支持SQL Server|
 |**secondaryNode**|DBInstanceNode|高可用集群中从节点的信息<br>- 仅支持SQL Server|
 |**tags**|Tag[]|标签信息|

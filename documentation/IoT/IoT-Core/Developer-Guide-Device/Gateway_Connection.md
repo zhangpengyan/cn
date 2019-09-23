@@ -1,8 +1,8 @@
 # 网关功能
 
-网关负责代理子设备的认证、与云端的数据通信、管理子设备的信息和状态。网关与子设备之间的通信由厂商处理。
-网关功能通过 iot_config.h 中的 DEVICE_GATEWAY 宏来控制。
-编译生成的执行文件在 build/x86_64/bin/gateway_example
+- 网关负责代理子设备的认证、与云端的数据通信、管理子设备的信息和状态。网关与子设备之间的通信由厂商处理。
+- 网关功能通过 iot_config.h 中的 DEVICE_GATEWAY 宏来控制。
+- 编译生成的执行文件在 build/x86_64/bin/gateway_example 。
 
 ## 设备拓扑关系
 

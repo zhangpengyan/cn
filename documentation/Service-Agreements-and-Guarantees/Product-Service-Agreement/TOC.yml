@@ -142,10 +142,10 @@ items:
     href: IoT-Core-Terms-Of-Service.md 
   - name: 物联网引擎服务等级协议(SLA)  
     href: IoT-Core-Level-Agreements-SLA.md
-  - name: 物联网卡服务条款
-    href: IoT-Link-Terms-Of-Service.md
+  - name: 物联网卡服务服务条款
+    href: Query-Card-Service-Terms-Of-Service.md
   - name: 物联网卡服务等级协议（SLA）
-    href: IoT-Link-Level-Agreements-SLA.md
+    href: Query-Card-Service-Level-Agreements-SLA.md
   - name: 云文件服务协议
     href: Cloud-File-Service-terms-of-service.md
   - name: 云文件服务等级服务协议（SLA）

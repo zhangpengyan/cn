@@ -68,26 +68,26 @@
 
 3、实施部署。
 
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/bsz-xj.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/bsz-xq.png)
 
 **说明：**
 
-- 部署完成后，可进行回滚、重新部署操作。
+- 部署完成后，可进行回滚、重新部署等操作。
 
 - 用户还可查看每个实例的部署信息。
 
-- 删除时，用户可以选择，是否同时删除程序包。默认勾选同时删除。
+- 删除应用时，用户可以选择，是否同时删除程序包。默认勾选同时删除。
 
 
 ### 实例部署信息
 
-1、 用户可查看当前应用，通过哪些部署组，被部署至哪些实例上；并可对每个实例上的应用，进行起停操作。
+1、 用户可查看当前应用，通过哪些部署组，被部署至哪些实例上；并可对每个实例上的应用，进行启动应用、停止应用操作。
 
 
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-slbsxx.png)
 
 
-2、 当需要从部署组中移除实例时，可至部署组详情页中选择删除 
+2、 当需要从部署组中移除实例时，可至部署组详情页中选择并删除。删除实时生效。 
 
 ![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-edit.png)
 
@@ -96,7 +96,7 @@
 
 程序包管理中上传的是，当前应用在部署中所使用的程序包。在删除应用的同时，用户可选择是否同步删除应用下的所有程序包；删除前用户需自行备份。
 
-![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-bsz-edit.png)
+![](../../../../../image/Internet-Middleware/JD-Distributed-Service-Framework/app-cxb-list-1.png)
 
 
 

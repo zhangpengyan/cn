@@ -33,19 +33,17 @@
 
 点击“下一步”，在弹窗中确认企业名称和企业银行对公账户信息无误后点击“提交”。
 
-![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%971.png)
+![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%972.png)
 
 ## 4. 资料提交审核
 
 企业信息提交审核后，系统将在 1 ~ 10 分钟内完成企业信息审核。
 
-![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%972.png)
+![](../../../image/User/quickrealname/%E5%AE%A1%E6%A0%B8%E4%B8%AD.png)
 
 ## 5. 资料审核通过，打款验证
 
 企业信息审核通过后，系统会向您提交的企业银行对公账户进行一笔小金额转账。请联系您的对公账户管理员，通过银行柜台、网上银行、手机银行等方式获取，并在京东云页面输入转账金额完成认证流程。根据不同银行的到账情况，转账时间可能需要1 ~ 30 分钟不等。
-
-![](../../../image/User/quickrealname/%E7%A1%AE%E8%AE%A4%E5%BC%B9%E7%AA%972.png)
 
 ![](../../../image/User/quickrealname/%E5%BE%85%E5%9B%9E%E5%A1%AB.png)
 

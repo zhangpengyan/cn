@@ -1,7 +1,7 @@
 # 网关功能
 
 网关负责代理子设备的认证、与云端的数据通信、管理子设备的信息和状态。网关与子设备之间的通信由厂商处理。
-网关功能通过iot_config.h中的DEVICE_GATEWAY宏来控制。
+网关功能通过 iot_config.h 中的 DEVICE_GATEWAY 宏来控制。
 编译生成的执行文件在 build/x86_64/bin/gateway_example
 
 ## 设备拓扑关系
@@ -25,7 +25,7 @@
 
 ## 创建新设备
 
-- Int iot_gateway_construct(iot_dev_type_t dev_type, iot_dev_auth_info_t *meta_info);
+- `Int iot_gateway_construct(iot_dev_type_t dev_type, iot_dev_auth_info_t *meta_info);`
 -	接口说明：创建一个新设备，包括网关和子设备类型。
 -	返回值：成功返回设备ID，失败返回FAIL_RETURN
 -	参数说明：
@@ -38,7 +38,7 @@
 
 ## 开启设备连接网络和主题订阅
 
--	int iot_gateway_connect(int devid);
+-	`int iot_gateway_connect(int devid);`
 -	接口说明：指定设备开启网络连接。
 -	返回值：成功返回SUCCESS_RETURN，失败返回FAIL_RETURN
 -	参数说明：
@@ -50,7 +50,7 @@
 
 ## 接收网络信息和分发事件
 
--	void iot_gateway_yield(int timeout_ms);
+-	`void iot_gateway_yield(int timeout_ms);`
 -	接口说明：接收云端事件，分发事件到注册的方法。
 -	返回值：void
 -	参数说明：
@@ -64,7 +64,7 @@
 
 ## 关闭网络连接和回收设备资源
 
--	'int iot_gateway_destroy(int devid);'
+-	`int iot_gateway_destroy(int devid);`
 -	接口说明：关闭指定设备网络连接和回收设备资源。
 -	返回值：成功返回SUCCESS_RETURN，失败返回FAIL_RETURN
 -	参数说明：
@@ -76,7 +76,7 @@
 
 ## 发送数据到云端
 
--	'int iot_gateway_report(int devid, iot_msg_type_t msg_type, unsigned char *payload, int payload_len);'
+-	`int iot_gateway_report(int devid, iot_msg_type_t msg_type, unsigned char *payload, int payload_len);`
 -	接口说明：发送数据到云端。
 -	返回值：成功返回信息id，失败返回FAIL_RETURN
 -	参数说明：
@@ -92,7 +92,7 @@
 
 ## 发送数据到云端
 
--	'uint32_t iot_gateway_generate_msgid();'
+-	`uint32_t iot_gateway_generate_msgid();`
 -	接口说明：生成消息id。
 -	返回值：成功消息id，失败返回-1
 

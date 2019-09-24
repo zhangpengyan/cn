@@ -17,3 +17,4 @@
 ![控制台](https://github.com/jdcloudcom/cn/blob/master/image/mongodb/console-buy.png)
 
 3. 登录控制台，具体操作请参考[物联网卡购买](../Operation-Guide/Purchase.md)。
+

@@ -117,4 +117,4 @@
 
 - `uint32_t iot_gateway_generate_msgid();`
 - 接口说明：生成消息id。
-- 返回值：成功消息id，失败返回-1
+- 返回值：成功消息id，失败返回-1 

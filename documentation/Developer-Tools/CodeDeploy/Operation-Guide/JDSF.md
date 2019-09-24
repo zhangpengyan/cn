@@ -16,11 +16,7 @@
 **发起部署**
 
 发起部署任务时，将根据所选“微服务平台注册中心”，获取到对应的环境变量，写入到部署目标（云主机）的全局环境变量中。
-
-
-
-
-
-
-
-
+环境变量如下：
+- JDSF_CONSUL_HOST
+- JDSF_CONSUL_PORT
+- JDSF_REGISTRY_ADDRESS

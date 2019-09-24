@@ -27,7 +27,7 @@
         href: Operation-Guide/Asset-Print.md
       - name: 云产品基线
         href: Operation-Guide/Cloudbaseline.md
-      - name: 威胁欺骗云产品基线
+      - name: 威胁欺骗
         href: Operation-Guide/honeyPot.md      
   - name: 常见问题
     href: FAQ/FAQ.md

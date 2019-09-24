@@ -5,7 +5,7 @@
 具体方法如下:
 
 ```
-curl -fsSL http://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install | bash
+curl -fsSL https://deploy-code-vpc.jdcloud.com/dl-ifrit-agents/install | bash -s zero-agent,hawkeye-agent,log-agent,ark-query
 ```
 
 关于Agent的说明如下：

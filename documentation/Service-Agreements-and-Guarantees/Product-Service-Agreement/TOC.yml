@@ -126,16 +126,18 @@ items:
     href: Queue-Service-Terms-Of-Service-SLA.md
   - name: 智臻链BaaS平台服务条款
     href: JD-Blockchain-Open-Platform.md
-  - name: 物联网中心服务条款
-    href: IoT-Hub-Terms-Of-Service.md    
   - name: 物联网协议适配服务条款
     href: IoT-Protocol-Adaptor-Terms-Of-Service.md   
   - name: 物联网协议适配服务等级协议(SLA)
     href: IoT-Protocol-Adaptor-Level-Agreements-SLA.md
   - name: 物联网引擎服务条款
     href: IoT-Core-Terms-Of-Service.md 
-  - name: 物联网引擎服务等级协议(SLA)
+  - name: 物联网引擎服务等级协议(SLA)  
     href: IoT-Core-Level-Agreements-SLA.md
+  - name: 物联网卡服务服务条款
+    href: IoT-Link-Service-Terms-Of-Service.md
+  - name: 物联网卡服务等级协议（SLA）
+    href:  IoT-Link-Service-Level-Agreements-SLA.md
   - name: 云文件服务协议
     href: Cloud-File-Service-terms-of-service.md
   - name: 云文件服务等级服务协议（SLA）
@@ -156,3 +158,4 @@ items:
     href: JDCloudHSM-Level-Agreements-SLA.md
   - name: 智能设计产品服务协议
     href: Intelligent-Design-Terms-Of-Service.md
+© 2019 GitHub, Inc.

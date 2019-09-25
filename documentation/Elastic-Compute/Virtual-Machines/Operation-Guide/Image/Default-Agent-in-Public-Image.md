@@ -5,7 +5,7 @@
 
 | 组件名称    | 相关进程名称    | 主要功能     | 不安装有何影响    |
 | --- | --- | --- | --- |
-|   JCS-Agent  | JCS-Agent <br> MonitorPlugin-‘版本号’  <br>  UpgradePlugin-‘版本号’  | 通用核心组件，配合元数据服务提供密码密钥注入、自定义脚本注入、监控数据上报等功能    |  无法通过京东云控制台或openAPI设置密码、密钥、自定义用户数据，无法获得部分云主机监控数据   |
+|   JCS-Agent  | JCSAgentCore <br> MonitorPlugin-‘版本号’  <br>  UpgradePlugin-‘版本号’  | 通用核心组件，配合元数据服务提供密码密钥注入、自定义脚本注入、监控数据上报等功能    |  无法通过京东云控制台或openAPI设置密码、密钥、自定义用户数据，无法获得部分云主机监控数据   |
 | Ifrit    |  ifrit-agent <br> ifrit-supervise   |   通用部署插件，实现JCS-Agent的自动升级	  |  无法获得自动升级JCS-Agent的能力，如后续希望使用基于JCS-Agent开发的新功能，需要手动升级JCS-Agent   |
 |  Jcloudhids   |jcloudhids <br> jcloudhidsupdate    | 安全核心组件，提供安全防护能力    | 无法通过“主机安全”产品获得关于云主机的安全隐患及异常行为监测   |
 | Jdog-Monitor |	jdog-monitor.'版本号'<br>jdog-watchdog<br>jdog-kunlunmirror| 安全辅助插件，实现Jcloudhids的自动升级及其他辅助功能（目前仅安装于Linux系统）|无法获得自动升级Jcloudhids的能力，如后续希望使用基于Jcloudhids开发的新功能，需要手动升级|

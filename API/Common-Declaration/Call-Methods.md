@@ -7,9 +7,13 @@
 
 京东云OpenAPI不同接口使用不同的HTTP方法，一般资源创建用POST请求，查询用GET请求，修改用PUT或PATCH请求，删除用DELETE请求。具体接口使用的HTTP方法，请参考API文档请求方式章节。
 
-OpenAPI服务的地址和路径格式一般为：
+### OpenAPI服务的地址和路径格式一般为：
 
 	https://{product}.jdcloud-api.com/{API版本号}/regions/{地域ID}/{资源名称}/{资源ID(可选)}/{子资源名称(可选)}/{子资源ID(可选)}{:自定义动作(可选)}
+
+
+### 从VPC内直接调用的地址为： ###  
+	https://{product}.internal.{regionId}.jdcloud-api.com/{API版本号}/regions/{地域ID}/{资源名称}/{资源ID(可选)}/{子资源名称(可选)}/{子资源ID(可选)}{:自定义动作(可选)}
 
 具体每个接口的地址及路径请参考具体API文档请求地址章节。
 

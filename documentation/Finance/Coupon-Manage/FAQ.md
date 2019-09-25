@@ -21,6 +21,13 @@
 
 ### **4.代金券是否有提醒功能？**
 
-账户可用代金券总额低于200元会触发消息提醒，提醒方式为邮件和短信。
+账户默认代金券提醒值为200元，低于200元会触发消息提醒，提醒方式为邮件和短信；同时还支持自定义余额提醒，可以根据自己业务需求自定义代金券余额提醒。
+
+![1](https://github.com/jdcloudcom/cn/blob/joytaobao-coupon-20190916/image/Coupon-Manage/FAQ-1.png)
+
+![2](https://github.com/jdcloudcom/cn/blob/joytaobao-coupon-20190916/image/Coupon-Manage/FAQ-2.png)
 
 账户代金券在到期前7、3、1天会触发消息提醒，提醒方式为邮件和短信。
+
+
+

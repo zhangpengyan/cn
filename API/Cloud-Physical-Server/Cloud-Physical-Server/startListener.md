@@ -12,7 +12,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/listeners/{listenerId}:startLi
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**regionId**|String|True| |地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域|
 |**listenerId**|String|True| |监听器ID|
 
 ## 请求参数

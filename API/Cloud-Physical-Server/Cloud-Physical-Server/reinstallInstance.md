@@ -34,6 +34,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}:reinsta
 |**dataRaidTypeId**|String|True| |数据盘RAID类型ID|
 |**password**|String|True| |密码|
 |**hostname**|String|False| |主机名|
+|**userData**|String|False| |可执行脚本Base64编码后的内容，支持shell和python脚本|
+|**keypairId**|String|False| |秘钥对id|
 
 ## 返回参数
 |名称|类型|描述|

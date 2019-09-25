@@ -16,7 +16,7 @@
 | 文件存储数               |华北-北京 -  不超过5个 （可工单申请提升最大容量）|
 | 每个文件存储的挂载目标数 | 不超过1个                |
 | 每个文件存储的VPC数      | 不超过1个                |
-| 每个文件存储最大容量     | 不超过1PB（可工单申请提升最大容量）          |
+| 每个文件存储最大容量     | 不超过512GB（可工单申请提升最大容量）          |
 | 每个文件存储最大文件数     | 不超过100万个 （可工单申请提升最大文件数）          |
 
 
@@ -69,3 +69,5 @@
   - 使用 CREATE 操作时不支持的文件类型：块储存设备 (NF4BLK)、字符设备 (NF4CHR)、属性目录 (NF4ATTRDIR) 和命名属性 (NF4NAMEDATTR)。
 
   - 不支持的属性：FATTR4_ARCHIVE、FATTR4_FILES_AVAIL、FATTR4_FILES_FREE、FATTR4_FS_LOCATIONS、FATTR4_MIMETYPE、FATTR4_QUOTA_AVAIL_HARD、FATTR4_QUOTA_AVAIL_SOFT、FATTR4_QUOTA_USED、FATTR4_TIME_BACKUP 和 FATTR4_ACL，如果尝试设置这些属性，将导致向客户端发回 NFS4RR_ATTRNOTSUPP错误。
+  
+  

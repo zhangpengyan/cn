@@ -145,7 +145,7 @@ https://monitor.jdcloud-api.com/v1/regions/cn-north-1/metrics/memory.usage/metri
 
 ### 3. lastDownsample
 
-**查看某资源的最后一个监控数据点**
+**查看某资源的某个监控项的数据并聚合为一个点。默认是查询最后一个点**
 
 请求示例
 

@@ -1,10 +1,10 @@
-name: 专有云安全白皮书
+name: 京东云专有云安全白皮书
 href: 
 items:
 - name: 京东云专有云介绍
   items:
     - name: 专有云简介
-      href: Introduction/Introduction.md
+      href: Introduction/Product-Overview.md
     - name: 专有云安全需求
       href: Introduction/Security-requirements.md
 - name: 安全合规/隐私保护/权责归属
@@ -18,7 +18,7 @@ items:
 - name: 专有云安全架构
   items:
     - name: 专有云安全架构概述
-      href: Security-Architecture/Introduction.md
+      href: Security-Architecture/Overview.md
     - name: 云平台安全
       href: Security-Architecture/Cloud-Platform-Security.md
     - name: 云用户安全
@@ -44,4 +44,4 @@ items:
 - name: 专有云安全产品服务
   href: Cloud-Security-Product-Service.md	  
 - name: 下载链接
-href: Download-Link/Related-Resources.md
+  href: Download-Link/Related-Resources.md

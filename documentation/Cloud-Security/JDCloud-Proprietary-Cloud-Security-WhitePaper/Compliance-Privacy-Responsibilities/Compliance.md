@@ -19,3 +19,5 @@
 - CSA STAR云安全认证
 
 - C STAR云计算安全评估认证
+
+![图 2 京东云安全资质认证](https://github.com/jdcloudcom/cn/blob/cruzhang-patch-6/image/JDCloud-Proprietary-Cloud-Security-WhitePaper/Security-Certificate.jpg)

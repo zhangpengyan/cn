@@ -61,6 +61,8 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/instances/{instanceId}
 |**elasticIpId**|String|弹性公网IPID|
 |**publicIp**|String|公网IP|
 |**publicIpv6**|String|公网IPv6|
+|**keypairId**|String|密钥对id|
+|**agentStatus**|String|agent状态|
 |**charge**|Charge|计费信息|
 ### Charge
 |名称|类型|描述|

@@ -12,7 +12,7 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/listeners/{listenerId}
 
 |名称|类型|是否必需|默认值|描述|
 |---|---|---|---|---|
-|**regionId**|String|True| |地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域|
+|**regionId**|String|True| |地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域|
 |**listenerId**|String|True| |监听器ID|
 
 ## 请求参数
@@ -38,21 +38,15 @@ https://cps.jdcloud-api.com/v1/regions/{regionId}/listeners/{listenerId}
 |**port**|Integer|端口|
 |**algorithm**|String|调度算法|
 |**stickySession**|String|会话保持状态，取值on|off|
-|**stickySessionTimeout**|Integer|会话保持超时时间，单位s|
-|**cookieType**|String|会话类型|
 |**realIp**|String|获取真实ip|
-|**certificateId**|String|证书ID|
 |**status**|String|状态|
 |**name**|String|名称|
 |**description**|String|描述|
-|**headers**|String[]|HTTP扩展头部|
 |**healthCheck**|String|健康检查状态，取值on|off|
 |**healthCheckTimeout**|Integer|健康检查响应的最大超时时间，单位s|
 |**healthCheckInterval**|Integer|健康检查响应的最大间隔时间，单位s|
 |**healthyThreshold**|Integer|健康检查结果为success的阈值|
 |**unhealthyThreshold**|Integer|健康检查结果为fail的阈值|
-|**healthCheckUri**|String|健康检查的URI|
-|**healthCheckHttpCode**|String|健康检查正常的HTTP状态码|
 |**healthCheckIp**|String|健康检查ip|
 |**serverGroupId**|String|服务器组id|
 

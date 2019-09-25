@@ -152,7 +152,8 @@ runas：
 | JDCLOUD_CODEDEPLOY_GROUP_ID | 部署组ID，可在应用详情页查看 |
 | JDCLOUD_CODEDEPLOY_GROUP_NAME | 部署组名称，可在应用详情页查看 |
 | JDCLOUD_CODEDEPLOY_DEPLOY_ID | 部署任务ID，可在部署历史页查看 |
-| JDCLOUD_CODEDEPLOY_LIFECYCLE_EVENT | 工作流关键字 |
+| JDCLOUD_CODEDEPLOY_LIFECYCLE_EVENT | 当前生命周期事件，如 beforeInstall |
+| JDCLOUD_CODEDEPLOY_OPERATION | 表示当前在执行任务类型 上线（UPDATE）/回滚（ROLLBACK） |
 
 
 **示例**

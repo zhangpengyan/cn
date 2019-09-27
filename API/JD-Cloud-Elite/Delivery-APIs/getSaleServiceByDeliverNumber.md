@@ -37,6 +37,8 @@ https://elite.cn-south-1.jdcloud-api.com/v1/regions/{regionId}/getSaleServiceByD
 |---|---|---|
 |**deliverNumber**|String|交付单号|
 |**orderNumber**|String|订单号|
+|**orderType**|Integer|订单类型|
+|**orderTypeName**|String|订单类型名称|
 |**buyerPin**|String|购买人|
 |**mappingCode**|String|映射编号|
 |**supportAutoDeliver**|Integer|是否支持自动交付：0表示不支持，1表示支持|
